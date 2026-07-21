@@ -1,0 +1,67 @@
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Environment variables & Secrets
+.env
+.env.local
+.env.*.local
+.env.production
+secrets.json
+credentials.json
+*.pem
+*.key
+
+# Internal/Confidential (DO NOT PUSH)
+/internal/
+.internal/
+
+# Build & Distribution
+dist/
+build/
+.next/
+out/
+*.swp
+*.swo
+
+# IDE & Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# Cache
+.cache/
+.eslintcache
+
+# Testing
+coverage/
+.nyc_output/
+
+# Media uploads
+/public/uploads/
+/uploads/
+
+# Local development
+.venv/
+venv/
+.DS_Store

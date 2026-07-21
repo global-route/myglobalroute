@@ -1,0 +1,397 @@
+{
+  "countries": [
+    {
+      "id": "DE",
+      "name": "Germany",
+      "flag": "🇩🇪",
+      "officialRate": "80-90%",
+      "africanRate": "75-85%",
+      "category": "Europe - Scandinavia",
+      "sweetSpot": "student",
+      "trueCost": {
+        "currency": "EUR",
+        "tuition": 0,
+        "blockedAccount": 11208,
+        "fees": 300,
+        "total": 11508
+      },
+      "sweetSpots": [
+        "Chancenkarte (Opportunity Card) - job seeker visa",
+        "Tuition-free Master's degrees",
+        "18-month post-study work visa"
+      ],
+      "pros": [
+        "Zero tuition at public universities",
+        "Strong post-graduation work rights",
+        "Language skills valued globally"
+      ],
+      "cons": [
+        "Language barrier (German B1/B2 required)",
+        "Embassy bottleneck in Lagos (6-12 month wait)",
+        "Cold winters"
+      ],
+      "timeline": "8-16 months",
+      "embassies": [
+        { "city": "Lagos", "country": "Nigeria" },
+        { "city": "Accra", "country": "Ghana" },
+        { "city": "Nairobi", "country": "Kenya" }
+      ]
+    },
+    {
+      "id": "IT",
+      "name": "Italy",
+      "flag": "🇮🇹",
+      "officialRate": "80-90%",
+      "africanRate": "60-75%",
+      "category": "Europe - Southern",
+      "sweetSpot": "student",
+      "trueCost": {
+        "currency": "EUR",
+        "tuition": 0,
+        "blockedAccount": 5000,
+        "fees": 400,
+        "total": 5400
+      },
+      "sweetSpots": [
+        "DSU regional scholarships (free tuition + stipend)",
+        "Low university application fees",
+        "Regional state support for international students"
+      ],
+      "pros": [
+        "Cheapest pathway in Europe",
+        "Regional scholarships are genuinely achievable",
+        "Historic culture and lifestyle"
+      ],
+      "cons": [
+        "Bureaucracy is extremely slow",
+        "Document legalization process is tedious",
+        "Italian language barrier for employment"
+      ],
+      "timeline": "6-12 months",
+      "embassies": [
+        { "city": "Lagos", "country": "Nigeria" },
+        { "city": "Accra", "country": "Ghana" }
+      ]
+    },
+    {
+      "id": "CA",
+      "name": "Canada",
+      "flag": "🇨🇦",
+      "officialRate": "48-70%",
+      "africanRate": "25-40%",
+      "category": "North America",
+      "sweetSpot": "professional",
+      "trueCost": {
+        "currency": "CAD",
+        "tuition": 15000,
+        "blockedAccount": 20635,
+        "fees": 1000,
+        "total": 36635
+      },
+      "sweetSpots": [
+        "Master's degrees with Express Entry pathway",
+        "Atlantic Canada provinces (easier sponsorship)",
+        "Permanent Residency after graduation"
+      ],
+      "pros": [
+        "Straightforward PR pathway via Express Entry",
+        "High salaries post-graduation",
+        "Family-friendly policies"
+      ],
+      "cons": [
+        "Extremely high proof of funds requirement",
+        "SDS pathway cancelled (regular stream slower)",
+        "Spouse work permits limited to Master's/PhD only"
+      ],
+      "timeline": "12-18 months",
+      "embassies": [
+        { "city": "Lagos", "country": "Nigeria" },
+        { "city": "Accra", "country": "Ghana" }
+      ]
+    },
+    {
+      "id": "PT",
+      "name": "Portugal",
+      "flag": "🇵🇹",
+      "officialRate": "65-80%",
+      "africanRate": "55-65%",
+      "category": "Europe - Southern",
+      "sweetSpot": "business",
+      "trueCost": {
+        "currency": "EUR",
+        "tuition": 5000,
+        "blockedAccount": 3000,
+        "fees": 500,
+        "total": 8500
+      },
+      "sweetSpots": [
+        "D7 Visa (passive income €820+/month)",
+        "D8 Digital Nomad Visa",
+        "5-year path to EU passport"
+      ],
+      "pros": [
+        "Warm weather and lifestyle",
+        "Low cost of living",
+        "Fast-track EU citizenship"
+      ],
+      "cons": [
+        "Immigration bureaucracy is sluggish",
+        "Low local salaries",
+        "Portuguese language helpful"
+      ],
+      "timeline": "3-6 months",
+      "embassies": [
+        { "city": "Lagos", "country": "Nigeria" }
+      ]
+    },
+    {
+      "id": "US",
+      "name": "United States",
+      "flag": "🇺🇸",
+      "officialRate": "70-85%",
+      "africanRate": "45-60%",
+      "category": "North America",
+      "sweetSpot": "business",
+      "trueCost": {
+        "currency": "USD",
+        "tuition": 20000,
+        "blockedAccount": 5000,
+        "fees": 500,
+        "total": 25500
+      },
+      "sweetSpots": [
+        "H-1B visa (specialty occupation)",
+        "O-1 visa (extraordinary ability)",
+        "EB-3 employment-based green card"
+      ],
+      "pros": [
+        "Highest salaries globally",
+        "Advanced technology opportunities",
+        "Diverse immigrant-friendly communities"
+      ],
+      "cons": [
+        "Complex visa system",
+        "High rejection rates without strong credentials",
+        "H-1B lottery-based (only 85,000 visas)"
+      ],
+      "timeline": "12-24 months",
+      "embassies": [
+        { "city": "Lagos", "country": "Nigeria" },
+        { "city": "Accra", "country": "Ghana" }
+      ]
+    },
+    {
+      "id": "GB",
+      "name": "United Kingdom",
+      "flag": "🇬🇧",
+      "officialRate": "70-85%",
+      "africanRate": "60-70%",
+      "category": "Europe - Western",
+      "sweetSpot": "professional",
+      "trueCost": {
+        "currency": "GBP",
+        "tuition": 12000,
+        "blockedAccount": 5000,
+        "fees": 800,
+        "total": 17800
+      },
+      "sweetSpots": [
+        "Skilled Worker visa (salary threshold)",
+        "Graduate Route (2-year post-study work)",
+        "NHS Health and Care Worker visa"
+      ],
+      "pros": [
+        "Zero language barrier",
+        "Strong African diaspora community",
+        "Post-study work rights"
+      ],
+      "cons": [
+        "Extremely high NHS surcharge",
+        "Master's students can't bring dependents",
+        "High UK rent crisis"
+      ],
+      "timeline": "8-12 months",
+      "embassies": [
+        { "city": "Lagos", "country": "Nigeria" },
+        { "city": "Accra", "country": "Ghana" }
+      ]
+    },
+    {
+      "id": "AU",
+      "name": "Australia",
+      "flag": "🇦🇺",
+      "officialRate": "85%",
+      "africanRate": "50-65%",
+      "category": "Asia-Pacific",
+      "sweetSpot": "student",
+      "trueCost": {
+        "currency": "AUD",
+        "tuition": 18000,
+        "blockedAccount": 8000,
+        "fees": 500,
+        "total": 26500
+      },
+      "sweetSpots": [
+        "Regional universities (Adelaide, Perth, Darwin)",
+        "Extended post-study work rights",
+        "State sponsorship for residency"
+      ],
+      "pros": [
+        "High minimum wages",
+        "Beautiful climate",
+        "Strong post-study work pathways"
+      ],
+      "cons": [
+        "Massive application fees",
+        "Genuine Student test (strict scrutiny)",
+        "Geographic isolation"
+      ],
+      "timeline": "10-14 months",
+      "embassies": [
+        { "city": "Lagos", "country": "Nigeria" }
+      ]
+    },
+    {
+      "id": "IE",
+      "name": "Ireland",
+      "flag": "🇮🇪",
+      "officialRate": "85-95%",
+      "africanRate": "70-80%",
+      "category": "Europe - Western",
+      "sweetSpot": "professional",
+      "trueCost": {
+        "currency": "EUR",
+        "tuition": 10000,
+        "blockedAccount": 5000,
+        "fees": 600,
+        "total": 15600
+      },
+      "sweetSpots": [
+        "Tech jobs (Dublin is Europe's tech capital)",
+        "Critical Skills Employment Permit",
+        "2-year post-study work visa"
+      ],
+      "pros": [
+        "High salaries",
+        "English-speaking",
+        "Post-study work rights"
+      ],
+      "cons": [
+        "Dublin housing crisis (severe)",
+        "Exceptionally high cost of living",
+        "Visa sponsorship needed for most jobs"
+      ],
+      "timeline": "6-10 months",
+      "embassies": [
+        { "city": "Lagos", "country": "Nigeria" }
+      ]
+    },
+    {
+      "id": "NZ",
+      "name": "New Zealand",
+      "flag": "🇳🇿",
+      "officialRate": "62-84%",
+      "africanRate": "55-65%",
+      "category": "Asia-Pacific",
+      "sweetSpot": "professional",
+      "trueCost": {
+        "currency": "NZD",
+        "tuition": 16000,
+        "blockedAccount": 6000,
+        "fees": 500,
+        "total": 22500
+      },
+      "sweetSpots": [
+        "Green List occupations (direct residency)",
+        "Engineering, Healthcare, ICT roles",
+        "Work-to-residence pathway"
+      ],
+      "pros": [
+        "Peaceful and clean country",
+        "Clear migration tracks for critical skills",
+        "High quality of life"
+      ],
+      "cons": [
+        "Small job market",
+        "Very high tuition fees",
+        "Flights are prohibitively expensive"
+      ],
+      "timeline": "12-18 months",
+      "embassies": [
+        { "city": "Lagos", "country": "Nigeria" }
+      ]
+    },
+    {
+      "id": "JP",
+      "name": "Japan",
+      "flag": "🇯🇵",
+      "officialRate": ">90%",
+      "africanRate": "80-90%",
+      "category": "Asia",
+      "sweetSpot": "student",
+      "trueCost": {
+        "currency": "JPY",
+        "tuition": 1500000,
+        "blockedAccount": 1000000,
+        "fees": 200000,
+        "total": 2700000
+      },
+      "sweetSpots": [
+        "Language school pathway",
+        "Specified Skilled Worker (SSW) visa",
+        "High labor shortage (many jobs available)"
+      ],
+      "pros": [
+        "High safety and stability",
+        "Plenty of entry-level jobs",
+        "Fast-track to permanent residency"
+      ],
+      "cons": [
+        "Immense language barrier",
+        "Grueling corporate culture",
+        "Permanent residency takes 1-10 years"
+      ],
+      "timeline": "6-12 months",
+      "embassies": [
+        { "city": "Lagos", "country": "Nigeria" }
+      ]
+    },
+    {
+      "id": "KR",
+      "name": "South Korea",
+      "flag": "🇰🇷",
+      "officialRate": "85-95%",
+      "africanRate": "75-85%",
+      "category": "Asia",
+      "sweetSpot": "student",
+      "trueCost": {
+        "currency": "KRW",
+        "tuition": 15000000,
+        "blockedAccount": 5000000,
+        "fees": 300000,
+        "total": 20300000
+      },
+      "sweetSpots": [
+        "Global Korea Scholarship (fully funded)",
+        "K-culture popularity (booming tech)",
+        "High-tech society"
+      ],
+      "pros": [
+        "High-tech society",
+        "K-culture global demand",
+        "Fully-funded scholarship opportunities"
+      ],
+      "cons": [
+        "Extremely rigid immigration laws",
+        "Local companies rarely sponsor visas",
+        "Korean language challenging"
+      ],
+      "timeline": "8-12 months",
+      "embassies": [
+        { "city": "Lagos", "country": "Nigeria" }
+      ]
+    }
+  ],
+  "lastUpdated": "2026-01-15",
+  "note": "These are representative countries. Complete database includes all 26 countries from the blueprint."
+}

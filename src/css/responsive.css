@@ -1,0 +1,476 @@
+/* Global Route: Responsive Design */
+/* Mobile-first, progressive enhancement */
+
+/* ===== TABLET (768px and up) ===== */
+@media (min-width: 768px) {
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .container {
+    padding: 0 var(--spacing-lg);
+  }
+
+  .header-container {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  /* Navigation: Show horizontal menu */
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-lg);
+    box-shadow: none;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero {
+    padding: var(--spacing-3xl) var(--spacing-lg);
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  /* Sections */
+  .problem,
+  .approach,
+  .featured,
+  .tools,
+  .newsletter,
+  .testimonials,
+  .cta-final {
+    padding: var(--spacing-3xl) var(--spacing-lg);
+  }
+
+  /* Grids */
+  .problem-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Newsletter Form */
+  .newsletter-form {
+    flex-wrap: nowrap;
+  }
+
+  .newsletter-form input {
+    flex: 1;
+    min-width: auto;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  .btn-large {
+    padding: var(--spacing-lg) var(--spacing-2xl);
+  }
+
+  .hero-cta {
+    gap: var(--spacing-lg);
+  }
+
+  /* Ad sidebar */
+  .article-sidebar {
+    display: block;
+  }
+
+  #mobile-footer {
+    display: none !important;
+  }
+}
+
+/* ===== DESKTOP (1024px and up) ===== */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: var(--font-size-4xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-3xl);
+  }
+
+  /* Hero */
+  .hero {
+    padding: var(--spacing-3xl) var(--spacing-lg);
+    display: flex;
+    gap: var(--spacing-3xl);
+    align-items: center;
+  }
+
+  .hero-content {
+    flex: 1;
+    text-align: left;
+  }
+
+  .hero-stats {
+    flex: 1;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-cta {
+    justify-content: flex-start;
+  }
+
+  /* Grids */
+  .problem-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .approach-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .featured-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-links {
+    gap: var(--spacing-2xl);
+  }
+
+  /* Article layout with sidebar */
+  .article-container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: var(--spacing-lg);
+  }
+
+  .article-sidebar {
+    position: sticky;
+    top: 80px;
+    height: fit-content;
+  }
+
+  /* Sticky header ad */
+  #sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-fixed);
+  }
+
+  /* Mobile footer hidden */
+  #mobile-footer {
+    display: none !important;
+  }
+}
+
+/* ===== LARGE DESKTOP (1280px and up) ===== */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+
+  /* Extra spacing on larger screens */
+  .problem,
+  .approach,
+  .featured,
+  .tools,
+  .newsletter,
+  .testimonials,
+  .cta-final {
+    padding: var(--spacing-3xl) var(--spacing-2xl);
+  }
+
+  /* Cards with more breathing room */
+  .problem-card,
+  .approach-card,
+  .featured-card,
+  .tool-card {
+    padding: var(--spacing-2xl);
+  }
+}
+
+/* ===== HIGH DPI / RETINA DISPLAYS ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Thinner borders/shadows for better appearance on retina */
+  .btn {
+    box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.05);
+  }
+
+  .card {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* ===== LANDSCAPE ORIENTATION ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    padding: var(--spacing-lg) var(--spacing-md);
+    min-height: auto;
+  }
+
+  .hero-stats {
+    gap: var(--spacing-sm);
+  }
+
+  .stat {
+    padding: var(--spacing-md);
+  }
+
+  .stat-number {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+/* ===== SMALL DEVICES (320px - 480px) ===== */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  /* Header on small screens */
+  .header-container {
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+
+  .logo-link {
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-base);
+  }
+
+  /* Hero on small screens */
+  .hero {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .btn {
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  /* Single column grids */
+  .problem-grid,
+  .approach-grid,
+  .featured-grid,
+  .tools-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Smaller sections */
+  .problem,
+  .approach,
+  .featured,
+  .tools,
+  .newsletter,
+  .testimonials,
+  .cta-final {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .problem-card,
+  .approach-card,
+  .featured-card,
+  .tool-card {
+    padding: var(--spacing-md);
+  }
+
+  /* Footer on small screens */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  /* Newsletter form single column */
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+  }
+
+  /* Ad unit mobile */
+  .ad-unit {
+    min-height: 250px;
+  }
+
+  #mobile-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: var(--z-fixed);
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Add padding to main when footer visible */
+  main {
+    padding-bottom: 100px;
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===== DARK MODE (if implemented) ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-neutral-50: #0f172a;
+    --color-neutral-100: #1e293b;
+    --color-neutral-200: #334155;
+    --color-neutral-700: #cbd5e1;
+    --color-neutral-800: #e2e8f0;
+    --color-neutral-900: #f1f5f9;
+  }
+
+  body {
+    background-color: var(--color-neutral-50);
+    color: var(--color-neutral-800);
+  }
+
+  .header,
+  .problem-card,
+  .featured-card,
+  .tool-card {
+    background-color: var(--color-neutral-100);
+  }
+}
+
+/* ===== PRINT ===== */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .header,
+  .footer,
+  .ad-unit,
+  .newsletter,
+  .nav-toggle {
+    display: none;
+  }
+
+  main {
+    padding-bottom: 0;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75rem;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+}
+
+/* ===== TOUCH DEVICES ===== */
+@media (hover: none) and (pointer: coarse) {
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  a, button {
+    padding: var(--spacing-sm);
+  }
+
+  /* Larger touch targets */
+  .nav-menu a {
+    padding: var(--spacing-md);
+    display: block;
+  }
+
+  .footer-section a {
+    padding: var(--spacing-sm) 0;
+    display: block;
+  }
+}
