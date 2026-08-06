@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | Global Route</title>
+  <meta name="description" content="{{ excerpt }}">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="author" content="{{ author }}">
+  <meta name="publish_date" content="{{ published_date }}">
+  <meta name="updated_date" content="{{ updated_date }}">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ excerpt }}">
+  <meta property="og:image" content="{{ featured_image }}">
+  <meta property="og:url" content="{{ page_url }}">
+  <meta property="og:site_name" content="Global Route">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ excerpt }}">
+  <meta name="twitter:image" content="{{ featured_image }}">
+  <meta name="twitter:creator" content="@globalrouteapp">
+  
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "{{ title }}",
+    "image": "{{ featured_image }}",
+    "datePublished": "{{ published_date }}",
+    "dateModified": "{{ updated_date }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ author }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Global Route",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "/assets/logo.png"
+      }
+    },
+    "description": "{{ excerpt }}"
+  }
+  </script>
+  
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/blog-post.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="/" class="logo-link">
+          <span class="logo-icon">🌍</span>
+          <span>Global Route</span>
+        </a>
+      </div>
+      <nav class="navigation">
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/blog.html">Blog</a></li>
+          <li><a href="/pages/calculator.html">Calculator</a></li>
+          <li><a href="/pages/countries.html">Countries</a></li>
+          <li><a href="/pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress-bar" id="reading-progress-bar"></div>
+
+  <!-- Article Hero -->
+  <section class="article-hero">
+    <div class="container article-hero-container">
+      <div class="article-hero-meta">
+        <span class="article-category">{{ category }}</span>
+        <span class="article-date">{{ published_date_formatted }}</span>
+        <span class="article-read-time">{{ read_time }} min read</span>
+      </div>
+      <h1 class="article-title">{{ title }}</h1>
+      <p class="article-excerpt">{{ excerpt }}</p>
+      <div class="article-hero-author">
+        <img src="{{ author_image }}" alt="{{ author }}" class="author-avatar">
+        <div class="author-info">
+          <p class="author-name">{{ author }}</p>
+          <p class="author-bio">{{ author_bio }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Image -->
+  <div class="article-featured-image">
+    <img src="{{ featured_image }}" alt="{{ title }}" loading="lazy">
+  </div>
+
+  <!-- Main Article -->
+  <main id="main" class="article-main">
+    <div class="container article-container">
+      
+      <!-- Sidebar (TOC + Social) -->
+      <aside class="article-sidebar">
+        <!-- Table of Contents -->
+        <div class="table-of-contents-container">
+          <button class="toc-toggle" id="toc-toggle">
+            <span>📋 Table of Contents</span>
+            <span class="toc-toggle-icon">▼</span>
+          </button>
+          <nav class="table-of-contents" id="table-of-contents">
+            <!-- Auto-generated from H2/H3 headings -->
+          </nav>
+        </div>
+
+        <!-- Social Share -->
+        <div class="article-social-share">
+          <h4>Share This</h4>
+          <div class="share-buttons">
+            <a href="https://twitter.com/intent/tweet?text={{ title }}&url={{ page_url }}&via=globalrouteapp" 
+               class="share-btn twitter" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               aria-label="Share on Twitter">
+              𝕏
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page_url }}" 
+               class="share-btn linkedin" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               aria-label="Share on LinkedIn">
+              in
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ page_url }}" 
+               class="share-btn facebook" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               aria-label="Share on Facebook">
+              f
+            </a>
+            <button class="share-btn copy-link" id="copy-link-btn" aria-label="Copy link">
+              🔗
+            </button>
+          </div>
+        </div>
+
+        <!-- Newsletter CTA -->
+        <div class="article-newsletter-cta">
+          <h4>Never Miss Updates</h4>
+          <p>Weekly migration strategies + policy changes</p>
+          <form class="newsletter-form" id="article-newsletter-form">
+            <input 
+              type="email" 
+              placeholder="your@email.com" 
+              required 
+              aria-label="Email for newsletter"
+            >
+            <button type="submit" class="btn btn-primary btn-small">Subscribe</button>
+          </form>
+          <p class="newsletter-privacy">We respect your privacy. Unsubscribe anytime.</p>
+        </div>
+      </aside>
+
+      <!-- Article Content -->
+      <article class="article-content" id="article-content">
+        <!-- Content is dynamically loaded here from markdown -->
+        {{ article_body }}
+      </article>
+    </div>
+  </main>
+
+  <!-- Ad Unit -->
+  <div class="ad-unit" id="ad-unit-1">
+    [Advertisement Placeholder]
+  </div>
+
+  <!-- Article Footer -->
+  <section class="article-footer">
+    <div class="container">
+      
+      <!-- Tags -->
+      <div class="article-tags">
+        <h3>Tags</h3>
+        <div class="tags-list">
+          {{ tags }}
+        </div>
+      </div>
+
+      <!-- Author Bio -->
+      <div class="article-author-full">
+        <img src="{{ author_image }}" alt="{{ author }}" class="author-avatar-large">
+        <div class="author-full-info">
+          <h3>About {{ author }}</h3>
+          <p>{{ author_full_bio }}</p>
+          <div class="author-social">
+            <a href="{{ author_twitter }}" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="{{ author_linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Articles -->
+  <section class="related-articles">
+    <div class="container">
+      <h2>Related Articles</h2>
+      <div class="related-articles-grid" id="related-articles-grid">
+        <!-- Auto-populated with 3 related posts -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Ad Unit -->
+  <div class="ad-unit" id="ad-unit-2">
+    [Advertisement Placeholder]
+  </div>
+
+  <!-- Comments Section -->
+  <section class="comments-section">
+    <div class="container">
+      <h2>Comments</h2>
+      <div id="disqus_thread"></div>
+      <script>
+        // Disqus configuration (optional, or replace with native comment system)
+        var disqus_config = function () {
+          this.page.url = "{{ page_url }}";
+          this.page.identifier = "{{ post_id }}";
+        };
+      </script>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Global Route</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="/pages/blog.html">Blog</a></li>
+            <li><a href="/pages/calculator.html">Calculator</a></li>
+            <li><a href="/pages/countries.html">Countries</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://twitter.com/globalrouteapp" target="_blank">Twitter</a></li>
+            <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+            <li><a href="https://instagram.com/myglobalroute" target="_blank">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Global Route. Radical transparency for African global mobility.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/blog-post.js"></script>
+</body>
+</html>
