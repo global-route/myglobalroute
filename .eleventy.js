@@ -2,10 +2,15 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
 module.exports = function(eleventyConfig) {
-  // Copy static assets
+  // Copy static assets - these passthrough copy commands preserve directory structure
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("public");
+  
+  // Copy pages directly to dist root, preserving only pages/ directory
+  eleventyConfig.addPassthroughCopy({
+    "src/pages": "/pages"
+  });
   
   // Configure Markdown
   let markdownLibrary = markdownIt({
