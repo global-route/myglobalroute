@@ -1,9 +1,10 @@
 ---
+layout: blog-post.njk
 title: "Germany Visa from Nigeria: The 2026 Reality Check"
 date: 2026-01-15
 updated: 2026-07-21
 author: "Global Route Editorial"
-category: "country-audits"
+category: "Country Audits"
 country: "Germany"
 keywords: "Germany visa from Nigeria, German student visa, blocked account, study in Germany"
 featured: true

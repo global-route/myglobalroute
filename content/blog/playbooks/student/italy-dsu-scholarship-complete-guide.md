@@ -1,9 +1,10 @@
 ---
+layout: blog-post.njk
 title: "Italy DSU Scholarship: The Hidden Hack for African Students"
 date: 2026-01-18
 updated: 2026-07-21
 author: "Global Route Editorial"
-category: "playbooks-student"
+category: "Student Playbooks"
 country: "Italy"
 keywords: "Italy DSU scholarship, study in Italy free, Italian scholarship for Africans"
 featured: true

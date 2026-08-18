@@ -1,0 +1,115 @@
+---
+layout: base.njk
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | Global Route</title>
+    <meta name="description" content="{{ excerpt or content | excerpt }}">
+    <meta name="keywords" content="{{ keywords }}">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ excerpt or content | excerpt }}">
+    <meta property="og:image" content="{{ image }}">
+    <meta property="og:type" content="article">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ excerpt or content | excerpt }}">
+    <meta name="twitter:image" content="{{ image }}">
+    
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/blog-post.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="container">
+            <a href="/" class="logo">Global Route</a>
+            <ul class="nav-menu">
+                <li><a href="/pages/countries.html">Countries</a></li>
+                <li><a href="/pages/blog.html" class="active">Blog</a></li>
+                <li><a href="/pages/calculator.html">Calculator</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="blog-post-page">
+        <article class="blog-post container">
+            <header class="post-header">
+                <span class="category-badge">{{ category }}</span>
+                <h1>{{ title }}</h1>
+                <div class="post-meta">
+                    <span class="author">{{ author or "Global Route Editorial" }}</span>
+                    <span class="separator">•</span>
+                    <time datetime="{{ date }}">{{ date | readableDate }}</time>
+                    <span class="separator">•</span>
+                    <span class="read-time">{{ content | readingTime }} min read</span>
+                </div>
+                {% if updated %}
+                <div class="updated-badge">
+                    Updated: {{ updated | readableDate }}
+                </div>
+                {% endif %}
+            </header>
+
+            {% if image %}
+            <div class="featured-image">
+                <img src="{{ image }}" alt="{{ title }}">
+            </div>
+            {% endif %}
+
+            <div class="post-content">
+                {{ content | safe }}
+            </div>
+
+            <footer class="post-footer">
+                <div class="share-buttons">
+                    <h4>Share this article:</h4>
+                    <a href="https://twitter.com/intent/tweet?text={{ title }}&url={{ page.url }}" target="_blank" class="btn-share twitter">Twitter</a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url }}" target="_blank" class="btn-share linkedin">LinkedIn</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url }}" target="_blank" class="btn-share facebook">Facebook</a>
+                </div>
+
+                <div class="newsletter-cta">
+                    <h3>Get more migration insights</h3>
+                    <p>Join 1,000+ readers getting honest visa strategies weekly.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </footer>
+        </article>
+
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h4>Categories</h4>
+                <ul class="category-list">
+                    <li><a href="/blog/category/country-audits.html">Country Audits</a></li>
+                    <li><a href="/blog/category/student-playbooks.html">Student Playbooks</a></li>
+                    <li><a href="/blog/category/professional-playbooks.html">Professional Playbooks</a></li>
+                    <li><a href="/blog/category/business-playbooks.html">Business Playbooks</a></li>
+                    <li><a href="/blog/category/case-studies.html">Case Studies</a></li>
+                    <li><a href="/blog/category/policy-updates.html">Policy Updates</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Global Route. Radical transparency for African global mobility.</p>
+            <ul class="footer-links">
+                <li><a href="/pages/about.html">About</a></li>
+                <li><a href="/pages/contact.html">Contact</a></li>
+                <li><a href="/pages/blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
