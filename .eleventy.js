@@ -7,6 +7,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("public");
   
+  // Copy data files to dist/data
+  eleventyConfig.addPassthroughCopy({
+    "src/data": "/data"
+  });
+  
   // Copy pages directly to dist root, preserving only pages/ directory
   eleventyConfig.addPassthroughCopy({
     "src/pages": "/pages"
