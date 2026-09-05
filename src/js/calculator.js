@@ -1,122 +1,81 @@
 /**
  * Global Route: Budget Calculator Module
- * Interactive visa affordability calculator
+ * Canonical affordability and planning logic.
  */
 
 const CalculatorModule = (() => {
-  // Configuration
   const config = {
+    // Fallback rates only. Do not present these as live FX rates.
     currencyExchangeRates: {
-      'EUR': 1.08,
-      'GBP': 1.27,
-      'CAD': 0.74,
-      'AUD': 0.67,
-      'JPY': 0.0067,
-      'KRW': 0.00073
-    }
+      USD: 1,
+      EUR: 1.08,
+      GBP: 1.27,
+      CAD: 0.74,
+      AUD: 0.67,
+      JPY: 0.0067,
+      KRW: 0.00073
+    },
+    tightBudgetThreshold: 0.8
   };
 
-  /**
-   * Convert currency to USD
-   */
-  const convertToUSD = (amount, currency) => {
-    const rate = config.currencyExchangeRates[currency] || 1;
-    return amount * rate;
+  const convertToUSD = (amount, currency = 'USD') => {
+    const numericAmount = Number(amount);
+    if (!Number.isFinite(numericAmount) || numericAmount < 0) return 0;
+    const rate = config.currencyExchangeRates[String(currency).toUpperCase()];
+    if (!Number.isFinite(rate)) throw new Error(`Unsupported currency: ${currency}`);
+    return numericAmount * rate;
   };
 
-  /**
-   * Calculate affordability score
-   */
   const calculateAffordability = (userBudget, countryCost) => {
-    const costInUSD = convertToUSD(countryCost.total, countryCost.currency);
-    
-    if (userBudget >= costInUSD) {
-      return {
-        affordable: true,
-        percentage: 100,
-        shortfall: 0,
-        rating: 'Affordable'
-      };
-    } else if (userBudget >= costInUSD * 0.8) {
-      return {
-        affordable: true,
-        percentage: (userBudget / costInUSD) * 100,
-        shortfall: costInUSD - userBudget,
-        rating: 'Tight Budget'
-      };
-    } else {
-      return {
-        affordable: false,
-        percentage: (userBudget / costInUSD) * 100,
-        shortfall: costInUSD - userBudget,
-        rating: 'Not Affordable'
-      };
+    const budget = Number(userBudget);
+    const costInUSD = convertToUSD(countryCost?.total, countryCost?.currency);
+    if (!Number.isFinite(budget) || budget < 0 || costInUSD <= 0) {
+      return { affordable: false, percentage: 0, shortfall: costInUSD, rating: 'Insufficient Data' };
     }
-  };
-
-  /**
-   * Get recommended countries by budget
-   */
-  const getRecommendedCountries = (countries, budget, preferences = {}) => {
-    return countries
-      .map(country => ({
-        ...country,
-        affordability: calculateAffordability(budget, country.trueCost)
-      }))
-      .filter(country => country.affordability.affordable)
-      .filter(country => {
-        // Filter by preferences if provided
-        if (preferences.category && country.sweetSpot !== preferences.category) {
-          return false;
-        }
-        if (preferences.region && country.category !== preferences.region) {
-          return false;
-        }
-        return true;
-      })
-      .sort((a, b) => {
-        // Sort by true cost (cheapest first)
-        const aCost = convertToUSD(a.trueCost.total, a.trueCost.currency);
-        const bCost = convertToUSD(b.trueCost.total, b.trueCost.currency);
-        return aCost - bCost;
-      });
-  };
-
-  /**
-   * Calculate timeline
-   */
-  const calculateTimeline = (country) => {
-    const timelineString = country.timeline;
-    const months = parseInt(timelineString) || 12;
-    
+    const percentage = (budget / costInUSD) * 100;
+    const affordable = budget >= costInUSD * config.tightBudgetThreshold;
     return {
-      minMonths: months / 2,
-      maxMonths: months,
-      recommended: Math.ceil(months * 1.2) // Add buffer
+      affordable,
+      percentage: Math.min(100, percentage),
+      shortfall: Math.max(0, costInUSD - budget),
+      rating: budget >= costInUSD ? 'Affordable' : affordable ? 'Tight Budget' : 'Not Affordable'
     };
   };
 
-  /**
-   * Generate savings plan
-   */
+  const getRecommendedCountries = (countries, budget, preferences = {}) => countries
+    .map(country => ({ ...country, affordability: calculateAffordability(budget, country.trueCost) }))
+    .filter(country => country.affordability.affordable)
+    .filter(country => !preferences.category || country.sweetSpot === preferences.category)
+    .filter(country => !preferences.region || country.category?.includes(preferences.region))
+    .sort((a, b) => convertToUSD(a.trueCost.total, a.trueCost.currency) - convertToUSD(b.trueCost.total, b.trueCost.currency));
+
+  const calculateTimeline = (country) => {
+    const values = String(country?.timeline || '').match(/\d+(?:\.\d+)?/g)?.map(Number) || [];
+    const minMonths = values[0] || 0;
+    const maxMonths = values[1] || minMonths || 12;
+    return {
+      minMonths,
+      maxMonths: Math.max(minMonths, maxMonths),
+      recommended: Math.ceil(Math.max(minMonths, maxMonths) * 1.2)
+    };
+  };
+
   const generateSavingsPlan = (targetCost, currentSavings, monthlyIncome, monthlyExpenses) => {
-    const monthlySavings = monthlyIncome - monthlyExpenses;
-    
-    if (monthlySavings <= 0) {
-      return {
-        feasible: false,
-        message: 'Current expenses exceed income. Cannot save.',
-        monthsNeeded: Infinity
-      };
+    const target = Math.max(0, Number(targetCost) || 0);
+    const savings = Math.max(0, Number(currentSavings) || 0);
+    const monthlySavings = (Number(monthlyIncome) || 0) - (Number(monthlyExpenses) || 0);
+    const remainingAmount = Math.max(0, target - savings);
+    if (remainingAmount === 0) {
+      return { feasible: true, currentSavings: savings, targetCost: target, remainingAmount: 0, monthlyTarget: Math.max(0, monthlySavings), monthsNeeded: 0, targetDate: new Date() };
     }
-
-    const remainingAmount = targetCost - currentSavings;
+    if (monthlySavings <= 0) {
+      return { feasible: false, currentSavings: savings, targetCost: target, remainingAmount, monthlyTarget: 0, monthsNeeded: Infinity, targetDate: null };
+    }
     const monthsNeeded = Math.ceil(remainingAmount / monthlySavings);
-
     return {
       feasible: true,
-      currentSavings,
-      targetCost,
+      currentSavings: savings,
+      targetCost: target,
       remainingAmount,
       monthlyTarget: monthlySavings,
       monthsNeeded,
@@ -124,40 +83,25 @@ const CalculatorModule = (() => {
     };
   };
 
-  /**
-   * Calculate true cost breakdown
-   */
   const getCostBreakdown = (country) => {
-    const cost = country.trueCost;
+    const cost = country?.trueCost || {};
+    const total = Number(cost.total) || 0;
+    const entries = [['Tuition', cost.tuition], ['Blocked Account', cost.blockedAccount], ['Fees', cost.fees]];
     return {
-      tuition: cost.tuition || 0,
-      blockedAccount: cost.blockedAccount || 0,
-      fees: cost.fees || 0,
-      total: cost.total,
-      breakdown: [
-        { label: 'Tuition', amount: cost.tuition || 0, percentage: ((cost.tuition || 0) / cost.total * 100).toFixed(1) },
-        { label: 'Blocked Account', amount: cost.blockedAccount || 0, percentage: ((cost.blockedAccount || 0) / cost.total * 100).toFixed(1) },
-        { label: 'Fees', amount: cost.fees || 0, percentage: ((cost.fees || 0) / cost.total * 100).toFixed(1) }
-      ]
+      ...cost,
+      total,
+      breakdown: entries.map(([label, amount]) => ({
+        label,
+        amount: Number(amount) || 0,
+        percentage: total ? (((Number(amount) || 0) / total) * 100).toFixed(1) : '0.0'
+      }))
     };
   };
 
-  /**
-   * Compare countries
-   */
-  const compareCountries = (countryIds, countries) => {
-    return countryIds.map(id => 
-      countries.find(c => c.id === id)
-    ).filter(Boolean);
-  };
+  const compareCountries = (countryIds, countries) => countryIds.map(id => countries.find(country => country.id === id)).filter(Boolean);
 
-  /**
-   * Get visa affordability index (1-10)
-   */
   const getAffordabilityIndex = (country) => {
     const costUSD = convertToUSD(country.trueCost.total, country.trueCost.currency);
-    
-    // Scale: 1-10 where 10 is most affordable
     if (costUSD < 5000) return 10;
     if (costUSD < 10000) return 9;
     if (costUSD < 15000) return 8;
@@ -170,25 +114,10 @@ const CalculatorModule = (() => {
     return 1;
   };
 
-  /**
-   * Track calculator usage
-   */
   const trackUsage = (eventData = {}) => {
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'calculator_used', eventData);
-    }
+    if (typeof gtag !== 'undefined') gtag('event', 'calculator_used', eventData);
   };
 
-  // Public API
-  return {
-    calculateAffordability,
-    getRecommendedCountries,
-    calculateTimeline,
-    generateSavingsPlan,
-    getCostBreakdown,
-    compareCountries,
-    getAffordabilityIndex,
-    convertToUSD,
-    trackUsage
-  };
+  // DOM wiring belongs to app.js; this module is the single calculation engine.
+  return { calculateAffordability, getRecommendedCountries, calculateTimeline, generateSavingsPlan, getCostBreakdown, compareCountries, getAffordabilityIndex, convertToUSD, trackUsage };
 })();
