@@ -12,8 +12,8 @@ const GlobalRoute = (() => {
     try {
       await loadCountriesData();
       initializeNavigation();
-      initializeCalculator();
       initializeSearch();
+      initializeCalculator();
       if (config.enableAnalytics) loadAnalytics();
       appState.isInitialized = true;
     } catch (error) {
@@ -47,31 +47,45 @@ const GlobalRoute = (() => {
     if (!form || typeof CalculatorModule === 'undefined') return;
     form.addEventListener('submit', event => {
       event.preventDefault();
-      const budget = Number(form.querySelector('[name="budget"]')?.value);
+      const savings = Number(form.querySelector('[name="savings"]')?.value) || 0;
+      const income = Number(form.querySelector('[name="income"]')?.value) || 0;
+      const expenses = Number(form.querySelector('[name="expenses"]')?.value) || 0;
       const category = form.querySelector('[name="category"]')?.value;
-      const countries = CalculatorModule.getRecommendedCountries(appState.countries, budget, { category: category === 'all' ? undefined : category });
-      displayCalculatorResults(countries);
-      CalculatorModule.trackUsage({ country_count: countries.length });
+      const countries = CalculatorModule.getRecommendedCountries(appState.countries, savings, {
+        category: category || undefined
+      });
+      displayCalculatorResults(countries, savings, income, expenses);
+      CalculatorModule.trackUsage({ country_count: countries.length, category: category || 'all' });
     });
   };
 
   const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
 
-  const displayCalculatorResults = countries => {
+  const displayCalculatorResults = (countries, savings, income, expenses) => {
     const container = document.querySelector('#calculator-results');
-    if (!container) return;
+    const list = document.querySelector('#affordable-list');
+    if (!container || !list) return;
+
+    const monthlySavings = Math.max(0, income - expenses);
+    document.querySelector('#result-savings')?.replaceChildren(document.createTextNode(`$${savings.toLocaleString()}`));
+    document.querySelector('#result-monthly-savings')?.replaceChildren(document.createTextNode(`$${monthlySavings.toLocaleString()}`));
+    document.querySelector('#result-yearly-savings')?.replaceChildren(document.createTextNode(`$${(monthlySavings * 12).toLocaleString()}`));
+
     if (!countries.length) {
-      container.textContent = 'No countries found for this budget. Try increasing it or changing your preference.';
+      list.textContent = 'No countries match the current savings and goal. Consider increasing your savings target or reviewing scholarship/lower-cost pathways.';
+      container.style.display = 'block';
       return;
     }
-    container.innerHTML = countries.map(country => `
-      <div class="country-result">
-        <h3>${escapeHtml(country.flag)} ${escapeHtml(country.name)}</h3>
+
+    list.innerHTML = countries.map(country => `
+      <article class="country-result">
+        <h4>${escapeHtml(country.flag)} ${escapeHtml(country.name)}</h4>
         <p>True Cost: ${escapeHtml(country.trueCost.currency)} ${escapeHtml(country.trueCost.total)}</p>
         <p>Affordability: ${escapeHtml(country.affordability.rating)}</p>
         <a href="/pages/countries.html#${encodeURIComponent(country.id)}">Learn More →</a>
-      </div>
+      </article>
     `).join('');
+    container.style.display = 'block';
   };
 
   const loadAnalytics = () => {
