@@ -1,39 +1,51 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
-const file = path.join(__dirname, '..', 'src', 'data', 'countries.json');
-const payload = JSON.parse(fs.readFileSync(file, 'utf8'));
-const countries = payload.countries;
-const required = ['id', 'name', 'category', 'sweetSpot', 'trueCost', 'timeline'];
+const readJson = file => JSON.parse(fs.readFileSync(path.join(__dirname, '..', file), 'utf8'));
+const countriesPayload = readJson('src/data/countries.json');
+const pathwaysPayload = readJson('src/data/pathways.json');
+const countries = countriesPayload.countries;
+const pathways = pathwaysPayload.pathways;
 const errors = [];
 const warnings = [];
+const today = new Date('2026-09-05T00:00:00Z');
 
-if (!Array.isArray(countries) || countries.length === 0) {
-  errors.push('countries must be a non-empty array');
-} else {
-  const ids = new Set();
-  countries.forEach((country, index) => {
-    required.forEach(field => {
-      if (country[field] === undefined || country[field] === null || country[field] === '') {
-        errors.push(`countries[${index}] ${field} is required`);
-      }
-    });
-    if (ids.has(country.id)) errors.push(`duplicate country id: ${country.id}`);
-    ids.add(country.id);
-    if (!country.trueCost || !country.trueCost.currency || !Number.isFinite(Number(country.trueCost.total))) {
-      errors.push(`countries[${index}] trueCost must include currency and numeric total`);
-    }
-    if (country.africanRate && !/^\\d+\\s*-\\s*\\d+%?$/.test(country.africanRate)) {
-      warnings.push(`countries[${index}] africanRate is not a simple range: ${country.africanRate}`);
-    }
-  });
+const countryIds = new Set();
+if (!Array.isArray(countries) || countries.length !== 26) {
+  errors.push(`countries must contain exactly 26 records; found ${countries?.length ?? 0}`);
+}
+for (const [index, country] of (countries || []).entries()) {
+  for (const field of ['id', 'name', 'category', 'sweetSpot', 'dataStatus', 'source']) {
+    if (!country[field]) errors.push(`countries[${index}] ${field} is required`);
+  }
+  if (countryIds.has(country.id)) errors.push(`duplicate country id: ${country.id}`);
+  countryIds.add(country.id);
+  if (!country.source?.authority || !country.source?.url || !country.source?.retrievedAt) {
+    errors.push(`countries[${index}] requires authority, source url and retrievedAt`);
+  }
+  if (country.officialRate !== null || country.africanRate !== null) {
+    errors.push(`countries[${index}] approval rates must be null until evidence-backed`);
+  }
+  if (country.trueCost !== null || country.timeline !== null) {
+    errors.push(`countries[${index}] cost/timeline claims must be null until evidence-backed`);
+  }
+  if (!/^https:\/\//.test(country.source.url)) errors.push(`countries[${index}] source url must be HTTPS`);
 }
 
-if (payload.lastUpdated && payload.lastUpdated < '2026-06-01') {
-  warnings.push(`dataset lastUpdated is stale: ${payload.lastUpdated}`);
+const pathwayIds = new Set();
+for (const [index, pathway] of (pathways || []).entries()) {
+  for (const field of ['id', 'countryId', 'type', 'name', 'sourceUrl', 'sourceAuthority', 'status']) {
+    if (!pathway[field]) errors.push(`pathways[${index}] ${field} is required`);
+  }
+  if (!countryIds.has(pathway.countryId)) errors.push(`pathways[${index}] references unknown country ${pathway.countryId}`);
+  if (pathwayIds.has(pathway.id)) errors.push(`duplicate pathway id: ${pathway.id}`);
+  pathwayIds.add(pathway.id);
+  if (!/^https:\/\//.test(pathway.sourceUrl)) errors.push(`pathways[${index}] sourceUrl must be HTTPS`);
 }
-if (countries.length < 26) {
-  warnings.push(`dataset contains ${countries.length}/26 blueprint countries; expansion requires evidence-backed research`);
+
+if (countriesPayload.dataset?.asOf) {
+  const age = Math.floor((today - new Date(`${countriesPayload.dataset.asOf}T00:00:00Z`)) / 86400000);
+  if (age > 31) warnings.push(`country dataset is ${age} days old`);
 }
 
 if (errors.length) {
@@ -42,5 +54,5 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`DATA VALIDATION PASSED: ${countries.length} countries`);
+console.log(`DATA VALIDATION PASSED: ${countries.length} countries, ${pathways.length} pathways`);
 warnings.forEach(warning => console.warn(`WARNING: ${warning}`));
