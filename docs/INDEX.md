@@ -1,277 +1,79 @@
-# 📚 Documentation Hub
-
-Complete documentation for the Global Route project.
-
----
-
-## 🎯 Quick Start
-
-**New to the project?** Start here based on your role:
-
-### 👨‍💼 Project Managers
-1. Read: `project/PROJECT_ASSESSMENT.md` (10 min)
-2. Check: `sprints/CURRENT_SPRINT_STATUS.md` (5 min)
-3. Review: `project/EXECUTION_ROADMAP.md` (15 min)
-
-### 👨‍💻 Developers
-1. Read: `guides/QUICK_START.md` (10 min)
-2. Review: `reference/ARCHITECTURE.md` (15 min)
-3. Setup: `reference/DEPLOYMENT.md` (10 min)
-
-### ✍️ Content Writers
-1. Read: `guides/CONTENT_STRATEGY.md` (10 min)
-2. Reference: `phase-3/BLOG_POSTS_GUIDE.md` (5 min)
-3. Use: `guides/QUICK_START.md` (5 min)
-
----
-
-## 📁 Documentation Structure
-
-### 🎯 Project Documentation (`/project`)
-Overall project planning, assessment, and roadmaps.
-
-- **`PROJECT_ASSESSMENT.md`** - Complete health check (61% complete, B+ grade)
-- **`EXECUTION_ROADMAP.md`** - 30-page Phase 2-4 detailed plan
-- **`ROADMAP_QUICK_START.md`** - 2-page executive summary
-- **`EXECUTION_STATUS.md`** - Current phase metrics
-- **`NEXT_PHASE.md`** - Future planning
-- **`PROJECT_STRUCTURE.md`** - Site architecture
+# Global Route Documentation Hub
 
-### 📋 Sprint Documentation (`/sprints`)
-Sprint planning, execution, and completion documentation.
-
-- **`CURRENT_SPRINT_STATUS.md`** - Real-time active sprint status
-- **`SPRINT_STRUCTURE.md`** - 6-week sprint architecture
-- **Sprint 3 (Complete):**
-  - `SPRINT3_DEPLOYMENT.md` - Deployment guide
-  - `SPRINT3_DEPLOYMENT_COMPLETE.md` - Results & summary
-  - `SPRINT3_WEEK2_TASKS.md` - Detailed tasks
-- **Sprint 4 (Active):**
-  - `SPRINT4_CONTENT_CREATION.md` - Content & search plan
-- **`SPRINT_TRANSITION_SUMMARY.md`** - Sprint 3→4 transition
-
-### 📝 Phase Documentation (`/phase-3`, etc.)
-Phase-specific implementation and tracking.
-
-- **`phase-3/README.md`** - Phase 3 overview & structure
-- **`phase-3/BLOG_STRUCTURE.md`** - Blog architecture
-- **`phase-3/BLOG_POSTS_GUIDE.md`** - Post creation guidelines
-- **`phase-3/BLOG_CONTENT_SUMMARY.md`** - Content inventory
-- **`phase-3/BLOG_LAUNCH_SUMMARY.md`** - Launch day summary
-- Additional phases: `phase-0/`, `phase-1/`, `phase-2/`, `phase-4/`
-
-### 📚 Implementation Guides (`/guides`)
-Detailed implementation and how-to guides.
+**Status:** Active execution  
+**Last reconciled:** September 5, 2026
 
-- **`QUICK_START.md`** - Get up and running
-- **`BLUEPRINT_IMPLEMENTATION.md`** - Blog infrastructure details
-- **`CONTENT_STRATEGY.md`** - Editorial guidelines
-- **`CONTRIBUTING.md`** - Developer contribution guide
-- **`ADMOB_INTEGRATION.md`** - Google AdMob setup
-
-### 📖 Technical Reference (`/reference`)
-Architecture, tech stack, and technical documentation.
-
-- **`ARCHITECTURE.md`** - System design & architecture
-- **`TECH_STACK.md`** - Technologies used
-- **`DEPENDENCIES.md`** - npm packages & versions
-- **`DEPLOYMENT.md`** - Deployment architecture
-- **`BLUEPRINT_TO_EXECUTION.md`** - Project roadmap
+Global Route's original roadmap remains the product blueprint. The execution order is now dependency-aware: production integrity and trustworthy migration intelligence precede content and growth scaling.
 
-### 🔒 Internal Documentation (`/internal`)
-Private internal documentation.
+## Start here
 
-- **`financial-model.md`** - Financial projections
-- **`team-roles.md`** - Team structure
-- **`timeline.md`** - Project timeline
-
----
+### Project / product
+1. `project/PROJECT_ASSESSMENT.md` — current health and critical risks.
+2. `project/EXECUTION_ROADMAP.md` — master roadmap and phase dependencies.
+3. `sprints/ACTIVE_SPRINT.md` — current executable task list.
+4. `reference/DATA_TRUST_STANDARD.md` — non-negotiable data/evidence rules.
 
-## 📊 Current Project Status
-
-### Overview
-- **Status:** 🟢 ACTIVE
-- **Progress:** 63-65% Complete
-- **Phase:** Phase 3 (Blog Integration)
-- **Sprint:** Sprint 4 (Content & Search)
-
-### Breakdown
-| Phase | Status | Progress | End Date |
-|-------|--------|----------|----------|
-| Phase 1 | ✅ Complete | 100% | Jul 31 |
-| Phase 2 | 🟡 Active | 20% | Aug 31 |
-| Phase 3 | 🟢 Active | 25-30% | Aug 31 |
-| Phase 4 | 🔴 Planned | 0% | Sep 30 |
+### Developers
+1. `guides/QUICK_START.md`
+2. `reference/ARCHITECTURE.md`
+3. `reference/DEPLOYMENT.md`
+4. `reference/DATA_TRUST_STANDARD.md`
 
-### Blog Content
-| Metric | Target | Current | Status |
-|--------|--------|---------|--------|
-| Posts | 12 | 5 | 42% ✅ |
-| Countries | 26 | 12 | 46% 🟡 |
-| Search | Yes | ⏳ | Sprint 4 🟢 |
-| Analytics | Yes | ⏳ | Sprint 4 🟢 |
-
----
-
-## 🎯 Current Sprint (Sprint 4)
-
-**Duration:** Week 3 (Aug 3-10, 2026)  
-**Status:** 🟢 ACTIVE - Just started  
-**Tasks:** 6 tasks, 25-34 hours
-
-### Tasks
-1. Write Canada Express Entry post (6-8h)
-2. Write UK Masters Cost post (5-7h)
-3. Write Germany Chancenkarte post (5-7h)
-4. Implement Fuse.js search (4-5h)
-5. Build category pages (3-4h)
-6. Setup Google Analytics (2-3h)
+### Content / research
+1. `guides/CONTENT_STRATEGY.md`
+2. `phase-3/BLOG_POSTS_GUIDE.md`
+3. `reference/DATA_TRUST_STANDARD.md`
 
-**Daily Target:** 5-7 hours/day  
-**Deadline:** August 10, 2026
-
----
-
-## 🔗 Document Map
-
-### By Purpose
-
-**Planning & Strategy:**
-- `project/EXECUTION_ROADMAP.md`
-- `project/ROADMAP_QUICK_START.md`
-- `phase-3/README.md`
-
-**Execution & Tracking:**
-- `sprints/CURRENT_SPRINT_STATUS.md`
-- `sprints/SPRINT_STRUCTURE.md`
-- `sprints/SPRINT4_CONTENT_CREATION.md`
-
-**Implementation:**
-- `guides/QUICK_START.md`
-- `guides/CONTENT_STRATEGY.md`
-- `reference/ARCHITECTURE.md`
-
-**Technical Reference:**
-- `reference/TECH_STACK.md`
-- `reference/DEPENDENCIES.md`
-- `reference/DEPLOYMENT.md`
-
-### By Audience
-
-**Executives:**
-- `project/PROJECT_ASSESSMENT.md`
-- `project/ROADMAP_QUICK_START.md`
-
-**Project Managers:**
-- `sprints/CURRENT_SPRINT_STATUS.md`
-- `project/EXECUTION_ROADMAP.md`
-
-**Developers:**
-- `guides/QUICK_START.md`
-- `reference/ARCHITECTURE.md`
-- `guides/CONTRIBUTING.md`
+## Current state
 
-**Content Team:**
-- `guides/CONTENT_STRATEGY.md`
-- `phase-3/BLOG_POSTS_GUIDE.md`
+| Area | State | Priority |
+|---|---|---|
+| Runtime/data loading | Fixed | P0 |
+| Calculator architecture | Canonical engine established | P0 |
+| Search | Canonical module + Fuse fallback | P0 |
+| Static deployment config | Corrected | P0 |
+| Data validation | Initial validator added | P0 |
+| Migration evidence/provenance | Standard established; implementation pending | P0 |
+| Country coverage | Incomplete versus 26-country blueprint | P0 |
+| Pathway model | Pending | P0 |
+| SEO | Partial / audit required | P1 |
+| Growth/monetization | Blueprint stage | P1/P2 |
 
----
+## Important correction to older docs
 
-## 📈 Key Metrics
+Older sprint pages describe the project as if the main blocker were blog production. That is no longer the correct execution priority. Do not mark the 26-country database complete merely because records exist; legal, cost, approval and processing claims require provenance and freshness under the data trust standard.
 
-### Build & Deployment
-- Build time: 9.7 seconds ✅
-- Lighthouse score: ~75 ✅
-- Mobile responsive: 100% ✅
-- Errors: 0 ✅
+Likewise, avoid using old completion percentages as a release signal. Current production readiness is determined by verified gates, not document percentages.
 
-### Content
-- Blog posts: 5/12 (42%)
-- Categories: Ready (7 planned)
-- Database: 12/26 (46%)
-- Images: 5 (198KB)
+## Execution chain
 
-### Timeline
-- Phase 1: ✅ Complete
-- Phase 2: 20% (in progress)
-- Phase 3: 25-30% (in progress)
-- Phase 4: 0% (planned)
+`ROADMAP → PHASE → SPRINT → TASK → ISSUE/PR → COMMIT → VERIFICATION`
 
----
+When a change lands, update the active sprint and the relevant implementation/reference document in the same delivery cycle.
 
-## 🚀 Next Actions
+## Phase strategy
 
-### This Week (Sprint 4)
-1. Write 3 new blog posts
-2. Implement search functionality
-3. Build category pages
-4. Setup analytics
+### Phase A — Production Integrity (P0)
+Canonical runtime, data validation, calculator/search correctness, deployment, tests and security baseline.
 
-### Next Week (Sprint 5)
-1. Complete database (26 countries)
-2. Write 4 final posts
-3. Connect calculator system
+### Phase B — Migration Intelligence (P0)
+Evidence-backed country/pathway records, provenance, freshness, confidence and policy updates.
 
-### Following Week (Sprint 6)
-1. Launch social media
-2. Setup newsletter
-3. Phase 3 completion
+### Phase C — Core Product (P0)
+Country explorer, pathway pages, calculator, comparison and `Find My Route` recommendation engine.
 
----
+### Phase D — Acquisition (P1)
+Technical SEO, structured data, internal linking, programmatic country/pathway pages and analytics.
 
-## 📞 Navigation
+### Phase E — Trust & Compliance (P1)
+Privacy, terms, disclaimers, accessibility, security hardening and transparent sourcing.
 
-### Documentation by Folder
+### Phase F — Growth (P1)
+Newsletter, referrals, partnerships and trusted affiliate infrastructure.
 
-```
-docs/
-├── INDEX.md (this file)
-├── project/ ...................... Project planning & roadmaps
-├── sprints/ ....................... Sprint execution & tracking
-├── phase-3/ ....................... Blog Phase 3 details
-├── guides/ ........................ Implementation how-tos
-├── reference/ ..................... Technical architecture
-├── internal/ ...................... Private internal docs
-├── phase-0, phase-1, phase-2, phase-4/ ... Phase specific docs
-└── internal doc & files/ .......... Internal reference
-```
+### Phase G — Scale (P2)
+Personalization, alerts, policy-change notifications, premium intelligence and B2B/API products.
 
-### Quick Find
+## Maintenance rule
 
-**I'm looking for...**
-- Project status → `project/PROJECT_ASSESSMENT.md`
-- Sprint status → `sprints/CURRENT_SPRINT_STATUS.md`
-- How to get started → `guides/QUICK_START.md`
-- Technical architecture → `reference/ARCHITECTURE.md`
-- Content guidelines → `guides/CONTENT_STRATEGY.md`
-- Deployment guide → `reference/DEPLOYMENT.md`
-
----
-
-## 📝 Maintenance
-
-### Updates
-- **Sprint Status:** Updated weekly (Fridays)
-- **Project Status:** Updated bi-weekly
-- **Technical Docs:** Updated on changes
-- **Guides:** Updated as needed
-
-### Last Updated
-- **This Index:** August 18, 2026
-- **Project Assessment:** August 18, 2026
-- **Sprint Status:** August 18, 2026
-- **Execution Roadmap:** August 18, 2026
-
----
-
-**Welcome to Global Route!** 🚀
-
-This documentation is your complete guide to the project. Each document is organized by function and audience for easy discovery.
-
-**Start with the quick links above based on your role, or explore the folder structure to dive deeper.**
-
----
-
-*For questions or clarifications, refer to the specific document for your need, or contact the project lead.*
-
-**Last Updated:** August 18, 2026
+If an older document conflicts with `ACTIVE_SPRINT.md`, `EXECUTION_ROADMAP.md` or `DATA_TRUST_STANDARD.md`, reconcile the older document instead of creating another parallel plan.
