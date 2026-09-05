@@ -11,19 +11,12 @@
     "build:js": "node scripts/build-js.js",
     "test": "jest --run",
     "test:watch": "jest --watch",
-    "lint": "eslint src/js --fix",
+    "lint": "eslint src/js",
     "format": "prettier --write 'src/**/*.{js,css,html,md}'",
     "deploy": "npm run build && netlify deploy --prod",
     "data:validate": "node scripts/validate-data.js"
   },
-  "keywords": [
-    "visa",
-    "immigration",
-    "Africa",
-    "global mobility",
-    "student pathways",
-    "work visas"
-  ],
+  "keywords": ["visa", "immigration", "Africa", "global mobility", "student pathways", "work visas"],
   "author": "Global Route Team",
   "license": "MIT",
   "devDependencies": {
@@ -42,16 +35,8 @@
   "dependencies": {
     "fuse.js": "^7.0.0"
   },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=9.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/global-route.git"
-  },
-  "bugs": {
-    "url": "https://github.com/yourusername/global-route/issues"
-  },
-  "homepage": "https://global-route.app"
+  "engines": { "node": ">=18.0.0", "npm": ">=9.0.0" },
+  "repository": { "type": "git", "url": "https://github.com/global-route/myglobalroute.git" },
+  "bugs": { "url": "https://github.com/global-route/myglobalroute/issues" },
+  "homepage": "https://myglobalroute.com"
 }
