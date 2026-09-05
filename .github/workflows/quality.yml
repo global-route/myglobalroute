@@ -1,0 +1,31 @@
+name: Quality Gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm install --ignore-scripts
+      - name: Dependency audit
+        run: npm audit --audit-level=high
+      - name: Validate migration data
+        run: npm run data:validate
+      - name: Unit tests
+        run: npm test -- --coverage --runInBand
+      - name: Build site
+        run: npm run build
