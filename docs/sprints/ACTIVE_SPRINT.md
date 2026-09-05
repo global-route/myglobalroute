@@ -1,58 +1,63 @@
 # Active Sprint — Production Integrity & Intelligence Core
 
 **Started:** September 5, 2026  
-**Status:** Active  
+**Status:** Active — P0 execution  
 **Priority:** P0
 
-The original Global Route blueprint remains intact. This sprint changes execution order: trust, runtime correctness and a canonical product core come before scaling the content catalogue.
+The original blueprint remains intact. Execution order is now trust-first: authoritative evidence, pathway architecture, recommendation safety, automated quality gates, then acquisition and scale.
 
 ## Completed in this sprint
 
-- [x] Fix production data URL mismatch (`/src/data` → generated `/data`).
-- [x] Remove duplicate calculator business logic from `app.js`.
-- [x] Make calculator currency handling consistent and timeline ranges parse correctly.
-- [x] Replace custom substring search with Fuse.js when available, with safe fallback.
-- [x] Escape user/data-controlled search and calculator output.
-- [x] Remove destructive in-place gzip from Netlify build.
-- [x] Remove the global SPA rewrite that could mask generated static pages.
-- [x] Repair package repository/homepage metadata.
-- [x] Add `npm run data:validate` implementation.
-- [x] Establish migration data trust/provenance standard.
+- [x] Fix generated data runtime path (`/src/data` → `/data`).
+- [x] Remove duplicate calculator business logic and align calculator UI/engine.
+- [x] Improve timeline range parsing and currency normalization.
+- [x] Replace unsafe substring search with Fuse-compatible search/fallback and escaping.
+- [x] Remove destructive gzip/SPA rewrite deployment risks.
+- [x] Repair package metadata.
+- [x] Add evidence-gated migration data validation.
+- [x] Replace unsupported approval-rate/cost/timeline claims with an evidence-gated 26-country registry.
+- [x] Add pathway-level data model covering 26 countries and 52+ pathway records.
+- [x] Add canonical route recommendation engine with an explicit unverified-data safety ceiling.
+- [x] Add unit tests for data contracts and route ranking.
+- [x] Add CI quality gate for dependency audit, data validation, tests and build.
+- [x] Add privacy/security/compliance baseline and public privacy/disclaimer/terms pages.
+- [x] Strengthen homepage SEO metadata, canonical, Open Graph and WebSite structured data.
+- [x] Add robots.txt and sitemap.xml.
 
-## Remaining P0
+## P0 remaining / verification gates
 
-### 1. Data trust layer
-- [ ] Define JSON schema for country + pathway records.
-- [ ] Add source, verified date, effective date, confidence and review date.
-- [ ] Audit every existing legal/cost/approval claim.
-- [ ] Research missing blueprint countries from primary sources.
-- [ ] Do not publish unsupported approval-rate claims as official statistics.
+### Authoritative migration intelligence
+- [ ] Research and verify every pathway's material requirements from primary sources.
+- [ ] Add field-level evidence objects: source, quote/claim target, effective date, retrieved date, jurisdiction, methodology, confidence and review date.
+- [ ] Promote records from `research_required` → `publishable` only after evidence review.
+- [ ] Add official fee/funds/eligibility/timeline facts only where the authority publishes them.
+- [ ] Keep approval rates null where no credible methodology-disclosed official dataset exists.
 
-### 2. Canonical product model
-- [ ] Introduce pathway-level data model.
-- [ ] Separate official facts, derived estimates, editorial assessments and strategy.
-- [ ] Make `Find My Route` the eventual decision-engine entry point.
-- [ ] Connect country pages, pathways, costs, evidence, risks and next actions.
+### Product integration
+- [ ] Wire `pathways.json` into the country explorer and pathway pages.
+- [ ] Build the Find My Route UI around the canonical engine.
+- [ ] Make recommendations explainable: eligibility fit, evidence confidence, blockers, cost and next action.
+- [ ] Keep unverified pathways visible only as research/status records, never as verified recommendations.
 
-### 3. Quality gates
-- [ ] Add unit tests for calculator/search/data validation.
-- [ ] Add build smoke test and generated-file assertions.
-- [ ] Add accessibility and SEO checks.
-- [ ] Add production smoke test for `/`, `/pages/countries.html`, `/data/countries.json` and representative deep links.
+### Quality / production
+- [ ] Run CI or equivalent local verification: data validation, tests, build, lint and dependency audit.
+- [ ] Add generated-output assertions and browser smoke/E2E coverage.
+- [ ] Add accessibility/SEO automated checks.
+- [ ] Verify the deployed hostname serves this repository. Current `https://myglobalroute.com` does **not** serve this repository and is therefore a production-release blocker.
+- [ ] Verify canonical hostname, HTTPS, sitemap, robots, deep links, data endpoint and calculator after deployment.
 
 ## P1 after P0
 
-- Technical SEO: canonical, sitemap, robots, Open Graph and structured data.
-- Country/pathway programmatic SEO.
-- Comparison and route recommendation UX.
-- Analytics with privacy/consent controls.
-- Security headers/CSP refinement against the actual third-party inventory.
-- Newsletter and trusted monetization.
+- Programmatic country/pathway SEO with unique evidence-backed pages.
+- Comparison UX and route recommendation polish.
+- Privacy-aware analytics/consent controls.
+- CSP refinement based on actual third-party inventory.
+- Newsletter, affiliate and partnership infrastructure.
 
 ## Definition of Done
 
-A task is complete only when implementation exists, documentation is updated, and the relevant verification has passed. If CI is unavailable, record **Not Tested — CI unavailable** rather than claiming a pass.
+Implementation + documentation + verification. Never mark a production or data-trust task passed without evidence. If CI is unavailable, record **Not Tested — CI unavailable**.
 
 ## Execution order
 
-`Data integrity → canonical architecture → tests/quality gates → evidence-backed content → recommendation engine → SEO/growth → scale`
+`Evidence schema → primary-source verification → publishable pathway data → product integration → tests/E2E → deployment verification → SEO scale → growth`
