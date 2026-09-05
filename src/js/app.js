@@ -4,17 +4,8 @@
  */
 
 const GlobalRoute = (() => {
-  const config = {
-    // Eleventy copies src/data to /data in the production output.
-    countriesDataUrl: '/data/countries.json',
-    enableAnalytics: true
-  };
-
-  const appState = {
-    countries: [],
-    currentPage: 'home',
-    isInitialized: false
-  };
+  const config = { countriesDataUrl: '/data/countries.json', enableAnalytics: true };
+  const appState = { countries: [], currentPage: 'home', isInitialized: false };
 
   const init = async () => {
     if (appState.isInitialized) return;
@@ -25,7 +16,6 @@ const GlobalRoute = (() => {
       initializeSearch();
       if (config.enableAnalytics) loadAnalytics();
       appState.isInitialized = true;
-      console.log('Global Route initialized successfully');
     } catch (error) {
       console.error('Initialization error:', error);
     }
@@ -49,22 +39,45 @@ const GlobalRoute = (() => {
   };
 
   const initializeSearch = () => {
-    if (typeof SearchModule === 'undefined') return;
-    SearchModule.init(appState.countries);
+    if (typeof SearchModule !== 'undefined') SearchModule.init(appState.countries);
   };
 
   const initializeCalculator = () => {
-    const calculatorForm = document.querySelector('#budget-calculator');
-    if (!calculatorForm || typeof CalculatorModule === 'undefined') return;
-    calculatorForm.addFormListener?.(calculatorForm);
+    const form = document.querySelector('#budget-calculator');
+    if (!form || typeof CalculatorModule === 'undefined') return;
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      const budget = Number(form.querySelector('[name="budget"]')?.value);
+      const category = form.querySelector('[name="category"]')?.value;
+      const countries = CalculatorModule.getRecommendedCountries(appState.countries, budget, { category: category === 'all' ? undefined : category });
+      displayCalculatorResults(countries);
+      CalculatorModule.trackUsage({ country_count: countries.length });
+    });
+  };
+
+  const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
+
+  const displayCalculatorResults = countries => {
+    const container = document.querySelector('#calculator-results');
+    if (!container) return;
+    if (!countries.length) {
+      container.textContent = 'No countries found for this budget. Try increasing it or changing your preference.';
+      return;
+    }
+    container.innerHTML = countries.map(country => `
+      <div class="country-result">
+        <h3>${escapeHtml(country.flag)} ${escapeHtml(country.name)}</h3>
+        <p>True Cost: ${escapeHtml(country.trueCost.currency)} ${escapeHtml(country.trueCost.total)}</p>
+        <p>Affordability: ${escapeHtml(country.affordability.rating)}</p>
+        <a href="/pages/countries.html#${encodeURIComponent(country.id)}">Learn More →</a>
+      </div>
+    `).join('');
   };
 
   const loadAnalytics = () => {
     if (typeof gtag === 'undefined') return;
     gtag('event', 'page_view', { page_title: document.title, page_location: window.location.href });
-    document.querySelectorAll('a[target="_blank"]').forEach(link => {
-      link.addEventListener('click', () => gtag('event', 'external_link', { link_url: link.href }));
-    });
+    document.querySelectorAll('a[target="_blank"]').forEach(link => link.addEventListener('click', () => gtag('event', 'external_link', { link_url: link.href })));
   };
 
   const getCountryById = id => appState.countries.find(country => country.id === id);
