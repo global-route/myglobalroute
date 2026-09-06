@@ -4,7 +4,7 @@
 **Status:** Active — P0 execution  
 **Priority:** P0
 
-The original blueprint remains intact. Execution order is now trust-first: authoritative evidence, pathway architecture, recommendation safety, automated quality gates, then acquisition and scale.
+The original blueprint remains intact. Execution order is trust-first: authoritative evidence, pathway architecture, recommendation safety, automated quality gates, then acquisition and scale.
 
 ## Completed in this sprint
 
@@ -18,13 +18,15 @@ The original blueprint remains intact. Execution order is now trust-first: autho
 - [x] Replace unsupported approval-rate/cost/timeline claims with an evidence-gated 26-country registry.
 - [x] Add pathway-level data model covering 26 countries and 52+ pathway records.
 - [x] Add a primary-source evidence registry with review dates and confidence.
+- [x] Expand primary-source evidence coverage for UK, Canada, Australia, Ireland, New Zealand, Finland, Luxembourg and Austria.
 - [x] Add canonical route recommendation engine with a hard publishability/evidence safety gate.
 - [x] Add an evidence-gated Find My Route product surface.
+- [x] Expose Find My Route from the primary navigation/homepage.
 - [x] Add unit tests for data contracts, evidence records and route ranking.
 - [x] Add CI quality gate for dependency audit, data validation, tests and build.
+- [x] Align Netlify runtime with CI on Node 20.
 - [x] Add privacy/security/compliance baseline and public privacy/disclaimer/terms pages.
-- [x] Strengthen homepage SEO metadata, canonical, Open Graph and WebSite structured data.
-- [x] Add robots.txt and sitemap.xml.
+- [x] Add robots.txt and sitemap.xml infrastructure (hostname verification still required).
 
 ## P0 remaining / verification gates
 
@@ -47,6 +49,12 @@ The original blueprint remains intact. Execution order is now trust-first: autho
 - [ ] Add accessibility/SEO automated checks.
 - [ ] Verify the deployed hostname serves this repository. Current `https://myglobalroute.com` does **not** serve this repository and is therefore a production-release blocker.
 - [ ] Verify canonical hostname, HTTPS, sitemap, robots, deep links, data endpoint and calculator after deployment.
+- [ ] Replace/remove stale absolute SEO URLs once the authoritative production hostname is confirmed.
+
+### Current verification note — 2026-09-06
+- GitHub Actions workflow is present, but no workflow run is exposed for the latest main commits in this session; therefore CI is **Not Tested — no run available**.
+- The current evidence registry contains 14 primary-source records. The 26-country registry remains intentionally evidence-required rather than falsely publishable.
+- No pathway has been promoted to `publishable` merely because an official landing page exists; material claims still require field-level evidence.
 
 ## P1 after P0
 
@@ -62,4 +70,4 @@ Implementation + documentation + verification. Never mark a production or data-t
 
 ## Execution order
 
-`Evidence schema → primary-source verification → publishable pathway data → product integration → tests/E2E → deployment verification → SEO scale → growth`
+`Primary-source verification → publishable pathway data → country/pathway integration → generated-output tests → E2E/accessibility/SEO → deployment verification → SEO scale → growth`
