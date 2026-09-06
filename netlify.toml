@@ -6,7 +6,7 @@
 
 [build.environment]
   NODE_ENV = "production"
-  NODE_VERSION = "18.16.0"
+  NODE_VERSION = "20"
 
 # This is a static multi-page Eleventy site. Do not rewrite every route to
 # index.html: doing so hides real generated pages and breaks deep links.
@@ -47,11 +47,11 @@
 
 [context.branch-deploy]
   command = "npm run build"
-  environment = { NODE_ENV = "staging" }
+  environment = { NODE_ENV = "staging", NODE_VERSION = "20" }
 
 [context.deploy-preview]
   command = "npm run build"
-  environment = { NODE_ENV = "staging" }
+  environment = { NODE_ENV = "staging", NODE_VERSION = "20" }
 
 # Keep Lighthouse as a CI/deploy quality gate only when the Netlify plugin is
 # installed/configured by the deployment environment.
