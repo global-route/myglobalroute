@@ -1,10 +1,13 @@
-/* Canonical route recommendation engine. It ranks only evidence-gated pathways. */
+/* Canonical route recommendation engine. Safety-first: only publishable, evidence-backed pathways can be recommended. */
 (function (root) {
   'use strict';
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
   const number = value => Number.isFinite(Number(value)) ? Number(value) : 0;
 
   function scorePathway(pathway, country, profile) {
+    if (!pathway || !country || pathway.status !== 'publishable' || country.dataStatus !== 'publishable') {
+      return { score: 0, reasons: ['not recommendation-eligible until evidence review is complete'], eligible: false };
+    }
     let score = 0;
     const reasons = [];
     const goal = profile.goal || 'any';
@@ -13,33 +16,31 @@
     const experience = number(profile.experienceYears);
     if (goal !== 'any' && pathway.type === goal) { score += 35; reasons.push('matches your stated route goal'); }
     if (goal === 'any') score += 10;
-    if (profile.countryId && profile.countryId === country.id) score += 5;
+    if (profile.countryId && profile.countryId === country.id) { score += 5; reasons.push('destination preference matches'); }
     if (profile.language && pathway.language && pathway.language.includes(profile.language)) { score += 10; reasons.push('language fit'); }
     if (pathway.minExperienceYears !== undefined) {
       if (experience >= number(pathway.minExperienceYears)) { score += 15; reasons.push('experience requirement appears compatible'); }
-      else { score -= 35; reasons.push('experience requirement may be a blocker'); }
+      else return { score: 0, reasons: ['experience requirement is a likely blocker'], eligible: false };
     }
     if (pathway.minMonthlyIncome !== undefined) {
       if (income >= number(pathway.minMonthlyIncome)) { score += 10; reasons.push('income requirement appears compatible'); }
-      else { score -= 20; reasons.push('income requirement may be a blocker'); }
+      else return { score: 0, reasons: ['income requirement is a likely blocker'], eligible: false };
     }
     if (pathway.minFunds !== undefined && budget > 0) {
-      score += budget >= number(pathway.minFunds) ? 15 : -25;
-      reasons.push(budget >= number(pathway.minFunds) ? 'budget appears compatible' : 'budget may be insufficient');
+      if (budget >= number(pathway.minFunds)) { score += 15; reasons.push('budget appears compatible'); }
+      else return { score: 0, reasons: ['available budget is below the known minimum funds requirement'], eligible: false };
     }
-    if (country.dataStatus !== 'publishable' || pathway.status !== 'publishable') {
-      score = Math.min(score, 20);
-      reasons.push('evidence verification is still required');
-    }
-    return { score: clamp(score, 0, 100), reasons };
+    return { score: clamp(score, 0, 100), reasons, eligible: true };
   }
 
-  function recommend(profile, countries, pathways, limit = 5) {
+  function recommend(profile = {}, countries = [], pathways = [], limit = 5) {
     const countryMap = new Map(countries.map(country => [country.id, country]));
     return pathways.map(pathway => ({ pathway, country: countryMap.get(pathway.countryId) }))
       .filter(item => item.country)
       .map(item => ({ ...item, ...scorePathway(item.pathway, item.country, profile) }))
-      .sort((a, b) => b.score - a.score).slice(0, limit);
+      .filter(item => item.eligible)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, limit);
   }
 
   root.GlobalRoute = root.GlobalRoute || {};
