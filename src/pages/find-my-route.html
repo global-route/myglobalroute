@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find migration pathways that fit your goal, experience, language and budget using evidence-gated Global Route intelligence.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://myglobalroute.com/pages/find-my-route.html">
+  <title>Find My Route | Global Route</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <main id="main" class="main">
+    <section class="container" aria-labelledby="route-title">
+      <h1 id="route-title">Find My Route</h1>
+      <p>Recommendations are deliberately conservative: a pathway is only recommended after its material claims have passed evidence review.</p>
+      <form id="route-form">
+        <label>Goal
+          <select name="goal">
+            <option value="any">Any</option><option value="study">Study</option><option value="work">Work</option><option value="business">Business</option>
+          </select>
+        </label>
+        <label>Budget (USD equivalent)
+          <input name="budget" type="number" min="0" inputmode="decimal">
+        </label>
+        <label>Monthly income (USD equivalent)
+          <input name="monthlyIncome" type="number" min="0" inputmode="decimal">
+        </label>
+        <label>Years of relevant experience
+          <input name="experienceYears" type="number" min="0" step="0.5" inputmode="decimal">
+        </label>
+        <button type="submit" class="btn btn-primary">Find routes</button>
+      </form>
+      <section id="route-results" aria-live="polite" class="featured" style="margin-top:2rem">
+        <h2>Evidence-gated results</h2>
+        <p>Complete the profile above. Unverified pathways will not be presented as viable recommendations.</p>
+      </section>
+    </section>
+  </main>
+  <script src="/js/route-engine.js"></script>
+  <script>
+    const form = document.getElementById('route-form');
+    const results = document.getElementById('route-results');
+    const escapeHtml = value => String(value).replace(/[&<>\"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]));
+    async function loadJson(url) { const response = await fetch(url); if (!response.ok) throw new Error(`Unable to load ${url}`); return response.json(); }
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      results.innerHTML = '<h2>Checking evidence-gated pathways…</h2>';
+      try {
+        const [countries, pathways] = await Promise.all([loadJson('/data/countries.json'), loadJson('/data/pathways.json')]);
+        const profile = Object.fromEntries(new FormData(form).entries());
+        const matches = window.GlobalRoute.RouteEngine.recommend(profile, countries.countries, pathways.pathways, 5);
+        if (!matches.length) {
+          results.innerHTML = '<h2>No verified route can be recommended yet</h2><p>This is intentional. The current dataset contains research-required pathways while primary-source verification is being completed. We will not convert incomplete evidence into a migration recommendation.</p>';
+          return;
+        }
+        results.innerHTML = '<h2>Recommended routes</h2>' + matches.map(match => `<article><h3>${escapeHtml(match.country.name)} — ${escapeHtml(match.pathway.name)}</h3><p>Fit score: ${match.score}/100</p><ul>${match.reasons.map(reason => `<li>${escapeHtml(reason)}</li>`).join('')}</ul><a href="${escapeHtml(match.pathway.sourceUrl)}" rel="noopener noreferrer">Review official source</a></article>`).join('');
+      } catch (error) {
+        results.innerHTML = `<h2>Route engine unavailable</h2><p>${escapeHtml(error.message)}</p>`;
+      }
+    });
+  </script>
+</body>
+</html>
