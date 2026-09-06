@@ -17,8 +17,10 @@ The original blueprint remains intact. Execution order is now trust-first: autho
 - [x] Add evidence-gated migration data validation.
 - [x] Replace unsupported approval-rate/cost/timeline claims with an evidence-gated 26-country registry.
 - [x] Add pathway-level data model covering 26 countries and 52+ pathway records.
-- [x] Add canonical route recommendation engine with an explicit unverified-data safety ceiling.
-- [x] Add unit tests for data contracts and route ranking.
+- [x] Add a primary-source evidence registry with review dates and confidence.
+- [x] Add canonical route recommendation engine with a hard publishability/evidence safety gate.
+- [x] Add an evidence-gated Find My Route product surface.
+- [x] Add unit tests for data contracts, evidence records and route ranking.
 - [x] Add CI quality gate for dependency audit, data validation, tests and build.
 - [x] Add privacy/security/compliance baseline and public privacy/disclaimer/terms pages.
 - [x] Strengthen homepage SEO metadata, canonical, Open Graph and WebSite structured data.
@@ -27,17 +29,17 @@ The original blueprint remains intact. Execution order is now trust-first: autho
 ## P0 remaining / verification gates
 
 ### Authoritative migration intelligence
-- [ ] Research and verify every pathway's material requirements from primary sources.
-- [ ] Add field-level evidence objects: source, quote/claim target, effective date, retrieved date, jurisdiction, methodology, confidence and review date.
-- [ ] Promote records from `research_required` → `publishable` only after evidence review.
+- [ ] Verify every remaining pathway's material requirements from primary sources.
+- [x] Establish field-level evidence objects: source, claim, effective date, retrieved date, jurisdiction, methodology, confidence and review date.
+- [ ] Promote records from `research_required` → `publishable` only after complete evidence review.
 - [ ] Add official fee/funds/eligibility/timeline facts only where the authority publishes them.
-- [ ] Keep approval rates null where no credible methodology-disclosed official dataset exists.
+- [x] Keep approval rates null where no credible methodology-disclosed official dataset exists.
 
 ### Product integration
-- [ ] Wire `pathways.json` into the country explorer and pathway pages.
-- [ ] Build the Find My Route UI around the canonical engine.
-- [ ] Make recommendations explainable: eligibility fit, evidence confidence, blockers, cost and next action.
-- [ ] Keep unverified pathways visible only as research/status records, never as verified recommendations.
+- [x] Build the first Find My Route UI around the canonical engine.
+- [x] Make recommendations explainable and evidence-gated.
+- [ ] Wire pathways into the country explorer and dedicated pathway pages.
+- [x] Keep unverified pathways out of viable recommendations.
 
 ### Quality / production
 - [ ] Run CI or equivalent local verification: data validation, tests, build, lint and dependency audit.
