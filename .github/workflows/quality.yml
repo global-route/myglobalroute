@@ -29,3 +29,5 @@ jobs:
         run: npm test -- --coverage --runInBand
       - name: Build site
         run: npm run build
+      - name: Verify generated artifacts
+        run: npm run build:verify
