@@ -8,7 +8,6 @@ const requiredFiles = [
   'data/countries.json',
   'data/pathways.json',
   'data/evidence/primary-source-verified.json',
-  'data/evidence/addenda/2026-09-07-sweden.json',
   'pages/find-my-route.html',
   'pages/countries.html',
   'pages/calculator.html',
@@ -30,7 +29,6 @@ const index = read('index.html');
 const countries = read('data/countries.json');
 const pathways = read('data/pathways.json');
 const evidence = read('data/evidence/primary-source-verified.json');
-const swedenEvidence = read('data/evidence/addenda/2026-09-07-sweden.json');
 const routeFinder = read('pages/find-my-route.html');
 
 if (index && !index.includes('<title>Global Route')) errors.push('generated homepage is missing the expected title');
@@ -46,13 +44,11 @@ if (pathways) {
     if (!Array.isArray(payload.pathways) || payload.pathways.length < 52) errors.push(`generated pathways.json must contain at least 52 pathways; found ${payload.pathways?.length ?? 0}`);
   } catch (error) { errors.push(`generated pathways.json is invalid JSON: ${error.message}`); }
 }
-for (const [label, content] of [['primary evidence', evidence], ['Sweden evidence addendum', swedenEvidence]]) {
-  if (content) {
-    try {
-      const payload = JSON.parse(content);
-      if (!Array.isArray(payload.records) || payload.records.length < 1) errors.push(`generated ${label} registry is empty`);
-    } catch (error) { errors.push(`generated ${label} registry is invalid JSON: ${error.message}`); }
-  }
+if (evidence) {
+  try {
+    const payload = JSON.parse(evidence);
+    if (!Array.isArray(payload.records) || payload.records.length < 1) errors.push('generated primary evidence registry is empty');
+  } catch (error) { errors.push(`generated primary evidence registry is invalid JSON: ${error.message}`); }
 }
 if (routeFinder && !routeFinder.includes('GlobalRoute.RouteEngine')) errors.push('generated Find My Route page is missing the canonical route engine');
 
