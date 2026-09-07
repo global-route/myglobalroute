@@ -13,6 +13,7 @@ const GlobalRoute = (() => {
       await loadCountriesData();
       initializeNavigation();
       initializeSearch();
+      initializeCountryDirectory();
       initializeCalculator();
       if (config.enableAnalytics) loadAnalytics();
       appState.isInitialized = true;
@@ -40,6 +41,58 @@ const GlobalRoute = (() => {
 
   const initializeSearch = () => {
     if (typeof SearchModule !== 'undefined') SearchModule.init(appState.countries);
+  };
+
+  const initializeCountryDirectory = () => {
+    const grid = document.querySelector('#countries-grid');
+    const tableBody = document.querySelector('#countries-table-body');
+    if (!grid && !tableBody) return;
+
+    const groupFilter = document.querySelector('#group-filter');
+    const budgetFilter = document.querySelector('#budget-filter');
+    const searchInput = document.querySelector('input[type="search"]');
+
+    const render = () => {
+      const query = String(searchInput?.value || '').trim().toLowerCase();
+      const group = String(groupFilter?.value || '');
+      const budget = Number(budgetFilter?.value || 0);
+      const filtered = appState.countries.filter(country => {
+        const text = `${country.name} ${country.id} ${country.category || ''}`.toLowerCase();
+        const matchesQuery = !query || text.includes(query);
+        const matchesGroup = !group || country.group === group || String(country.category || '').includes(group);
+        const cost = Number(country.trueCost?.total);
+        const matchesBudget = !budget || (Number.isFinite(cost) && cost <= budget && country.dataStatus === 'publishable');
+        return matchesQuery && matchesGroup && matchesBudget;
+      });
+
+      if (grid) {
+        grid.innerHTML = filtered.map(country => `
+          <article class="country-card" id="${escapeHtml(country.id)}">
+            <div class="country-card-header"><span>${escapeHtml(country.flag)}</span><h3>${escapeHtml(country.name)}</h3></div>
+            <p>${escapeHtml(country.summary || 'Country pathway intelligence is being verified.')}</p>
+            <p><strong>Data status:</strong> ${escapeHtml(country.dataStatus || 'unknown')}</p>
+            <p><strong>Approval rate:</strong> ${country.africanRate == null ? 'Not published / not verified' : escapeHtml(country.africanRate)}</p>
+            <p><strong>Planning cost:</strong> ${country.trueCost?.total == null ? 'Not yet verified' : `${escapeHtml(country.trueCost.currency)} ${escapeHtml(country.trueCost.total)}`}</p>
+          </article>
+        `).join('') || '<p>No countries match the selected filters.</p>';
+      }
+
+      if (tableBody) {
+        tableBody.innerHTML = filtered.map(country => `
+          <tr id="${escapeHtml(country.id)}">
+            <td>${escapeHtml(country.flag)} ${escapeHtml(country.name)}</td>
+            <td>${country.officialRate == null ? 'Not published / not verified' : escapeHtml(country.officialRate)}</td>
+            <td>${country.africanRate == null ? 'Not published / not verified' : escapeHtml(country.africanRate)}</td>
+            <td>${country.trueCost?.total == null ? 'Not yet verified' : `${escapeHtml(country.trueCost.currency)} ${escapeHtml(country.trueCost.total)}`}</td>
+            <td>${escapeHtml(country.sweetSpot || country.sweetSpots?.join(', ') || '—')}</td>
+          </tr>
+        `).join('');
+      }
+    };
+
+    [groupFilter, budgetFilter, searchInput].filter(Boolean).forEach(element => element.addEventListener('input', render));
+    [groupFilter, budgetFilter].filter(Boolean).forEach(element => element.addEventListener('change', render));
+    render();
   };
 
   const initializeCalculator = () => {
