@@ -2,4 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /data/
 
-Sitemap: https://myglobalroute.com/sitemap.xml
+# Sitemap is intentionally omitted until the authoritative production origin is verified.
+# Do not publish a sitemap containing an unverified or unrelated hostname.
