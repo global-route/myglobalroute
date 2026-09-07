@@ -1,6 +1,9 @@
 /**
  * Global Route: Budget Calculator Module
  * Canonical affordability and planning logic.
+ *
+ * Safety rule: incomplete/evidence-gated country costs are never treated as
+ * actionable affordability data.
  */
 
 const CalculatorModule = (() => {
@@ -26,6 +29,15 @@ const CalculatorModule = (() => {
     return numericAmount * rate;
   };
 
+  const hasPublishableCost = country => Boolean(
+    country &&
+    country.dataStatus === 'publishable' &&
+    country.trueCost &&
+    Number.isFinite(Number(country.trueCost.total)) &&
+    Number(country.trueCost.total) > 0 &&
+    typeof country.trueCost.currency === 'string'
+  );
+
   const calculateAffordability = (userBudget, countryCost) => {
     const budget = Number(userBudget);
     const costInUSD = convertToUSD(countryCost?.total, countryCost?.currency);
@@ -43,6 +55,7 @@ const CalculatorModule = (() => {
   };
 
   const getRecommendedCountries = (countries, budget, preferences = {}) => countries
+    .filter(hasPublishableCost)
     .map(country => ({ ...country, affordability: calculateAffordability(budget, country.trueCost) }))
     .filter(country => country.affordability.affordable)
     .filter(country => !preferences.category || country.sweetSpot === preferences.category)
@@ -101,6 +114,7 @@ const CalculatorModule = (() => {
   const compareCountries = (countryIds, countries) => countryIds.map(id => countries.find(country => country.id === id)).filter(Boolean);
 
   const getAffordabilityIndex = (country) => {
+    if (!hasPublishableCost(country)) return null;
     const costUSD = convertToUSD(country.trueCost.total, country.trueCost.currency);
     if (costUSD < 5000) return 10;
     if (costUSD < 10000) return 9;
@@ -119,5 +133,5 @@ const CalculatorModule = (() => {
   };
 
   // DOM wiring belongs to app.js; this module is the single calculation engine.
-  return { calculateAffordability, getRecommendedCountries, calculateTimeline, generateSavingsPlan, getCostBreakdown, compareCountries, getAffordabilityIndex, convertToUSD, trackUsage };
+  return { calculateAffordability, getRecommendedCountries, calculateTimeline, generateSavingsPlan, getCostBreakdown, compareCountries, getAffordabilityIndex, convertToUSD, trackUsage, hasPublishableCost };
 })();
