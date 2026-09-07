@@ -19,7 +19,7 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Add pathway-level data model covering 26 countries and 52+ pathway records.
 - [x] Add a primary-source evidence registry with review dates and confidence.
 - [x] Expand primary-source evidence coverage for Finland, Luxembourg and Austria.
-- [x] Add Sweden primary-source evidence as a dated evidence addendum.
+- [x] Expand Sweden primary-source evidence to work salary/eligibility, study maintenance and post-study routes.
 - [x] Make the validator consume dated evidence addenda without weakening the primary-source gate.
 - [x] Add canonical route recommendation engine with a hard publishability/evidence safety gate.
 - [x] Add an evidence-gated Find My Route product surface and primary-navigation entry point.
