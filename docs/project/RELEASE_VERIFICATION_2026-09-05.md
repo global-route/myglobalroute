@@ -7,13 +7,14 @@
 - `main` contains the evidence-gated 26-country registry.
 - 52+ pathway records exist with authoritative source URLs and explicit `research_required` status.
 - Unsupported approval-rate, cost and timeline claims remain blocked by the data validator.
-- A primary-source evidence registry now contains 14 field-level records with authority, source URL, jurisdiction, retrieval date, methodology, confidence and review date.
+- The primary-source evidence layer now contains 17 field-level records when the 14-record primary registry is combined with the dated Sweden addendum.
+- Sweden now has primary-source records covering work-permit salary/eligibility, study maintenance and post-study search rights. citeturn0search0turn0search12turn0search18
 - The canonical route engine hard-gates viable recommendations on publishable country/pathway data.
 - Find My Route is implemented and exposed from the homepage/primary navigation.
 - CI workflow exists for dependency audit, data validation, tests and Eleventy build.
 - Generated-output integrity checks and a reproducible `npm run verify` command exist.
-- Pathway evidence-coverage reporting now distinguishes evidenced pathways from the broader research-required registry.
-- Publishable pathways are now required by validation to carry explicit `evidenceIds` provenance links.
+- Pathway evidence-coverage reporting distinguishes evidenced pathways from the broader research-required registry.
+- Publishable pathways are required by validation to carry explicit `evidenceIds` provenance links.
 - Privacy, disclaimer and terms pages exist.
 - Stale `myglobalroute.com` canonical/package metadata references were removed from the recently hardened SEO surfaces.
 - `robots.txt` and `sitemap.xml` no longer advertise the unverified production hostname.
