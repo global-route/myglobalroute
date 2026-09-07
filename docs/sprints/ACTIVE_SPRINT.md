@@ -26,8 +26,10 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Add generated-output integrity checks for required routes/data and stale source-data references.
 - [x] Add a reproducible `npm run verify` quality command.
 - [x] Add privacy/security/compliance baseline and public privacy/disclaimer/terms pages.
-- [x] Strengthen homepage SEO metadata, canonical, Open Graph and WebSite structured data.
-- [x] Add robots.txt and sitemap.xml.
+- [x] Add homepage SEO metadata and trust-oriented metadata.
+- [x] Add robots.txt and sitemap.xml with safe no-origin publication until the production hostname is verified.
+- [x] Remove stale `myglobalroute.com` production references from package metadata and canonical tags.
+- [x] Add pathway evidence-coverage reporting and provenance-link validation for future publishable pathways.
 
 ## P0 remaining / verification gates
 
@@ -37,6 +39,7 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [ ] Promote records from `research_required` → `publishable` only after complete evidence review.
 - [ ] Add official fee/funds/eligibility/timeline facts only where the authority publishes them.
 - [x] Keep approval rates null where no credible methodology-disclosed official dataset exists.
+- [ ] Attach `evidenceIds` to every pathway promoted to `publishable` and require complete material-field coverage.
 
 ### Product integration
 - [x] Build the first Find My Route UI around the canonical engine.
@@ -47,7 +50,7 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 ### Quality / production
 - [x] Add CI/local verification commands for data validation, tests, build, generated-output integrity and lint.
 - [x] Add generated-output assertions.
-- [ ] Execute CI/local verification and record the actual result.
+- [ ] Execute CI/local verification and record the actual result. **Current status: Not Tested — no workflow run is exposed for the latest commits.**
 - [ ] Add browser smoke/E2E coverage.
 - [ ] Add accessibility/SEO automated checks.
 - [ ] Verify the deployed hostname serves this repository. Current `https://myglobalroute.com` does **not** serve this repository and is therefore a production-release blocker.
