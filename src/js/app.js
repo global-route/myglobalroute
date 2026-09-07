@@ -72,7 +72,7 @@ const GlobalRoute = (() => {
     document.querySelector('#result-yearly-savings')?.replaceChildren(document.createTextNode(`$${(monthlySavings * 12).toLocaleString()}`));
 
     if (!countries.length) {
-      list.textContent = 'No countries match the current savings and goal. Consider increasing your savings target or reviewing scholarship/lower-cost pathways.';
+      list.textContent = 'No evidence-backed country cost currently qualifies for this budget. Incomplete country costs are intentionally excluded until primary-source verification is complete.';
       container.style.display = 'block';
       return;
     }
@@ -80,7 +80,7 @@ const GlobalRoute = (() => {
     list.innerHTML = countries.map(country => `
       <article class="country-result">
         <h4>${escapeHtml(country.flag)} ${escapeHtml(country.name)}</h4>
-        <p>True Cost: ${escapeHtml(country.trueCost.currency)} ${escapeHtml(country.trueCost.total)}</p>
+        <p>Verified planning cost: ${escapeHtml(country.trueCost.currency)} ${escapeHtml(country.trueCost.total)}</p>
         <p>Affordability: ${escapeHtml(country.affordability.rating)}</p>
         <a href="/pages/countries.html#${encodeURIComponent(country.id)}">Learn More →</a>
       </article>
