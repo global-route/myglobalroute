@@ -21,8 +21,6 @@ jobs:
           # No npm cache until the repository has a committed lockfile.
       - name: Install dependencies
         run: npm install --ignore-scripts --no-audit --no-fund
-      - name: Compile evidence registry
-        run: npm run build:evidence
       - name: Dependency audit
         run: npm audit --audit-level=high
       - name: Validate migration data
