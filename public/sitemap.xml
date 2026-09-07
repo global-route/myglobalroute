@@ -1,12 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://myglobalroute.com/</loc></url>
-  <url><loc>https://myglobalroute.com/pages/countries.html</loc></url>
-  <url><loc>https://myglobalroute.com/pages/calculator.html</loc></url>
-  <url><loc>https://myglobalroute.com/pages/student-playbook.html</loc></url>
-  <url><loc>https://myglobalroute.com/pages/professional-playbook.html</loc></url>
-  <url><loc>https://myglobalroute.com/pages/business-playbook.html</loc></url>
-  <url><loc>https://myglobalroute.com/pages/about.html</loc></url>
-  <url><loc>https://myglobalroute.com/pages/privacy.html</loc></url>
-  <url><loc>https://myglobalroute.com/pages/disclaimer.html</loc></url>
+  <!-- Intentionally empty until the authoritative production origin is verified. -->
 </urlset>
