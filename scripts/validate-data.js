@@ -32,6 +32,7 @@ for (const [index, pathway] of (pathways || []).entries()) {
   pathwayIds.add(pathway.id);
   if (!/^https:\/\//.test(pathway.sourceUrl)) errors.push(`pathways[${index}] sourceUrl must be HTTPS`);
   if (pathway.evidenceIds !== undefined && !Array.isArray(pathway.evidenceIds)) errors.push(`pathways[${index}] evidenceIds must be an array when present`);
+  if (pathway.status === 'publishable' && (!Array.isArray(pathway.evidenceIds) || pathway.evidenceIds.length === 0)) errors.push(`publishable pathway ${pathway.id} requires evidenceIds`);
 }
 
 const evidenceIds = new Set();
@@ -71,7 +72,6 @@ const evidencedPathways = pathways.filter(pathway => (evidenceByPathway.get(path
 const publishablePathways = pathways.filter(pathway => pathway.status === 'publishable').length;
 const researchRequiredPathways = pathways.filter(pathway => pathway.status === 'research_required').length;
 if (evidencedPathways === 0) errors.push('no pathways have field-level evidence');
-if (publishablePathways > 0 && publishablePathways === pathways.length) warnings.push('all pathways are publishable; confirm this is intentional before release');
 
 if (countriesPayload.dataset?.asOf) {
   const age = Math.floor((today - new Date(`${countriesPayload.dataset.asOf}T00:00:00Z`)) / 86400000);
