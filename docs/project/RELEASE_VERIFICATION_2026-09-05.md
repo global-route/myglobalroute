@@ -8,7 +8,7 @@
 - 52+ pathway records exist with authoritative source URLs and explicit `research_required` status.
 - Unsupported approval-rate, cost and timeline claims remain blocked by the data validator.
 - The primary-source evidence layer now contains 17 field-level records when the 14-record primary registry is combined with the dated Sweden addendum.
-- Sweden now has primary-source records covering work-permit salary/eligibility, study maintenance and post-study search rights. citeturn0search0turn0search12turn0search18
+- Sweden now has primary-source records covering work-permit salary/eligibility, study maintenance and post-study search rights.
 - The canonical route engine hard-gates viable recommendations on publishable country/pathway data.
 - Find My Route is implemented and exposed from the homepage/primary navigation.
 - CI workflow exists for dependency audit, data validation, tests and Eleventy build.
