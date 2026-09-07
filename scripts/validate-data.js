@@ -31,9 +31,11 @@ for (const [index, pathway] of (pathways || []).entries()) {
   if (pathwayIds.has(pathway.id)) errors.push(`duplicate pathway id: ${pathway.id}`);
   pathwayIds.add(pathway.id);
   if (!/^https:\/\//.test(pathway.sourceUrl)) errors.push(`pathways[${index}] sourceUrl must be HTTPS`);
+  if (pathway.evidenceIds !== undefined && !Array.isArray(pathway.evidenceIds)) errors.push(`pathways[${index}] evidenceIds must be an array when present`);
 }
 
 const evidenceIds = new Set();
+const evidenceByPathway = new Map();
 for (const [index, record] of (evidence || []).entries()) {
   for (const field of ['id', 'countryId', 'pathwayId', 'field', 'claim', 'sourceAuthority', 'sourceUrl', 'jurisdiction', 'retrievedAt', 'methodology', 'confidence', 'reviewAfter']) if (!record[field]) errors.push(`evidence[${index}] ${field} is required`);
   if (evidenceIds.has(record.id)) errors.push(`duplicate evidence id: ${record.id}`);
@@ -43,12 +45,33 @@ for (const [index, record] of (evidence || []).entries()) {
   if (!/^https:\/\//.test(record.sourceUrl)) errors.push(`evidence[${index}] sourceUrl must be HTTPS`);
   if (!['high', 'medium', 'low'].includes(record.confidence)) errors.push(`evidence[${index}] confidence must be high, medium or low`);
   if (new Date(`${record.reviewAfter}T00:00:00Z`) < today) warnings.push(`evidence ${record.id} is due for review`);
+  const list = evidenceByPathway.get(record.pathwayId) || [];
+  list.push(record);
+  evidenceByPathway.set(record.pathwayId, list);
 }
 
 for (const pathway of pathways) {
-  const records = evidence.filter(record => record.pathwayId === pathway.id);
+  const records = evidenceByPathway.get(pathway.id) || [];
+  if (pathway.evidenceIds) {
+    for (const evidenceId of pathway.evidenceIds) {
+      const record = evidence.find(item => item.id === evidenceId);
+      if (!record) errors.push(`pathway ${pathway.id} references missing evidence ${evidenceId}`);
+      else if (record.pathwayId !== pathway.id) errors.push(`pathway ${pathway.id} references evidence ${evidenceId} belonging to ${record.pathwayId}`);
+    }
+  }
   if (pathway.status === 'publishable' && records.length === 0) errors.push(`publishable pathway ${pathway.id} requires field-level evidence`);
+  if (pathway.status === 'research_required' && records.length > 0) {
+    const fields = new Set(records.map(record => record.field));
+    if (!fields.has('eligibility')) warnings.push(`coverage gap: ${pathway.id} has evidence but no eligibility record`);
+    if (!fields.has('financial-requirement')) warnings.push(`coverage gap: ${pathway.id} has evidence but no financial-requirement record`);
+  }
 }
+
+const evidencedPathways = pathways.filter(pathway => (evidenceByPathway.get(pathway.id) || []).length > 0).length;
+const publishablePathways = pathways.filter(pathway => pathway.status === 'publishable').length;
+const researchRequiredPathways = pathways.filter(pathway => pathway.status === 'research_required').length;
+if (evidencedPathways === 0) errors.push('no pathways have field-level evidence');
+if (publishablePathways > 0 && publishablePathways === pathways.length) warnings.push('all pathways are publishable; confirm this is intentional before release');
 
 if (countriesPayload.dataset?.asOf) {
   const age = Math.floor((today - new Date(`${countriesPayload.dataset.asOf}T00:00:00Z`)) / 86400000);
@@ -62,4 +85,5 @@ if (errors.length) {
 }
 
 console.log(`DATA VALIDATION PASSED: ${countries.length} countries, ${pathways.length} pathways, ${evidence.length} evidence records`);
+console.log(`EVIDENCE COVERAGE: ${evidencedPathways}/${pathways.length} pathways evidenced; ${publishablePathways} publishable; ${researchRequiredPathways} research_required`);
 warnings.forEach(warning => console.warn(`WARNING: ${warning}`));
