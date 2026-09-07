@@ -18,9 +18,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          # No npm cache until the repository has a committed lockfile.
       - name: Install dependencies
-        run: npm install --ignore-scripts
+        run: npm install --ignore-scripts --no-audit --no-fund
       - name: Dependency audit
         run: npm audit --audit-level=high
       - name: Validate migration data
