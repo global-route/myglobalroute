@@ -1,16 +1,23 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
-const readJson = file => JSON.parse(fs.readFileSync(path.join(__dirname, '..', file), 'utf8'));
+const root = path.join(__dirname, '..');
+const readJson = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
+const readEvidenceRecords = () => {
+  const primary = readJson('src/data/evidence/primary-source-verified.json').records || [];
+  const addendaDir = path.join(root, 'src/data/evidence/addenda');
+  if (!fs.existsSync(addendaDir)) return primary;
+  const addenda = fs.readdirSync(addendaDir).filter(file => file.endsWith('.json')).sort().flatMap(file => readJson(path.join('src/data/evidence/addenda', file)).records || []);
+  return [...primary, ...addenda];
+};
 const countriesPayload = readJson('src/data/countries.json');
 const pathwaysPayload = readJson('src/data/pathways.json');
-const evidencePayload = readJson('src/data/evidence/primary-source-verified.json');
 const countries = countriesPayload.countries;
 const pathways = pathwaysPayload.pathways;
-const evidence = evidencePayload.records;
+const evidence = readEvidenceRecords();
 const errors = [];
 const warnings = [];
-const today = new Date('2026-09-06T00:00:00Z');
+const today = new Date('2026-09-07T00:00:00Z');
 
 const countryIds = new Set();
 if (!Array.isArray(countries) || countries.length !== 26) errors.push(`countries must contain exactly 26 records; found ${countries?.length ?? 0}`);
