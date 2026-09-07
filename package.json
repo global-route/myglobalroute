@@ -39,6 +39,5 @@
   },
   "engines": { "node": ">=18.0.0", "npm": ">=9.0.0" },
   "repository": { "type": "git", "url": "https://github.com/global-route/myglobalroute.git" },
-  "bugs": { "url": "https://github.com/global-route/myglobalroute/issues" },
-  "homepage": "https://myglobalroute.com"
+  "bugs": { "url": "https://github.com/global-route/myglobalroute/issues" }
 }
