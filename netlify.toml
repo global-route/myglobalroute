@@ -59,4 +59,3 @@
   package = "@netlify/plugin-lighthouse"
   [plugins.inputs]
     audits = ["accessibility", "best-practices", "performance", "pwa", "seo"]
-    publishArtifacts = true
