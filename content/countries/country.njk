@@ -1,0 +1,49 @@
+---
+layout: false
+pagination:
+  data: countries.countries
+  size: 1
+  alias: country
+permalink: "/pages/countries/{{ country.id }}/index.html"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ country.name }} migration pathway intelligence: evidence status, official sources and pathway-level requirements from Global Route.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>{{ country.name }} Migration Pathways | Global Route</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="header"><div class="header-container"><div class="logo"><a href="/" class="logo-link"><span class="logo-icon">🌍</span><span class="logo-text">Global Route</span></a></div><nav class="navigation" aria-label="Primary"><ul class="nav-menu"><li><a href="/">Home</a></li><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-my-route.html">Find My Route</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/content/blog/">Research</a></li></ul></nav></div></header>
+  <main id="main" class="main">
+    <section class="hero"><div class="hero-content"><p><a href="/pages/countries.html">← 26-country directory</a></p><h1>{{ country.flag }} {{ country.name }}</h1><p class="hero-subtitle">{{ country.summary or 'Evidence-gated migration pathway intelligence.' }}</p><p><strong>Data status:</strong> {{ country.dataStatus or 'research_required' }}</p></div></section>
+    <section class="container" style="padding:3rem 1rem">
+      <h2>Pathways</h2>
+      <p>Only claims backed by field-level primary-source evidence are eligible for publication or recommendation.</p>
+      <div class="featured-grid">
+      {% for pathway in pathways.pathways %}{% if pathway.countryId == country.id %}
+        <article class="featured-card">
+          <h3>{{ pathway.name }}</h3>
+          <p><strong>Type:</strong> {{ pathway.type }}</p>
+          <p><strong>Status:</strong> {{ pathway.status }}</p>
+          <p><strong>Evidence:</strong> {% set pathEvidence = migrationEvidence.records | selectattr('pathwayId', 'equalto', pathway.id) | list %}{{ pathEvidence | length }} primary-source record(s)</p>
+          <a class="btn-link" href="{{ pathway.sourceUrl }}" target="_blank" rel="noopener noreferrer">Official source →</a>
+        </article>
+      {% endif %}{% endfor %}
+      </div>
+      <h2>Evidence trail</h2>
+      {% set countryEvidence = migrationEvidence.records | selectattr('countryId', 'equalto', country.id) | list %}
+      {% if countryEvidence | length %}
+      <div class="comparison-table"><table><thead><tr><th>Pathway</th><th>Field</th><th>Claim</th><th>Authority</th><th>Reviewed</th></tr></thead><tbody>{% for record in countryEvidence %}<tr><td>{{ record.pathwayId }}</td><td>{{ record.field }}</td><td>{{ record.claim }}</td><td>{{ record.sourceAuthority }}</td><td>{{ record.retrievedAt }}</td></tr>{% endfor %}</tbody></table></div>
+      {% else %}<p>No field-level primary-source evidence has yet been registered for this country. Claims remain intentionally unverified.</p>{% endif %}
+    </section>
+    <section class="cta-final"><div class="container"><h2>Verify before you act.</h2><p>Requirements can change. Use the official authority source before paying fees or submitting an application.</p><a href="/pages/disclaimer.html" class="btn btn-secondary btn-large">Read Disclaimer</a></div></section>
+  </main>
+  <footer class="footer"><div class="footer-bottom"><p>&copy; 2026 Global Route. Evidence-gated migration intelligence.</p></div></footer>
+</body>
+</html>
