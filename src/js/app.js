@@ -68,7 +68,7 @@ const GlobalRoute = (() => {
       if (grid) {
         grid.innerHTML = filtered.map(country => `
           <article class="country-card" id="${escapeHtml(country.id)}">
-            <div class="country-card-header"><span>${escapeHtml(country.flag)}</span><h3>${escapeHtml(country.name)}</h3></div>
+            <div class="country-card-header"><span>${escapeHtml(country.flag)}</span><h3><a href="/pages/countries/${encodeURIComponent(country.id)}/">${escapeHtml(country.name)}</a></h3></div>
             <p>${escapeHtml(country.summary || 'Country pathway intelligence is being verified.')}</p>
             <p><strong>Data status:</strong> ${escapeHtml(country.dataStatus || 'unknown')}</p>
             <p><strong>Approval rate:</strong> ${country.africanRate == null ? 'Not published / not verified' : escapeHtml(country.africanRate)}</p>
@@ -80,7 +80,7 @@ const GlobalRoute = (() => {
       if (tableBody) {
         tableBody.innerHTML = filtered.map(country => `
           <tr id="${escapeHtml(country.id)}">
-            <td>${escapeHtml(country.flag)} ${escapeHtml(country.name)}</td>
+            <td>${escapeHtml(country.flag)} <a href="/pages/countries/${encodeURIComponent(country.id)}/">${escapeHtml(country.name)}</a></td>
             <td>${country.officialRate == null ? 'Not published / not verified' : escapeHtml(country.officialRate)}</td>
             <td>${country.africanRate == null ? 'Not published / not verified' : escapeHtml(country.africanRate)}</td>
             <td>${country.trueCost?.total == null ? 'Not yet verified' : `${escapeHtml(country.trueCost.currency)} ${escapeHtml(country.trueCost.total)}`}</td>
@@ -135,7 +135,7 @@ const GlobalRoute = (() => {
         <h4>${escapeHtml(country.flag)} ${escapeHtml(country.name)}</h4>
         <p>Verified planning cost: ${escapeHtml(country.trueCost.currency)} ${escapeHtml(country.trueCost.total)}</p>
         <p>Affordability: ${escapeHtml(country.affordability.rating)}</p>
-        <a href="/pages/countries.html#${encodeURIComponent(country.id)}">Learn More →</a>
+        <a href="/pages/countries/${encodeURIComponent(country.id)}/">Country evidence →</a>
       </article>
     `).join('');
     container.style.display = 'block';
