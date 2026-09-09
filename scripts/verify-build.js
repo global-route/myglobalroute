@@ -61,6 +61,19 @@ if (countries && pathways) {
     if (missingCountryPages.length) errors.push(`missing generated country detail pages: ${missingCountryPages.join(', ')}`);
     const missingPathwayPages = pathwayPayload.pathways.filter(pathway => !fs.existsSync(path.join(dist, 'pathways', pathway.id, 'index.html'))).map(pathway => pathway.id);
     if (missingPathwayPages.length) errors.push(`missing generated pathway detail pages: ${missingPathwayPages.join(', ')}`);
+
+    for (const country of countryPayload.countries) {
+      const html = read(`pages/countries/${country.id}/index.html`);
+      if (!html) continue;
+      if (!html.includes('<title>') || !html.includes('<meta name="description"')) errors.push(`country detail page ${country.id} is missing basic SEO metadata`);
+      if (!html.includes('Open country source')) errors.push(`country detail page ${country.id} is missing its source-trail link`);
+    }
+    for (const pathway of pathwayPayload.pathways) {
+      const html = read(`pathways/${pathway.id}/index.html`);
+      if (!html) continue;
+      if (!html.includes('<title>') || !html.includes('<meta name="description"')) errors.push(`pathway detail page ${pathway.id} is missing basic SEO metadata`);
+      if (!html.includes('Open the official source')) errors.push(`pathway detail page ${pathway.id} is missing its official-source link`);
+    }
   } catch (error) {
     errors.push(`detail-page integrity check could not parse generated data: ${error.message}`);
   }
@@ -78,4 +91,4 @@ if (errors.length) {
   errors.forEach(error => console.error(`- ${error}`));
   process.exit(1);
 }
-console.log(`BUILD INTEGRITY PASSED: ${requiredFiles.length} required artifacts plus country/pathway detail pages checked`);
+console.log(`BUILD INTEGRITY PASSED: ${requiredFiles.length} required artifacts plus country/pathway detail pages and basic SEO/source-trail checks`);
