@@ -59,7 +59,7 @@ if (countries && pathways) {
     const countryIds = new Set(countryPayload.countries.map(country => country.id));
     const missingCountryPages = [...countryIds].filter(id => !fs.existsSync(path.join(dist, 'pages', 'countries', id, 'index.html')));
     if (missingCountryPages.length) errors.push(`missing generated country detail pages: ${missingCountryPages.join(', ')}`);
-    const missingPathwayPages = pathwayPayload.pathways.filter(pathway => !fs.existsSync(path.join(dist, 'pages', 'pathways', pathway.id, 'index.html'))).map(pathway => pathway.id);
+    const missingPathwayPages = pathwayPayload.pathways.filter(pathway => !fs.existsSync(path.join(dist, 'pathways', pathway.id, 'index.html'))).map(pathway => pathway.id);
     if (missingPathwayPages.length) errors.push(`missing generated pathway detail pages: ${missingPathwayPages.join(', ')}`);
   } catch (error) {
     errors.push(`detail-page integrity check could not parse generated data: ${error.message}`);
