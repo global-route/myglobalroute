@@ -52,6 +52,20 @@ if (evidence) {
 }
 if (routeFinder && !routeFinder.includes('GlobalRoute.RouteEngine')) errors.push('generated Find My Route page is missing the canonical route engine');
 
+if (countries && pathways) {
+  try {
+    const countryPayload = JSON.parse(countries);
+    const pathwayPayload = JSON.parse(pathways);
+    const countryIds = new Set(countryPayload.countries.map(country => country.id));
+    const missingCountryPages = [...countryIds].filter(id => !fs.existsSync(path.join(dist, 'pages', 'countries', id, 'index.html')));
+    if (missingCountryPages.length) errors.push(`missing generated country detail pages: ${missingCountryPages.join(', ')}`);
+    const missingPathwayPages = pathwayPayload.pathways.filter(pathway => !fs.existsSync(path.join(dist, 'pages', 'pathways', pathway.id, 'index.html'))).map(pathway => pathway.id);
+    if (missingPathwayPages.length) errors.push(`missing generated pathway detail pages: ${missingPathwayPages.join(', ')}`);
+  } catch (error) {
+    errors.push(`detail-page integrity check could not parse generated data: ${error.message}`);
+  }
+}
+
 const generatedJs = [];
 const jsDir = path.join(dist, 'js');
 if (fs.existsSync(jsDir)) {
@@ -64,4 +78,4 @@ if (errors.length) {
   errors.forEach(error => console.error(`- ${error}`));
   process.exit(1);
 }
-console.log(`BUILD INTEGRITY PASSED: ${requiredFiles.length} required artifacts checked`);
+console.log(`BUILD INTEGRITY PASSED: ${requiredFiles.length} required artifacts plus country/pathway detail pages checked`);
