@@ -1,58 +1,51 @@
+const fs = require("fs");
+const path = require("path");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
+function loadMigrationEvidence() {
+  const evidenceDir = path.join(__dirname, "src", "data", "evidence");
+  const records = [];
+  const primaryPath = path.join(evidenceDir, "primary-source-verified.json");
+  if (fs.existsSync(primaryPath)) {
+    const primary = JSON.parse(fs.readFileSync(primaryPath, "utf8"));
+    records.push(...(primary.records || []));
+  }
+  const addendaDir = path.join(evidenceDir, "addenda");
+  if (fs.existsSync(addendaDir)) {
+    for (const filename of fs.readdirSync(addendaDir).filter(name => name.endsWith(".json")).sort()) {
+      const addendum = JSON.parse(fs.readFileSync(path.join(addendaDir, filename), "utf8"));
+      records.push(...(addendum.records || []));
+    }
+  }
+  return { records };
+}
+
 module.exports = function(eleventyConfig) {
-  // Copy static assets - these passthrough copy commands preserve directory structure
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("public");
-  
-  // Copy data files to dist/data
-  eleventyConfig.addPassthroughCopy({
-    "src/data": "/data"
-  });
-  
-  // Copy pages directly to dist root, preserving only pages/ directory
-  eleventyConfig.addPassthroughCopy({
-    "src/pages": "/pages"
-  });
-  
-  // Configure Markdown
-  let markdownLibrary = markdownIt({
-    html: true,
-    breaks: true,
-    linkify: true
-  }).use(markdownItAnchor);
-  
+  eleventyConfig.addPassthroughCopy({ "src/data": "/data" });
+  eleventyConfig.addPassthroughCopy({ "src/pages": "/pages" });
+
+  eleventyConfig.addGlobalData("migrationEvidence", loadMigrationEvidence);
+
+  let markdownLibrary = markdownIt({ html: true, breaks: true, linkify: true }).use(markdownItAnchor);
   eleventyConfig.setLibrary("md", markdownLibrary);
-  
-  // Create blog post collection
+
   eleventyConfig.addCollection("blog", function(collectionApi) {
     return collectionApi.getFilteredByGlob("content/blog/**/*.md");
   });
-  
-  // Add filters for dates
-  eleventyConfig.addFilter("readableDate", dateObj => {
-    return new Date(dateObj).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  });
-  
-  // Add filter for reading time
-  eleventyConfig.addFilter("readingTime", text => {
-    const wordsPerMinute = 200;
-    const numberOfWords = text.split(/\s/g).length;
-    return Math.ceil(numberOfWords / wordsPerMinute);
-  });
-  
-  // Add filter to get excerpt
+
+  eleventyConfig.addFilter("readableDate", dateObj => new Date(dateObj).toLocaleDateString("en-US", {
+    year: "numeric", month: "long", day: "numeric"
+  }));
+  eleventyConfig.addFilter("readingTime", text => Math.ceil(text.split(/\s/g).length / 200));
   eleventyConfig.addFilter("excerpt", content => {
     const excerpt = content.substring(0, 200);
-    return excerpt.substring(0, excerpt.lastIndexOf(' ')) + '...';
+    return excerpt.substring(0, excerpt.lastIndexOf(" ")) + "...";
   });
-  
+
   return {
     dir: {
       input: "content",
