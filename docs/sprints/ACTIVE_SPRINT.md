@@ -21,6 +21,7 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Add a primary-source evidence registry with review dates and confidence.
 - [x] Expand primary-source evidence coverage for Finland, Luxembourg and Austria.
 - [x] Expand Sweden primary-source evidence to work salary/eligibility and study maintenance.
+- [x] Add primary-source evidence batches for Canada, Norway, Portugal and Japan.
 - [x] Make the validator consume dated evidence addenda without weakening the primary-source gate.
 - [x] Add canonical route recommendation engine with a hard publishability/evidence safety gate.
 - [x] Align route-engine unit tests with the hard safety gate and numeric blockers.
@@ -29,11 +30,15 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Add CI quality gate for dependency audit, data validation, tests and build.
 - [x] Add generated-output integrity checks for required routes/data and stale source-data references.
 - [x] Add generated-output assertion for evidence addenda.
+- [x] Add generated country and pathway detail-page integrity assertions.
 - [x] Add a reproducible `npm run verify` quality command.
 - [x] Add privacy/security/compliance baseline and public privacy/disclaimer/terms pages.
 - [x] Remove stale/unverified absolute SEO origins rather than publishing incorrect canonicals.
 - [x] Add robots.txt and sitemap.xml with production-origin verification gate.
 - [x] Wire the 26-country registry into the country explorer with evidence-aware status/cost/rate rendering and filters.
+- [x] Add programmatic country detail pages with field-level evidence trails.
+- [x] Add programmatic pathway detail pages with official-source links and evidence trails.
+- [x] Expose consolidated primary-source evidence to Eleventy templates without duplicating the registry.
 
 ## P0 remaining / verification gates
 
@@ -43,14 +48,14 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [ ] Promote records from `research_required` → `publishable` only after complete evidence review.
 - [ ] Add official fee/funds/eligibility/timeline facts only where the authority publishes them.
 - [x] Keep approval rates null where no credible methodology-disclosed official dataset exists.
-- [ ] Continue evidence batches for the remaining countries; prioritize Canada, Germany, France, Norway, Portugal, Spain and Japan next.
+- [ ] Continue evidence batches for the remaining countries; prioritize Germany, France and Spain next after the Canada/Norway/Portugal/Japan batch.
 - [ ] Attach `evidenceIds` and complete material-field coverage before any pathway is promoted.
 
 ### Product integration
 - [x] Build the first Find My Route UI around the canonical engine.
 - [x] Make recommendations explainable and evidence-gated.
 - [x] Wire the country explorer to the canonical country registry.
-- [ ] Build dedicated country/pathway detail presentation with source/evidence trails.
+- [x] Build dedicated country/pathway detail presentation with source/evidence trails.
 - [x] Keep unverified pathways out of viable recommendations and calculator results.
 
 ### Quality / production
@@ -64,7 +69,7 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 
 ## P1 after P0
 
-- Programmatic country/pathway SEO with unique evidence-backed pages.
+- Programmatic country/pathway SEO hardening after production origin verification.
 - Comparison UX and route recommendation polish.
 - Privacy-aware analytics/consent controls.
 - CSP refinement based on actual third-party inventory.
