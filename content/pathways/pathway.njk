@@ -1,0 +1,36 @@
+---
+layout: false
+pagination:
+  data: pathways.pathways
+  size: 1
+  alias: pathway
+permalink: "/pages/pathways/{{ pathway.id }}/index.html"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ pathway.name }} migration pathway for {{ pathway.countryId }}: evidence status, official source and verified claims from Global Route.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>{{ pathway.name }} — {{ pathway.countryId }} | Global Route</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="header"><div class="header-container"><div class="logo"><a href="/" class="logo-link"><span class="logo-icon">🌍</span><span class="logo-text">Global Route</span></a></div><nav class="navigation" aria-label="Primary"><ul class="nav-menu"><li><a href="/">Home</a></li><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-my-route.html">Find My Route</a></li><li><a href="/pages/calculator.html">Calculator</a></li></ul></nav></div></header>
+  <main id="main" class="main">
+    <section class="hero"><div class="hero-content"><p><a href="/pages/countries/{{ pathway.countryId }}/">← {{ pathway.countryId }} country intelligence</a></p><h1>{{ pathway.name }}</h1><p class="hero-subtitle">{{ pathway.type | capitalize }} pathway · {{ pathway.countryId }}</p><p><strong>Publication status:</strong> {{ pathway.status }}</p></div></section>
+    <section class="container" style="padding:3rem 1rem">
+      <h2>Evidence-backed claims</h2>
+      {% set pathwayEvidence = migrationEvidence.records | selectattr('pathwayId', 'equalto', pathway.id) | list %}
+      {% if pathwayEvidence | length %}
+      <div class="comparison-table"><table><thead><tr><th>Field</th><th>Claim</th><th>Authority</th><th>Effective</th><th>Reviewed</th></tr></thead><tbody>{% for record in pathwayEvidence %}<tr><td>{{ record.field }}</td><td>{{ record.claim }}</td><td>{{ record.sourceAuthority }}</td><td>{{ record.effectiveDate }}</td><td>{{ record.retrievedAt }}</td></tr>{% endfor %}</tbody></table></div>
+      {% else %}<p>No field-level primary-source evidence is currently registered for this pathway.</p>{% endif %}
+      <div class="featured-grid" style="margin-top:2rem"><article class="featured-card"><h3>Official source</h3><p>Use the authority's current page for the final application requirements.</p><a class="btn-link" href="{{ pathway.sourceUrl }}" target="_blank" rel="noopener noreferrer">Open official source →</a></article><article class="featured-card"><h3>Trust rule</h3><p>A pathway remains out of recommendations until its material claims have complete primary-source evidence.</p><a class="btn-link" href="/pages/disclaimer.html">Read disclaimer →</a></article></div>
+    </section>
+  </main>
+  <footer class="footer"><div class="footer-bottom"><p>&copy; 2026 Global Route. Evidence-gated migration intelligence.</p></div></footer>
+</body>
+</html>
