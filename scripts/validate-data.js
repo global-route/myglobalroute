@@ -18,7 +18,10 @@ const pathways = pathwaysPayload.pathways;
 const evidence = readEvidenceRecords();
 const errors = [];
 const warnings = [];
-const today = new Date('2026-09-07T00:00:00Z');
+const validationDate = process.env.VALIDATION_AS_OF || new Date().toISOString().slice(0, 10);
+const today = new Date(`${validationDate}T00:00:00Z`);
+
+if (Number.isNaN(today.getTime())) errors.push(`VALIDATION_AS_OF must be an ISO date (YYYY-MM-DD); received ${validationDate}`);
 
 const countryIds = new Set();
 if (!Array.isArray(countries) || countries.length !== 26) errors.push(`countries must contain exactly 26 records; found ${countries?.length ?? 0}`);
@@ -107,5 +110,6 @@ if (errors.length) {
 }
 
 console.log(`DATA VALIDATION PASSED: ${countries.length} countries, ${pathways.length} pathways, ${evidence.length} evidence records`);
+console.log(`VALIDATION AS OF: ${validationDate}`);
 console.log(`EVIDENCE COVERAGE: ${evidencedPathways}/${pathways.length} pathways evidenced; ${materiallyCoveredPathways}/${pathways.length} materially covered; ${publishablePathways} publishable; ${researchRequiredPathways} research_required`);
 warnings.forEach(warning => console.warn(`WARNING: ${warning}`));
