@@ -32,3 +32,5 @@ jobs:
         run: npm run build
       - name: Verify generated artifacts
         run: npm run build:verify
+      - name: Verify SEO and accessibility smoke requirements
+        run: npm run seo:a11y:verify
