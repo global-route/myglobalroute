@@ -1,8 +1,8 @@
 # Global Route — Master Execution Roadmap
 
-**Version:** 2.0.0  
+**Version:** 2.1.0  
 **Status:** Active execution  
-**Reconciled:** September 5, 2026
+**Reconciled:** September 12, 2026
 
 > The original Global Route vision is preserved. Execution priority is corrected from the repository's actual state: production integrity and trustworthy migration intelligence precede content and growth scaling.
 
@@ -21,13 +21,17 @@ The blog remains an acquisition/education layer. Country + pathway + evidence + 
 - [x] Establish canonical search module with Fuse.js-compatible implementation and fallback.
 - [x] Remove destructive gzip build behavior.
 - [x] Remove global SPA rewrite from the static multi-page deployment.
-- [x] Repair package metadata.
-- [x] Add initial country-data validation command.
-- [ ] Add unit/data/build tests.
-- [ ] Validate generated production routes/assets.
-- [ ] Audit CSP against actual third-party inventory.
+- [x] Repair package metadata and remove unverified production-origin metadata.
+- [x] Add country/pathway/evidence data validation.
+- [x] Add unit/data/build verification commands and generated-output integrity checks.
+- [x] Add generated SEO/accessibility smoke gate to the verification pipeline.
+- [ ] Execute the full verification pipeline and record an actual pass.
+- [ ] Browser/E2E verification of generated routes.
+- [ ] Identify authoritative Netlify deployment and production hostname.
+- [ ] Production smoke verification of deep links/assets/data/calculator.
+- [ ] Audit CSP against the actual deployed third-party inventory.
 
-**Exit gate:** reproducible build, validated data shape, passing tests, working deep links and no known critical runtime defects.
+**Exit gate:** reproducible build, validated data shape, passing tests, working deep links, verified production origin and no known critical runtime defects.
 
 ## Phase 1 — Migration Intelligence Foundation (P0)
 
@@ -36,42 +40,50 @@ The blog remains an acquisition/education layer. Country + pathway + evidence + 
 `country → pathway → metric → value → source → effective date → verified date → methodology → confidence → review date`
 
 - [x] Publish `reference/DATA_TRUST_STANDARD.md`.
-- [ ] Add provenance fields to records.
-- [ ] Separate official facts, derived estimates, editorial assessment and user strategy.
-- [ ] Distinguish required funds from estimated relocation budget.
-- [ ] Audit legal, fee, processing-time and approval-rate claims.
-- [ ] Establish freshness/review checks.
-- [ ] Research missing blueprint countries from primary sources.
+- [x] Establish field-level provenance records with source, claim, jurisdiction, dates, methodology, confidence and review date.
+- [x] Separate publishability from evidence coverage and expose evidence trails in pathway pages.
+- [x] Distinguish required evidence from unsupported estimates; approval rates/costs/timelines remain null where not evidenced.
+- [x] Establish material-field requirements by pathway type.
+- [x] Add 26-country evidence-gated registry without fabricating missing data.
+- [x] Add 45 field-level primary-source records across registry and dated addenda.
+- [x] Promote six pathways only after minimum material-field coverage and explicit `evidenceIds`.
+- [ ] Complete material-field evidence audit for remaining pathways.
+- [ ] Review generic pathways that represent multiple legal sub-routes.
+- [ ] Expand evidence batches until the highest-value pathways can safely become publishable.
+- [ ] Establish production freshness/review automation beyond local validation.
 
 **Critical rule:** never fabricate missing data to reach the 26-country target.
 
 ## Phase 2 — Canonical Product Core (P0)
 
-- [ ] Introduce pathway-level records.
-- [ ] Build country explorer around pathway entities.
-- [ ] Build pathway pages for eligibility, cost, timeline, evidence, risks and next action.
-- [ ] Make the calculator consume the canonical data model.
+- [x] Introduce pathway-level records: 52+ pathways across 26 countries.
+- [x] Build country explorer around pathway entities and evidence-aware statuses.
+- [x] Build programmatic country/pathway pages with eligibility/evidence/source presentation.
+- [x] Make the calculator consume the canonical evidence-gated data model.
 - [ ] Add country comparison.
-- [ ] Build `Find My Route`: profile → eligibility → ranked routes → evidence → next action.
-- [ ] Rank by eligibility/fit first, then cost/timeline; expose confidence rather than hiding uncertainty.
+- [x] Build `Find My Route`: profile → eligibility → ranked routes → evidence → next action.
+- [x] Rank by eligibility/fit first and block unverified routes from viable recommendations.
+- [ ] Expand route explanations with pathway-specific evidence, risks and next-action guidance.
 
 ## Phase 3 — Content & Acquisition (P1)
 
 - [ ] Fact-audit existing posts against the data trust standard.
 - [ ] Finish high-intent cornerstone content only after claims are verified.
-- [ ] Add category archives, related-content links and search UX.
-- [ ] Implement canonical metadata, Open Graph, sitemap and robots.
-- [ ] Add structured data and programmatic country/pathway SEO.
+- [ ] Add category archives, related-content links and search UX polish.
+- [ ] Implement canonical metadata, Open Graph, sitemap and robots only after the authoritative production origin is verified.
+- [x] Establish programmatic country/pathway SEO foundations and generated-page metadata checks.
+- [ ] Add structured data and production SEO validation.
 - [ ] Measure search → route → calculator conversion.
 
 ## Phase 4 — Trust, Compliance & Accessibility (P1)
 
 - [ ] Privacy and analytics consent model where required.
-- [ ] Terms and migration-information disclaimer architecture.
-- [ ] Source attribution for factual claims.
-- [ ] Accessibility audit and keyboard navigation.
-- [ ] Security-header/CSP review.
-- [ ] Dependency/supply-chain audit.
+- [x] Terms and migration-information disclaimer architecture.
+- [x] Source attribution for factual pathway claims.
+- [ ] Full browser accessibility audit and keyboard navigation.
+- [x] Security-header/CSP baseline.
+- [x] Dependency/supply-chain audit defined in CI.
+- [ ] Execute the dependency audit successfully in CI and remediate any findings.
 
 ## Phase 5 — Growth (P1)
 
@@ -88,9 +100,31 @@ The blog remains an acquisition/education layer. Country + pathway + evidence + 
 - [ ] Premium migration intelligence.
 - [ ] B2B research/data/API products.
 
+## Current P0 critical path
+
+`Primary-source batches → material-field audit → pathway-specific legal-subroute review → publishable promotion → full local/CI verification → browser/E2E → Netlify origin verification → production smoke → canonical/SEO restoration → P0 exit`
+
+## Release gate matrix
+
+| Gate | State | Rule |
+|---|---|---|
+| 26-country registry | Complete | Evidence-gated; no fabricated claims |
+| 52+ pathways | Complete | Most remain `research_required` |
+| Field-level evidence | Active | 45 records; expanding |
+| Publishable pathways | Partial | 6 currently promoted |
+| Route engine | Complete | Hard publishability/evidence gate |
+| Calculator safety | Complete | Unverified costs not actionable |
+| Country/pathway pages | Complete | Source/evidence trails generated |
+| SEO/A11y smoke gate | Implemented | Execution still required |
+| CI workflow | Implemented | Latest execution not verified |
+| Browser/E2E | Open | Required before release |
+| Netlify origin | Open | Must identify actual deployment; never guess |
+| Production smoke | Open | Blocked by origin verification |
+| Canonical/sitemap restoration | Open | Blocked by authoritative origin |
+
 ## Dependency order
 
-`Integrity → Evidence → Pathways → Recommendation → SEO → Growth → Scale`
+`Integrity → Evidence → Pathways → Recommendation → Verification → Deployment → SEO → Growth → Scale`
 
 Content volume is intentionally not allowed to outrun data trust.
 
