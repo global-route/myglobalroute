@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "records": [
     {
-      "id": "SE-work-salary-2026-09-07",
+      "id": "SE-work-eligibility-2026-09-07",
       "countryId": "SE",
       "pathwayId": "SE-work",
       "field": "eligibility",
@@ -17,7 +17,7 @@
       "reviewAfter": "2026-10-07"
     },
     {
-      "id": "SE-study-finance-2026-09-07",
+      "id": "SE-study-finance-maintenance-2026-09-07",
       "countryId": "SE",
       "pathwayId": "SE-study",
       "field": "financial-requirement",
