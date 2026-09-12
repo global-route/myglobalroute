@@ -1,0 +1,30 @@
+---
+layout: false
+permalink: "/blog/index.html"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Global Route research, country audits, student playbooks, professional playbooks, business playbooks and policy updates.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>Research & Migration Guides | Global Route</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="header"><div class="header-container"><div class="logo"><a href="/" class="logo-link"><span class="logo-icon">🌍</span><span class="logo-text">Global Route</span></a></div><nav class="navigation" aria-label="Primary"><ul class="nav-menu"><li><a href="/">Home</a></li><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-my-route.html">Find My Route</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Research</a></li></ul></nav></div></header>
+  <main id="main" class="main">
+    <section class="hero"><div class="hero-content"><p><a href="/">← Global Route</a></p><h1>Research & Migration Guides</h1><p class="hero-subtitle">Educational content is an acquisition layer; pathway facts remain governed by the evidence registry and official sources.</p></div></section>
+    <section class="container" style="padding:3rem 1rem"><div class="featured-grid">
+      {% for post in collections.blog | reverse %}
+      <article class="featured-card"><p>{{ post.date | readableDate }}</p><h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2><p>{{ post.data.description or post.data.excerpt or 'Migration research and practical guidance from Global Route.' }}</p><a class="btn-link" href="{{ post.url }}">Read article →</a></article>
+      {% endfor %}
+    </div></section>
+    <section class="cta-final"><div class="container"><h2>Need a route, not just an article?</h2><p>Use the evidence-gated route finder for pathway-level recommendations.</p><a href="/pages/find-my-route.html" class="btn btn-primary btn-large">Find My Route</a></div></section>
+  </main>
+  <footer class="footer"><div class="footer-bottom"><p>&copy; 2026 Global Route. Evidence-gated migration intelligence.</p></div></footer>
+</body>
+</html>
