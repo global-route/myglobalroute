@@ -24,7 +24,8 @@ function loadMigrationEvidence() {
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
-  eleventyConfig.addPassthroughCopy("public");
+  eleventyConfig.addPassthroughCopy({ "public": "/" });
+  eleventyConfig.addPassthroughCopy({ "src/index.html": "/index.html" });
   eleventyConfig.addPassthroughCopy({ "src/data": "/data" });
   eleventyConfig.addPassthroughCopy({ "src/pages": "/pages" });
 
