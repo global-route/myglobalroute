@@ -22,7 +22,9 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Expand primary-source evidence coverage for Finland, Luxembourg and Austria.
 - [x] Expand Sweden primary-source evidence to work salary/eligibility and study maintenance.
 - [x] Add primary-source evidence batches for Canada, Norway, Portugal and Japan.
+- [x] Add a dated primary-source evidence batch for Finland, Italy and Norway (8 additional field-level records).
 - [x] Make the validator consume dated evidence addenda without weakening the primary-source gate.
+- [x] Make validation date current-aware with optional `VALIDATION_AS_OF` override for deterministic CI/release checks.
 - [x] Add canonical route recommendation engine with a hard publishability/evidence safety gate.
 - [x] Align route-engine unit tests with the hard safety gate and numeric blockers.
 - [x] Add an evidence-gated Find My Route product surface and primary-navigation entry point.
