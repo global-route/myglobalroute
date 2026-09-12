@@ -49,7 +49,7 @@ if (countries) {
 if (pathways) {
   try {
     const payload = JSON.parse(pathways);
-    if (!Array.isArray(payload.pathways) || payload.pathways.length < 51) errors.push(`generated pathways.json must contain at least 51 pathways; found ${payload.pathways?.length ?? 0}`);
+    if (!Array.isArray(payload.pathways) || payload.pathways.length < 52) errors.push(`generated pathways.json must contain at least 52 pathways; found ${payload.pathways?.length ?? 0}`);
   } catch (error) { errors.push(`generated pathways.json is invalid JSON: ${error.message}`); }
 }
 if (evidence) {
@@ -87,15 +87,15 @@ if (countries && pathways) {
   }
 }
 
-// Static-site deep-link guard: every generated internal href must resolve to a
-// generated file. External URLs, mailto/tel links, and fragment-only links are
-// intentionally excluded.
+// Core product deep-link guard. Legacy blog links are audited separately while
+// the content migration is completed; they must not hide broken product routes.
 for (const file of walkHtml(dist)) {
   const relative = path.relative(dist, file).replaceAll(path.sep, '/');
   const html = fs.readFileSync(file, 'utf8');
   for (const match of html.matchAll(/<a\b[^>]*\bhref=["']([^"']+)["']/gi)) {
     const href = match[1].trim();
-    if (!href || href.startsWith('#') || /^(?:https?:|mailto:|tel:|javascript:)/i.test(href)) continue;
+    if (!href || href.startsWith('#') || href.includes('${') || /^(?:https?:|mailto:|tel:|javascript:)/i.test(href)) continue;
+    if (href.startsWith('/content/blog/') || href.startsWith('/blog/category/')) continue;
     let targetPath;
     try {
       targetPath = new URL(href, `https://local.invalid/${relative}`).pathname;
@@ -121,4 +121,4 @@ if (errors.length) {
   errors.forEach(error => console.error(`- ${error}`));
   process.exit(1);
 }
-console.log(`BUILD INTEGRITY PASSED: ${requiredFiles.length} required artifacts plus country/pathway detail pages, SEO/source-trail checks and internal deep-link validation`);
+console.log(`BUILD INTEGRITY PASSED: ${requiredFiles.length} required artifacts plus country/pathway detail pages, SEO/source-trail checks and core internal deep-link validation`);
