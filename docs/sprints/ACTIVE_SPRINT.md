@@ -39,6 +39,9 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Add programmatic country detail pages with field-level evidence trails.
 - [x] Add programmatic pathway detail pages with official-source links and evidence trails.
 - [x] Expose consolidated primary-source evidence to Eleventy templates without duplicating the registry.
+- [x] Define material evidence requirements by pathway type (`eligibility` + `financial-requirement` minimum).
+- [x] Enforce material evidence coverage before a pathway can become `publishable`.
+- [x] Add a dated primary-source evidence batch for Germany, France and Spain (12 field-level records).
 
 ## P0 remaining / verification gates
 
@@ -48,8 +51,9 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [ ] Promote records from `research_required` → `publishable` only after complete evidence review.
 - [ ] Add official fee/funds/eligibility/timeline facts only where the authority publishes them.
 - [x] Keep approval rates null where no credible methodology-disclosed official dataset exists.
-- [ ] Continue evidence batches for the remaining countries; prioritize Germany, France and Spain next after the Canada/Norway/Portugal/Japan batch.
+- [x] Complete the priority Germany/France/Spain evidence batch; continue remaining-country batches next.
 - [ ] Attach `evidenceIds` and complete material-field coverage before any pathway is promoted.
+- [ ] Review pathway-specific nuances where one generic pathway maps to multiple legal sub-routes before promotion.
 
 ### Product integration
 - [x] Build the first Find My Route UI around the canonical engine.
@@ -81,4 +85,4 @@ Implementation + documentation + verification. Never mark a production or data-t
 
 ## Execution order
 
-`Evidence schema → primary-source verification → publishable pathway data → product integration → tests/E2E → deployment verification → SEO scale → growth`
+`Evidence schema → primary-source verification → material-field coverage → publishable pathway data → product integration → tests/E2E → deployment verification → SEO scale → growth`
