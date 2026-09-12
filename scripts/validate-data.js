@@ -12,6 +12,7 @@ const readEvidenceRecords = () => {
 };
 const countriesPayload = readJson('src/data/countries.json');
 const pathwaysPayload = readJson('src/data/pathways.json');
+const requirementsPayload = readJson('src/data/pathway-requirements.json');
 const countries = countriesPayload.countries;
 const pathways = pathwaysPayload.pathways;
 const evidence = readEvidenceRecords();
@@ -40,6 +41,7 @@ for (const [index, pathway] of (pathways || []).entries()) {
   if (!/^https:\/\//.test(pathway.sourceUrl)) errors.push(`pathways[${index}] sourceUrl must be HTTPS`);
   if (pathway.evidenceIds !== undefined && !Array.isArray(pathway.evidenceIds)) errors.push(`pathways[${index}] evidenceIds must be an array when present`);
   if (pathway.status === 'publishable' && (!Array.isArray(pathway.evidenceIds) || pathway.evidenceIds.length === 0)) errors.push(`publishable pathway ${pathway.id} requires evidenceIds`);
+  if (!requirementsPayload.types?.[pathway.type]) warnings.push(`no material-field profile defined for pathway type ${pathway.type}`);
 }
 
 const evidenceIds = new Set();
@@ -60,6 +62,10 @@ for (const [index, record] of (evidence || []).entries()) {
 
 for (const pathway of pathways) {
   const records = evidenceByPathway.get(pathway.id) || [];
+  const fields = new Set(records.map(record => record.field));
+  const profile = requirementsPayload.types?.[pathway.type] || requirementsPayload.defaults || { requiredEvidenceFields: [] };
+  const requiredFields = profile.requiredEvidenceFields || [];
+
   if (pathway.evidenceIds) {
     for (const evidenceId of pathway.evidenceIds) {
       const record = evidence.find(item => item.id === evidenceId);
@@ -67,15 +73,24 @@ for (const pathway of pathways) {
       else if (record.pathwayId !== pathway.id) errors.push(`pathway ${pathway.id} references evidence ${evidenceId} belonging to ${record.pathwayId}`);
     }
   }
-  if (pathway.status === 'publishable' && records.length === 0) errors.push(`publishable pathway ${pathway.id} requires field-level evidence`);
-  if (pathway.status === 'research_required' && records.length > 0) {
-    const fields = new Set(records.map(record => record.field));
-    if (!fields.has('eligibility')) warnings.push(`coverage gap: ${pathway.id} has evidence but no eligibility record`);
-    if (!fields.has('financial-requirement')) warnings.push(`coverage gap: ${pathway.id} has evidence but no financial-requirement record`);
+
+  const missingMaterialFields = requiredFields.filter(field => !fields.has(field));
+  if (pathway.status === 'publishable') {
+    if (records.length === 0) errors.push(`publishable pathway ${pathway.id} requires field-level evidence`);
+    if (missingMaterialFields.length) errors.push(`publishable pathway ${pathway.id} is missing material evidence fields: ${missingMaterialFields.join(', ')}`);
+    if (!pathway.evidenceIds?.length) errors.push(`publishable pathway ${pathway.id} requires evidenceIds`);
+  } else if (records.length > 0 && missingMaterialFields.length) {
+    warnings.push(`coverage gap: ${pathway.id} missing material evidence fields: ${missingMaterialFields.join(', ')}`);
   }
 }
 
 const evidencedPathways = pathways.filter(pathway => (evidenceByPathway.get(pathway.id) || []).length > 0).length;
+const materiallyCoveredPathways = pathways.filter(pathway => {
+  const records = evidenceByPathway.get(pathway.id) || [];
+  const fields = new Set(records.map(record => record.field));
+  const required = (requirementsPayload.types?.[pathway.type] || requirementsPayload.defaults || {}).requiredEvidenceFields || [];
+  return required.every(field => fields.has(field));
+}).length;
 const publishablePathways = pathways.filter(pathway => pathway.status === 'publishable').length;
 const researchRequiredPathways = pathways.filter(pathway => pathway.status === 'research_required').length;
 if (evidencedPathways === 0) errors.push('no pathways have field-level evidence');
@@ -92,5 +107,5 @@ if (errors.length) {
 }
 
 console.log(`DATA VALIDATION PASSED: ${countries.length} countries, ${pathways.length} pathways, ${evidence.length} evidence records`);
-console.log(`EVIDENCE COVERAGE: ${evidencedPathways}/${pathways.length} pathways evidenced; ${publishablePathways} publishable; ${researchRequiredPathways} research_required`);
+console.log(`EVIDENCE COVERAGE: ${evidencedPathways}/${pathways.length} pathways evidenced; ${materiallyCoveredPathways}/${pathways.length} materially covered; ${publishablePathways} publishable; ${researchRequiredPathways} research_required`);
 warnings.forEach(warning => console.warn(`WARNING: ${warning}`));
