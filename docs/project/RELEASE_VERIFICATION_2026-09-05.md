@@ -7,13 +7,17 @@
 - `main` contains the evidence-gated 26-country registry.
 - 52+ pathway records exist with authoritative source URLs; most remain explicitly `research_required` by design.
 - Unsupported approval-rate, cost and timeline claims remain blocked by the data validator.
-- The primary-source evidence layer now contains 37 field-level records across the primary registry plus dated addenda.
+- The primary-source evidence layer now contains 45 field-level records across the primary registry plus dated addenda.
 - Sweden has primary-source records covering work-permit salary/eligibility, study maintenance and post-study search rights.
 - Canada, Norway, Portugal and Japan have dated primary-source evidence records attached to their relevant pathway IDs; these records do not by themselves make a pathway publishable.
+- Finland now has dated primary-source evidence covering study eligibility/finance and employed-worker income requirements.
+- Italy now has dated primary-source evidence covering study eligibility and 2026/2027 financial means.
+- Norway now has dated primary-source evidence covering study financial requirements and skilled-worker eligibility, alongside the earlier study-eligibility/job-offer evidence.
 - Germany, France and Spain have a dedicated dated evidence batch covering eligibility and financial-requirement fields for six priority pathways.
 - Six Germany/France/Spain pathways are now explicitly `publishable` with `evidenceIds` and minimum material-field coverage: DE study, DE Opportunity Card, FR study, FR Talent Passport, ES study and ES international teleworker.
 - A material-field requirements registry defines `eligibility` and `financial-requirement` as the minimum evidence coverage for work and study pathways.
 - The validator blocks `publishable` pathways when required material evidence fields are missing, in addition to requiring explicit `evidenceIds`.
+- The validator now uses the current UTC date by default, with `VALIDATION_AS_OF` available for deterministic release/CI runs.
 - The canonical route engine hard-gates viable recommendations on publishable country/pathway data.
 - Find My Route is implemented and exposed from the homepage/primary navigation.
 - The calculator excludes evidence-gated/unverified country costs instead of treating null or placeholder costs as actionable affordability data.
