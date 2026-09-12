@@ -52,6 +52,7 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Add the Germany/France/Spain primary-source batch and promote six pathways after evidence review.
 - [x] Execute CI Quality Gate successfully: dependency audit, data validation, 10 unit tests, Eleventy build, generated-output verification and SEO/accessibility smoke gate all passed in run 123.
 - [x] Move CI to Node 24 to remove the Node 20 deprecation warning path.
+- [x] Align `netlify.toml` production, branch-deploy and deploy-preview environments with Node 24.
 
 ## P0 remaining / verification gates
 
