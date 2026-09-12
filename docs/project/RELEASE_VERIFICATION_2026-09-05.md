@@ -24,9 +24,11 @@
 - The country explorer renders the canonical 26-country registry, supports filtering, and labels unavailable/unverified rates and costs explicitly.
 - Programmatic country detail pages expose pathway navigation and country-level source status.
 - Programmatic pathway detail pages expose official source links and field-level evidence trails.
-- Generated-output verification checks the expected public country and pathway detail-page locations.
+- Generated-output verification checks the expected public country and pathway detail-page locations plus internal deep-link integrity.
 - A generated SEO/accessibility smoke gate checks language declaration, meaningful title/description, one H1, image alt text, accessible link text, duplicate IDs and robots/sitemap presence.
 - The SEO/accessibility smoke gate is included in both `npm run verify` and the GitHub Actions quality workflow.
+- CI execution is now observable. Quality Gate run 105 completed and reached the dependency audit step; this exposed a real dependency-tree security failure rather than a CI infrastructure failure.
+- The dependency audit reported 64 vulnerabilities (5 low, 21 moderate, 33 high, 5 critical), primarily through the old Netlify CLI dependency tree. `netlify-cli` has now been upgraded from `^17.30.0` to `^26.2.0` and a remediation record is documented.
 - CI workflow exists for dependency audit, data validation, tests and Eleventy build.
 - Generated-output integrity checks and a reproducible `npm run verify` command exist.
 - Pathway evidence-coverage reporting distinguishes evidenced pathways from the broader research-required registry.
@@ -36,9 +38,9 @@
 - `robots.txt` and `sitemap.xml` no longer advertise the unverified production hostname.
 
 ## Not yet verified
-- CI execution: no workflow run/status is exposed for the latest main commits in this session, so tests/build/audit are **Not Tested — no run available**.
+- Remediation CI run after the Netlify CLI upgrade: pending.
 - Browser/E2E behavior: not yet executed.
-- Generated SEO/accessibility smoke execution: gate is implemented but has not yet been run against a generated build in this session.
+- Generated SEO/accessibility smoke execution against a generated build: pending the successful CI/build pipeline.
 - Complete primary-source field audit: most pathway records remain `research_required` by design.
 - Broad pathway promotion: only six pathways currently meet the minimum material evidence gate; remaining pathways still require primary-source review and pathway-specific legal-subroute analysis.
 - Production deployment: `https://myglobalroute.com` currently resolves to an unrelated Global Routes visa-consultancy site, not this repository. This remains a critical hostname/DNS/deployment mismatch.
@@ -46,9 +48,9 @@
 - Final canonical, Open Graph and sitemap URLs: intentionally withheld/neutralized where the production origin is not authoritative.
 
 ## Release blockers
-1. Identify and verify the intended Netlify deployment and correct production hostname.
-2. Run and pass CI/build/data validation.
-3. Run the generated SEO/accessibility smoke gate and address any real-build failures.
+1. Re-run and pass the dependency audit after the Netlify CLI remediation.
+2. Run and pass data validation, unit tests, build, generated-output verification and SEO/accessibility smoke checks in CI.
+3. Identify and verify the intended Netlify deployment and correct production hostname.
 4. Verify generated `/data/countries.json`, Find My Route, calculator, country explorer, country detail pages, pathway detail pages and deep links in the deployed artifact.
 5. Complete primary-source evidence for additional publishable pathway facts and promote only fully evidenced pathways.
 6. Attach `evidenceIds` to every pathway promoted to `publishable` and enforce complete material-field coverage.
