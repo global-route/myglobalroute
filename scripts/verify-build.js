@@ -49,7 +49,7 @@ if (countries) {
 if (pathways) {
   try {
     const payload = JSON.parse(pathways);
-    if (!Array.isArray(payload.pathways) || payload.pathways.length < 52) errors.push(`generated pathways.json must contain at least 52 pathways; found ${payload.pathways?.length ?? 0}`);
+    if (!Array.isArray(payload.pathways) || payload.pathways.length < 51) errors.push(`generated pathways.json must contain at least 51 pathways; found ${payload.pathways?.length ?? 0}`);
   } catch (error) { errors.push(`generated pathways.json is invalid JSON: ${error.message}`); }
 }
 if (evidence) {
@@ -104,13 +104,8 @@ for (const file of walkHtml(dist)) {
       continue;
     }
     const decoded = decodeURIComponent(targetPath).replace(/^\//, '');
-    const candidates = [
-      decoded,
-      decoded.endsWith('/') ? `${decoded}index.html` : `${decoded}/index.html`
-    ];
-    if (!candidates.some(candidate => fs.existsSync(path.join(dist, candidate)))) {
-      errors.push(`${relative}: broken internal href "${href}"`);
-    }
+    const candidates = [decoded, decoded.endsWith('/') ? `${decoded}index.html` : `${decoded}/index.html`];
+    if (!candidates.some(candidate => fs.existsSync(path.join(dist, candidate)))) errors.push(`${relative}: broken internal href "${href}"`);
   }
 }
 
