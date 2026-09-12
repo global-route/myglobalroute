@@ -25,6 +25,14 @@ const read = relative => {
   const file = path.join(dist, relative);
   return fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : '';
 };
+const walkHtml = directory => {
+  if (!fs.existsSync(directory)) return [];
+  return fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
+    const target = path.join(directory, entry.name);
+    if (entry.isDirectory()) return walkHtml(target);
+    return entry.isFile() && entry.name.endsWith('.html') ? [target] : [];
+  });
+};
 const index = read('index.html');
 const countries = read('data/countries.json');
 const pathways = read('data/pathways.json');
@@ -79,6 +87,33 @@ if (countries && pathways) {
   }
 }
 
+// Static-site deep-link guard: every generated internal href must resolve to a
+// generated file. External URLs, mailto/tel links, and fragment-only links are
+// intentionally excluded.
+for (const file of walkHtml(dist)) {
+  const relative = path.relative(dist, file).replaceAll(path.sep, '/');
+  const html = fs.readFileSync(file, 'utf8');
+  for (const match of html.matchAll(/<a\b[^>]*\bhref=["']([^"']+)["']/gi)) {
+    const href = match[1].trim();
+    if (!href || href.startsWith('#') || /^(?:https?:|mailto:|tel:|javascript:)/i.test(href)) continue;
+    let targetPath;
+    try {
+      targetPath = new URL(href, `https://local.invalid/${relative}`).pathname;
+    } catch {
+      errors.push(`${relative}: invalid internal href "${href}"`);
+      continue;
+    }
+    const decoded = decodeURIComponent(targetPath).replace(/^\//, '');
+    const candidates = [
+      decoded,
+      decoded.endsWith('/') ? `${decoded}index.html` : `${decoded}/index.html`
+    ];
+    if (!candidates.some(candidate => fs.existsSync(path.join(dist, candidate)))) {
+      errors.push(`${relative}: broken internal href "${href}"`);
+    }
+  }
+}
+
 const generatedJs = [];
 const jsDir = path.join(dist, 'js');
 if (fs.existsSync(jsDir)) {
@@ -91,4 +126,4 @@ if (errors.length) {
   errors.forEach(error => console.error(`- ${error}`));
   process.exit(1);
 }
-console.log(`BUILD INTEGRITY PASSED: ${requiredFiles.length} required artifacts plus country/pathway detail pages and basic SEO/source-trail checks`);
+console.log(`BUILD INTEGRITY PASSED: ${requiredFiles.length} required artifacts plus country/pathway detail pages, SEO/source-trail checks and internal deep-link validation`);
