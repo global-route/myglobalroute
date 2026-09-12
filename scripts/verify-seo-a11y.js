@@ -28,6 +28,14 @@ for (const file of htmlFiles) {
   for (const image of images) if (!/\balt=["'][^"']*["']/i.test(image)) errors.push(`${relative}: image missing alt attribute`);
   const links = [...html.matchAll(/<a\b[^>]*>([\s\S]*?)<\/a>/gi)].map(match => ({ tag: match[0], text: match[1].replace(/<[^>]+>/g, '').trim() }));
   for (const link of links) if (!link.text && !/\baria-label=["'][^"']+["']/i.test(link.tag)) errors.push(`${relative}: link has no accessible text or aria-label`);
+
+  const ids = new Map();
+  for (const match of html.matchAll(/\bid=["']([^"']+)["']/gi)) ids.set(match[1], (ids.get(match[1]) || 0) + 1);
+  for (const [id, count] of ids) if (count > 1) errors.push(`${relative}: duplicate id "${id}" (${count} occurrences)`);
+}
+
+for (const required of ['robots.txt', 'sitemap.xml']) {
+  if (!fs.existsSync(path.join(dist, required))) errors.push(`missing generated ${required}`);
 }
 
 if (errors.length) {
