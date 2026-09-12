@@ -17,22 +17,28 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Repair package metadata and remove unverified production-origin metadata.
 - [x] Add evidence-gated migration data validation.
 - [x] Replace unsupported approval-rate/cost/timeline claims with an evidence-gated 26-country registry.
-- [x] Add pathway-level data model covering 26 countries and 52+ pathway records.
+- [x] Restore two pathway records for every country: 26 countries / 52 pathways.
 - [x] Add a primary-source evidence registry with review dates and confidence.
 - [x] Expand primary-source evidence coverage for Finland, Luxembourg and Austria.
 - [x] Expand Sweden primary-source evidence to work salary/eligibility and study maintenance.
 - [x] Add primary-source evidence batches for Canada, Norway, Portugal and Japan.
-- [x] Add a dated primary-source evidence batch for Finland, Italy and Norway (8 additional field-level records).
+- [x] Add a dated primary-source evidence batch for Finland, Italy and Norway.
 - [x] Make the validator consume dated evidence addenda without weakening the primary-source gate.
 - [x] Make validation date current-aware with optional `VALIDATION_AS_OF` override for deterministic CI/release checks.
 - [x] Add canonical route recommendation engine with a hard publishability/evidence safety gate.
+- [x] Exclude zero-fit routes from ranked recommendations.
 - [x] Align route-engine unit tests with the hard safety gate and numeric blockers.
 - [x] Add an evidence-gated Find My Route product surface and primary-navigation entry point.
 - [x] Add unit tests for data contracts, evidence records and route ranking.
+- [x] Correct the Jest command so CI executes the intended test suite.
+- [x] Remove bundled Netlify CLI from the application dependency graph after audit remediation.
 - [x] Add CI quality gate for dependency audit, data validation, tests and build.
-- [x] Add generated-output integrity checks for required routes/data and stale source-data references.
+- [x] Add generated-output integrity checks for required routes/data, detail pages and core internal deep links.
 - [x] Add generated-output assertion for evidence addenda.
 - [x] Add generated country and pathway detail-page integrity assertions.
+- [x] Restore root homepage/public passthrough generation in Eleventy.
+- [x] Add generated `/blog/` research index.
+- [x] Add a core-route SEO/accessibility smoke gate and execute it successfully in CI.
 - [x] Add a reproducible `npm run verify` quality command.
 - [x] Add privacy/security/compliance baseline and public privacy/disclaimer/terms pages.
 - [x] Remove stale/unverified absolute SEO origins rather than publishing incorrect canonicals.
@@ -43,10 +49,9 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Expose consolidated primary-source evidence to Eleventy templates without duplicating the registry.
 - [x] Define material evidence requirements by pathway type (`eligibility` + `financial-requirement` minimum).
 - [x] Enforce material evidence coverage before a pathway can become `publishable`.
-- [x] Add a dated primary-source evidence batch for Germany, France and Spain (12 field-level records).
-- [x] Add generated SEO/accessibility smoke verification for language, title, description, heading, image-alt and link-accessibility basics.
-- [x] Include the SEO/accessibility smoke gate in the reproducible `npm run verify` command and CI quality workflow.
-- [x] Promote six Germany/France/Spain pathways to `publishable` after minimum material-field coverage and explicit `evidenceIds` were satisfied.
+- [x] Add the Germany/France/Spain primary-source batch and promote six pathways after evidence review.
+- [x] Execute CI Quality Gate successfully: dependency audit, data validation, 10 unit tests, Eleventy build, generated-output verification and SEO/accessibility smoke gate all passed in run 123.
+- [x] Move CI to Node 24 to remove the Node 20 deprecation warning path.
 
 ## P0 remaining / verification gates
 
@@ -70,10 +75,9 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 ### Quality / production
 - [x] Add CI/local verification commands for data validation, tests, build, generated-output integrity and lint.
 - [x] Add generated-output assertions.
-- [x] Add generated SEO/accessibility smoke gate.
-- [ ] Execute CI/local verification and record the actual result.
+- [x] Execute CI verification successfully in run 123.
+- [x] Execute generated SEO/accessibility smoke verification successfully in run 123.
 - [ ] Add browser smoke/E2E coverage.
-- [ ] Execute accessibility/SEO smoke checks against a real generated build and record the result.
 - [ ] Identify the authoritative Netlify project/domain and verify the deployed hostname serves this repository. No hostname will be guessed.
 - [ ] Verify canonical hostname, HTTPS, sitemap, robots, deep links, data endpoint and calculator after deployment.
 
@@ -81,6 +85,7 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 
 - Programmatic country/pathway SEO hardening after production origin verification.
 - Comparison UX and route recommendation polish.
+- Legacy blog/category link cleanup and full editorial-page SEO audit.
 - Privacy-aware analytics/consent controls.
 - CSP refinement based on actual third-party inventory.
 - Newsletter, affiliate and partnership infrastructure.
