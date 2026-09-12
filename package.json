@@ -30,7 +30,7 @@
     "jest": "^29.7.0",
     "markdown-it": "^14.3.0",
     "markdown-it-anchor": "^9.2.1",
-    "netlify-cli": "^17.30.0",
+    "netlify-cli": "^26.2.0",
     "postcss": "^8.4.35",
     "postcss-cli": "^11.0.0",
     "prettier": "^3.2.5"
