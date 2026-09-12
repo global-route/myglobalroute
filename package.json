@@ -16,7 +16,8 @@
     "deploy": "npm run build && netlify deploy --prod",
     "data:validate": "node scripts/validate-data.js",
     "build:verify": "node scripts/verify-build.js",
-    "verify": "npm run data:validate && npm test -- --runInBand && npm run build && npm run build:verify && npm run lint"
+    "seo:a11y:verify": "node scripts/verify-seo-a11y.js",
+    "verify": "npm run data:validate && npm test -- --runInBand && npm run build && npm run build:verify && npm run seo:a11y:verify && npm run lint"
   },
   "keywords": ["visa", "immigration", "Africa", "global mobility", "student pathways", "work visas"],
   "author": "Global Route Team",
