@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "policy": "A pathway cannot be promoted to publishable until every material field required for its pathway type has field-level primary-source evidence.",
+  "defaults": {
+    "requiredEvidenceFields": [
+      "eligibility",
+      "financial-requirement"
+    ]
+  },
+  "types": {
+    "work": {
+      "requiredEvidenceFields": [
+        "eligibility",
+        "financial-requirement"
+      ],
+      "recommendedEvidenceFields": [
+        "timeline",
+        "work-rights",
+        "post-study",
+        "policy-update"
+      ]
+    },
+    "study": {
+      "requiredEvidenceFields": [
+        "eligibility",
+        "financial-requirement"
+      ],
+      "recommendedEvidenceFields": [
+        "work-rights",
+        "post-study",
+        "timeline",
+        "policy-update"
+      ]
+    }
+  }
+}
