@@ -1,6 +1,6 @@
 # Global Route — Master Execution Roadmap
 
-**Version:** 2.1.0  
+**Version:** 2.2.0  
 **Status:** Active execution  
 **Reconciled:** September 12, 2026
 
@@ -15,6 +15,7 @@ The blog remains an acquisition/education layer. Country + pathway + evidence + 
 ## Phase 0 — Production Integrity (P0)
 
 - [x] Correct Eleventy runtime data path.
+- [x] Restore root homepage/public passthrough generation.
 - [x] Remove duplicate calculator business logic.
 - [x] Normalize calculator currency conversion and timeline range parsing.
 - [x] Harden data-controlled DOM output.
@@ -22,10 +23,11 @@ The blog remains an acquisition/education layer. Country + pathway + evidence + 
 - [x] Remove destructive gzip build behavior.
 - [x] Remove global SPA rewrite from the static multi-page deployment.
 - [x] Repair package metadata and remove unverified production-origin metadata.
+- [x] Remove bundled Netlify CLI from the audited application dependency graph.
 - [x] Add country/pathway/evidence data validation.
 - [x] Add unit/data/build verification commands and generated-output integrity checks.
 - [x] Add generated SEO/accessibility smoke gate to the verification pipeline.
-- [ ] Execute the full verification pipeline and record an actual pass.
+- [x] Execute the CI quality pipeline successfully: audit, data validation, tests, build, generated-output verification and core SEO/A11y smoke.
 - [ ] Browser/E2E verification of generated routes.
 - [ ] Identify authoritative Netlify deployment and production hostname.
 - [ ] Production smoke verification of deep links/assets/data/calculator.
@@ -45,7 +47,8 @@ The blog remains an acquisition/education layer. Country + pathway + evidence + 
 - [x] Distinguish required evidence from unsupported estimates; approval rates/costs/timelines remain null where not evidenced.
 - [x] Establish material-field requirements by pathway type.
 - [x] Add 26-country evidence-gated registry without fabricating missing data.
-- [x] Add 45 field-level primary-source records across registry and dated addenda.
+- [x] Add 52 pathway records across 26 countries.
+- [x] Add 48 field-level primary-source evidence records across registry and dated addenda.
 - [x] Promote six pathways only after minimum material-field coverage and explicit `evidenceIds`.
 - [ ] Complete material-field evidence audit for remaining pathways.
 - [ ] Review generic pathways that represent multiple legal sub-routes.
@@ -56,19 +59,22 @@ The blog remains an acquisition/education layer. Country + pathway + evidence + 
 
 ## Phase 2 — Canonical Product Core (P0)
 
-- [x] Introduce pathway-level records: 52+ pathways across 26 countries.
+- [x] Introduce pathway-level records: 52 pathways across 26 countries.
 - [x] Build country explorer around pathway entities and evidence-aware statuses.
 - [x] Build programmatic country/pathway pages with eligibility/evidence/source presentation.
 - [x] Make the calculator consume the canonical evidence-gated data model.
 - [ ] Add country comparison.
 - [x] Build `Find My Route`: profile → eligibility → ranked routes → evidence → next action.
 - [x] Rank by eligibility/fit first and block unverified routes from viable recommendations.
+- [x] Exclude zero-fit publishable routes from ranked recommendations.
 - [ ] Expand route explanations with pathway-specific evidence, risks and next-action guidance.
 
 ## Phase 3 — Content & Acquisition (P1)
 
 - [ ] Fact-audit existing posts against the data trust standard.
 - [ ] Finish high-intent cornerstone content only after claims are verified.
+- [ ] Complete legacy blog/category link cleanup and editorial-page SEO/a11y audit.
+- [x] Add generated `/blog/` research index.
 - [ ] Add category archives, related-content links and search UX polish.
 - [ ] Implement canonical metadata, Open Graph, sitemap and robots only after the authoritative production origin is verified.
 - [x] Establish programmatic country/pathway SEO foundations and generated-page metadata checks.
@@ -83,7 +89,7 @@ The blog remains an acquisition/education layer. Country + pathway + evidence + 
 - [ ] Full browser accessibility audit and keyboard navigation.
 - [x] Security-header/CSP baseline.
 - [x] Dependency/supply-chain audit defined in CI.
-- [ ] Execute the dependency audit successfully in CI and remediate any findings.
+- [x] Dependency audit passed in CI with 0 high-severity-or-higher vulnerabilities after removing bundled Netlify CLI.
 
 ## Phase 5 — Growth (P1)
 
@@ -102,21 +108,22 @@ The blog remains an acquisition/education layer. Country + pathway + evidence + 
 
 ## Current P0 critical path
 
-`Primary-source batches → material-field audit → pathway-specific legal-subroute review → publishable promotion → full local/CI verification → browser/E2E → Netlify origin verification → production smoke → canonical/SEO restoration → P0 exit`
+`Primary-source batches → material-field audit → pathway-specific legal-subroute review → publishable promotion → browser/E2E → Netlify origin verification → production smoke → canonical/SEO restoration → P0 exit`
 
 ## Release gate matrix
 
 | Gate | State | Rule |
 |---|---|---|
 | 26-country registry | Complete | Evidence-gated; no fabricated claims |
-| 52+ pathways | Complete | Most remain `research_required` |
-| Field-level evidence | Active | 45 records; expanding |
+| 52 pathways | Complete | Most remain `research_required` |
+| Field-level evidence | Active | 48 records; expanding |
 | Publishable pathways | Partial | 6 currently promoted |
 | Route engine | Complete | Hard publishability/evidence gate |
 | Calculator safety | Complete | Unverified costs not actionable |
 | Country/pathway pages | Complete | Source/evidence trails generated |
-| SEO/A11y smoke gate | Implemented | Execution still required |
-| CI workflow | Implemented | Latest execution not verified |
+| Generated build verification | Passed | CI run 123 |
+| Core SEO/A11y smoke | Passed | CI run 123 |
+| CI quality gate | Passed | Audit + validation + tests + build + verification |
 | Browser/E2E | Open | Required before release |
 | Netlify origin | Open | Must identify actual deployment; never guess |
 | Production smoke | Open | Blocked by origin verification |
