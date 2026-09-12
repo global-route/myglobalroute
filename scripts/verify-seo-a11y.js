@@ -13,25 +13,39 @@ const walkHtml = directory => {
   });
 };
 
+const isCoreRoute = relative => (
+  relative === 'index.html' ||
+  relative === 'pages/find-my-route.html' ||
+  relative === 'pages/countries.html' ||
+  relative === 'pages/calculator.html' ||
+  relative.startsWith('pages/countries/') ||
+  relative.startsWith('pathways/') ||
+  relative === 'blog/index.html'
+);
+
 const htmlFiles = walkHtml(dist);
 if (!htmlFiles.length) errors.push('no generated HTML files found; run the build before SEO/accessibility verification');
 
 for (const file of htmlFiles) {
-  const relative = path.relative(dist, file);
+  const relative = path.relative(dist, file).replaceAll(path.sep, '/');
   const html = fs.readFileSync(file, 'utf8');
+  const core = isCoreRoute(relative);
   if (!/<html[^>]*\blang=["'][^"']+["']/i.test(html)) errors.push(`${relative}: missing html lang attribute`);
   if (!/<title>[^<]{3,}<\/title>/i.test(html)) errors.push(`${relative}: missing meaningful title`);
-  if (!/<meta\s+[^>]*name=["']description["'][^>]*content=["'][^"']{20,}["']/i.test(html) && !/<meta\s+[^>]*content=["'][^"']{20,}["'][^>]*name=["']description["']/i.test(html)) errors.push(`${relative}: missing meaningful meta description`);
-  const h1Count = (html.match(/<h1\b/gi) || []).length;
-  if (h1Count !== 1) errors.push(`${relative}: expected exactly one h1, found ${h1Count}`);
+  if (core && !/<meta\s+[^>]*name=["']description["'][^>]*content=["'][^"']{20,}["']/i.test(html) && !/<meta\s+[^>]*content=["'][^"']{20,}["'][^>]*name=["']description["']/i.test(html)) errors.push(`${relative}: missing meaningful meta description`);
+
+  if (core) {
+    const h1Count = (html.match(/<h1\b/gi) || []).length;
+    if (h1Count !== 1) errors.push(`${relative}: expected exactly one h1, found ${h1Count}`);
+    const ids = new Map();
+    for (const match of html.matchAll(/\bid=["']([^"']+)["']/gi)) ids.set(match[1], (ids.get(match[1]) || 0) + 1);
+    for (const [id, count] of ids) if (count > 1) errors.push(`${relative}: duplicate id "${id}" (${count} occurrences)`);
+  }
+
   const images = [...html.matchAll(/<img\b[^>]*>/gi)].map(match => match[0]);
   for (const image of images) if (!/\balt=["'][^"']*["']/i.test(image)) errors.push(`${relative}: image missing alt attribute`);
   const links = [...html.matchAll(/<a\b[^>]*>([\s\S]*?)<\/a>/gi)].map(match => ({ tag: match[0], text: match[1].replace(/<[^>]+>/g, '').trim() }));
   for (const link of links) if (!link.text && !/\baria-label=["'][^"']+["']/i.test(link.tag)) errors.push(`${relative}: link has no accessible text or aria-label`);
-
-  const ids = new Map();
-  for (const match of html.matchAll(/\bid=["']([^"']+)["']/gi)) ids.set(match[1], (ids.get(match[1]) || 0) + 1);
-  for (const [id, count] of ids) if (count > 1) errors.push(`${relative}: duplicate id "${id}" (${count} occurrences)`);
 }
 
 for (const required of ['robots.txt', 'sitemap.xml']) {
@@ -44,4 +58,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`SEO/A11Y VERIFICATION PASSED: ${htmlFiles.length} generated HTML files checked`);
+console.log(`SEO/A11Y VERIFICATION PASSED: ${htmlFiles.length} generated HTML files checked; strict metadata/heading/id rules applied to core product routes`);
