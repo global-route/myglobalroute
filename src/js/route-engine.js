@@ -38,7 +38,9 @@
     return pathways.map(pathway => ({ pathway, country: countryMap.get(pathway.countryId) }))
       .filter(item => item.country)
       .map(item => ({ ...item, ...scorePathway(item.pathway, item.country, profile) }))
-      .filter(item => item.eligible)
+      // A publishable route with no positive fit signal is not a useful recommendation.
+      // Keep it out of the ranked result rather than presenting a misleading score of 0.
+      .filter(item => item.eligible && item.score > 0)
       .sort((a, b) => b.score - a.score)
       .slice(0, limit);
   }
