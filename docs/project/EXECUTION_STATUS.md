@@ -12,16 +12,21 @@ Global Route is being rebuilt around an evidence-first, pathway-level migration 
 ### P0 completed
 
 - 26-country evidence-gated country registry.
-- 52+ pathway records with authoritative source anchors.
-- 45 field-level primary-source evidence records across the registry and dated addenda.
+- 52 pathway records with authoritative source anchors — two route records per country.
+- 48 field-level primary-source evidence records across the registry and dated addenda.
 - Material evidence requirements and hard publishability gate.
 - Six Germany/France/Spain pathways promoted to `publishable` with explicit `evidenceIds`.
 - Finland, Italy and Norway evidence expanded in the latest primary-source batch.
 - Evidence-gated route recommendation engine and Find My Route surface.
+- Zero-fit recommendations excluded from ranked results.
 - Canonical calculator/search/runtime data-path fixes.
 - Generated country/pathway detail pages with evidence/source trails.
 - Generated-output integrity validation, including internal deep-link checks.
-- Generated SEO/accessibility smoke gate wired into verification and CI.
+- Root homepage/public passthrough and generated research index restored.
+- Generated core SEO/accessibility smoke gate wired into verification and CI.
+- CI Quality Gate run 123 passed dependency audit, data validation, 10 unit tests, Eleventy build, generated-output verification and core SEO/A11y smoke.
+- Dependency audit currently reports 0 high-severity-or-higher vulnerabilities after removing bundled Netlify CLI.
+- CI moved to Node 24.
 - Privacy, disclaimer and terms baseline.
 - SEO-origin hardening: unverified `myglobalroute.com` canonicals, metadata and sitemap references removed.
 - Evidence provenance validation for future `publishable` pathways.
@@ -29,20 +34,20 @@ Global Route is being rebuilt around an evidence-first, pathway-level migration 
 
 ## P0 active blockers
 
-1. **CI execution:** GitHub Actions is now executing the Quality Gate on `main`; final pass/fail is still pending. The workflow deliberately installs without npm cache because no lockfile is committed.
-2. **Primary-source coverage:** most pathways remain `research_required`; only evidence-backed fields may become publishable.
-3. **Pathway-specific legal-subroute review:** generic pathway records must be narrowed or explicitly qualified before broader promotion.
-4. **Browser/E2E verification:** generated-output and SEO/accessibility static gates exist, but real browser interaction has not yet been executed.
-5. **Production origin:** the authoritative Netlify project/domain has not been independently established. `myglobalroute.com` is not the repository deployment and must not be used as the canonical origin.
-6. **Production smoke:** blocked until the authoritative deployment origin is verified.
+1. **Primary-source coverage:** most pathways remain `research_required`; only evidence-backed fields may become publishable.
+2. **Pathway-specific legal-subroute review:** generic pathway records must be narrowed or explicitly qualified before broader promotion.
+3. **Browser/E2E verification:** generated-output and core SEO/accessibility static gates are green, but real browser interaction has not yet been executed.
+4. **Production origin:** the authoritative Netlify project/domain has not been independently established. `myglobalroute.com` is not the repository deployment and must not be used as the canonical origin.
+5. **Production smoke:** blocked until the authoritative deployment origin is verified.
+6. **Legacy editorial cleanup:** old blog/category links and several historical static pages still need a dedicated P1 SEO/accessibility pass.
 
 ## Verification rule
 
-A green implementation is not a green release. Every production/data-trust claim requires objective verification. If CI runs and fails, record the actual failure and remediate it; never convert an unverified run into a pass.
+A green CI implementation is not a green production release. Every production/data-trust claim requires objective evidence. CI run 123 is the current verified quality baseline; deployment and browser behavior remain unverified.
 
 ## Next execution sequence
 
-`CI pass/fix → primary-source evidence batches → legal-subroute review → publishable promotion → browser/E2E + accessibility/SEO → Netlify origin verification → restore canonical/sitemap/robots → production smoke → release`
+`Primary-source evidence batches → legal-subroute review → publishable promotion → browser/E2E → Netlify origin verification → production smoke → canonical/sitemap/robots restoration → P0 exit`
 
 ## Historical documentation
 
