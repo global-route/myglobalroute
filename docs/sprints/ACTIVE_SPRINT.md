@@ -42,6 +42,8 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Define material evidence requirements by pathway type (`eligibility` + `financial-requirement` minimum).
 - [x] Enforce material evidence coverage before a pathway can become `publishable`.
 - [x] Add a dated primary-source evidence batch for Germany, France and Spain (12 field-level records).
+- [x] Add generated SEO/accessibility smoke verification for language, title, description, heading, image-alt and link-accessibility basics.
+- [x] Include the SEO/accessibility smoke gate in the reproducible `npm run verify` command and CI quality workflow.
 
 ## P0 remaining / verification gates
 
@@ -65,9 +67,10 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 ### Quality / production
 - [x] Add CI/local verification commands for data validation, tests, build, generated-output integrity and lint.
 - [x] Add generated-output assertions.
+- [x] Add generated SEO/accessibility smoke gate.
 - [ ] Execute CI/local verification and record the actual result.
 - [ ] Add browser smoke/E2E coverage.
-- [ ] Add accessibility/SEO automated checks.
+- [ ] Execute accessibility/SEO smoke checks against a real generated build and record the result.
 - [ ] Identify the authoritative Netlify project/domain and verify the deployed hostname serves this repository. No hostname will be guessed.
 - [ ] Verify canonical hostname, HTTPS, sitemap, robots, deep links, data endpoint and calculator after deployment.
 
