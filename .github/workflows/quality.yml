@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           # No npm cache until the repository has a committed lockfile.
       - name: Install dependencies
         run: npm install --ignore-scripts --no-audit --no-fund
