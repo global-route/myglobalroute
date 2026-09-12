@@ -1,6 +1,6 @@
 # Global Route — Master Execution Roadmap
 
-**Version:** 2.2.0  
+**Version:** 2.3.0  
 **Status:** Active execution  
 **Reconciled:** September 12, 2026
 
@@ -28,6 +28,7 @@ The blog remains an acquisition/education layer. Country + pathway + evidence + 
 - [x] Add unit/data/build verification commands and generated-output integrity checks.
 - [x] Add generated SEO/accessibility smoke gate to the verification pipeline.
 - [x] Execute the CI quality pipeline successfully: audit, data validation, tests, build, generated-output verification and core SEO/A11y smoke.
+- [x] Align Netlify build/deploy-preview/branch-deploy runtime configuration to Node 24.
 - [ ] Browser/E2E verification of generated routes.
 - [ ] Identify authoritative Netlify deployment and production hostname.
 - [ ] Production smoke verification of deep links/assets/data/calculator.
@@ -48,8 +49,8 @@ The blog remains an acquisition/education layer. Country + pathway + evidence + 
 - [x] Establish material-field requirements by pathway type.
 - [x] Add 26-country evidence-gated registry without fabricating missing data.
 - [x] Add 52 pathway records across 26 countries.
-- [x] Add 48 field-level primary-source evidence records across registry and dated addenda.
-- [x] Promote six pathways only after minimum material-field coverage and explicit `evidenceIds`.
+- [x] Add 56 field-level primary-source evidence records across registry and dated addenda.
+- [x] Promote ten pathways only after minimum material-field coverage and explicit `evidenceIds`.
 - [ ] Complete material-field evidence audit for remaining pathways.
 - [ ] Review generic pathways that represent multiple legal sub-routes.
 - [ ] Expand evidence batches until the highest-value pathways can safely become publishable.
@@ -115,14 +116,14 @@ The blog remains an acquisition/education layer. Country + pathway + evidence + 
 | Gate | State | Rule |
 |---|---|---|
 | 26-country registry | Complete | Evidence-gated; no fabricated claims |
-| 52 pathways | Complete | Most remain `research_required` |
-| Field-level evidence | Active | 48 records; expanding |
-| Publishable pathways | Partial | 6 currently promoted |
+| 52 pathways | Complete | 10 publishable; 42 remain `research_required` |
+| Field-level evidence | Active | 56 records; expanding |
+| Publishable pathways | Partial | 10 currently promoted |
 | Route engine | Complete | Hard publishability/evidence gate |
 | Calculator safety | Complete | Unverified costs not actionable |
 | Country/pathway pages | Complete | Source/evidence trails generated |
-| Generated build verification | Passed | CI run 123 |
-| Core SEO/A11y smoke | Passed | CI run 123 |
+| Generated build verification | Passed | Latest confirmed CI baseline |
+| Core SEO/A11y smoke | Passed | Latest confirmed CI baseline |
 | CI quality gate | Passed | Audit + validation + tests + build + verification |
 | Browser/E2E | Open | Required before release |
 | Netlify origin | Open | Must identify actual deployment; never guess |
