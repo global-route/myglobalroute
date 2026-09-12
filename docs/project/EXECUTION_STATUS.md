@@ -13,10 +13,11 @@ Global Route is being rebuilt around an evidence-first, pathway-level migration 
 
 - 26-country evidence-gated country registry.
 - 52 pathway records with authoritative source anchors — two route records per country.
-- 48 field-level primary-source evidence records across the registry and dated addenda.
+- 56 field-level primary-source evidence records across the registry and dated addenda.
 - Material evidence requirements and hard publishability gate.
-- Six Germany/France/Spain pathways promoted to `publishable` with explicit `evidenceIds`.
+- Ten Germany/France/Spain/UK/Ireland pathways promoted to `publishable` with explicit `evidenceIds`.
 - Finland, Italy and Norway evidence expanded in the latest primary-source batch.
+- New UK and Ireland primary-source batch completed on September 12, 2026.
 - Evidence-gated route recommendation engine and Find My Route surface.
 - Zero-fit recommendations excluded from ranked results.
 - Canonical calculator/search/runtime data-path fixes.
@@ -24,9 +25,9 @@ Global Route is being rebuilt around an evidence-first, pathway-level migration 
 - Generated-output integrity validation, including internal deep-link checks.
 - Root homepage/public passthrough and generated research index restored.
 - Generated core SEO/accessibility smoke gate wired into verification and CI.
-- CI Quality Gate run 123 passed dependency audit, data validation, 10 unit tests, Eleventy build, generated-output verification and core SEO/A11y smoke.
+- CI Quality Gate passed dependency audit, data validation, unit tests, Eleventy build, generated-output verification and core SEO/A11y smoke in the latest confirmed baseline.
 - Dependency audit currently reports 0 high-severity-or-higher vulnerabilities after removing bundled Netlify CLI.
-- CI moved to Node 24.
+- CI and Netlify configuration aligned to Node 24.
 - Privacy, disclaimer and terms baseline.
 - SEO-origin hardening: unverified `myglobalroute.com` canonicals, metadata and sitemap references removed.
 - Evidence provenance validation for future `publishable` pathways.
@@ -34,7 +35,7 @@ Global Route is being rebuilt around an evidence-first, pathway-level migration 
 
 ## P0 active blockers
 
-1. **Primary-source coverage:** most pathways remain `research_required`; only evidence-backed fields may become publishable.
+1. **Primary-source coverage:** 42 pathways remain `research_required`; evidence expansion is still required.
 2. **Pathway-specific legal-subroute review:** generic pathway records must be narrowed or explicitly qualified before broader promotion.
 3. **Browser/E2E verification:** generated-output and core SEO/accessibility static gates are green, but real browser interaction has not yet been executed.
 4. **Production origin:** the authoritative Netlify project/domain has not been independently established. `myglobalroute.com` is not the repository deployment and must not be used as the canonical origin.
@@ -43,7 +44,7 @@ Global Route is being rebuilt around an evidence-first, pathway-level migration 
 
 ## Verification rule
 
-A green CI implementation is not a green production release. Every production/data-trust claim requires objective evidence. CI run 123 is the current verified quality baseline; deployment and browser behavior remain unverified.
+A green CI implementation is not a green production release. Every production/data-trust claim requires objective evidence. The latest confirmed CI baseline is green; deployment and browser behavior remain unverified.
 
 ## Next execution sequence
 
