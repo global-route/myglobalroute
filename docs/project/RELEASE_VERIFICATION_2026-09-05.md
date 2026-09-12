@@ -20,6 +20,8 @@
 - Programmatic country detail pages now expose pathway navigation and country-level source status.
 - Programmatic pathway detail pages now expose official source links and field-level evidence trails.
 - Generated-output verification checks the expected public country and pathway detail-page locations.
+- A generated SEO/accessibility smoke gate now checks language declaration, meaningful title/description, one H1, image alt text and accessible link text.
+- The SEO/accessibility smoke gate is included in both `npm run verify` and the GitHub Actions quality workflow.
 - CI workflow exists for dependency audit, data validation, tests and Eleventy build.
 - Generated-output integrity checks and a reproducible `npm run verify` command exist.
 - Pathway evidence-coverage reporting distinguishes evidenced pathways from the broader research-required registry.
@@ -31,7 +33,7 @@
 ## Not yet verified
 - CI execution: no workflow run/status is exposed for the latest main commits in this session, so tests/build/audit are **Not Tested — no run available**.
 - Browser/E2E behavior: not yet executed.
-- Accessibility/Lighthouse: not yet executed.
+- Generated SEO/accessibility smoke execution: gate is implemented but has not yet been run against a generated build in this session.
 - Complete primary-source field audit: most pathway records remain `research_required` by design.
 - Promotion of pathways to `publishable`: not yet complete because material-field coverage and pathway-specific legal-subroute review remain incomplete.
 - Production deployment: `https://myglobalroute.com` currently resolves to an unrelated Global Routes visa-consultancy site, not this repository. This remains a critical hostname/DNS/deployment mismatch.
@@ -41,12 +43,13 @@
 ## Release blockers
 1. Identify and verify the intended Netlify deployment and correct production hostname.
 2. Run and pass CI/build/data validation.
-3. Verify generated `/data/countries.json`, Find My Route, calculator, country explorer, country detail pages, pathway detail pages and deep links in the deployed artifact.
-4. Complete primary-source evidence for publishable pathway facts and promote only fully evidenced pathways.
-5. Attach `evidenceIds` to every pathway promoted to `publishable` and enforce complete material-field coverage.
-6. Review generic pathways that represent multiple legal sub-routes before promotion; evidence must describe the exact route being published.
-7. Add browser, accessibility and SEO smoke checks.
-8. Once the origin is verified, regenerate canonical metadata, robots sitemap and Open Graph URLs from that single source of truth.
+3. Run the generated SEO/accessibility smoke gate and address any real-build failures.
+4. Verify generated `/data/countries.json`, Find My Route, calculator, country explorer, country detail pages, pathway detail pages and deep links in the deployed artifact.
+5. Complete primary-source evidence for publishable pathway facts and promote only fully evidenced pathways.
+6. Attach `evidenceIds` to every pathway promoted to `publishable` and enforce complete material-field coverage.
+7. Review generic pathways that represent multiple legal sub-routes before promotion; evidence must describe the exact route being published.
+8. Add browser/E2E smoke coverage.
+9. Once the origin is verified, regenerate canonical metadata, robots sitemap and Open Graph URLs from that single source of truth.
 
 ## Rule
 No “production ready” claim is permitted until every blocker above has objective evidence.
