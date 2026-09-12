@@ -44,18 +44,19 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Add a dated primary-source evidence batch for Germany, France and Spain (12 field-level records).
 - [x] Add generated SEO/accessibility smoke verification for language, title, description, heading, image-alt and link-accessibility basics.
 - [x] Include the SEO/accessibility smoke gate in the reproducible `npm run verify` command and CI quality workflow.
+- [x] Promote six Germany/France/Spain pathways to `publishable` after minimum material-field coverage and explicit `evidenceIds` were satisfied.
 
 ## P0 remaining / verification gates
 
 ### Authoritative migration intelligence
 - [ ] Verify every remaining pathway's material requirements from primary sources.
 - [x] Establish field-level evidence objects: source, claim, effective date, retrieved date, jurisdiction, methodology, confidence and review date.
-- [ ] Promote records from `research_required` → `publishable` only after complete evidence review.
+- [ ] Promote remaining records from `research_required` → `publishable` only after complete evidence review.
 - [ ] Add official fee/funds/eligibility/timeline facts only where the authority publishes them.
 - [x] Keep approval rates null where no credible methodology-disclosed official dataset exists.
 - [x] Complete the priority Germany/France/Spain evidence batch; continue remaining-country batches next.
-- [ ] Attach `evidenceIds` and complete material-field coverage before any pathway is promoted.
-- [ ] Review pathway-specific nuances where one generic pathway maps to multiple legal sub-routes before promotion.
+- [x] Attach `evidenceIds` and complete minimum material-field coverage for the six promoted pathways.
+- [ ] Review pathway-specific nuances where one generic pathway maps to multiple legal sub-routes before broader promotion.
 
 ### Product integration
 - [x] Build the first Find My Route UI around the canonical engine.
