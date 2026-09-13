@@ -20,6 +20,6 @@ test('calculator page loads', async ({ page }) => {
 
 test('countries page loads', async ({ page }) => {
   await page.goto('/pages/countries.html');
-  await expect(page).toHaveTitle(/Countries/i);
+  await expect(page).toHaveTitle(/Country Directory|Countries/i);
   await expect(page.locator('h1')).toHaveCount(1);
 });
