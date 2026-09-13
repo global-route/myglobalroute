@@ -6,6 +6,16 @@
 
 The original blueprint remains intact. Execution order is trust-first: authoritative evidence, pathway architecture, recommendation safety, automated quality gates, then acquisition and scale.
 
+## Current checkpoint
+
+- 26 countries / 52 pathways remain canonical.
+- 80 evidence records are currently validated.
+- 17 pathways are publishable; 35 remain research-required.
+- Latest Quality Gate `34734636320` and latest post-docs Quality Gate `34734742638` passed.
+- Latest browser smoke `34734636297` passed 4/4 core page tests.
+- Latest lint `34734742628` passed.
+- Production remains blocked because the authoritative Netlify origin has not been independently verified.
+
 ## Completed in this sprint
 
 - [x] Fix generated data runtime path (`/src/data` → `/data`).
@@ -19,16 +29,9 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Replace unsupported approval-rate/cost/timeline claims with an evidence-gated 26-country registry.
 - [x] Restore two pathway records for every country: 26 countries / 52 pathways.
 - [x] Add a primary-source evidence registry with review dates and confidence.
-- [x] Expand primary-source evidence coverage for Finland, Luxembourg and Austria.
-- [x] Expand Sweden primary-source evidence to work salary/eligibility and study maintenance.
-- [x] Add primary-source evidence batches for Canada, Norway, Portugal and Japan.
-- [x] Add a dated primary-source evidence batch for Finland, Italy and Norway.
-- [x] Add dated Germany/France/Spain evidence and promote six pathways after evidence review.
-- [x] Add dated UK Student and Ireland Critical Skills evidence records.
-- [x] Add dated Australia, Canada and New Zealand evidence for four priority pathways.
-- [x] Remove duplicate evidence records and the now-redundant Italy/Norway addendum.
+- [x] Expand dated primary-source evidence across the priority country waves, including Sweden, Finland, Luxembourg, Austria, Switzerland and Portugal.
+- [x] Promote 17 pathways only after explicit material evidence review and `evidenceIds` attachment.
 - [x] Make the validator consume dated evidence addenda without weakening the primary-source gate.
-- [x] Make validation date current-aware with optional `VALIDATION_AS_OF` override for deterministic CI/release checks.
 - [x] Add canonical route recommendation engine with a hard publishability/evidence safety gate.
 - [x] Exclude zero-fit routes from ranked recommendations.
 - [x] Align route-engine unit tests with the hard safety gate and numeric blockers.
@@ -53,9 +56,12 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Expose consolidated primary-source evidence to Eleventy templates without duplicating the registry.
 - [x] Define material evidence requirements by pathway type (`eligibility` + `financial-requirement` minimum).
 - [x] Enforce material evidence coverage before a pathway can become `publishable`.
-- [x] Execute an earlier CI Quality Gate successfully, including dependency audit, data validation, unit tests, Eleventy build, generated-output verification and SEO/accessibility smoke gate.
-- [x] Move CI to Node 24 to remove the Node 20 deprecation warning path.
-- [x] Align `netlify.toml` production, branch-deploy and deploy-preview environments with Node 24.
+- [x] Execute successful CI Quality Gates through dependency audit, data validation, unit tests, Eleventy build, generated-output verification and SEO/accessibility smoke.
+- [x] Move CI to Node 24 and align Netlify configuration with Node 24.
+- [x] Add real Playwright browser-smoke infrastructure and four core page smoke tests.
+- [x] Add manual production-smoke workflow requiring an explicitly supplied authoritative origin.
+- [x] Add deployed-site verification that discovers all generated country/pathway routes from the deployed registry.
+- [x] Consolidate duplicate repository-visibility issue tracking; issue #1 is closed as a duplicate of #2.
 
 ## P0 remaining / verification gates
 
@@ -65,13 +71,12 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [ ] Promote remaining records from `research_required` → `publishable` only after complete evidence review.
 - [ ] Add official fee/funds/eligibility/timeline facts only where the authority publishes them.
 - [x] Keep approval rates null where no credible methodology-disclosed official dataset exists.
-- [x] Complete the priority Germany/France/Spain evidence batch; continue remaining-country batches next.
-- [x] Attach `evidenceIds` and complete minimum material-field coverage for the six promoted pathways.
-- [x] Add UK Student and Ireland Critical Skills material evidence coverage.
-- [x] Add Italy Study and Norway Study material evidence coverage.
-- [x] Add Australia Student, Canada Study and New Zealand Student/Skilled material evidence records.
-- [ ] Attach new evidence IDs to pathway records and promote newly covered pathways after exact-route validation.
-- [ ] Review pathway-specific nuances where one generic pathway maps to multiple legal sub-routes before broader promotion.
+- [x] Complete the priority Germany/France/Spain evidence batch and continue dated country batches.
+- [x] Attach `evidenceIds` and complete minimum material-field coverage for the 17 currently promoted pathways.
+- [ ] Attach the latest Sweden/Luxembourg evidence IDs after pathway-file validation and promote those exact-route records.
+- [ ] Refine Finland Work to the exact employed-person/TTOL route before promotion.
+- [ ] Review Austria Red-White-Red and New Zealand Skilled for legal sub-route scope before broader promotion.
+- [ ] Add regression tests preventing a broad pathway from becoming publishable when evidence only covers a narrower legal sub-route.
 
 ### Product integration
 - [x] Build the first Find My Route UI around the canonical engine.
@@ -83,14 +88,13 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 ### Quality / production
 - [x] Add CI/local verification commands for data validation, tests, build, generated-output integrity and lint.
 - [x] Add generated-output assertions.
-- [x] Execute an earlier CI verification successfully.
-- [x] Execute an earlier generated SEO/accessibility smoke verification successfully.
-- [x] Diagnose latest CI failures to duplicate evidence IDs.
-- [x] Remove the duplicate evidence records causing runs 140–142 to fail at data validation.
-- [ ] Verify the next CI run on the corrected evidence tree.
-- [ ] Add browser smoke/E2E coverage.
+- [x] Execute current Quality Gate successfully.
+- [x] Execute current generated SEO/accessibility smoke verification successfully.
+- [x] Execute browser smoke successfully: 4/4 tests.
+- [x] Execute lint successfully.
 - [ ] Identify the authoritative Netlify project/domain and verify the deployed hostname serves this repository. No hostname will be guessed.
 - [ ] Verify canonical hostname, HTTPS, sitemap, robots, deep links, data endpoint and calculator after deployment.
+- [ ] Resolve repository hardening issue #2: confirm intended visibility and establish an appropriate `main` protection/check policy.
 
 ## P1 after P0
 
@@ -107,4 +111,4 @@ Implementation + documentation + verification. Never mark a production or data-t
 
 ## Execution order
 
-`Evidence schema → primary-source verification → material-field coverage → publishable pathway data → product integration → tests/E2E → deployment verification → SEO scale → growth`
+`Evidence schema → primary-source verification → material-field coverage → exact-route pathway semantics → publishable pathway data → product integration → tests/E2E → deployment verification → SEO scale → growth`
