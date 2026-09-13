@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "verifiedAt": "2026-09-14",
+  "purpose": "Primary-source material-field evidence for Norway higher-education study permit route.",
+  "policy": "Only exact route claims supported by current official sources are included; promotion requires complete material-field coverage and matching pathway scope.",
+  "records": [
+    {
+      "id": "NO-study-eligibility-2026-09-14",
+      "countryId": "NO",
+      "pathwayId": "NO-study",
+      "field": "eligibility",
+      "claim": "A person from outside the EU/EEA who plans to study in Norway for more than three months must apply for a study residence permit; for higher education the applicant must be admitted to a university college or university and study full-time, in addition to the other applicable requirements.",
+      "sourceAuthority": "Norwegian Directorate of Immigration (UDI)",
+      "sourceUrl": "https://www.udi.no/en/want-to-apply/studies/",
+      "jurisdiction": "Norway",
+      "effectiveDate": "2026-09-14",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current UDI study-permit guidance and higher-education requirements.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "NO-study-finance-2026-09-14",
+      "countryId": "NO",
+      "pathwayId": "NO-study",
+      "field": "financial-requirement",
+      "claim": "For higher-education study permit applicants, UDI states that the applicant must document at least NOK 15,488 per month, or NOK 170,368 per year, for the academic year; semester-specific documentation is also specified for applicants studying for only one semester.",
+      "sourceAuthority": "Norwegian Directorate of Immigration (UDI)",
+      "sourceUrl": "https://www.udi.no/en/want-to-apply/studies/studietillatelse/",
+      "jurisdiction": "Norway",
+      "effectiveDate": "2026-09-14",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current UDI higher-education study-permit financial requirement.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    }
+  ]
+}
