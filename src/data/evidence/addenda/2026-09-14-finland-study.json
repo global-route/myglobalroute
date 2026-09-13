@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": [
+    {
+      "id": "FI-study-eligibility-2026-09-14",
+      "countryId": "FI",
+      "pathwayId": "FI-study",
+      "field": "eligibility",
+      "value": "Applicants for a Finnish residence permit for studies must have been accepted by a Finnish educational institution; eligible studies generally lead to a degree or vocational qualification, with exchange study also covered. The studies must require residence in Finland rather than mainly being online distance learning.",
+      "sourceUrl": "https://migri.fi/residence-permit-application-for-studies",
+      "sourceAuthority": "Finnish Immigration Service (Migri)",
+      "retrievedAt": "2026-09-14",
+      "confidence": "high"
+    },
+    {
+      "id": "FI-study-finance-2026-09-14",
+      "countryId": "FI",
+      "pathwayId": "FI-study",
+      "field": "financial-requirement",
+      "value": "Applicants must have at least EUR 800 available per month for living costs; for a one-year permit this means EUR 9,600 in the applicant's bank account when applying, in addition to funds needed for unpaid tuition fees where applicable.",
+      "sourceUrl": "https://migri.fi/residence-permit-application-for-studies",
+      "sourceAuthority": "Finnish Immigration Service (Migri)",
+      "retrievedAt": "2026-09-14",
+      "confidence": "high"
+    }
+  ]
+}
