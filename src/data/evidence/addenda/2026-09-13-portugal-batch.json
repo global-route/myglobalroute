@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0.0",
+  "verifiedAt": "2026-09-13",
+  "purpose": "Primary-source material-field evidence batch for Portugal study and remote-work residence pathways.",
+  "policy": "Only exact route claims supported by current official sources are included; promotion still requires evidenceIds and complete material-field coverage.",
+  "records": [
+    {
+      "id": "PT-study-eligibility-2026-09-13",
+      "countryId": "PT",
+      "pathwayId": "PT-study",
+      "field": "eligibility",
+      "claim": "Portugal's higher-education residence route applies to students admitted or enrolled in an eligible higher-education programme; AIMA requires proof of enrolment/admission and the applicable residence conditions under Article 91.",
+      "sourceAuthority": "AIMA",
+      "sourceUrl": "https://aima.gov.pt/pt/estudar/autorizacao-de-residencia-emitida-a-estudantes-do-ensino-superior-art-o-91",
+      "jurisdiction": "Portugal",
+      "effectiveDate": "2026-09-13",
+      "retrievedAt": "2026-09-13",
+      "methodology": "Direct review of current AIMA higher-education residence authorization guidance.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-13"
+    },
+    {
+      "id": "PT-study-finance-2026-09-13",
+      "countryId": "PT",
+      "pathwayId": "PT-study",
+      "field": "financial-requirement",
+      "claim": "Portugal requires third-country nationals to demonstrate sufficient means of subsistence under its applicable rules; AIMA identifies proof of subsistence for higher-education residence applications and links the calculation to Portaria 1563/2007, with evidence varying by the applicant's circumstances.",
+      "sourceAuthority": "AIMA",
+      "sourceUrl": "https://aima.gov.pt/pt/temas-transversais/meios-de-subsistencia",
+      "jurisdiction": "Portugal",
+      "effectiveDate": "2026-09-13",
+      "retrievedAt": "2026-09-13",
+      "methodology": "Direct review of current AIMA subsistence-means guidance and the higher-education residence requirements; no unsupported universal study-cost figure is asserted.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-13"
+    },
+    {
+      "id": "PT-digital-nomad-eligibility-2026-09-13",
+      "countryId": "PT",
+      "pathwayId": "PT-digital-nomad",
+      "field": "eligibility",
+      "claim": "Portugal's remote-work residence route requires a valid residence visa for remote professional activity performed for an entity or client outside Portugal and supporting proof of the foreign employment or service relationship.",
+      "sourceAuthority": "AIMA",
+      "sourceUrl": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-o-exercicio-de-atividade-profissional-prestada-de-forma-remota-com-visto-de-residencia-para-o-exe",
+      "jurisdiction": "Portugal",
+      "effectiveDate": "2026-09-13",
+      "retrievedAt": "2026-09-13",
+      "methodology": "Direct review of current AIMA remote-work residence authorization guidance.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-13"
+    },
+    {
+      "id": "PT-digital-nomad-finance-2026-09-13",
+      "countryId": "PT",
+      "pathwayId": "PT-digital-nomad",
+      "field": "financial-requirement",
+      "claim": "Portugal's subsistence rules use the applicable national minimum-wage reference and allow remote-work applicants to prove means through employment or service contracts and related income evidence; no unsupported single net-income figure is asserted here.",
+      "sourceAuthority": "AIMA",
+      "sourceUrl": "https://aima.gov.pt/pt/temas-transversais/meios-de-subsistencia",
+      "jurisdiction": "Portugal",
+      "effectiveDate": "2026-09-13",
+      "retrievedAt": "2026-09-13",
+      "methodology": "Direct review of current AIMA subsistence-means guidance, including remote-work proof mechanisms.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-13"
+    }
+  ]
+}
