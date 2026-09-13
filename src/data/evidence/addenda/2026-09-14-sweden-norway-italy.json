@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0.0",
+  "verifiedAt": "2026-09-14",
+  "purpose": "Primary-source material-field evidence batch for Sweden work, Norway skilled-worker work, and Italy higher-education study routes.",
+  "policy": "Only exact route claims supported by current official sources are included; promotion requires evidenceIds and complete material-field coverage.",
+  "records": [
+    {
+      "id": "SE-work-eligibility-2026-09-14",
+      "countryId": "SE",
+      "pathwayId": "SE-work",
+      "field": "eligibility",
+      "claim": "Sweden's standard work-permit route requires qualifying employment and employer-side insurance/terms; salary and employment conditions must be at least on par with Swedish collective agreements or common practice, and the applicable work-permit requirements must be met.",
+      "sourceAuthority": "Swedish Migration Agency",
+      "sourceUrl": "https://www.migrationsverket.se/en/you-want-to-apply/work.html",
+      "jurisdiction": "Sweden",
+      "effectiveDate": "2026-06-01",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current Swedish Migration Agency work-permit guidance and 2026 work-permit rule updates.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "SE-work-finance-2026-09-14",
+      "countryId": "SE",
+      "pathwayId": "SE-work",
+      "field": "financial-requirement",
+      "claim": "For Swedish work-permit applications subject to the new 2026 rule, salary must be at least 90% of the median salary at the time of application and remain in line with collective agreements or common practice. Based on the median salary current from 16 June 2026, the threshold is SEK 34,470 per month; exemptions can apply to specified occupations/groups.",
+      "sourceAuthority": "Swedish Migration Agency",
+      "sourceUrl": "https://www.migrationsverket.se/en/word-explanations/salary-requirements-for-a-work-permit.html",
+      "jurisdiction": "Sweden",
+      "effectiveDate": "2026-06-16",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of the Swedish Migration Agency's current salary-threshold guidance and 16 June 2026 median-salary update.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "NO-work-eligibility-2026-09-14",
+      "countryId": "NO",
+      "pathwayId": "NO-work",
+      "field": "eligibility",
+      "claim": "Norway's skilled-worker residence permit requires relevant qualifying education or equivalent special qualifications and a concrete job offer from one specific employer; the job must normally be full-time (or at least 80%), require skilled-worker qualifications, and meet Norwegian employment conditions.",
+      "sourceAuthority": "Norwegian Directorate of Immigration (UDI)",
+      "sourceUrl": "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/",
+      "jurisdiction": "Norway",
+      "effectiveDate": "2026-09-14",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current UDI skilled-worker guidance for applicants with an employer in Norway.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "NO-work-finance-2026-09-14",
+      "countryId": "NO",
+      "pathwayId": "NO-work",
+      "field": "financial-requirement",
+      "claim": "For Norway's skilled-worker route, pay and working conditions must not be poorer than normal in Norway for the occupation. UDI also publishes a specific minimum income for certain special categories, so the product should not treat one category-specific amount as a universal skilled-worker salary threshold.",
+      "sourceAuthority": "Norwegian Directorate of Immigration (UDI)",
+      "sourceUrl": "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/",
+      "jurisdiction": "Norway",
+      "effectiveDate": "2026-09-14",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current UDI skilled-worker employment-condition guidance; no unsupported universal numeric salary is asserted.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "IT-study-eligibility-2026-09-14",
+      "countryId": "IT",
+      "pathwayId": "IT-study",
+      "field": "eligibility",
+      "claim": "For higher-education study in Italy, non-EU applicants generally complete pre-enrolment through Universitaly with validation by the receiving institution before applying for the appropriate long-stay study visa; visa documentation includes the validated pre-enrolment/enrolment evidence and applicable academic qualification documents.",
+      "sourceAuthority": "Italian Ministry of Foreign Affairs and Italian diplomatic missions",
+      "sourceUrl": "https://ambnicosia.esteri.it/en/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/study/",
+      "jurisdiction": "Italy",
+      "effectiveDate": "2026-09-14",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current Italian diplomatic mission study-visa guidance for the 2026/2027 academic cycle.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    }
+  ]
+}
