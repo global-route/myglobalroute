@@ -3,7 +3,7 @@
 **Status:** Active  
 **Priority:** P0  
 **Owner:** Global Route engineering/editorial workflow  
-**Last reconciled:** 2026-09-12
+**Last reconciled:** 2026-09-13
 
 ## Purpose
 
@@ -26,12 +26,36 @@ Ten pathways currently meet the minimum material evidence gate:
 
 Publishability means the repository has evidence for the minimum material fields. It does **not** mean approval is guaranteed, legal advice is provided, or every sub-route has been exhaustively covered.
 
+## Newly evidenced — promotion pending exact-route review
+
+The 2026-09-13 evidence wave now gives minimum material-field coverage to:
+
+- CA Study Permit
+- AU Student visa (Subclass 500)
+- NZ Fee Paying Student Visa
+- NZ Skilled residence pathways
+
+These records remain `research_required` in the pathway registry until their evidence IDs are attached and the generic route labels are confirmed to be sufficiently narrow. This is intentional: evidence completeness and legal-route completeness are separate gates.
+
 ## High-risk distinctions to preserve
 
 ### United Kingdom
 - Student finance differs by London vs outside London and has exemptions/differential-evidence rules.
 - Skilled Worker salary depends on occupation going rate and can have lower-salary/transitional routes.
 - Therefore the product must display the usual threshold as a baseline, not as a universal salary guarantee.
+
+### Canada
+- Express Entry is an umbrella system covering CEC, FSWP and FSTP; it must not be represented as one undifferentiated legal route.
+- Study permits have federal requirements plus Quebec-specific financial/attestation considerations.
+- The current CA Study Permit evidence is sufficient for the minimum fields, but product copy must preserve the federal/Quebec distinction.
+
+### Australia
+- Subclass 500 has genuine-student, document-checklist and financial-capacity conditions that can vary by applicant.
+- Skilled migration includes multiple subclasses and invitation/nominations; `AU-skilled` remains intentionally unpromoted until the exact visa class is narrowed.
+
+### New Zealand
+- Fee Paying Student Visa has clear eligibility and funds requirements and can be promoted after exact-route review.
+- Skilled residence has multiple pathways and route-specific wage/work-experience rules; the generic `NZ-skilled` label requires narrowing before promotion.
 
 ### Ireland
 - Study finance differs by course duration and visa-required vs non-visa-required applicant process.
@@ -50,19 +74,22 @@ A pathway may move from `research_required` to `publishable` only when:
 3. Evidence IDs point to records belonging to that exact pathway.
 4. Exceptions and major sub-route distinctions are either evidenced and represented or explicitly disclosed as out of scope.
 5. Unsupported approval rates, generalized costs and generalized timelines remain null.
+6. Data validation passes on the corrected evidence tree.
+7. CI passes after the promotion.
 
 ## Next review queue
 
 Prioritize pathways with the highest product value and highest legal ambiguity:
 
-1. CA Express Entry — split/qualify CEC, FSWP and FSTP rather than presenting one undifferentiated route.
-2. CA Study Permit — complete eligibility + financial evidence before promotion.
-3. AU Skilled — identify exact skilled-visa class before promotion.
-4. AU Student — complete current financial/eligibility evidence.
-5. NZ Skilled — distinguish work-to-residence/residence classes before promotion.
-6. SE Work/Study — verify current salary/maintenance and applicant-specific conditions.
-7. FI Work/Study — convert existing evidence into complete material coverage.
-8. NO Work/Study — complete financial/eligibility coverage and distinguish employer/job-offer requirements.
+1. CA Study Permit — attach evidence IDs and preserve Quebec distinction.
+2. CA Express Entry — split/qualify CEC, FSWP and FSTP rather than presenting one undifferentiated route.
+3. AU Student — confirm exact Subclass 500 scope and attach evidence IDs.
+4. NZ Student — confirm exact Fee Paying Student scope and attach evidence IDs.
+5. NZ Skilled — narrow the generic label to a specific SMC/work-to-residence class before promotion.
+6. AU Skilled — identify exact skilled-visa class before promotion.
+7. SE Work/Study — complete material coverage and applicant-specific conditions.
+8. FI Work/Study — convert existing evidence into complete material coverage.
+9. NO Work/Study — complete financial/eligibility coverage and distinguish employer/job-offer requirements.
 
 ## Critical distinction
 
