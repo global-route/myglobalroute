@@ -25,7 +25,8 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Add a dated primary-source evidence batch for Finland, Italy and Norway.
 - [x] Add dated Germany/France/Spain evidence and promote six pathways after evidence review.
 - [x] Add dated UK Student and Ireland Critical Skills evidence records.
-- [x] Add dated Italy university-study and Norway higher-education-study evidence records.
+- [x] Add dated Australia, Canada and New Zealand evidence for four priority pathways.
+- [x] Remove duplicate evidence records and the now-redundant Italy/Norway addendum.
 - [x] Make the validator consume dated evidence addenda without weakening the primary-source gate.
 - [x] Make validation date current-aware with optional `VALIDATION_AS_OF` override for deterministic CI/release checks.
 - [x] Add canonical route recommendation engine with a hard publishability/evidence safety gate.
@@ -52,7 +53,7 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Expose consolidated primary-source evidence to Eleventy templates without duplicating the registry.
 - [x] Define material evidence requirements by pathway type (`eligibility` + `financial-requirement` minimum).
 - [x] Enforce material evidence coverage before a pathway can become `publishable`.
-- [x] Execute CI Quality Gate successfully in run 136: dependency audit, data validation, unit tests, Eleventy build, generated-output verification and SEO/accessibility smoke gate all passed.
+- [x] Execute an earlier CI Quality Gate successfully, including dependency audit, data validation, unit tests, Eleventy build, generated-output verification and SEO/accessibility smoke gate.
 - [x] Move CI to Node 24 to remove the Node 20 deprecation warning path.
 - [x] Align `netlify.toml` production, branch-deploy and deploy-preview environments with Node 24.
 
@@ -68,7 +69,8 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Attach `evidenceIds` and complete minimum material-field coverage for the six promoted pathways.
 - [x] Add UK Student and Ireland Critical Skills material evidence coverage.
 - [x] Add Italy Study and Norway Study material evidence coverage.
-- [ ] Attach new evidence IDs to pathway records and promote the newly covered pathways after exact-route validation.
+- [x] Add Australia Student, Canada Study and New Zealand Student/Skilled material evidence records.
+- [ ] Attach new evidence IDs to pathway records and promote newly covered pathways after exact-route validation.
 - [ ] Review pathway-specific nuances where one generic pathway maps to multiple legal sub-routes before broader promotion.
 
 ### Product integration
@@ -81,9 +83,11 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 ### Quality / production
 - [x] Add CI/local verification commands for data validation, tests, build, generated-output integrity and lint.
 - [x] Add generated-output assertions.
-- [x] Execute CI verification successfully in run 136.
-- [x] Execute generated SEO/accessibility smoke verification successfully in run 136.
-- [ ] Verify the latest evidence-addendum CI run after it completes.
+- [x] Execute an earlier CI verification successfully.
+- [x] Execute an earlier generated SEO/accessibility smoke verification successfully.
+- [x] Diagnose latest CI failures to duplicate evidence IDs.
+- [x] Remove the duplicate evidence records causing runs 140–142 to fail at data validation.
+- [ ] Verify the next CI run on the corrected evidence tree.
 - [ ] Add browser smoke/E2E coverage.
 - [ ] Identify the authoritative Netlify project/domain and verify the deployed hostname serves this repository. No hostname will be guessed.
 - [ ] Verify canonical hostname, HTTPS, sitemap, robots, deep links, data endpoint and calculator after deployment.
