@@ -21,4 +21,23 @@ describe('primary-source evidence registry', () => {
       if (pathway.status !== 'publishable') expect(pathway.status).toBe('research_required');
     }
   });
+
+  test('the canonical registry remains exactly two pathways per country', () => {
+    expect(countries.countries).toHaveLength(26);
+    expect(pathways.pathways).toHaveLength(52);
+    const counts = new Map();
+    for (const pathway of pathways.pathways) counts.set(pathway.countryId, (counts.get(pathway.countryId) || 0) + 1);
+    for (const country of countries.countries) expect(counts.get(country.id)).toBe(2);
+  });
+
+  test('publishable pathway evidence is route-scoped to the pathway record', () => {
+    const allEvidence = [...evidence.records];
+    for (const pathway of pathways.pathways.filter(item => item.status === 'publishable')) {
+      expect(pathway.evidenceIds?.length).toBeGreaterThan(0);
+      for (const evidenceId of pathway.evidenceIds) {
+        const record = allEvidence.find(item => item.id === evidenceId);
+        if (record) expect(record.pathwayId).toBe(pathway.id);
+      }
+    }
+  });
 });
