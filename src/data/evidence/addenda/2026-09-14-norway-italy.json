@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": [
+    {
+      "id": "NO-study-eligibility-2026-09-14",
+      "countryId": "NO",
+      "pathwayId": "NO-study",
+      "field": "eligibility",
+      "value": "For university/university-college higher education, applicants need admission, full-time study, an approved/accredited institution, and a study permit for studies exceeding three months.",
+      "sourceUrl": "https://www.udi.no/en/want-to-apply/studies/studietillatelse/",
+      "sourceAuthority": "Norwegian Directorate of Immigration (UDI)",
+      "retrievedAt": "2026-09-14",
+      "confidence": "high"
+    },
+    {
+      "id": "NO-study-finance-2026-09-14",
+      "countryId": "NO",
+      "pathwayId": "NO-study",
+      "field": "financialRequirement",
+      "value": "For university/university-college study, the applicant must document at least NOK 15,488 per month or NOK 170,368 for the academic year; tuition must also be covered where applicable.",
+      "sourceUrl": "https://www.udi.no/en/want-to-apply/studies/studietillatelse/",
+      "sourceAuthority": "Norwegian Directorate of Immigration (UDI)",
+      "retrievedAt": "2026-09-14",
+      "confidence": "high"
+    },
+    {
+      "id": "IT-study-finance-2026-09-14",
+      "countryId": "IT",
+      "pathwayId": "IT-study",
+      "field": "financialRequirement",
+      "value": "Italy requires foreign nationals to demonstrate adequate means of support for subsistence and return; for study visas, suitable personal/family or qualifying institutional financial guarantees may be used, while a bank guarantee or insurance policy is not itself accepted as the study-finance proof described by the Ministry FAQ.",
+      "sourceUrl": "https://www.esteri.it/en/ministero/sportello_info/domandefrequenti/studiare-in-italia/",
+      "sourceAuthority": "Italian Ministry of Foreign Affairs and International Cooperation",
+      "retrievedAt": "2026-09-14",
+      "confidence": "high"
+    }
+  ]
+}
