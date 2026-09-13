@@ -1,0 +1,26 @@
+name: Production Smoke
+
+on:
+  workflow_dispatch:
+    inputs:
+      production_url:
+        description: 'Authoritative deployed origin, e.g. https://example.netlify.app'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Verify deployed routes
+        env:
+          PRODUCTION_URL: ${{ inputs.production_url }}
+        run: npm run deploy:verify
