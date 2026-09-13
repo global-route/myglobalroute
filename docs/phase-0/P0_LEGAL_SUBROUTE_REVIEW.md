@@ -3,7 +3,7 @@
 **Status:** Active  
 **Priority:** P0  
 **Owner:** Global Route engineering/editorial workflow  
-**Last reconciled:** 2026-09-13
+**Last reconciled:** 2026-09-14
 
 ## Purpose
 
@@ -11,7 +11,7 @@ Prevent a generic pathway record from implying that every applicant follows the 
 
 ## Current publishable set
 
-Ten pathways currently meet the minimum material evidence gate:
+Twenty pathways currently meet the minimum material evidence gate and have explicit `evidenceIds`:
 
 - GB Student visa
 - GB Skilled Worker
@@ -23,19 +23,29 @@ Ten pathways currently meet the minimum material evidence gate:
 - FR Talent Passport
 - ES Study visa
 - ES International Teleworker
-
-Publishability means the repository has evidence for the minimum material fields. It does **not** mean approval is guaranteed, legal advice is provided, or every sub-route has been exhaustively covered.
-
-## Newly evidenced — promotion pending exact-route review
-
-The 2026-09-13 evidence wave now gives minimum material-field coverage to:
-
 - CA Study Permit
 - AU Student visa (Subclass 500)
 - NZ Fee Paying Student Visa
-- NZ Skilled residence pathways
+- AT Student residence permit
+- PT Study residence visa
+- PT Remote Work / Digital Nomad
+- CH Work permits
+- FI Residence permit for an employed person (TTOL)
+- SE Residence permit for higher-education studies
+- LU Salaried worker
 
-These records remain `research_required` in the pathway registry until their evidence IDs are attached and the generic route labels are confirmed to be sufficiently narrow. This is intentional: evidence completeness and legal-route completeness are separate gates.
+Publishability means the repository has evidence for the minimum material fields. It does **not** mean approval is guaranteed, legal advice is provided, or every sub-route has been exhaustively covered.
+
+## Latest exact-route evidence wave
+
+The 2026-09-13/14 evidence wave added exact material-field coverage for:
+
+- Finland employed-person (TTOL) work
+- Sweden higher-education study
+- Luxembourg salaried-worker work
+- Norway higher-education study — evidence added; promotion pending pathway-record update and CI confirmation
+
+These records are handled separately from broader route families. Evidence completeness and legal-route completeness remain separate gates.
 
 ## High-risk distinctions to preserve
 
@@ -54,8 +64,17 @@ These records remain `research_required` in the pathway registry until their evi
 - Skilled migration includes multiple subclasses and invitation/nominations; `AU-skilled` remains intentionally unpromoted until the exact visa class is narrowed.
 
 ### New Zealand
-- Fee Paying Student Visa has clear eligibility and funds requirements and can be promoted after exact-route review.
+- Fee Paying Student Visa has clear eligibility and funds requirements and is now promoted at exact-route scope.
 - Skilled residence has multiple pathways and route-specific wage/work-experience rules; the generic `NZ-skilled` label requires narrowing before promotion.
+
+### Austria
+- The Red-White-Red Card is an umbrella family. Current evidence concerns the Other Key Workers sub-route, so the broader `AT-red-white-red` record remains unpromoted until its scope is narrowed.
+
+### Finland
+- The current evidence is specifically for the employed-person (TTOL) residence permit. The pathway record has therefore been narrowed to that exact route before publication.
+
+### Norway
+- The current new evidence is specifically for higher-education study permits and documents the 2026 maintenance requirement. `NO-study` should be narrowed/updated to higher-education scope before promotion rather than implying every study-permit category.
 
 ### Ireland
 - Study finance differs by course duration and visa-required vs non-visa-required applicant process.
@@ -81,15 +100,15 @@ A pathway may move from `research_required` to `publishable` only when:
 
 Prioritize pathways with the highest product value and highest legal ambiguity:
 
-1. CA Study Permit — attach evidence IDs and preserve Quebec distinction.
+1. NO Study — narrow/update the record to higher-education study before promotion.
 2. CA Express Entry — split/qualify CEC, FSWP and FSTP rather than presenting one undifferentiated route.
-3. AU Student — confirm exact Subclass 500 scope and attach evidence IDs.
-4. NZ Student — confirm exact Fee Paying Student scope and attach evidence IDs.
-5. NZ Skilled — narrow the generic label to a specific SMC/work-to-residence class before promotion.
-6. AU Skilled — identify exact skilled-visa class before promotion.
-7. SE Work/Study — complete material coverage and applicant-specific conditions.
-8. FI Work/Study — convert existing evidence into complete material coverage.
-9. NO Work/Study — complete financial/eligibility coverage and distinguish employer/job-offer requirements.
+3. AU Skilled — identify exact skilled-visa class before promotion.
+4. NZ Skilled — narrow the generic label to a specific SMC/work-to-residence class before promotion.
+5. AT Red-White-Red — narrow to Other Key Workers or add evidence covering the other intended sub-routes.
+6. SE Work — complete exact-route material coverage.
+7. FI Study — complete material coverage.
+8. NO Work — complete financial/eligibility coverage and distinguish employer/job-offer requirements.
+9. IT Study/Work and JP Student/Engineer — continue primary-source batches with exact route semantics.
 
 ## Critical distinction
 
