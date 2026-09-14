@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": [
+    {
+      "id": "AU-189-eligibility-2026-09-14",
+      "countryId": "AU",
+      "pathwayId": "AU-skilled",
+      "field": "eligibility",
+      "claim": "The Skilled Independent visa (subclass 189), Points-tested stream, is an exact skilled-migration route within Australia's broader skilled visa family. Applicants submit an Expression of Interest before invitation, must nominate an occupation available to the visa, provide English-test and skills-assessment information, and must meet or exceed the 65-point threshold to be eligible for invitation; reaching 65 points does not guarantee an invitation.",
+      "sourceAuthority": "Australian Department of Home Affairs",
+      "sourceUrl": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/expression-of-interest",
+      "jurisdiction": "Australia",
+      "effectiveDate": "2026-09-14",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current Department of Home Affairs SkillSelect guidance. Evidence is scoped to subclass 189 Points-tested processing and is not used to promote the broader AU-skilled umbrella.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "AU-189-process-2026-09-14",
+      "countryId": "AU",
+      "pathwayId": "AU-skilled",
+      "field": "process",
+      "claim": "For subclass 189, an applicant submits an Expression of Interest through SkillSelect, receives an invitation if selected, and then has 60 days from invitation to submit the visa application online through ImmiAccount. The occupation must be on the applicable skilled occupation list and the applicant must satisfy the visa requirements at application.",
+      "sourceAuthority": "Australian Department of Home Affairs",
+      "sourceUrl": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/expression-of-interest",
+      "jurisdiction": "Australia",
+      "effectiveDate": "2026-09-14",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of the current official EOI workflow; no invitation probability, processing time, or generalized approval-rate claim is inferred.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    }
+  ]
+}
