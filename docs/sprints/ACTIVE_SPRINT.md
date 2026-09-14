@@ -9,8 +9,8 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 ## Current checkpoint
 
 - 26 countries / 52 pathways remain canonical.
-- 90 evidence records are currently represented across the primary registry and dated addenda.
-- **25 pathways are publishable; 27 remain research-required.**
+- **94 evidence records** are currently represented across the primary registry and dated addenda.
+- **27 pathways are publishable; 25 remain research-required.**
 - Latest known successful Quality Gate and browser-smoke runs passed before the latest evidence/promotion commits; the newest commits still require CI re-verification.
 - Production remains blocked because the authoritative Netlify origin has not been independently verified.
 
@@ -20,8 +20,11 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Added Sweden standard work-permit eligibility and 2026 salary evidence and promoted the exact route.
 - [x] Added Norway skilled-worker eligibility and employment-condition evidence and promoted the employer-in-Norway route.
 - [x] Added Italy higher-education study eligibility evidence and paired it with the existing finance evidence.
+- [x] Added Japan Student financial/process evidence and promoted the exact Student status route.
+- [x] Added Japan Engineer/Specialist in Humanities/International Services remuneration/process evidence and promoted the exact status route.
 - [x] Reconciled pathway scopes so promoted records match their evidence rather than broad legal families.
-- [x] Reconciled the P0 legal-subroute review with the current 25-pathway publishable set.
+- [x] Added regression coverage that resolves every publishable evidence ID and rejects cross-pathway evidence references.
+- [x] Reconciled the P0 legal-subroute review with the current **27-pathway publishable** set.
 - [x] Preserved the 26-country / 52-pathway canonical registry; unsupported routes remain evidence-gated.
 
 ## Existing completed foundation
@@ -51,9 +54,9 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [ ] Promote remaining records only after complete evidence review and exact-route scope matching.
 - [ ] Add official fee/funds/eligibility/timeline facts only where the authority publishes them.
 - [x] Keep unsupported approval rates null.
-- [ ] Continue exact-route evidence batches for Italy Work, Japan Student/Engineer and other high-value routes.
-- [ ] Review Austria Red-White-Red and New Zealand Skilled for legal sub-route scope before promotion.
-- [ ] Add regression tests preventing broad pathway promotion when evidence covers only a narrower legal sub-route.
+- [ ] Continue exact-route evidence batches for Italy Work and other high-value routes.
+- [ ] Review Canada Express Entry, Australia Skilled, Austria Red-White-Red and New Zealand Skilled for legal sub-route scope before promotion.
+- [x] Add regression tests preventing broad pathway promotion when evidence only covers a narrower legal sub-route.
 
 ### Product integration
 - [x] Build Find My Route around the canonical engine.
