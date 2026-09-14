@@ -20,7 +20,8 @@
       "name": "Skilled Migrant Category — Skilled Work Experience pathway",
       "status": "research_required",
       "evidenceIds": ["NZ-smc-skilled-work-experience-eligibility-2026-09-14", "NZ-smc-skilled-work-experience-finance-2026-09-14", "NZ-smc-skilled-work-experience-process-2026-09-14"],
-      "scopeNote": "Exact child route. Requires final occupation/exception validation and full promotion-gate testing before canonicalization.",
+      "missingMaterialFields": ["occupation-exception-matrix", "promotion-validation"],
+      "scopeNote": "Exact child route. Core evidence is present; final occupation/exception validation and full promotion-gate testing remain open.",
       "subrouteId": "NZ-smc-skilled-work-experience"
     },
     {
@@ -30,7 +31,8 @@
       "name": "Skilled Migrant Category — Trades and Technician pathway",
       "status": "research_required",
       "evidenceIds": ["NZ-smc-trades-technician-eligibility-2026-09-14", "NZ-smc-trades-technician-finance-2026-09-14", "NZ-smc-trades-technician-process-2026-09-14"],
-      "scopeNote": "Exact child route. Requires final eligible-occupation and qualification matrix validation before canonicalization.",
+      "missingMaterialFields": ["eligible-occupation-matrix", "qualification-exception-matrix", "promotion-validation"],
+      "scopeNote": "Exact child route. Core evidence is present; final eligible-occupation/qualification validation and full promotion-gate testing remain open.",
       "subrouteId": "NZ-smc-trades-technician"
     },
     {
@@ -40,7 +42,8 @@
       "name": "Red-White-Red Card — Other Key Workers",
       "status": "research_required",
       "evidenceIds": ["AT-rwr-other-key-workers-eligibility-exact-2026-09-14", "AT-rwr-other-key-workers-financial-2026-09-14", "AT-rwr-other-key-workers-process-exact-2026-09-14"],
-      "scopeNote": "Exact sub-route candidate; do not treat evidence as proof for other Red-White-Red categories.",
+      "missingMaterialFields": ["application-document-matrix", "points-validation"],
+      "scopeNote": "Exact sub-route candidate; final application-document and points validation remain open.",
       "subrouteId": "AT-rwr-other-key-workers"
     },
     {
@@ -50,7 +53,8 @@
       "name": "2026 non-seasonal subordinate work — Flussi route",
       "status": "research_required",
       "evidenceIds": ["IT-flussi-2026-nonseasonal-subordinate-eligibility-2026-09-14", "IT-flussi-2026-non-seasonal-subordinate-financial-2026-09-14", "IT-flussi-2026-non-seasonal-subordinate-process-exact-2026-09-14"],
-      "scopeNote": "Temporal 2026 quota/process candidate; employer nulla-osta, sector/country quota treatment and applicant-side evidence remain separate promotion gates.",
+      "missingMaterialFields": ["employer-nulla-osta-matrix", "sector-country-quota-matrix", "compensation-documentary-matrix", "applicant-evidence-matrix"],
+      "scopeNote": "Temporal 2026 quota/process candidate; employer nulla-osta, sector/country quota treatment, compensation and applicant-side evidence remain separate promotion gates.",
       "subrouteId": "IT-flussi-2026-non-seasonal-subordinate"
     },
     {
@@ -59,8 +63,9 @@
       "parentPathwayId": "NZ-skilled",
       "name": "Skilled Migrant Category — Points-based pathway",
       "status": "research_required",
-      "evidenceIds": [],
-      "scopeNote": "Canonical child-route candidate identified by current SMC architecture; full current eligibility, financial and process evidence remains to be collected before promotion.",
+      "evidenceIds": ["NZ-smc-points-based-eligibility-2026-09-14", "NZ-smc-points-based-financial-2026-09-14", "NZ-smc-points-based-process-2026-09-14"],
+      "missingMaterialFields": ["occupation-registration-matrix", "qualification-exception-matrix", "points-regression-tests", "promotion-validation"],
+      "scopeNote": "Exact child-route candidate with current eligibility, financial/wage and process evidence. Promotion remains blocked until point-composition, occupation/registration and qualification exception validation is implemented and tested.",
       "subrouteId": "NZ-smc-points-based"
     }
   ]
