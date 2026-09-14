@@ -10,9 +10,9 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 
 - 26 countries / 52 pathways remain canonical.
 - **28 pathways are now publishable; 24 remain research-required.**
-- The evidence tree now contains **100 field-level records** across the primary registry and dated addenda.
-- Canada Express Entry was narrowed to the exact **Federal Skilled Worker Program** route and promoted only after matching primary-source evidence was staged and its evidence records were corrected to the canonical pathway id.
-- New Zealand SMC scope has been refreshed: the current authority distinguishes three pathways (Points-based, Skilled Work Experience, Trades and Technician), so the generic `NZ-skilled` record remains research-required.
+- New exact-route evidence is now staged for Australia subclass 189, New Zealand SMC Skilled Work Experience and Trades and Technician, Austria Other Key Workers, and Italy 2026 non-seasonal subordinate work.
+- Those candidates remain research-required until the canonical pathway model can represent the legal scope and all material fields are complete.
+- Canada remains promoted as exact **Federal Skilled Worker Program**; both evidence records use the canonical pathway id.
 - Latest commits still require fresh CI verification; no unreported green status is assumed.
 - Production remains blocked because the authoritative Netlify origin has not been independently verified.
 
@@ -25,20 +25,43 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Corrected both Canada FSWP evidence records to reference the canonical `CA-federal-skilled-worker` pathway id.
 - [x] Promoted Canada FSWP only after pathway/evidence scope alignment.
 - [x] Added current New Zealand SMC scope/policy evidence without promoting the umbrella route.
-- [x] Reconciled release verification, sprint checkpoint and P0 legal-subroute docs to the 28/24 state.
+- [x] Added Australia subclass 189 eligibility/process evidence without promoting `AU-skilled`.
+- [x] Added New Zealand exact SMC pathway evidence for Skilled Work Experience and Trades and Technician without promoting `NZ-skilled`.
+- [x] Added Austria Other Key Workers evidence without promoting the full RWR family.
+- [x] Added Italy 2026 non-seasonal subordinate-work/Flussi evidence without promoting the broad Italy work umbrella.
+- [x] Added an exact-route candidate register to make legal sub-route boundaries explicit.
+- [x] Reconciled P0 legal-subroute review documentation to the new candidate wave.
 - [x] Regression coverage rejects cross-pathway evidence and requires material evidence for publishable routes.
 
-## P0 remaining
+## P0 remaining — execution order
 
-### Evidence / pathway architecture
-- [ ] New Zealand Skilled — split the umbrella into exact SMC pathway records, starting with Skilled Work Experience and/or Trades and Technician; model the August 24, 2026 rules without collapsing distinct routes. 
-- [ ] Australia Skilled — select an exact skilled visa class; the official program is explicitly a family of temporary, provisional and permanent skilled visas, so the umbrella cannot be promoted safely.
-- [ ] Austria Red-White-Red — select an exact sub-route.
-- [ ] Italy Work — select an exact work authorization class.
-- [ ] Continue remaining country evidence batches.
+### 1. Australia subclass 189
+- [ ] Add the remaining material route fields required by the application schema, especially financial/material application evidence where applicable.
+- [ ] Validate occupation-list and route-specific evidence against the current source set.
+- [ ] Promote only if every material field is covered and the route label is exact.
+
+### 2. New Zealand SMC route architecture
+- [ ] Add explicit sub-route identifiers for Points-based, Skilled Work Experience, and Trades and Technician without increasing the canonical country/pathway count incorrectly.
+- [ ] Move the new route-specific evidence from umbrella semantics to the explicit sub-route model.
+- [ ] Keep red/amber occupation rules and 24 August 2026 transitional treatment explicit.
+- [ ] Promote each sub-route independently only after its own material evidence gate passes.
+
+### 3. Austria Other Key Workers
+- [ ] Complete missing material fields for the exact RWR sub-route.
+- [ ] Keep 2026 remuneration thresholds dated and reviewable.
+- [ ] Promote only the Other Key Workers route, never the full RWR umbrella.
+
+### 4. Italy 2026 non-seasonal subordinate work
+- [ ] Add employer-side/nulla-osta and applicant-side material requirements from authoritative sources.
+- [ ] Keep 2026 quota and click-day dates explicitly temporal.
+- [ ] Do not generalize Flussi into all Italian work authorization.
+
+### 5. Remaining research-required countries
+- [ ] Apply the same exact-route audit to LU Study first, then remaining country work/study umbrellas.
+- [ ] Preserve unsupported fields as null rather than inventing values.
 
 ### Quality / production
-- [ ] Re-run Quality Gate after the latest evidence correction/addendum.
+- [ ] Re-run Quality Gate after the latest evidence/addenda wave.
 - [ ] Re-run lint, build and browser smoke.
 - [ ] Identify authoritative Netlify site/project and hostname; do not guess.
 - [ ] Run deployed-site verification against the verified origin.
