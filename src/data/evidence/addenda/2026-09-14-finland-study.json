@@ -6,22 +6,30 @@
       "countryId": "FI",
       "pathwayId": "FI-study",
       "field": "eligibility",
-      "value": "Applicants for a Finnish residence permit for studies must have been accepted by a Finnish educational institution; eligible studies generally lead to a degree or vocational qualification, with exchange study also covered. The studies must require residence in Finland rather than mainly being online distance learning.",
+      "claim": "Applicants for a Finnish residence permit for studies must have been accepted by a Finnish educational institution; eligible studies generally lead to a degree or vocational qualification, with exchange study also covered. The studies must require residence in Finland rather than mainly being online distance learning.",
       "sourceUrl": "https://migri.fi/residence-permit-application-for-studies",
       "sourceAuthority": "Finnish Immigration Service (Migri)",
+      "jurisdiction": "Finland",
+      "effectiveDate": "2026-09-14",
       "retrievedAt": "2026-09-14",
-      "confidence": "high"
+      "methodology": "Direct review of current Finnish Immigration Service study residence-permit guidance; route-scoped to FI-study.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
     },
     {
       "id": "FI-study-finance-2026-09-14",
       "countryId": "FI",
       "pathwayId": "FI-study",
       "field": "financial-requirement",
-      "value": "Applicants must have at least EUR 800 available per month for living costs; for a one-year permit this means EUR 9,600 in the applicant's bank account when applying, in addition to funds needed for unpaid tuition fees where applicable.",
-      "sourceUrl": "https://migri.fi/residence-permit-application-for-studies",
+      "claim": "Applicants for a first Finnish study residence permit need at least EUR 800 per month for living costs; for studies lasting at least one year, the guidance states EUR 9,600 must be available when applying, in addition to funds needed for unpaid tuition fees where applicable.",
+      "sourceUrl": "https://migri.fi/en/income-requirement-for-students",
       "sourceAuthority": "Finnish Immigration Service (Migri)",
+      "jurisdiction": "Finland",
+      "effectiveDate": "2026-09-14",
       "retrievedAt": "2026-09-14",
-      "confidence": "high"
+      "methodology": "Direct review of current Finnish Immigration Service student income-requirement guidance; route-scoped to FI-study and does not infer tuition costs.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
     }
   ]
 }
