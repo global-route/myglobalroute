@@ -7,10 +7,11 @@
 - 26 countries / 52 pathway records remain the canonical migration registry.
 - The evidence model requires field-level primary-source support before publication.
 - **27 pathways are now promoted to `publishable` with explicit `evidenceIds`; 25 remain `research_required`.**
-- The evidence tree now contains **94 records** across the primary registry and dated addenda.
+- The evidence tree now contains **96 records** across the primary registry and dated addenda.
 - The latest continuation wave promoted Japan Student and Japan Engineer/Specialist in Humanities/International Services only after exact-route evidence coverage.
 - Japan Student financial evidence is recorded as documentary proof of ability to cover expenses rather than an invented universal yen threshold.
 - Japan Engineer financial evidence records the official remuneration-pay-parity rule rather than inventing a universal salary floor.
+- Current Canada Federal Skilled Worker Program eligibility and proof-of-funds evidence is staged, but the canonical pathway remains unpromoted until its source/name scope is changed from the Express Entry umbrella to FSWP.
 - The pathway policy explicitly requires pathway-record scope to match evidence scope.
 - Regression coverage now resolves every publishable evidence ID, enforces country/pathway scope equality, and checks material-field completeness.
 - A manual production-smoke workflow requires an explicitly supplied authoritative `production_url` and does not guess the hostname.
@@ -31,7 +32,7 @@
 - **Data completeness:** NOT COMPLETE — 27 publishable pathways, 25 still research-required.
 
 ## Remaining release blockers
-1. Reconcile the P0 legal-subroute review and active checkpoint with the new 27-pathway publishable set.
+1. Transition the staged Canada FSWP candidate by narrowing the pathway record before attaching its evidence IDs.
 2. Continue primary-source evidence batches for the remaining research-required pathways.
 3. Establish the authoritative Netlify site/project and deployed hostname; do not use historical `*.netlify.app` documentation as proof.
 4. Run deployed-site verification against that verified origin.
