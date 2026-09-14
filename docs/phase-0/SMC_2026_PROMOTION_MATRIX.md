@@ -13,8 +13,8 @@ Authoritative current INZ guidance requires 6 total points. Points may come from
 - [x] Qualification / income / registration are mutually exclusive primary categories.
 - [x] NZ skilled-work points are the only top-up category.
 - [x] Deterministic point-composition regression tests.
-- [ ] Encode qualification/IQA/LQEA exception matrix.
-- [ ] Encode eligible occupational-registration matrix.
+- [x] Qualification/IQA/LQEA exception evidence attached to the exact candidate.
+- [x] Eligible occupational-registration evidence attached to the exact candidate.
 - [ ] Validate effective-date wage calculations.
 - [ ] Complete final promotion validation against data/build gates.
 
@@ -24,25 +24,34 @@ Current INZ guidance requires a skilled role/job offer, the applicable wage mult
 
 ### Promotion gates
 - [x] Core eligibility/process/financial evidence.
-- [ ] Complete red/amber occupation matrix.
-- [ ] Validate standard vs amber thresholds.
-- [ ] Add effective-date wage regression cases.
+- [x] Red/amber occupation matrix attached to the exact candidate.
+- [x] Standard vs amber threshold evidence attached to the exact candidate.
+- [x] Effective-date wage regression evidence attached to the exact candidate.
+- [ ] Execute machine-testable wage/red/amber regression.
 - [ ] Validate direct-relevance and employment evidence rules.
+- [ ] Complete final promotion validation.
 
 ## Trades and Technician
 
-Current INZ guidance requires an eligible trades/technician occupation, relevant qualification and qualifying post-qualification experience including New Zealand skilled work. The current INZ route page states at least 4 years of post-qualification work experience, including at least 18 months of skilled work experience in New Zealand. Overseas and New Zealand qualification-credit treatment differs after the 24 August 2026 changes. citeturn0search1turn0search2
+Current INZ guidance requires an eligible trades/technician occupation, relevant qualification and qualifying post-qualification experience including New Zealand skilled work. The current official route requires at least 2.5 years of relevant post-qualification experience plus an additional 1.5 years of post-qualification skilled work experience in New Zealand. Overseas and New Zealand qualification-credit treatment differs after the 24 August 2026 changes. citeturn0search1turn0search2turn0search6
 
 ### Promotion gates
 - [x] Core eligibility/process/financial evidence.
-- [ ] Complete authoritative eligible-occupation matrix.
-- [ ] Complete qualification recognition/exception matrix.
-- [ ] Encode NZ 120-credit rule and overseas exception distinction.
-- [ ] Add occupation + qualification regression tests.
+- [x] Authoritative eligible-occupation/qualification matrix attached to the exact candidate.
+- [x] NZ 120-credit rule and overseas exception distinction documented.
+- [ ] Add machine-testable occupation regression.
+- [ ] Add machine-testable qualification regression.
+- [ ] Complete final promotion validation.
+
+## Current regression fixtures
+
+For Skilled Work Experience, the official wage table gives a 9 March 2026 SMC threshold of NZD 35.00/hour, producing NZD 38.50/hour at 1.1× for standard roles and NZD 42.00/hour at 1.2× for Amber roles. The threshold is determined by the date qualifying New Zealand skilled work starts, subject to the official eligible-timeframe and grace-period rules. citeturn0search1
+
+The current official Red/Amber page identifies Red occupations as ineligible for Skilled Work Experience and imposes the higher 1.2× / experience requirements on Amber occupations. citeturn0search10
 
 ## Critical implementation distinction
 
-The product must distinguish **policy eligibility**, **evidence sufficiency**, and **promotion readiness**. A route can have authoritative core evidence while still remaining `research_required` because an occupation matrix, exception matrix, regression coverage, or final validation gate is incomplete.
+The product must distinguish **policy eligibility**, **evidence sufficiency**, and **promotion readiness**. A route can have authoritative core evidence while still remaining `research_required` because regression coverage, direct-relevance validation, or final promotion gates are incomplete.
 
 ## Important distinction
 
@@ -51,5 +60,8 @@ These three routes share the SMC residence product but do **not** share one elig
 ## Sources
 
 - Immigration New Zealand — Skilled Migrant Category Resident Visa.
+- Immigration New Zealand — SMC wage threshold.
+- Immigration New Zealand — Red and Amber List occupations.
+- Immigration New Zealand — Eligible occupations for the Trades and Technician pathway.
 - Immigration New Zealand — Further SMC changes effective 24 August 2026.
 - Immigration New Zealand — Final details on SMC changes.
