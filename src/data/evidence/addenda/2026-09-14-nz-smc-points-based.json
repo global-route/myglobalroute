@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": [
+    {
+      "id": "NZ-smc-points-based-eligibility-2026-09-14",
+      "countryId": "NZ",
+      "pathwayId": "NZ-smc-points-based",
+      "field": "eligibility",
+      "claim": "The Skilled Migrant Category Points-based pathway requires 6 skilled resident points from one skill category (qualification, New Zealand occupational registration, or income) or a combination of one skill category and eligible skilled work experience in New Zealand. The principal applicant must be 55 or younger and meet the common SMC requirements including skilled employment, English, health and character requirements.",
+      "sourceAuthority": "Immigration New Zealand",
+      "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-08-24",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current Immigration New Zealand SMC guidance and operational instructions. Evidence is scoped to the Points-based child route and does not promote the parent NZ-skilled umbrella or the other SMC child routes.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "NZ-smc-points-based-financial-requirement-2026-09-14",
+      "countryId": "NZ",
+      "pathwayId": "NZ-smc-points-based",
+      "field": "financial-requirement",
+      "claim": "The Points-based SMC pathway uses employment pay as one possible points category and requires skilled employment or a job offer meeting the applicable SMC wage settings. Current Immigration New Zealand guidance specifies income-point thresholds at 1.5, 2 and 3 times the SMC wage threshold; the current live SMC page displays NZD 35 per hour as the base threshold, subject to the applicable pathway and effective-date rules.",
+      "sourceAuthority": "Immigration New Zealand",
+      "sourceUrl": "https://www.immigration.govt.nz/opsmanual/80474.htm",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-08-24",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current operational instructions and live SMC guidance. This record treats wage eligibility as the route's material financial criterion and does not invent a separate proof-of-funds requirement.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "NZ-smc-points-based-process-2026-09-14",
+      "countryId": "NZ",
+      "pathwayId": "NZ-smc-points-based",
+      "field": "process",
+      "claim": "Applicants use the Skilled Migrant Category Expression of Interest process and, if invited, apply under the Points-based pathway for which they were invited. Applicants must provide evidence supporting the points claimed and satisfy the residence application requirements in force for the selected pathway.",
+      "sourceAuthority": "Immigration New Zealand",
+      "sourceUrl": "https://www.immigration.govt.nz/opsmanual/77811.htm",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-08-24",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current SMC operational instructions and application guidance; transitional rules are retained where an invitation predates 24 August 2026.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    }
+  ]
+}
