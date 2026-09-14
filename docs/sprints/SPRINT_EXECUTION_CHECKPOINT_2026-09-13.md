@@ -6,12 +6,12 @@ Drive the Production Integrity & Intelligence Core sprint toward closure without
 ## Current checkpoint
 
 - Canonical registry remains **26 countries / 52 pathways**.
-- **96 evidence records** are represented across the primary registry and dated addenda.
-- **27 pathways are publishable; 25 remain research-required.**
+- **98 evidence records** are represented across the primary registry and dated addenda after the Canada FSWP evidence addition.
+- **28 pathways are publishable; 24 remain research-required.**
 - The latest continuation wave added exact-route evidence for Japan Student and Japan Engineer/Specialist in Humanities/International Services and promoted both routes.
-- A Canada Federal Skilled Worker Program evidence batch is now staged against the existing `CA-express-entry` record; the pathway remains unpromoted until its legal scope is changed from the Express Entry umbrella to FSWP.
+- Canada Federal Skilled Worker Program is now the canonical `CA-federal-skilled-worker` route, with its two staged evidence records corrected to reference the exact canonical pathway id.
 - Pathway records remain narrowed where needed so evidence scope matches product scope.
-- The P0 legal-subroute review is reconciled to the current 27-pathway publishable set.
+- The P0 legal-subroute review is reconciled to the current 28-pathway publishable set.
 - Previous Quality Gate, browser smoke and lint runs were successful, but the newest commits require fresh CI verification.
 - Production remains blocked until an authoritative Netlify origin is independently verified.
 
@@ -24,16 +24,16 @@ Drive the Production Integrity & Intelligence Core sprint toward closure without
 - Italy Higher-Education Study Visa is promoted with eligibility evidence paired with existing financial evidence.
 - Japan Student is promoted with official eligibility and financial evidence; the financial claim is deliberately documentary rather than an invented fixed yen threshold.
 - Japan Engineer/Specialist in Humanities/International Services is promoted with official eligibility and remuneration-parity evidence; no invented universal salary floor is used.
-- Canada FSWP eligibility and proof-of-funds evidence is staged from current IRCC primary sources, with the umbrella-vs-subroute distinction preserved.
-- Regression tests now load dated evidence addenda, require every publishable evidence ID to resolve, enforce country/pathway scope equality, and require all material fields for publishable routes.
+- Canada FSWP eligibility and proof-of-funds evidence is promoted at exact-route scope; the evidence records now reference `CA-federal-skilled-worker` rather than the retired umbrella id.
+- Regression tests load dated evidence addenda, require every publishable evidence ID to resolve, enforce country/pathway scope equality, and require all material fields for publishable routes.
 - Evidence records remain field-level and dated; no unsupported approval rates, generalized costs or timeless salary claims are introduced.
 - The canonical 26-country / 52-pathway blueprint remains intact; unsupported pathways remain `research_required`.
 
 ## Remaining P0 closure sequence
 
-1. **Canada scope transition:** rename/narrow `CA-express-entry` to the Federal Skilled Worker Program and attach the staged exact-route evidence only after pathway-source scope is updated.
-2. **Evidence promotion:** continue exact-route batches for Italy Work and other high-value routes.
-3. **Legal sub-route review:** narrow or split generic records such as AU Skilled, NZ Skilled and AT Red-White-Red before promotion.
+1. **Evidence promotion:** continue exact-route batches for Italy Work and other high-value routes.
+2. **Legal sub-route review:** narrow or split generic records such as AU Skilled, NZ Skilled and AT Red-White-Red before promotion.
+3. **New Zealand:** model the 24 August 2026 Skilled Migrant Category changes at exact pathway scope; do not collapse the Points-based, Skilled Work Experience and Trades and Technician pathways into one record.
 4. **CI:** re-run Quality Gate, lint, build verification and browser smoke against the latest commits.
 5. **Deployment:** identify the authoritative Netlify site and hostname. Historical names are not accepted as evidence.
 6. **Production smoke:** run `npm run deploy:verify` against the verified origin and retain the result as release evidence.
