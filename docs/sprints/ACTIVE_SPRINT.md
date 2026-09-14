@@ -18,7 +18,8 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - Austria Other Key Workers has a dedicated application/evidence matrix; points regression and final authority/process validation remain open.
 - Italy 2026 Flussi has a dedicated promotion matrix; employer/nulla-osta, sector/country, compensation and applicant evidence remain open.
 - No umbrella route has been promoted from narrower evidence.
-- Current `main` head is now the latest sprint reconciliation commit; GitHub Actions are running/queued for the recent push and are not yet green.
+- A quality run on the previous head exposed real data-integrity issues: duplicate/superseded evidence batches, exact-subroute IDs not accepted by the validator, and a missing canonical CA-study eligibility record. Those issues have now been remediated in the current tree; fresh CI verification is required before marking the gate green.
+- Current `main` head is `a91b5f47b69455f8fbcc3b18babc5acefe580049`; fresh workflow results for this head are not yet available.
 - Production remains blocked until the authoritative Netlify origin is independently verified.
 
 ## P0 delivery sprint map
@@ -36,6 +37,9 @@ The remaining work is now organized into bounded delivery sprints. Independent w
 - [x] NZ Skilled Work Experience executable Red/Amber + wage effective-date regression.
 - [x] NZ Skilled Work Experience direct-relevance regression guard.
 - [x] NZ Trades & Technician machine-testable occupation/qualification regression.
+- [x] Data validator now recognizes exact subroute evidence scopes.
+- [x] Superseded duplicate evidence batches removed from the active evidence registry.
+- [x] Missing CA-study eligibility evidence restored with current Government of Canada source scope.
 - [ ] Australia 189 visa-specific financial/material verification.
 - [ ] NZ Points-based final promotion validation.
 - [ ] NZ Skilled Work Experience final promotion validation.
@@ -99,6 +103,8 @@ The remaining work is now organized into bounded delivery sprints. Independent w
 - [x] Added explicit wage/qualification fixture assertions to reject stale or generalized SMC rules.
 - [x] Closed the Trades & Technician occupation/qualification regression items from the candidate's material-gap list while retaining final promotion validation as a separate gate.
 - [x] Added authoritative Skilled Work Experience direct-relevance/self-employment evidence and regression coverage; removed direct-relevance from that candidate's missing-material gate.
+- [x] Diagnosed and fixed the quality-gate data-validation failure caused by superseded duplicate evidence batches and unsupported exact-subroute scopes.
+- [x] Restored missing CA-study eligibility evidence rather than weakening the publishable-pathway gate.
 - [x] Made candidate material gaps explicit and strengthened regression coverage so missing fields cannot silently masquerade as complete evidence.
 - [x] Preserved conservative recommendation behavior: research-required subroutes remain non-recommendable until promoted.
 
