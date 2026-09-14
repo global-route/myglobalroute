@@ -7,12 +7,12 @@
 - 26 countries / 52 pathway records remain the canonical migration registry.
 - The evidence model requires field-level primary-source support before publication.
 - **28 pathways are publishable; 24 remain research-required.**
-- A dedicated exact-subroute registry now models narrower legal routes without corrupting the canonical 52-pathway count.
-- Candidate evidence now resolves to exact subroute IDs rather than inheriting parent-pathway evidence.
+- A dedicated exact-subroute registry models narrower legal routes without corrupting the canonical 52-pathway count.
+- Candidate evidence resolves to exact subroute IDs rather than inheriting parent-pathway evidence.
 - Australia subclass 189 has exact eligibility/process evidence and an explicit financial-verification gap; it remains research_required.
-- New Zealand SMC Skilled Work Experience and Trades & Technician have exact eligibility, wage/financial and process evidence; Points-based is represented but still awaits its own evidence set.
-- Austria Other Key Workers has exact eligibility, remuneration and process evidence and remains research_required pending final material validation.
-- Italy 2026 non-seasonal subordinate work has exact annual quota/process evidence and an explicit financial-evidence gap; employer nulla-osta and applicant-side requirements remain separate gates.
+- New Zealand SMC now has exact eligibility, wage/financial and process evidence for Points-based, Skilled Work Experience and Trades & Technician; final occupation/qualification/exception validation remains open.
+- Austria Other Key Workers has exact eligibility, remuneration and process evidence and remains research_required pending final material/application validation.
+- Italy 2026 non-seasonal subordinate work has exact annual quota/process evidence and conservative financial evidence; employer nulla-osta, eligible sector/country treatment and compensation/documentary validation remain separate gates.
 - New Zealand route modeling preserves the distinction between Points-based, Skilled Work Experience, and Trades and Technician pathways and the 24 August 2026 policy changes.
 - No broad canonical pathway has been promoted using narrower child-route evidence.
 - Regression coverage validates the canonical registry, candidate registry and exact-subroute evidence boundaries.
@@ -34,9 +34,9 @@
 
 ## Remaining release blockers
 1. Complete Australia subclass 189 visa-specific financial/material verification before any promotion decision.
-2. Complete New Zealand Points-based evidence and final occupation/exception validation across all SMC child routes.
+2. Complete New Zealand occupation, qualification and exception validation across the three SMC child routes before promotion.
 3. Complete Austria Other Key Workers final application/evidence matrix before promotion.
-4. Complete Italy employer/nulla-osta, eligible sector/country treatment and applicant-side evidence; preserve annual quota scope.
+4. Complete Italy employer/nulla-osta, eligible sector/country treatment, compensation/documentary and applicant-side evidence; preserve annual quota scope.
 5. Continue exact-route evidence batches for the remaining research-required pathways, prioritizing legal scope over breadth.
 6. Establish the authoritative Netlify site/project and deployed hostname; do not use historical `*.netlify.app` documentation as proof.
 7. Run deployed-site verification against that verified origin.
