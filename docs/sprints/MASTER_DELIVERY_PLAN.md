@@ -9,12 +9,25 @@ This is the master delivery sequence for the remaining lifecycle. It preserves t
 ## Delivery rules
 
 1. Execute the current phase before advancing its exit gate.
-2. Sprints may contain concurrent workstreams, but evidence, legal-data, security and production gates remain sequential where required.
-3. A task is complete only when implementation, documentation and verification are complete.
-4. A blocked task is never silently marked complete; record the blocker and carry it forward.
-5. P0/P1/P2 describe priority, not phase number.
-6. P1/P2 work may be planned early but must not displace unresolved P0 release blockers.
-7. Preserve the original Global Route blueprint: country → pathway → evidence → cost/timing → recommendation → next action.
+2. **Sprint counts are intentionally variable by phase.** A phase receives as many sprints as its actual complexity, dependency structure and verification burden require; there is no artificial fixed sprint count per phase.
+3. Sprints may contain concurrent workstreams, but evidence, legal-data, security and production gates remain sequential where required.
+4. A task is complete only when implementation, documentation and verification are complete.
+5. A blocked task is never silently marked complete; record the blocker and carry it forward.
+6. P0/P1/P2 describe priority, not phase number.
+7. P1/P2 work may be planned early but must not displace unresolved P0 release blockers.
+8. Preserve the original Global Route blueprint: country → pathway → evidence → cost/timing → recommendation → next action.
+
+## Sprint-sizing rationale
+
+- **Phase 0 — 5 sprints:** highest immediate complexity because data closure, recommendation safety, browser release checks and real production verification are separate gates.
+- **Phase 1 — 4 sprints:** evidence foundation can be closed through audit, normalization, freshness controls and one foundation exit audit.
+- **Phase 2 — 4 sprints:** product-core work naturally separates explanation, comparison, recommendation hardening and release audit.
+- **Phase 3 — 4 sprints:** editorial trust, programmatic SEO, high-intent discovery and acquisition measurement are distinct workstreams.
+- **Phase 4 — 4 sprints:** privacy, accessibility, security and compliance each require independent verification.
+- **Phase 5 — 4 sprints:** retention, partnerships, monetization and growth measurement have different implementation and governance gates.
+- **Phase 6 — 5 sprints:** scale adds personalization, policy intelligence, premium intelligence, B2B/API and a final platform audit; these are materially broader and should not be compressed merely to match earlier phases.
+
+The plan can gain additional sprints if a phase discovers material work that cannot safely fit an existing sprint. It can also close earlier if all of its gates are genuinely satisfied. Sprint count is a delivery-control mechanism, not a target.
 
 ---
 
@@ -22,13 +35,15 @@ This is the master delivery sequence for the remaining lifecycle. It preserves t
 
 **Current phase.** Goal: establish a trustworthy, reproducible and deployable production baseline.
 
-### Sprint P0-S1 — Exact Pathway Closure
+### Sprint P0-S1 — Exact Pathway Closure — ACTIVE
 - AU-189 financial/material verification
 - NZ Points final promotion validation
 - NZ Skilled Work Experience red/amber + wage/evidence regression
 - NZ Trades & Technician occupation/qualification matrix + regression
 - Austria Other Key Workers document/points/promotion validation
 - Italy 2026 Flussi employer/quota/compensation/applicant evidence matrices
+
+**Checkpoint:** NZ Skilled Work Experience and Trades & Technician route matrices are now documented from current INZ instructions. Machine-testable occupation/wage regressions and final promotion validation remain open. AU-189 remains blocked on the explicit financial/material gap; Austria and Italy remain on their documented promotion gates.
 
 **Exit:** every promoted exact route passes exact-scope evidence gates; unresolved routes remain research-required.
 
