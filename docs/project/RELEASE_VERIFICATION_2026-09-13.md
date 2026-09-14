@@ -1,7 +1,7 @@
 # Release Verification — 2026-09-13 / continued 2026-09-14
 
 ## Current result
-**Release remains blocked, but the evidence-gated product core has advanced materially.** The repository has previously passed the Quality Gate, browser smoke and lint; the latest evidence/pathway/documentation commits require fresh verification. Deployment identity, final production verification and repository hardening still prevent release closure.
+**Release remains blocked, but the evidence-gated product core has advanced materially.** The repository has previously passed the Quality Gate, browser smoke and lint; the latest evidence/pathway/test/documentation commits require fresh verification. Deployment identity, final production verification and repository hardening still prevent release closure.
 
 ## Confirmed
 - 26 countries / 52 pathway records remain the canonical migration registry.
@@ -9,20 +9,19 @@
 - **28 pathways are now promoted to `publishable`; 24 remain `research_required`.**
 - Canada Federal Skilled Worker Program is attached to the canonical `CA-federal-skilled-worker` pathway id with exact-route eligibility and proof-of-funds evidence.
 - Exact-route evidence has now been staged for Australia subclass 189, New Zealand SMC Skilled Work Experience and Trades and Technician, Austria Other Key Workers, and Italy 2026 non-seasonal subordinate work.
-- These new candidates remain research-required; evidence staging does not itself constitute promotion.
-- New Zealand route evidence preserves the distinction between Points-based, Skilled Work Experience, and Trades and Technician pathways and the 24 August 2026 transitional rules.
+- A dedicated candidate registry keeps those exact routes outside the canonical 52-pathway count until they are fully representable and promoted.
+- New Zealand route modeling preserves the distinction between Points-based, Skilled Work Experience, and Trades and Technician pathways and the 24 August 2026 policy changes.
 - Australia subclass 189 evidence is explicitly scoped away from the broader skilled-migration family.
 - Austria Other Key Workers evidence is explicitly scoped away from the full Red-White-Red Card family.
 - Italy 2026 Flussi evidence is explicitly temporal and does not generalize to all Italian work authorization.
+- Regression coverage now validates the candidate registry and ensures research-stage candidates cannot masquerade as canonical publishable child routes.
 - The pathway policy explicitly requires pathway-record scope to match evidence scope.
-- Regression coverage resolves every publishable evidence ID, enforces country/pathway scope equality, and checks material-field completeness.
 - A manual production-smoke workflow requires an explicitly supplied authoritative `production_url` and does not guess the hostname.
 - Deployed-site verification discovers the deployed country/pathway registries and checks every generated country and pathway detail route.
 - Previous Playwright browser smoke passed all four core page tests.
 - Previous Quality Gate passed dependency audit, data validation, unit tests, Eleventy build, generated-output verification and SEO/accessibility smoke verification.
 - Previous lint run passed.
 - Repository hardening issue #2 tracks the currently unprotected `main` branch and GitHub's current `private: false` repository state; visibility has not been changed automatically.
-- P0 legal-subroute work now has an explicit candidate register and promotion gate.
 
 ## Current verification state
 - **Prior Repository Quality Gate:** PASS.
