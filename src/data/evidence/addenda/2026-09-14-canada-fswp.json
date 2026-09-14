@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": [
+    {
+      "id": "CA-fswp-eligibility-2026-09-14",
+      "countryId": "CA",
+      "pathwayId": "CA-express-entry",
+      "field": "eligibility",
+      "claim": "The Federal Skilled Worker Program is a skilled-worker permanent-residence program for applicants with qualifying foreign work experience; minimum requirements include eligible skilled work in NOC TEER 0, 1, 2 or 3, at least one year of continuous qualifying work experience (or 1,560 hours), approved language testing, and qualifying education with an Educational Credential Assessment where the education is foreign. Applicants must also meet the program's selection-factor threshold and admissibility rules.",
+      "sourceAuthority": "Immigration, Refugees and Citizenship Canada",
+      "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers.html",
+      "jurisdiction": "Canada",
+      "effectiveDate": "2026-06-22",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current Government of Canada Federal Skilled Worker Program eligibility guidance; route scope deliberately narrowed from the Express Entry umbrella to FSWP.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "CA-fswp-finance-2026-09-14",
+      "countryId": "CA",
+      "pathwayId": "CA-express-entry",
+      "field": "financial-requirement",
+      "claim": "Federal Skilled Worker Program applicants generally must show enough settlement funds for themselves and their family; proof of funds is not required where the applicant is currently legally able to work in Canada and has a valid Canadian job offer. The required amount depends on family size and is maintained by IRCC in its Express Entry proof-of-funds table.",
+      "sourceAuthority": "Immigration, Refugees and Citizenship Canada",
+      "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/proof-funds.html",
+      "jurisdiction": "Canada",
+      "effectiveDate": "2026-09-14",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current IRCC proof-of-funds guidance; numeric amounts are intentionally not copied into the pathway record so the source remains the authoritative live threshold table.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    }
+  ]
+}
