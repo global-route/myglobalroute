@@ -1,8 +1,8 @@
 # Global Route — Master Execution Roadmap
 
-**Version:** 2.3.0  
+**Version:** 2.4.0  
 **Status:** Active execution  
-**Reconciled:** September 12, 2026
+**Reconciled:** September 14, 2026
 
 > The original Global Route vision is preserved. Execution priority is corrected from the repository's actual state: production integrity and trustworthy migration intelligence precede content and growth scaling.
 
@@ -13,6 +13,8 @@
 The blog remains an acquisition/education layer. Country + pathway + evidence + cost + recommendation is the product core.
 
 ## Phase 0 — Production Integrity (P0)
+
+### Delivered foundations
 
 - [x] Correct Eleventy runtime data path.
 - [x] Restore root homepage/public passthrough generation.
@@ -27,14 +29,19 @@ The blog remains an acquisition/education layer. Country + pathway + evidence + 
 - [x] Add country/pathway/evidence data validation.
 - [x] Add unit/data/build verification commands and generated-output integrity checks.
 - [x] Add generated SEO/accessibility smoke gate to the verification pipeline.
-- [x] Execute the CI quality pipeline successfully: audit, data validation, tests, build, generated-output verification and core SEO/A11y smoke.
 - [x] Align Netlify build/deploy-preview/branch-deploy runtime configuration to Node 24.
-- [ ] Browser/E2E verification of generated routes.
-- [ ] Identify authoritative Netlify deployment and production hostname.
-- [ ] Production smoke verification of deep links/assets/data/calculator.
-- [ ] Audit CSP against the actual deployed third-party inventory.
 
-**Exit gate:** reproducible build, validated data shape, passing tests, working deep links, verified production origin and no known critical runtime defects.
+### Remaining delivery sprints
+
+The remaining P0 work is decomposed in `docs/sprints/P0_DELIVERY_PLAN.md` and tracked in `docs/sprints/ACTIVE_SPRINT.md`.
+
+- [ ] **P0-S1 — Exact Pathway Closure:** AU-189, NZ SMC routes, Austria Other Key Workers and Italy 2026 Flussi.
+- [ ] **P0-S2 — Remaining-Country Evidence Closure:** audit and complete the 24 research-required canonical pathways or document authoritative material gaps.
+- [ ] **P0-S3 — Data / Recommendation Quality Gate:** data validation, evidence/boundary/recommendation tests, build, generated output and lint.
+- [ ] **P0-S4 — Browser / Release Gate:** browser/E2E, deep links, calculator/recommendation flows and generated SEO/accessibility verification.
+- [ ] **P0-S5 — Deployment Verification & P0 Exit:** authoritative Netlify origin, production smoke, canonical/OG/sitemap restoration, CSP audit and repository hardening.
+
+**Exit gate:** reproducible build, validated data shape, passing tests, working deep links, verified production origin, production smoke, appropriate security/SEO configuration and no known critical runtime defects.
 
 ## Phase 1 — Migration Intelligence Foundation (P0)
 
@@ -49,12 +56,14 @@ The blog remains an acquisition/education layer. Country + pathway + evidence + 
 - [x] Establish material-field requirements by pathway type.
 - [x] Add 26-country evidence-gated registry without fabricating missing data.
 - [x] Add 52 pathway records across 26 countries.
-- [x] Add 56 field-level primary-source evidence records across registry and dated addenda.
-- [x] Promote ten pathways only after minimum material-field coverage and explicit `evidenceIds`.
+- [x] Add dated field-level primary-source evidence across registry and addenda.
+- [x] Establish exact legal subroute candidate architecture outside the canonical 52.
 - [ ] Complete material-field evidence audit for remaining pathways.
 - [ ] Review generic pathways that represent multiple legal sub-routes.
 - [ ] Expand evidence batches until the highest-value pathways can safely become publishable.
 - [ ] Establish production freshness/review automation beyond local validation.
+
+**Current registry checkpoint:** 26 countries / 52 canonical pathways; 28 publishable and 24 research-required. Exact subroutes remain outside the canonical 52 until their promotion gates pass.
 
 **Critical rule:** never fabricate missing data to reach the 26-country target.
 
@@ -109,25 +118,25 @@ The blog remains an acquisition/education layer. Country + pathway + evidence + 
 
 ## Current P0 critical path
 
-`Primary-source batches → material-field audit → pathway-specific legal-subroute review → publishable promotion → browser/E2E → Netlify origin verification → production smoke → canonical/SEO restoration → P0 exit`
+`P0-S1 exact routes → P0-S2 evidence closure → P0-S3 data/recommendation verification → P0-S4 browser/release verification → P0-S5 deployment verification → P0 exit`
 
 ## Release gate matrix
 
 | Gate | State | Rule |
 |---|---|---|
 | 26-country registry | Complete | Evidence-gated; no fabricated claims |
-| 52 pathways | Complete | 10 publishable; 42 remain `research_required` |
-| Field-level evidence | Active | 56 records; expanding |
-| Publishable pathways | Partial | 10 currently promoted |
+| 52 pathways | Complete | 28 publishable; 24 research-required |
+| Field-level evidence | Active | Expanding through exact-route batches |
+| Exact subroute architecture | Complete | Candidates remain outside canonical 52 until promotion |
 | Route engine | Complete | Hard publishability/evidence gate |
 | Calculator safety | Complete | Unverified costs not actionable |
 | Country/pathway pages | Complete | Source/evidence trails generated |
-| Generated build verification | Passed | Latest confirmed CI baseline |
-| Core SEO/A11y smoke | Passed | Latest confirmed CI baseline |
-| CI quality gate | Passed | Audit + validation + tests + build + verification |
-| Browser/E2E | Open | Required before release |
+| Generated build verification | Pending current-head verification | Must be re-run on current delivery head |
+| Core SEO/A11y smoke | Pending current-head verification | Must be re-run on current delivery head |
+| CI quality gate | Pending current-head verification | Never infer green from historical runs |
+| Browser/E2E | Open | P0-S4 |
 | Netlify origin | Open | Must identify actual deployment; never guess |
-| Production smoke | Open | Blocked by origin verification |
+| Production smoke | Open | P0-S5 and blocked by origin verification |
 | Canonical/sitemap restoration | Open | Blocked by authoritative origin |
 
 ## Dependency order
