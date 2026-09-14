@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": [
+    {
+      "id": "AT-rwr-other-key-workers-eligibility-exact-2026-09-14",
+      "countryId": "AT",
+      "pathwayId": "AT-rwr-other-key-workers",
+      "field": "eligibility",
+      "claim": "Austria's Other Key Workers route is a specific Red-White-Red Card sub-route for third-country nationals taking up qualifying key-worker employment. The applicant must meet the published points threshold and the route-specific employment, labour-market and qualification criteria.",
+      "sourceAuthority": "Austrian Federal Government migration portal",
+      "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
+      "jurisdiction": "Austria",
+      "effectiveDate": "2026-01-01",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Exact subroute evidence; does not promote other Red-White-Red categories.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "AT-rwr-other-key-workers-financial-2026-09-14",
+      "countryId": "AT",
+      "pathwayId": "AT-rwr-other-key-workers",
+      "field": "financial-requirement",
+      "claim": "For 2026, the prospective employer for an Other Key Worker must pay at least €3,465 gross per month. The remuneration requirement is route-specific and is not evidence for the wider Red-White-Red Card family.",
+      "sourceAuthority": "Austrian Federal Government migration portal",
+      "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
+      "jurisdiction": "Austria",
+      "effectiveDate": "2026-01-01",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of the official Other Key Workers remuneration rule.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "AT-rwr-other-key-workers-process-exact-2026-09-14",
+      "countryId": "AT",
+      "pathwayId": "AT-rwr-other-key-workers",
+      "field": "process",
+      "claim": "The Other Key Workers route results in a Red-White-Red Card valid for 24 months when its route-specific employment, remuneration, labour-market test and points requirements are satisfied.",
+      "sourceAuthority": "Austrian Federal Government migration portal",
+      "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
+      "jurisdiction": "Austria",
+      "effectiveDate": "2026-01-01",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Exact subroute process evidence; no generalization to other Red-White-Red categories.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    }
+  ]
+}
