@@ -10,8 +10,9 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 
 - 26 countries / 52 pathways remain canonical.
 - **28 pathways are now publishable; 24 remain research-required.**
-- Canada Express Entry was narrowed to the exact **Federal Skilled Worker Program** route and promoted only after matching primary-source evidence was staged.
-- Evidence records remain field-level and route-scoped.
+- The evidence tree now contains **100 field-level records** across the primary registry and dated addenda.
+- Canada Express Entry was narrowed to the exact **Federal Skilled Worker Program** route and promoted only after matching primary-source evidence was staged and its evidence records were corrected to the canonical pathway id.
+- New Zealand SMC scope has been refreshed: the current authority distinguishes three pathways (Points-based, Skilled Work Experience, Trades and Technician), so the generic `NZ-skilled` record remains research-required.
 - Latest commits still require fresh CI verification; no unreported green status is assumed.
 - Production remains blocked because the authoritative Netlify origin has not been independently verified.
 
@@ -21,21 +22,23 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Japan Engineer / Specialist in Humanities / International Services exact-route evidence + promotion.
 - [x] Canada Federal Skilled Worker Program evidence added from current IRCC primary sources.
 - [x] Replaced the broad `CA-express-entry` pathway with the exact `CA-federal-skilled-worker` pathway.
+- [x] Corrected both Canada FSWP evidence records to reference the canonical `CA-federal-skilled-worker` pathway id.
 - [x] Promoted Canada FSWP only after pathway/evidence scope alignment.
-- [x] Reconciled P0 legal-subroute review with the 28-pathway publishable state.
+- [x] Added current New Zealand SMC scope/policy evidence without promoting the umbrella route.
+- [x] Reconciled release verification, sprint checkpoint and P0 legal-subroute docs to the 28/24 state.
 - [x] Regression coverage rejects cross-pathway evidence and requires material evidence for publishable routes.
 
 ## P0 remaining
 
 ### Evidence / pathway architecture
-- [ ] Australia Skilled — select an exact skilled visa class; the official program is explicitly a family of temporary, provisional and permanent skilled visas, so the umbrella cannot be promoted safely. citeturn0search10turn0search11
-- [ ] New Zealand Skilled — narrow to an exact SMC or work-to-residence route and model the August 24, 2026 rule changes. citeturn0search5turn0search7
+- [ ] New Zealand Skilled — split the umbrella into exact SMC pathway records, starting with Skilled Work Experience and/or Trades and Technician; model the August 24, 2026 rules without collapsing distinct routes. 
+- [ ] Australia Skilled — select an exact skilled visa class; the official program is explicitly a family of temporary, provisional and permanent skilled visas, so the umbrella cannot be promoted safely.
 - [ ] Austria Red-White-Red — select an exact sub-route.
 - [ ] Italy Work — select an exact work authorization class.
 - [ ] Continue remaining country evidence batches.
 
 ### Quality / production
-- [ ] Re-run Quality Gate after the latest promotion.
+- [ ] Re-run Quality Gate after the latest evidence correction/addendum.
 - [ ] Re-run lint, build and browser smoke.
 - [ ] Identify authoritative Netlify site/project and hostname; do not guess.
 - [ ] Run deployed-site verification against the verified origin.
