@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": [
+    {
+      "id": "NZ-smc-skilled-work-experience-occupation-matrix-2026-09-14",
+      "countryId": "NZ",
+      "pathwayId": "NZ-smc-skilled-work-experience",
+      "field": "occupation-exception-matrix",
+      "claim": "The Skilled Work Experience pathway excludes Red List occupations and ANZSCO skill levels 4 or 5. Amber List occupations require at least 1.2 times the SMC wage threshold, at least 3 years of relevant work experience in New Zealand in an ANZSCO skill level 1 to 3 occupation, and an additional 2 years of qualifying skilled work experience in New Zealand at the 1.2-times threshold. Standard eligible roles require at least 5 years of directly relevant work experience including 2 years of skilled work experience in New Zealand at 1.1 times the applicable threshold.",
+      "sourceAuthority": "Immigration New Zealand",
+      "sourceUrl": "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/skilled-residence-pathways-in-new-zealand/skilled-migrant-category-pathway-to-residence/red-and-amber-list-occupations/",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-08-24",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current official Red and Amber List and SMC pathway guidance; matrix is route-scoped and does not infer eligibility for other residence pathways.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "NZ-smc-skilled-work-experience-wage-regression-2026-09-14",
+      "countryId": "NZ",
+      "pathwayId": "NZ-smc-skilled-work-experience",
+      "field": "wage-regression",
+      "claim": "For Skilled Work Experience, the applicable wage threshold is determined by when qualifying New Zealand skilled work starts. From 9 March 2026 the SMC threshold is NZD 35.00/hour, with 1.1 times = NZD 38.50/hour for standard roles and 1.2 times = NZD 42.00/hour for Amber List roles. Earlier effective periods must use their corresponding historical threshold. A qualifying grace period may apply when work begins within 5 months of visa grant under the official conditions.",
+      "sourceAuthority": "Immigration New Zealand",
+      "sourceUrl": "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/skilled-residence-pathways-in-new-zealand/skilled-migrant-category-pathway-to-residence/pay-rates-for-the-skilled-migrant-category-resident-visa/",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-08-24",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of the current official SMC wage-rate tables and effective-date rules; values are retained as regression fixtures and must not be generalized beyond the published periods.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "NZ-smc-trades-technician-occupation-qualification-matrix-2026-09-14",
+      "countryId": "NZ",
+      "pathwayId": "NZ-smc-trades-technician",
+      "field": "occupation-qualification-matrix",
+      "claim": "The Trades and Technician pathway is restricted to occupations on the official eligible occupation list and requires a relevant qualification at Level 4, comparable to Level 4, or higher, plus the prescribed post-qualification work experience. The current rule requires at least 2.5 years of relevant post-qualification experience in an ANZSCO skill level 1 to 3 occupation and an additional 1.5 years of post-qualification skilled work experience in New Zealand. Overseas Trade and Technician qualifications no longer need the former 120-credit requirement; New Zealand qualifications retain a 120-credit requirement, which may be met through more than one prerequisite-linked qualification.",
+      "sourceAuthority": "Immigration New Zealand",
+      "sourceUrl": "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/skilled-residence-pathways-in-new-zealand/skilled-migrant-category-pathway-to-residence/eligible-roles-for-the-smc-trades-and-technician-pathway/",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-08-24",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of the current official eligible-occupation list and final 2026 SMC qualification changes; overseas and New Zealand qualification rules are kept distinct.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    }
+  ]
+}
