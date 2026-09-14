@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": [
+    {
+      "id": "IT-study-finance-2026-09-14",
+      "countryId": "IT",
+      "pathwayId": "IT-study",
+      "field": "financial-requirement",
+      "claim": "For academic-year 2026/2027 higher-education study visas, Italian diplomatic guidance uses a minimum reference amount of €10,179.85 per year for means of subsistence. The funds must be lawful and traceable; this amount is separate from tuition and return-travel costs, and the competent mission may require supporting financial evidence.",
+      "sourceAuthority": "Italian Ministry of Foreign Affairs and Italian diplomatic missions",
+      "sourceUrl": "https://ambbogota.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/visti-requisiti/visas-de-estudio/visa-de-estudio-para-la-inscripcion-en-una-universidad-operante-en-italia/",
+      "jurisdiction": "Italy",
+      "effectiveDate": "2026-09-14",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of official Italian diplomatic guidance for 2026/2027 and 2027/2028 higher-education study visas; the amount is recorded as a current reference requirement rather than generalized to every study-visa category.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    }
+  ]
+}
