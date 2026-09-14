@@ -9,7 +9,7 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 ## Current checkpoint
 
 - 26 countries / 52 pathways remain canonical.
-- **94 evidence records** are currently represented across the primary registry and dated addenda.
+- **96 evidence records** are currently represented across the primary registry and dated addenda.
 - **27 pathways are publishable; 25 remain research-required.**
 - Latest known successful Quality Gate and browser-smoke runs passed before the latest evidence/promotion commits; the newest commits still require CI re-verification.
 - Production remains blocked because the authoritative Netlify origin has not been independently verified.
@@ -25,6 +25,7 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Reconciled pathway scopes so promoted records match their evidence rather than broad legal families.
 - [x] Added regression coverage that resolves every publishable evidence ID and rejects cross-pathway evidence references.
 - [x] Reconciled the P0 legal-subroute review with the current **27-pathway publishable** set.
+- [x] Added current Canada Federal Skilled Worker Program evidence as a scope-narrowing candidate; the canonical `CA-express-entry` record remains unpromoted until its pathway name/source scope is changed from the Express Entry umbrella to FSWP.
 - [x] Preserved the 26-country / 52-pathway canonical registry; unsupported routes remain evidence-gated.
 
 ## Existing completed foundation
@@ -54,8 +55,9 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [ ] Promote remaining records only after complete evidence review and exact-route scope matching.
 - [ ] Add official fee/funds/eligibility/timeline facts only where the authority publishes them.
 - [x] Keep unsupported approval rates null.
+- [ ] Narrow/promote Canada FSWP after updating the pathway record from the Express Entry umbrella to the exact Federal Skilled Worker Program scope.
 - [ ] Continue exact-route evidence batches for Italy Work and other high-value routes.
-- [ ] Review Canada Express Entry, Australia Skilled, Austria Red-White-Red and New Zealand Skilled for legal sub-route scope before promotion.
+- [ ] Review Australia Skilled, Austria Red-White-Red and New Zealand Skilled for legal sub-route scope before promotion.
 - [x] Add regression tests preventing broad pathway promotion when evidence only covers a narrower legal sub-route.
 
 ### Product integration
