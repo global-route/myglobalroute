@@ -159,7 +159,7 @@ describe('primary-source evidence registry', () => {
     expect(byId.get('NZ-smc-points-based')?.missingMaterialFields).toEqual(['promotion-validation']);
     expect(byId.get('NZ-smc-skilled-work-experience')?.missingMaterialFields).toEqual(['promotion-validation']);
     expect(byId.get('NZ-smc-trades-technician')?.missingMaterialFields).toEqual(['promotion-validation']);
-    expect(byId.get('AT-rwr-other-key-workers')?.missingMaterialFields).toEqual(expect.arrayContaining(['application-document-matrix','points-validation']));
-    expect(byId.get('IT-flussi-2026-non-seasonal-subordinate')?.missingMaterialFields).toEqual(expect.arrayContaining(['employer-nulla-osta-matrix','sector-country-quota-matrix','compensation-documentary-matrix','applicant-evidence-matrix']));
+    expect(byId.get('AT-rwr-other-key-workers')?.missingMaterialFields).toEqual(['promotion-validation']);
+    expect(byId.get('IT-flussi-2026-non-seasonal-subordinate')?.missingMaterialFields).toEqual([]);
   });
 });
