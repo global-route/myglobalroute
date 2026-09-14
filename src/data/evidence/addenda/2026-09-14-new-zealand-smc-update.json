@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": [
+    {
+      "id": "NZ-skilled-scope-2026-09-14",
+      "countryId": "NZ",
+      "pathwayId": "NZ-skilled",
+      "field": "pathway-scope",
+      "claim": "As of 24 August 2026, New Zealand's Skilled Migrant Category contains three distinct residence pathways: the Points-based pathway, Skilled Work Experience pathway, and Trades and Technician pathway. The generic NZ-skilled registry record therefore remains a research umbrella and must not be promoted as though one eligibility rule applies to all three.",
+      "sourceAuthority": "Immigration New Zealand",
+      "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-08-24",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of the current Immigration New Zealand Skilled Migrant Category Resident Visa page and the final August 2026 change notice; scope is recorded specifically to prevent umbrella-route overclaiming.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "NZ-skilled-policy-update-2026-09-14",
+      "countryId": "NZ",
+      "pathwayId": "NZ-skilled",
+      "field": "policy-update",
+      "claim": "The 24 August 2026 Skilled Migrant Category changes include clarified wage-threshold application, updated qualification evidence, removal of the overseas Trade and Technician 120-credit requirement, and strengthened genuine-skilled-employment settings. The Skilled Work Experience and Trades and Technician pathways have distinct work-experience and qualification rules, so route-specific evidence is required before promotion.",
+      "sourceAuthority": "Immigration New Zealand",
+      "sourceUrl": "https://www.immigration.govt.nz/about-us/news-centre/final-details-about-changes-to-the-skilled-migrant-category-resident-visa-and-work-to-residence-visa/",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-08-24",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of Immigration New Zealand's final 18 June 2026 announcement for rules taking effect on 24 August 2026; recorded as current policy context, not as proof for an un-narrowed pathway.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    }
+  ]
+}
