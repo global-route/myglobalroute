@@ -19,7 +19,7 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - Italy 2026 Flussi has a dedicated promotion matrix; employer/nulla-osta, sector/country, compensation and applicant evidence remain open.
 - No umbrella route has been promoted from narrower evidence.
 - A quality run on the previous head exposed real data-integrity issues: duplicate/superseded evidence batches, exact-subroute IDs not accepted by the validator, and a missing canonical CA-study eligibility record. Those issues have now been remediated in the current tree; fresh CI verification is required before marking the gate green.
-- Current `main` head is `a91b5f47b69455f8fbcc3b18babc5acefe580049`; fresh workflow results for this head are not yet available.
+- Current `main` head is `c20a76d9b6cd7e5196891ed4d20601d63845a7f1`; Quality Gate and Browser Smoke are currently queued for this head.
 - Production remains blocked until the authoritative Netlify origin is independently verified.
 
 ## P0 delivery sprint map
