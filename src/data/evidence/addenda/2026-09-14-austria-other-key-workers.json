@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": [
+    {
+      "id": "AT-other-key-workers-eligibility-2026-09-14",
+      "countryId": "AT",
+      "pathwayId": "AT-red-white-red",
+      "field": "eligibility",
+      "claim": "Austria's Other Key Workers route is a specific Red-White-Red Card sub-route for third-country nationals taking up key-worker employment. The official migration portal states that the prospective employer must pay at least €3,465 gross per month in 2026, a labour-market test applies, and the applicant must reach at least 55 points under the published qualification, work-experience, age, language and other criteria.",
+      "sourceAuthority": "Austrian Federal Government migration portal",
+      "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
+      "jurisdiction": "Austria",
+      "effectiveDate": "2026-01-01",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of the official Other Key Workers sub-route page. Evidence is deliberately scoped to this sub-route and is not used to promote the full Red-White-Red Card family.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "AT-other-key-workers-process-2026-09-14",
+      "countryId": "AT",
+      "pathwayId": "AT-red-white-red",
+      "field": "process",
+      "claim": "The Other Key Workers sub-route issues a Red-White-Red Card valid for 24 months when the route requirements are satisfied, including the qualifying employment, remuneration, labour-market test and points requirements described by the Austrian migration authority.",
+      "sourceAuthority": "Austrian Federal Government migration portal",
+      "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
+      "jurisdiction": "Austria",
+      "effectiveDate": "2026-01-01",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of the official Other Key Workers route page; no claim is made that this process represents all Red-White-Red Card categories.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    }
+  ]
+}
