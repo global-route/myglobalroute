@@ -2,21 +2,6 @@
   "schemaVersion": "1.0.0",
   "records": [
     {
-      "id": "CA-express-entry-eligibility-2026-09-07",
-      "countryId": "CA",
-      "pathwayId": "CA-express-entry",
-      "field": "eligibility",
-      "claim": "Express Entry manages applications for the Canadian Experience Class, Federal Skilled Worker Program and Federal Skilled Trades Program, each with distinct language, work-experience and job-offer rules.",
-      "sourceAuthority": "Immigration, Refugees and Citizenship Canada",
-      "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply.html",
-      "jurisdiction": "Canada",
-      "effectiveDate": "2026-06-22",
-      "retrievedAt": "2026-09-07",
-      "methodology": "Direct review of current Government of Canada Express Entry eligibility guidance",
-      "confidence": "high",
-      "reviewAfter": "2026-10-07"
-    },
-    {
       "id": "CA-study-eligibility-2026-09-14",
       "countryId": "CA",
       "pathwayId": "CA-study",
