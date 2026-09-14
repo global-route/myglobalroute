@@ -3,6 +3,8 @@
 **Status:** Active delivery plan  
 **Baseline:** 14 September 2026  
 **Scope:** Remaining P0 work through Phase 0/1/2 exit  
+**Handover:** `docs/sprints/HANDOVER.md`  
+**Current execution head:** `41d3c1337fa26c0a13512b5d65d1a20f9cb57b71` plus documentation-only handover commits
 
 This plan decomposes the remaining P0 work into delivery sprints. A sprint is not considered complete because implementation exists; its exit gate requires implementation, documentation, and verification. Work may proceed concurrently inside a sprint, but promotion and release gates remain evidence-driven.
 
@@ -22,10 +24,10 @@ This plan decomposes the remaining P0 work into delivery sprints. A sprint is no
 
 - **AU-189:** resolve visa-specific financial/material evidence; preserve explicit null where no universal proof-of-funds requirement is established.
 - **NZ Points-based:** complete final promotion validation after existing points-composition, qualification/IQA, registration and effective-date gates.
-- **NZ Skilled Work Experience:** complete red/amber matrix, wage threshold/effective-date evidence, direct-relevance and regression coverage.
-- **NZ Trades & Technician:** complete occupation/qualification matrix, overseas-vs-NZ qualification-credit distinction and regression coverage.
+- **NZ Skilled Work Experience:** complete final promotion validation after the existing red/amber matrix, wage threshold/effective-date evidence, direct-relevance and regression coverage.
+- **NZ Trades & Technician:** complete final promotion validation after the existing occupation/qualification matrix, overseas-vs-NZ qualification-credit distinction and regression coverage.
 - **Austria Other Key Workers:** complete applicant-document matrix, points calculation tests and promotion validation.
-- **Italy 2026 Flussi:** complete employer/nulla-osta, sector/country quota, compensation/documentary and applicant evidence matrices.
+- **Italy 2026 Flussi:** complete employer/nulla-osta, sector/country quota, compensation/documentary and applicant evidence matrices, then run deterministic promotion validation.
 
 ### Definition of done
 
@@ -87,7 +89,7 @@ This plan decomposes the remaining P0 work into delivery sprints. A sprint is no
 
 ### Workstreams
 
-- Identify the authoritative Netlify site/project and production hostname; never infer or guess it.
+- Identify the authoritative Netlify site/project and production hostname; never infer or guess.
 - Verify deployed commit/version against `main`.
 - Run production smoke checks for deep links, assets, data, calculator and recommendation flows.
 - Restore canonical, Open Graph and sitemap absolute URLs only after origin verification.
