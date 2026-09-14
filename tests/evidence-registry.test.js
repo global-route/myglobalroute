@@ -5,6 +5,7 @@ const countries = require('../src/data/countries.json');
 const pathways = require('../src/data/pathways.json');
 const requirements = require('../src/data/pathway-requirements.json');
 const candidates = require('../src/data/pathway-candidates.json');
+const subroutes = require('../src/data/pathway-subroutes.json');
 
 const addendaDir = path.join(__dirname, '..', 'src/data/evidence/addenda');
 const addenda = fs.existsSync(addendaDir)
@@ -16,13 +17,14 @@ const addenda = fs.existsSync(addendaDir)
 const allEvidence = [...evidence.records, ...addenda];
 
 describe('primary-source evidence registry', () => {
-  test('every evidence record points to known country and pathway', () => {
+  test('every evidence record points to a known canonical pathway or exact subroute', () => {
     const countryIds = new Set(countries.countries.map(country => country.id));
     const pathwayIds = new Set(pathways.pathways.map(pathway => pathway.id));
+    const subrouteIds = new Set(subroutes.subroutes.map(subroute => subroute.id));
     expect(allEvidence.length).toBeGreaterThan(0);
     for (const record of allEvidence) {
       expect(countryIds.has(record.countryId)).toBe(true);
-      expect(pathwayIds.has(record.pathwayId)).toBe(true);
+      expect(pathwayIds.has(record.pathwayId) || subrouteIds.has(record.pathwayId)).toBe(true);
       expect(record.sourceUrl).toMatch(/^https:\/\//);
       expect(['high', 'medium', 'low']).toContain(record.confidence);
       expect(record.reviewAfter).toMatch(/^\d{4}-\d{2}-\d{2}$/);
@@ -84,16 +86,35 @@ describe('primary-source evidence registry', () => {
 
   test('exact-route candidates remain research-stage until canonicalized', () => {
     const pathwayIds = new Set(pathways.pathways.map(pathway => pathway.id));
+    const subrouteIds = new Set(subroutes.subroutes.map(subroute => subroute.id));
     const evidenceById = new Map(allEvidence.map(record => [record.id, record]));
     expect(candidates.candidates.length).toBeGreaterThan(0);
     for (const candidate of candidates.candidates) {
       expect(candidate.status).toBe('research_required');
       expect(pathwayIds.has(candidate.parentPathwayId)).toBe(true);
+      expect(subrouteIds.has(candidate.subrouteId)).toBe(true);
       for (const evidenceId of candidate.evidenceIds || []) {
         const record = evidenceById.get(evidenceId);
         expect(record).toBeDefined();
         expect(record.countryId).toBe(candidate.countryId);
-        expect(record.pathwayId).toBe(candidate.parentPathwayId);
+        expect(record.pathwayId).toBe(candidate.subrouteId);
+      }
+    }
+  });
+
+  test('exact subroutes cannot inherit parent evidence as promotion proof', () => {
+    const evidenceById = new Map(allEvidence.map(record => [record.id, record]));
+    for (const subroute of subroutes.subroutes) {
+      const records = allEvidence.filter(record => record.pathwayId === subroute.id);
+      for (const record of records) expect(record.pathwayId).toBe(subroute.id);
+      if (subroute.status === 'publishable') {
+        const fields = new Set(records.map(record => record.field));
+        for (const field of subroute.requiredEvidenceFields) expect(fields.has(field)).toBe(true);
+      }
+    }
+    for (const candidate of candidates.candidates) {
+      for (const evidenceId of candidate.evidenceIds || []) {
+        expect(evidenceById.get(evidenceId)?.pathwayId).toBe(candidate.subrouteId);
       }
     }
   });
@@ -101,6 +122,7 @@ describe('primary-source evidence registry', () => {
   test('New Zealand SMC child routes cannot inherit parent evidence as promotion proof', () => {
     const nzCandidates = candidates.candidates.filter(candidate => candidate.countryId === 'NZ');
     expect(nzCandidates.map(candidate => candidate.id)).toEqual(expect.arrayContaining([
+      'NZ-smc-points-based',
       'NZ-smc-skilled-work-experience',
       'NZ-smc-trades-technician'
     ]));
