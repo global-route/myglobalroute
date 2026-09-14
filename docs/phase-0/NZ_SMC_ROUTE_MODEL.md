@@ -7,7 +7,7 @@
 
 Represent the current Skilled Migrant Category (SMC) as separate legal routes instead of allowing the generic `NZ-skilled` umbrella to inherit evidence from materially different pathways.
 
-Immigration New Zealand currently describes three SMC pathways: Points-based, Skilled Work Experience, and Trades and Technician. The product must evaluate each independently. citeturn0search2turn0search6
+Immigration New Zealand currently describes three SMC pathways: Points-based, Skilled Work Experience, and Trades and Technician. The product must evaluate each independently.
 
 ## Canonical route model
 
@@ -21,19 +21,19 @@ The parent umbrella must never be promoted merely because one or more child rout
 
 ## Skilled Work Experience
 
-The current official guidance describes this as a work-experience-led residence route. The standard case requires at least five years of directly relevant work experience, including at least two years of skilled work experience in New Zealand. Occupation-list status can add materially different requirements: amber-list occupations have additional wage/work-experience requirements and red-list occupations are excluded from this pathway. citeturn0search0turn0search10
+The current official guidance describes this as a work-experience-led residence route. The standard case requires at least five years of directly relevant work experience, including at least two years of skilled work experience in New Zealand. Occupation-list status can add materially different requirements: amber-list occupations have additional wage/work-experience requirements and red-list occupations are excluded from this pathway.
 
-The current wage table records the applicable SMC threshold and the 1.1x/1.2x multipliers for the Skilled Work Experience pathway; the data model should preserve the effective date rather than treating a wage as timeless. citeturn0search7
+The current wage table records the applicable SMC threshold and the 1.1x/1.2x multipliers for the Skilled Work Experience pathway; the data model should preserve the effective date rather than treating a wage as timeless.
 
 ## Trades and Technician
 
-The current route requires an eligible occupation, a relevant Level 4-or-higher qualification and post-qualification work experience, including New Zealand skilled work experience. INZ's current route page specifies at least 2.5 years of relevant post-qualification experience plus an additional 1.5 years of qualifying skilled work experience in New Zealand. International qualifications generally require an IQA; New Zealand qualifications have a separate credit rule. citeturn0search2turn0search3
+The current route requires an eligible occupation, a relevant Level 4-or-higher qualification and post-qualification work experience, including New Zealand skilled work experience. INZ's current route page specifies at least 2.5 years of relevant post-qualification experience plus an additional 1.5 years of qualifying skilled work experience in New Zealand. International qualifications generally require an IQA; New Zealand qualifications have a separate credit rule.
 
-The official policy announcement also confirms that the 120-credit requirement for overseas Trade and Technician qualifications was removed from 24 August 2026, while New Zealand qualifications retain the 120-credit rule. This distinction must remain route- and jurisdiction-specific in evidence. citeturn0search1
+The official policy announcement also confirms that the 120-credit requirement for overseas Trade and Technician qualifications was removed from 24 August 2026, while New Zealand qualifications retain the 120-credit rule. This distinction must remain route- and jurisdiction-specific in evidence.
 
 ## Shared SMC gates
 
-Every child route still needs its own evidence for shared material requirements such as skilled employment/job offer, applicable wage, English, health/character and the application/EOI process. The shared facts may reuse the same authoritative source, but evidence records must retain the exact child `pathwayId` once canonical child IDs exist. citeturn0search2turn0search9
+Every child route still needs its own evidence for shared material requirements such as skilled employment/job offer, applicable wage, English, health/character and the application/EOI process. The shared facts may reuse the same authoritative source, but evidence records must retain the exact child `pathwayId` once canonical child IDs exist.
 
 ## Important distinction
 
