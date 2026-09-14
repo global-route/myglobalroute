@@ -145,4 +145,24 @@ describe('primary-source evidence registry', () => {
     for (const candidate of nzCandidates) expect(candidate.status).toBe('research_required');
     expect(pathways.pathways.find(pathway => pathway.id === 'NZ-skilled')?.status).toBe('research_required');
   });
+
+  test('route-specific research gaps stay explicit', () => {
+    const byId = new Map(candidates.candidates.map(candidate => [candidate.id, candidate]));
+    expect(byId.get('AU-189-points-tested')?.missingMaterialFields).toContain('visa-specific-financial-verification');
+    expect(byId.get('NZ-smc-points-based')?.missingMaterialFields).toEqual(expect.arrayContaining([
+      'occupation-registration-matrix',
+      'qualification-exception-matrix',
+      'points-regression-tests'
+    ]));
+    expect(byId.get('AT-rwr-other-key-workers')?.missingMaterialFields).toEqual(expect.arrayContaining([
+      'application-document-matrix',
+      'points-validation'
+    ]));
+    expect(byId.get('IT-flussi-2026-non-seasonal-subordinate')?.missingMaterialFields).toEqual(expect.arrayContaining([
+      'employer-nulla-osta-matrix',
+      'sector-country-quota-matrix',
+      'compensation-documentary-matrix',
+      'applicant-evidence-matrix'
+    ]));
+  });
 });
