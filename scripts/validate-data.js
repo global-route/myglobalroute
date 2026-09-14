@@ -13,8 +13,10 @@ const readEvidenceRecords = () => {
 const countriesPayload = readJson('src/data/countries.json');
 const pathwaysPayload = readJson('src/data/pathways.json');
 const requirementsPayload = readJson('src/data/pathway-requirements.json');
+const subroutesPayload = readJson('src/data/pathway-subroutes.json');
 const countries = countriesPayload.countries;
 const pathways = pathwaysPayload.pathways;
+const subroutes = subroutesPayload.subroutes || [];
 const evidence = readEvidenceRecords();
 const errors = [];
 const warnings = [];
@@ -47,6 +49,17 @@ for (const [index, pathway] of (pathways || []).entries()) {
   if (!requirementsPayload.types?.[pathway.type]) warnings.push(`no material-field profile defined for pathway type ${pathway.type}`);
 }
 
+const subrouteIds = new Set();
+for (const [index, subroute] of subroutes.entries()) {
+  for (const field of ['id', 'countryId', 'parentPathwayId', 'type', 'name', 'status']) if (!subroute[field]) errors.push(`subroutes[${index}] ${field} is required`);
+  if (subrouteIds.has(subroute.id)) errors.push(`duplicate subroute id: ${subroute.id}`);
+  subrouteIds.add(subroute.id);
+  if (!countryIds.has(subroute.countryId)) errors.push(`subroutes[${index}] references unknown country ${subroute.countryId}`);
+  if (!pathwayIds.has(subroute.parentPathwayId)) errors.push(`subroutes[${index}] references unknown parent pathway ${subroute.parentPathwayId}`);
+  if (subroute.status !== 'research_required') warnings.push(`subroute ${subroute.id} is not research_required; promotion must occur through canonical pathway architecture`);
+}
+
+const knownEvidenceScopes = new Set([...pathwayIds, ...subrouteIds]);
 const evidenceIds = new Set();
 const evidenceByPathway = new Map();
 for (const [index, record] of (evidence || []).entries()) {
@@ -54,7 +67,7 @@ for (const [index, record] of (evidence || []).entries()) {
   if (evidenceIds.has(record.id)) errors.push(`duplicate evidence id: ${record.id}`);
   evidenceIds.add(record.id);
   if (!countryIds.has(record.countryId)) errors.push(`evidence[${index}] references unknown country ${record.countryId}`);
-  if (!pathwayIds.has(record.pathwayId)) errors.push(`evidence[${index}] references unknown pathway ${record.pathwayId}`);
+  if (!knownEvidenceScopes.has(record.pathwayId)) errors.push(`evidence[${index}] references unknown pathway or exact subroute ${record.pathwayId}`);
   if (!/^https:\/\//.test(record.sourceUrl)) errors.push(`evidence[${index}] sourceUrl must be HTTPS`);
   if (!['high', 'medium', 'low'].includes(record.confidence)) errors.push(`evidence[${index}] confidence must be high, medium or low`);
   if (new Date(`${record.reviewAfter}T00:00:00Z`) < today) warnings.push(`evidence ${record.id} is due for review`);
@@ -84,6 +97,17 @@ for (const pathway of pathways) {
     if (!pathway.evidenceIds?.length) errors.push(`publishable pathway ${pathway.id} requires evidenceIds`);
   } else if (records.length > 0 && missingMaterialFields.length) {
     warnings.push(`coverage gap: ${pathway.id} missing material evidence fields: ${missingMaterialFields.join(', ')}`);
+  }
+}
+
+for (const subroute of subroutes) {
+  const records = evidenceByPathway.get(subroute.id) || [];
+  const requiredFields = subroute.requiredEvidenceFields || [];
+  const missingMaterialFields = requiredFields.filter(field => !new Set(records.map(record => record.field)).has(field));
+  if (subroute.status === 'publishable') {
+    if (missingMaterialFields.length) errors.push(`publishable subroute ${subroute.id} is missing material evidence fields: ${missingMaterialFields.join(', ')}`);
+  } else if (records.length > 0 && missingMaterialFields.length) {
+    warnings.push(`subroute coverage gap: ${subroute.id} missing material evidence fields: ${missingMaterialFields.join(', ')}`);
   }
 }
 
