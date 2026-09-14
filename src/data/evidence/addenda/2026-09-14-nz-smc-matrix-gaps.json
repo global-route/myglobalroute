@@ -6,22 +6,30 @@
       "countryId": "NZ",
       "pathwayId": "NZ-smc-points-based",
       "field": "occupation-registration-matrix",
+      "claim": "Points-based SMC registration points require an eligible New Zealand occupational registration; registration points are based on the minimum years of experience or training required to gain registration. Qualification and income are separate primary skill categories and cannot be combined with one another.",
+      "sourceAuthority": "Immigration New Zealand",
       "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-08-24",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current official SMC points guidance; matrix is route-scoped and does not infer registration eligibility for unrelated residence pathways.",
       "confidence": "high",
-      "reviewAfter": "2026-11-30",
-      "scope": "Points-based SMC registration points require an eligible New Zealand occupational registration; registration points are based on minimum years of experience or training required to gain registration. Qualification and income are separate primary skill categories and cannot be combined with one another.",
-      "effectiveDate": "2026-08-24"
+      "reviewAfter": "2026-11-30"
     },
     {
       "id": "NZ-smc-points-based-qualification-exception-matrix-2026-09-14",
       "countryId": "NZ",
       "pathwayId": "NZ-smc-points-based",
       "field": "qualification-exception-matrix",
+      "claim": "Overseas qualifications generally require an International Qualification Assessment unless listed on the List of Qualifications Exempt from Assessment; Level 8 and Level 9 claims are subject to the published qualification and evidential rules, including specified exceptions. New Zealand qualification evidence follows the separate domestic qualification rules.",
+      "sourceAuthority": "Immigration New Zealand",
       "sourceUrl": "https://www.immigration.govt.nz/about-us/news-centre/final-details-about-changes-to-the-skilled-migrant-category-resident-visa-and-work-to-residence-visa/",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-08-24",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of Immigration New Zealand's final 2026 SMC qualification evidence changes; exceptions are recorded as a route-specific evidence matrix rather than generalized to every SMC child route.",
       "confidence": "high",
-      "reviewAfter": "2026-11-30",
-      "scope": "Overseas qualifications generally require an IQA unless listed on the LQEA; Level 8/9 claims generally require a bachelor's degree, with specified exceptions. Evidence requirements differ for New Zealand qualifications and supporting bachelor's degrees.",
-      "effectiveDate": "2026-08-24"
+      "reviewAfter": "2026-11-30"
     }
   ]
 }
