@@ -14,7 +14,7 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - Exact legal subroutes remain outside the canonical 52 until promotion.
 - Candidate evidence is bound to exact subroute IDs; parent-pathway evidence cannot satisfy a child-route promotion gate.
 - Australia subclass 189 remains research_required because visa-specific financial/material verification is unresolved.
-- New Zealand SMC has exact evidence for all three child routes plus a dedicated 2026 promotion matrix. Points-based is at final promotion validation; Skilled Work Experience and Trades & Technician still have route-specific matrix/regression work open.
+- New Zealand SMC has exact evidence for all three child routes plus a dedicated 2026 promotion matrix. Points-based is at final promotion validation; Skilled Work Experience now has an authoritative Red/Amber matrix; Trades & Technician now has an authoritative occupation/qualification/work-experience matrix. Machine-testable regression and final promotion validation remain open.
 - Austria Other Key Workers has a dedicated application/evidence matrix; points regression and final authority/process validation remain open.
 - Italy 2026 Flussi has a dedicated promotion matrix; employer/nulla-osta, sector/country, compensation and applicant evidence remain open.
 - No umbrella route has been promoted from narrower evidence.
@@ -27,10 +27,12 @@ The remaining work is now organized into bounded delivery sprints. Independent w
 
 ### P0-S1 — Exact Pathway Closure — ACTIVE
 
+- [x] NZ Skilled Work Experience Red/Amber route matrix documented from current INZ instructions.
+- [x] NZ Trades & Technician occupation/qualification/work-experience matrix documented from current INZ instructions.
 - [ ] Australia 189 visa-specific financial/material verification.
 - [ ] NZ Points-based final promotion validation.
-- [ ] NZ Skilled Work Experience red/amber matrix + wage/evidence regression.
-- [ ] NZ Trades & Technician occupation/qualification matrix + regression.
+- [ ] NZ Skilled Work Experience executable Red/Amber + wage effective-date regression.
+- [ ] NZ Trades & Technician machine-testable occupation/qualification regression.
 - [ ] Austria Other Key Workers applicant-document matrix + points tests + promotion validation.
 - [ ] Italy 2026 Flussi employer/nulla-osta + sector/country + compensation/documentary + applicant evidence matrices.
 
@@ -85,6 +87,7 @@ The remaining work is now organized into bounded delivery sprints. Independent w
 - [x] Added New Zealand occupation/registration and qualification/IQA exception evidence based on current official guidance.
 - [x] Added deterministic New Zealand SMC points-composition regression coverage and removed that item from the candidate's missing-material gate.
 - [x] Reconciled SMC documentation with current 2026 rules, including the NZ-vs-overseas Trades/Technician qualification-credit distinction.
+- [x] Added exact-route Skilled Work Experience and Trades & Technician promotion matrices with effective-date, occupation, qualification and evidence gates.
 - [x] Made candidate material gaps explicit and strengthened regression coverage so missing fields cannot silently masquerade as complete evidence.
 - [x] Preserved conservative recommendation behavior: research-required subroutes remain non-recommendable until promoted.
 
