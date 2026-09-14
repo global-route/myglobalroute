@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": [
+    {
+      "id": "IT-flussi-2026-non-seasonal-subordinate-eligibility-2026-09-14",
+      "countryId": "IT",
+      "pathwayId": "IT-flussi-2026-non-seasonal-subordinate",
+      "field": "eligibility",
+      "claim": "Italy's 2026 non-seasonal subordinate-work route operates within the 2026-2028 Flussi programming and has a defined quota of 76,200 non-seasonal subordinate entries. Applications remain subject to the applicable quota and route conditions.",
+      "sourceAuthority": "Italian Government — Portale Integrazione Migranti / Ministry of Interior and partner ministries",
+      "sourceUrl": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+      "jurisdiction": "Italy",
+      "effectiveDate": "2026-01-01",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Exact annual route scope; does not generalize to all Italian work authorization routes.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "IT-flussi-2026-non-seasonal-subordinate-financial-2026-09-14",
+      "countryId": "IT",
+      "pathwayId": "IT-flussi-2026-non-seasonal-subordinate",
+      "field": "financial-requirement",
+      "claim": "The 2026 Flussi government material reviewed establishes the annual quota and employer-side application framework but does not establish a single applicant proof-of-funds amount that can safely be treated as the route's universal financial requirement. This remains an explicit evidence gap pending the applicable nulla-osta and applicant documentation rules.",
+      "sourceAuthority": "Italian Government — Portale Integrazione Migranti / Ministry of Interior and partner ministries",
+      "sourceUrl": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+      "jurisdiction": "Italy",
+      "effectiveDate": "2026-01-01",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Explicit research-gap record. No financial requirement is invented from the quota figures.",
+      "confidence": "medium",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "IT-flussi-2026-non-seasonal-subordinate-process-exact-2026-09-14",
+      "countryId": "IT",
+      "pathwayId": "IT-flussi-2026-non-seasonal-subordinate",
+      "field": "process",
+      "claim": "For the 2026 non-seasonal subordinate route, applications are pre-compiled through the ALI Services Portal and submitted from the applicable click-day date, with applications accepted through 31 December 2026 subject to quota availability. Employer-side nulla-osta and applicant-side visa documentation remain distinct steps requiring separate evidence validation.",
+      "sourceAuthority": "Italian Government — Portale Integrazione Migranti / Ministry of Interior and partner ministries",
+      "sourceUrl": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+      "jurisdiction": "Italy",
+      "effectiveDate": "2026-01-01",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Exact annual process evidence; click-day dates are treated as 2026 operational facts rather than timeless visa rules.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    }
+  ]
+}
