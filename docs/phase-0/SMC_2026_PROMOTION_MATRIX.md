@@ -12,10 +12,11 @@ Authoritative current INZ guidance requires 6 total points. Points may come from
 - [x] Current 6-point architecture evidenced.
 - [x] Qualification / income / registration are mutually exclusive primary categories.
 - [x] NZ skilled-work points are the only top-up category.
-- [ ] Encode deterministic point-composition regression tests.
+- [x] Deterministic point-composition regression tests.
 - [ ] Encode qualification/IQA/LQEA exception matrix.
 - [ ] Encode eligible occupational-registration matrix.
 - [ ] Validate effective-date wage calculations.
+- [ ] Complete final promotion validation against data/build gates.
 
 ## Skilled Work Experience
 
@@ -30,7 +31,7 @@ Current INZ guidance requires a skilled role/job offer, the applicable wage mult
 
 ## Trades and Technician
 
-Current INZ guidance requires an eligible trades/technician occupation, relevant qualification and qualifying post-qualification experience including New Zealand skilled work. Overseas qualification treatment differs from New Zealand qualification treatment after the 24 August 2026 changes. citeturn0search0turn0search2
+Current INZ guidance requires an eligible trades/technician occupation, relevant qualification and qualifying post-qualification experience including New Zealand skilled work. The current INZ route page states at least 4 years of post-qualification work experience, including at least 18 months of skilled work experience in New Zealand. Overseas and New Zealand qualification-credit treatment differs after the 24 August 2026 changes. citeturn0search1turn0search2
 
 ### Promotion gates
 - [x] Core eligibility/process/financial evidence.
@@ -38,6 +39,10 @@ Current INZ guidance requires an eligible trades/technician occupation, relevant
 - [ ] Complete qualification recognition/exception matrix.
 - [ ] Encode NZ 120-credit rule and overseas exception distinction.
 - [ ] Add occupation + qualification regression tests.
+
+## Critical implementation distinction
+
+The product must distinguish **policy eligibility**, **evidence sufficiency**, and **promotion readiness**. A route can have authoritative core evidence while still remaining `research_required` because an occupation matrix, exception matrix, regression coverage, or final validation gate is incomplete.
 
 ## Important distinction
 
