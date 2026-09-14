@@ -2,9 +2,10 @@
 
 **Started:** September 5, 2026  
 **Status:** Active — P0 execution  
-**Priority:** P0
+**Priority:** P0  
+**Delivery plan:** `docs/sprints/P0_DELIVERY_PLAN.md`
 
-The original blueprint remains intact. Execution order is trust-first: authoritative evidence, pathway architecture, recommendation safety, automated quality gates, then acquisition and scale.
+The original blueprint remains intact. Execution order is trust-first: authoritative evidence, pathway architecture, recommendation safety, automated quality gates, then release/deployment and acquisition.
 
 ## Current checkpoint
 
@@ -13,12 +14,69 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - Exact legal subroutes remain outside the canonical 52 until promotion.
 - Candidate evidence is bound to exact subroute IDs; parent-pathway evidence cannot satisfy a child-route promotion gate.
 - Australia subclass 189 remains research_required because visa-specific financial/material verification is unresolved.
-- New Zealand SMC now has exact evidence for all three child routes plus a dedicated 2026 promotion matrix; points-composition, occupation/registration and qualification/IQA evidence gates are represented. Only final promotion validation remains for the Points-based candidate; the other two child-route matrices remain open. Current INZ guidance confirms three distinct SMC pathways and the one-primary-category points rule. citeturn0search2turn0search1
-- Austria Other Key Workers now has a dedicated application/evidence matrix; points regression and final authority/process validation remain open.
-- Italy 2026 Flussi now has a dedicated promotion matrix; employer/nulla-osta, sector/country, compensation and applicant evidence remain open.
+- New Zealand SMC has exact evidence for all three child routes plus a dedicated 2026 promotion matrix. Points-based is at final promotion validation; Skilled Work Experience and Trades & Technician still have route-specific matrix/regression work open.
+- Austria Other Key Workers has a dedicated application/evidence matrix; points regression and final authority/process validation remain open.
+- Italy 2026 Flussi has a dedicated promotion matrix; employer/nulla-osta, sector/country, compensation and applicant evidence remain open.
 - No umbrella route has been promoted from narrower evidence.
-- Latest commits still require fresh CI verification; no unreported green status is assumed.
-- Production remains blocked because the authoritative Netlify origin has not been independently verified.
+- CI status must be freshly verified for the current head; no unreported green status is assumed.
+- Production remains blocked until the authoritative Netlify origin is independently verified.
+
+## P0 delivery sprint map
+
+The remaining work is now organized into bounded delivery sprints. Independent work can proceed concurrently inside each sprint; a sprint closes only when its exit gate is verified.
+
+### P0-S1 — Exact Pathway Closure — ACTIVE
+
+- [ ] Australia 189 visa-specific financial/material verification.
+- [ ] NZ Points-based final promotion validation.
+- [ ] NZ Skilled Work Experience red/amber matrix + wage/evidence regression.
+- [ ] NZ Trades & Technician occupation/qualification matrix + regression.
+- [ ] Austria Other Key Workers applicant-document matrix + points tests + promotion validation.
+- [ ] Italy 2026 Flussi employer/nulla-osta + sector/country + compensation/documentary + applicant evidence matrices.
+
+**Exit:** all current exact-route promotion gates are resolved or explicitly blocked by authoritative evidence; tests/docs are reconciled.
+
+### P0-S2 — Remaining-Country Evidence Closure — QUEUED
+
+- [ ] Audit all 24 research-required canonical pathways.
+- [ ] Prioritize remaining evidence batches by user value, legal stability, evidence availability and recommendation impact.
+- [ ] Add exact primary-source material evidence and review dates.
+- [ ] Promote only routes meeting the exact material-field gate.
+- [ ] Document unresolved material gaps rather than filling them with estimates.
+
+**Exit:** each remaining research-required route has either a complete promotion package or an explicit material evidence gap.
+
+### P0-S3 — Data / Recommendation Quality Gate — QUEUED
+
+- [ ] `npm run data:validate`.
+- [ ] Evidence registry, pathway-boundary and recommendation-safety tests.
+- [ ] Canonical registry/evidence-ID reconciliation.
+- [ ] Build + generated-output integrity verification.
+- [ ] Lint/static checks.
+- [ ] Record CI availability accurately.
+
+**Exit:** validated current tree with reproducible verification evidence and no unsafe recommendation regression.
+
+### P0-S4 — Browser / Release Gate — QUEUED
+
+- [ ] Browser/E2E verification of generated routes.
+- [ ] Deep-link, asset, calculator and recommendation-flow verification.
+- [ ] Generated SEO metadata, accessibility smoke and sitemap/robots verification.
+- [ ] Resolve or explicitly block on release-critical browser/runtime defects.
+
+**Exit:** representative production flows are verified against generated output.
+
+### P0-S5 — Deployment Verification & P0 Exit — QUEUED
+
+- [ ] Identify authoritative Netlify project/site and production hostname; never guess.
+- [ ] Verify deployed commit/version against `main`.
+- [ ] Production smoke: deep links, assets, data, calculator, recommendations.
+- [ ] Restore canonical/Open Graph/sitemap absolute URLs only after origin verification.
+- [ ] Audit CSP against actual deployed third-party inventory.
+- [ ] Resolve repository hardening issue #2 and establish appropriate `main` protection/check policy.
+- [ ] Reconcile roadmap, active sprint and release verification and close P0.
+
+**Exit:** authoritative production origin verified, production smoke passes, security/SEO release gates are reconciled, and Phase 0 P0 exit is explicitly recorded.
 
 ## Latest completed wave
 
@@ -26,38 +84,9 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - [x] Added exact New Zealand Points-based eligibility, financial/wage and process evidence.
 - [x] Added New Zealand occupation/registration and qualification/IQA exception evidence based on current official guidance.
 - [x] Added deterministic New Zealand SMC points-composition regression coverage and removed that item from the candidate's missing-material gate.
-- [x] Reconciled SMC documentation with current 24 August 2026 rules, including the NZ-vs-overseas Trades/Technician qualification-credit distinction.
+- [x] Reconciled SMC documentation with current 2026 rules, including the NZ-vs-overseas Trades/Technician qualification-credit distinction.
 - [x] Made candidate material gaps explicit and strengthened regression coverage so missing fields cannot silently masquerade as complete evidence.
 - [x] Preserved conservative recommendation behavior: research-required subroutes remain non-recommendable until promoted.
-
-## P0 remaining
-
-### Evidence / pathway architecture
-- [ ] Australia subclass 189 visa-specific financial/material verification.
-- [ ] NZ Points-based final promotion validation.
-- [ ] NZ Skilled Work Experience red/amber matrix and wage/evidence regression.
-- [ ] NZ Trades & Technician occupation/qualification matrix and regression.
-- [ ] Austria Other Key Workers applicant-document matrix, points calculation tests and promotion validation.
-- [ ] Italy employer/nulla-osta matrix, sector/country quota matrix, compensation/documentary matrix and applicant evidence matrix.
-- [ ] Continue remaining-country evidence batches using the same exact-route gate.
-
-### Quality / production
-- [ ] Run `npm run data:validate` against the current tree.
-- [ ] Run the evidence/unit test suite including exact-subroute boundary and explicit-gap tests.
-- [ ] Run build, generated-output verification, SEO/accessibility verification and lint.
-- [ ] Identify authoritative Netlify site/project and hostname; do not guess.
-- [ ] Run deployed-site verification against the verified origin.
-- [ ] Restore canonical/Open Graph/sitemap absolute URLs only after origin verification.
-- [ ] Resolve repository hardening issue #2 and establish appropriate `main` protection/check policy.
-
-## P1 after P0
-
-- Programmatic SEO hardening after production origin verification.
-- Comparison UX and recommendation polish.
-- Editorial-page SEO audit.
-- Privacy-aware analytics/consent controls.
-- CSP refinement.
-- Newsletter, affiliate and partnership infrastructure.
 
 ## Definition of Done
 
