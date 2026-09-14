@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": [
+    {
+      "id": "AU-189-eligibility-exact-2026-09-14",
+      "countryId": "AU",
+      "pathwayId": "AU-189-points-tested",
+      "field": "eligibility",
+      "claim": "The Skilled Independent visa (subclass 189), Points-tested stream, requires an Expression of Interest before invitation, an occupation available to the visa, English and skills-assessment information, and at least 65 points to be eligible for invitation. A score of 65 does not guarantee an invitation.",
+      "sourceAuthority": "Australian Department of Home Affairs",
+      "sourceUrl": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/expression-of-interest",
+      "jurisdiction": "Australia",
+      "effectiveDate": "2026-09-14",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Exact subclass 189 evidence; not used to promote subclasses 190/491 or the AU-skilled umbrella.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "AU-189-finance-gap-2026-09-14",
+      "countryId": "AU",
+      "pathwayId": "AU-189-points-tested",
+      "field": "financial-requirement",
+      "claim": "Current official SkillSelect guidance establishes points, occupation, English and skills-assessment requirements but the reviewed material does not establish a single subclass-189 proof-of-funds amount that can safely be recorded as a universal visa-specific financial requirement. Financial verification therefore remains an explicit research gap and is not inferred from general migration guidance.",
+      "sourceAuthority": "Australian Department of Home Affairs",
+      "sourceUrl": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/expression-of-interest",
+      "jurisdiction": "Australia",
+      "effectiveDate": "2026-09-14",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Explicit evidence-gap finding from current official material. No proof-of-funds amount is invented.",
+      "confidence": "medium",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "AU-189-process-exact-2026-09-14",
+      "countryId": "AU",
+      "pathwayId": "AU-189-points-tested",
+      "field": "process",
+      "claim": "For subclass 189, the applicant submits an Expression of Interest through SkillSelect, may receive an invitation if selected, and then has 60 days from invitation to submit the visa application online through ImmiAccount. The applicant must satisfy the visa requirements at application.",
+      "sourceAuthority": "Australian Department of Home Affairs",
+      "sourceUrl": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/expression-of-interest",
+      "jurisdiction": "Australia",
+      "effectiveDate": "2026-09-14",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Exact subclass 189 processing evidence; invitation probability and processing-time claims are intentionally excluded.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    }
+  ]
+}
