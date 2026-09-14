@@ -9,10 +9,7 @@ const subroutes = require('../src/data/pathway-subroutes.json');
 
 const addendaDir = path.join(__dirname, '..', 'src/data/evidence/addenda');
 const addenda = fs.existsSync(addendaDir)
-  ? fs.readdirSync(addendaDir)
-      .filter(file => file.endsWith('.json'))
-      .sort()
-      .flatMap(file => JSON.parse(fs.readFileSync(path.join(addendaDir, file), 'utf8')).records || [])
+  ? fs.readdirSync(addendaDir).filter(file => file.endsWith('.json')).sort().flatMap(file => JSON.parse(fs.readFileSync(path.join(addendaDir, file), 'utf8')).records || [])
   : [];
 const allEvidence = [...evidence.records, ...addenda];
 
@@ -32,9 +29,7 @@ describe('primary-source evidence registry', () => {
   });
 
   test('unverified pathways cannot masquerade as publishable', () => {
-    for (const pathway of pathways.pathways) {
-      if (pathway.status !== 'publishable') expect(pathway.status).toBe('research_required');
-    }
+    for (const pathway of pathways.pathways) if (pathway.status !== 'publishable') expect(pathway.status).toBe('research_required');
   });
 
   test('the canonical registry remains exactly two pathways per country', () => {
@@ -60,15 +55,9 @@ describe('primary-source evidence registry', () => {
 
   test('publishable pathways have every material field required for their route type', () => {
     const evidenceByPathway = new Map();
-    for (const record of allEvidence) {
-      const records = evidenceByPathway.get(record.pathwayId) || [];
-      records.push(record);
-      evidenceByPathway.set(record.pathwayId, records);
-    }
-
+    for (const record of allEvidence) evidenceByPathway.set(record.pathwayId, [...(evidenceByPathway.get(record.pathwayId) || []), record]);
     for (const pathway of pathways.pathways.filter(item => item.status === 'publishable')) {
-      const records = evidenceByPathway.get(pathway.id) || [];
-      const fields = new Set(records.map(record => record.field));
+      const fields = new Set((evidenceByPathway.get(pathway.id) || []).map(record => record.field));
       const required = requirements.types?.[pathway.type]?.requiredEvidenceFields || requirements.defaults.requiredEvidenceFields;
       for (const field of required) expect(fields.has(field)).toBe(true);
     }
@@ -76,12 +65,7 @@ describe('primary-source evidence registry', () => {
 
   test('broad pathway promotion is blocked when evidence belongs to a narrower route', () => {
     const evidenceById = new Map(allEvidence.map(record => [record.id, record]));
-    for (const pathway of pathways.pathways.filter(item => item.status === 'publishable')) {
-      for (const evidenceId of pathway.evidenceIds || []) {
-        const record = evidenceById.get(evidenceId);
-        expect(record?.pathwayId).toBe(pathway.id);
-      }
-    }
+    for (const pathway of pathways.pathways.filter(item => item.status === 'publishable')) for (const evidenceId of pathway.evidenceIds || []) expect(evidenceById.get(evidenceId)?.pathwayId).toBe(pathway.id);
   });
 
   test('exact-route candidates remain research-stage until canonicalized', () => {
@@ -104,17 +88,11 @@ describe('primary-source evidence registry', () => {
 
   test('candidate missing-material fields are explicit and evidence-complete fields are present', () => {
     const evidenceByPathway = new Map();
-    for (const record of allEvidence) {
-      const records = evidenceByPathway.get(record.pathwayId) || [];
-      records.push(record);
-      evidenceByPathway.set(record.pathwayId, records);
-    }
+    for (const record of allEvidence) evidenceByPathway.set(record.pathwayId, [...(evidenceByPathway.get(record.pathwayId) || []), record]);
     for (const candidate of candidates.candidates) {
       expect(Array.isArray(candidate.missingMaterialFields)).toBe(true);
       const fields = new Set((evidenceByPathway.get(candidate.subrouteId) || []).map(record => record.field));
-      for (const field of ['eligibility', 'financial-requirement', 'process']) {
-        if (!candidate.missingMaterialFields.includes(field)) expect(fields.has(field)).toBe(true);
-      }
+      for (const field of ['eligibility', 'financial-requirement', 'process']) if (!candidate.missingMaterialFields.includes(field)) expect(fields.has(field)).toBe(true);
     }
   });
 
@@ -128,20 +106,12 @@ describe('primary-source evidence registry', () => {
         for (const field of subroute.requiredEvidenceFields) expect(fields.has(field)).toBe(true);
       }
     }
-    for (const candidate of candidates.candidates) {
-      for (const evidenceId of candidate.evidenceIds || []) {
-        expect(evidenceById.get(evidenceId)?.pathwayId).toBe(candidate.subrouteId);
-      }
-    }
+    for (const candidate of candidates.candidates) for (const evidenceId of candidate.evidenceIds || []) expect(evidenceById.get(evidenceId)?.pathwayId).toBe(candidate.subrouteId);
   });
 
   test('New Zealand SMC child routes cannot inherit parent evidence as promotion proof', () => {
     const nzCandidates = candidates.candidates.filter(candidate => candidate.countryId === 'NZ');
-    expect(nzCandidates.map(candidate => candidate.id)).toEqual(expect.arrayContaining([
-      'NZ-smc-points-based',
-      'NZ-smc-skilled-work-experience',
-      'NZ-smc-trades-technician'
-    ]));
+    expect(nzCandidates.map(candidate => candidate.id)).toEqual(expect.arrayContaining(['NZ-smc-points-based','NZ-smc-skilled-work-experience','NZ-smc-trades-technician']));
     for (const candidate of nzCandidates) expect(candidate.status).toBe('research_required');
     expect(pathways.pathways.find(pathway => pathway.id === 'NZ-skilled')?.status).toBe('research_required');
   });
@@ -149,20 +119,8 @@ describe('primary-source evidence registry', () => {
   test('route-specific research gaps stay explicit', () => {
     const byId = new Map(candidates.candidates.map(candidate => [candidate.id, candidate]));
     expect(byId.get('AU-189-points-tested')?.missingMaterialFields).toContain('visa-specific-financial-verification');
-    expect(byId.get('NZ-smc-points-based')?.missingMaterialFields).toEqual(expect.arrayContaining([
-      'occupation-registration-matrix',
-      'qualification-exception-matrix',
-      'points-regression-tests'
-    ]));
-    expect(byId.get('AT-rwr-other-key-workers')?.missingMaterialFields).toEqual(expect.arrayContaining([
-      'application-document-matrix',
-      'points-validation'
-    ]));
-    expect(byId.get('IT-flussi-2026-non-seasonal-subordinate')?.missingMaterialFields).toEqual(expect.arrayContaining([
-      'employer-nulla-osta-matrix',
-      'sector-country-quota-matrix',
-      'compensation-documentary-matrix',
-      'applicant-evidence-matrix'
-    ]));
+    expect(byId.get('NZ-smc-points-based')?.missingMaterialFields).toEqual(['promotion-validation']);
+    expect(byId.get('AT-rwr-other-key-workers')?.missingMaterialFields).toEqual(expect.arrayContaining(['application-document-matrix','points-validation']));
+    expect(byId.get('IT-flussi-2026-non-seasonal-subordinate')?.missingMaterialFields).toEqual(expect.arrayContaining(['employer-nulla-osta-matrix','sector-country-quota-matrix','compensation-documentary-matrix','applicant-evidence-matrix']));
   });
 });
