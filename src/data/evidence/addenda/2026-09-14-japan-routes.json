@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": [
+    {
+      "id": "JP-student-finance-2026-09-14",
+      "countryId": "JP",
+      "pathwayId": "JP-student",
+      "field": "financial-requirement",
+      "claim": "For a Japan Student status application, applicants may be asked to provide evidence that they can cover study-period expenses; the official Study in Japan guidance lists a sponsor savings-balance certificate, prior-year income certificate and documentation identifying the source of funds as examples of financial evidence.",
+      "sourceAuthority": "Study in Japan / Japan Student Services Organization",
+      "sourceUrl": "https://www.studyinjapan.go.jp/en/planning/immigration-procedures/",
+      "jurisdiction": "Japan",
+      "effectiveDate": "2026-09-14",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current official Study in Japan immigration-procedures guidance; recorded as a documentary evidence requirement rather than a fixed universal yen threshold.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "JP-student-process-2026-09-14",
+      "countryId": "JP",
+      "pathwayId": "JP-student",
+      "field": "process",
+      "claim": "For international students, an authorised Certificate of Eligibility is generally applied for at a regional immigration services bureau in Japan by the student or a proxy such as the accepting school; after the COE is issued, the applicant can submit the visa application to a Japanese embassy or consulate.",
+      "sourceAuthority": "Study in Japan / Japan Student Services Organization",
+      "sourceUrl": "https://www.studyinjapan.go.jp/en/planning/immigration-procedures/",
+      "jurisdiction": "Japan",
+      "effectiveDate": "2026-09-14",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current official Study in Japan immigration-procedures guidance.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "JP-engineer-finance-2026-09-14",
+      "countryId": "JP",
+      "pathwayId": "JP-engineer",
+      "field": "financial-requirement",
+      "claim": "Under Japan's Engineer/Specialist in Humanities/International Services status criteria, remuneration must be equal to or greater than the remuneration a Japanese national would receive for the same work; this is a pay-parity condition, not a single universal published salary threshold.",
+      "sourceAuthority": "Immigration Services Agency of Japan",
+      "sourceUrl": "https://www.moj.go.jp/isa/applications/status/gijinkoku",
+      "jurisdiction": "Japan",
+      "effectiveDate": "2026-09-14",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of the Immigration Services Agency's current Engineer/Specialist in Humanities/International Services status and application guidance, with the remuneration criterion recorded without inventing a numeric salary floor.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "JP-engineer-process-2026-09-14",
+      "countryId": "JP",
+      "pathwayId": "JP-engineer",
+      "field": "process",
+      "claim": "Japan provides a dedicated Immigration Services Agency application route for Engineer/Specialist in Humanities/International Services, with required documents varying by employer category and application type; the agency lists certificate-of-eligibility and residence-status procedures for this status.",
+      "sourceAuthority": "Immigration Services Agency of Japan",
+      "sourceUrl": "https://www.moj.go.jp/isa/applications/status/gijinkoku",
+      "jurisdiction": "Japan",
+      "effectiveDate": "2026-09-14",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of the current Immigration Services Agency status-specific application page and its document requirements.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    }
+  ]
+}
