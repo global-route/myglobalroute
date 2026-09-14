@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "policy": "Subroutes are exact legal scopes nested under canonical pathway families. They may be researched and scored independently, but cannot inherit parent evidence and do not count toward the 52-pathway canonical registry until promoted.",
+  "subroutes": [
+    {
+      "id": "AU-189-points-tested",
+      "countryId": "AU",
+      "parentPathwayId": "AU-skilled",
+      "type": "work",
+      "name": "Skilled Independent visa (subclass 189) — Points-tested stream",
+      "status": "research_required",
+      "requiredEvidenceFields": ["eligibility", "financial-requirement", "process"]
+    },
+    {
+      "id": "NZ-smc-points-based",
+      "countryId": "NZ",
+      "parentPathwayId": "NZ-skilled",
+      "type": "work",
+      "name": "Skilled Migrant Category — Points-based pathway",
+      "status": "research_required",
+      "requiredEvidenceFields": ["eligibility", "financial-requirement", "process"]
+    },
+    {
+      "id": "NZ-smc-skilled-work-experience",
+      "countryId": "NZ",
+      "parentPathwayId": "NZ-skilled",
+      "type": "work",
+      "name": "Skilled Migrant Category — Skilled Work Experience pathway",
+      "status": "research_required",
+      "requiredEvidenceFields": ["eligibility", "financial-requirement", "process"]
+    },
+    {
+      "id": "NZ-smc-trades-technician",
+      "countryId": "NZ",
+      "parentPathwayId": "NZ-skilled",
+      "type": "work",
+      "name": "Skilled Migrant Category — Trades and Technician pathway",
+      "status": "research_required",
+      "requiredEvidenceFields": ["eligibility", "financial-requirement", "process"]
+    },
+    {
+      "id": "AT-rwr-other-key-workers",
+      "countryId": "AT",
+      "parentPathwayId": "AT-red-white-red",
+      "type": "work",
+      "name": "Red-White-Red Card — Other Key Workers",
+      "status": "research_required",
+      "requiredEvidenceFields": ["eligibility", "financial-requirement", "process"]
+    },
+    {
+      "id": "IT-flussi-2026-non-seasonal-subordinate",
+      "countryId": "IT",
+      "parentPathwayId": "IT-work",
+      "type": "work",
+      "name": "2026 non-seasonal subordinate work — Flussi route",
+      "status": "research_required",
+      "requiredEvidenceFields": ["eligibility", "financial-requirement", "process"]
+    }
+  ]
+}
