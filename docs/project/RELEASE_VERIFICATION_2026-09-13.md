@@ -1,15 +1,18 @@
-# Release Verification — 2026-09-13
+# Release Verification — 2026-09-13 / continued 2026-09-14
 
 ## Current result
-**Release remains blocked, but the evidence-gated product core has advanced materially.** The repository has previously passed the Quality Gate, browser smoke and lint; the latest evidence/pathway commits require fresh CI verification. Deployment identity, final production verification and repository hardening still prevent release closure.
+**Release remains blocked, but the evidence-gated product core has advanced materially.** The repository has previously passed the Quality Gate, browser smoke and lint; the latest evidence/pathway/test/documentation commits require fresh CI verification. Deployment identity, final production verification and repository hardening still prevent release closure.
 
 ## Confirmed
 - 26 countries / 52 pathway records remain the canonical migration registry.
 - The evidence model requires field-level primary-source support before publication.
-- **25 pathways are now promoted to `publishable` with explicit `evidenceIds`; 27 remain `research_required`.**
-- The evidence tree now contains **90 records** across the primary registry and dated addenda.
-- The latest waves promoted Finland Study, Sweden Standard Work Permit, Norway Skilled Worker with an Employer in Norway and Italy Higher-Education Study after route-scope review.
+- **27 pathways are now promoted to `publishable` with explicit `evidenceIds`; 25 remain `research_required`.**
+- The evidence tree now contains **94 records** across the primary registry and dated addenda.
+- The latest continuation wave promoted Japan Student and Japan Engineer/Specialist in Humanities/International Services only after exact-route evidence coverage.
+- Japan Student financial evidence is recorded as documentary proof of ability to cover expenses rather than an invented universal yen threshold.
+- Japan Engineer financial evidence records the official remuneration-pay-parity rule rather than inventing a universal salary floor.
 - The pathway policy explicitly requires pathway-record scope to match evidence scope.
+- Regression coverage now resolves every publishable evidence ID, enforces country/pathway scope equality, and checks material-field completeness.
 - A manual production-smoke workflow requires an explicitly supplied authoritative `production_url` and does not guess the hostname.
 - Deployed-site verification discovers the deployed country/pathway registries and checks every generated country and pathway detail route.
 - Previous Playwright browser smoke passed all four core page tests.
@@ -22,13 +25,13 @@
 - **Prior Repository Quality Gate:** PASS.
 - **Prior Browser smoke:** PASS — 4/4 core page tests.
 - **Prior Lint:** PASS.
-- **Latest commit CI:** NOT YET VERIFIED — the latest evidence/pathway/documentation commits need a fresh workflow run.
+- **Latest commit CI:** NOT YET VERIFIED — the latest evidence/pathway/test/documentation commits need a fresh workflow run.
 - **Production deployment verification:** NOT RUN — authoritative Netlify origin is still unverified.
 - **SEO absolute-origin restoration:** intentionally deferred until deployment origin is verified.
-- **Data completeness:** NOT COMPLETE — 25 publishable pathways, 27 still research-required.
+- **Data completeness:** NOT COMPLETE — 27 publishable pathways, 25 still research-required.
 
 ## Remaining release blockers
-1. Add regression tests preventing broad pathway promotion when evidence covers a narrower legal sub-route.
+1. Reconcile the P0 legal-subroute review and active checkpoint with the new 27-pathway publishable set.
 2. Continue primary-source evidence batches for the remaining research-required pathways.
 3. Establish the authoritative Netlify site/project and deployed hostname; do not use historical `*.netlify.app` documentation as proof.
 4. Run deployed-site verification against that verified origin.
