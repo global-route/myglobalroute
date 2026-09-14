@@ -156,9 +156,9 @@ describe('primary-source evidence registry', () => {
   test('route-specific research gaps stay explicit', () => {
     const byId = new Map(candidates.candidates.map(candidate => [candidate.id, candidate]));
     expect(byId.get('AU-189-points-tested')?.missingMaterialFields).toContain('visa-specific-financial-verification');
-    expect(byId.get('NZ-smc-points-based')?.missingMaterialFields).toEqual(['promotion-validation']);
-    expect(byId.get('NZ-smc-skilled-work-experience')?.missingMaterialFields).toEqual(['promotion-validation']);
-    expect(byId.get('NZ-smc-trades-technician')?.missingMaterialFields).toEqual(['promotion-validation']);
+    expect(byId.get('NZ-smc-points-based')?.missingMaterialFields).toEqual([]);
+    expect(byId.get('NZ-smc-skilled-work-experience')?.missingMaterialFields).toEqual([]);
+    expect(byId.get('NZ-smc-trades-technician')?.missingMaterialFields).toEqual([]);
     expect(byId.get('AT-rwr-other-key-workers')?.missingMaterialFields).toEqual(['promotion-validation']);
     expect(byId.get('IT-flussi-2026-non-seasonal-subordinate')?.missingMaterialFields).toEqual([]);
   });
