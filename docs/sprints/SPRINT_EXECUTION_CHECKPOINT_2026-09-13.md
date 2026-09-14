@@ -3,30 +3,38 @@
 ## Objective
 Drive the Production Integrity & Intelligence Core sprint toward closure without weakening the evidence gate or inventing a production hostname.
 
+## Current checkpoint
+
+- Canonical registry remains **26 countries / 52 pathways**.
+- **90 evidence records** are represented across the primary registry and dated addenda.
+- **25 pathways are publishable; 27 remain research-required.**
+- Latest completed evidence/promotion wave added Finland Study, Sweden Work, Norway Skilled Worker with an employer in Norway, and Italy Higher-Education Study.
+- Pathway records were narrowed where needed so evidence scope matches product scope.
+- The P0 legal-subroute review is reconciled to the current 25-pathway publishable set.
+- Previous Quality Gate, browser smoke and lint runs were successful, but the newest commits require fresh CI verification.
+- Production remains blocked until an authoritative Netlify origin is independently verified.
+
 ## Completed in this execution wave
 
-- Primary-source evidence batches now cover priority material fields for Germany, France, Spain, UK, Ireland, Finland, Italy, Norway, Australia, Canada, New Zealand, Austria, Switzerland, Portugal, Sweden and Luxembourg.
-- Seventeen pathways remain promoted only after explicit material evidence review and `evidenceIds` attachment; the new Sweden/Luxembourg evidence is intentionally not promoted until the pathway file is updated and validated against the new evidence.
-- Quality Gate run `34734636320` passed the current `main` commit through dependency audit, migration-data validation, unit tests, Eleventy build, generated-output verification and SEO/accessibility smoke verification.
-- The Quality Gate currently reports 26 countries, 52 pathways and 80 evidence records, with 32/52 pathways having some evidence, 23/52 materially covered, 17 publishable and 35 research-required.
-- Playwright browser smoke run `34734636297` passed all four core page tests against the current tree.
-- Dedicated JavaScript lint infrastructure and explicit ESLint configuration are present; the latest known lint run passed, and subsequent source changes remain subject to the workflow gate.
-- A manual production-smoke workflow accepts an explicitly supplied authoritative deployment origin.
-- Deployed-site smoke verification discovers the country/pathway registries from the deployed artifact and checks every generated country and pathway detail route rather than a small fixed route list.
-- Repository visibility and branch protection have been surfaced as explicit P0 hardening work; current GitHub state reports the repository as public and `main` as unprotected.
-- P0 issue #3 now tracks route-semantic refinement for broad pathway records whose evidence only covers narrower legal sub-routes.
-- Release-verification documentation is being synchronized with the current CI and evidence state.
+- Primary-source evidence covers priority material fields across the current country waves, including Finland, Sweden, Norway, Italy and Luxembourg.
+- Finland Study is promoted with explicit eligibility and financial evidence.
+- Sweden Standard Work Permit is promoted with explicit eligibility and current 2026 salary evidence.
+- Norway Skilled Worker with an Employer in Norway is promoted with explicit qualification/job-offer and employment-condition evidence.
+- Italy Higher-Education Study Visa is promoted with eligibility evidence paired with existing financial evidence.
+- Evidence records remain field-level and dated; no unsupported approval rates, generalized costs or timeless salary claims are introduced.
+- The canonical 26-country / 52-pathway blueprint remains intact; unsupported pathways remain `research_required`.
 
 ## Remaining P0 closure sequence
 
-1. **Evidence promotion:** promote newly fully covered pathways only after the pathway record scope exactly matches the evidence. Sweden Study and Luxembourg Salaried Worker are the next clean candidates; Finland Work requires semantic narrowing to the TTOL route before promotion.
-2. **Legal sub-route review:** split or annotate generic pathway records where the evidence actually describes a narrower legal route; apply the same rule to Austria Red-White-Red and New Zealand Skilled before promotion.
-3. **Test coverage:** add regression coverage that prevents a broad pathway from becoming publishable when evidence only covers a narrower sub-route.
-4. **Deployment:** identify the authoritative Netlify site and hostname. Historical names are not accepted as evidence.
-5. **Production smoke:** run `npm run deploy:verify` against the verified origin and retain the result as release evidence.
-6. **SEO origin:** only after the authoritative origin is confirmed, restore canonical/Open Graph/sitemap absolute URLs from one configuration source.
-7. **Security posture:** resolve hardening issue #2 by confirming intended repository visibility and establishing an appropriate `main` protection/check policy.
+1. **Regression tests:** add coverage preventing a broad pathway from becoming publishable when evidence only covers a narrower legal sub-route.
+2. **Evidence promotion:** continue exact-route batches for Italy Work, Japan Student/Engineer and other high-value routes.
+3. **Legal sub-route review:** narrow or split generic records such as CA Express Entry, AU Skilled, NZ Skilled and AT Red-White-Red before promotion.
+4. **CI:** re-run Quality Gate, lint, build verification and browser smoke against the latest commits.
+5. **Deployment:** identify the authoritative Netlify site and hostname. Historical names are not accepted as evidence.
+6. **Production smoke:** run `npm run deploy:verify` against the verified origin and retain the result as release evidence.
+7. **SEO origin:** only after authoritative origin confirmation, restore canonical/Open Graph/sitemap absolute URLs from one configuration source.
+8. **Security posture:** resolve hardening issue #2 by confirming intended repository visibility and establishing an appropriate `main` protection/check policy.
 
 ## Definition of Done
 
-The sprint is not closed until implementation, documentation and objective verification agree. A successful CI run proves repository quality only; it does not prove deployment health or data completeness across all 26 countries.
+The sprint is not closed until implementation, documentation and objective verification agree. A successful CI run proves repository quality only; it does not prove deployment health or complete data coverage across all 26 countries.
