@@ -102,6 +102,22 @@ describe('primary-source evidence registry', () => {
     }
   });
 
+  test('candidate missing-material fields are explicit and evidence-complete fields are present', () => {
+    const evidenceByPathway = new Map();
+    for (const record of allEvidence) {
+      const records = evidenceByPathway.get(record.pathwayId) || [];
+      records.push(record);
+      evidenceByPathway.set(record.pathwayId, records);
+    }
+    for (const candidate of candidates.candidates) {
+      expect(Array.isArray(candidate.missingMaterialFields)).toBe(true);
+      const fields = new Set((evidenceByPathway.get(candidate.subrouteId) || []).map(record => record.field));
+      for (const field of ['eligibility', 'financial-requirement', 'process']) {
+        if (!candidate.missingMaterialFields.includes(field)) expect(fields.has(field)).toBe(true);
+      }
+    }
+  });
+
   test('exact subroutes cannot inherit parent evidence as promotion proof', () => {
     const evidenceById = new Map(allEvidence.map(record => [record.id, record]));
     for (const subroute of subroutes.subroutes) {
