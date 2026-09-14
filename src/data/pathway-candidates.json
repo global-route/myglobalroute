@@ -8,9 +8,10 @@
       "parentPathwayId": "AU-skilled",
       "name": "Skilled Independent visa (subclass 189) — Points-tested stream",
       "status": "research_required",
-      "evidenceIds": ["AU-189-eligibility-2026-09-14", "AU-189-process-2026-09-14"],
-      "missingMaterialFields": ["financial-requirement"],
-      "scopeNote": "Do not promote the AU-skilled umbrella or infer subclass 190/491 eligibility from this candidate."
+      "evidenceIds": ["AU-189-eligibility-exact-2026-09-14", "AU-189-finance-gap-2026-09-14", "AU-189-process-exact-2026-09-14"],
+      "missingMaterialFields": ["visa-specific-financial-verification"],
+      "scopeNote": "Exact subclass 189 scope. Do not promote the AU-skilled umbrella or infer subclass 190/491 eligibility. The current financial record is an explicit research-gap finding, not a promotion proof.",
+      "subrouteId": "AU-189-points-tested"
     },
     {
       "id": "NZ-smc-skilled-work-experience",
@@ -18,8 +19,9 @@
       "parentPathwayId": "NZ-skilled",
       "name": "Skilled Migrant Category — Skilled Work Experience pathway",
       "status": "research_required",
-      "evidenceIds": ["NZ-smc-process-2026-09-14"],
-      "scopeNote": "Requires separate canonical route representation and complete eligibility/financial evidence, including occupation-list treatment and wage thresholds."
+      "evidenceIds": ["NZ-smc-skilled-work-experience-eligibility-2026-09-14", "NZ-smc-skilled-work-experience-finance-2026-09-14", "NZ-smc-skilled-work-experience-process-2026-09-14"],
+      "scopeNote": "Exact child route. Requires final occupation/exception validation and full promotion-gate testing before canonicalization.",
+      "subrouteId": "NZ-smc-skilled-work-experience"
     },
     {
       "id": "NZ-smc-trades-technician",
@@ -27,8 +29,9 @@
       "parentPathwayId": "NZ-skilled",
       "name": "Skilled Migrant Category — Trades and Technician pathway",
       "status": "research_required",
-      "evidenceIds": ["NZ-smc-process-2026-09-14"],
-      "scopeNote": "Requires eligible-occupation, qualification, work-experience, wage and application-evidence coverage before promotion."
+      "evidenceIds": ["NZ-smc-trades-technician-eligibility-2026-09-14", "NZ-smc-trades-technician-finance-2026-09-14", "NZ-smc-trades-technician-process-2026-09-14"],
+      "scopeNote": "Exact child route. Requires final eligible-occupation and qualification matrix validation before canonicalization.",
+      "subrouteId": "NZ-smc-trades-technician"
     },
     {
       "id": "AT-rwr-other-key-workers",
@@ -36,8 +39,9 @@
       "parentPathwayId": "AT-red-white-red",
       "name": "Red-White-Red Card — Other Key Workers",
       "status": "research_required",
-      "evidenceIds": [],
-      "scopeNote": "Exact sub-route candidate; do not treat evidence as proof for other Red-White-Red categories."
+      "evidenceIds": ["AT-rwr-other-key-workers-eligibility-exact-2026-09-14", "AT-rwr-other-key-workers-financial-2026-09-14", "AT-rwr-other-key-workers-process-exact-2026-09-14"],
+      "scopeNote": "Exact sub-route candidate; do not treat evidence as proof for other Red-White-Red categories.",
+      "subrouteId": "AT-rwr-other-key-workers"
     },
     {
       "id": "IT-flussi-2026-non-seasonal-subordinate",
@@ -45,8 +49,19 @@
       "parentPathwayId": "IT-work",
       "name": "2026 non-seasonal subordinate work — Flussi route",
       "status": "research_required",
+      "evidenceIds": ["IT-flussi-2026-nonseasonal-subordinate-eligibility-2026-09-14", "IT-flussi-2026-non-seasonal-subordinate-financial-2026-09-14", "IT-flussi-2026-non-seasonal-subordinate-process-exact-2026-09-14"],
+      "scopeNote": "Temporal 2026 quota/process candidate; employer nulla-osta, sector/country quota treatment and applicant-side evidence remain separate promotion gates.",
+      "subrouteId": "IT-flussi-2026-non-seasonal-subordinate"
+    },
+    {
+      "id": "NZ-smc-points-based",
+      "countryId": "NZ",
+      "parentPathwayId": "NZ-skilled",
+      "name": "Skilled Migrant Category — Points-based pathway",
+      "status": "research_required",
       "evidenceIds": [],
-      "scopeNote": "Temporal 2026 quota/process candidate; employer nulla-osta and applicant-side requirements remain separate evidence gates."
+      "scopeNote": "Canonical child-route candidate identified by current SMC architecture; full current eligibility, financial and process evidence remains to be collected before promotion.",
+      "subrouteId": "NZ-smc-points-based"
     }
   ]
 }
