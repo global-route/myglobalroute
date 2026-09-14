@@ -132,6 +132,23 @@ describe('primary-source evidence registry', () => {
     expect(trades?.claim).toContain('120-credit requirement');
   });
 
+  test('New Zealand SMC wage and qualification fixtures reject stale or generalized rules', () => {
+    const byId = new Map(allEvidence.map(record => [record.id, record]));
+    const wage = byId.get('NZ-smc-skilled-work-experience-wage-regression-2026-09-14');
+    const trades = byId.get('NZ-smc-trades-technician-occupation-qualification-matrix-2026-09-14');
+    expect(wage?.effectiveDate).toBe('2026-08-24');
+    expect(wage?.reviewAfter).toBe('2026-10-14');
+    expect(wage?.claim).toMatch(/NZD 35\.00\/hour/);
+    expect(wage?.claim).toMatch(/1\.1 times = NZD 38\.50\/hour/);
+    expect(wage?.claim).toMatch(/1\.2 times = NZD 42\.00\/hour/);
+    expect(wage?.claim).toMatch(/Earlier effective periods must use their corresponding historical threshold/);
+    expect(trades?.effectiveDate).toBe('2026-08-24');
+    expect(trades?.claim).toMatch(/Overseas Trade and Technician qualifications no longer need the former 120-credit requirement/);
+    expect(trades?.claim).toMatch(/New Zealand qualifications retain a 120-credit requirement/);
+    expect(trades?.claim).toMatch(/2\.5 years of relevant post-qualification experience/);
+    expect(trades?.claim).toMatch(/additional 1\.5 years of post-qualification skilled work experience in New Zealand/);
+  });
+
   test('route-specific research gaps stay explicit', () => {
     const byId = new Map(candidates.candidates.map(candidate => [candidate.id, candidate]));
     expect(byId.get('AU-189-points-tested')?.missingMaterialFields).toContain('visa-specific-financial-verification');
