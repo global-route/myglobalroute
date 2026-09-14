@@ -3,7 +3,8 @@
 **Started:** September 5, 2026  
 **Status:** Active — P0 execution  
 **Priority:** P0  
-**Delivery plan:** `docs/sprints/P0_DELIVERY_PLAN.md`
+**Delivery plan:** `docs/sprints/P0_DELIVERY_PLAN.md`  
+**Handover:** `docs/sprints/HANDOVER.md`
 
 The original blueprint remains intact. Execution order is trust-first: authoritative evidence, pathway architecture, recommendation safety, automated quality gates, then release/deployment and acquisition.
 
@@ -13,18 +14,18 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - **28 pathways are publishable; 24 remain research-required.**
 - Exact legal subroutes remain outside the canonical 52 until promotion.
 - Candidate evidence is bound to exact subroute IDs; parent-pathway evidence cannot satisfy a child-route promotion gate.
+- Current `main` head: `41d3c1337fa26c0a13512b5d65d1a20f9cb57b71` (`fix: complete NZ points-route evidence matrices`).
+- The latest exact-route correction completed the missing NZ Points-based occupation/registration and qualification/IQA exception evidence required by the validator. Fresh verification remains required before treating the quality gate as green.
 - Australia subclass 189 remains research_required because visa-specific financial/material verification is unresolved.
-- New Zealand SMC has exact evidence for all three child routes plus a dedicated 2026 promotion matrix. Points-based is at final promotion validation; Skilled Work Experience now has route-scoped occupation, direct-relevance and wage-regression evidence plus executable fixture guards; Trades & Technician now has route-scoped occupation/qualification evidence plus executable fixture guards. Final promotion validation remains open.
-- Austria Other Key Workers has a dedicated application/evidence matrix; points regression and final authority/process validation remain open.
-- Italy 2026 Flussi has a dedicated promotion matrix; employer/nulla-osta, sector/country, compensation and applicant evidence remain open.
-- No umbrella route has been promoted from narrower evidence.
-- A quality run on the previous head exposed real data-integrity issues: duplicate/superseded evidence batches, exact-subroute IDs not accepted by the validator, and a missing canonical CA-study eligibility record. Those issues have now been remediated in the current tree; fresh CI verification is required before marking the gate green.
-- Current `main` head is `c20a76d9b6cd7e5196891ed4d20601d63845a7f1`; Quality Gate and Browser Smoke are currently queued for this head.
+- New Zealand SMC has exact evidence for all three child routes plus a dedicated 2026 promotion matrix. Points-based, Skilled Work Experience and Trades & Technician remain research_required until their final promotion validations are completed; no umbrella route is promoted from narrower evidence.
+- Austria Other Key Workers remains research_required pending applicant-document/points validation and final authority/process validation.
+- Italy 2026 Flussi remains research_required pending deterministic employer/nulla-osta, sector/country, compensation/documentary and applicant evidence validation.
+- The current GitHub branch metadata shows `main` is unprotected; do not change protection automatically during handover, but retain repository hardening as a P0-S5 task.
 - Production remains blocked until the authoritative Netlify origin is independently verified.
 
 ## P0 delivery sprint map
 
-The remaining work is now organized into bounded delivery sprints. Independent work can proceed concurrently inside each sprint; a sprint closes only when its exit gate is verified.
+Independent work may proceed concurrently inside each sprint. A sprint closes only when its exit gate is verified; documentation must be reconciled after each delivery wave.
 
 ### P0-S1 — Exact Pathway Closure — ACTIVE
 
@@ -40,6 +41,7 @@ The remaining work is now organized into bounded delivery sprints. Independent w
 - [x] Data validator now recognizes exact subroute evidence scopes.
 - [x] Superseded duplicate evidence batches removed from the active evidence registry.
 - [x] Missing CA-study eligibility evidence restored with current Government of Canada source scope.
+- [x] NZ Points-based occupation/registration and qualification/IQA exception evidence added; candidate material-gap list reconciled.
 - [ ] Australia 189 visa-specific financial/material verification.
 - [ ] NZ Points-based final promotion validation.
 - [ ] NZ Skilled Work Experience final promotion validation.
@@ -66,7 +68,7 @@ The remaining work is now organized into bounded delivery sprints. Independent w
 - [ ] Canonical registry/evidence-ID reconciliation.
 - [ ] Build + generated-output integrity verification.
 - [ ] Lint/static checks.
-- [ ] Record CI availability accurately.
+- [ ] Record CI availability accurately; latest head still requires fresh verification evidence.
 
 **Exit:** validated current tree with reproducible verification evidence and no unsafe recommendation regression.
 
@@ -107,6 +109,11 @@ The remaining work is now organized into bounded delivery sprints. Independent w
 - [x] Restored missing CA-study eligibility evidence rather than weakening the publishable-pathway gate.
 - [x] Made candidate material gaps explicit and strengthened regression coverage so missing fields cannot silently masquerade as complete evidence.
 - [x] Preserved conservative recommendation behavior: research-required subroutes remain non-recommendable until promoted.
+- [x] Completed the latest NZ Points-based evidence-matrix correction at `41d3c1337fa26c0a13512b5d65d1a20f9cb57b71`.
+
+## Handover rule
+
+The next operator should start from the exact `main` head above, inspect verification status, then continue P0-S1 open gates before broadening P0-S2. Do not promote routes, infer financial requirements, or mark production tasks complete without current authoritative evidence.
 
 ## Definition of Done
 
