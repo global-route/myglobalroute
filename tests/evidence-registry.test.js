@@ -120,13 +120,17 @@ describe('primary-source evidence registry', () => {
     const byId = new Map(allEvidence.map(record => [record.id, record]));
     const standard = byId.get('NZ-smc-skilled-work-experience-wage-regression-2026-09-14');
     const occupation = byId.get('NZ-smc-skilled-work-experience-occupation-matrix-2026-09-14');
+    const directRelevance = byId.get('NZ-smc-skilled-work-experience-direct-relevance-2026-09-14');
     const trades = byId.get('NZ-smc-trades-technician-occupation-qualification-matrix-2026-09-14');
     expect(standard?.pathwayId).toBe('NZ-smc-skilled-work-experience');
     expect(occupation?.pathwayId).toBe('NZ-smc-skilled-work-experience');
+    expect(directRelevance?.pathwayId).toBe('NZ-smc-skilled-work-experience');
     expect(trades?.pathwayId).toBe('NZ-smc-trades-technician');
     expect(standard?.claim).toContain('NZD 38.50/hour');
     expect(standard?.claim).toContain('NZD 42.00/hour');
     expect(standard?.claim).toContain('5 months');
+    expect(directRelevance?.claim).toContain('directly relevant');
+    expect(directRelevance?.claim).toContain('Self-employment cannot be counted');
     expect(trades?.claim).toContain('2.5 years');
     expect(trades?.claim).toContain('1.5 years');
     expect(trades?.claim).toContain('120-credit requirement');
@@ -153,8 +157,8 @@ describe('primary-source evidence registry', () => {
     const byId = new Map(candidates.candidates.map(candidate => [candidate.id, candidate]));
     expect(byId.get('AU-189-points-tested')?.missingMaterialFields).toContain('visa-specific-financial-verification');
     expect(byId.get('NZ-smc-points-based')?.missingMaterialFields).toEqual(['promotion-validation']);
-    expect(byId.get('NZ-smc-skilled-work-experience')?.missingMaterialFields).toEqual(expect.arrayContaining(['direct-relevance-validation','promotion-validation']));
-    expect(byId.get('NZ-smc-trades-technician')?.missingMaterialFields).toEqual(expect.arrayContaining(['occupation-regression','qualification-regression','promotion-validation']));
+    expect(byId.get('NZ-smc-skilled-work-experience')?.missingMaterialFields).toEqual(['promotion-validation']);
+    expect(byId.get('NZ-smc-trades-technician')?.missingMaterialFields).toEqual(['promotion-validation']);
     expect(byId.get('AT-rwr-other-key-workers')?.missingMaterialFields).toEqual(expect.arrayContaining(['application-document-matrix','points-validation']));
     expect(byId.get('IT-flussi-2026-non-seasonal-subordinate')?.missingMaterialFields).toEqual(expect.arrayContaining(['employer-nulla-osta-matrix','sector-country-quota-matrix','compensation-documentary-matrix','applicant-evidence-matrix']));
   });
