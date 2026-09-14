@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": [
+    {
+      "id": "NZ-smc-process-2026-09-14",
+      "countryId": "NZ",
+      "pathwayId": "NZ-skilled",
+      "field": "process",
+      "claim": "The Skilled Migrant Category is a residence pathway administered by Immigration New Zealand and uses a skilled-job or job-offer and pathway-specific eligibility framework; applicants must satisfy the applicable residence application and evidence requirements in force for the selected SMC pathway.",
+      "sourceAuthority": "Immigration New Zealand",
+      "sourceUrl": "https://www.immigration.govt.nz/about-us/news-centre/changes-to-the-skilled-migrant-category-resident-visa-announced/",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-08-24",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current Immigration New Zealand SMC change guidance. The record deliberately avoids collapsing the separate SMC pathways into one universal eligibility formula.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    }
+  ]
+}
