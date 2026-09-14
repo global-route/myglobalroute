@@ -43,8 +43,8 @@ describe('New Zealand SMC exact-route promotion gates', () => {
       'eligibility',
       'financial-requirement',
       'process',
-      'direct-relevance',
-      'occupation-matrix',
+      'direct-relevance-validation',
+      'occupation-exception-matrix',
       'wage-regression'
     ]);
     const wage = evidenceById.get('NZ-smc-skilled-work-experience-wage-regression-2026-09-14');
