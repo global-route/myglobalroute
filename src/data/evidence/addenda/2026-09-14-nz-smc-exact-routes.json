@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": [
+    {
+      "id": "NZ-smc-skilled-work-experience-eligibility-2026-09-14",
+      "countryId": "NZ",
+      "pathwayId": "NZ-skilled",
+      "field": "eligibility",
+      "claim": "The Skilled Work Experience pathway is one of the current Skilled Migrant Category residence pathways. For occupations not on the red or amber lists, the published requirements include skilled work at ANZSCO skill level 1 to 3 and at least 5 years of directly relevant work experience, including 2 years in New Zealand earning at least 1.1 times the SMC median wage. Amber-list occupations have additional requirements, while red-list occupations are restricted to the existing Points-based pathway.",
+      "sourceAuthority": "Immigration New Zealand",
+      "sourceUrl": "https://www.immigration.govt.nz/about-us/news-centre/further-changes-to-the-skilled-migrant-category-to-come-into-effect-in-august-2026/",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-08-24",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current INZ SMC policy announcement and operational instructions. The evidence is route-specific and deliberately retained under the existing NZ-skilled umbrella until the application data model supports explicit SMC sub-route records.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "NZ-smc-trades-technician-eligibility-2026-09-14",
+      "countryId": "NZ",
+      "pathwayId": "NZ-skilled",
+      "field": "eligibility",
+      "claim": "The Trades and Technician pathway is a current Skilled Migrant Category residence pathway for specified skill level 1 to 3 trades and technician occupations. The published requirements include a relevant Level 4 or higher qualification and at least 4 years of directly relevant post-qualification experience, including 1.5 years in New Zealand earning at least the SMC median wage. The eligible occupation list is maintained in the immigration instructions.",
+      "sourceAuthority": "Immigration New Zealand",
+      "sourceUrl": "https://www.immigration.govt.nz/about-us/news-centre/further-changes-to-the-skilled-migrant-category-to-come-into-effect-in-august-2026/",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-08-24",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current INZ policy announcement and Appendix 23. This evidence is not used to promote the generic NZ-skilled record because the record still represents multiple SMC pathways.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "NZ-smc-route-process-2026-09-14",
+      "countryId": "NZ",
+      "pathwayId": "NZ-skilled",
+      "field": "process",
+      "claim": "Current SMC applications must be assessed under the pathway under which the applicant was invited, and the immigration instructions distinguish Points-based, Skilled Work Experience and Trades and Technician pathways. Invitations issued before 24 August 2026 may be assessed under the instructions in effect on 23 August 2026 when the application is made after that date.",
+      "sourceAuthority": "Immigration New Zealand",
+      "sourceUrl": "https://www.immigration.govt.nz/opsmanual/77811.htm",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-08-24",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current INZ operational manual. Transitional treatment is preserved as an explicit temporal rule rather than generalized into a single timeless process statement.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    }
+  ]
+}
