@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0.0",
+  "policy": "Candidate routes are research-stage exact legal scopes. They do not become publishable pathways until they receive canonical pathway ids, complete material evidence, and pass the normal promotion gate.",
+  "candidates": [
+    {
+      "id": "AU-189-points-tested",
+      "countryId": "AU",
+      "parentPathwayId": "AU-skilled",
+      "name": "Skilled Independent visa (subclass 189) — Points-tested stream",
+      "status": "research_required",
+      "evidenceIds": ["AU-189-eligibility-2026-09-14", "AU-189-process-2026-09-14"],
+      "missingMaterialFields": ["financial-requirement"],
+      "scopeNote": "Do not promote the AU-skilled umbrella or infer subclass 190/491 eligibility from this candidate."
+    },
+    {
+      "id": "NZ-smc-skilled-work-experience",
+      "countryId": "NZ",
+      "parentPathwayId": "NZ-skilled",
+      "name": "Skilled Migrant Category — Skilled Work Experience pathway",
+      "status": "research_required",
+      "evidenceIds": ["NZ-smc-process-2026-09-14"],
+      "scopeNote": "Requires separate canonical route representation and complete eligibility/financial evidence, including occupation-list treatment and wage thresholds."
+    },
+    {
+      "id": "NZ-smc-trades-technician",
+      "countryId": "NZ",
+      "parentPathwayId": "NZ-skilled",
+      "name": "Skilled Migrant Category — Trades and Technician pathway",
+      "status": "research_required",
+      "evidenceIds": ["NZ-smc-process-2026-09-14"],
+      "scopeNote": "Requires eligible-occupation, qualification, work-experience, wage and application-evidence coverage before promotion."
+    },
+    {
+      "id": "AT-rwr-other-key-workers",
+      "countryId": "AT",
+      "parentPathwayId": "AT-red-white-red",
+      "name": "Red-White-Red Card — Other Key Workers",
+      "status": "research_required",
+      "evidenceIds": [],
+      "scopeNote": "Exact sub-route candidate; do not treat evidence as proof for other Red-White-Red categories."
+    },
+    {
+      "id": "IT-flussi-2026-non-seasonal-subordinate",
+      "countryId": "IT",
+      "parentPathwayId": "IT-work",
+      "name": "2026 non-seasonal subordinate work — Flussi route",
+      "status": "research_required",
+      "evidenceIds": [],
+      "scopeNote": "Temporal 2026 quota/process candidate; employer nulla-osta and applicant-side requirements remain separate evidence gates."
+    }
+  ]
+}
