@@ -27,7 +27,8 @@ Current INZ guidance requires a skilled role/job offer, the applicable wage mult
 - [x] Red/amber occupation matrix attached to the exact candidate.
 - [x] Standard vs amber threshold evidence attached to the exact candidate.
 - [x] Effective-date wage regression evidence attached to the exact candidate.
-- [ ] Execute machine-testable wage/red/amber regression.
+- [x] Machine-testable wage/effective-date fixture regression.
+- [x] Machine-testable red/amber occupation-rule fixture.
 - [ ] Validate direct-relevance and employment evidence rules.
 - [ ] Complete final promotion validation.
 
@@ -39,8 +40,7 @@ Current INZ guidance requires an eligible trades/technician occupation, relevant
 - [x] Core eligibility/process/financial evidence.
 - [x] Authoritative eligible-occupation/qualification matrix attached to the exact candidate.
 - [x] NZ 120-credit rule and overseas exception distinction documented.
-- [ ] Add machine-testable occupation regression.
-- [ ] Add machine-testable qualification regression.
+- [x] Machine-testable occupation/qualification rule fixtures.
 - [ ] Complete final promotion validation.
 
 ## Current regression fixtures
