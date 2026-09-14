@@ -17,6 +17,21 @@
       "reviewAfter": "2026-10-07"
     },
     {
+      "id": "CA-study-eligibility-2026-09-14",
+      "countryId": "CA",
+      "pathwayId": "CA-study",
+      "field": "eligibility",
+      "claim": "A person who wants to study in Canada generally needs a study permit when the programme and circumstances fall within the study-permit requirement. Applicants must satisfy the applicable admission, identity and permit conditions and provide the documents required by the Government of Canada.",
+      "sourceAuthority": "Immigration, Refugees and Citizenship Canada",
+      "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html",
+      "jurisdiction": "Canada",
+      "effectiveDate": "2026-09-14",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of the current Government of Canada study-permit guidance; this record is scoped to the canonical CA-study pathway.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
       "id": "CA-study-finance-2026-09-07",
       "countryId": "CA",
       "pathwayId": "CA-study",
