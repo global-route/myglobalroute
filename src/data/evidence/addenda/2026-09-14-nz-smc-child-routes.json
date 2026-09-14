@@ -47,6 +47,21 @@
       "reviewAfter": "2026-10-14"
     },
     {
+      "id": "NZ-smc-skilled-work-experience-direct-relevance-2026-09-14",
+      "countryId": "NZ",
+      "pathwayId": "NZ-smc-skilled-work-experience",
+      "field": "direct-relevance-validation",
+      "claim": "For the Skilled Work Experience pathway, relevant work experience must be directly relevant to the applicant's skilled job or skilled job offer, and qualifying skilled work must be in an ANZSCO skill level 1 to 3 occupation. Self-employment cannot be counted as directly relevant work experience under the new pathway.",
+      "sourceAuthority": "Immigration New Zealand",
+      "sourceUrl": "https://www.immigration.govt.nz/about-us/news-centre/final-details-about-changes-to-the-skilled-migrant-category-resident-visa-and-work-to-residence-visa/",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-08-24",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of final 2026 SMC changes; route-scoped evidence for direct relevance and self-employment exclusion.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
       "id": "NZ-smc-trades-technician-eligibility-2026-09-14",
       "countryId": "NZ",
       "pathwayId": "NZ-smc-trades-technician",
