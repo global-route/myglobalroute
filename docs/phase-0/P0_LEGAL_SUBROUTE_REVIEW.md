@@ -2,7 +2,6 @@
 
 **Status:** Active  
 **Priority:** P0  
-**Owner:** Global Route engineering/editorial workflow  
 **Last reconciled:** 2026-09-14
 
 ## Purpose
@@ -11,67 +10,41 @@ Prevent a generic pathway record from implying that every applicant follows the 
 
 ## Current publishable set
 
-**Twenty-seven pathways** currently meet the minimum material evidence gate and have explicit `evidenceIds`:
+**28 pathways** now meet the minimum material evidence gate and have explicit `evidenceIds`.
 
-- GB Student visa
-- GB Skilled Worker
-- IE Study visa
-- IE Critical Skills Employment Permit
-- DE Study visa
-- DE Opportunity Card
-- FR Long-stay study visa
-- FR Talent Passport
-- ES Study visa
-- ES International Teleworker
-- CA Study Permit
-- AU Student visa (Subclass 500)
-- NZ Fee Paying Student Visa
-- AT Student residence permit
-- PT Study residence visa
-- PT Remote Work / Digital Nomad
-- CH Work permits
-- FI Residence permit for an employed person (TTOL)
-- FI Residence permit for studies
-- SE Residence permit for higher-education studies
-- SE Standard work permit
-- NO Study permit — university/university college
-- NO Skilled worker with an employer in Norway
-- LU Salaried worker
-- IT Higher-education study visa
-- JP Student status of residence
-- JP Engineer / Specialist in Humanities / International Services
+The newest promotion is **Canada — Federal Skilled Worker Program (FSWP)**. The former generic `CA-express-entry` record has been replaced by the narrower `CA-federal-skilled-worker` route.
+
+The other promoted routes remain unchanged from the previous checkpoint: GB Student/Skilled Worker; IE Study/Critical Skills; DE Study/Opportunity Card; FR Study/Talent Passport; ES Study/International Teleworker; CA Study Permit; AU Student; NZ Fee Paying Student; AT Student; PT Study/Digital Nomad; CH Work; FI Study/TTOL; SE Study/Standard Work Permit; NO Study/Skilled Worker with employer in Norway; LU Salaried Worker; IT Higher-Education Study; and JP Student/Engineer-Specialist in Humanities-International Services.
 
 Publishability means the repository has evidence for the minimum material fields. It does **not** mean approval is guaranteed, legal advice is provided, or every sub-route has been exhaustively covered.
 
-## Latest exact-route evidence wave
+## Canada — exact-route promotion
 
-The 2026-09-14 continuation wave added exact material-field coverage for Japan Student and Japan Engineer / Specialist in Humanities / International Services. Student financial evidence is documentary ability-to-pay evidence; Engineer financial evidence is the official remuneration-pay-parity rule. Neither route receives an invented universal salary or funds threshold.
+Express Entry remains an umbrella system containing the Canadian Experience Class, Federal Skilled Worker Program and Federal Skilled Trades Program. Therefore the product must not use FSWP evidence as if it proves eligibility for all Express Entry programs. citeturn0search1turn0search3
 
-The preceding waves promoted Finland Study, Sweden Standard Work Permit, Norway Skilled Worker with an Employer in Norway and Italy Higher-Education Study after route-scope review.
+The promoted route is now explicitly **Federal Skilled Worker Program**. Current IRCC guidance identifies qualifying skilled work in TEER 0–3, language testing, education/ECA requirements for foreign education, the 67-point selection-factor threshold, admissibility and settlement-funds rules as material considerations. It also states that applicants must plan to live outside Quebec. citeturn0search0
+
+The product deliberately does not hard-code a timeless proof-of-funds amount. The live IRCC table remains the authority for the amount applicable to family size and circumstances. citeturn0search0
+
+**Important temporal caveat:** Canadian government materials currently indicate planned regulatory work around a future federal high-skilled class, including proposed changes to the existing federal skilled-worker framework. This is a reason to retain short evidence review dates rather than treating the current FSWP record as timeless. citeturn0search8
 
 ## High-risk distinctions to preserve
 
-### Canada
-- Express Entry is an umbrella system covering CEC, FSWP and FSTP; it must not be represented as one undifferentiated legal route.
-- `CA-express-entry` remains unpromoted until a narrower scope is selected and evidenced.
-
 ### Australia
-- Skilled migration includes multiple subclasses and invitation/nominations; `AU-skilled` remains intentionally unpromoted until the exact visa class is narrowed.
+- Skilled migration includes multiple temporary, provisional and permanent visas, including employer-sponsored, state/territory-nominated and independent routes. `AU-skilled` therefore remains intentionally unpromoted until one exact visa class is selected. citeturn0search10turn0search11
 
 ### New Zealand
-- Skilled residence has multiple pathways and route-specific wage/work-experience rules; `NZ-skilled` requires narrowing before promotion.
+- Skilled residence includes multiple pathways and has recently changed. From 24 August 2026, updated Skilled Migrant Category and work-to-residence rules apply, including qualification, occupation-list and wage-setting changes. `NZ-skilled` remains unpromoted until narrowed to an exact route. citeturn0search5turn0search7
 
 ### Austria
-- The Red-White-Red Card is an umbrella family. Current evidence concerns a narrower sub-route, so `AT-red-white-red` remains unpromoted until its scope is narrowed.
+- The Red-White-Red Card is an umbrella family. `AT-red-white-red` remains unpromoted until a specific sub-route is selected and evidenced.
 
 ### Finland / Sweden / Norway / Italy
 - Promoted records remain exact-route records. TTOL is not all Finnish work; Sweden Standard Work Permit is not all Swedish work; Norway Skilled Worker is scoped to an employer in Norway; Italy Study is scoped to higher-education study.
 
 ### Japan
 - Student is represented as the Student status of residence for qualifying education, not every education-related residence category.
-- Student financial evidence records official documentary ability-to-pay requirements without inventing a universal yen threshold.
 - Engineer / Specialist in Humanities / International Services is represented as the specific status of residence, not all Japanese work-residence routes.
-- Its remuneration evidence is a pay-parity rule against comparable Japanese work, not a fabricated universal salary floor.
 
 ## Promotion rule
 
@@ -87,12 +60,11 @@ A pathway may move from `research_required` to `publishable` only when:
 
 ## Next review queue
 
-1. CA Express Entry — split/qualify CEC, FSWP and FSTP.
-2. AU Skilled — identify an exact skilled-visa class.
-3. NZ Skilled — narrow to a specific SMC/work-to-residence class.
-4. AT Red-White-Red — narrow to a specific sub-route.
-5. IT Work — identify a specific work-authorization class.
-6. LU Study and remaining country routes — continue only where evidence supports a clearly scoped route.
+1. **AU Skilled** — choose one exact skilled-visa class.
+2. **NZ Skilled** — narrow to a specific SMC or work-to-residence route and encode the August 2026 rule changes.
+3. **AT Red-White-Red** — narrow to a specific sub-route.
+4. **IT Work** — identify a specific work-authorization class.
+5. **LU Study / remaining countries** — promote only when exact-route evidence is complete.
 
 ## Critical distinction
 
