@@ -13,7 +13,7 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - Exact legal subroutes remain outside the canonical 52 until promotion.
 - Candidate evidence is bound to exact subroute IDs; parent-pathway evidence cannot satisfy a child-route promotion gate.
 - Australia subclass 189 remains research_required because visa-specific financial/material verification is unresolved.
-- New Zealand SMC now has exact evidence for all three child routes plus a dedicated 2026 promotion matrix; point-composition regression coverage is now implemented, while occupation/registration and qualification/IQA gates remain open.
+- New Zealand SMC now has exact evidence for all three child routes plus a dedicated 2026 promotion matrix; points-composition, occupation/registration and qualification/IQA evidence gates are now represented, while promotion validation and the other two child-route matrices remain open. Current INZ guidance confirms the three distinct SMC pathways and the one-primary-category points rule. citeturn0search2turn0search3
 - Austria Other Key Workers now has a dedicated application/evidence matrix; points regression and final authority/process validation remain open.
 - Italy 2026 Flussi now has a dedicated promotion matrix; employer/nulla-osta, sector/country, compensation and applicant evidence remain open.
 - No umbrella route has been promoted from narrower evidence.
@@ -24,7 +24,7 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 
 - [x] Added exact child-scoped evidence for Australia 189, all three New Zealand SMC child routes, Austria Other Key Workers and Italy 2026 Flussi.
 - [x] Added exact New Zealand Points-based eligibility, financial/wage and process evidence.
-- [x] Added route-specific validation matrices for NZ Points-based, Austria Other Key Workers and Italy Flussi 2026.
+- [x] Added New Zealand occupation/registration and qualification/IQA exception evidence based on current official guidance.
 - [x] Added deterministic New Zealand SMC points-composition regression coverage and removed that item from the candidate's missing-material gate.
 - [x] Made candidate material gaps explicit and strengthened regression coverage so missing fields cannot silently masquerade as complete evidence.
 - [x] Preserved conservative recommendation behavior: research-required subroutes remain non-recommendable until promoted.
@@ -33,7 +33,7 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 
 ### Evidence / pathway architecture
 - [ ] Australia subclass 189 visa-specific financial/material verification.
-- [ ] NZ Points-based occupation/registration matrix and qualification/IQA exception matrix.
+- [ ] NZ Points-based promotion validation.
 - [ ] NZ Skilled Work Experience red/amber matrix and wage/evidence regression.
 - [ ] NZ Trades & Technician occupation/qualification matrix and regression.
 - [ ] Austria Other Key Workers applicant-document matrix, points calculation tests and promotion validation.
