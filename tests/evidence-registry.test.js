@@ -4,6 +4,7 @@ const evidence = require('../src/data/evidence/primary-source-verified.json');
 const countries = require('../src/data/countries.json');
 const pathways = require('../src/data/pathways.json');
 const requirements = require('../src/data/pathway-requirements.json');
+const candidates = require('../src/data/pathway-candidates.json');
 
 const addendaDir = path.join(__dirname, '..', 'src/data/evidence/addenda');
 const addenda = fs.existsSync(addendaDir)
@@ -79,5 +80,31 @@ describe('primary-source evidence registry', () => {
         expect(record?.pathwayId).toBe(pathway.id);
       }
     }
+  });
+
+  test('exact-route candidates remain research-stage until canonicalized', () => {
+    const pathwayIds = new Set(pathways.pathways.map(pathway => pathway.id));
+    const evidenceById = new Map(allEvidence.map(record => [record.id, record]));
+    expect(candidates.candidates.length).toBeGreaterThan(0);
+    for (const candidate of candidates.candidates) {
+      expect(candidate.status).toBe('research_required');
+      expect(pathwayIds.has(candidate.parentPathwayId)).toBe(true);
+      for (const evidenceId of candidate.evidenceIds || []) {
+        const record = evidenceById.get(evidenceId);
+        expect(record).toBeDefined();
+        expect(record.countryId).toBe(candidate.countryId);
+        expect(record.pathwayId).toBe(candidate.parentPathwayId);
+      }
+    }
+  });
+
+  test('New Zealand SMC child routes cannot inherit parent evidence as promotion proof', () => {
+    const nzCandidates = candidates.candidates.filter(candidate => candidate.countryId === 'NZ');
+    expect(nzCandidates.map(candidate => candidate.id)).toEqual(expect.arrayContaining([
+      'NZ-smc-skilled-work-experience',
+      'NZ-smc-trades-technician'
+    ]));
+    for (const candidate of nzCandidates) expect(candidate.status).toBe('research_required');
+    expect(pathways.pathways.find(pathway => pathway.id === 'NZ-skilled')?.status).toBe('research_required');
   });
 });
