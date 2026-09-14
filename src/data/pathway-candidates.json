@@ -64,8 +64,8 @@
       "name": "Skilled Migrant Category — Points-based pathway",
       "status": "research_required",
       "evidenceIds": ["NZ-smc-points-based-eligibility-2026-09-14", "NZ-smc-points-based-financial-2026-09-14", "NZ-smc-points-based-process-2026-09-14"],
-      "missingMaterialFields": ["occupation-registration-matrix", "qualification-exception-matrix", "points-regression-tests", "promotion-validation"],
-      "scopeNote": "Exact child-route candidate with current eligibility, financial/wage and process evidence. Promotion remains blocked until point-composition, occupation/registration and qualification exception validation is implemented and tested.",
+      "missingMaterialFields": ["occupation-registration-matrix", "qualification-exception-matrix", "promotion-validation"],
+      "scopeNote": "Exact child-route candidate with current eligibility, financial/wage and process evidence. Promotion remains blocked until occupation/registration and qualification exception validation is implemented and tested.",
       "subrouteId": "NZ-smc-points-based"
     }
   ]
