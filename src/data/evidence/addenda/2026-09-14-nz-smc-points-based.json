@@ -45,6 +45,36 @@
       "methodology": "Direct review of current SMC operational instructions and application guidance; transitional rules are retained where an invitation predates 24 August 2026.",
       "confidence": "high",
       "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "NZ-smc-points-based-occupation-registration-matrix-2026-09-14",
+      "countryId": "NZ",
+      "pathwayId": "NZ-smc-points-based",
+      "field": "occupation-registration-matrix",
+      "claim": "New Zealand occupational registration can be the skill category used to claim SMC points when the applicant's occupation is covered by an eligible registration pathway and the registration level maps to the prescribed points value. Registration evidence must be for the occupation and registration authority actually relied upon in the application.",
+      "sourceAuthority": "Immigration New Zealand",
+      "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-08-24",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current SMC points and occupational-registration guidance; the matrix is route-scoped and does not infer registration eligibility for unrelated residence pathways.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
+    },
+    {
+      "id": "NZ-smc-points-based-qualification-exception-matrix-2026-09-14",
+      "countryId": "NZ",
+      "pathwayId": "NZ-smc-points-based",
+      "field": "qualification-exception-matrix",
+      "claim": "Qualifications used for SMC points must satisfy the applicable New Zealand or recognised-equivalent qualification rules. Where an overseas qualification is not exempt from assessment, the applicant must use the applicable qualification or International Qualification Assessment evidence required by Immigration New Zealand before relying on the qualification for points.",
+      "sourceAuthority": "Immigration New Zealand",
+      "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-08-24",
+      "retrievedAt": "2026-09-14",
+      "methodology": "Direct review of current SMC qualification and qualification-assessment guidance; exemptions are treated as route-specific evidence conditions rather than generalized recognition.",
+      "confidence": "high",
+      "reviewAfter": "2026-10-14"
     }
   ]
 }
