@@ -73,5 +73,50 @@
     "content": "content/blog/policy-updates/2026/canada-sds-program-cancelled-january-2026.md",
     "featured": false,
     "keywords": ["Canada SDS cancelled", "student visa Canada 2026", "alternatives to SDS"]
+  },
+  {
+    "id": "canada-express-entry-2026",
+    "title": "Canada Express Entry: The Complete 2026 Guide for Nigerians",
+    "slug": "canada-express-entry-2026",
+    "excerpt": "Official approval rate 92%, Nigerian reality 78-85%. Here's exactly how Express Entry works, what CRS score you need, and how to guarantee an Invitation to Apply.",
+    "category": "professional-playbooks",
+    "date": "2026-08-18",
+    "updated": "2026-08-18",
+    "author": "Global Route Editorial",
+    "readTime": "16 min",
+    "featuredImage": "/public/blog/images/canada-express-entry-2026.jpg",
+    "content": "content/blog/playbooks/professional/canada-express-entry-2026.md",
+    "featured": true,
+    "keywords": ["Canada Express Entry", "Express Entry from Nigeria", "CRS score", "ITA", "Canadian immigration", "work permit"]
+  },
+  {
+    "id": "uk-masters-true-cost-2026",
+    "title": "UK Masters True Cost 2026: What They Don't Tell You About Studying in Britain",
+    "slug": "uk-masters-true-cost-2026",
+    "excerpt": "Official prices: £20,000-35,000/year. Real costs: £30,000-50,000 total for 1-year Master's. Here's the complete breakdown for Nigerian students.",
+    "category": "student-playbooks",
+    "date": "2026-08-18",
+    "updated": "2026-08-18",
+    "author": "Global Route Editorial",
+    "readTime": "15 min",
+    "featuredImage": "/public/blog/images/uk-masters-cost-2026.jpg",
+    "content": "content/blog/playbooks/student/uk-masters-true-cost-2026.md",
+    "featured": true,
+    "keywords": ["UK Masters cost", "study in UK from Nigeria", "UK tuition fees", "living costs London", "UK student visa"]
+  },
+  {
+    "id": "germany-chancenkarte-2026",
+    "title": "Germany Chancenkarte Visa 2026: The Easiest Path to German PR for African Professionals",
+    "slug": "germany-chancenkarte-visa-2026",
+    "excerpt": "Germany's new Opportunity Card (Chancenkarte) launched Jan 2024. No job offer required. Points-based system. Path to PR in 3 years. Here's everything Africans need to know.",
+    "category": "professional-playbooks",
+    "date": "2026-08-18",
+    "updated": "2026-08-18",
+    "author": "Global Route Editorial",
+    "readTime": "12 min",
+    "featuredImage": "/public/blog/images/germany-chancenkarte-2026.jpg",
+    "content": "content/blog/playbooks/professional/germany-chancenkarte-visa-2026.md",
+    "featured": false,
+    "keywords": ["Germany Chancenkarte", "Opportunity Card Germany", "German work visa", "Germany professional visa", "Green Card Germany"]
   }
 ]

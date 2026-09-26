@@ -73,6 +73,11 @@ class BlogLoader {
     });
     e.target.classList.add('active');
 
+    // Track analytics
+    if (typeof trackCategoryFilter !== 'undefined') {
+      trackCategoryFilter(this.getCategoryLabel(category));
+    }
+
     // Filter posts
     this.currentFilter = category;
     this.currentPage = 1;
@@ -93,31 +98,83 @@ class BlogLoader {
     this.currentPage = 1;
 
     if (query === '') {
+      // Reset to category filter when search cleared
       this.filteredPosts = this.currentFilter === 'all' 
         ? [...this.posts] 
         : this.posts.filter(post => post.category === this.currentFilter);
+    } else if (this.searchIndex) {
+      // Use Fuse.js if available
+      const fuseResults = this.searchIndex.search(query);
+      this.filteredPosts = fuseResults.map(result => result.item);
+      
+      // Apply category filter if not 'all'
+      if (this.currentFilter !== 'all') {
+        this.filteredPosts = this.filteredPosts.filter(post => post.category === this.currentFilter);
+      }
     } else {
+      // Fallback to basic search if Fuse.js not loaded
       this.filteredPosts = this.posts.filter(post => {
         const searchableText = `${post.title} ${post.excerpt} ${post.keywords.join(' ')}`.toLowerCase();
         return searchableText.includes(query);
       });
+
+      // Apply category filter if not 'all'
+      if (this.currentFilter !== 'all') {
+        this.filteredPosts = this.filteredPosts.filter(post => post.category === this.currentFilter);
+      }
+    }
+
+    // Track analytics
+    if (query && typeof trackSearch !== 'undefined') {
+      trackSearch(query, this.filteredPosts.length);
     }
 
     this.renderFeaturedPost();
     this.renderPosts();
+    this.updateSearchResults(query);
   }
 
   // Initialize search (Fuse.js)
   initializeSearch() {
-    if (typeof Fuse === 'undefined') return;
+    if (typeof Fuse === 'undefined') {
+      console.warn('Fuse.js not loaded. Using basic search.');
+      return;
+    }
 
     const fuseOptions = {
-      keys: ['title', 'excerpt', 'keywords', 'category'],
-      threshold: 0.3,
-      minMatchCharLength: 2
+      keys: [
+        { name: 'title', weight: 0.7 },
+        { name: 'excerpt', weight: 0.5 },
+        { name: 'keywords', weight: 0.6 },
+        { name: 'category', weight: 0.3 }
+      ],
+      threshold: 0.4,
+      minMatchCharLength: 2,
+      includeScore: true,
+      shouldSort: true
     };
 
     this.searchIndex = new Fuse(this.posts, fuseOptions);
+    console.log('✅ Fuse.js search initialized');
+  }
+
+  // Update search results display
+  updateSearchResults(query) {
+    if (!query) return;
+    
+    const resultCount = this.filteredPosts.length;
+    console.log(`🔍 Search for "${query}": ${resultCount} results found`);
+    
+    // Optional: Display search indicator in UI
+    const container = document.getElementById('blog-posts-grid');
+    if (container && resultCount === 0) {
+      container.innerHTML = `
+        <div class="blog-empty-state" style="grid-column: 1 / -1;">
+          <h3>No posts found for "${query}"</h3>
+          <p>Try adjusting your search terms or browse by category</p>
+        </div>
+      `;
+    }
   }
 
   // Render featured post
@@ -260,6 +317,11 @@ class BlogLoader {
     button.textContent = 'Subscribing...';
 
     try {
+      // Track analytics
+      if (typeof trackNewsletterSignup !== 'undefined') {
+        trackNewsletterSignup(email);
+      }
+
       // Mock API call (replace with actual Mailchimp/service)
       await new Promise(resolve => setTimeout(resolve, 1000));
       
