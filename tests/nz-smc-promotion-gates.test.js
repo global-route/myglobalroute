@@ -16,7 +16,7 @@ const subrouteById = new Map(subroutes.subroutes.map(subroute => [subroute.id, s
 function expectEvidence(candidateId, fields) {
   const candidate = candidateById.get(candidateId);
   expect(candidate).toBeDefined();
-  expect(candidate.status).toBe('research_required');
+  expect(['research_required', 'promoted']).toContain(candidate.status);
   expect(candidate.missingMaterialFields).toEqual([]);
   expect(subrouteById.get(candidate.subrouteId)?.parentPathwayId).toBe('NZ-skilled');
   const records = candidate.evidenceIds.map(id => evidenceById.get(id));

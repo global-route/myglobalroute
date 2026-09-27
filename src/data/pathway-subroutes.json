@@ -17,7 +17,7 @@
       "parentPathwayId": "NZ-skilled",
       "type": "work",
       "name": "Skilled Migrant Category — Points-based pathway",
-      "status": "research_required",
+      "status": "promoted",
       "requiredEvidenceFields": ["eligibility", "financial-requirement", "process"]
     },
     {
@@ -26,7 +26,7 @@
       "parentPathwayId": "NZ-skilled",
       "type": "work",
       "name": "Skilled Migrant Category — Skilled Work Experience pathway",
-      "status": "research_required",
+      "status": "promoted",
       "requiredEvidenceFields": ["eligibility", "financial-requirement", "process"]
     },
     {
@@ -35,7 +35,7 @@
       "parentPathwayId": "NZ-skilled",
       "type": "work",
       "name": "Skilled Migrant Category — Trades and Technician pathway",
-      "status": "research_required",
+      "status": "promoted",
       "requiredEvidenceFields": ["eligibility", "financial-requirement", "process"]
     },
     {

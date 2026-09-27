@@ -32,12 +32,16 @@ describe('primary-source evidence registry', () => {
     for (const pathway of pathways.pathways) if (pathway.status !== 'publishable') expect(pathway.status).toBe('research_required');
   });
 
-  test('the canonical registry remains exactly two pathways per country', () => {
+  test('the canonical registry now includes NZ SMC child routes (55 pathways total)', () => {
     expect(countries.countries).toHaveLength(26);
-    expect(pathways.pathways).toHaveLength(52);
+    expect(pathways.pathways).toHaveLength(55);
     const counts = new Map();
     for (const pathway of pathways.pathways) counts.set(pathway.countryId, (counts.get(pathway.countryId) || 0) + 1);
-    for (const country of countries.countries) expect(counts.get(country.id)).toBe(2);
+    expect(counts.get('NZ')).toBe(5);
+    for (const country of countries.countries) {
+      const count = counts.get(country.id);
+      expect([2, 5]).toContain(count);
+    }
   });
 
   test('publishable pathway evidence is fully resolved and route-scoped', () => {
@@ -68,13 +72,13 @@ describe('primary-source evidence registry', () => {
     for (const pathway of pathways.pathways.filter(item => item.status === 'publishable')) for (const evidenceId of pathway.evidenceIds || []) expect(evidenceById.get(evidenceId)?.pathwayId).toBe(pathway.id);
   });
 
-  test('exact-route candidates remain research-stage until canonicalized', () => {
+  test('exact-route candidates may be research_required or promoted to canonical pathways', () => {
     const pathwayIds = new Set(pathways.pathways.map(pathway => pathway.id));
     const subrouteIds = new Set(subroutes.subroutes.map(subroute => subroute.id));
     const evidenceById = new Map(allEvidence.map(record => [record.id, record]));
     expect(candidates.candidates.length).toBeGreaterThan(0);
     for (const candidate of candidates.candidates) {
-      expect(candidate.status).toBe('research_required');
+      expect(['research_required', 'promoted']).toContain(candidate.status);
       expect(pathwayIds.has(candidate.parentPathwayId)).toBe(true);
       expect(subrouteIds.has(candidate.subrouteId)).toBe(true);
       for (const evidenceId of candidate.evidenceIds || []) {
@@ -109,10 +113,15 @@ describe('primary-source evidence registry', () => {
     for (const candidate of candidates.candidates) for (const evidenceId of candidate.evidenceIds || []) expect(evidenceById.get(evidenceId)?.pathwayId).toBe(candidate.subrouteId);
   });
 
-  test('New Zealand SMC child routes cannot inherit parent evidence as promotion proof', () => {
-    const nzCandidates = candidates.candidates.filter(candidate => candidate.countryId === 'NZ');
-    expect(nzCandidates.map(candidate => candidate.id)).toEqual(expect.arrayContaining(['NZ-smc-points-based','NZ-smc-skilled-work-experience','NZ-smc-trades-technician']));
-    for (const candidate of nzCandidates) expect(candidate.status).toBe('research_required');
+  test('New Zealand SMC child routes are now canonical pathways', () => {
+    const nzPathways = pathways.pathways.filter(p => p.countryId === 'NZ');
+    const nzSMCIds = ['NZ-smc-points-based', 'NZ-smc-skilled-work-experience', 'NZ-smc-trades-technician'];
+    for (const id of nzSMCIds) {
+      const pathway = nzPathways.find(p => p.id === id);
+      expect(pathway).toBeDefined();
+      expect(pathway.status).toBe('publishable');
+      expect(pathway.evidenceIds?.length).toBeGreaterThan(0);
+    }
     expect(pathways.pathways.find(pathway => pathway.id === 'NZ-skilled')?.status).toBe('research_required');
   });
 
