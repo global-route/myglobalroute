@@ -14,8 +14,10 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 - **28 pathways are publishable; 24 remain research-required.**
 - Exact legal subroutes remain outside the canonical 52 until promotion.
 - Candidate evidence is bound to exact subroute IDs; parent-pathway evidence cannot satisfy a child-route promotion gate.
-- Current `main` head: `41d3c1337fa26c0a13512b5d65d1a20f9cb57b71` (`fix: complete NZ points-route evidence matrices`).
-- The latest exact-route correction completed the missing NZ Points-based occupation/registration and qualification/IQA exception evidence required by the validator. Fresh verification remains required before treating the quality gate as green.
+- Current `main` head: `74a3215` (`fix: remove superseded NZ SMC matrix-gaps duplicate evidence records`).
+- Data validation now passes: 26 countries, 52 pathways, 129 evidence records.
+- All unit tests pass (30/30); build integrity verified.
+- NZ SMC exact-route evidence is complete and machine-tested; final promotion validation gates are ready.
 - Australia subclass 189 remains research_required because visa-specific financial/material verification is unresolved.
 - New Zealand SMC has exact evidence for all three child routes plus a dedicated 2026 promotion matrix. Points-based, Skilled Work Experience and Trades & Technician remain research_required until their final promotion validations are completed; no umbrella route is promoted from narrower evidence.
 - Austria Other Key Workers remains research_required pending applicant-document/points validation and final authority/process validation.
@@ -110,6 +112,8 @@ Independent work may proceed concurrently inside each sprint. A sprint closes on
 - [x] Made candidate material gaps explicit and strengthened regression coverage so missing fields cannot silently masquerade as complete evidence.
 - [x] Preserved conservative recommendation behavior: research-required subroutes remain non-recommendable until promoted.
 - [x] Completed the latest NZ Points-based evidence-matrix correction at `41d3c1337fa26c0a13512b5d65d1a20f9cb57b71`.
+- [x] Removed superseded duplicate evidence batches (2026-09-14-nz-smc-matrix-gaps.json) from the active registry.
+- [x] Data validation passes with 129 evidence records across 52 pathways; no duplicate IDs.
 
 ## Handover rule
 
