@@ -32,15 +32,16 @@ describe('primary-source evidence registry', () => {
     for (const pathway of pathways.pathways) if (pathway.status !== 'publishable') expect(pathway.status).toBe('research_required');
   });
 
-  test('the canonical registry now includes NZ SMC child routes (55 pathways total)', () => {
+  test('the canonical registry now includes NZ SMC and Austria exact-route child routes (56 pathways total)', () => {
     expect(countries.countries).toHaveLength(26);
-    expect(pathways.pathways).toHaveLength(55);
+    expect(pathways.pathways).toHaveLength(56);
     const counts = new Map();
     for (const pathway of pathways.pathways) counts.set(pathway.countryId, (counts.get(pathway.countryId) || 0) + 1);
     expect(counts.get('NZ')).toBe(5);
+    expect(counts.get('AT')).toBe(3);
     for (const country of countries.countries) {
       const count = counts.get(country.id);
-      expect([2, 5]).toContain(count);
+      expect([2, 3, 5]).toContain(count);
     }
   });
 
@@ -125,6 +126,14 @@ describe('primary-source evidence registry', () => {
     expect(pathways.pathways.find(pathway => pathway.id === 'NZ-skilled')?.status).toBe('research_required');
   });
 
+  test('Austria Other Key Workers is now a canonical pathway', () => {
+    const atPathway = pathways.pathways.find(p => p.id === 'AT-rwr-other-key-workers');
+    expect(atPathway).toBeDefined();
+    expect(atPathway.status).toBe('publishable');
+    expect(atPathway.evidenceIds?.length).toBe(5);
+    expect(pathways.pathways.find(p => p.id === 'AT-red-white-red')?.status).toBe('research_required');
+  });
+
   test('New Zealand SMC route regression evidence is exact-route and date-bounded', () => {
     const byId = new Map(allEvidence.map(record => [record.id, record]));
     const standard = byId.get('NZ-smc-skilled-work-experience-wage-regression-2026-09-14');
@@ -168,7 +177,7 @@ describe('primary-source evidence registry', () => {
     expect(byId.get('NZ-smc-points-based')?.missingMaterialFields).toEqual([]);
     expect(byId.get('NZ-smc-skilled-work-experience')?.missingMaterialFields).toEqual([]);
     expect(byId.get('NZ-smc-trades-technician')?.missingMaterialFields).toEqual([]);
-    expect(byId.get('AT-rwr-other-key-workers')?.missingMaterialFields).toEqual(['promotion-validation']);
+    expect(byId.get('AT-rwr-other-key-workers')?.missingMaterialFields).toEqual([]);
     expect(byId.get('IT-flussi-2026-non-seasonal-subordinate')?.missingMaterialFields).toEqual([]);
   });
 });

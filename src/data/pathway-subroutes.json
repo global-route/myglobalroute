@@ -9,7 +9,11 @@
       "type": "work",
       "name": "Skilled Independent visa (subclass 189) — Points-tested stream",
       "status": "research_required",
-      "requiredEvidenceFields": ["eligibility", "financial-requirement", "process"]
+      "requiredEvidenceFields": [
+        "eligibility",
+        "financial-requirement",
+        "process"
+      ]
     },
     {
       "id": "NZ-smc-points-based",
@@ -18,7 +22,11 @@
       "type": "work",
       "name": "Skilled Migrant Category — Points-based pathway",
       "status": "promoted",
-      "requiredEvidenceFields": ["eligibility", "financial-requirement", "process"]
+      "requiredEvidenceFields": [
+        "eligibility",
+        "financial-requirement",
+        "process"
+      ]
     },
     {
       "id": "NZ-smc-skilled-work-experience",
@@ -27,7 +35,11 @@
       "type": "work",
       "name": "Skilled Migrant Category — Skilled Work Experience pathway",
       "status": "promoted",
-      "requiredEvidenceFields": ["eligibility", "financial-requirement", "process"]
+      "requiredEvidenceFields": [
+        "eligibility",
+        "financial-requirement",
+        "process"
+      ]
     },
     {
       "id": "NZ-smc-trades-technician",
@@ -36,7 +48,11 @@
       "type": "work",
       "name": "Skilled Migrant Category — Trades and Technician pathway",
       "status": "promoted",
-      "requiredEvidenceFields": ["eligibility", "financial-requirement", "process"]
+      "requiredEvidenceFields": [
+        "eligibility",
+        "financial-requirement",
+        "process"
+      ]
     },
     {
       "id": "AT-rwr-other-key-workers",
@@ -44,8 +60,12 @@
       "parentPathwayId": "AT-red-white-red",
       "type": "work",
       "name": "Red-White-Red Card — Other Key Workers",
-      "status": "research_required",
-      "requiredEvidenceFields": ["eligibility", "financial-requirement", "process"]
+      "status": "promoted",
+      "requiredEvidenceFields": [
+        "eligibility",
+        "financial-requirement",
+        "process"
+      ]
     },
     {
       "id": "IT-flussi-2026-non-seasonal-subordinate",
@@ -54,7 +74,11 @@
       "type": "work",
       "name": "2026 non-seasonal subordinate work — Flussi route",
       "status": "research_required",
-      "requiredEvidenceFields": ["eligibility", "financial-requirement", "process"]
+      "requiredEvidenceFields": [
+        "eligibility",
+        "financial-requirement",
+        "process"
+      ]
     }
   ]
 }
