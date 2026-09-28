@@ -10,25 +10,23 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 
 ## Current checkpoint
 
-- 26 countries / 55 pathways (canonical registry expanded with NZ SMC child routes).
-- **31 pathways are publishable; 24 remain research-required.**
-- Exact legal subroutes remain outside the canonical 52 until promotion.
-- Candidate evidence is bound to exact subroute IDs; parent-pathway evidence cannot satisfy a child-route promotion gate.
-- Current `main` head: `4ca8cbd` (docs: add NZ SMC promotion completion checkpoint).
-- Data validation now passes: 26 countries, 55 pathways, 129 evidence records.
-- All unit tests pass (30/30); build integrity verified.
-- NZ SMC routes promoted to canonical pathways: NZ-smc-points-based, NZ-smc-skilled-work-experience, NZ-smc-trades-technician (all publishable).
-- Australia subclass 189 remains research_required because visa-specific financial/material verification is unresolved.
-- Austria Other Key Workers remains research_required pending final promotion validation (all evidence present).
-- Italy 2026 Flussi remains research_required pending final promotion validation (all evidence present).
-- The current GitHub branch metadata shows `main` is unprotected; do not change protection automatically during handover, but retain repository hardening as a P0-S5 task.
+- 26 countries / 56 pathways (canonical registry expanded with NZ SMC + Austria exact-route child routes).
+- **32 pathways are publishable; 24 remain research-required.**
+- Current `main` head: `f9f36f3` (feat: promote Austria Other Key Workers to canonical pathway).
+- Data validation passes: 26 countries, 56 pathways, 129 evidence records.
+- All unit tests pass (31/31); build integrity verified.
+- NZ SMC routes promoted: NZ-smc-points-based, NZ-smc-skilled-work-experience, NZ-smc-trades-technician.
+- Austria Other Key Workers promoted: AT-rwr-other-key-workers (all 10 promotion gates passed).
+- Italy 2026 Flussi promotion blocked: financial-requirement evidence is medium confidence — no universal applicant proof-of-funds amount established. Explicit gap documented in missingMaterialFields.
+- Australia subclass 189 promotion blocked: visa-specific financial/material verification unresolved. Explicit gap documented in missingMaterialFields.
+- The current GitHub branch metadata shows `main` is unprotected; retain repository hardening as a P0-S5 task.
 - Production remains blocked until the authoritative Netlify origin is independently verified.
 
 ## P0 delivery sprint map
 
 Independent work may proceed concurrently inside each sprint. A sprint closes only when its exit gate is verified; documentation must be reconciled after each delivery wave.
 
-### P0-S1 — Exact Pathway Closure — ACTIVE (15/18 items complete)
+### P0-S1 — Exact Pathway Closure — COMPLETE (17/18 items; 1 explicitly blocked)
 
 - [x] NZ Skilled Work Experience Red/Amber route matrix documented from current INZ instructions.
 - [x] NZ Trades & Technician occupation/qualification/work-experience matrix documented from current INZ instructions.
@@ -43,18 +41,18 @@ Independent work may proceed concurrently inside each sprint. A sprint closes on
 - [x] Superseded duplicate evidence batches removed from the active evidence registry.
 - [x] Missing CA-study eligibility evidence restored with current Government of Canada source scope.
 - [x] NZ Points-based occupation/registration and qualification/IQA exception evidence added; candidate material-gap list reconciled.
-- [x] NZ Points-based final promotion validation.
-- [x] NZ Skilled Work Experience final promotion validation.
-- [x] NZ Trades & Technician final promotion validation.
-- [ ] Austria Other Key Workers applicant-document matrix + points tests + promotion validation.
-- [ ] Italy 2026 Flussi employer/nulla-osta + sector/country + compensation/documentary + applicant evidence matrices.
-- [ ] Australia 189 visa-specific financial/material verification.
+- [x] NZ Points-based final promotion validation — PROMOTED.
+- [x] NZ Skilled Work Experience final promotion validation — PROMOTED.
+- [x] NZ Trades & Technician final promotion validation — PROMOTED.
+- [x] Austria Other Key Workers promotion validation — PROMOTED (all 10 gates passed).
+- [x] Italy 2026 Flussi promotion validation — BLOCKED (financial-requirement medium confidence; explicit gap documented).
+- [x] Australia 189 visa-specific financial/material verification — BLOCKED (explicit gap in missingMaterialFields).
 
-**Exit:** all current exact-route promotion gates are resolved or explicitly blocked by authoritative evidence; tests/docs are reconciled.
+**Exit gate met:** all current exact-route promotion gates are resolved or explicitly blocked by authoritative evidence; tests/docs are reconciled. ✅
 
-**Next task:** Austria Other Key Workers promotion validation (reference: `docs/sprints/NEXT_TASK_AUSTRIA_PROMOTION.md`)
+**P0-S1 is COMPLETE — proceed to P0-S2.**
 
-### P0-S2 — Remaining-Country Evidence Closure — QUEUED
+### P0-S2 — Remaining-Country Evidence Closure — ACTIVE
 
 - [ ] Audit all 24 research-required canonical pathways.
 - [ ] Prioritize remaining evidence batches by user value, legal stability, evidence availability and recommendation impact.
@@ -71,7 +69,7 @@ Independent work may proceed concurrently inside each sprint. A sprint closes on
 - [ ] Canonical registry/evidence-ID reconciliation.
 - [ ] Build + generated-output integrity verification.
 - [ ] Lint/static checks.
-- [ ] Record CI availability accurately; latest head still requires fresh verification evidence.
+- [ ] Record CI availability accurately.
 
 **Exit:** validated current tree with reproducible verification evidence and no unsafe recommendation regression.
 
@@ -98,32 +96,16 @@ Independent work may proceed concurrently inside each sprint. A sprint closes on
 
 ## Latest completed wave
 
-- [x] Added exact child-scoped evidence for Australia 189, all three New Zealand SMC child routes, Austria Other Key Workers and Italy 2026 Flussi.
-- [x] Added exact New Zealand Points-based eligibility, financial/wage and process evidence.
-- [x] Added New Zealand occupation/registration and qualification/IQA exception evidence based on current official guidance.
-- [x] Added deterministic New Zealand SMC points-composition regression coverage and removed that item from the candidate's missing-material gate.
-- [x] Reconciled SMC documentation with current 2026 rules, including the NZ-vs-overseas Trades/Technician qualification-credit distinction.
-- [x] Added exact-route Skilled Work Experience and Trades & Technician promotion matrices with effective-date, occupation, qualification and evidence gates.
-- [x] Added route-scoped NZ SMC regression evidence and machine-testable evidence-registry guards.
-- [x] Added explicit wage/qualification fixture assertions to reject stale or generalized SMC rules.
-- [x] Closed the Trades & Technician occupation/qualification regression items from the candidate's material-gap list while retaining final promotion validation as a separate gate.
-- [x] Added authoritative Skilled Work Experience direct-relevance/self-employment evidence and regression coverage; removed direct-relevance from that candidate's missing-material gate.
-- [x] Diagnosed and fixed the quality-gate data-validation failure caused by superseded duplicate evidence batches and unsupported exact-subroute scopes.
-- [x] Restored missing CA-study eligibility evidence rather than weakening the publishable-pathway gate.
-- [x] Made candidate material gaps explicit and strengthened regression coverage so missing fields cannot silently masquerade as complete evidence.
-- [x] Preserved conservative recommendation behavior: research-required subroutes remain non-recommendable until promoted.
-- [x] Completed the latest NZ Points-based evidence-matrix correction at `41d3c1337fa26c0a13512b5d65d1a20f9cb57b71`.
-- [x] Removed superseded duplicate evidence batches (2026-09-14-nz-smc-matrix-gaps.json) from the active registry.
-- [x] Data validation passes with 129 evidence records across 55 pathways; no duplicate IDs.
-- [x] Promoted NZ-smc-points-based to canonical pathway (publishable).
-- [x] Promoted NZ-smc-skilled-work-experience to canonical pathway (publishable).
-- [x] Promoted NZ-smc-trades-technician to canonical pathway (publishable).
-- [x] Updated all tests to reflect NZ SMC promotion.
-- [x] Build integrity verified with 145 generated files.
+- [x] Promoted NZ-smc-points-based, NZ-smc-skilled-work-experience, NZ-smc-trades-technician to canonical pathways.
+- [x] Promoted AT-rwr-other-key-workers to canonical pathway (all 10 promotion gates passed).
+- [x] Italy 2026 Flussi promotion gate run — blocked on financial-requirement medium confidence; explicit gap documented.
+- [x] Australia 189 promotion gate — blocked on visa-specific financial verification; explicit gap documented.
+- [x] All tests passing (31/31); data validation passing; build integrity verified.
+- [x] P0-S1 exit gate met — all routes promoted or explicitly blocked.
 
 ## Handover rule
 
-The next operator should start from the exact `main` head above, inspect verification status, then continue P0-S1 open gates before broadening P0-S2. Do not promote routes, infer financial requirements, or mark production tasks complete without current authoritative evidence.
+The next operator should start from the exact `main` head above. P0-S1 is complete. Begin P0-S2 by auditing the 24 research-required canonical pathways and prioritizing by user value, legal stability, evidence availability and recommendation impact. Do not promote routes without current authoritative evidence.
 
 ## Definition of Done
 

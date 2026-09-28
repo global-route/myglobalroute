@@ -102,8 +102,10 @@
         "IT-flussi-2026-non-seasonal-subordinate-compensation-documentary-matrix-2026-09-14",
         "IT-flussi-2026-non-seasonal-subordinate-applicant-evidence-matrix-2026-09-14"
       ],
-      "missingMaterialFields": [],
-      "scopeNote": "Temporal 2026 quota/process candidate. Employer nulla-osta, sector/country quota, compensation/documentary and applicant evidence matrices are now attached; final route promotion still requires deterministic validation and current quota-state verification.",
+      "missingMaterialFields": [
+        "financial-requirement-high-confidence"
+      ],
+      "scopeNote": "Promotion blocked: financial-requirement evidence is medium confidence — the 2026 Flussi material does not establish a single applicant proof-of-funds amount that can safely be treated as the route universal financial requirement. All other gates pass. Promote only after authoritative applicant-side financial evidence is attached at high confidence.",
       "subrouteId": "IT-flussi-2026-non-seasonal-subordinate"
     }
   ]

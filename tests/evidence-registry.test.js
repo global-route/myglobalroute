@@ -178,6 +178,6 @@ describe('primary-source evidence registry', () => {
     expect(byId.get('NZ-smc-skilled-work-experience')?.missingMaterialFields).toEqual([]);
     expect(byId.get('NZ-smc-trades-technician')?.missingMaterialFields).toEqual([]);
     expect(byId.get('AT-rwr-other-key-workers')?.missingMaterialFields).toEqual([]);
-    expect(byId.get('IT-flussi-2026-non-seasonal-subordinate')?.missingMaterialFields).toEqual([]);
+    expect(byId.get('IT-flussi-2026-non-seasonal-subordinate')?.missingMaterialFields).toContain('financial-requirement-high-confidence');
   });
 });
