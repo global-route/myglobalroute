@@ -10,18 +10,17 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 
 ## Current checkpoint
 
-- 26 countries / 52 pathways remain canonical.
-- **28 pathways are publishable; 24 remain research-required.**
+- 26 countries / 55 pathways (canonical registry expanded with NZ SMC child routes).
+- **31 pathways are publishable; 24 remain research-required.**
 - Exact legal subroutes remain outside the canonical 52 until promotion.
 - Candidate evidence is bound to exact subroute IDs; parent-pathway evidence cannot satisfy a child-route promotion gate.
-- Current `main` head: `74a3215` (`fix: remove superseded NZ SMC matrix-gaps duplicate evidence records`).
-- Data validation now passes: 26 countries, 52 pathways, 129 evidence records.
+- Current `main` head: `4ca8cbd` (docs: add NZ SMC promotion completion checkpoint).
+- Data validation now passes: 26 countries, 55 pathways, 129 evidence records.
 - All unit tests pass (30/30); build integrity verified.
-- NZ SMC exact-route evidence is complete and machine-tested; final promotion validation gates are ready.
+- NZ SMC routes promoted to canonical pathways: NZ-smc-points-based, NZ-smc-skilled-work-experience, NZ-smc-trades-technician (all publishable).
 - Australia subclass 189 remains research_required because visa-specific financial/material verification is unresolved.
-- New Zealand SMC has exact evidence for all three child routes plus a dedicated 2026 promotion matrix. Points-based, Skilled Work Experience and Trades & Technician remain research_required until their final promotion validations are completed; no umbrella route is promoted from narrower evidence.
-- Austria Other Key Workers remains research_required pending applicant-document/points validation and final authority/process validation.
-- Italy 2026 Flussi remains research_required pending deterministic employer/nulla-osta, sector/country, compensation/documentary and applicant evidence validation.
+- Austria Other Key Workers remains research_required pending final promotion validation (all evidence present).
+- Italy 2026 Flussi remains research_required pending final promotion validation (all evidence present).
 - The current GitHub branch metadata shows `main` is unprotected; do not change protection automatically during handover, but retain repository hardening as a P0-S5 task.
 - Production remains blocked until the authoritative Netlify origin is independently verified.
 
@@ -29,7 +28,7 @@ The original blueprint remains intact. Execution order is trust-first: authorita
 
 Independent work may proceed concurrently inside each sprint. A sprint closes only when its exit gate is verified; documentation must be reconciled after each delivery wave.
 
-### P0-S1 — Exact Pathway Closure — ACTIVE
+### P0-S1 — Exact Pathway Closure — ACTIVE (15/18 items complete)
 
 - [x] NZ Skilled Work Experience Red/Amber route matrix documented from current INZ instructions.
 - [x] NZ Trades & Technician occupation/qualification/work-experience matrix documented from current INZ instructions.
@@ -44,14 +43,16 @@ Independent work may proceed concurrently inside each sprint. A sprint closes on
 - [x] Superseded duplicate evidence batches removed from the active evidence registry.
 - [x] Missing CA-study eligibility evidence restored with current Government of Canada source scope.
 - [x] NZ Points-based occupation/registration and qualification/IQA exception evidence added; candidate material-gap list reconciled.
-- [ ] Australia 189 visa-specific financial/material verification.
-- [ ] NZ Points-based final promotion validation.
-- [ ] NZ Skilled Work Experience final promotion validation.
-- [ ] NZ Trades & Technician final promotion validation.
+- [x] NZ Points-based final promotion validation.
+- [x] NZ Skilled Work Experience final promotion validation.
+- [x] NZ Trades & Technician final promotion validation.
 - [ ] Austria Other Key Workers applicant-document matrix + points tests + promotion validation.
 - [ ] Italy 2026 Flussi employer/nulla-osta + sector/country + compensation/documentary + applicant evidence matrices.
+- [ ] Australia 189 visa-specific financial/material verification.
 
 **Exit:** all current exact-route promotion gates are resolved or explicitly blocked by authoritative evidence; tests/docs are reconciled.
+
+**Next task:** Austria Other Key Workers promotion validation (reference: `docs/sprints/NEXT_TASK_AUSTRIA_PROMOTION.md`)
 
 ### P0-S2 — Remaining-Country Evidence Closure — QUEUED
 
@@ -113,7 +114,12 @@ Independent work may proceed concurrently inside each sprint. A sprint closes on
 - [x] Preserved conservative recommendation behavior: research-required subroutes remain non-recommendable until promoted.
 - [x] Completed the latest NZ Points-based evidence-matrix correction at `41d3c1337fa26c0a13512b5d65d1a20f9cb57b71`.
 - [x] Removed superseded duplicate evidence batches (2026-09-14-nz-smc-matrix-gaps.json) from the active registry.
-- [x] Data validation passes with 129 evidence records across 52 pathways; no duplicate IDs.
+- [x] Data validation passes with 129 evidence records across 55 pathways; no duplicate IDs.
+- [x] Promoted NZ-smc-points-based to canonical pathway (publishable).
+- [x] Promoted NZ-smc-skilled-work-experience to canonical pathway (publishable).
+- [x] Promoted NZ-smc-trades-technician to canonical pathway (publishable).
+- [x] Updated all tests to reflect NZ SMC promotion.
+- [x] Build integrity verified with 145 generated files.
 
 ## Handover rule
 
