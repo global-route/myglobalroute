@@ -35,7 +35,7 @@ The blog remains an acquisition/education layer. Country + pathway + evidence + 
 
 The remaining P0 work is decomposed in `docs/sprints/P0_DELIVERY_PLAN.md` and tracked in `docs/sprints/ACTIVE_SPRINT.md`.
 
-- [ ] **P0-S1 — Exact Pathway Closure:** AU-189, NZ SMC routes, Austria Other Key Workers and Italy 2026 Flussi.
+- [x] **P0-S1 — Exact Pathway Closure:** 4 routes promoted (NZ SMC x3, Austria Other Key Workers); Italy Flussi and AU-189 explicitly blocked with documented evidence gaps.
 - [ ] **P0-S2 — Remaining-Country Evidence Closure:** audit and complete the 24 research-required canonical pathways or document authoritative material gaps.
 - [ ] **P0-S3 — Data / Recommendation Quality Gate:** data validation, evidence/boundary/recommendation tests, build, generated output and lint.
 - [ ] **P0-S4 — Browser / Release Gate:** browser/E2E, deep links, calculator/recommendation flows and generated SEO/accessibility verification.
@@ -63,7 +63,7 @@ The remaining P0 work is decomposed in `docs/sprints/P0_DELIVERY_PLAN.md` and tr
 - [ ] Expand evidence batches until the highest-value pathways can safely become publishable.
 - [ ] Establish production freshness/review automation beyond local validation.
 
-**Current registry checkpoint:** 26 countries / 52 canonical pathways; 28 publishable and 24 research-required. Exact subroutes remain outside the canonical 52 until their promotion gates pass.
+**Current registry checkpoint:** 26 countries / 56 canonical pathways; 32 publishable and 24 research-required. Exact subroutes remain outside the canonical 56 until their promotion gates pass.
 
 **Critical rule:** never fabricate missing data to reach the 26-country target.
 

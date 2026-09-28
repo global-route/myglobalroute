@@ -131,7 +131,7 @@ describe('primary-source evidence registry', () => {
     expect(atPathway).toBeDefined();
     expect(atPathway.status).toBe('publishable');
     expect(atPathway.evidenceIds?.length).toBe(5);
-    expect(pathways.pathways.find(p => p.id === 'AT-red-white-red')?.status).toBe('research_required');
+    expect(pathways.pathways.find(p => p.id === 'AT-red-white-red')?.status).toBe('publishable');
   });
 
   test('New Zealand SMC route regression evidence is exact-route and date-bounded', () => {
