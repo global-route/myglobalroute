@@ -17,7 +17,7 @@ module.exports = defineConfig({
   webServer: {
     command: 'npx @11ty/eleventy --serve --port 8080',
     url: 'http://127.0.0.1:8080/',
-    reuseExistingServer: false,
+    reuseExistingServer: !process.env.CI,
     timeout: 120_000
   }
 });

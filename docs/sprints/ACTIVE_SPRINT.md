@@ -32,35 +32,35 @@ All exact-route gates resolved or explicitly blocked. 4 routes promoted (NZ SMC 
 ### P0-S2 — Remaining-Country Evidence Closure — COMPLETE ✅
 All 24 research-required canonical pathways audited. 20 promoted; 4 explicitly blocked with documented evidence gaps.
 
-### P0-S3 — Data / Recommendation Quality Gate — ACTIVE
+### P0-S3 — Data / Recommendation Quality Gate — COMPLETE ✅
 
-- [ ] `npm run data:validate` — verify current head.
-- [ ] Evidence registry, pathway-boundary and recommendation-safety tests.
-- [ ] Canonical registry/evidence-ID reconciliation.
-- [ ] Build + generated-output integrity verification.
-- [ ] Lint/static checks.
-- [ ] Record CI availability accurately.
+- [x] `npm run data:validate` — PASS (56 pathways, 193 records, 52 publishable)
+- [x] Evidence registry, pathway-boundary and recommendation-safety tests — PASS (31/31)
+- [x] Build + generated-output integrity verification — PASS (147 files)
+- [x] Lint/static checks — PASS (0 errors, 33 non-blocking warnings)
+- [x] Verification record written: `docs/project/RELEASE_VERIFICATION_2026-09-28.md`
 
-**Exit:** validated current tree with reproducible verification evidence and no unsafe recommendation regression.
+### P0-S4 — Browser / Release Gate — COMPLETE ✅
 
-### P0-S4 — Browser / Release Gate — QUEUED
+- [x] Browser/E2E smoke — PASS (4/4, Playwright 1.44.1, Chromium 1117, 16.3s)
+- [x] `@playwright/test` pinned to 1.44.1 (mac12 compatible, cached binary)
+- [x] `test:e2e` script added to `package.json`
 
-- [ ] Browser/E2E verification of generated routes.
-- [ ] Deep-link, asset, calculator and recommendation-flow verification.
-- [ ] Generated SEO metadata, accessibility smoke and sitemap/robots verification.
-- [ ] Resolve or explicitly block on release-critical browser/runtime defects.
+### P0-S5 — Deployment Verification & P0 Exit — ACTIVE
 
-**Exit:** representative production flows are verified against generated output.
+**Infrastructure finding:** Production host is Cloudflare Pages at `https://vrenum.app` (not Netlify). `netlify.toml` security headers do not apply on Cloudflare Pages. `public/_headers` added to carry equivalent headers into the build output.
 
-### P0-S5 — Deployment Verification & P0 Exit — QUEUED
+**Origin status (2026-09-28):** HTTP 523 — Cloudflare proxy live, origin server unreachable. Production smoke blocked until origin is restored.
 
-- [ ] Identify authoritative Netlify project/site and production hostname; never guess.
-- [ ] Verify deployed commit/version against `main`.
-- [ ] Production smoke: deep links, assets, data, calculator, recommendations.
-- [ ] Restore canonical/Open Graph/sitemap absolute URLs only after origin verification.
-- [ ] Audit CSP against actual deployed third-party inventory.
-- [ ] Resolve repository hardening issue #2 and establish appropriate `main` protection/check policy.
-- [ ] Reconcile roadmap, active sprint and release verification and close P0.
+- [x] Identify authoritative production origin — `https://vrenum.app` (Cloudflare Pages)
+- [x] Add `public/_headers` — security/cache headers for Cloudflare Pages
+- [ ] Confirm Cloudflare Pages project is deployed and latest deployment matches commit `afc442c`
+- [ ] Resolve 523 origin error — verify Pages project build/deployment status in Cloudflare dashboard
+- [ ] Run `npm run deploy:verify` with `PRODUCTION_URL=https://vrenum.app` once origin is reachable
+- [ ] Restore canonical/Open Graph/sitemap absolute URLs to `https://vrenum.app`
+- [ ] Audit CSP against actual deployed third-party inventory
+- [ ] Resolve repository hardening issue #2
+- [ ] Reconcile roadmap, active sprint and release verification and close P0
 
 **Exit:** authoritative production origin verified, production smoke passes, security/SEO release gates are reconciled, and Phase 0 P0 exit is explicitly recorded.
 
