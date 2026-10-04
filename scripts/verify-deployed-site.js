@@ -1,4 +1,4 @@
-const { URL } = require('node:url');
+import { URL } from 'node:url';
 
 const origin = process.env.PRODUCTION_URL;
 
