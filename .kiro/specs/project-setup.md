@@ -1,3 +1,14 @@
+<script
+  async
+  src="https://www.sabilytics.com/script.js"
+  data-site="8on0vmbkmxtb"
+  data-domain="vrenum.app"
+></script>
+
+
+
+
+
 # Global Route: Project Setup & Structure
 
 ## Overview
