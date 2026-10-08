@@ -25,6 +25,7 @@
   });
 
   const EXCLUDED_PAGE_TYPES = new Set(['search', 'forms', 'account', 'checkout', 'legal', 'error']);
+  let adProvider = null;
   const EXCLUDED_AD_WORKFLOWS = new Set(['find-my-route', 'search']);
 
   function canRenderAd(slotId, pageType, consentGranted) {
@@ -72,9 +73,21 @@
         host.replaceChildren();
         return;
       }
+      // Never show an empty/fake ad placeholder. A verified provider adapter must
+      // mount the actual creative after consent and page-policy checks pass.
+      if (!adProvider || typeof adProvider.mount !== 'function') {
+        host.hidden = true;
+        host.replaceChildren();
+        return;
+      }
+      const mounted = adProvider.mount(host, { slotId, pageType });
+      if (mounted === false) {
+        host.hidden = true;
+        host.replaceChildren();
+        return;
+      }
       host.classList.add('monetization-slot', 'monetization-ad-slot');
       host.setAttribute('aria-label', 'Advertisement');
-      host.textContent = 'Advertisement';
       host.hidden = false;
       ads += 1;
     });
@@ -94,6 +107,13 @@
     return { ads, partners };
   }
 
+  function setAdProvider(adapter) {
+    if (adapter !== null && typeof adapter?.mount !== 'function') {
+      throw new Error('Ad provider must expose mount(host, context)');
+    }
+    adProvider = adapter;
+  }
+
   function init() {
     const analytics = root.GlobalRoute?.Analytics;
     const consentGranted = analytics?.getConsentState?.() === 'granted';
@@ -105,6 +125,7 @@
     PARTNER_SLOTS,
     canRenderAd,
     canRenderPartner,
+    setAdProvider,
     getAdSlot,
     getPageType,
     createAdPlaceholder,
