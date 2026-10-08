@@ -70,6 +70,29 @@
     return { valid: true, payload: clean };
   }
 
+  function initConsentUI() {
+    const key = 'globalroute.analyticsConsent';
+    let stored = null;
+    try { stored = window.localStorage.getItem(key); } catch (_) {}
+    if (stored && ['granted', 'denied'].includes(stored)) setConsent(stored);
+    if (document.getElementById('analytics-consent')) return;
+    const banner = document.createElement('aside');
+    banner.id = 'analytics-consent';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-label', 'Analytics consent');
+    banner.innerHTML = '<p>We use privacy-aware analytics to understand product usage. No migration profile details are sent to analytics.</p><div><button type="button" data-consent="granted">Allow analytics</button><button type="button" data-consent="denied">Decline</button></div>';
+    const mount = document.body;
+    if (!mount) return;
+    mount.appendChild(banner);
+    banner.querySelectorAll('[data-consent]').forEach(button => button.addEventListener('click', () => {
+      const state = button.getAttribute('data-consent');
+      setConsent(state);
+      try { window.localStorage.setItem(key, state); } catch (_) {}
+      banner.remove();
+    }));
+    if (consentState !== 'unknown') banner.remove();
+  }
+
   function setConsent(state) {
     if (!['unknown', 'denied', 'granted', 'withdrawn'].includes(state)) {
       throw new Error('Invalid analytics consent state');
@@ -122,7 +145,8 @@
     getConsentState,
     setProvider,
     track,
-    createGA4Provider
+    createGA4Provider,
+    initConsentUI
   });
 
   root.GlobalRoute = root.GlobalRoute || {};
