@@ -2,7 +2,7 @@
 
 **Phase:** P1-REV  
 **Task:** REV-02  
-**Status:** Foundation implemented; live monetization remains disabled.
+**Status:** Foundation implemented; page-type contracts wired; live monetization remains disabled.
 
 ## Runtime source
 
@@ -16,7 +16,7 @@ It defines:
 - restricted page/workflow types;
 - consent requirement for display ads.
 
-Pages should query the registry rather than embed monetization rules independently.
+Pages now expose explicit `data-page-type` contracts and load the shared registry. Visible provider rendering remains intentionally deferred until provider/consent production gates pass.
 
 ## Display-ad guardrails
 
@@ -68,6 +68,13 @@ not:
 
 **Payout → route recommendation.**
 
+## Current implementation state
+
+- Page-type contracts are wired for home, blog, calculator, country, pathway and Find My Route surfaces.
+- Unit coverage protects slot/page-type boundaries.
+- Find My Route remains excluded from display advertising.
+- No live publisher ID or partner destination is stored in the repository.
+
 ## Next
 
-REV-04 can now build the partner registry/tracking layer against these stable placement IDs. REV-03 remains gated by production origin, consent/CMP and publisher configuration.
+REV-04: governed partner lifecycle, disclosure and reconciliation. REV-03 remains gated by production origin, consent/CMP and publisher configuration.
