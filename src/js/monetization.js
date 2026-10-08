@@ -38,6 +38,21 @@
     return Boolean(slot && !EXCLUDED_PAGE_TYPES.has(pageType) && slot.pageTypes.includes(pageType));
   }
 
+  function getPageType() {
+    return document?.body?.dataset?.pageType || 'unknown';
+  }
+
+  function createAdPlaceholder(slotId, { consentGranted = false } = {}) {
+    const pageType = getPageType();
+    if (!canRenderAd(slotId, pageType, consentGranted)) return null;
+    const element = document.createElement('aside');
+    element.className = 'monetization-slot monetization-ad-slot';
+    element.dataset.slotId = slotId;
+    element.setAttribute('aria-label', 'Advertisement');
+    element.hidden = true;
+    return element;
+  }
+
   function getAdSlot(slotId) {
     return AD_SLOTS[slotId] || null;
   }
@@ -52,6 +67,8 @@
     canRenderAd,
     canRenderPartner,
     getAdSlot,
+    getPageType,
+    createAdPlaceholder,
     getPartnerSlot
   });
 
