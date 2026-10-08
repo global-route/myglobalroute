@@ -1,4 +1,6 @@
-# Release Verification — 2026-09-28
+# Release Verification — 2026-09-28 (Historical checkpoint)
+
+> **Superseded for current status by [Release Verification — 2026-10-08](RELEASE_VERIFICATION_2026-10-08.md).** This file preserves the evidence recorded at the September checkpoint; its statements about current head, revenue next steps and CI are historical and must not be used as the current status.
 
 ## Current result
 **Release remains blocked on production deployment verification.** P0-S1 through P0-S4 are complete. The source tree, data registry, unit tests, build output, SEO/accessibility, lint, and browser E2E smoke all pass on the current head. Production origin verification (P0-S5) is the sole remaining release gate.
