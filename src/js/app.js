@@ -150,7 +150,8 @@ const GlobalRoute = (() => {
   const getCountryById = id => appState.countries.find(country => country.id === id);
   const getAllCountries = () => appState.countries;
   const trackEvent = (eventName, eventData = {}) => {
-    if (config.enableAnalytics && typeof gtag !== 'undefined') gtag('event', eventName, eventData);
+    if (!config.enableAnalytics || typeof GlobalRoute.Analytics === 'undefined') return { accepted: false, reason: 'analytics_unavailable' };
+    return GlobalRoute.Analytics.track(eventName, eventData);
   };
 
   return { init, loadCountriesData, getCountryById, getAllCountries, trackEvent, getState: () => appState };
