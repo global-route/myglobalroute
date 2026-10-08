@@ -24,7 +24,7 @@ const warnings = [];
 const validationDate = process.env.VALIDATION_AS_OF || new Date().toISOString().slice(0, 10);
 const today = new Date(`${validationDate}T00:00:00Z`);
 
-if (Number.isNaN(today.getTime())) errors.push(`VALIDATION_AS_OF must be an ISO date (YYYY-MM-DD); received ${validationDate}`);
+if (!isIsoDate(validationDate)) errors.push(`VALIDATION_AS_OF must be a real ISO date (YYYY-MM-DD); received ${validationDate}`);
 
 const countryIds = new Set();
 if (!Array.isArray(countries) || countries.length !== 26) errors.push(`countries must contain exactly 26 records; found ${countries?.length ?? 0}`);
