@@ -11,9 +11,9 @@
 
 ## Current product checkpoint
 
-- Canonical migration registry: 26 countries / 56 pathways.
-- Latest documented publishability: 52 publishable; 4 remain research-required with explicit blockers.
-- Latest documented evidence registry: 193 records across 56 pathways.
+- Canonical migration registry: 26 countries / 56 pathways (recounted directly from the current `src/data/pathways.json` contents during this handover review).
+- Current source-file status counts: 52 `publishable`, 4 `research_required`; four records have no evidence IDs (consistent with research-required count, but still requires the repository validator to confirm the full evidence boundary).
+- Evidence registry total remains 193 only as a historical documented count; current evidence-record count has not been independently recomputed in this pass.
 - P0-S1 through P0-S4 are documented as complete; their verification evidence must be rechecked against the current head after monetization changes.
 - Production release remains blocked until the authoritative deployment project/origin and deployed commit are independently verified.
 
@@ -52,7 +52,7 @@ The strategy and documentation are complete. Implementation now includes privacy
 - [x] Measurement and consent foundation implemented.
 - [x] Ad/partner slot configuration and page hosts wired.
 - [x] Commercial registry validation and redirect expiry/security checks implemented.
-- [ ] Re-run current quality/browser workflows and record exact results.
+- [ ] Re-run current quality/browser workflows and record exact results against an explicit `main` SHA; the latest-head CI result is not confirmed.
 - [ ] Verify the commercial redirect adapter is deployed and runtime-compatible with the confirmed hosting platform; the current Netlify Function implementation is not evidence that a Netlify deployment exists.
 - [ ] Provider-specific click/revenue reconciliation after a real provider is selected.
 - [ ] AdSense activation only after origin, CMP/privacy and publisher gates pass.
