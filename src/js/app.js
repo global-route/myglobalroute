@@ -15,7 +15,7 @@ const GlobalRoute = (() => {
       initializeSearch();
       initializeCountryDirectory();
       initializeCalculator();
-      if (config.enableAnalytics) loadAnalytics();
+      if (config.enableAnalytics) { loadAnalytics(); GlobalRoute.Analytics.initConsentUI(); }
       appState.isInitialized = true;
     } catch (error) {
       console.error('Initialization error:', error);
