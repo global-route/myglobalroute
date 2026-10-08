@@ -67,3 +67,26 @@ All 24 research-required canonical pathways audited. 20 promoted; 4 explicitly b
 ## Definition of Done
 
 Implementation + documentation + verification. Never mark a production or data-trust task passed without evidence. If CI is unavailable, record **Not Tested — CI unavailable**.
+
+## P1 Revenue Readiness Lane — concurrent preparation
+
+The monetization architecture is now documented under `docs/monetization/` and the dedicated revenue phase is `docs/phase-1/REVENUE_MONETIZATION_PHASE.md`.
+
+This lane may proceed concurrently with P0-S5 because it does not require live advertising activation.
+
+- [x] Revenue architecture documented.
+- [x] AdSense strategy documented.
+- [x] Ad placement map documented.
+- [x] MRR model documented.
+- [x] Revenue metrics documented.
+- [x] Affiliate strategy documented.
+- [x] Partner revenue model documented.
+- [x] Monetization roadmap documented.
+- [x] Dedicated P1 revenue phase created.
+- [x] First implementation task defined: `REV-01 Measurement Foundation`.
+- [ ] Implement REV-01 measurement foundation.
+- [ ] Implement REV-02 configuration-driven monetization slots.
+- [ ] Complete privacy/consent gate before advertising activation.
+- [ ] Activate AdSense only after authoritative production verification.
+
+**Handover:** `docs/sprints/P1_REVENUE_SPRINT.md`.
