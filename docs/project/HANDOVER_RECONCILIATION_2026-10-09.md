@@ -77,3 +77,10 @@ Keep ad/partner activation and lead collection blocked until the actual origin, 
 - [ ] Record verified hosting project, origin and deployed SHA, or retain the explicit blocker.
 - [ ] Record current-head test outcomes without inference.
 - [ ] Keep production release and monetization NO-GO until all relevant gates pass.
+
+
+### Validator audit finding — evidence-date integrity
+
+A source review of `scripts/validate-data.js` found that evidence records require `retrievedAt` and `reviewAfter` to be non-empty, but the validator does not currently enforce that these values are real ISO calendar dates. It compares `reviewAfter` to the validation date using JavaScript date parsing; malformed values can therefore avoid a meaningful due-for-review warning. `effectiveDate`, when present, is also not format-validated. This is a **code-level gap identified by inspection**, not a runtime failure reproduced in tests.
+
+**Next implementation task:** add strict calendar-date validation for required evidence dates and optional `effectiveDate`; keep expired-but-valid review dates as warnings rather than silently promoting or demoting pathways; add unit cases for malformed dates, impossible dates (for example, February 30), missing required dates, and valid dates. Then run the validator and complete verification suite on the resulting commit. Until then, current evidence freshness warnings and the full validation result remain unverified.
