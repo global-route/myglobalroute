@@ -39,7 +39,7 @@
   }
 
   function getPageType() {
-    return document?.body?.dataset?.pageType || 'unknown';
+    return typeof document !== 'undefined' ? (document.body?.dataset?.pageType || 'unknown') : 'unknown';
   }
 
   function createAdPlaceholder(slotId, { consentGranted = false } = {}) {
