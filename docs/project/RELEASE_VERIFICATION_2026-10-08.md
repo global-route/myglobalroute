@@ -6,9 +6,9 @@
 
 ## Source-tree and CI status
 
-Latest implementation/documentation head checked while preparing this record: `b2fc2ac6af0cecab626ca66ba7e86ee24846300d`.
+Latest implementation code checkpoint reviewed: `2bf9c79e706b7521f3dbd1c51467c619e298a425`. Documentation follow-ups have since advanced `main` through `c244f165e35515464873f1b60b699a2a717d066a`; these later commits update sprint/release records only.
 
-At the time this record was written, GitHub Actions runs for the latest implementation/doc commits were queued or in progress. Therefore, current-head CI is **PENDING — do not treat as passed** until the final run results are inspected.
+On the implementation checkpoint, **Quality Gate and Lint passed**. Browser Smoke was still running at the time of this update. An earlier browser run failed because the consent banner was absent; analytics was then changed to initialize consent controls independently of `app.js`, and a new browser run was started. The fix is **not yet verified by a completed browser run**. Workflows on the latest documentation head are also queued/in progress, so do not claim the full current-head suite is green until those runs finish.
 
 Recent code changes now include:
 - consent changes call the monetization refresh hook;
