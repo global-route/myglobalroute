@@ -11,7 +11,7 @@
 - 26 countries / 56 pathways.
 - **52 pathways publishable; 4 remain research-required (all explicitly blocked with documented gaps).**
 - 193 evidence records across all 56 pathways — 56/56 evidenced and materially covered.
-- Current `main` head: pending commit (P0-S2 complete).
+- Current `main` head: `40d13aee07514c96c009921e1260a019a9a0b691` (documentation synchronization head).
 - All unit tests pass (31/31); build integrity verified.
 - Production remains blocked until the authoritative Netlify origin is independently verified.
 
