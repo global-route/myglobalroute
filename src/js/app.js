@@ -15,7 +15,7 @@ const GlobalRoute = (() => {
       initializeSearch();
       initializeCountryDirectory();
       initializeCalculator();
-      if (config.enableAnalytics) { loadAnalytics(); GlobalRoute.Analytics.initConsentUI(); }
+      if (config.enableAnalytics) { loadAnalytics(); window.GlobalRoute?.Analytics?.initConsentUI(); }
       appState.isInitialized = true;
     } catch (error) {
       console.error('Initialization error:', error);
@@ -143,11 +143,11 @@ const GlobalRoute = (() => {
   };
 
   const loadAnalytics = () => {
-    if (typeof GlobalRoute.Analytics === 'undefined') return;
-    const provider = GlobalRoute.Analytics.createGA4Provider(
+    if (typeof window.GlobalRoute?.Analytics === 'undefined') return;
+    const provider = window.GlobalRoute.Analytics.createGA4Provider(
       typeof gtag === 'function' ? gtag : null
     );
-    if (provider) GlobalRoute.Analytics.setProvider(provider);
+    if (provider) window.GlobalRoute.Analytics.setProvider(provider);
     document.querySelectorAll('a[target="_blank"]').forEach(link => {
       link.addEventListener('click', () => {
         trackEvent('official_source_clicked', {
@@ -162,7 +162,7 @@ const GlobalRoute = (() => {
   const getAllCountries = () => appState.countries;
   const trackEvent = (eventName, eventData = {}) => {
     if (!config.enableAnalytics || typeof GlobalRoute.Analytics === 'undefined') return { accepted: false, reason: 'analytics_unavailable' };
-    return GlobalRoute.Analytics.track(eventName, eventData);
+    return window.GlobalRoute.Analytics.track(eventName, eventData);
   };
 
   return { init, loadCountriesData, getCountryById, getAllCountries, trackEvent, getState: () => appState };
