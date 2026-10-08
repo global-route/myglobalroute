@@ -20,6 +20,11 @@ describe('monetization configuration', () => {
     expect(Monetization.getPartnerSlot('partner_education').categories).toContain('education');
   });
 
+  test('requires an explicit provider adapter before an ad can be mounted', () => {
+    expect(() => Monetization.setAdProvider({})).toThrow('Ad provider must expose mount(host, context)');
+    expect(() => Monetization.setAdProvider(null)).not.toThrow();
+  });
+
   test('rejects unknown inventory', () => {
     expect(Monetization.getAdSlot('unknown')).toBeNull();
     expect(Monetization.getPartnerSlot('unknown')).toBeNull();
