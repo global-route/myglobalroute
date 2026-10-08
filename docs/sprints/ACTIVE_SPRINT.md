@@ -66,3 +66,6 @@ Implementation + documentation + verification. Never mark a production or data-t
 ## Handover reconciliation gate
 
 Before accepting this sprint handover, refresh the current `main` SHA, inspect the latest completed Actions jobs, recompute pathway/evidence counts, and reconcile the P0-S2 backlog. The 2026-10-09 reconciliation record is authoritative for ordered actions and status vocabulary.
+
+
+Current-head update (2026-10-09): strict ISO date validation and unit coverage are implemented. Quality Gate and Lint pass at `542bba327342e699bd2800a1865a1bd4c6bb8099`. Browser Smoke is still running after the root-relative asset mapping fix; keep the browser gate open until it completes. Production release remains blocked pending verified hosting origin and deployed SHA.
