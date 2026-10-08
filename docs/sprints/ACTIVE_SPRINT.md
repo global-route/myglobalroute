@@ -1,5 +1,7 @@
 # Active Sprint — Production Integrity & Intelligence Core
 
+> Canonical cross-handover reconciliation: [`docs/project/HANDOVER_RECONCILIATION_2026-10-09.md`](../project/HANDOVER_RECONCILIATION_2026-10-09.md). Use live repository state and completed workflow results, not historical claims, to update status.
+
 **Started:** September 5, 2026  
 **Status:** P0-S5 active; monetization foundations proceeding concurrently  
 **Priority:** P0 production integrity  
@@ -59,3 +61,7 @@ The strategy and documentation are complete. Implementation now includes privacy
 ## Definition of Done
 
 Implementation + documentation + verification. Never mark a production or data-trust task passed without evidence. If CI is unavailable, record **Not Tested — CI unavailable**. Monetization must not influence evidence status, pathway eligibility or route ranking.
+
+## Handover reconciliation gate
+
+Before accepting this sprint handover, refresh the current `main` SHA, inspect the latest completed Actions jobs, recompute pathway/evidence counts, and reconcile the P0-S2 backlog. The 2026-10-09 reconciliation record is authoritative for ordered actions and status vocabulary.
