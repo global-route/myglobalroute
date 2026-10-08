@@ -90,6 +90,9 @@
       setConsent(state);
       try { window.localStorage.setItem(key, state); } catch (_) {}
       banner.remove();
+      // Consent is also the gate for eligible ad placements. Refresh them only
+      // after the user's explicit choice has been persisted.
+      root.GlobalRoute?.Monetization?.refreshAfterConsent?.();
     }));
     if (consentState !== 'unknown') banner.remove();
   }
