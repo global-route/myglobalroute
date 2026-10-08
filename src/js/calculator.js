@@ -128,9 +128,7 @@ const CalculatorModule = (() => {
     return 1;
   };
 
-  const trackUsage = (eventData = {}) => {
-    if (typeof gtag !== 'undefined') gtag('event', 'calculator_used', eventData);
-  };
+  const trackUsage = () => undefined;
 
   // DOM wiring belongs to app.js; this module is the single calculation engine.
   return { calculateAffordability, getRecommendedCountries, calculateTimeline, generateSavingsPlan, getCostBreakdown, compareCountries, getAffordabilityIndex, convertToUSD, trackUsage, hasPublishableCost };
