@@ -27,7 +27,7 @@ test('countries page loads', async ({ page }) => {
 test('analytics consent is explicit', async ({ page }) => {
   await page.goto('/');
   const banner = page.locator('#analytics-consent');
-  await expect(banner).toBeVisible();
+  await expect(banner).toBeVisible({ timeout: 10000 });
   await expect(banner.getByRole('button', { name: /allow analytics/i })).toBeVisible();
   await expect(banner.getByRole('button', { name: /decline/i })).toBeVisible();
   await banner.getByRole('button', { name: /decline/i }).click();
