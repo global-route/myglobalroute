@@ -1,66 +1,37 @@
-# Active Revenue Task — REV-01 Measurement Foundation
+# Active Revenue Task — P1-REV Commercial Measurement & Readiness
 
 **Phase:** P1-REV  
-**Priority:** P0/P1 bridge  
-**Status:** REV-01 complete; REV-02 foundation implemented — verification/production gates remain  
+**Status:** REV-01 complete; REV-02 and REV-04 foundations implemented; wiring/production gates remain  
 **Depends on:** Existing analytics/runtime foundation, privacy/security review  
-**Blocks:** Reliable AdSense, affiliate, lead and MRR optimization
+**Blocks:** Reliable AdSense, governed commercial launches and MRR optimization
 
-## Objective
+## Current implementation
 
-Implement a privacy-aware measurement contract connecting MyGlobalRoute product intent to revenue surfaces.
+- [x] Central privacy-aware event contract.
+- [x] Explicit consent UI with persisted grant/deny state.
+- [x] Shared analytics loader on core static and generated product pages.
+- [x] Calculator and route surfaces use the shared contract.
+- [x] Configuration-driven ad and commercial slot registry.
+- [x] Empty commercial registry boundary; no hypothetical live partners.
+- [x] Controlled redirect boundary that rejects unknown/unverified entries.
+- [x] Tests for analytics, monetization configuration and redirect safety.
 
-## Scope
+## Remaining acceptance work
 
-### Events
-- `route_search_started`
-- `route_recommendation_generated`
-- `pathway_viewed`
-- `calculator_started`
-- `calculator_completed`
-- `official_source_clicked`
-- `partner_impression`
-- `partner_clicked`
-- `lead_started`
-- `lead_submitted`
-- `subscription_started`
-- `subscription_cancelled`
+- [ ] Wire visible ad/partner components to registry-controlled slots.
+- [ ] Add browser coverage for consent and commercial placement exclusions.
+- [ ] Add governed commercial-entry schema and review/expiry lifecycle.
+- [ ] Add click/revenue reconciliation against an actual provider.
+- [ ] Verify external provider behavior in production.
+- [ ] Complete AdSense publisher/CMP/ads.txt gates only after authoritative origin is verified.
 
-Advertising impression events should be implemented only where the selected analytics/advertising provider permits them and consent requirements are satisfied.
+## Commercial firewall
 
-## Required dimensions
+Revenue signals must never change pathway eligibility, evidence status or route ranking. Commercial inventory must be distinguishable from official migration guidance and must not receive sensitive migration-profile data.
 
-Use non-sensitive dimensions such as:
-- page type;
-- country/pathway ID where appropriate;
-- placement ID;
-- partner ID;
-- acquisition source;
-- device class;
-- experiment ID;
-- consent state.
+## Next execution order
 
-Do not transmit:
-- passport/identity information;
-- uploaded documents;
-- unnecessary personal contact data;
-- detailed sensitive migration answers to advertising platforms.
-
-## Acceptance criteria
-
-- [x] Central event naming/schema documented and implemented.
-- [x] Events use the shared analytics contract rather than direct provider calls.
-- [x] Route/pathway identifiers remain non-personal.
-- [x] Partner placement attribution is deterministic.
-- [x] Consent state is respected.
-- [ ] Revenue events can be reconciled with source/platform reports.
-- [x] Unit tests cover event payload validation.
-- [ ] Build and browser smoke remain green.
-- [x] Documentation references the implemented event contract.
-
-## Next after REV-01
-
-1. REV-02 Monetization configuration and placement components — foundation implemented; next: wire page components and browser coverage.
-2. REV-04 Affiliate foundation — registry/tracking foundation implemented; next: governed partner records and redirect handler.
-3. REV-03 AdSense activation waits for production/consent Gate B.
-4. REV-05 Lead engine follows partner and consent foundations.
+1. REV-02 component wiring + browser coverage.
+2. REV-04 governed commercial-entry lifecycle + disclosure.
+3. REV-03 AdSense integration boundary and provider-readiness checks.
+4. P0 production-origin, branch-protection and pathway-scope hardening.
