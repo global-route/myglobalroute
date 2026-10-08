@@ -31,7 +31,7 @@ The September release record reports browser smoke and SEO/accessibility checks 
 
 ### P0-S5 — Deployment Verification & P0 Exit — ACTIVE / BLOCKED
 
-**Origin conflict requiring resolution:** historical sprint notes identify Cloudflare Pages and `https://vrenum.app`, while other project context records a mismatch involving `myglobalroute.com`. These claims are not sufficient to establish the authoritative deployment. Verify the actual hosting account/project, custom-domain mapping and deployed commit before choosing an origin.
+**Origin conflict requiring resolution:** historical sprint notes identify Cloudflare Pages and `https://vrenum.app`; a public check on 2026-10-08 found that `myglobalroute.com` presents a visa-consultancy/services site rather than this repository's application, while `vrenum.app` could not be retrieved through the available public check. This does not prove hosting ownership or that `vrenum.app` is down. Verify the actual hosting account/project, custom-domain mapping and deployed commit before choosing an origin.
 
 - [ ] Identify authoritative hosting project, production hostname and deployment owner from account/configuration evidence.
 - [ ] Verify the deployed commit matches the intended `main` head.
