@@ -1,107 +1,41 @@
 # Revenue Implementation Plan
 
 **Phase:** P1-REV  
-**Status:** Ready for execution
+**Status:** In progress
 
 ## Execution order
 
-### REV-01 — Measurement foundation — P0/P1 bridge
-**First implementation task.**
+### REV-01 — Measurement foundation — COMPLETE
+Central event schema, privacy-safe dimensions, explicit consent handling and shared dispatch are implemented.
 
-Build:
-- event constants/schema;
-- page/surface identifiers;
-- revenue-source identifiers;
-- partner placement identifiers;
-- route/pathway attribution;
-- consent state handling;
-- analytics reporting contract.
+### REV-02 — Monetization configuration — FOUNDATION COMPLETE
+Configuration-driven ad/commercial slots and page/workflow exclusions are implemented. Next is template/component wiring plus browser verification.
 
-**Do not** send sensitive migration answers, documents or personal identity data to advertising analytics.
+### REV-03 — AdSense integration — GATED
+Prepare the integration boundary, but do not activate live advertising until the authoritative production origin, consent/CMP readiness, publisher approval and real publisher identifier are verified.
 
-**Done when:** events can distinguish content traffic, route intent, commercial clicks, leads and recurring conversions without exposing unnecessary personal data.
-
-### REV-02 — Monetization configuration — FOUNDATION IMPLEMENTED
-Build configuration-driven:
-- ad slots;
-- partner slots;
-- page-type exclusions;
-- workflow exclusions;
-- experiment flags;
-- consent-aware rendering.
-
-**Done when:** monetization inventory can be changed without hardcoding business logic into every page.
-
-### REV-03 — AdSense integration
-After Gate B:
-- publisher configuration;
-- approved ad code;
-- ads.txt;
-- article/country/pathway slots;
-- exclusion rules;
-- revenue event/reporting;
-- performance monitoring.
-
-**Done when:** controlled AdSense traffic is live without harming route completion or performance.
-
-### REV-04 — Affiliate infrastructure
-- partner registry;
-- tracked links;
-- placement IDs;
-- disclosure component;
-- click attribution;
-- partner revenue reconciliation.
-
-**Done when:** a verified partner can be launched end-to-end.
+### REV-04 — Commercial/affiliate infrastructure — FOUNDATION COMPLETE
+A deterministic attribution boundary and safe redirect endpoint now exist, with an empty registry so no unverified commercial destination can be launched. Next: governed entry lifecycle, disclosure and provider reconciliation.
 
 ### REV-05 — Qualified lead engine
-- lead schema;
-- consent;
-- qualification;
-- partner matching;
-- delivery;
-- acceptance/rejection;
-- payout/revenue reconciliation.
-
-**Done when:** a qualified lead can be securely routed and financially reconciled.
+Build only after consent and commercial governance are production-ready.
 
 ### REV-06 — Partner subscription MVP
-- partner accounts/profile;
-- plans;
-- billing;
-- entitlement;
-- dashboard;
-- partner MRR;
-- churn reporting.
-
-**Done when:** a partner can pay for a recurring product and the amount is reflected in MRR.
+Build recurring commercial accounts, plans, billing, entitlements and MRR reporting.
 
 ### REV-07 — Premium consumer MVP
-Prioritize features that create recurring value:
-- saved routes;
-- advanced comparison;
-- migration planning workspace;
-- alerts;
-- exportable plan.
-
-**Done when:** customer research validates willingness to pay and the MVP has measurable retention.
+Prioritize saved routes, advanced comparisons, planning workspace, alerts and exports; validate willingness to pay before expanding.
 
 ### REV-08 — API/data MVP
-- API authentication;
-- evidence-aware response model;
-- usage tracking;
-- recurring contracts;
-- documentation;
-- data freshness controls.
+Expose evidence-aware intelligence under authenticated recurring contracts with freshness controls.
 
-**Done when:** an external customer can consume governed migration intelligence under a recurring contract.
-
-## Technical principles
+## Non-negotiable technical principles
 
 - No revenue logic inside evidence/eligibility calculations.
-- No partner ranking based solely on payout.
-- Use stable placement IDs.
-- Use configuration over duplicated page code.
-- Keep revenue data separable from migration-profile data.
-- Keep MRR accounting independent from advertising estimates.
-- Make all commercial content auditable.
+- No commercial ranking based solely on payout.
+- Stable placement IDs.
+- Configuration over duplicated page code.
+- Revenue data separable from migration-profile data.
+- MRR independent from advertising/referral estimates.
+- Commercial content auditable.
+- No live provider credentials or guessed publisher IDs in source control.
