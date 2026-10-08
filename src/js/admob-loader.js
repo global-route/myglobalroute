@@ -6,9 +6,9 @@
 const AdMobLoader = (() => {
   // Configuration
   const config = {
-    publisherId: 'ca-pub-XXXXXXXXXXXXXXXX', // Replace with actual Publisher ID
+    publisherId: '', // Configure only after provider approval and publisher verification
     delayLoadMs: 3000,
-    enabled: true,
+    enabled: false, // Fail closed until an approved, real publisher configuration is supplied
     adUnits: {
       homepageFeatured: 'div-gpt-ad-1234567890',
       articleSidebar: 'div-gpt-ad-0987654321',
@@ -30,8 +30,8 @@ const AdMobLoader = (() => {
    */
   const init = async () => {
     if (state.initialized) return;
-    if (!config.enabled) {
-      console.log('AdMob is disabled');
+    if (!config.enabled || !/^ca-pub-\\d+$/.test(config.publisherId)) {
+      // Never load third-party advertising code with placeholder credentials.
       return;
     }
 
