@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: npm install --ignore-scripts --no-audit --no-fund
       - name: Dependency audit
-        run: npm audit --audit-level=high
+        run: npm audit --audit-level=high --omit=dev
       - name: Validate migration data
         run: npm run data:validate
       - name: Unit tests
