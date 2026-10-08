@@ -31,3 +31,5 @@ describe('monetization configuration', () => {
     expect(Monetization.canRenderAd('ad_country_mid', 'country', true)).toBe(true);
     expect(Monetization.canRenderAd('ad_homepage_secondary', 'home', true)).toBe(true);
   });
+
+});
