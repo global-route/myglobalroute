@@ -29,6 +29,7 @@ test('calculator does not ship a guessed AdSense publisher id', async ({ page })
 });
 
 test('analytics consent is explicit and persisted', async ({ page }) => {
+  await page.addInitScript(() => localStorage.clear());
   await page.goto('/pages/calculator.html');
   const banner = page.locator('#analytics-consent');
   await expect(banner).toBeVisible();
