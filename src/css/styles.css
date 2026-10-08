@@ -584,3 +584,9 @@ a:focus {
     display: none;
   }
 }
+
+
+/* Author component display rules must never override semantic hidden state. */
+.ad-unit[hidden], [data-ad-slot][hidden], [data-partner-slot][hidden] {
+  display: none !important;
+}
