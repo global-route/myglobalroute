@@ -21,7 +21,7 @@ Build:
 
 **Done when:** events can distinguish content traffic, route intent, commercial clicks, leads and recurring conversions without exposing unnecessary personal data.
 
-### REV-02 — Monetization configuration
+### REV-02 — Monetization configuration — FOUNDATION IMPLEMENTED
 Build configuration-driven:
 - ad slots;
 - partner slots;
