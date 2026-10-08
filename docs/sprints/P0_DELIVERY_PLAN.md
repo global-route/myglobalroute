@@ -4,7 +4,7 @@
 **Baseline:** 14 September 2026  
 **Scope:** Remaining P0 work through Phase 0/1/2 exit  
 **Handover:** `docs/sprints/HANDOVER.md`  
-**Current execution head:** `41d3c1337fa26c0a13512b5d65d1a20f9cb57b71` plus documentation-only handover commits
+**Current execution head:** check the live `main` head before each execution wave; historical SHAs in older handovers are not authoritative.
 
 This plan decomposes the remaining P0 work into delivery sprints. A sprint is not considered complete because implementation exists; its exit gate requires implementation, documentation, and verification. Work may proceed concurrently inside a sprint, but promotion and release gates remain evidence-driven.
 
@@ -89,7 +89,7 @@ This plan decomposes the remaining P0 work into delivery sprints. A sprint is no
 
 ### Workstreams
 
-- Identify the authoritative Netlify site/project and production hostname; never infer or guess.
+- Identify the authoritative hosting platform, site/project and production hostname (Netlify, Cloudflare Pages or another provider); never infer or guess.
 - Verify deployed commit/version against `main`.
 - Run production smoke checks for deep links, assets, data, calculator and recommendation flows.
 - Restore canonical, Open Graph and sitemap absolute URLs only after origin verification.
@@ -120,4 +120,4 @@ A dedicated P1 revenue phase is now established at `docs/phase-1/` with the impl
 
 The first implementation task is **REV-01 Measurement Foundation**. It establishes privacy-aware event contracts and revenue attribution before any advertising or partner monetization is activated.
 
-P0-S5 remains authoritative for production release. Advertising activation requires the verified production origin, consent/privacy readiness and actual publisher configuration.
+P0-S5 remains authoritative for production release. Advertising activation requires the verified production origin, consent/privacy readiness and actual publisher configuration. Do not assume the Netlify Functions adapter is deployed if the actual host is Cloudflare Pages or another platform.
