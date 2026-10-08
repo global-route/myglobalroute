@@ -28,7 +28,12 @@ Move monetization from documentation into measurable, configurable implementatio
 - [ ] experiment flags
 - [ ] consent-aware rendering contract
 
-### S3 — Affiliate foundation
+### S3 — Affiliate foundation — FOUNDATION IMPLEMENTED
+- [x] Empty verified-partner registry boundary
+- [x] Deterministic tracked-path builder
+- [x] Attribution identifiers exclude personal migration data
+
+### S3b — Partner onboarding and redirect handler
 - [ ] partner registry schema
 - [ ] partner qualification state
 - [ ] tracked-link abstraction
