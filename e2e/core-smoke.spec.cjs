@@ -47,3 +47,16 @@ test('Find My Route remains excluded from display advertising', async ({ page })
   await expect(page.locator('[data-ad-slot]')).toHaveCount(0);
   await expect(page.locator('script[src*="pagead2.googlesyndication.com"]')).toHaveCount(0);
 });
+
+test('consent grant does not render a fake ad without a provider', async ({ page }) => {
+  await page.addInitScript(() => localStorage.clear());
+  await page.goto('/pages/blog.html');
+  const banner = page.locator('#analytics-consent');
+  await expect(banner).toBeVisible();
+  await banner.getByRole('button', { name: 'Allow analytics' }).click();
+  expect(await page.evaluate(() => localStorage.getItem('globalroute.analyticsConsent'))).toBe('granted');
+  const slot = page.locator('[data-ad-slot="ad_article_end"]');
+  await expect(slot).toBeHidden();
+  await expect(slot).toBeEmpty();
+  await expect(page.locator('script[src*="pagead2.googlesyndication.com"]')).toHaveCount(0);
+});
