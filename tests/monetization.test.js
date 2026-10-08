@@ -25,3 +25,10 @@ describe('monetization configuration', () => {
     expect(Monetization.getPartnerSlot('unknown')).toBeNull();
   });
 });
+
+  test('uses explicit page-type contracts', () => {
+    expect(Monetization.canRenderAd('ad_article_top', 'blog', true)).toBe(true);
+    expect(Monetization.canRenderAd('ad_article_top', 'country', true)).toBe(false);
+    expect(Monetization.canRenderAd('ad_country_mid', 'country', true)).toBe(true);
+    expect(Monetization.canRenderAd('ad_homepage_secondary', 'home', true)).toBe(true);
+  });
