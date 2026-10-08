@@ -5,7 +5,7 @@
 ## Objective
 Use Google AdSense as a baseline monetization layer for informational traffic while protecting MyGlobalRoute's core route-discovery experience.
 
-Google defines RPM as estimated earnings divided by impressions/page views/queries, multiplied by 1,000 depending on the RPM metric. citeturn0search1turn0search4
+Google defines RPM as estimated earnings divided by impressions/page views/queries, multiplied by 1,000 depending on the RPM metric.
 
 ## Recommended starting model
 
@@ -43,7 +43,7 @@ Ads must:
 - not create accidental-click pressure.
 
 ## Consent
-MyGlobalRoute is inherently international. Google requires a Google-certified CMP integrated with IAB TCF when serving personalised ads to users in the EEA, UK and Switzerland. citeturn0search0turn0search3
+MyGlobalRoute is inherently international. Google requires a Google-certified CMP integrated with IAB TCF when serving personalised ads to users in the EEA, UK and Switzerland.
 
 Implementation must include:
 - consent-state detection;
@@ -53,7 +53,7 @@ Implementation must include:
 - consent event analytics;
 - a process for policy updates.
 
-Google provides its own CMP option and also maintains a list of certified third-party CMPs. citeturn0search9turn0search13
+Google provides its own CMP option and also maintains a list of certified third-party CMPs.
 
 ## Account and technical setup
 1. AdSense publisher account.
@@ -73,7 +73,7 @@ Ad RPM = estimated earnings / ad impressions × 1,000.
 
 Page RPM = estimated earnings / page views × 1,000.
 
-RPM is a measurement metric, not a guaranteed rate. citeturn0search4turn0search5
+RPM is a measurement metric, not a guaranteed rate.
 
 ## Experimentation
 Test:
@@ -102,7 +102,3 @@ Do not activate live AdSense until:
 - production smoke verification passes;
 - publisher account is genuinely approved;
 - publisher ID is supplied from the real account.
-
-## Official references
-- Google AdSense RPM guidance. citeturn0search4turn0search5
-- Google consent requirements. citeturn0search0turn0search9
