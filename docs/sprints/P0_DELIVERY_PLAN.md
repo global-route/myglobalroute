@@ -52,6 +52,7 @@ This plan decomposes the remaining P0 work into delivery sprints. A sprint is no
 
 ### Definition of done
 
+- The current research-required count is reconciled from the validated registry and reflected consistently in sprint/handover docs.
 - Every remaining research-required pathway has either a completed promotion package or a documented material evidence gap.
 - No pathway is promoted solely because a parent route or adjacent subroute has evidence.
 - Evidence freshness/review dates are recorded.
