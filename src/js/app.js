@@ -12,6 +12,8 @@ const GlobalRoute = (() => {
     if (config.enableAnalytics) {
       loadAnalytics();
       window.GlobalRoute?.Analytics?.initConsentUI();
+      // Mount only eligible placeholders; no provider scripts are activated here.
+      window.GlobalRoute?.Monetization?.init?.();
     }
     try {
       await loadCountriesData();
