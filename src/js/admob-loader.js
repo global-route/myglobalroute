@@ -30,7 +30,7 @@ const AdMobLoader = (() => {
    */
   const init = async () => {
     if (state.initialized) return;
-    if (!config.enabled || !/^ca-pub-\\d+$/.test(config.publisherId)) {
+    if (!config.enabled || !/^ca-pub-\d+$/.test(config.publisherId)) {
       // Never load third-party advertising code with placeholder credentials.
       return;
     }
