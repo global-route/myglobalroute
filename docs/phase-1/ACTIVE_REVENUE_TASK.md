@@ -1,5 +1,7 @@
 # Active Revenue Task — P1-REV Commercial Measurement & Readiness
 
+> Cross-sprint status and release sequencing are governed by [`docs/project/HANDOVER_RECONCILIATION_2026-10-09.md`](../project/HANDOVER_RECONCILIATION_2026-10-09.md). Revenue implementation is concurrent work, not a release bypass.
+
 **Phase:** P1-REV  
 **Status:** Foundation implemented; verification and external launch gates remain  
 **Execution relationship:** Concurrent preparation with P0-S5, never a substitute for release verification.
@@ -35,8 +37,8 @@ Revenue signals must never change pathway eligibility, evidence status or route 
 
 ## Next execution order
 
-1. Run current CI and fix any regression from consent/slot/registry changes.
-2. Complete consent and placement browser assertions and verify function bundling.
-3. Reconcile the conflicting production-host claims; continue P0-S5 without guessing.
-4. Define lead qualification/governance as a separate task; do not ship a lead form without consent and delivery controls.
-5. Keep external provider activation blocked until origin, privacy and account prerequisites are verified.
+1. Inspect completed workflows and rerun current-head checks; record the exact SHA and outcomes.
+2. Complete consent grant/decline, persistence, slot refresh, fake-ad exclusion and Find My Route browser assertions.
+3. Verify commercial redirect runtime compatibility against the hosting platform only after its identity is confirmed.
+4. Keep lead qualification/governance separate; do not collect or route leads before consent and secure delivery controls exist.
+5. Keep provider activation blocked until origin, privacy and account prerequisites are verified.
