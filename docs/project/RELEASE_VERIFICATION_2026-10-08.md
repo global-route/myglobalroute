@@ -1,12 +1,14 @@
 # Release Verification — 2026-10-08
 
+> **Handover reconciliation updated 2026-10-09:** see [`HANDOVER_RECONCILIATION_2026-10-09.md`](HANDOVER_RECONCILIATION_2026-10-09.md) for the reconciled execution order and stale-backlog correction.
+
 ## Current result
 
 **Production release remains blocked.** P0-S5 is still open because the authoritative hosting project/origin and deployed commit have not been independently confirmed. Monetization implementation has advanced, but external provider activation and revenue reconciliation are not complete.
 
 ## Source-tree and CI status
 
-Latest implementation code checkpoint reviewed: `2bf9c79e706b7521f3dbd1c51467c619e298a425`. Subsequent commits on `main` are documentation-only follow-ups to sprint and release records; they do not change the implementation checkpoint or constitute new test evidence.
+Latest implementation code checkpoint reviewed: `2bf9c79e706b7521f3dbd1c51467c619e298a425`. Subsequent commits on `main` are documentation-only follow-ups to sprint, handover reconciliation and release records; they do not change the implementation checkpoint or constitute new test evidence. The latest status query for the documentation commit `a9a8ecd942a6a690800e3bcb546cd56c4e04372e` returned no status contexts, and the connector's PR-filtered workflow-run lookup returned no runs for the implementation checkpoint. Neither result proves a pass or a failure; inspect repository Actions directly and rerun verification on the current head.
 
 On the implementation checkpoint, **Quality Gate and Lint passed**. Browser Smoke was still running at the time of this update. An earlier browser run failed because the consent banner was absent; analytics was then changed to initialize consent controls independently of `app.js`, and a new browser run was started. The fix is **not yet verified by a completed browser run**. The repository connector currently returns no commit status contexts for either checkpoint, so this cannot be interpreted as a pass. Inspect the actual Actions runs/jobs before making a current-head green claim.
 
@@ -39,6 +41,10 @@ Required evidence:
 3. successful origin reachability and expected project content.
 
 Do not guess or restore canonical, Open Graph or sitemap absolute URLs before those checks pass.
+
+## Backlog reconciliation note
+
+The older P0 delivery plan contained an instruction to audit 24 research-required pathways, conflicting with the latest documented snapshot of four. This conflict has been flagged in the 2026-10-09 handover reconciliation and P0 plan. Recompute the current registry before treating either count as authoritative.
 
 ## Remaining P0-S5 release gates
 
