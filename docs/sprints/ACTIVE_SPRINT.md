@@ -53,7 +53,7 @@ The strategy and documentation are complete. Implementation now includes privacy
 - [x] Ad/partner slot configuration and page hosts wired.
 - [x] Commercial registry validation and redirect expiry/security checks implemented.
 - [ ] Re-run current quality/browser workflows and record exact results against an explicit `main` SHA; the latest-head CI result is not confirmed.
-- [ ] Harden evidence provenance date validation (`retrievedAt`, `reviewAfter`, optional `effectiveDate`) and add valid/invalid calendar-date tests; the gap is documented in `docs/project/HANDOVER_RECONCILIATION_2026-10-09.md` and is not yet fixed or tested.
+- [x] Harden evidence provenance date validation (`retrievedAt`, `reviewAfter`, optional `effectiveDate`) and add valid/invalid calendar-date tests. Code and unit coverage are implemented; Quality Gate passed at `542bba327342e699bd2800a1865a1bd4c6bb8099`.
 - [ ] Verify the commercial redirect adapter is deployed and runtime-compatible with the confirmed hosting platform; the current Netlify Function implementation is not evidence that a Netlify deployment exists.
 - [ ] Provider-specific click/revenue reconciliation after a real provider is selected.
 - [ ] AdSense activation only after origin, CMP/privacy and publisher gates pass.
