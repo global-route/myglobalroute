@@ -51,3 +51,16 @@ E2E run: 16.3s, 2 workers, Chromium 129.0 (playwright build v1117), local dev se
 
 ## Important distinction
 Green source-tree CI and browser E2E smoke prove the generated site passes automated checks against a local dev server. They are **not** evidence that a particular deployed hostname serves this repository. Production verification remains a separate release gate (P0-S5).
+
+## Monetization phase added
+
+The repository now contains a dedicated **P1-REV Revenue & Monetization** implementation phase. The monetization documentation is no longer a standalone concept: it is connected to a phase, implementation plan and executable sprint.
+
+Current revenue implementation status:
+- Documentation architecture: COMPLETE.
+- Phase/implementation plan: COMPLETE.
+- First implementation task: REV-01 Measurement Foundation — NEXT.
+- Production advertising: NOT ACTIVE.
+- MRR: no current recurring-revenue claim; model is defined but there is no validated live MRR in this release record.
+
+This phase must not weaken P0 production verification or evidence/route neutrality.
