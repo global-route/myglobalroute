@@ -1,5 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
+const { isIsoDate, isOnOrBefore, isOnOrAfter } = require('./date-utils');
 
 const root = path.join(__dirname, '..');
 const readJson = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
@@ -32,6 +33,8 @@ for (const [index, country] of (countries || []).entries()) {
   if (countryIds.has(country.id)) errors.push(`duplicate country id: ${country.id}`);
   countryIds.add(country.id);
   if (!country.source?.authority || !country.source?.url || !country.source?.retrievedAt) errors.push(`countries[${index}] requires authority, source url and retrievedAt`);
+  if (!isIsoDate(country.source?.retrievedAt)) errors.push(`countries[${index}] source retrievedAt must be a real ISO date (YYYY-MM-DD)`);
+  else if (!isOnOrBefore(country.source.retrievedAt, validationDate)) errors.push(`countries[${index}] source retrievedAt cannot be after validation date ${validationDate}`);
   if (country.officialRate !== null || country.africanRate !== null) errors.push(`countries[${index}] approval rates must be null until evidence-backed`);
   if (country.trueCost !== null || country.timeline !== null) errors.push(`countries[${index}] cost/timeline claims must be null until evidence-backed`);
   if (!/^https:\/\//.test(country.source.url)) errors.push(`countries[${index}] source url must be HTTPS`);
@@ -70,6 +73,12 @@ for (const [index, record] of (evidence || []).entries()) {
   if (!countryIds.has(record.countryId)) errors.push(`evidence[${index}] ${identity} references unknown country ${record.countryId}`);
   if (!knownEvidenceScopes.has(record.pathwayId)) errors.push(`evidence[${index}] ${identity} references unknown pathway or exact subroute ${record.pathwayId}`);
   if (!/^https:\/\//.test(record.sourceUrl)) errors.push(`evidence[${index}] ${identity} sourceUrl must be HTTPS`);
+  for (const field of ['effectiveDate', 'retrievedAt', 'reviewAfter']) {
+    if (record[field] !== undefined && !isIsoDate(record[field])) errors.push(`evidence[${index}] ${identity} ${field} must be a real ISO date (YYYY-MM-DD)`);
+  }
+  if (!isIsoDate(record.retrievedAt)) errors.push(`evidence[${index}] ${identity} retrievedAt is required and must be a real ISO date`);
+  else if (!isOnOrBefore(record.retrievedAt, validationDate)) errors.push(`evidence[${index}] ${identity} retrievedAt cannot be after validation date ${validationDate}`);
+  if (isIsoDate(record.reviewAfter) && isIsoDate(record.retrievedAt) && !isOnOrAfter(record.reviewAfter, record.retrievedAt)) errors.push(`evidence[${index}] ${identity} reviewAfter cannot precede retrievedAt`);
   if (!['high', 'medium', 'low'].includes(record.confidence)) errors.push(`evidence[${index}] ${identity} confidence must be high, medium or low`);
   if (new Date(`${record.reviewAfter}T00:00:00Z`) < today) warnings.push(`evidence ${record.id} is due for review`);
   const list = evidenceByPathway.get(record.pathwayId) || [];
@@ -124,8 +133,14 @@ const researchRequiredPathways = pathways.filter(pathway => pathway.status === '
 if (evidencedPathways === 0) errors.push('no pathways have field-level evidence');
 
 if (countriesPayload.dataset?.asOf) {
-  const age = Math.floor((today - new Date(`${countriesPayload.dataset.asOf}T00:00:00Z`)) / 86400000);
-  if (age > 31) warnings.push(`country dataset is ${age} days old`);
+  if (!isIsoDate(countriesPayload.dataset.asOf)) {
+    errors.push('country dataset asOf must be a real ISO date (YYYY-MM-DD)');
+  } else if (!isOnOrBefore(countriesPayload.dataset.asOf, validationDate)) {
+    errors.push(`country dataset asOf cannot be after validation date ${validationDate}`);
+  } else {
+    const age = Math.floor((today - new Date(`${countriesPayload.dataset.asOf}T00:00:00Z`)) / 86400000);
+    if (age > 31) warnings.push(`country dataset is ${age} days old`);
+  }
 }
 
 if (errors.length) {
