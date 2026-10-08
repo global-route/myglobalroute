@@ -110,7 +110,8 @@
     createAdPlaceholder,
     getPartnerSlot,
     mountSlots,
-    init
+    init,
+    refreshAfterConsent: init
   });
 
   root.GlobalRoute = root.GlobalRoute || {};
