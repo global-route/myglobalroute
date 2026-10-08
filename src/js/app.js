@@ -104,11 +104,12 @@ const GlobalRoute = (() => {
       const income = Number(form.querySelector('[name="income"]')?.value) || 0;
       const expenses = Number(form.querySelector('[name="expenses"]')?.value) || 0;
       const category = form.querySelector('[name="category"]')?.value;
+      trackEvent('calculator_started', { page_type: 'calculator' });
       const countries = CalculatorModule.getRecommendedCountries(appState.countries, savings, {
         category: category || undefined
       });
       displayCalculatorResults(countries, savings, income, expenses);
-      CalculatorModule.trackUsage({ country_count: countries.length, category: category || 'all' });
+      trackEvent('calculator_completed', { page_type: 'calculator' });
     });
   };
 
@@ -142,9 +143,19 @@ const GlobalRoute = (() => {
   };
 
   const loadAnalytics = () => {
-    if (typeof gtag === 'undefined') return;
-    gtag('event', 'page_view', { page_title: document.title, page_location: window.location.href });
-    document.querySelectorAll('a[target="_blank"]').forEach(link => link.addEventListener('click', () => gtag('event', 'external_link', { link_url: link.href })));
+    if (typeof GlobalRoute.Analytics === 'undefined') return;
+    const provider = GlobalRoute.Analytics.createGA4Provider(
+      typeof gtag === 'function' ? gtag : null
+    );
+    if (provider) GlobalRoute.Analytics.setProvider(provider);
+    document.querySelectorAll('a[target="_blank"]').forEach(link => {
+      link.addEventListener('click', () => {
+        trackEvent('official_source_clicked', {
+          page_type: document.body?.dataset?.pageType || 'unknown',
+          source_id: link.dataset.sourceId || 'external'
+        });
+      });
+    });
   };
 
   const getCountryById = id => appState.countries.find(country => country.id === id);
