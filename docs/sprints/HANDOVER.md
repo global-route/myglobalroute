@@ -1,151 +1,64 @@
-# P0 Handover — Production Integrity & Migration Intelligence
+# Handover — Production Integrity, Migration Intelligence & Revenue Readiness
 
-**Handover baseline:** 14 September 2026  
 **Branch:** `main`  
-**Baseline commit:** `41d3c1337fa26c0a13512b5d65d1a20f9cb57b71`  
-**Active sprint:** P0-S1 — Exact Pathway Closure  
-**Canonical registry:** 26 countries / 52 pathways  
-**Current publishability:** 28 publishable / 24 research-required
-
-## Purpose
-
-This is the execution handover for the current P0 sprint. It preserves the original product blueprint and records the exact state from which the next operator should continue. Do not treat documentation completion as implementation or verification completion.
+**Active P0 sprint:** P0-S5 — Deployment Verification & P0 Exit  
+**Concurrent implementation lane:** P1-REV — Commercial Measurement & Readiness  
+**Current release record:** `docs/project/RELEASE_VERIFICATION_2026-10-08.md`
 
 ## Start here
 
-1. Work from `main` and verify the current head before making changes.
-2. Run/check the data and test quality gates against the current tree.
-3. Finish P0-S1 open exact-route gates before broadening the evidence audit, while allowing independent P0-S2/S3 work to proceed concurrently where safe.
-4. Update `docs/sprints/ACTIVE_SPRINT.md` after meaningful delivery waves.
-5. Never promote a route without exact, current, authoritative evidence and passing promotion tests.
-6. Never infer a financial requirement when the authoritative source does not establish one; record an explicit evidence gap instead.
-7. Production remains blocked until the authoritative Netlify project/site and hostname are independently identified and verified.
+1. Fetch the current `main` head and inspect CI before changing status claims.
+2. Read `docs/sprints/P0_DELIVERY_PLAN.md`, `docs/sprints/ACTIVE_SPRINT.md`, and the current release-verification record.
+3. Preserve the original evidence-first migration blueprint. No research-required route is recommendable until exact-scope promotion gates pass.
+4. Continue P0-S5 even while revenue foundations are developed. A passing local build does not establish a successful live deployment.
+5. Keep advertising and partner inventory inactive until origin, privacy, provider and operational prerequisites are verified.
+6. Update the active task and sprint documents after each meaningful delivery wave.
 
-## P0-S1 — Exact Pathway Closure
+## Current known product baseline
 
-### Completed
+- 26 countries / 56 canonical pathways.
+- Latest documented state: 52 publishable and 4 research-required with explicit evidence gaps.
+- Latest documented evidence registry: 193 records.
+- These are prior recorded counts, not a substitute for re-running current data validation.
 
-- NZ Skilled Work Experience Red/Amber matrix.
-- NZ Trades & Technician occupation/qualification/work-experience matrix.
-- NZ Skilled Work Experience occupation, effective-date wage and direct-relevance evidence.
-- NZ Trades & Technician occupation/qualification evidence.
-- NZ exact-route regression guards and evidence-boundary tests.
-- Exact-subroute validator support.
-- Removal of superseded duplicate evidence batches.
-- Restoration of canonical CA Study eligibility evidence.
-- NZ Points-based eligibility, financial/process evidence.
-- NZ Points-based occupation/registration and qualification/IQA exception evidence.
-- NZ points-composition regression coverage.
+## Current monetization implementation
 
-### Open — execute next
+- Provider-neutral analytics contract, explicit consent UI and shared loading are implemented.
+- Ad and partner inventory is configuration-driven, with consent-gated hosts on selected pages.
+- Find My Route remains excluded from display advertising.
+- Commercial registry is empty; no live partner should be inferred.
+- Registry validation and redirect-time status, HTTPS, review-date and expiry checks are implemented.
+- Provider-specific revenue reconciliation, live AdSense setup and qualified lead delivery remain open.
+- Current CI must be inspected after the latest changes; production behavior is not established by source-tree tests.
 
-1. **Australia 189:** resolve visa-specific financial/material verification. Keep the requirement explicitly null if no universal visa-specific proof-of-funds rule can be established from authoritative sources.
-2. **NZ Points-based:** perform final promotion validation; do not canonicalize merely because material evidence is now complete.
-3. **NZ Skilled Work Experience:** perform final promotion validation against exact candidate evidence and current effective-date rules.
-4. **NZ Trades & Technician:** perform final promotion validation, including occupation and qualification-credit distinctions.
-5. **Austria Other Key Workers:** complete applicant-document matrix, points regression, and final authority/process validation.
-6. **Italy 2026 Flussi:** complete employer/nulla-osta, sector/country quota, compensation/documentary and applicant evidence matrices, then run deterministic promotion validation.
+## P0-S5 — mandatory release gates
 
-### S1 exit gate
-
-All six open workstreams must either pass their promotion gate or have an explicit authoritative-data blocker recorded. Research-required candidates remain non-recommendable until promoted.
-
-## P0-S2 — Remaining-Country Evidence Closure
-
-After or alongside S1, audit all **24 research-required canonical pathways**. Prioritize by:
-
-- user value;
-- legal stability;
-- primary-source availability;
-- recommendation impact;
-- evidence freshness and reviewability.
-
-For each route, produce one of two outcomes:
-
-- complete exact promotion package; or
-- explicit material evidence gap with the authoritative evidence needed to close it.
-
-Do not use parent-pathway or adjacent-subroute evidence to satisfy a narrower route.
-
-## P0-S3 — Data / Recommendation Quality Gate
-
-Required checks:
-
-- `npm run data:validate`;
-- evidence-registry and exact pathway-boundary tests;
-- recommendation-safety tests;
-- canonical registry/evidence-ID reconciliation;
-- build and generated-output verification;
-- lint/static checks;
-- CI status recording.
-
-If CI is unavailable, record **Not Tested — CI unavailable** rather than implying a pass.
-
-## P0-S4 — Browser / Release Gate
-
-Verify representative generated flows:
-
-- country and pathway deep links;
-- assets and generated route output;
-- calculator;
-- recommendation flow and research-required safety behavior;
-- SEO metadata;
-- accessibility smoke;
-- sitemap and robots output.
-
-Resolve release-critical runtime defects or document the exact blocker and dependency.
-
-## P0-S5 — Deployment Verification & P0 Exit
-
-Still open:
-
-- identify the authoritative Netlify site/project and production hostname — never guess;
-- verify deployed commit against `main`;
-- run production smoke for deep links, assets, data, calculator and recommendations;
-- restore canonical/OG/sitemap absolute URLs only after origin verification;
-- audit CSP against actual deployed third-party inventory;
-- resolve repository hardening issue #2 and establish an appropriate `main` protection/check policy;
-- reconcile roadmap, active sprint and release verification before closing P0.
+- Identify the authoritative hosting project and production hostname from account/project configuration, not historical prose alone.
+- Resolve conflicting references to Cloudflare Pages/`vrenum.app` and the separate `myglobalroute.com` hostname before setting canonical metadata.
+- Verify the deployed commit matches current `main`.
+- Run `npm run deploy:verify` against the confirmed origin after it is reachable.
+- Verify country/pathway deep links, assets, JSON data, calculator and recommendation behavior.
+- Restore canonical, Open Graph and sitemap absolute URLs only after origin confirmation.
+- Audit CSP against the actual deployed third-party inventory.
+- Resolve issue #2 with appropriate branch protection/checks and an explicit repository visibility decision.
+- Record evidence and close P0 only when every exit condition in the delivery plan passes.
 
 ## Critical distinctions
 
-### Canonical pathway vs legal subroute
+- **Evidence complete vs pathway promoted:** material evidence alone does not promote a route.
+- **Source-tree CI vs production verification:** local tests cannot prove a host serves the expected commit.
+- **Monetization strategy vs implementation vs revenue:** documentation, safe foundations and actual provider-verified earnings are different milestones.
+- **Ad slot vs live advertisement:** slot hosts are not a reason to activate an unapproved network.
+- **MRR vs variable revenue:** subscription recurring revenue remains separate from ads, one-off referral and lead payments.
+- **Commercial visibility vs route ranking:** payout must not determine migration eligibility or recommendation ordering.
 
-The registry remains 26 countries / 52 canonical pathways. Exact legal subroutes are evidence candidates until explicitly promoted. Do not expand the canonical registry simply because a child route has been researched.
+## Next execution sequence
 
-### Parent evidence vs child evidence
+1. Inspect current Actions results and run the available unit/build/data/browser checks.
+2. Fix failures from consent, slot wiring, registry validation or redirect changes.
+3. Confirm Netlify function bundling/runtime compatibility, but do not assume Netlify is the production host.
+4. Resolve the authoritative production origin and proceed through P0-S5.
+5. Complete provider-specific monetization only when actual account/partner details and consent gates exist.
+6. Continue evidence freshness and targeted migration-intelligence improvements without weakening route promotion rules.
 
-Evidence must be scoped to the exact route it proves. Shared law or shared program family does not make parent evidence valid for a narrower child route.
-
-### Material completeness vs promotion
-
-A candidate can have complete material evidence and still remain `research_required` until the final promotion validation, registry reconciliation, tests and documentation gates pass.
-
-### Data validation vs production verification
-
-A passing local validator/test suite does not establish that Netlify deployed the verified commit or that production routes behave correctly. Production verification is a separate P0-S5 gate.
-
-### CI status vs implementation status
-
-If Actions is unavailable, continue independent implementation and mark affected verification as **Not Tested — CI unavailable**. Never convert unavailable verification into a pass.
-
-## Recommended execution order
-
-**Concurrent:** S1 evidence closure + S2 audit preparation + S3 test/validator work.  
-**Then:** S4 browser/release verification once generated output is stable.  
-**Finally:** S5 authoritative deployment verification and P0 exit reconciliation.
-
-## Handover completion rule
-
-A handover is complete only when the active sprint document, delivery plan, roadmap and release-verification record agree on the same current head and task status. The next operator should update the documents immediately after each meaningful commit wave rather than allowing task status to drift.
-
-
-## P1 Revenue Handover Lane
-
-A new P1-REV monetization phase is now established. See `docs/phase-1/REVENUE_MONETIZATION_PHASE.md`, `docs/phase-1/REVENUE_IMPLEMENTATION_PLAN.md`, `docs/phase-1/ACTIVE_REVENUE_TASK.md` and `docs/sprints/P1_REVENUE_SPRINT.md`.
-
-**Next implementation task:** REV-01 Measurement Foundation.
-
-The revenue documentation under `docs/monetization/` is now connected to executable phase/sprint work. This does not authorize production advertising: P0-S5 deployment verification and the privacy/consent gate remain prerequisites.
-
-**P1 rule:** build measurement and configuration first; activate AdSense only after the production origin, consent architecture and real publisher configuration are verified.
+If CI is unavailable, continue independent implementation and record **Not Tested — CI unavailable**. Do not claim a green test or production pass without evidence.
