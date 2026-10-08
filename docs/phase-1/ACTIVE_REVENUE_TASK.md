@@ -61,6 +61,6 @@ Do not transmit:
 ## Next after REV-01
 
 1. REV-02 Monetization configuration and placement components — foundation implemented; next: wire page components and browser coverage.
-2. REV-04 Affiliate foundation can proceed concurrently — next implementation lane.
+2. REV-04 Affiliate foundation — registry/tracking foundation implemented; next: governed partner records and redirect handler.
 3. REV-03 AdSense activation waits for production/consent Gate B.
 4. REV-05 Lead engine follows partner and consent foundations.
