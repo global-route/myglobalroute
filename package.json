@@ -15,12 +15,13 @@
     "lint": "eslint src/js",
     "format": "prettier --write 'src/**/*.{js,css,html,md}'",
     "data:validate": "node scripts/validate-data.js",
+    "commercial:validate": "node scripts/validate-commercial-registry.js",
     "evidence:candidates": "node scripts/report-promotion-candidates.js",
     "build:verify": "node scripts/verify-build.js",
     "seo:a11y:verify": "node scripts/verify-seo-a11y.js",
     "deploy": "npm run build && wrangler deploy",
     "deploy:verify": "node scripts/verify-deployed-site.js",
-    "verify": "npm run data:validate && npm run evidence:candidates && npm test -- --runInBand && npm run build && npm run build:verify && npm run seo:a11y:verify && npm run lint"
+    "verify": "npm run data:validate && npm run commercial:validate && npm run evidence:candidates && npm test -- --runInBand && npm run build && npm run build:verify && npm run seo:a11y:verify && npm run lint"
   },
   "keywords": [
     "visa",
