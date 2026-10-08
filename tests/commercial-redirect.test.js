@@ -1,6 +1,10 @@
-const redirect = require("../netlify/functions/commercial-redirect.mjs");
-
 describe("commercial redirect boundary", () => {
+  let redirect;
+
+  beforeAll(async () => {
+    redirect = await import("../netlify/functions/commercial-redirect.mjs");
+  });
+
   test("rejects missing entry id", async () => {
     const response = await redirect.default(new Request("https://example.test/go/commercial"));
     expect(response.status).toBe(400);
