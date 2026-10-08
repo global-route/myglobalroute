@@ -1,5 +1,7 @@
 # P0 Delivery Sprint Plan — Production Integrity & Migration Intelligence
 
+> **Handover reconciliation (2026-10-09):** use [`docs/project/HANDOVER_RECONCILIATION_2026-10-09.md`](../project/HANDOVER_RECONCILIATION_2026-10-09.md) for ordered next actions and status rules. Historical SHAs/counts are not current verification.
+
 **Status:** Active delivery plan  
 **Baseline:** 14 September 2026  
 **Scope:** Remaining P0 work through Phase 0/1/2 exit  
@@ -41,8 +43,9 @@ This plan decomposes the remaining P0 work into delivery sprints. A sprint is no
 
 ### Workstreams
 
-- Audit all 24 currently research-required canonical pathways.
-- Prioritize by user value, legal stability, evidence availability and recommendation impact.
+- Recompute the canonical registry's pathway statuses on current `main` before defining the research backlog. Earlier plan text says 24 research-required pathways, while the latest recorded snapshot says 4; neither number is current until validation is rerun.
+- Build the remaining worklist from actual current `research_required` records and material evidence gaps, not a copied historical count.
+- Prioritize by user value, legal stability, evidence availability, source freshness and recommendation impact.
 - Add authoritative primary-source evidence in dated, field-level records.
 - Separate umbrella routes from exact legal subroutes.
 - Promote only when minimum material-field coverage and evidence IDs are complete.
@@ -54,6 +57,8 @@ This plan decomposes the remaining P0 work into delivery sprints. A sprint is no
 - Evidence freshness/review dates are recorded.
 
 ## P0-S3 — Data / Recommendation Quality Gate
+
+**Current execution rule:** re-run every gate against one explicit current `main` SHA after the latest consent/monetization changes. The September PASS table is historical and must not be copied forward without new results.
 
 ### Workstreams
 
@@ -86,6 +91,8 @@ This plan decomposes the remaining P0 work into delivery sprints. A sprint is no
 - Any known browser/runtime defect is resolved or explicitly release-blocking.
 
 ## P0-S5 — Deployment Verification & Phase 0 Exit
+
+**Current state:** ACTIVE / BLOCKED until hosting project, authoritative origin and deployed SHA are independently evidenced. No provider should be inferred from historical docs or from the existence of provider-specific function code.
 
 ### Workstreams
 
