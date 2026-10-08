@@ -22,8 +22,10 @@ function loadMigrationEvidence() {
 }
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("src/css");
-  eleventyConfig.addPassthroughCopy("src/js");
+  // Public HTML references these assets from root-relative /css and /js URLs.
+  // Map source directories explicitly so Eleventy does not publish them under /src/.
+  eleventyConfig.addPassthroughCopy({ "src/css": "/css" });
+  eleventyConfig.addPassthroughCopy({ "src/js": "/js" });
   eleventyConfig.addPassthroughCopy({ "public": "/" });
   eleventyConfig.addPassthroughCopy({ "src/index.html": "/index.html" });
   eleventyConfig.addPassthroughCopy({ "src/data": "/data" });
