@@ -71,6 +71,7 @@
   }
 
   function initConsentUI() {
+    if (typeof document === 'undefined' || typeof window === 'undefined') return;
     const key = 'globalroute.analyticsConsent';
     let stored = null;
     try { stored = window.localStorage.getItem(key); } catch (_) {}
