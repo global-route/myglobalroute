@@ -6,7 +6,7 @@
 
 ## Source-tree and CI status
 
-Latest implementation code checkpoint reviewed: `2bf9c79e706b7521f3dbd1c51467c619e298a425`. Documentation follow-ups have since advanced `main` through `a4f096c8b1f4f00765b0b1ad0305d7e70f7ec61e`; these later commits update sprint/release records only.
+Latest implementation code checkpoint reviewed: `2bf9c79e706b7521f3dbd1c51467c619e298a425`. Subsequent commits on `main` are documentation-only follow-ups to sprint and release records; they do not change the implementation checkpoint or constitute new test evidence.
 
 On the implementation checkpoint, **Quality Gate and Lint passed**. Browser Smoke was still running at the time of this update. An earlier browser run failed because the consent banner was absent; analytics was then changed to initialize consent controls independently of `app.js`, and a new browser run was started. The fix is **not yet verified by a completed browser run**. The repository connector currently returns no commit status contexts for either checkpoint, so this cannot be interpreted as a pass. Inspect the actual Actions runs/jobs before making a current-head green claim.
 
