@@ -16,7 +16,7 @@ This plan decomposes the remaining P0 work into delivery sprints. A sprint is no
 | P0-S2 | Remaining-country evidence closure | Highest-value remaining research-required pathways receive exact material evidence or remain explicitly research-required with documented gaps |
 | P0-S3 | Data/recommendation quality gate | Current tree passes data validation, evidence boundary tests, route-safety tests, build and generated-output checks |
 | P0-S4 | Release/SEO/browser gate | Browser/E2E, accessibility/SEO smoke and generated route verification complete; production-origin prerequisites documented |
-| P0-S5 | Deployment verification & P0 exit | Authoritative Netlify origin verified, production smoke passes, deployed data/deep links/assets/calculator verified, canonical/OG/sitemap restored only against verified origin, CSP audited |
+| P0-S5 | Deployment verification & P0 exit | Authoritative hosting origin verified, production smoke passes, deployed data/deep links/assets/calculator verified, canonical/OG/sitemap restored only against verified origin, CSP audited |
 
 ## P0-S1 — Exact Pathway Closure
 
