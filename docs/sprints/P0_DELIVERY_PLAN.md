@@ -113,3 +113,11 @@ If a sprint encounters an authoritative-data or external-deployment blocker, do 
 ## Overall P0 exit
 
 P0 is complete only when **P0-S1 through P0-S5** have met their exit conditions and the master roadmap, active sprint and release-verification documents agree. P1 work begins only after this reconciliation.
+
+## P1 Revenue Preparation — allowed concurrently with P0-S5
+
+A dedicated P1 revenue phase is now established at `docs/phase-1/` with the implementation plan and active revenue task. This is preparation, not a P0 release shortcut.
+
+The first implementation task is **REV-01 Measurement Foundation**. It establishes privacy-aware event contracts and revenue attribution before any advertising or partner monetization is activated.
+
+P0-S5 remains authoritative for production release. Advertising activation requires the verified production origin, consent/privacy readiness and actual publisher configuration.
