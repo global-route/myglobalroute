@@ -155,5 +155,11 @@
 
   root.GlobalRoute = root.GlobalRoute || {};
   root.GlobalRoute.Analytics = api;
+  // Consent controls must work on pages that use analytics without app.js too.
+  if (typeof document !== 'undefined') {
+    const initializeConsent = () => api.initConsentUI();
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initializeConsent, { once: true });
+    else initializeConsent();
+  }
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
 })(typeof window !== 'undefined' ? window : globalThis);
