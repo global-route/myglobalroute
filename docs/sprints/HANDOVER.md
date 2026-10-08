@@ -1,5 +1,7 @@
 # Handover — Production Integrity, Migration Intelligence & Revenue Readiness
 
+> **Reconciliation authority:** read [`docs/project/HANDOVER_RECONCILIATION_2026-10-09.md`](../project/HANDOVER_RECONCILIATION_2026-10-09.md) first. This document is the canonical cross-handover status and ordered next-action record; refresh live main/CI/registry evidence before changing any status.
+
 **Branch:** `main`  
 **Active P0 sprint:** P0-S5 — Deployment Verification & P0 Exit  
 **Concurrent implementation lane:** P1-REV — Commercial Measurement & Readiness  
@@ -54,11 +56,12 @@
 
 ## Next execution sequence
 
-1. Inspect current Actions results and run the available unit/build/data/browser checks.
-2. Fix failures from consent, slot wiring, registry validation or redirect changes.
-3. Confirm Netlify function bundling/runtime compatibility, but do not assume Netlify is the production host.
-4. Resolve the authoritative production origin and proceed through P0-S5.
-5. Complete provider-specific monetization only when actual account/partner details and consent gates exist.
-6. Continue evidence freshness and targeted migration-intelligence improvements without weakening route promotion rules.
+1. Read `docs/project/HANDOVER_RECONCILIATION_2026-10-09.md` and inspect the latest `main` SHA plus completed Actions jobs.
+2. Re-run and record current-head data validation, unit tests, build/generated-output checks, SEO/accessibility, lint and browser E2E; fix failures before claiming a pass.
+3. Recompute pathway/evidence counts. Do not act on the stale P0-S2 instruction to audit 24 pathways until current registry state is verified.
+4. Establish the authoritative hosting project, domain mapping and deployed SHA from provider configuration; do not infer Netlify or Cloudflare from historical notes.
+5. Run production smoke and origin-dependent SEO/CSP checks only after origin confirmation.
+6. Continue independent evidence-freshness and route-safety work while external hosting evidence is unavailable.
+7. Keep live monetization and lead collection gated until their own prerequisites pass.
 
 If CI is unavailable, continue independent implementation and record **Not Tested — CI unavailable**. Do not claim a green test or production pass without evidence.
