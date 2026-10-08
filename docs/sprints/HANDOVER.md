@@ -34,7 +34,7 @@
 ## P0-S5 — mandatory release gates
 
 - Identify the authoritative hosting project and production hostname from account/project configuration, not historical prose alone.
-- Resolve conflicting references to Cloudflare Pages/`vrenum.app` and the separate `myglobalroute.com` hostname before setting canonical metadata.
+- Resolve conflicting references to Cloudflare Pages/`vrenum.app` and the public `myglobalroute.com` consultancy/services site before setting canonical metadata. A public check could not retrieve `vrenum.app`; that alone does not prove it is down or establish hosting ownership.
 - Verify the deployed commit matches current `main`.
 - Run `npm run deploy:verify` against the confirmed origin after it is reachable.
 - Verify country/pathway deep links, assets, JSON data, calculator and recommendation behavior.
