@@ -61,6 +61,45 @@
     return PARTNER_SLOTS[slotId] || null;
   }
 
+  function mountSlots({ pageType = getPageType(), consentGranted = false } = {}) {
+    if (typeof document === 'undefined') return { ads: 0, partners: 0 };
+    let ads = 0;
+    let partners = 0;
+    document.querySelectorAll('[data-ad-slot]').forEach(host => {
+      const slotId = host.dataset.adSlot;
+      if (!canRenderAd(slotId, pageType, consentGranted)) {
+        host.hidden = true;
+        host.replaceChildren();
+        return;
+      }
+      host.classList.add('monetization-slot', 'monetization-ad-slot');
+      host.setAttribute('aria-label', 'Advertisement');
+      host.textContent = 'Advertisement';
+      host.hidden = false;
+      ads += 1;
+    });
+    document.querySelectorAll('[data-partner-slot]').forEach(host => {
+      const slotId = host.dataset.partnerSlot;
+      if (!canRenderPartner(slotId, pageType)) {
+        host.hidden = true;
+        host.replaceChildren();
+        return;
+      }
+      host.classList.add('monetization-slot', 'monetization-partner-slot');
+      host.setAttribute('aria-label', 'Partner information');
+      host.hidden = true;
+      host.replaceChildren();
+      partners += 1;
+    });
+    return { ads, partners };
+  }
+
+  function init() {
+    const analytics = root.GlobalRoute?.Analytics;
+    const consentGranted = analytics?.getConsentState?.() === 'granted';
+    return mountSlots({ consentGranted });
+  }
+
   const api = Object.freeze({
     AD_SLOTS,
     PARTNER_SLOTS,
@@ -69,7 +108,9 @@
     getAdSlot,
     getPageType,
     createAdPlaceholder,
-    getPartnerSlot
+    getPartnerSlot,
+    mountSlots,
+    init
   });
 
   root.GlobalRoute = root.GlobalRoute || {};
