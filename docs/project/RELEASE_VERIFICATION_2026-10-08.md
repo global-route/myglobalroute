@@ -31,7 +31,7 @@ Those are historical results, **not a claim that all checks pass on the 2026-10-
 
 ## Production origin — unresolved conflict
 
-Historical project documents identify Cloudflare Pages and `https://vrenum.app`; separate project context records a conflicting hostname issue involving `myglobalroute.com`. Neither historical text alone establishes the authoritative production deployment.
+Historical project documents identify Cloudflare Pages and `https://vrenum.app`; separate project context records a conflicting hostname issue involving `myglobalroute.com`. A public check on 2026-10-08 found that `myglobalroute.com` presents a visa-consultancy/services site rather than this repository's evidence-gated migration application, while `vrenum.app` could not be retrieved through the available public check. These observations do not prove hosting ownership or that `vrenum.app` is down. Neither historical text nor public content alone establishes the authoritative production deployment.
 
 Required evidence:
 1. hosting account/project and custom-domain mapping;
