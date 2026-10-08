@@ -11,13 +11,16 @@ Move monetization from documentation into measurable, configurable implementatio
 ## Sprint sequence
 
 ### S1 — Measurement
-- [ ] REV-01 event contract
-- [ ] analytics helper/schema
-- [ ] route/pathway attribution
-- [ ] partner placement attribution
-- [ ] privacy-safe payload tests
+- [x] REV-01 event contract
+- [x] analytics helper/schema
+- [x] route/pathway attribution boundary
+- [x] partner placement attribution dimensions
+- [x] privacy-safe payload tests
+- [x] implementation contract documented
+- [ ] external provider/reconciliation verification
 
-### S2 — Monetization configuration
+### S2 — Monetization configuration — NEXT
+
 - [ ] ad slot registry
 - [ ] partner slot registry
 - [ ] page-type rules
