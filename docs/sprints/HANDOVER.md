@@ -138,3 +138,14 @@ If Actions is unavailable, continue independent implementation and mark affected
 ## Handover completion rule
 
 A handover is complete only when the active sprint document, delivery plan, roadmap and release-verification record agree on the same current head and task status. The next operator should update the documents immediately after each meaningful commit wave rather than allowing task status to drift.
+
+
+## P1 Revenue Handover Lane
+
+A new P1-REV monetization phase is now established. See `docs/phase-1/REVENUE_MONETIZATION_PHASE.md`, `docs/phase-1/REVENUE_IMPLEMENTATION_PLAN.md`, `docs/phase-1/ACTIVE_REVENUE_TASK.md` and `docs/sprints/P1_REVENUE_SPRINT.md`.
+
+**Next implementation task:** REV-01 Measurement Foundation.
+
+The revenue documentation under `docs/monetization/` is now connected to executable phase/sprint work. This does not authorize production advertising: P0-S5 deployment verification and the privacy/consent gate remain prerequisites.
+
+**P1 rule:** build measurement and configuration first; activate AdSense only after the production origin, consent architecture and real publisher configuration are verified.
