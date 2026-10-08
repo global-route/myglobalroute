@@ -2,7 +2,7 @@
 
 **Phase:** P1-REV  
 **Priority:** P0/P1 bridge  
-**Status:** Next implementation task  
+**Status:** Implemented foundation — verification/production gates remain  
 **Depends on:** Existing analytics/runtime foundation, privacy/security review  
 **Blocks:** Reliable AdSense, affiliate, lead and MRR optimization
 
@@ -48,15 +48,15 @@ Do not transmit:
 
 ## Acceptance criteria
 
-- [ ] Central event naming/schema documented.
-- [ ] Events can be emitted without duplicating analytics logic across pages.
-- [ ] Route/pathway identifiers remain non-personal.
-- [ ] Partner placement attribution is deterministic.
-- [ ] Consent state is respected.
+- [x] Central event naming/schema documented and implemented.
+- [x] Events use the shared analytics contract rather than direct provider calls.
+- [x] Route/pathway identifiers remain non-personal.
+- [x] Partner placement attribution is deterministic.
+- [x] Consent state is respected.
 - [ ] Revenue events can be reconciled with source/platform reports.
-- [ ] Unit tests cover event payload validation.
+- [x] Unit tests cover event payload validation.
 - [ ] Build and browser smoke remain green.
-- [ ] Documentation references the implemented event contract.
+- [x] Documentation references the implemented event contract.
 
 ## Next after REV-01
 
