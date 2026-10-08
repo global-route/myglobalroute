@@ -2,7 +2,7 @@
 
 **Phase:** P1-REV  
 **Priority:** P0/P1 bridge  
-**Status:** Implemented foundation — verification/production gates remain  
+**Status:** REV-01 complete; REV-02 foundation implemented — verification/production gates remain  
 **Depends on:** Existing analytics/runtime foundation, privacy/security review  
 **Blocks:** Reliable AdSense, affiliate, lead and MRR optimization
 
@@ -60,7 +60,7 @@ Do not transmit:
 
 ## Next after REV-01
 
-1. REV-02 Monetization configuration and placement components.
-2. REV-04 Affiliate foundation can proceed concurrently.
+1. REV-02 Monetization configuration and placement components — foundation implemented; next: wire page components and browser coverage.
+2. REV-04 Affiliate foundation can proceed concurrently — next implementation lane.
 3. REV-03 AdSense activation waits for production/consent Gate B.
 4. REV-05 Lead engine follows partner and consent foundations.
