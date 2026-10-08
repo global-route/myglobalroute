@@ -24,7 +24,6 @@ describe('monetization configuration', () => {
     expect(Monetization.getAdSlot('unknown')).toBeNull();
     expect(Monetization.getPartnerSlot('unknown')).toBeNull();
   });
-});
 
   test('uses explicit page-type contracts', () => {
     expect(Monetization.canRenderAd('ad_article_top', 'blog', true)).toBe(true);
