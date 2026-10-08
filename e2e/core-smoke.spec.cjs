@@ -27,3 +27,22 @@ test('calculator does not ship a guessed AdSense publisher id', async ({ page })
   await page.goto('/pages/calculator.html');
   await expect(page.locator('script[src*="pagead2.googlesyndication.com"]')).toHaveCount(0);
 });
+
+test('analytics consent is explicit and persisted', async ({ page }) => {
+  await page.goto('/pages/calculator.html');
+  const banner = page.locator('#analytics-consent');
+  await expect(banner).toBeVisible();
+  await expect(banner.getByRole('button', { name: 'Allow analytics' })).toBeVisible();
+  await expect(banner.getByRole('button', { name: 'Decline' })).toBeVisible();
+  await banner.getByRole('button', { name: 'Decline' }).click();
+  await expect(banner).toHaveCount(0);
+  expect(await page.evaluate(() => localStorage.getItem('globalroute.analyticsConsent'))).toBe('denied');
+});
+
+test('Find My Route remains excluded from display advertising', async ({ page }) => {
+  await page.goto('/pages/find-my-route.html');
+  await page.evaluate(() => localStorage.setItem('globalroute.analyticsConsent', 'granted'));
+  await page.reload();
+  await expect(page.locator('[data-ad-slot]')).toHaveCount(0);
+  await expect(page.locator('script[src*="pagead2.googlesyndication.com"]')).toHaveCount(0);
+});
