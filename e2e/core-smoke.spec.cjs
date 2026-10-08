@@ -23,3 +23,18 @@ test('countries page loads', async ({ page }) => {
   await expect(page).toHaveTitle(/Country Directory|Countries/i);
   await expect(page.locator('h1')).toHaveCount(1);
 });
+
+test('analytics consent is explicit', async ({ page }) => {
+  await page.goto('/');
+  const banner = page.locator('#analytics-consent');
+  await expect(banner).toBeVisible();
+  await expect(banner.getByRole('button', { name: /allow analytics/i })).toBeVisible();
+  await expect(banner.getByRole('button', { name: /decline/i })).toBeVisible();
+  await banner.getByRole('button', { name: /decline/i }).click();
+  await expect(banner).toHaveCount(0);
+});
+
+test('calculator does not ship a guessed AdSense publisher id', async ({ page }) => {
+  await page.goto('/pages/calculator.html');
+  await expect(page.locator('script[src*="pagead2.googlesyndication.com"]')).toHaveCount(0);
+});
