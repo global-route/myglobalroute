@@ -9,13 +9,16 @@ const GlobalRoute = (() => {
 
   const init = async () => {
     if (appState.isInitialized) return;
+    if (config.enableAnalytics) {
+      loadAnalytics();
+      window.GlobalRoute?.Analytics?.initConsentUI();
+    }
     try {
       await loadCountriesData();
       initializeNavigation();
       initializeSearch();
       initializeCountryDirectory();
       initializeCalculator();
-      if (config.enableAnalytics) { loadAnalytics(); window.GlobalRoute?.Analytics?.initConsentUI(); }
       appState.isInitialized = true;
     } catch (error) {
       console.error('Initialization error:', error);
