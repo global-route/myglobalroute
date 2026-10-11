@@ -48,6 +48,28 @@ describe('canonical route engine', () => {
     expect(result.every(item => item.score >= 0 && item.score <= 100)).toBe(true);
   });
 
+  test.each([undefined, null, '', 'not-a-number', -1, 0])('blocks a known positive minimum-funds route when budget is missing or invalid (%s)', budget => {
+    const result = scorePathway(
+      { type: 'study', status: 'publishable', minFunds: 5000 },
+      { id: 'GB', dataStatus: 'publishable' },
+      { goal: 'study', budget }
+    );
+    expect(result.eligible).toBe(false);
+    expect(result.score).toBe(0);
+    expect(result.reasons[0]).toMatch(/valid budget meeting the known minimum funds requirement/);
+  });
+
+  test('accepts a known minimum-funds route only when the supplied budget meets the threshold', () => {
+    const result = scorePathway(
+      { type: 'study', status: 'publishable', minFunds: 5000 },
+      { id: 'GB', dataStatus: 'publishable' },
+      { goal: 'study', budget: '5000' }
+    );
+    expect(result.eligible).toBe(true);
+    expect(result.score).toBe(50);
+    expect(result.reasons).toContain('budget appears compatible');
+  });
+
   test('applies numeric blockers only when the pathway explicitly declares them', () => {
     const result = scorePathway(
       { type: 'work', status: 'publishable', minExperienceYears: 5 },
