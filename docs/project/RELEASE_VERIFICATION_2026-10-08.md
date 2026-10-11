@@ -124,3 +124,18 @@ Evidence freshness output: 193 records / 26 countries; 193 current, 0 overdue, 0
 Current source registry: 56 pathways, 52 publishable and 4 research_required; all 26 country aggregate records remain `evidence_required` for aggregate cost/timeline/rate claims. Requirement schema coverage is not equivalent to complete structured eligibility coverage.
 
 **Release decision remains NO-GO.** These results verify repository source and build output, not the public production deployment. The canonical hostname, deployed SHA/content equality, live CSP/security headers, and owner-level branch protection/ruleset are still not independently verified. Do not infer a production hostname from the worker name or historical docs.
+
+
+## Latest source-tree verification — 2026-10-11 — `6aebb9b0feddecbcf5b8c635e5648d934eb34453`
+
+All three required workflows passed on the exact same current `main` head:
+
+- **Quality Gate — PASS:** [run 38112873368](https://github.com/global-route/myglobalroute/actions/runs/38112873368). 17/17 test suites and 110/110 tests passed; dependency audit reported 0 vulnerabilities; data validation, generated build integrity and SEO/A11y verification passed (168 generated HTML files).
+- **Lint — PASS:** [run 38112873379](https://github.com/global-route/myglobalroute/actions/runs/38112873379).
+- **Browser Smoke — PASS:** [run 38112873378](https://github.com/global-route/myglobalroute/actions/runs/38112873378).
+
+The validator now checks that a `promoted` exact subroute maps to a matching publishable canonical pathway and has the required exact-scope evidence fields. Regression coverage was added. Registry counts remain 26 countries, 56 pathways (52 publishable / 4 research_required), and 193 evidence records. Evidence freshness is 193 current / 0 overdue / 0 missing / 0 invalid review dates. However, `src/data/countries.json` still has `dataset.asOf=2026-09-05` and CI warns that the aggregate dataset metadata is 36 days old. Do not bump `asOf` without reviewing the 26 source records; all aggregate approval-rate, cost and timeline fields remain null.
+
+Structured requirements are still very limited: 1 of 56 canonical pathways has structured requirements (2 fields on UK Skilled Worker); 55 have none. Do not infer absence of legal requirements from absence of structured records, and do not populate thresholds without exact-scope official evidence and conditional-rule modelling.
+
+**Production remains NO-GO.** The public hostname, deployed content SHA equality, live CSP/security headers and owner-level main-branch rules remain unverified. Configuration identity needs owner confirmation because `wrangler.jsonc` names Worker `myglobalroute`, while the observed Cloudflare Workers Builds service was labelled `globalroute`; `netlify.toml` is also present but does not prove Netlify is the active host.

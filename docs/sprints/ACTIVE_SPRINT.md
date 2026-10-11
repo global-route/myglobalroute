@@ -14,7 +14,7 @@
 - Canonical migration registry: 26 countries / 56 pathways (recounted directly from the current `src/data/pathways.json` contents during this handover review).
 - Current source-file status counts: 52 `publishable`, 4 `research_required`. The four research-required canonical pathways intentionally remain blocked without promotion evidence; their missing evidence IDs must not be filled with placeholders.
 - Evidence registry independently recounted from all 29 JSON files: **193 records** (18 in the primary registry and 175 across 28 addenda files).
-- Quality Gate, Lint and Browser Smoke all passed on current source head `5a823021e18b6c8fcfa56cd2ad13b0c7bb597820`; this supersedes earlier checkpoint references for source-tree verification.
+- Quality Gate, Lint and Browser Smoke all passed on current `main` head `6aebb9b0feddecbcf5b8c635e5648d934eb34453`; this supersedes earlier checkpoint references for source-tree verification.
 - Production release remains blocked until the authoritative deployment project/origin and deployed commit are independently verified.
 
 ## P0 delivery sprint map
@@ -26,10 +26,10 @@ Exact-route gates were closed or explicitly blocked. Do not promote research-req
 All previously research-required canonical pathways were audited; four remain explicitly blocked. Continue targeted evidence refresh where policy or source freshness warrants it.
 
 ### P0-S3 — Data / Recommendation Quality Gate — VERIFIED AT CURRENT HEAD
-Quality Gate passed at `5a823021e18b6c8fcfa56cd2ad13b0c7bb597820`: 17 suites / 108 tests passed, dependency audit found 0 vulnerabilities, 26-country/56-pathway validation passed, build integrity passed, and SEO/accessibility verification checked 168 generated HTML files.
+Quality Gate passed at `6aebb9b0feddecbcf5b8c635e5648d934eb34453`: 17 suites / 110 tests passed, dependency audit found 0 vulnerabilities, 26-country/56-pathway validation passed, build integrity passed, and SEO/accessibility verification checked 168 generated HTML files.
 
 ### P0-S4 — Browser / Release Gate — SOURCE-TREE VERIFIED AT CURRENT HEAD
-Browser Smoke passed at `5a823021e18b6c8fcfa56cd2ad13b0c7bb597820`; see the current release record. This does not replace production-origin/deployed-SHA verification.
+Browser Smoke passed at `6aebb9b0feddecbcf5b8c635e5648d934eb34453`; see the current release record. This does not replace production-origin/deployed-SHA verification.
 
 ### P0-S5 — Deployment Verification & P0 Exit — ACTIVE / BLOCKED
 
@@ -220,3 +220,14 @@ The CI inventory on the pre-Luxembourg-refresh head reported 193 records: 189 cu
 - Canonical pathways: 56 total; 52 publishable, 4 research_required. All 26 country-level aggregate records remain evidence-gated; this does not imply validated universal costs, timelines or approval rates.
 - Structured requirement coverage remains limited; only exact-source, exact-pathway rules may be added. The UK Skilled Worker salary figure remains a baseline with documented exceptions and must not be used as a standalone eligibility verdict.
 - Production release remains NO-GO: authoritative production hostname and deployed SHA/content are not confirmed; live CSP/security headers and owner-level main branch protection remain unverified.
+
+
+### Latest verification addendum — 2026-10-11 — `6aebb9b0feddecbcf5b8c635e5648d934eb34453`
+
+- Quality Gate PASS: [38112873368](https://github.com/global-route/myglobalroute/actions/runs/38112873368) — 17 suites / 110 tests; zero dependency vulnerabilities; generated build and SEO/A11y checks pass.
+- Lint PASS: [38112873379](https://github.com/global-route/myglobalroute/actions/runs/38112873379).
+- Browser Smoke PASS: [38112873378](https://github.com/global-route/myglobalroute/actions/runs/38112873378).
+- Data/evidence: 193 evidence records; all review dates valid and current (0 overdue); country dataset `asOf` metadata is still 36 days old and requires a source-by-source refresh before changing that date.
+- Structured requirements: 1/56 canonical pathways declares structured requirements (2 fields on UK Skilled Worker); 55/56 remain unstructured. This is an explicit coverage gap, not proof that the other pathways have no requirements.
+- Subroute validator now rejects promoted records that do not map to a matching publishable canonical pathway or lack exact-route evidence coverage. The previously emitted false-positive warnings for already-promoted NZ/Austria routes are resolved.
+- Production remains NO-GO for the previously recorded origin, deployment SHA, live CSP and branch-protection reasons.

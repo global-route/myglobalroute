@@ -160,3 +160,15 @@ The latest current-head CI check supersedes the older SHA references above for s
 - Overdue evidence refresh: Norway job-offer verification and Portugal AIMA work-index evidence updated in the same SHA. Portugal index claim remains intentionally limited because direct index retrieval timed out.
 
 The deployment release blocker is unchanged: authoritative production origin and deployed content SHA are not independently verified, actual live CSP/security headers are not checked, and the GitHub integration lacks permission to inspect/change branch protection. Owner-level evidence/action remains required; release and live monetization stay NO-GO.
+
+
+## Verified latest checkpoint — 2026-10-11 — `6aebb9b0feddecbcf5b8c635e5648d934eb34453`
+
+- Quality Gate PASS: [38112873368](https://github.com/global-route/myglobalroute/actions/runs/38112873368) — 17 suites / 110 tests; dependency audit 0 vulnerabilities; build integrity and SEO/A11y pass.
+- Lint PASS: [38112873379](https://github.com/global-route/myglobalroute/actions/runs/38112873379).
+- Browser Smoke PASS: [38112873378](https://github.com/global-route/myglobalroute/actions/runs/38112873378).
+- Evidence freshness: 193 records / 26 countries; 193 current, 0 overdue, 0 missing dates, 0 invalid dates. The country aggregate dataset `asOf` value remains 2026-09-05 (36 days old by CI warning) and must be refreshed only after its 26 source records are reviewed.
+- Structured requirements: 1/56 canonical pathways, 2 declarations total; 55 pathways remain unstructured. This must be a research/implementation lane, not treated as an eligibility-data completeness claim.
+- Exact-subroute validation now checks promoted subroute/canonical alignment and evidence-field coverage; the 4 already-promoted NZ/Austria records are no longer flagged as incorrectly pending promotion.
+
+P0-S5 remains blocked on authoritative production host/domain mapping and deployed SHA, live CSP/security header checks, and owner-level branch protection. Additional configuration mismatch to reconcile: `wrangler.jsonc` names `myglobalroute`; the observed Cloudflare Workers Builds service was `globalroute`. Netlify config is also present but is not evidence that Netlify is the live host. Do not rename services or alter DNS by inference.
