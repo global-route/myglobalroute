@@ -72,7 +72,7 @@
       ],
       "requirements": [
         {
-          "id": "CA-study-minimum-living-funds-single-outside-quebec-2026-09-01",
+          "id": "CA-study-minimum-living-funds-family-1-outside-quebec-2026-09-01",
           "field": "minimum_funds",
           "kind": "money",
           "value": 23448,
@@ -95,9 +95,177 @@
               "tuition fees",
               "transportation"
             ],
-            "notes": "The published amount applies to one family member including the applicant and applications submitted on or after 2026-09-01. Quebec uses separate rules."
+            "notes": "Applies to family size 1, including the applicant, for applications submitted on or after 2026-09-01 outside Quebec."
           },
-          "notes": "CAD 23,448 is the one-person annual living-expense amount only for applications on or after 2026-09-01 outside Quebec. Tuition and transportation must be separately accounted for; family-size thresholds differ. Do not treat this as the complete proof-of-funds amount or generalize it to other applicants."
+          "notes": "CAD 23,448 per year for living expenses only for family size 1 (including the applicant), applications on/after 2026-09-01, outside Quebec. Tuition and transportation are excluded. Quebec has separate rules. For family sizes above seven, IRCC adds CAD 6,318 per additional member; that incremental rule is not represented as a fixed threshold here."
+        },
+        {
+          "id": "CA-study-minimum-living-funds-family-2-outside-quebec-2026-09-01",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 29192,
+          "currency": "CAD",
+          "period": "annual",
+          "jurisdiction": "Canada",
+          "effectiveDate": "2026-09-01",
+          "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html",
+          "evidenceIds": [
+            "CA-study-finance-2026-09-07"
+          ],
+          "conditions": {
+            "applicationDateFrom": "2026-09-01",
+            "familySize": 2,
+            "region": "All provinces and territories except Quebec",
+            "componentsIncluded": [
+              "living expenses"
+            ],
+            "componentsExcluded": [
+              "tuition fees",
+              "transportation"
+            ],
+            "notes": "Applies to family size 2, including the applicant, for applications submitted on or after 2026-09-01 outside Quebec."
+          },
+          "notes": "CAD 29,192 per year for living expenses only for family size 2 (including the applicant), applications on/after 2026-09-01, outside Quebec. Tuition and transportation are excluded. Quebec has separate rules. For family sizes above seven, IRCC adds CAD 6,318 per additional member; that incremental rule is not represented as a fixed threshold here."
+        },
+        {
+          "id": "CA-study-minimum-living-funds-family-3-outside-quebec-2026-09-01",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 35888,
+          "currency": "CAD",
+          "period": "annual",
+          "jurisdiction": "Canada",
+          "effectiveDate": "2026-09-01",
+          "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html",
+          "evidenceIds": [
+            "CA-study-finance-2026-09-07"
+          ],
+          "conditions": {
+            "applicationDateFrom": "2026-09-01",
+            "familySize": 3,
+            "region": "All provinces and territories except Quebec",
+            "componentsIncluded": [
+              "living expenses"
+            ],
+            "componentsExcluded": [
+              "tuition fees",
+              "transportation"
+            ],
+            "notes": "Applies to family size 3, including the applicant, for applications submitted on or after 2026-09-01 outside Quebec."
+          },
+          "notes": "CAD 35,888 per year for living expenses only for family size 3 (including the applicant), applications on/after 2026-09-01, outside Quebec. Tuition and transportation are excluded. Quebec has separate rules. For family sizes above seven, IRCC adds CAD 6,318 per additional member; that incremental rule is not represented as a fixed threshold here."
+        },
+        {
+          "id": "CA-study-minimum-living-funds-family-4-outside-quebec-2026-09-01",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 43572,
+          "currency": "CAD",
+          "period": "annual",
+          "jurisdiction": "Canada",
+          "effectiveDate": "2026-09-01",
+          "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html",
+          "evidenceIds": [
+            "CA-study-finance-2026-09-07"
+          ],
+          "conditions": {
+            "applicationDateFrom": "2026-09-01",
+            "familySize": 4,
+            "region": "All provinces and territories except Quebec",
+            "componentsIncluded": [
+              "living expenses"
+            ],
+            "componentsExcluded": [
+              "tuition fees",
+              "transportation"
+            ],
+            "notes": "Applies to family size 4, including the applicant, for applications submitted on or after 2026-09-01 outside Quebec."
+          },
+          "notes": "CAD 43,572 per year for living expenses only for family size 4 (including the applicant), applications on/after 2026-09-01, outside Quebec. Tuition and transportation are excluded. Quebec has separate rules. For family sizes above seven, IRCC adds CAD 6,318 per additional member; that incremental rule is not represented as a fixed threshold here."
+        },
+        {
+          "id": "CA-study-minimum-living-funds-family-5-outside-quebec-2026-09-01",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 49419,
+          "currency": "CAD",
+          "period": "annual",
+          "jurisdiction": "Canada",
+          "effectiveDate": "2026-09-01",
+          "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html",
+          "evidenceIds": [
+            "CA-study-finance-2026-09-07"
+          ],
+          "conditions": {
+            "applicationDateFrom": "2026-09-01",
+            "familySize": 5,
+            "region": "All provinces and territories except Quebec",
+            "componentsIncluded": [
+              "living expenses"
+            ],
+            "componentsExcluded": [
+              "tuition fees",
+              "transportation"
+            ],
+            "notes": "Applies to family size 5, including the applicant, for applications submitted on or after 2026-09-01 outside Quebec."
+          },
+          "notes": "CAD 49,419 per year for living expenses only for family size 5 (including the applicant), applications on/after 2026-09-01, outside Quebec. Tuition and transportation are excluded. Quebec has separate rules. For family sizes above seven, IRCC adds CAD 6,318 per additional member; that incremental rule is not represented as a fixed threshold here."
+        },
+        {
+          "id": "CA-study-minimum-living-funds-family-6-outside-quebec-2026-09-01",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 55736,
+          "currency": "CAD",
+          "period": "annual",
+          "jurisdiction": "Canada",
+          "effectiveDate": "2026-09-01",
+          "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html",
+          "evidenceIds": [
+            "CA-study-finance-2026-09-07"
+          ],
+          "conditions": {
+            "applicationDateFrom": "2026-09-01",
+            "familySize": 6,
+            "region": "All provinces and territories except Quebec",
+            "componentsIncluded": [
+              "living expenses"
+            ],
+            "componentsExcluded": [
+              "tuition fees",
+              "transportation"
+            ],
+            "notes": "Applies to family size 6, including the applicant, for applications submitted on or after 2026-09-01 outside Quebec."
+          },
+          "notes": "CAD 55,736 per year for living expenses only for family size 6 (including the applicant), applications on/after 2026-09-01, outside Quebec. Tuition and transportation are excluded. Quebec has separate rules. For family sizes above seven, IRCC adds CAD 6,318 per additional member; that incremental rule is not represented as a fixed threshold here."
+        },
+        {
+          "id": "CA-study-minimum-living-funds-family-7-outside-quebec-2026-09-01",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 62054,
+          "currency": "CAD",
+          "period": "annual",
+          "jurisdiction": "Canada",
+          "effectiveDate": "2026-09-01",
+          "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html",
+          "evidenceIds": [
+            "CA-study-finance-2026-09-07"
+          ],
+          "conditions": {
+            "applicationDateFrom": "2026-09-01",
+            "familySize": 7,
+            "region": "All provinces and territories except Quebec",
+            "componentsIncluded": [
+              "living expenses"
+            ],
+            "componentsExcluded": [
+              "tuition fees",
+              "transportation"
+            ],
+            "notes": "Applies to family size 7, including the applicant, for applications submitted on or after 2026-09-01 outside Quebec."
+          },
+          "notes": "CAD 62,054 per year for living expenses only for family size 7 (including the applicant), applications on/after 2026-09-01, outside Quebec. Tuition and transportation are excluded. Quebec has separate rules. For family sizes above seven, IRCC adds CAD 6,318 per additional member; that incremental rule is not represented as a fixed threshold here."
         }
       ]
     },

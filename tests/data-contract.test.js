@@ -19,6 +19,20 @@ describe('migration data contract', () => {
 
 
 
+  test('Canada study living-funds requirements preserve family-size and regional scope', () => {
+    const canadaStudy = pathways.pathways.find(pathway => pathway.id === 'CA-study');
+    const thresholds = canadaStudy.requirements.filter(requirement => requirement.id.startsWith('CA-study-minimum-living-funds-family-'));
+    expect(thresholds.map(requirement => requirement.value)).toEqual([23448, 29192, 35888, 43572, 49419, 55736, 62054]);
+    expect(thresholds.map(requirement => requirement.conditions.familySize)).toEqual([1, 2, 3, 4, 5, 6, 7]);
+    for (const requirement of thresholds) {
+      expect(requirement.conditions.applicationDateFrom).toBe('2026-09-01');
+      expect(requirement.conditions.region).toMatch(/except Quebec/);
+      expect(requirement.conditions.componentsIncluded).toContain('living expenses');
+      expect(requirement.conditions.componentsExcluded).toEqual(expect.arrayContaining(['tuition fees', 'transportation']));
+    }
+    expect(thresholds.every(requirement => /Tuition and transportation are excluded/i.test(requirement.notes))).toBe(true);
+  });
+
   test('promoted exact subroutes resolve to matching publishable canonical pathways', () => {
     const subroutes = require('../src/data/pathway-subroutes.json').subroutes;
     const canonicalById = new Map(pathways.pathways.map(pathway => [pathway.id, pathway]));

@@ -27,7 +27,7 @@
       "jurisdiction": "Canada",
       "effectiveDate": "2026-09-01",
       "retrievedAt": "2026-10-11",
-      "methodology": "Direct review of current IRCC financial-support guidance on 2026-10-11. Verified that living-expense amounts differ by application date and family size; for applications on/after 2026-09-01 the listed amount for one person outside Quebec is CAD 23,448, excluding tuition and transportation. Quebec uses separate provincial rules.",
+      "methodology": "Direct review of current IRCC financial-support guidance on 2026-10-11. Confirmed that applicants must cover tuition, living expenses and transportation; the published annual living-expense table applies from 2026-09-01 and varies by family size. Outside Quebec, the table lists CAD 23,448 / 29,192 / 35,888 / 43,572 / 49,419 / 55,736 / 62,054 for family sizes 1–7, excluding tuition and transportation; each additional member above seven adds CAD 6,318. Quebec uses separate provincial rules. Structured pathway records represent only the fixed family-size values 1–7; the >7 increment is explicitly not modelled as a fixed threshold.",
       "confidence": "high",
       "reviewAfter": "2026-11-10"
     },
