@@ -153,3 +153,8 @@ The readiness report now breaks down pathways without structured requirements by
 - Updated only the two cited evidence records' `retrievedAt` / `reviewAfter` and source-review methodology; retained their effective date and threshold caveats rather than conflating retrieval date with legal effective date.
 - Review deadline moved to 2026-11-10 after direct source recheck. This is a review cadence, not a guarantee that rules cannot change before then. Other evidence records remain untouched and their freshness status must be triaged separately.
 - Current `main` before this refresh: e3bc6ee0b56178b3f9b4a1fb2b6616ee28edb47e. Quality Gate, Lint and Browser Smoke all passed on that SHA: [Quality Gate](https://github.com/global-route/myglobalroute/actions/runs/38109950355), [Lint](https://github.com/global-route/myglobalroute/actions/runs/38109950365), [Browser Smoke](https://github.com/global-route/myglobalroute/actions/runs/38109950372). These are source-tree checks, not production verification.
+
+
+## Evidence review-date reporting hardening — 2026-10-11
+
+The readiness report now separates evidence with a valid but overdue `reviewAfter` date from records with missing or invalid/impossible review dates. This closes a reporting blind spot where malformed calendar dates could disappear from the due queue. The report is diagnostic; the strict data validator remains the authoritative structural gate. Regression tests cover missing dates, impossible dates and a valid overdue date. CI for the evidence refresh commit is still running; this follow-on change must be verified on its own head.

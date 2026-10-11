@@ -101,3 +101,8 @@ The browser smoke assertion was corrected to inspect the native `option.disabled
 ## Evidence refresh delta — 2026-10-11
 
 The current `GB-skilled-worker` structured requirement evidence was rechecked against the two official GOV.UK pages on 2026-10-11. The standard salary baseline remains £41,700 per year or the occupation-specific going rate, whichever is higher; the record retains lower-threshold and transitional caveats. Only those two records were refreshed (`retrievedAt=2026-10-11`, `reviewAfter=2026-11-10`). Other records were not implicitly refreshed. The source-tree Quality Gate, Lint and Browser Smoke passed on pre-refresh code SHA e3bc6ee0b56178b3f9b4a1fb2b6616ee28edb47e; the evidence-only commit must still complete current-head CI. Production host/deployed SHA, CSP and branch-hardening gates remain unresolved; release stays NO-GO.
+
+
+## Readiness-report integrity follow-up — 2026-10-11
+
+The next code increment separates valid overdue evidence from missing/invalid review dates in the readiness report, including impossible calendar dates. This avoids silently omitting malformed freshness metadata from the review queue. Regression tests are added; current-head Quality Gate, Lint and Browser Smoke are required before marking the increment verified. This is a diagnostic enhancement, not a substitute for strict data validation or source re-verification.

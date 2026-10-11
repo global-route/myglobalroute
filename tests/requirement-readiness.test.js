@@ -38,6 +38,21 @@ describe('structured pathway requirement readiness report', () => {
     ]);
   });
 
+  test('surfaces missing and impossible evidence review dates separately from overdue evidence', () => {
+    const summary = summarizeRequirementReadiness([], [
+      { id: 'missing-review', pathwayId: 'GB-work', field: 'eligibility' },
+      { id: 'impossible-review', pathwayId: 'CA-study', field: 'financial-requirement', reviewAfter: '2026-02-30' },
+      { id: 'overdue-review', pathwayId: 'AU-work', field: 'eligibility', reviewAfter: '2026-10-10' }
+    ], schema, '2026-10-11');
+
+    expect(summary.evidenceDueForReviewCount).toBe(1);
+    expect(summary.evidenceReviewDateIssueCount).toBe(2);
+    expect(summary.evidenceReviewDateIssues).toEqual([
+      { id: 'impossible-review', pathwayId: 'CA-study', field: 'financial-requirement', reviewAfter: '2026-02-30', issue: 'invalid' },
+      { id: 'missing-review', pathwayId: 'GB-work', field: 'eligibility', reviewAfter: null, issue: 'missing' }
+    ]);
+  });
+
   test('returns a valid empty summary for no pathways or evidence', () => {
     const summary = summarizeRequirementReadiness([], [], schema, '2026-10-11');
     expect(summary.pathwayCount).toBe(0);
