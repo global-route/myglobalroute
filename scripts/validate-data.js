@@ -60,7 +60,20 @@ for (const [index, subroute] of subroutes.entries()) {
   subrouteIds.add(subroute.id);
   if (!countryIds.has(subroute.countryId)) errors.push(`subroutes[${index}] references unknown country ${subroute.countryId}`);
   if (!pathwayIds.has(subroute.parentPathwayId)) errors.push(`subroutes[${index}] references unknown parent pathway ${subroute.parentPathwayId}`);
-  if (subroute.status !== 'research_required') warnings.push(`subroute ${subroute.id} is not research_required; promotion must occur through canonical pathway architecture`);
+  if (subroute.status === 'promoted') {
+    const canonical = (pathways || []).find(pathway => pathway.id === subroute.id);
+    if (!canonical) {
+      errors.push(`promoted subroute ${subroute.id} must exist in the canonical pathway registry`);
+    } else {
+      if (canonical.countryId !== subroute.countryId) errors.push(`promoted subroute ${subroute.id} countryId must match its canonical pathway`);
+      if (canonical.type !== subroute.type) errors.push(`promoted subroute ${subroute.id} type must match its canonical pathway`);
+      if (canonical.status !== 'publishable') errors.push(`promoted subroute ${subroute.id} must map to a publishable canonical pathway`);
+    }
+  } else if (subroute.status !== 'research_required') {
+    errors.push(`subroute ${subroute.id} status must be research_required or promoted; received ${subroute.status}`);
+  } else if ((pathways || []).some(pathway => pathway.id === subroute.id && pathway.status === 'publishable')) {
+    errors.push(`research_required subroute ${subroute.id} cannot also be a publishable canonical pathway`);
+  }
 }
 
 const knownEvidenceScopes = new Set([...pathwayIds, ...subrouteIds]);
@@ -117,9 +130,13 @@ for (const pathway of pathways) {
 for (const subroute of subroutes) {
   const records = evidenceByPathway.get(subroute.id) || [];
   const requiredFields = subroute.requiredEvidenceFields || [];
-  const missingMaterialFields = requiredFields.filter(field => !new Set(records.map(record => record.field)).has(field));
-  if (subroute.status === 'publishable') {
-    if (missingMaterialFields.length) errors.push(`publishable subroute ${subroute.id} is missing material evidence fields: ${missingMaterialFields.join(', ')}`);
+  const fields = new Set(records.map(record => record.field));
+  const missingMaterialFields = requiredFields.filter(field => !fields.has(field));
+  if (subroute.status === 'promoted') {
+    const canonical = (pathways || []).find(pathway => pathway.id === subroute.id);
+    if (missingMaterialFields.length) errors.push(`promoted subroute ${subroute.id} is missing material evidence fields: ${missingMaterialFields.join(', ')}`);
+    if (!canonical?.evidenceIds?.length) errors.push(`promoted subroute ${subroute.id} requires evidenceIds on its canonical pathway`);
+    if (canonical && records.some(record => record.pathwayId !== canonical.id)) errors.push(`promoted subroute ${subroute.id} evidence must remain scoped to the canonical pathway`);
   } else if (records.length > 0 && missingMaterialFields.length) {
     warnings.push(`subroute coverage gap: ${subroute.id} missing material evidence fields: ${missingMaterialFields.join(', ')}`);
   }
