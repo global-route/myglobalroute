@@ -1,3 +1,5 @@
+import { readFile } from 'node:fs/promises';
+import { isDeepStrictEqual } from 'node:util';
 import { URL } from 'node:url';
 
 const origin = process.env.PRODUCTION_URL;
@@ -11,6 +13,7 @@ let base;
 try {
   base = new URL(origin);
   if (!['http:', 'https:'].includes(base.protocol)) throw new Error('origin must use http or https');
+  if (base.pathname !== '/' || base.search || base.hash) throw new Error('PRODUCTION_URL must be an origin only, without path, query or fragment');
 } catch (error) {
   console.error(`DEPLOYED SITE VERIFICATION FAILED: invalid PRODUCTION_URL (${error.message})`);
   process.exit(1);
@@ -18,55 +21,65 @@ try {
 
 const cleanOrigin = `${base.protocol}//${base.host}`;
 const failures = [];
+const sourceCountries = JSON.parse(await readFile(new URL('../src/data/countries.json', import.meta.url), 'utf8'));
+const sourcePathways = JSON.parse(await readFile(new URL('../src/data/pathways.json', import.meta.url), 'utf8'));
 
-async function check(route, expectedContentType) {
+async function check(route, expectedContentType, expectedText) {
   const url = new URL(route, `${cleanOrigin}/`).toString();
   try {
     const response = await fetch(url, { redirect: 'manual' });
-    if (response.status < 200 || response.status >= 400) {
-      failures.push(`${route}: HTTP ${response.status}`);
+    if (response.status < 200 || response.status >= 300) {
+      failures.push(`${route}: expected a direct 2xx response, received HTTP ${response.status}`);
       return;
-    }
-    const location = response.headers.get('location');
-    if (location && new URL(location, url).hostname !== base.hostname) {
-      failures.push(`${route}: unexpected cross-origin redirect to ${location}`);
     }
     if (expectedContentType) {
       const contentType = response.headers.get('content-type') || '';
-      if (!contentType.includes(expectedContentType)) failures.push(`${route}: unexpected content-type ${contentType}`);
+      if (!contentType.toLowerCase().includes(expectedContentType.toLowerCase())) {
+        failures.push(`${route}: unexpected content-type ${contentType}`);
+      }
+    }
+    if (expectedText) {
+      const body = await response.text();
+      if (!body.includes(expectedText)) failures.push(`${route}: expected application marker was not found`);
     }
   } catch (error) {
     failures.push(`${route}: ${error.message}`);
   }
 }
 
-const registryUrl = new URL('/data/countries.json', `${cleanOrigin}/`).toString();
-let countries = [];
-let pathways = [];
-try {
-  const response = await fetch(registryUrl);
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  const data = await response.json();
-  countries = Array.isArray(data.countries) ? data.countries : [];
-} catch (error) {
-  failures.push(`/data/countries.json: unable to parse registry (${error.message})`);
+async function checkRegistry(route, sourcePayload, label) {
+  const url = new URL(route, `${cleanOrigin}/`).toString();
+  try {
+    const response = await fetch(url, { redirect: 'manual' });
+    if (!response.ok || response.status >= 300) throw new Error(`HTTP ${response.status}`);
+    const deployedPayload = await response.json();
+    if (!Array.isArray(deployedPayload?.[label])) throw new Error(`missing ${label} array`);
+    if (deployedPayload[label].length === 0) throw new Error(`${label} array is empty`);
+    if (!isDeepStrictEqual(deployedPayload, sourcePayload)) {
+      failures.push(`${route}: deployed registry differs from the checked-out source registry; deployment may be stale or mismatched`);
+    }
+    return deployedPayload[label];
+  } catch (error) {
+    failures.push(`${route}: unable to verify deployed registry (${error.message})`);
+    return [];
+  }
 }
 
-try {
-  const response = await fetch(new URL('/data/pathways.json', `${cleanOrigin}/`));
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  const data = await response.json();
-  pathways = Array.isArray(data.pathways) ? data.pathways : [];
-} catch (error) {
-  failures.push(`/data/pathways.json: unable to parse registry (${error.message})`);
-}
+const countries = await checkRegistry('/data/countries.json', sourceCountries, 'countries');
+const pathways = await checkRegistry('/data/pathways.json', sourcePathways, 'pathways');
 
 const requiredRoutes = [
-  ['/', 'text/html'],
-  ['/pages/find-my-route.html', 'text/html'],
-  ['/pages/countries.html', 'text/html'],
-  ['/pages/calculator.html', 'text/html'],
-  ['/pages/blog.html', 'text/html'],
+  ['/', 'text/html', 'Global Route - African Global Mobility Intelligence'],
+  ['/pages/find-my-route.html', 'text/html', 'Find My Route'],
+  ['/pages/countries.html', 'text/html', 'Countries'],
+  ['/pages/calculator.html', 'text/html', 'Budget Calculator'],
+  ['/pages/blog.html', 'text/html', 'Blog'],
+  ['/js/app.js', 'javascript'],
+  ['/js/analytics.js', 'javascript'],
+  ['/js/route-engine.js', 'javascript'],
+  ['/js/monetization.js', 'javascript'],
+  ['/js/admob-loader.js', 'javascript'],
+  ['/css/styles.css', 'text/css'],
   ['/data/countries.json', 'application/json'],
   ['/data/pathways.json', 'application/json'],
   ['/robots.txt', 'text/plain'],
@@ -80,7 +93,9 @@ for (const pathway of pathways) {
   if (pathway.id) requiredRoutes.push([`/pathways/${pathway.id}/`, 'text/html']);
 }
 
-for (const [route, contentType] of requiredRoutes) await check(route, contentType);
+for (const [route, contentType, expectedText] of requiredRoutes) {
+  await check(route, contentType, expectedText);
+}
 
 if (failures.length) {
   console.error('DEPLOYED SITE VERIFICATION FAILED');
@@ -88,4 +103,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`DEPLOYED SITE VERIFICATION PASSED: ${requiredRoutes.length} routes checked on ${cleanOrigin} (${countries.length} countries, ${pathways.length} pathways)`);
+console.log(`DEPLOYED SITE VERIFICATION PASSED: ${requiredRoutes.length} routes checked on ${cleanOrigin} (${countries.length} countries, ${pathways.length} pathways); deployed registries match checked-out source`);
