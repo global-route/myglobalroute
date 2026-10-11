@@ -56,3 +56,9 @@ Last fully verified same-SHA CI checkpoint before this status reconciliation: `f
 - Route-quality regression tests added for unknown requirements, missing country references and research-required routes.
 - GitHub reports `main` unprotected and no rulesets. Production host/deployed SHA/live headers remain unverified.
 - Final commit requires same-SHA CI verification. Release remains **NO-GO**.
+
+
+## Public-origin check — 2026-10-11
+
+- Public origin check on 2026-10-11: `https://myglobalroute.com/` serves a visa-consultancy site branded “Global Routes,” with service charges and consultation pages, not the Global Route migration-intelligence application described by this repository. Do **not** assume it is this repo's production origin or set canonicals to it without owner confirmation.
+- `https://vrenum.app/` was not accessible through the public-page inspection tool; that is inconclusive and does not prove the host is down.

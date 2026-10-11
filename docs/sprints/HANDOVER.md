@@ -160,3 +160,9 @@ After refreshing the current Luxembourg student rule page and aligning the dupli
 - Added manifest generator/check, tests and verify-pipeline integration; added route-safety regression tests without inferring missing thresholds.
 - GitHub reports `main` unprotected and rulesets empty. Host/provider, deployed SHA, live CSP/security headers and production smoke remain unverified.
 - Do not mark P1-S1 complete until sign-off and same-SHA CI are recorded. Release remains **NO-GO**.
+
+
+## Public-origin check — 2026-10-11
+
+- Public origin check on 2026-10-11: `https://myglobalroute.com/` serves a visa-consultancy site branded “Global Routes,” with service charges and consultation pages, not the Global Route migration-intelligence application described by this repository. Do **not** assume it is this repo's production origin or set canonicals to it without owner confirmation.
+- `https://vrenum.app/` was not accessible through the public-page inspection tool; that is inconclusive and does not prove the host is down.

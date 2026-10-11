@@ -160,3 +160,9 @@ Structured coverage is 9 declarations across 2/56 pathways; 54 pathways remain w
 - Public GitHub branch metadata reports `main` unprotected and no repository rulesets. Detailed protection endpoint returned 403 to this integration.
 - No authoritative production host/deployment record provided. Do not infer host, deployed SHA, live CSP or smoke results from repository config alone.
 - Final SHA must pass Quality Gate, Lint and Browser Smoke. Release remains **NO-GO**.
+
+
+## Public-origin check — 2026-10-11
+
+- Public origin check on 2026-10-11: `https://myglobalroute.com/` serves a visa-consultancy site branded “Global Routes,” with service charges and consultation pages, not the Global Route migration-intelligence application described by this repository. Do **not** assume it is this repo's production origin or set canonicals to it without owner confirmation.
+- `https://vrenum.app/` was not accessible through the public-page inspection tool; that is inconclusive and does not prove the host is down.

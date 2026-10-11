@@ -77,3 +77,9 @@ Next executable sprint handover: [P1-S1 Country Source Refresh & Dataset Reconci
 - P1-S1.3 and P1-S1.4 remain **OPEN** pending sign-off, blockers and final same-head CI.
 - P0-S5 — GitHub branch API reports `main.protected=false`; repository rulesets endpoint returned an empty list. Owner-level branch protection/required checks are not evidenced.
 - Production hostname, deployed SHA, live CSP/security headers and production smoke remain blocked on authoritative hosting-owner/provider evidence. Release remains **NO-GO**.
+
+
+## Public-origin verification — 2026-10-11
+
+- Public origin check on 2026-10-11: `https://myglobalroute.com/` serves a visa-consultancy site branded “Global Routes,” with service charges and consultation pages, not the Global Route migration-intelligence application described by this repository. Do **not** assume it is this repo's production origin or set canonicals to it without owner confirmation.
+- `https://vrenum.app/` was not accessible through the public-page inspection tool; that is inconclusive and does not prove the host is down.
