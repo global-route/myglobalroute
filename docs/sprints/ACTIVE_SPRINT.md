@@ -136,3 +136,12 @@ The readiness report now breaks down pathways without structured requirements by
 - CI for `c4afaae4a7f695eea19d8bed8a2930194bd0e06a` is pending at handover time. Do not mark this SHA green until all three workflows complete successfully.
 - Data truth remains a separate blocker: the last completed validator reports 26 countries, 56 pathways, 193 evidence records, 52 publishable and 4 research-required pathways, with three subroute-status warnings. The report/validator passing means structural validation passed; it does not mean evidence freshness is current or all routes are production-ready.
 - Next actions: confirm the new CI results; use the readiness report to build a route-scoped evidence refresh queue; keep routes blocked where official current evidence cannot be independently confirmed; continue P0-S5 production-host/deployed-SHA verification only with provider-account evidence.
+
+
+## Structured requirement schema — first evidence-backed record (2026-10-11)
+
+- Added `minimum_annual_salary` as a distinct money field; annual salary must not be conflated with monthly income. Validator requires an annual period and a non-empty caveat note.
+- Added structured requirements to `GB-skilled-worker` only where existing exact-pathway evidence supports the claim: approved-employer job offer, plus the £41,700 annual baseline with explicit warning that the occupation going rate may be higher and exceptions/transitional rules apply.
+- No thresholds were inferred for the other 55 pathways. No UI eligibility scoring is enabled from this first record; it is a data-schema increment and readiness signal, not an eligibility decision.
+- The cited records have a review deadline of 2026-10-12. If not refreshed with current source evidence by then, structured-requirement validation should fail closed rather than silently continue using stale values.
+- Tests added for annual-unit enforcement and mandatory caveats. Run the full Quality Gate, Lint and Browser Smoke on the resulting code SHA before marking this increment verified.

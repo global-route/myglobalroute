@@ -1,15 +1,115 @@
 {
   "schemaVersion": "1.0.0",
-  "policy": "Requirement values are pathway-scoped and may be used for matching only when every value has an explicit unit or structure, jurisdiction, effective date, HTTPS source and matching field-level evidence. Absence means unknown, never zero or unrestricted.",
+  "policy": "Requirement values are pathway-scoped and may be used for matching only when every value has an explicit unit or structure, jurisdiction, effective date, HTTPS source and matching field-level evidence. Absence means unknown, never zero or unrestricted. Structured annual salary thresholds must be distinguished from monthly income and must preserve source caveats, exceptions and any higher occupation-specific threshold.",
   "fields": {
-    "minimum_funds": { "kind": "money", "evidenceField": "financial-requirement", "requiredProperties": ["value", "currency", "period", "jurisdiction", "effectiveDate", "sourceUrl", "evidenceIds"] },
-    "minimum_monthly_income": { "kind": "money", "evidenceField": "financial-requirement", "requiredProperties": ["value", "currency", "period", "jurisdiction", "effectiveDate", "sourceUrl", "evidenceIds"] },
-    "minimum_experience_years": { "kind": "number", "unit": "years", "evidenceField": "eligibility", "requiredProperties": ["value", "unit", "jurisdiction", "effectiveDate", "sourceUrl", "evidenceIds"] },
-    "language_test": { "kind": "language", "evidenceField": "eligibility", "requiredProperties": ["value", "jurisdiction", "effectiveDate", "sourceUrl", "evidenceIds"] },
-    "qualification": { "kind": "text", "evidenceField": "eligibility", "requiredProperties": ["value", "jurisdiction", "effectiveDate", "sourceUrl", "evidenceIds"] },
-    "job_offer": { "kind": "boolean", "evidenceField": "eligibility", "requiredProperties": ["value", "jurisdiction", "effectiveDate", "sourceUrl", "evidenceIds"] },
-    "admission_offer": { "kind": "boolean", "evidenceField": "eligibility", "requiredProperties": ["value", "jurisdiction", "effectiveDate", "sourceUrl", "evidenceIds"] },
-    "sponsorship": { "kind": "boolean", "evidenceField": "eligibility", "requiredProperties": ["value", "jurisdiction", "effectiveDate", "sourceUrl", "evidenceIds"] }
+    "minimum_funds": {
+      "kind": "money",
+      "evidenceField": "financial-requirement",
+      "requiredProperties": [
+        "value",
+        "currency",
+        "period",
+        "jurisdiction",
+        "effectiveDate",
+        "sourceUrl",
+        "evidenceIds"
+      ]
+    },
+    "minimum_monthly_income": {
+      "kind": "money",
+      "evidenceField": "financial-requirement",
+      "requiredProperties": [
+        "value",
+        "currency",
+        "period",
+        "jurisdiction",
+        "effectiveDate",
+        "sourceUrl",
+        "evidenceIds"
+      ]
+    },
+    "minimum_experience_years": {
+      "kind": "number",
+      "unit": "years",
+      "evidenceField": "eligibility",
+      "requiredProperties": [
+        "value",
+        "unit",
+        "jurisdiction",
+        "effectiveDate",
+        "sourceUrl",
+        "evidenceIds"
+      ]
+    },
+    "language_test": {
+      "kind": "language",
+      "evidenceField": "eligibility",
+      "requiredProperties": [
+        "value",
+        "jurisdiction",
+        "effectiveDate",
+        "sourceUrl",
+        "evidenceIds"
+      ]
+    },
+    "qualification": {
+      "kind": "text",
+      "evidenceField": "eligibility",
+      "requiredProperties": [
+        "value",
+        "jurisdiction",
+        "effectiveDate",
+        "sourceUrl",
+        "evidenceIds"
+      ]
+    },
+    "job_offer": {
+      "kind": "boolean",
+      "evidenceField": "eligibility",
+      "requiredProperties": [
+        "value",
+        "jurisdiction",
+        "effectiveDate",
+        "sourceUrl",
+        "evidenceIds"
+      ]
+    },
+    "admission_offer": {
+      "kind": "boolean",
+      "evidenceField": "eligibility",
+      "requiredProperties": [
+        "value",
+        "jurisdiction",
+        "effectiveDate",
+        "sourceUrl",
+        "evidenceIds"
+      ]
+    },
+    "sponsorship": {
+      "kind": "boolean",
+      "evidenceField": "eligibility",
+      "requiredProperties": [
+        "value",
+        "jurisdiction",
+        "effectiveDate",
+        "sourceUrl",
+        "evidenceIds"
+      ]
+    },
+    "minimum_annual_salary": {
+      "kind": "money",
+      "evidenceField": "financial-requirement",
+      "requiredProperties": [
+        "value",
+        "currency",
+        "period",
+        "jurisdiction",
+        "effectiveDate",
+        "sourceUrl",
+        "evidenceIds",
+        "notes"
+      ]
+    }
   },
   "matchingPolicy": {
     "unknownIsNotZero": true,

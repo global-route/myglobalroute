@@ -48,6 +48,8 @@ function validateRequirement(requirement, pathway, evidenceById, validationDate 
     if (typeof requirement.currency !== 'string' || !/^[A-Z]{3}$/.test(requirement.currency)) fail('currency must be a three-letter uppercase code');
     if (!['total', 'monthly', 'annual'].includes(requirement.period)) fail('period must be total, monthly or annual');
     if (requirement.field === 'minimum_monthly_income' && requirement.period !== 'monthly') fail('minimum_monthly_income period must be monthly');
+    if (requirement.field === 'minimum_annual_salary' && requirement.period !== 'annual') fail('minimum_annual_salary period must be annual');
+    if (requirement.field === 'minimum_annual_salary' && (typeof requirement.notes !== 'string' || !requirement.notes.trim())) fail('minimum_annual_salary requires notes describing threshold caveats and exceptions');
   } else if (definition?.kind === 'number') {
     if (typeof requirement.value !== 'number' || !Number.isFinite(requirement.value) || requirement.value < 0) fail('numeric value must be a non-negative finite number');
     if (requirement.unit !== 'years') fail('unit must be years');

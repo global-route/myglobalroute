@@ -47,6 +47,7 @@ function summarizeRequirementReadiness(pathways, evidence, schema, validationDat
     }, {}),
     pathwayCountByStatus: byStatus,
     declaredRequirementCount: Object.values(byField).reduce((sum, count) => sum + count, 0),
+    pathwaysWithStructuredRequirementsByStatus: structured.reduce((counts, pathway) => { const status = pathway.status || 'status_unknown'; counts[status] = (counts[status] || 0) + 1; return counts; }, {}),
     requirementsByField: byField,
     evidenceRecordsByField: evidenceCounts,
     evidenceDueForReviewCount: dueEvidence.length,

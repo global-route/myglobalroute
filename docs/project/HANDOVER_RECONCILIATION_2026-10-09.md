@@ -139,3 +139,10 @@ The last verified source-code SHA is `739b4121b2ddb3460d1ed52b171cd89fcd80f046`:
 This report is a visibility/control improvement, not evidence refresh. The validator's last successful output on 2026-10-11 was 26 countries, 56 pathways, 193 evidence records, 56/56 pathways with some evidence and material-field coverage, 52 publishable and 4 research-required; it also emitted three subroute-status warnings. Do not equate this structural pass with current evidence freshness or legal/eligibility correctness. The readiness report should drive an exact evidence-refresh queue; do not extend review dates, infer thresholds, or promote a route without current route-scoped primary-source review.
 
 **Next sequence:** (1) verify all three workflows on the latest `main` SHA; (2) review readiness output and prioritize expired/high-impact official-source evidence; (3) add/verify structured route requirements only when supported by exact-source evidence; (4) resolve the verified hosting project/domain/deployed SHA and complete P0-S5 production checks; (5) update this handover and release record from completed evidence, not assumptions.
+
+
+## Structured requirement implementation increment — 2026-10-11
+
+The requirement schema now distinguishes `minimum_annual_salary` from `minimum_monthly_income`, enforces annual units and requires caveat text. The first populated pathway is `GB-skilled-worker`, using existing evidence IDs for (1) the approved-employer job-offer condition and (2) the £41,700 annual baseline. Its notes explicitly preserve the higher occupation-going-rate rule and lower-salary/transitional exceptions. No values were extrapolated to other routes, and this increment does not activate eligibility scoring in the UI.
+
+**Evidence freshness warning:** the two supporting evidence records are scheduled for review by 2026-10-12. Refresh from the official source before that deadline or allow the validator to fail closed. Verification is pending until the latest code SHA passes all required workflows.

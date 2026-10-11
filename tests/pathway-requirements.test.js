@@ -47,6 +47,34 @@ describe('pathway requirement schema validation', () => {
   });
 
 
+
+  test('accepts annual salary thresholds only with annual units and a caveat', () => {
+    const salary = {
+      ...validMoney,
+      id: 'annual-salary',
+      field: 'minimum_annual_salary',
+      value: 41700,
+      period: 'annual',
+      notes: 'Baseline only; applicable occupation rate may be higher and exceptions apply.'
+    };
+    expect(validateRequirement(salary, pathway, new Map([[evidence.id, evidence]]))).toEqual([]);
+  });
+
+  test('rejects annual salary represented with monthly units or without caveats', () => {
+    const salary = {
+      ...validMoney,
+      id: 'annual-salary',
+      field: 'minimum_annual_salary',
+      value: 41700,
+      period: 'monthly',
+      notes: ''
+    };
+    expect(validateRequirement(salary, pathway, new Map([[evidence.id, evidence]]))).toEqual(expect.arrayContaining([
+      'minimum_annual_salary period must be annual',
+      'minimum_annual_salary requires notes describing threshold caveats and exceptions'
+    ]));
+  });
+
   test('requires monthly units for minimum monthly income', () => {
     const income = {
       ...validMoney,
