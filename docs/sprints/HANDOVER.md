@@ -136,3 +136,8 @@ Official source review refreshed four overdue Sweden/Norway records, including t
 ## Evidence refresh batch 3 — Austria, Finland and Portugal — 2026-10-11
 
 Official-source review refreshed five overdue records and aligned the duplicate Finnish study-finance record: Austria's 20-hour student work permit condition and 12-month graduate job-search extension; Finland's EUR 800/month / EUR 9,600 student maintenance requirement and study-permit scope; and Portugal's remote-work residence document requirements. Only reviewed records had their retrieval/review dates changed; no threshold was inferred from a document checklist. The freshness inventory and full CI must be rerun on the resulting head.
+
+
+## Evidence refresh batch 4 — Japan, Luxembourg, New Zealand and Sweden — 2026-10-11
+
+Official-source review refreshed five overdue records: Japan Student and Engineer/Specialist status scope; Luxembourg third-country salaried-worker authorisation sequence; New Zealand's 2026 skilled-residence policy changes; and Sweden's June 2026 work-permit policy, including salary transitions, comprehensive health insurance and employer-condition grounds. The Luxembourg student work-rights record is intentionally left overdue because the available English page was last updated in 2023 and the current rule was not independently confirmed. The evidence-freshness inventory and CI must be checked on the final head.

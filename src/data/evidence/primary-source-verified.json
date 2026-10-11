@@ -113,15 +113,15 @@
       "countryId": "NZ",
       "pathwayId": "NZ-skilled",
       "field": "policy-update",
-      "claim": "New Zealand implemented final Skilled Migrant Category and work-to-residence changes on 24 August 2026, including changes affecting wage rules and qualification evidence.",
+      "claim": "New Zealand's Skilled Migrant Category and work-to-residence settings changed from 24 August 2026, including revised wage-threshold application, qualification evidence, Trades and Technician pathway criteria, and restrictions on counting self-employment as directly relevant experience under the two new pathways.",
       "sourceAuthority": "Immigration New Zealand",
       "sourceUrl": "https://www.immigration.govt.nz/about-us/news-centre/final-details-about-changes-to-the-skilled-migrant-category-resident-visa-and-work-to-residence-visa/",
       "jurisdiction": "New Zealand",
       "effectiveDate": "2026-08-24",
-      "retrievedAt": "2026-09-06",
-      "methodology": "Direct review of Immigration New Zealand policy announcement",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current Immigration New Zealand final-details announcement published 18 June 2026. Verified the changes took effect 24 August 2026 and retained pathway-specific wage, qualification and work-experience distinctions.",
       "confidence": "high",
-      "reviewAfter": "2026-10-06"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "FI-study-eligibility-2026-09-06",
@@ -163,10 +163,10 @@
       "sourceUrl": "https://guichet.public.lu/en/citoyens/immigration/plus-3-mois/ressortissant-tiers/salarie/salarie-pays-tiers.html",
       "jurisdiction": "Luxembourg",
       "effectiveDate": "2026-09-06",
-      "retrievedAt": "2026-09-06",
-      "methodology": "Direct review of Luxembourg government immigration guidance",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current Luxembourg Guichet.lu third-country salaried-worker guidance on 2026-10-11. Confirmed authorisation to stay generally must be approved before entry, followed by the residence-permit procedure after arrival, subject to exceptions.",
       "confidence": "high",
-      "reviewAfter": "2026-10-06"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "LU-study-work-rights-2026-09-06",
@@ -233,15 +233,15 @@
       "countryId": "SE",
       "pathwayId": "SE-work",
       "field": "eligibility",
-      "claim": "Sweden's work-permit rules changed from 1 June 2026 and include the new salary threshold and a comprehensive health-insurance requirement; the Swedish Migration Agency also applies employer-condition requirements.",
+      "claim": "Sweden's work-permit rules changed from 1 June 2026: covered first-time applicants generally need salary of at least 90% of the median salary, with exemptions and transitional extension rules; comprehensive health insurance is required for stays of at most one year; and applications may be rejected for specified employer deficiencies.",
       "sourceAuthority": "Swedish Migration Agency",
-      "sourceUrl": "https://www.migrationsverket.se/nyheter/news-archive/2026-06-01-new-rules-for-work-permits-now-apply.html",
+      "sourceUrl": "https://www.migrationsverket.se/en/news-archive/news/2026-06-01-new-rules-for-labour-immigration-from-1-june.html",
       "jurisdiction": "Sweden",
       "effectiveDate": "2026-06-01",
-      "retrievedAt": "2026-09-07",
-      "methodology": "Direct review of current Swedish Migration Agency policy announcement",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current Swedish Migration Agency work-permit policy announcement on 2026-10-11. Confirmed the 90%-of-median baseline, 80%-of-historic-median transitional extension rule through 1 December 2026, comprehensive health insurance for stays up to one year, employer-deficiency grounds and specified exemptions.",
       "confidence": "high",
-      "reviewAfter": "2026-10-07"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "SE-study-finance-2026-09-07",

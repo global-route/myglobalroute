@@ -98,13 +98,13 @@
       "field": "eligibility",
       "claim": "Japan's residence-status framework includes Student (留学) for qualifying education at universities, colleges, vocational schools and other listed educational institutions, subject to the applicable immigration rules.",
       "sourceAuthority": "Immigration Services Agency of Japan",
-      "sourceUrl": "https://www.moj.go.jp/isa/applications/status/qaq5.html",
+      "sourceUrl": "https://www.moj.go.jp/isa/applications/guide/kanri_qa.html",
       "jurisdiction": "Japan",
       "effectiveDate": "2026-09-07",
-      "retrievedAt": "2026-09-07",
-      "methodology": "Direct review of current Immigration Services Agency status-of-residence table",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Rechecked current Immigration Services Agency of Japan residence-status Q&A and status-of-residence listings on 2026-10-11. The record remains a general status-scope statement; programme-specific admission and supporting-document requirements must be checked against the relevant institution/category.",
       "confidence": "high",
-      "reviewAfter": "2026-10-07"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "JP-engineer-status-2026-09-07",
@@ -113,13 +113,13 @@
       "field": "eligibility",
       "claim": "Japan's residence-status framework includes Engineer/Specialist in Humanities/International Services for qualifying activities requiring technical or humanities knowledge or foreign-cultural expertise under a contract with a Japanese public or private organisation, subject to the applicable rules.",
       "sourceAuthority": "Immigration Services Agency of Japan",
-      "sourceUrl": "https://www.moj.go.jp/isa/applications/status/qaq5.html",
+      "sourceUrl": "https://www.moj.go.jp/isa/applications/resources/nyukan_nyukan69.html?hl=en&lang=tk",
       "jurisdiction": "Japan",
       "effectiveDate": "2026-09-07",
-      "retrievedAt": "2026-09-07",
-      "methodology": "Direct review of current Immigration Services Agency status-of-residence table",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Rechecked the current Immigration Services Agency status-of-residence information and the official Engineer/Specialist in Humanities/International Services clarification, whose attachments were revised on 15 April 2026. The claim remains scoped to qualifying contract-based professional activities; category-specific qualification evidence must be verified against the applicable guidance.",
       "confidence": "high",
-      "reviewAfter": "2026-10-07"
+      "reviewAfter": "2026-11-10"
     }
   ]
 }

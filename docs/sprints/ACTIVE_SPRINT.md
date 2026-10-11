@@ -194,3 +194,8 @@ After the freshness inventory reported 193 records (171 current, 22 overdue, non
 ## Evidence refresh batch 3 — Austria, Finland and Portugal — 2026-10-11
 
 Refreshed only claims checked against current official sources: Austria student work rights and graduate job-search extension; Finland study eligibility and student financial maintenance (including duplicate financial evidence alignment); and Portugal's digital-nomad residence document checklist. Finland's current guidance confirms EUR 800/month and EUR 9,600 for a study period of at least one year, with tuition and qualifying institutional-support exceptions handled separately. Portugal's document checklist was not used to infer an income threshold.
+
+
+## Evidence refresh batch 4 — Japan, Luxembourg, New Zealand and Sweden — 2026-10-11
+
+Refreshed five overdue claims after reviewing official sources: Japan's general Student and Engineer/Specialist residence-status scope, Luxembourg's salaried-worker authorisation sequence, New Zealand's SMC/work-to-residence changes effective 2026-08-24, and Sweden's 2026 work-permit rule changes including salary transitions, health insurance and employer-condition grounds. The Luxembourg student work-rights record remains overdue because the available English guidance was last updated in 2023 and the current student-work detail was not independently revalidated; it has not been silently extended.
