@@ -166,3 +166,7 @@ Structured coverage is 9 declarations across 2/56 pathways; 54 pathways remain w
 
 - Public origin check on 2026-10-11: `https://myglobalroute.com/` serves a visa-consultancy site branded “Global Routes,” with service charges and consultation pages, not the Global Route migration-intelligence application described by this repository. Do **not** assume it is this repo's production origin or set canonicals to it without owner confirmation.
 - `https://vrenum.app/` was not accessible through the public-page inspection tool; that is inconclusive and does not prove the host is down.
+
+
+## Structured requirement coverage update — 2026-10-11
+Three exact-pathway declarations were added and regression-tested for UK Student, New Zealand Fee Paying Student and Ireland Critical Skills. Current coverage: 12 declarations across 5 of 56 pathways; 51 remain unstructured. This does not close P1-REQ or change the NO-GO release decision.
