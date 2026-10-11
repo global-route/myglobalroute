@@ -58,10 +58,10 @@
       "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html",
       "jurisdiction": "Canada",
       "effectiveDate": "2026-09-01",
-      "retrievedAt": "2026-09-06",
-      "methodology": "Direct review of current Government of Canada financial-support guidance",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current IRCC financial-support guidance on 2026-10-11. Verified that living-expense amounts differ by application date and family size; for applications on/after 2026-09-01 the listed amount for one person outside Quebec is CAD 23,448, excluding tuition and transportation. Quebec uses separate provincial rules.",
       "confidence": "high",
-      "reviewAfter": "2026-10-06"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "AU-skilled-eoi-2026-09-06",
@@ -73,25 +73,25 @@
       "sourceUrl": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/expression-of-interest",
       "jurisdiction": "Australia",
       "effectiveDate": "2026-09-06",
-      "retrievedAt": "2026-09-06",
-      "methodology": "Direct review of current Australian Government SkillSelect guidance",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current Department of Home Affairs SkillSelect guidance on 2026-10-11. Confirmed EOI is required for subclasses 189, 190 and 491 before invitation, minimum threshold is 65 points, and meeting it does not guarantee invitation.",
       "confidence": "high",
-      "reviewAfter": "2026-10-06"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "AU-skilled-priority-2026-09-06",
       "countryId": "AU",
       "pathwayId": "AU-skilled",
       "field": "processing-priority",
-      "claim": "Skilled visa processing priorities are currently governed by Ministerial Direction 119, which took effect on 25 July 2026 and prioritises applications according to occupation and applicant location.",
+      "claim": "Skilled visa processing priorities for covered temporary, provisional and permanent skilled visa applications are governed by Ministerial Directions 121 and 122, which came into effect on 19 September 2026 and replaced Direction 119.",
       "sourceAuthority": "Department of Home Affairs",
       "sourceUrl": "https://immi.homeaffairs.gov.au/Visa-subsite/Pages/Processing-times/skilled-visa-processing-priorities.aspx",
       "jurisdiction": "Australia",
-      "effectiveDate": "2026-07-25",
-      "retrievedAt": "2026-09-06",
-      "methodology": "Direct review of current Australian Government processing-priority guidance",
+      "effectiveDate": "2026-09-19",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current Department of Home Affairs skilled visa processing-priority guidance on 2026-10-11; the official page identifies Ministerial Directions 121 and 122 as effective 19 September 2026 and replacing Direction 119.",
       "confidence": "high",
-      "reviewAfter": "2026-10-06"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "IE-study-finance-2026-09-06",
@@ -223,10 +223,10 @@
       "sourceUrl": "https://www.migrationsverket.se/en/word-explanations/salary-requirements-for-a-work-permit.html",
       "jurisdiction": "Sweden",
       "effectiveDate": "2026-06-16",
-      "retrievedAt": "2026-09-07",
-      "methodology": "Direct review of current Swedish Migration Agency salary-requirement guidance",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current Swedish Migration Agency salary-requirement guidance on 2026-10-11. Confirmed 90% of median salary for covered first-time work-permit decisions from 1 June 2026; current median SEK 38,300 and threshold SEK 34,470/month for applications received from 16 June 2026. Transitional and exempt categories remain applicable.",
       "confidence": "high",
-      "reviewAfter": "2026-10-07"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "SE-work-rules-2026-09-07",

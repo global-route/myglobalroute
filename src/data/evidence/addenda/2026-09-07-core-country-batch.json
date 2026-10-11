@@ -26,10 +26,10 @@
       "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html",
       "jurisdiction": "Canada",
       "effectiveDate": "2026-09-01",
-      "retrievedAt": "2026-09-07",
-      "methodology": "Direct review of current Government of Canada financial-support guidance",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current IRCC financial-support guidance on 2026-10-11. Verified that living-expense amounts differ by application date and family size; for applications on/after 2026-09-01 the listed amount for one person outside Quebec is CAD 23,448, excluding tuition and transportation. Quebec uses separate provincial rules.",
       "confidence": "high",
-      "reviewAfter": "2026-10-07"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "NO-study-eligibility-2026-09-07",

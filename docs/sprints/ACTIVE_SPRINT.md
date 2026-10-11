@@ -158,3 +158,12 @@ The readiness report now breaks down pathways without structured requirements by
 ## Evidence review-date reporting hardening — 2026-10-11
 
 The readiness report now separates evidence with a valid but overdue `reviewAfter` date from records with missing or invalid/impossible review dates. This closes a reporting blind spot where malformed calendar dates could disappear from the due queue. The report is diagnostic; the strict data validator remains the authoritative structural gate. Regression tests cover missing dates, impossible dates and a valid overdue date. CI for the evidence refresh commit is still running; this follow-on change must be verified on its own head.
+
+
+## Current-head verification and evidence refresh — 2026-10-11
+
+- Latest `main` before this increment: 4ecdbf0e0abd411b59b546251ea1569cef43a998. Quality Gate, Lint and Browser Smoke all passed on that SHA: [Quality Gate](https://github.com/global-route/myglobalroute/actions/runs/38110277073), [Lint](https://github.com/global-route/myglobalroute/actions/runs/38110277041), [Browser Smoke](https://github.com/global-route/myglobalroute/actions/runs/38110277115).
+- Source-review refreshes were limited to claims actually checked against current official sources: Canada study funds (including the 2026-09-01 living-funds schedule), Australia SkillSelect EOI rules, Australia processing-priority directions effective 2026-09-19, and Sweden's current salary threshold and transition rules. No country aggregate cost/timeline/approval-rate fields were populated.
+- CSP hardening adds `base-uri 'self'`, `object-src 'none'` and `upgrade-insecure-requests` to both deployment config copies. Regression test verifies the two CSP policies stay in sync and the required restrictions remain present.
+- Cloudflare Workers Build check is green for 4ecdbf0e0abd411b59b546251ea1569cef43a998 ([build check](https://github.com/global-route/myglobalroute/runs/114384348240)); this is evidence that the repository is connected to a Cloudflare production build, not proof of the public origin or deployed content. The authoritative host and public deployed SHA still need direct verification.
+- Repository visibility is confirmed public. GitHub's branch-protection endpoint returned `403 Resource not accessible by integration`; branch protection cannot be asserted or changed with current permissions. Keep issue #2 open until owner-level settings are inspected.
