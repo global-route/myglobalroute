@@ -79,3 +79,14 @@ No numeric thresholds have been populated from narrative claims. This avoids fal
 The structured pathway-requirements validator now reads its allowed fields/types from `src/data/pathway-requirement-schema.json` and is applied to both canonical pathways and exact subroutes. It requires exact-route evidence (no inheritance), expected evidence field, matching HTTPS source and jurisdiction, real effective dates, explicit money currency/period, correct units, and rejects evidence past its `reviewAfter` date from backing a structured match. The schema covers money, monthly income, experience, language tests, qualifications, job offers, admission offers and sponsorship.
 
 No thresholds were guessed or bulk-converted from narrative evidence. Current source-tree verification for the newest implementation is pending; the latest Quality Gate, Lint and Browser Smoke must pass on one SHA before this lane can be called verified.
+
+
+## Latest source-tree verification — 2026-10-11 — `c224696bdc4487dd17a7b9b28304f4ad25012f34`
+
+All three required workflows completed successfully on this exact `main` head:
+
+- **Quality Gate — PASS:** [run 38105471129](https://github.com/global-route/myglobalroute/actions/runs/38105471129)
+- **Lint — PASS:** [run 38105471109](https://github.com/global-route/myglobalroute/actions/runs/38105471109)
+- **Browser Smoke — PASS:** [run 38105471079](https://github.com/global-route/myglobalroute/actions/runs/38105471079)
+
+The E2E test now asserts the browser's native disabled property for the uncovered Business option. These checks establish source-tree integrity only. Production remains **NO-GO** until the authoritative hosting project/origin and deployed SHA are verified, production smoke and CSP review pass, and issue #2's branch/visibility decisions are resolved with the project owner. The structured requirement schema and evidence gates are implemented, but pathway-level numeric thresholds remain unpopulated where exact authoritative evidence has not been captured.
