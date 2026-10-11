@@ -26,7 +26,7 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 | Aggregate country metrics | Costs, timelines and approval rates remain null/evidence-gated where unsupported | Correctly avoids fabricated estimates |
 | Hosting | `wrangler.jsonc` names Worker `myglobalroute`; observed Cloudflare build service label was `globalroute`; Netlify config/functions also exist | Hosting identity unresolved; do not infer or change DNS/service names |
 | Security/release | CSP configured in repo; live headers and deployed SHA not verified; branch-protection inspection returned 403 | Provider/owner evidence needed |
-| Monetization | Consent, registry and fail-closed redirect foundations exist; no verified live provider/revenue | Keep activation gated |
+| Monetization | Empty verified partner registry and fail-closed redirect foundations; separate analytics/ad consent controls implemented but unvalidated; no verified live provider/revenue | Keep activation gated; verify provider and legal requirements before activation |
 
 ## Completed work by phase
 
@@ -46,6 +46,12 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 - [ ] Country `asOf` metadata is stale; source-check all 26 records.
 - [ ] Revalidate material pathway claims at exact legal scope.
 - [ ] Four canonical pathways remain research_required.
+
+### Phase 4 — Trust, compliance and accessibility foundations
+- [x] Privacy, terms and migration disclaimer pages exist.
+- [x] Analytics event payloads are allowlisted and sensitive profile fields are excluded.
+- [x] Separate analytics and advertising choices, persistent preference access, and advertising-consent gating are implemented in source.
+- [ ] Validate consent behavior in a real browser after testing is resumed; review actual provider behavior, storage/retention, jurisdiction-specific legal requirements and accessibility with accountable owners. Latest consent changes are not validated.
 
 ### Phase 2 — Canonical product core
 - [x] Find My Route / canonical matching foundations and generated source trails exist.
