@@ -4,7 +4,7 @@
 **Status:** Active execution  
 **Reconciled:** October 11, 2026
 
-> Current verification authority: implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426` and CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` both pass Quality Gate, Lint and Browser Smoke. Older checkpoint summaries below are historical snapshots; use `ACTIVE_SPRINT.md` and `PHASE_STATUS.md` for current status.
+> Last verified implementation/data checkpoint: `95f960c081367305dea0144034d48a4ab7892426`; the earlier CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` passed the listed source-tree workflows. Testing and CI are now paused by user direction; subsequent non-test data/schema/code/documentation changes are unvalidated. Older checkpoint summaries below are historical; use `ACTIVE_SPRINT.md` and `PHASE_STATUS.md` for current status.
 
 > The original Global Route vision is preserved. Execution priority is corrected from the repository's actual state: production integrity and trustworthy migration intelligence precede content and growth scaling.
 
