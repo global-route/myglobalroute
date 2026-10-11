@@ -4,7 +4,7 @@
 
 **Current status (2026-10-11):** Active development — **release NO-GO**. Phase 0 production exit is blocked; Phases 1–5 remain incomplete and Phase 6 is deferred. See [active sprint](docs/sprints/ACTIVE_SPRINT.md), [phase tracker](docs/project/PHASE_STATUS.md), and [release verification](docs/project/RELEASE_VERIFICATION_2026-10-08.md).  
 **Current data baseline:** 26 countries, 56 pathways (52 publishable / 4 research-required), 193 evidence records; country source review is in progress.
-**Structured requirement coverage:** 16 evidence-linked declarations across 6 pathways; 50 pathways still lack structured declarations, which means unknown coverage—not zero requirements or eligibility. Recent non-test implementation, schema/data and documentation changes—including separate analytics/advertising consent controls and evidence-aligned homepage/About copy—have not been validated because testing and CI work is paused by user direction. Aggregate approval rates, costs and timelines remain null where field-level evidence is missing.
+**Structured requirement coverage:** 16 evidence-linked declarations across 6 pathways; 50 pathways still lack structured declarations, which means unknown coverage—not zero requirements or eligibility. Recent non-test implementation, schema/data and documentation changes—including independent analytics/advertising consent controls and evidence-aligned homepage/About copy—have not been validated because testing and CI work is paused by user direction. Aggregate approval rates, costs and timelines remain null where field-level evidence is missing.
 
 ---
 
