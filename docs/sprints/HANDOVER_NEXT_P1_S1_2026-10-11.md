@@ -31,7 +31,7 @@ Latest Actions observed during this handover: Lint and Quality Gate succeeded on
 | P1-REQ — structured requirements | Open | 16 declarations across 6 pathways; 50/56 pathways remain without structured declarations |
 | P1-ROUTE — recommendation quality | Open | Add evidence mismatch/staleness, missing-input, boundary, alternative and no-match tests |
 | P1-SEO | Implementation advanced; open | Homepage/About unsupported claims corrected; origin-dependent canonical URLs wait for confirmed production origin; legacy metadata/link cleanup remains |
-| P1-PRIV — privacy/compliance/accessibility | Implementation advanced; open | Separate analytics/ad choices and persistent settings implemented but unvalidated; live provider/security, retention, legal review and browser accessibility/performance remain |
+| P1-PRIV — privacy/compliance/accessibility | Implementation advanced; open | Independent analytics/ad choices and persistent settings implemented but unvalidated; live provider/security, retention, legal review and browser accessibility/performance remain |
 | P1-REV — monetization | Foundations only; not live | Keep activation and lead delivery gated |
 | Phase 0 | Foundations complete; exit blocked | NOT COMPLETE |
 | Phase 1 | Partially complete; ongoing | NOT COMPLETE |
