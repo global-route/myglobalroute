@@ -10,6 +10,7 @@ Source-tree SHA: `89998ab5410aceb6dede8e997dae0b836d3b4d92`
 - Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703394
 
 - Quality Gate confirmed country-source manifest synchronization and passed the unit-test/build checks on this exact source-tree SHA.
+- Documentation consistency cleanup: replaced the obsolete README directory tree with the current repository layout and explicitly labeled superseded Austria/NZ task bodies and checklists as historical, not actionable.
 - Russia follow-up: official Russian Embassy-in-Nigeria visa material was located in indexed search results; direct PDF retrieval returned 502 and is not treated as proof the source is down. This candidate does not close mission coverage across the target applicant market or human sign-off.
 - The route-engine code change remains at implementation SHA `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`; all three required workflows passed on that SHA as well.
 - P0-S5 remains externally blocked; release remains NO-GO.
