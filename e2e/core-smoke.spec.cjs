@@ -27,7 +27,7 @@ test('countries page loads', async ({ page }) => {
 test('route finder only returns goal matches and does not pretend missing profile fields are scored', async ({ page }) => {
   await page.goto('/pages/find-my-route.html');
   await expect(page.locator('input[name="budget"], input[name="monthlyIncome"], input[name="experienceYears"]')).toHaveCount(0);
-  await expect(page.locator('select[name="goal"] option[value="business"]')).toBeDisabled();
+  expect(await page.locator('select[name="goal"] option[value="business"]').evaluate(option => option.disabled)).toBe(true);
 
   await page.getByRole('button', { name: 'Find routes' }).click();
   await expect(page.locator('#route-results h2')).toHaveText('No pathway matches yet');
