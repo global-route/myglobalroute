@@ -146,3 +146,8 @@ Official-source review refreshed five overdue records: Japan Student and Enginee
 ## Evidence refresh batch 5 — Luxembourg student rules — 2026-10-11
 
 The previously held Luxembourg student work-rights record was refreshed after reviewing the current official French Guichet.lu page updated 2026-10-01. The claim now states the 15-hour weekly average limit and enumerated exceptions, and scopes post-study eligibility to qualifying graduates of a five-year university cycle who apply before their student permit expires. This supersedes the earlier handover note that the record remained overdue pending current-source confirmation.
+
+
+## Remaining evidence blockers — 2026-10-11
+
+After refreshing the current Luxembourg student rule page and aligning the duplicate Swedish study-maintenance evidence, two records still require source review: `NO-work-offer-verification-2026-09-07` and `PT-working-routes-2026-09-07`. Direct retrieval of the official UDI confirmation page returned HTTP 403; the AIMA work-route index timed out. Do not change either review deadline or infer that the source is unchanged. Use an accessible official page, an official downloadable notice, or keep both explicitly overdue. Re-run `npm run evidence:freshness` after this commit and use CI output as the authoritative inventory.

@@ -204,3 +204,8 @@ Refreshed five overdue claims after reviewing official sources: Japan's general 
 ## Evidence refresh batch 5 — Luxembourg student work/post-study rules — 2026-10-11
 
 Closed the remaining overdue Luxembourg student work-rights record after reviewing the current official French Guichet.lu page updated 2026-10-01. The record now distinguishes the general 15-hour weekly average limit (with listed exceptions) from the narrow post-study simplified route for qualifying graduates of a five-year university cycle. The older English page's 2023 update date was not treated as evidence of current rules; the newer official French page was used instead.
+
+
+## Evidence freshness queue triage — 2026-10-11
+
+The CI inventory on the pre-Luxembourg-refresh head reported 193 records: 189 current, 4 overdue, 0 missing review dates and 0 invalid dates. Subsequent source-reviewed updates refreshed Luxembourg student work/post-study conditions and the duplicate Swedish student maintenance record. The remaining unverified overdue claims are Norway job-offer confirmation and Portugal's generic work-route process index. Direct fetch of the official UDI page returned HTTP 403 and the AIMA index timed out; therefore those review dates were deliberately not extended. Recheck them through an accessible official source or preserve them as overdue. The current head must rerun the freshness inventory to confirm the new count.
