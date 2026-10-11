@@ -167,3 +167,10 @@ The readiness report now separates evidence with a valid but overdue `reviewAfte
 - CSP hardening adds `base-uri 'self'`, `object-src 'none'` and `upgrade-insecure-requests` to both deployment config copies. Regression test verifies the two CSP policies stay in sync and the required restrictions remain present.
 - Cloudflare Workers Build check is green for 4ecdbf0e0abd411b59b546251ea1569cef43a998 ([build check](https://github.com/global-route/myglobalroute/runs/114384348240)); this is evidence that the repository is connected to a Cloudflare production build, not proof of the public origin or deployed content. The authoritative host and public deployed SHA still need direct verification.
 - Repository visibility is confirmed public. GitHub's branch-protection endpoint returned `403 Resource not accessible by integration`; branch protection cannot be asserted or changed with current permissions. Keep issue #2 open until owner-level settings are inspected.
+
+
+## Cross-country evidence freshness inventory — 2026-10-11
+
+Added `npm run evidence:freshness`, a deterministic inventory over the primary evidence registry and all JSON addenda. It groups evidence by country and classifies each record as current, overdue, missing a review date, or carrying an invalid/impossible review date. The report preserves source URLs and route scope to support an auditable refresh queue. It is diagnostic only: no dates are extended, no claims are auto-approved, and no unknown country aggregates are filled. It is now included in `npm run verify` and covered by tests.
+
+**Queue policy:** first recheck records that support structured requirements; next refresh high-impact eligibility/financial claims for pathways currently presented as publishable; then review policy-update and process claims. If an official source cannot be confirmed, keep the record stale and mark the affected claim for review rather than changing its date. Continue country by country until the 26-country evidence inventory is reconciled.

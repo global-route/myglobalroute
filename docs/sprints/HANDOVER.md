@@ -111,3 +111,8 @@ The next code increment separates valid overdue evidence from missing/invalid re
 ## Current checkpoint — 2026-10-11
 
 Cloudflare's GitHub integration reports a successful Workers production build check on current source SHA 4ecdbf0e0abd411b59b546251ea1569cef43a998 ([check run](https://github.com/global-route/myglobalroute/runs/114384348240)). This confirms a production build integration, but it does not by itself establish the authoritative public hostname or prove that the public site's content and registries match that SHA. Run this verifier only after the origin is independently confirmed. The repository is public; branch protection status remains unverified because the available integration received HTTP 403 for the protection endpoint.
+
+
+## Evidence freshness inventory — 2026-10-11
+
+Use `npm run evidence:freshness` to inventory every primary/addendum evidence record by country, route, field, source URL and review status. Statuses are current, overdue, missing review date and invalid review date. The report is part of `npm run verify`; it does not refresh evidence automatically. Refresh dates only after direct official-source review, preserve unknowns, and keep unsupported country-level metrics unfilled. Prioritize structured-requirement dependencies and stale material claims on publishable routes, then work through remaining countries in a tracked queue.
