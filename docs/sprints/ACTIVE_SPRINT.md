@@ -179,3 +179,8 @@ Added `npm run evidence:freshness`, a deterministic inventory over the primary e
 ## Production verifier transport guard — 2026-10-11
 
 The deployed-site verification script now rejects `http://` origins before attempting any fetch, aligning production verification with the HTTPS-only security baseline. The verifier still requires an independently confirmed origin and exact registry match; no hostname is guessed from repository history or deployment provider names.
+
+
+## CI wiring correction — 2026-10-11
+
+Review of the completed Quality Gate log found that the new evidence-freshness inventory was included in package.json's verify script but the GitHub Actions workflow runs individual steps and had not invoked the new command. The Quality Gate step now explicitly runs both `npm run requirements:readiness` and `npm run evidence:freshness`. This is a verification-wiring fix; the prior run's 17 suites / 108 tests passed, but did not yet execute the new freshness inventory in CI. All workflows must pass again on the new head.

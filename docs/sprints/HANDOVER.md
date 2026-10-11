@@ -121,3 +121,8 @@ Use `npm run evidence:freshness` to inventory every primary/addendum evidence re
 ## Production verification guard — 2026-10-11
 
 The production verifier now requires an HTTPS origin and rejects HTTP before network requests. Cloudflare's production build check is available for the current repository SHA, but authoritative hostname and deployed-content equality are not yet established. Repository is public; branch protection remains unverified because the GitHub integration cannot read branch protection settings (HTTP 403). Do not close issue #2 or mark release GO until owner-level branch settings and live-host verification are complete.
+
+
+## CI freshness-inventory wiring — 2026-10-11
+
+Corrected .github/workflows/quality.yml: the evidence-readiness step now runs both `npm run requirements:readiness` and `npm run evidence:freshness`. The previous Quality Gate was green (17 suites, 108 tests), but log inspection showed the newly added inventory command had not been called by the workflow because CI invokes individual steps instead of `npm run verify`. The new head must pass all three workflows; inspect the Quality Gate log to confirm the inventory actually runs.
