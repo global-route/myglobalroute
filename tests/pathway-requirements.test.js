@@ -68,7 +68,7 @@ describe('pathway requirement schema validation', () => {
   test('rejects evidence from a different pathway or evidence field', () => {
     const wrongScope = { ...evidence, pathwayId: 'OTHER', field: 'eligibility' };
     const errors = validateRequirement(validMoney, pathway, new Map([[evidence.id, wrongScope]]));
-    expect(errors).toContain('evidence GB-work-finance-2026-10-01 does not belong to pathway GB-work');
+    expect(errors).toContain('evidence GB-work-finance-2026-10-01 does not belong to route GB-work');
     expect(errors).toContain('evidence GB-work-finance-2026-10-01 must support field financial-requirement');
   });
 
