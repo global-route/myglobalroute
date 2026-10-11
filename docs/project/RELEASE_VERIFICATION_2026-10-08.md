@@ -170,3 +170,21 @@ Structured coverage is 9 declarations across 2/56 pathways; 54 pathways remain w
 
 ## Structured requirement coverage update — 2026-10-11
 Three exact-pathway declarations were added and regression-tested for UK Student, New Zealand Fee Paying Student and Ireland Critical Skills. Current coverage: 12 declarations across 5 of 56 pathways; 51 remain unstructured. This does not close P1-REQ or change the NO-GO release decision.
+
+
+
+## Same-SHA verification evidence — 2026-10-11
+
+**Implementation/data SHA tested:** `95f960c081367305dea0144034d48a4ab7892426`
+- Quality Gate — PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112572
+- Lint — PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112454
+- Browser Smoke — PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112490
+
+Quality Gate output: 26 countries, 56 pathways, 193 evidence records; 0 dependency vulnerabilities; country-source manifest synchronized; 18 test suites and 122 tests passed; build integrity passed; SEO/accessibility checks passed across 168 generated HTML files.
+
+**CI configuration follow-up SHA:** `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`
+- Quality Gate — PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183966 (includes the explicit country-manifest synchronization step).
+- Lint — PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183952
+- Browser Smoke — pending at last check: https://github.com/global-route/myglobalroute/actions/runs/38144183936
+
+The application/data implementation is verified on one SHA. The later commit only added the explicit manifest check to the Quality Gate workflow and changelog; its own Browser Smoke run must finish before claiming all three workflows are green on that later SHA. Do not mark P1-S1, P0-S5, or any phase complete based on these CI results alone.
