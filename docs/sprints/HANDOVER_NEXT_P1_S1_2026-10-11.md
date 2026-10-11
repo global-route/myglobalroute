@@ -28,7 +28,7 @@ Latest Actions observed during this handover: Lint and Quality Gate succeeded on
 | P0-S4 — browser/source-tree gate | Source-tree verified | Does not establish live production behavior |
 | P0-S5 — deployment verification / Phase 0 exit | Active / externally blocked | OPEN |
 | P1-S1 — country source refresh | Manifest complete; outcomes recorded for 26/26, 25 official alternatives inspected; human sign-off and Russia jurisdiction confirmation open | IN PROGRESS |
-| P1-REQ — structured requirements | Open | 16 declarations across 6 pathways; 50/56 pathways remain without structured declarations |
+| P1-REQ — structured requirements | Open | 19 declarations across 9 pathways; 47/56 pathways remain without structured declarations |
 | P1-ROUTE — recommendation quality | Open | Add evidence mismatch/staleness, missing-input, boundary, alternative and no-match tests |
 | P1-SEO | Implementation advanced; open | Homepage/About unsupported claims corrected; origin-dependent canonical URLs wait for confirmed production origin; legacy metadata/link cleanup remains |
 | P1-PRIV — privacy/compliance/accessibility | Implementation advanced; open | Independent analytics/ad choices and persistent settings implemented but unvalidated; live provider/security, retention, legal review and browser accessibility/performance remain |
@@ -94,7 +94,7 @@ Start with P1-S1.1: inspect the current registry, generate the manifest and base
 
 ## Structured requirements addendum — 2026-10-11
 - Added three evidence-backed declarations: UK Student admission offer, New Zealand Fee Paying Student annual living-funds threshold with scoped caveats, and Ireland Critical Skills job offer.
-- Current total: 16 declarations across 6/56 pathways; 50 remain unstructured. Missing requirements remain unknown. P1-REQ is still open.
+- Current total: 19 declarations across 9/56 pathways; 47 remain unstructured. Missing requirements remain unknown. P1-REQ is still open.
 
 
 ## Source-review refinement — 2026-10-11
