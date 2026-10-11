@@ -42,6 +42,30 @@
             "GB-skilled-worker-finance-2026-09-12"
           ],
           "notes": "Baseline threshold only: the applicable occupation going rate may be higher. Specified lower-salary routes and transitional rules can apply; do not use this value as a standalone eligibility decision."
+        },
+        {
+          "id": "GB-skilled-worker-maintenance-balance-2026-09-06",
+          "field": "minimum_maintenance_funds",
+          "kind": "money",
+          "value": 1270,
+          "currency": "GBP",
+          "period": "available-balance",
+          "jurisdiction": "United Kingdom",
+          "effectiveDate": "2026-09-06",
+          "sourceUrl": "https://www.gov.uk/skilled-worker-visa/how-much-it-costs",
+          "evidenceIds": [
+            "GB-skilled-worker-cost-2026-09-06"
+          ],
+          "conditions": {
+            "holdingPeriodDays": 28,
+            "finalHoldingDayWithinDaysOfApplication": 31,
+            "exemptions": [
+              "Applicable exemption",
+              "Employer maintenance certification"
+            ],
+            "notes": "Normally required maintenance funds; this is an available balance, not an annual cost. Fees and the immigration health surcharge are separate and vary by circumstances."
+          },
+          "notes": "Do not interpret as a universal additional cost or standalone eligibility decision; applicable exemptions and employer certification can satisfy or disapply the personal-funds requirement."
         }
       ]
     },
