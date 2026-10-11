@@ -8,9 +8,9 @@ This record reconciles the prior handovers, active sprint, P0 delivery plan, rev
 
 ## Current release decision
 
-**NO-GO for production release and live monetization until their respective gates are evidenced.**
+**Source-tree CI is GREEN; production release and live monetization remain NO-GO until their respective external gates are evidenced.**
 
-The October 8 release record reports Quality Gate and Lint passing at implementation checkpoint `2bf9c79e706b7521f3dbd1c51467c619e298a425`; Browser Smoke was pending at the time of that record. The record does not establish a green run on the current `main` head. A connector query returned no commit status contexts for the subsequently recorded docs commit; an empty status response is not a pass or failure.
+At `3deb2f4c9d770a54057ae3f5938109a58f06832b`, Quality Gate passed ([run](https://github.com/global-route/myglobalroute/actions/runs/37857907630)), Lint passed ([run](https://github.com/global-route/myglobalroute/actions/runs/37857907626)), and Browser Smoke passed ([run](https://github.com/global-route/myglobalroute/actions/runs/37857907619)). These runs verify source-tree behavior only; they do not establish the production origin or deployed SHA. Recheck if `main` advances.
 
 ## Reconciled workstreams
 
@@ -70,12 +70,12 @@ Keep ad/partner activation and lead collection blocked until the actual origin, 
 
 ## Handover acceptance checklist
 
-- [ ] Record current main SHA and current workflow results.
+- [x] Record current main SHA and current workflow results (`3deb2f4c9d770a54057ae3f5938109a58f06832b`; Quality Gate, Lint and Browser Smoke all passed).
 - [x] Recount pathway totals/statuses from the current source file (56 total; 52 publishable; 4 research-required; 26 country IDs).
 - [ ] Run repository validation and independently recompute evidence-record totals.
 - [ ] Reconcile P0-S2 backlog to the actual registry.
 - [ ] Record verified hosting project, origin and deployed SHA, or retain the explicit blocker.
-- [ ] Record current-head test outcomes without inference.
+- [x] Record current-head test outcomes without inference; exact run links are in `docs/project/RELEASE_VERIFICATION_2026-10-08.md`.
 - [ ] Keep production release and monetization NO-GO until all relevant gates pass.
 
 
