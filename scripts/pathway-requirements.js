@@ -14,6 +14,32 @@ function isRealIsoDate(value) {
   return Number.isFinite(date.getTime()) && date.toISOString().slice(0, 10) === value;
 }
 
+function validateConditions(conditions) {
+  const errors = [];
+  if (!conditions || typeof conditions !== 'object' || Array.isArray(conditions)) return ['conditions must be an object'];
+  for (const field of ['applicationDateFrom', 'applicationDateTo']) {
+    if (conditions[field] !== undefined && !isRealIsoDate(conditions[field])) errors.push(`conditions.${field} must be a real ISO date (YYYY-MM-DD)`);
+  }
+  if (isRealIsoDate(conditions.applicationDateFrom) && isRealIsoDate(conditions.applicationDateTo) && conditions.applicationDateFrom > conditions.applicationDateTo) {
+    errors.push('conditions.applicationDateFrom cannot be after conditions.applicationDateTo');
+  }
+  if (conditions.familySize !== undefined && (!Number.isInteger(conditions.familySize) || conditions.familySize < 1)) {
+    errors.push('conditions.familySize must be a positive integer');
+  }
+  if (conditions.region !== undefined && (typeof conditions.region !== 'string' || !conditions.region.trim())) errors.push('conditions.region must be a non-empty string');
+  for (const field of ['componentsIncluded', 'componentsExcluded']) {
+    if (conditions[field] !== undefined && (!Array.isArray(conditions[field]) || conditions[field].length === 0 || conditions[field].some(item => typeof item !== 'string' || !item.trim()))) {
+      errors.push(`conditions.${field} must be a non-empty array of strings`);
+    }
+  }
+  if (Array.isArray(conditions.componentsIncluded) && Array.isArray(conditions.componentsExcluded)) {
+    const included = new Set(conditions.componentsIncluded);
+    if (conditions.componentsExcluded.some(item => included.has(item))) errors.push('expense components cannot be both included and excluded');
+  }
+  if (conditions.notes !== undefined && (typeof conditions.notes !== 'string' || !conditions.notes.trim())) errors.push('conditions.notes must be a non-empty string');
+  return errors;
+}
+
 function validateRequirement(requirement, pathway, evidenceById, validationDate = process.env.VALIDATION_AS_OF || new Date().toISOString().slice(0, 10)) {
   const errors = [];
   const fail = message => errors.push(message);
@@ -45,6 +71,12 @@ function validateRequirement(requirement, pathway, evidenceById, validationDate 
   }
   if (definition?.kind === 'money') {
     if (typeof requirement.value !== 'number' || !Number.isFinite(requirement.value) || requirement.value <= 0) fail('money value must be a positive finite number');
+    if (requirement.field === 'minimum_funds') {
+      if (typeof requirement.notes !== 'string' || !requirement.notes.trim()) fail('minimum_funds requires notes describing scope and exclusions');
+      for (const error of validateConditions(requirement.conditions)) fail(error);
+    } else if (requirement.conditions !== undefined) {
+      for (const error of validateConditions(requirement.conditions)) fail(error);
+    }
     if (typeof requirement.currency !== 'string' || !/^[A-Z]{3}$/.test(requirement.currency)) fail('currency must be a three-letter uppercase code');
     if (!['total', 'monthly', 'annual'].includes(requirement.period)) fail('period must be total, monthly or annual');
     if (requirement.field === 'minimum_monthly_income' && requirement.period !== 'monthly') fail('minimum_monthly_income period must be monthly');
@@ -90,4 +122,4 @@ function validatePathwayRequirements(pathways, evidenceRecords, validationDate =
   return errors;
 }
 
-module.exports = { REQUIREMENT_FIELDS, isRealIsoDate, validateRequirement, validatePathwayRequirements };
+module.exports = { REQUIREMENT_FIELDS, isRealIsoDate, validateConditions, validateRequirement, validatePathwayRequirements };

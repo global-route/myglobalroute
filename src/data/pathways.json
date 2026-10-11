@@ -69,6 +69,36 @@
       "evidenceIds": [
         "CA-study-eligibility-2026-09-14",
         "CA-study-finance-2026-09-07"
+      ],
+      "requirements": [
+        {
+          "id": "CA-study-minimum-living-funds-single-outside-quebec-2026-09-01",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 23448,
+          "currency": "CAD",
+          "period": "annual",
+          "jurisdiction": "Canada",
+          "effectiveDate": "2026-09-01",
+          "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html",
+          "evidenceIds": [
+            "CA-study-finance-2026-09-07"
+          ],
+          "conditions": {
+            "applicationDateFrom": "2026-09-01",
+            "familySize": 1,
+            "region": "All provinces and territories except Quebec",
+            "componentsIncluded": [
+              "living expenses"
+            ],
+            "componentsExcluded": [
+              "tuition fees",
+              "transportation"
+            ],
+            "notes": "The published amount applies to one family member including the applicant and applications submitted on or after 2026-09-01. Quebec uses separate rules."
+          },
+          "notes": "CAD 23,448 is the one-person annual living-expense amount only for applications on or after 2026-09-01 outside Quebec. Tuition and transportation must be separately accounted for; family-size thresholds differ. Do not treat this as the complete proof-of-funds amount or generalize it to other applicants."
+        }
       ]
     },
     {

@@ -1,4 +1,4 @@
-const { isRealIsoDate, validateRequirement, validatePathwayRequirements } = require('../scripts/pathway-requirements');
+const { isRealIsoDate, validateConditions, validateRequirement, validatePathwayRequirements } = require('../scripts/pathway-requirements');
 
 const pathway = { id: 'GB-work', countryId: 'GB' };
 const evidence = {
@@ -19,7 +19,16 @@ const validMoney = {
   jurisdiction: 'United Kingdom',
   effectiveDate: '2026-10-01',
   sourceUrl: evidence.sourceUrl,
-  evidenceIds: [evidence.id]
+  evidenceIds: [evidence.id],
+  conditions: {
+    applicationDateFrom: '2026-10-01',
+    familySize: 1,
+    region: 'Example region',
+    componentsIncluded: ['living expenses'],
+    componentsExcluded: ['tuition', 'transportation'],
+    notes: 'Fixture condition scope'
+  },
+  notes: 'Scoped amount; excluded expenses and exceptions must be reviewed.'
 };
 
 describe('pathway requirement schema validation', () => {
@@ -29,6 +38,40 @@ describe('pathway requirement schema validation', () => {
 
   test.each(['2026-02-30', '2026-13-01', '2026-1-01', '', null, 'not-a-date'])('rejects invalid ISO date %s', date => {
     expect(isRealIsoDate(date)).toBe(false);
+  });
+
+  test('validates conditional threshold dates, family size and expense components', () => {
+    expect(validateConditions({
+      applicationDateFrom: '2026-09-01',
+      applicationDateTo: '2027-08-31',
+      familySize: 1,
+      region: 'Outside Quebec',
+      componentsIncluded: ['living expenses'],
+      componentsExcluded: ['tuition fees', 'transportation'],
+      notes: 'Living-expense component only'
+    })).toEqual([]);
+    expect(validateConditions({
+      applicationDateFrom: '2026-02-30',
+      applicationDateTo: '2025-01-01',
+      familySize: 0,
+      region: '',
+      componentsIncluded: ['tuition'],
+      componentsExcluded: ['tuition']
+    })).toEqual(expect.arrayContaining([
+      'conditions.applicationDateFrom must be a real ISO date (YYYY-MM-DD)',
+      'conditions.applicationDateFrom cannot be after conditions.applicationDateTo',
+      'conditions.familySize must be a positive integer',
+      'conditions.region must be a non-empty string',
+      'expense components cannot be both included and excluded'
+    ]));
+  });
+
+  test('requires explicit conditions and scope notes for minimum-funds thresholds', () => {
+    const invalid = { ...validMoney, conditions: undefined, notes: '' };
+    expect(validateRequirement(invalid, pathway, new Map([[evidence.id, evidence]]))).toEqual(expect.arrayContaining([
+      'minimum_funds requires notes describing scope and exclusions',
+      'conditions must be an object'
+    ]));
   });
 
   test('accepts a structured financial requirement with exact pathway evidence', () => {

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "policy": "Requirement values are pathway-scoped and may be used for matching only when every value has an explicit unit or structure, jurisdiction, effective date, HTTPS source and matching field-level evidence. Absence means unknown, never zero or unrestricted. Structured annual salary thresholds must be distinguished from monthly income and must preserve source caveats, exceptions and any higher occupation-specific threshold.",
+  "policy": "Requirement values are pathway-scoped and may be used for matching only when every value has an explicit unit or structure, jurisdiction, effective date, HTTPS source and matching field-level evidence. Absence means unknown, never zero or unrestricted. Structured annual salary thresholds must be distinguished from monthly income and must preserve source caveats, exceptions and any higher occupation-specific threshold. Conditional thresholds must preserve application-date, family-size, regional and cost-component scope in structured conditions; a scoped threshold must never be presented as universal.",
   "fields": {
     "minimum_funds": {
       "kind": "money",
@@ -12,7 +12,9 @@
         "jurisdiction",
         "effectiveDate",
         "sourceUrl",
-        "evidenceIds"
+        "evidenceIds",
+        "conditions",
+        "notes"
       ]
     },
     "minimum_monthly_income": {
@@ -118,5 +120,35 @@
     "noRequirementMayInheritEvidenceFromParentPathway": true,
     "countryAggregateFieldsDoNotSubstituteForPathwayRequirements": true,
     "userProfileMustNotBeTreatedAsAnEligibilityDecision": true
+  },
+  "conditionFields": {
+    "applicationDateFrom": {
+      "kind": "date",
+      "description": "Inclusive first application date to which the requirement applies."
+    },
+    "applicationDateTo": {
+      "kind": "date",
+      "description": "Inclusive final application date to which the requirement applies."
+    },
+    "familySize": {
+      "kind": "positive-integer",
+      "description": "Number of family members including the applicant, when source guidance uses family-size tables."
+    },
+    "region": {
+      "kind": "text",
+      "description": "Region/jurisdiction scope of the value; preserve separate regional rules."
+    },
+    "componentsIncluded": {
+      "kind": "string-array",
+      "description": "Expense components represented by the amount."
+    },
+    "componentsExcluded": {
+      "kind": "string-array",
+      "description": "Expense components explicitly excluded from the amount."
+    },
+    "notes": {
+      "kind": "text",
+      "description": "Conditions, exceptions and limits needed to prevent a universal-threshold interpretation."
+    }
   }
 }
