@@ -13,7 +13,7 @@ Dates reflect repository commits; a changelog entry is not release approval.
 - Reconciled current structured-coverage counts and pathway lists across the active sprint, P1-S1 handover, assessment, phase tracker, execution status and roadmap. Older dated counts remain as historical checkpoints rather than the current baseline.
 - Added independent analytics and advertising consent controls (including a reject-all option) and a persistent Privacy settings control to reopen or change either choice. Advertising slots now read the advertising-consent state rather than inheriting analytics consent.
 - Updated the privacy page to describe the consent behavior, local-storage persistence limits, data-minimization intent, and outstanding legal/deployment review. These code and documentation changes are unvalidated because testing/CI remain paused.
-- Fact-aligned the homepage and About page: removed the unsupported universal `100% evidence-gated claims` metric and claims that Global Route provides true approval rates for all African passports; clarified that unsupported rates/costs remain unpublished or unverified.
+- Fact-aligned the homepage and About page: removed the unsupported universal `100% evidence-gated claims` metric and claims that Global Route provides true approval rates for all African passports; clarified that unsupported rates/costs remain unpublished or unverified. Added About-page internal links to the country registry, disclaimer, privacy policy and contact page.
 
 
 ## 2026-10-11 — Route-quality regression expansion
