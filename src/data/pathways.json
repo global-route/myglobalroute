@@ -368,7 +368,23 @@
       "sourceUrl": "https://immi.homeaffairs.gov.au/what-we-do/skilled-migration-program",
       "sourceAuthority": "Department of Home Affairs",
       "status": "research_required",
-      "scopeNote": "Promotion blocked: financial-requirement evidence is medium confidence — no universal proof-of-funds threshold applies across all skilled subclasses. Promote individual subclasses (189, 190, 491) via exact subroute candidates with subclass-specific financial evidence."
+      "scopeNote": "Promotion blocked: financial-requirement evidence is medium confidence — no universal proof-of-funds threshold applies across all skilled subclasses. Promote individual subclasses (189, 190, 491) via exact subroute candidates with subclass-specific financial evidence.",
+      "requirements": [
+        {
+          "id": "AU-skilled-minimum-points-2026-09-06",
+          "field": "minimum_points_score",
+          "kind": "number",
+          "value": 65,
+          "unit": "points",
+          "jurisdiction": "Australia",
+          "effectiveDate": "2026-09-06",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/expression-of-interest",
+          "evidenceIds": [
+            "AU-skilled-eoi-2026-09-06"
+          ],
+          "notes": "Minimum points threshold for the covered points-tested skilled visa EOI process; reaching 65 points does not guarantee an invitation. This generic pathway remains research_required because subclass-specific evidence gaps, including financial-requirement scope, are unresolved."
+        }
+      ]
     },
     {
       "id": "NZ-student",
