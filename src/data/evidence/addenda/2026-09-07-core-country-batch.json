@@ -53,13 +53,13 @@
       "field": "process",
       "claim": "For covered Norwegian work-residence applications submitted by the applicant from abroad, the employer or client may need to confirm the job or assignment offer to UDI and provide a confirmation code for the application.",
       "sourceAuthority": "Norwegian Directorate of Immigration",
-      "sourceUrl": "https://www.udi.no/en/important-messages/confirmation-of-a-job-offer/",
+      "sourceUrl": "https://www.udi.no/en/word-definitions/confirmation-of-a-job-offer/",
       "jurisdiction": "Norway",
       "effectiveDate": "2026-02-19",
-      "retrievedAt": "2026-09-07",
-      "methodology": "Direct review of current UDI fraud-prevention/job-offer confirmation guidance",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Rechecked the official UDI confirmation-of-job-offer guidance surfaced and reviewed on 2026-10-11. It states that when a covered work-residence application is submitted by the applicant from abroad, the employer/client must confirm the offer and provide a four-word code; employer-filed applications are treated differently. Claim remains limited to covered permits and application circumstances.",
       "confidence": "high",
-      "reviewAfter": "2026-10-07"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "PT-digital-nomad-documents-2026-09-07",
@@ -86,10 +86,10 @@
       "sourceUrl": "https://aima.gov.pt/pt/trabalhar",
       "jurisdiction": "Portugal",
       "effectiveDate": "2026-09-07",
-      "retrievedAt": "2026-09-07",
-      "methodology": "Direct review of current AIMA working-routes index",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Rechecked the official AIMA Trabalhar index on 2026-10-11 using its current indexed page. The index lists the dedicated remote-work residence authorisation route under Article 88(1) alongside other distinct work routes. Direct page retrieval timed out in this session, so this record asserts only that the official index lists the route; route-specific requirements are sourced separately.",
       "confidence": "high",
-      "reviewAfter": "2026-10-07"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "JP-student-status-2026-09-07",
@@ -121,5 +121,6 @@
       "confidence": "high",
       "reviewAfter": "2026-11-10"
     }
-  ]
+  ],
+  "verifiedAt": "2026-10-11"
 }
