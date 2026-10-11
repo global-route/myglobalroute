@@ -25,7 +25,7 @@
     const income = number(profile.monthlyIncome);
     const experience = number(profile.experienceYears);
     if (goal !== 'any' && pathway.type === goal) { score += 35; reasons.push('matches your stated route goal'); }
-    if (goal === 'any') score += 10;
+    // Do not invent a ranking when the user has not selected a goal or no other structured fit signal exists.
     if (profile.countryId && profile.countryId === country.id) { score += 5; reasons.push('destination preference matches'); }
     if (profile.language && pathway.language && pathway.language.includes(profile.language)) { score += 10; reasons.push('language fit'); }
     if (pathway.minExperienceYears !== undefined) {
