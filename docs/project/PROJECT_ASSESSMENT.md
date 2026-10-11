@@ -1,6 +1,6 @@
 # Global Route — Current Project Assessment
 
-**Reconciled:** 2026-10-11 | **Branch:** main | **Current main SHA:** `933ca27d1542083078de104e2ac3550d8fde59c5` | **Verified implementation SHA:** `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`  
+**Reconciled:** 2026-10-11 | **Branch:** main | **Last fully verified same-SHA CI checkpoint:** `fc3c06a0a6078df4473d2f09015391cff09eef3f` | **Verified implementation SHA:** `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`  
 **Release readiness: NO-GO for production; source-tree CI is green.**
 
 ## Executive finding
@@ -14,9 +14,9 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 | Area | Current state | Meaning |
 |---|---|---|
 | Current source | `e7ccd592b703d62867267ddb5573b73a2d2bc0ea` | Assessment baseline |
-| Quality Gate | [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957166) | 17 suites / 113 tests; 0 dependency vulnerabilities; build and SEO/A11y pass |
-| Lint | [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957132) | Current main verification |
-| Browser Smoke | [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957147) | Source-tree only; not production verification |
+| Quality Gate | [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119296014) | 17 suites / 113 tests; 0 dependency vulnerabilities; build and SEO/A11y pass |
+| Lint | [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119295995) | Current main verification |
+| Browser Smoke | [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119295980) | Source-tree only; not production verification |
 | Country registry | 26 records | Not 26 fully verified country profiles |
 | Canonical pathways | 56: 52 publishable / 4 research_required | Publishability is evidence-scope-specific |
 | Evidence inventory | 193 records | Still needs ongoing source review |
@@ -94,4 +94,4 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 
 ## Latest verification/status reconciliation — 2026-10-11
 
-Current main SHA: `933ca27d1542083078de104e2ac3550d8fde59c5` (docs/checklist updates); verified implementation SHA: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`. Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957166), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957132), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957147) on the same current main SHA. The country source checklist is ready but no anchor is marked reviewed; `dataset.asOf=2026-09-05` remains stale by design until all 26 reviews are evidenced. Current phase status is canonical in `PHASE_STATUS.md`: Phase 0 exit blocked, Phase 1 incomplete, Phase 2 decision-quality incomplete, Phase 3/4 partial, Phase 5 not live, Phase 6 deferred. No phase completion percentage should override those exit gates.
+Last fully verified same-SHA CI checkpoint before this status reconciliation: `fc3c06a0a6078df4473d2f09015391cff09eef3f`; verified implementation SHA: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`. Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957166), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957132), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957147) on the same current main SHA. The country source checklist is ready but no anchor is marked reviewed; `dataset.asOf=2026-09-05` remains stale by design until all 26 reviews are evidenced. Current phase status is canonical in `PHASE_STATUS.md`: Phase 0 exit blocked, Phase 1 incomplete, Phase 2 decision-quality incomplete, Phase 3/4 partial, Phase 5 not live, Phase 6 deferred. No phase completion percentage should override those exit gates.

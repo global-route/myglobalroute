@@ -1,6 +1,6 @@
 # Active Sprint — Production Integrity & Migration Intelligence
 
-**Reconciled:** 2026-10-11 | **Branch:** `main` | **Verified implementation SHA:** `e7ccd592b703d62867267ddb5573b73a2d2bc0ea` | **Current documentation/CI head:** `933ca27d1542083078de104e2ac3550d8fde59c5`  
+**Reconciled:** 2026-10-11 | **Branch:** `main` | **Verified implementation SHA:** `e7ccd592b703d62867267ddb5573b73a2d2bc0ea` | **Last fully verified same-SHA CI checkpoint before this status reconciliation:** `fc3c06a0a6078df4473d2f09015391cff09eef3f`  
 **Status:** P0-S5 active and externally blocked; data and route-quality work continues concurrently  
 **Release:** **NO-GO**
 
@@ -51,7 +51,7 @@
 
 ## Current-head verification — 2026-10-11
 
-Current main SHA: `933ca27d1542083078de104e2ac3550d8fde59c5` (documentation/checklist update); verified implementation SHA: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`. Quality Gate PASS (17 suites / 113 tests): https://github.com/global-route/myglobalroute/actions/runs/38116957166. Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38116957132. Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38116957147. Registry: 26 countries, 56 pathways (52 publishable / 4 research_required), 193 evidence records; freshness inventory 193 current / 0 overdue / 0 missing / 0 invalid review dates. CI warns that country dataset metadata `dataset.asOf=2026-09-05` is 36 days old. The source inventory checklist is prepared, but the 26 registered country anchors have not all been substantively reviewed. Phase 0 is NOT complete; P0-S5 remains externally blocked on authoritative production host/domain, deployed SHA, live CSP/security headers, production smoke and owner-level branch protection.
+Last fully verified same-SHA CI checkpoint before this status reconciliation: `fc3c06a0a6078df4473d2f09015391cff09eef3f`; verified implementation SHA: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`. Quality Gate PASS (17 suites / 113 tests): https://github.com/global-route/myglobalroute/actions/runs/38119296014. Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38119295995. Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38119295980. Registry: 26 countries, 56 pathways (52 publishable / 4 research_required), 193 evidence records; freshness inventory 193 current / 0 overdue / 0 missing / 0 invalid review dates. CI warns that country dataset metadata `dataset.asOf=2026-09-05` is 36 days old. The source inventory checklist is prepared, but the 26 registered country anchors have not all been substantively reviewed. Phase 0 is NOT complete; P0-S5 remains externally blocked on authoritative production host/domain, deployed SHA, live CSP/security headers, production smoke and owner-level branch protection.
 
 ## Ordered next work
 

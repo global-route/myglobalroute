@@ -37,7 +37,7 @@ The remaining P0 work is decomposed in `docs/sprints/P0_DELIVERY_PLAN.md` and tr
 
 - [x] **P0-S1 — Exact Pathway Closure:** 4 routes promoted (NZ SMC x3, Austria Other Key Workers); Italy Flussi and AU-189 explicitly blocked with documented evidence gaps.
 - [x] **P0-S2 — Remaining-Country Evidence Closure audit:** current registry reconciled to 56 pathways (52 publishable / 4 research_required); each remaining pathway has explicit evidence gaps. Ongoing source maintenance continues under Phase 1.
-- [x] **P0-S3 — Data / Recommendation Quality Gate:** same-head checks passed on current main 933ca27d1542083078de104e2ac3550d8fde59c5 (17 suites / 113 tests; 0 dependency vulnerabilities; build and SEO/A11y checks included). Verified implementation baseline: e7ccd592b703d62867267ddb5573b73a2d2bc0ea.
+- [x] **P0-S3 — Data / Recommendation Quality Gate:** same-head checks passed on verified same-SHA checkpoint fc3c06a0a6078df4473d2f09015391cff09eef3f (17 suites / 113 tests; 0 dependency vulnerabilities; build and SEO/A11y checks included). Verified implementation baseline: e7ccd592b703d62867267ddb5573b73a2d2bc0ea.
 - [x] **P0-S4 — Source-tree Browser / Release Gate:** Browser Smoke, generated deep links, build integrity and SEO/accessibility verification passed on the assessed source SHA; live production verification remains P0-S5.
 - [ ] **P0-S5 — Deployment Verification & P0 Exit (ACTIVE / BLOCKED):** authoritative host/domain, deployed SHA, live CSP/security headers, production smoke and owner-level branch protection remain unverified.
 
@@ -63,7 +63,7 @@ The remaining P0 work is decomposed in `docs/sprints/P0_DELIVERY_PLAN.md` and tr
 - [ ] Expand evidence batches until the highest-value pathways can safely become publishable.
 - [ ] Establish production freshness/review automation beyond local validation.
 
-**Current registry checkpoint (2026-10-11 CI-verified on main SHA 933ca27d1542083078de104e2ac3550d8fde59c5; implementation baseline e7ccd592b703d62867267ddb5573b73a2d2bc0ea):** 26 countries / 56 canonical pathways; 52 publishable and 4 research_required. Four exact subroute records are marked promoted and align to canonical pathway IDs; they are not additional pathways. The two remaining explicit exact-subroute candidates (Australia subclass 189 and Italy Flussi) remain research_required outside the canonical pathway registry.
+**Current registry checkpoint (2026-10-11 CI-verified at checkpoint SHA fc3c06a0a6078df4473d2f09015391cff09eef3f; implementation baseline e7ccd592b703d62867267ddb5573b73a2d2bc0ea):** 26 countries / 56 canonical pathways; 52 publishable and 4 research_required. Four exact subroute records are marked promoted and align to canonical pathway IDs; they are not additional pathways. The two remaining explicit exact-subroute candidates (Australia subclass 189 and Italy Flussi) remain research_required outside the canonical pathway registry.
 
 **Critical rule:** never fabricate missing data to reach the 26-country target.
 
@@ -179,8 +179,8 @@ Same-SHA source-tree gates pass at 1284684c18a7fa311cd62c52875b38d62a354a0b: Qua
 
 ## Current execution checkpoint — 2026-10-11 (authoritative status)
 
-- Current main SHA: `933ca27d1542083078de104e2ac3550d8fde59c5` (documentation-only); verified implementation SHA: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`.
-- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38116957166 (17 suites / 113 tests; 0 dependency vulnerabilities; 26 countries / 56 pathways / 193 evidence records; build integrity and SEO/A11y pass).
-- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38116957132. Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38116957147.
+- Last fully verified same-SHA CI checkpoint before this status reconciliation: `fc3c06a0a6078df4473d2f09015391cff09eef3f`; verified implementation SHA: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`.
+- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38119296014 (17 suites / 113 tests; 0 dependency vulnerabilities; 26 countries / 56 pathways / 193 evidence records; build integrity and SEO/A11y pass).
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38119295995. Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38119295980.
 - Phase 0 remains open at P0-S5; Phase 1 remains open at P1-S1 source review; Phase 2 remains open on structured requirement coverage and route-quality work. Phase 3/4 remain partial, Phase 5 is preparation only, and Phase 6 is deferred. No later phase is marked complete.
 - Next executable sprint: P1-S1 source review; P0-S5 runs in parallel only when owner/provider evidence becomes available.

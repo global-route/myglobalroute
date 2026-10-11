@@ -1,6 +1,6 @@
 # Phase Status — Global Route
 
-**Reconciled:** 2026-10-11 | **Current main SHA:** `c5af6cd29dd381fc56070f277fbacb273b9fe85b` | **Verified implementation SHA:** `e7ccd592b703d62867267ddb5573b73a2d2bc0ea` | **Release: NO-GO**
+**Reconciled:** 2026-10-11 | **Verified implementation SHA:** `e7ccd592b703d62867267ddb5573b73a2d2bc0ea` | **Last fully verified same-SHA CI checkpoint:** `fc3c06a0a6078df4473d2f09015391cff09eef3f` | **Release: NO-GO**
 
 This is the canonical phase tracker. Historical phase/sprint docs preserve original product intent but their old dates, percentages, counts and URLs do not override this tracker or the active sprint.
 
@@ -30,4 +30,4 @@ The repo has `docs/phase-0`, `docs/phase-1` and `docs/phase-3`, but no `docs/pha
 
 ## Current-head verification — 2026-10-11
 
-Current main SHA: `933ca27d1542083078de104e2ac3550d8fde59c5` (documentation-only update); verified implementation SHA: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`. Quality Gate PASS (17 suites / 113 tests): https://github.com/global-route/myglobalroute/actions/runs/38116957166. Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38116957132. Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38116957147. These confirm source-tree gates only. Phase 0 remains open because deployment identity, deployed SHA, live CSP and owner branch protection are unverified. Phase 1 remains open because the 26 country landing-source anchors have not all been rechecked and conditional requirement coverage is incomplete. Country dataset `asOf=2026-09-05` remains stale; no date was advanced.
+Last fully verified same-SHA CI checkpoint before this status reconciliation: `fc3c06a0a6078df4473d2f09015391cff09eef3f`; verified implementation SHA: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`. Quality Gate PASS (17 suites / 113 tests): https://github.com/global-route/myglobalroute/actions/runs/38119296014. Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38119295995. Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38119295980. These confirm source-tree gates only. Phase 0 remains open because deployment identity, deployed SHA, live CSP and owner branch protection are unverified. Phase 1 remains open because the 26 country landing-source anchors have not all been rechecked and conditional requirement coverage is incomplete. Country dataset `asOf=2026-09-05` remains stale; no date was advanced.

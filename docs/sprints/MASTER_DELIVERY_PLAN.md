@@ -1,7 +1,7 @@
 # Global Route — Master Phase & Sprint Delivery Plan
 
 **Status:** Active delivery map  
-**Baseline:** 14 September 2026 | **Reconciled:** 11 October 2026 | **Current main:** `933ca27d1542083078de104e2ac3550d8fde59c5`  
+**Baseline:** 14 September 2026 | **Reconciled:** 11 October 2026 | **Last fully verified same-SHA CI checkpoint:** `fc3c06a0a6078df4473d2f09015391cff09eef3f`  
 **Scope:** Current Phase 0 through final Phase 6 / Scale exit
 
 This is the master delivery sequence for the remaining lifecycle. It preserves the original product blueprint while converting every phase into explicit delivery sprints with dependencies and exit gates.
@@ -363,9 +363,9 @@ Current head 1284684c18a7fa311cd62c52875b38d62a354a0b: Quality Gate PASS (17 sui
 
 ## Current verified delivery checkpoint — 2026-10-11
 
-- Current main SHA: `933ca27d1542083078de104e2ac3550d8fde59c5`; implementation baseline: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`.
-- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38116957166 (17 suites / 113 tests; 0 dependency vulnerabilities; data validation, build integrity and SEO/A11y checks passed).
-- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38116957132; Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38116957147.
+- Last fully verified same-SHA CI checkpoint: `fc3c06a0a6078df4473d2f09015391cff09eef3f`; implementation baseline: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`.
+- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38119296014 (17 suites / 113 tests; 0 dependency vulnerabilities; data validation, build integrity and SEO/A11y checks passed).
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38119295995; Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38119295980.
 - P0-S1: promotion decisions closed for the current candidate set; two explicit candidates remain blocked. Do not infer all future exact subroute work is complete.
 - P0-S2: evidence-gap audit complete; evidence maintenance remains ongoing.
 - P0-S3 and source-tree P0-S4: verified. P0-S5 and Phase 0 exit remain blocked.
