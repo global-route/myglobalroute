@@ -59,6 +59,18 @@ describe('canonical route engine', () => {
     expect(result.every(item => item.score >= 0 && item.score <= 100)).toBe(true);
   });
 
+  test('returns exact-pathway matches without treating aggregate country fields as verified', () => {
+    const result = recommend(
+      { goal: 'work' },
+      [{ id: 'GB', name: 'United Kingdom', dataStatus: 'evidence_required' }],
+      [{ id: 'gb-work', countryId: 'GB', type: 'work', status: 'publishable', evidenceIds: ['evidence-work'], sourceUrl: 'https://example.gov/work' }],
+      5
+    );
+    expect(result).toHaveLength(1);
+    expect(result[0].pathway.id).toBe('gb-work');
+    expect(result[0].country.dataStatus).toBe('evidence_required');
+  });
+
   test('does not rank arbitrary pathways when the user selects Any and no structured fit signal exists', () => {
     const result = recommend(
       { goal: 'any' },
