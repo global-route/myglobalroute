@@ -39,6 +39,7 @@
 
   const SENSITIVE_KEYS = /(?:email|phone|mobile|address|passport|document|name|dob|birth|nationality|salary|income|expense|savings|budget|identity|token|cookie|ip)/i;
   let consentState = 'unknown';
+  let advertisingConsentState = 'unknown';
   let provider = null;
 
   function isKnownEvent(eventName) {
@@ -72,10 +73,16 @@
 
   function initConsentUI() {
     if (typeof document === 'undefined' || typeof window === 'undefined') return;
-    const key = 'globalroute.analyticsConsent';
-    let stored = null;
-    try { stored = window.localStorage.getItem(key); } catch (_) {}
-    if (stored && ['granted', 'denied'].includes(stored)) setConsent(stored);
+    const analyticsKey = 'globalroute.analyticsConsent';
+    const advertisingKey = 'globalroute.advertisingConsent';
+    let storedAnalytics = null;
+    let storedAdvertising = null;
+    try {
+      storedAnalytics = window.localStorage.getItem(analyticsKey);
+      storedAdvertising = window.localStorage.getItem(advertisingKey);
+    } catch (_) {}
+    if (storedAnalytics && ['granted', 'denied'].includes(storedAnalytics)) setConsent(storedAnalytics);
+    if (storedAdvertising && ['granted', 'denied'].includes(storedAdvertising)) setAdvertisingConsent(storedAdvertising);
 
     const mount = document.body;
     if (!mount) return;
@@ -93,7 +100,7 @@
         if (panel) {
           panel.hidden = false;
           settings.hidden = true;
-          panel.querySelector('[data-consent]')?.focus();
+          panel.querySelector('[data-consent-mode]')?.focus();
         }
       });
       mount.appendChild(settings);
@@ -105,32 +112,34 @@
       banner.setAttribute('role', 'region');
       banner.setAttribute('aria-label', 'Analytics and advertising preferences');
       banner.setAttribute('aria-live', 'polite');
-      banner.innerHTML = '<p>Analytics and eligible advertising placements remain disabled until you choose. Event measurement does not need your migration profile details.</p><div><button type="button" data-consent="granted">Allow analytics</button><button type="button" data-consent="denied">Decline analytics</button></div>';
+      banner.innerHTML = '<p>Choose separately whether to allow analytics measurement and advertising storage. Declining does not affect access to migration information.</p><div><button type="button" data-consent-mode="all">Allow analytics and advertising</button><button type="button" data-consent-mode="analytics">Analytics only</button><button type="button" data-consent-mode="none">Reject optional measurement and advertising</button></div>';
       mount.appendChild(banner);
     }
 
-    banner.querySelectorAll('[data-consent]').forEach(button => {
+    banner.querySelectorAll('[data-consent-mode]').forEach(button => {
       if (button.dataset.consentBound === 'true') return;
       button.dataset.consentBound = 'true';
       button.addEventListener('click', () => {
-        const state = button.getAttribute('data-consent');
-        setConsent(state);
-        try { window.localStorage.setItem(key, state); } catch (_) {}
+        const mode = button.getAttribute('data-consent-mode');
+        const analyticsChoice = mode === 'all' || mode === 'analytics' ? 'granted' : 'denied';
+        const advertisingChoice = mode === 'all' ? 'granted' : 'denied';
+        setConsent(analyticsChoice);
+        setAdvertisingConsent(advertisingChoice);
+        try {
+          window.localStorage.setItem(analyticsKey, analyticsChoice);
+          window.localStorage.setItem(advertisingKey, advertisingChoice);
+        } catch (_) {}
         banner.hidden = true;
         settings.hidden = false;
-        settings.setAttribute('aria-label', `Privacy settings; analytics consent is ${state}`);
-        // Consent also gates eligible advertising placements. Refresh only after
-        // the user's explicit choice has been applied.
+        settings.setAttribute('aria-label', `Privacy settings; analytics ${analyticsChoice}, advertising ${advertisingChoice}`);
         root.GlobalRoute?.Monetization?.refreshAfterConsent?.();
         settings.focus();
       });
     });
 
-    // Existing decisions stay in force, but the user can reopen this panel
-    // from the persistent settings control to change or withdraw consent.
-    banner.hidden = consentState !== 'unknown';
+    banner.hidden = consentState !== 'unknown' && advertisingConsentState !== 'unknown';
     settings.hidden = !banner.hidden;
-    settings.setAttribute('aria-label', `Privacy settings; analytics consent is ${consentState}`);
+    settings.setAttribute('aria-label', `Privacy settings; analytics ${consentState}, advertising ${advertisingConsentState}`);
   }
 
   function setConsent(state) {
@@ -144,6 +153,19 @@
 
   function getConsentState() {
     return consentState;
+  }
+
+  function setAdvertisingConsent(state) {
+    if (!['unknown', 'denied', 'granted', 'withdrawn'].includes(state)) {
+      throw new Error('Invalid advertising consent state');
+    }
+    advertisingConsentState = state;
+    if (provider && typeof provider.setAdvertisingConsent === 'function') provider.setAdvertisingConsent(state);
+    return advertisingConsentState;
+  }
+
+  function getAdvertisingConsentState() {
+    return advertisingConsentState;
   }
 
   function setProvider(adapter) {
@@ -171,7 +193,9 @@
     return {
       emit: (eventName, payload) => gtag('event', eventName, payload),
       setConsent: state => gtag('consent', 'update', {
-        analytics_storage: state === 'granted' ? 'granted' : 'denied',
+        analytics_storage: state === 'granted' ? 'granted' : 'denied'
+      }),
+      setAdvertisingConsent: state => gtag('consent', 'update', {
         ad_storage: state === 'granted' ? 'granted' : 'denied'
       })
     };
@@ -183,6 +207,8 @@
     sanitizePayload,
     setConsent,
     getConsentState,
+    setAdvertisingConsent,
+    getAdvertisingConsentState,
     setProvider,
     track,
     createGA4Provider,
