@@ -5,8 +5,10 @@
   const number = value => Number.isFinite(Number(value)) ? Number(value) : 0;
 
   function scorePathway(pathway, country, profile) {
-    if (!pathway || !country || pathway.status !== 'publishable' || country.dataStatus !== 'publishable') {
-      return { score: 0, reasons: ['not recommendation-eligible until evidence review is complete'], eligible: false };
+    // Country-level status governs aggregate costs/rates/timelines, not exact-pathway evidence.
+    // Do not infer country-level metrics from a route; assess each canonical pathway against its own evidence gate.
+    if (!pathway || !country || pathway.status !== 'publishable') {
+      return { score: 0, reasons: ['not recommendation-eligible until pathway evidence review is complete'], eligible: false };
     }
     const hasEvidenceIds = Array.isArray(pathway.evidenceIds) && pathway.evidenceIds.length > 0 && pathway.evidenceIds.every(id => typeof id === 'string' && id.trim().length > 0);
     const hasSecureSource = typeof pathway.sourceUrl === 'string' && /^https:\/\//i.test(pathway.sourceUrl);
