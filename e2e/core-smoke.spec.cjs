@@ -23,6 +23,22 @@ test('countries page loads', async ({ page }) => {
   await expect(page).toHaveTitle(/Country Directory|Countries/i);
   await expect(page.locator('h1')).toHaveCount(1);
 });
+
+test('route finder only returns goal matches and does not pretend missing profile fields are scored', async ({ page }) => {
+  await page.goto('/pages/find-my-route.html');
+  await expect(page.locator('input[name="budget"], input[name="monthlyIncome"], input[name="experienceYears"]')).toHaveCount(0);
+  await expect(page.locator('select[name="goal"] option[value="business"]')).toBeDisabled();
+
+  await page.getByRole('button', { name: 'Find routes' }).click();
+  await expect(page.locator('#route-results h2')).toHaveText('No pathway matches yet');
+
+  await page.selectOption('select[name="goal"]', 'study');
+  await page.getByRole('button', { name: 'Find routes' }).click();
+  await expect(page.locator('#route-results h2')).toHaveText('Pathways matching your goal');
+  await expect(page.locator('#route-results article').first()).toBeVisible();
+  await expect(page.locator('#route-results')).toContainText('These are goal matches, not eligibility assessments');
+});
+
 test('calculator does not ship a guessed AdSense publisher id', async ({ page }) => {
   await page.goto('/pages/calculator.html');
   await expect(page.locator('script[src*="pagead2.googlesyndication.com"]')).toHaveCount(0);
