@@ -140,6 +140,20 @@
         "evidenceIds",
         "notes"
       ]
+    },
+    "minimum_points_score": {
+      "kind": "number",
+      "unit": "points",
+      "evidenceField": "eligibility",
+      "requiredProperties": [
+        "value",
+        "unit",
+        "jurisdiction",
+        "effectiveDate",
+        "sourceUrl",
+        "evidenceIds",
+        "notes"
+      ]
     }
   },
   "matchingPolicy": {
