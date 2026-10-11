@@ -104,3 +104,8 @@ Current `main`: `f35291921b780b387a36e16f3be0bc52cd000c97`.
 - Four subroutes are flagged because their status is not `research_required`. Review them against canonical pathway promotion rules; do not treat the warning as independent proof of publishability.
 
 **Release decision remains NO-GO.** Passing source-tree checks does not establish the deployed origin/SHA, authoritative migration facts, full structured requirements coverage, privacy/compliance readiness or live-provider approvals. The hosting project/domain mapping and deployed commit remain unverified.
+
+
+### Readiness report freshness visibility — 2026-10-11
+
+The requirement-readiness report now emits status-level structured-requirement coverage and a sorted list/count of evidence records past `reviewAfter`, using the same strict-before-date boundary as data validation. It is a reporting change only; no evidence was refreshed and no requirement values were inferred. Regression coverage was added for overdue, due-today and future review dates. Current-head workflow verification is pending.
