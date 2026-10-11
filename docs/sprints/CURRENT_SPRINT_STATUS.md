@@ -1,11 +1,13 @@
+> ARCHIVE SAFETY: The body below is historical. Its old checkboxes, percentages, deadlines and 'active' labels are not current project status and must not be used for task closure. Canonical state: [ACTIVE_SPRINT.md](ACTIVE_SPRINT.md), [PHASE_STATUS.md](../project/PHASE_STATUS.md), [EXECUTION_STATUS.md](../project/EXECUTION_STATUS.md).
+
 > HISTORICAL ARCHIVE — NOT THE ACTIVE SPRINT. Reconciled 2026-10-11. This August Sprint 4/Phase 3 dashboard has expired dates and obsolete status claims. Use ACTIVE_SPRINT.md, ../project/PHASE_STATUS.md and README.md for current status. Do not use this document to mark a current sprint or phase complete.
 
-# 🎯 ACTIVE SPRINT STATUS & EXECUTION LOG
+# Historical Archive — Sprint 4 Status & Execution Log (August 2026)
 
-**Current Date:** August 18, 2026  
-**Active Sprint:** Sprint 4 (Week 3 - Content Creation & Features)  
+**Historical snapshot date:** August 18, 2026  
+**Historical sprint at snapshot:** Sprint 4 (Week 3 - Content Creation & Features)  
 **Phase:** Phase 3 - Blog Integration & Features  
-**Status:** 🟢 ACTIVE - JUST STARTED
+**Historical status at snapshot:** 🟢 ACTIVE - JUST STARTED (not current)
 
 ---
 

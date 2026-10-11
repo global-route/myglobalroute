@@ -1,9 +1,9 @@
 # Next Sprint — P1-S1 Country Source Refresh & Dataset Reconciliation
 
-**Status:** Ready for execution / source review not started.  
+**Status:** IN PROGRESS — manifest generated; source outcomes recorded; human sign-off and two source blockers remain.  
 **Prepared:** 2026-10-11.  
 **Initial planning baseline:** `933ca27d1542083078de104e2ac3550d8fde59c5`.
-**Latest completed same-SHA CI checkpoint before this status update:** `fc3c06a0a6078df4473d2f09015391cff09eef3f`.  
+**Last pre-change source-tree checkpoint:** `cb1d5882442be39ef1f16a84e904125bf6c2f331` (Quality Gate pass; final same-head three-workflow verification pending).  
 **Current implementation baseline:** `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`.  
 **Exit status:** OPEN — no country anchor is marked reviewed until an auditable outcome is recorded.  
 **Priority:** Data-trust work concurrent with externally blocked P0-S5.
@@ -23,30 +23,35 @@ Re-open the official landing-source anchor for every country in src/data/countri
 ## Tasks
 
 ### P1-S1.1 — Generate source manifest
-- [ ] Fetch current main and extract all 26 country IDs, names and URLs directly from countries.json.
-- [ ] Generate a machine-readable manifest; assert 26 unique IDs and no missing URLs.
-- [ ] Record baseline validation and evidence-freshness output.
+- [x] Extract all 26 country IDs, names and URLs from countries.json.
+- [x] Generate `docs/data/country-source-review-manifest.json`; generator asserts 26 unique IDs and HTTPS source URLs.
+- [ ] Capture baseline validation and evidence-freshness output on final implementation SHA.
+
+**Current result:** manifest committed; task remains partially complete until baseline output is recorded on final verified SHA.
 
 **Clarification:** the Markdown checklist below is prepared, but this does not complete the machine-readable manifest task. Keep P1-S1.1 open until the generated manifest and baseline output are committed and validated.
 
 **Exit:** inventory is generated from the actual registry, not hand-entered guesses.
 
 ### P1-S1.2 — Review every official anchor
-- [ ] Review all 26 sources and record accessible, redirected, blocked or replaced outcomes.
-- [ ] Update only entries actually checked.
-- [ ] Preserve explicit blockers for inaccessible sources.
+- [x] Record an auditable outcome for each of 26 anchors, including redirects and tool access limitations.
+- [x] Inspect official landing pages or alternatives for 24 entries; record Luxembourg as needing a more specific migration entry point and Russia as requiring manual verification.
+- [x] Update only two registry URLs whose current official replacements were verified (Austria and Czechia).
+- [ ] Obtain human sign-off and resolve/accept the two blocked anchors.
 
-**Exit:** 26/26 country anchors have auditable outcomes; unresolved entries remain explicitly blocked.
+**Current result:** 26/26 outcomes recorded; source review is not fully signed off.
+
+**Exit:** 26/26 country anchors have auditable outcomes, unresolved entries are explicitly blocked and the batch is signed off. Current: outcomes recorded; sign-off and Luxembourg/Russia follow-up remain open.
 
 ### P1-S1.3 — Reconcile metadata safely
-- [ ] Update dataset.asOf only after all 26 reviews are complete.
-- [ ] Keep unsupported aggregates null and country records evidence-gated.
+- [ ] Keep `dataset.asOf=2026-09-05` unchanged until review is signed off and blockers are resolved or formally excepted.
+- [x] Keep unsupported aggregates null and country records evidence-gated.
 - [ ] Add/adjust tests so dataset.asOf cannot advance without a complete manifest or documented exception.
 
 **Exit:** metadata date truthfully represents the completed review batch.
 
 ### P1-S1.4 — Verify and hand over
-- [ ] Run data validation, evidence freshness, tests, build/build verification, lint and browser smoke.
+- [ ] Run data validation, country-manifest check, evidence freshness, tests, build/build verification, lint and browser smoke on the same final SHA.
 - [ ] Update ACTIVE_SPRINT.md, PHASE_STATUS.md, EXECUTION_STATUS.md and release verification with exact SHA and run URLs.
 - [ ] Mark only actually completed tasks complete and preserve remaining blockers.
 

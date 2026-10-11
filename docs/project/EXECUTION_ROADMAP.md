@@ -184,3 +184,12 @@ Same-SHA source-tree gates pass at 1284684c18a7fa311cd62c52875b38d62a354a0b: Qua
 - Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38119295995. Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38119295980.
 - Phase 0 remains open at P0-S5; Phase 1 remains open at P1-S1 source review; Phase 2 remains open on structured requirement coverage and route-quality work. Phase 3/4 remain partial, Phase 5 is preparation only, and Phase 6 is deferred. No later phase is marked complete.
 - Next executable sprint: P1-S1 source review; P0-S5 runs in parallel only when owner/provider evidence becomes available.
+
+
+## 2026-10-11 execution delta
+- [x] Generate country source-review manifest from the 26-country registry.
+- [x] Record auditable outcomes for all 26 anchors; keep Luxembourg/Russia explicitly blocked and require human sign-off.
+- [x] Update Austria and Czechia source anchors to verified official government entry points.
+- [x] Add manifest synchronization to standard verification and route-safety regression tests.
+- [ ] Complete human sign-off and resolve or formally except blockers before changing `dataset.asOf`.
+- [ ] Close P0-S5: production host/deployed SHA, live CSP/security headers, production smoke and owner-level branch protection. GitHub API reports `main` unprotected and no rulesets.

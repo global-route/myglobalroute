@@ -36,3 +36,11 @@ Last fully verified same-SHA CI checkpoint before this status reconciliation: `f
 ## Handover reconciliation — 2026-10-11
 
 No phase should be marked fully complete from the current evidence. Phase 0 remains blocked on production host/domain identity, deployed SHA, live CSP/security headers, production smoke and owner-level branch rules. Phase 1 remains open pending auditable review of all 26 country source anchors, metadata reconciliation and unresolved pathway evidence. Phase 2 remains incomplete because 54/56 pathways lack structured requirement declarations and route-quality coverage remains open. Phases 3–5 retain their listed SEO/content, privacy/compliance and monetization gates; Phase 6 is deferred. See [next-sprint handover](../sprints/HANDOVER_NEXT_P1_S1_2026-10-11.md).
+
+
+## Reconciliation update — 2026-10-11
+- P1-S1.1 manifest generated from the live registry; outcomes recorded for all 26 countries.
+- Relevant official pages or alternatives inspected for 24 entries; Luxembourg needs a more specific official immigration entry point and Russia needs manual official-source verification. AI-assisted observations require human sign-off.
+- Austria and Czechia anchors updated to official government pages; this does not verify pathway-specific eligibility or financial claims.
+- P0-S5 remains blocked. GitHub API reports `main` unprotected and no repository rulesets; live host, deployed SHA, CSP/security headers and production smoke need owner/provider evidence.
+- Phase 0 and Phase 1 remain **NOT COMPLETE**; release remains **NO-GO**. Keep `dataset.asOf=2026-09-05` until review is signed off.

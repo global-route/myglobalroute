@@ -67,3 +67,13 @@ Last fully verified same-SHA CI checkpoint before this status reconciliation: `f
 The sprint is **not complete**. Task statuses remain as listed above: P0-S1 complete with explicit blocked candidates; P0-S2 audit complete but source work ongoing; P0-S3/P0-S4 source-tree verified; P0-S5 active and externally blocked; P1-DATA, P1-REQ, P1-ROUTE, P1-SEO and P1-PRIV open; P1-REV foundations only. Do not mark the sprint or Phase 0/1 complete based on green CI alone.
 
 Next executable sprint handover: [P1-S1 Country Source Refresh & Dataset Reconciliation](NEXT_SPRINT_P1_DATA_REFRESH.md). Cross-task/phase handover: [Handover — 2026-10-11](HANDOVER_NEXT_P1_S1_2026-10-11.md).
+
+
+## Execution update — 2026-10-11 (country manifest and source review)
+
+- P1-S1.1 — **Manifest generated** at `docs/data/country-source-review-manifest.json`; generator and test keep it synchronized.
+- P1-S1.2 — **Outcomes recorded for all 26 anchors; relevant official pages or alternatives inspected for 24.** Luxembourg needs a more specific official entry point; Russia needs manual verification. AI-assisted observations require human sign-off; tool errors are not treated as outages.
+- Austria and Czechia registry URLs updated to more relevant official government pages; only those country retrieval dates changed. `dataset.asOf=2026-09-05` remains unchanged.
+- P1-S1.3 and P1-S1.4 remain **OPEN** pending sign-off, blockers and final same-head CI.
+- P0-S5 — GitHub branch API reports `main.protected=false`; repository rulesets endpoint returned an empty list. Owner-level branch protection/required checks are not evidenced.
+- Production hostname, deployed SHA, live CSP/security headers and production smoke remain blocked on authoritative hosting-owner/provider evidence. Release remains **NO-GO**.

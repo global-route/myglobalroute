@@ -151,3 +151,12 @@ The previously held Luxembourg student work-rights record was refreshed after re
 ## Remaining evidence blockers — 2026-10-11
 
 After refreshing the current Luxembourg student rule page and aligning the duplicate Swedish study-maintenance evidence, two records still require source review: `NO-work-offer-verification-2026-09-07` and `PT-working-routes-2026-09-07`. Direct retrieval of the official UDI confirmation page returned HTTP 403; the AIMA work-route index timed out. Do not change either review deadline or infer that the source is unchanged. Use an accessible official page, an official downloadable notice, or keep both explicitly overdue. Re-run `npm run evidence:freshness` after this commit and use CI output as the authoritative inventory.
+
+
+## Handover update — 2026-10-11 (P1-S1 execution)
+- Machine-readable manifest created: `docs/data/country-source-review-manifest.json`.
+- 26/26 anchors have outcomes; 24 official entry points/alternatives inspected. Luxembourg redirects to a general citizens page and needs a specific migration entry point. Russia remains a manual verification blocker. Human sign-off required.
+- Austria and Czechia source URLs updated to official pages; only these per-country retrieval dates changed. Dataset-wide `asOf` unchanged.
+- Added manifest generator/check, tests and verify-pipeline integration; added route-safety regression tests without inferring missing thresholds.
+- GitHub reports `main` unprotected and rulesets empty. Host/provider, deployed SHA, live CSP/security headers and production smoke remain unverified.
+- Do not mark P1-S1 complete until sign-off and same-SHA CI are recorded. Release remains **NO-GO**.

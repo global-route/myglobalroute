@@ -47,3 +47,12 @@ Last fully verified same-SHA CI checkpoint before this status reconciliation: `f
 ## Task/sprint/phase handover — 2026-10-11
 
 **Completion reconciliation:** the active sprint is not complete, Phase 0 is not complete, and Phase 1 is not complete. The next executable sprint is P1-S1 country-source review; P0-S5 continues in parallel when owner/provider evidence is available. Do not close tasks on the basis of a green CI run or a prepared checklist. See [handover](../sprints/HANDOVER_NEXT_P1_S1_2026-10-11.md) and [P1-S1 task checklist](../sprints/NEXT_SPRINT_P1_DATA_REFRESH.md).
+
+
+## Execution update — 2026-10-11 (P1-S1 source review)
+- Manifest generated at `docs/data/country-source-review-manifest.json`; synchronized by `npm run data:country-manifest`.
+- 26/26 country outcomes recorded; 24 relevant official pages/alternatives inspected. Luxembourg needs a more specific entry point; Russia needs manual verification. Human sign-off remains required.
+- Austria and Czechia source anchors updated; only their per-country retrieval dates changed. Dataset `asOf` remains 2026-09-05; no unsupported aggregates populated.
+- Route-quality regression tests added for unknown requirements, missing country references and research-required routes.
+- GitHub reports `main` unprotected and no rulesets. Production host/deployed SHA/live headers remain unverified.
+- Final commit requires same-SHA CI verification. Release remains **NO-GO**.
