@@ -1,6 +1,6 @@
 # Active Sprint — Production Integrity & Migration Intelligence
 
-> **Current route-test candidate (verification pending):** `ec0f02c2b2d171d98262d8a3fc4adc807bbe3328` adds monthly-income and experience threshold boundary regressions. Do not mark P1-ROUTE complete until Quality Gate, Lint and Browser Smoke evidence is confirmed for the exact candidate SHA. The last fully verified source-tree SHA remains `89998ab5410aceb6dede8e997dae0b836d3b4d92`.
+> **Execution adjustment — 2026-10-11:** Test-writing and test-running work is paused by user direction. Continue non-test data/schema/documentation work; do not claim new changes are validated. The last fully verified source-tree SHA remains `89998ab5410aceb6dede8e997dae0b836d3b4d92`.
 
 **Reconciled:** 2026-10-11 | **Branch:** `main`
 **Release:** **NO-GO**
