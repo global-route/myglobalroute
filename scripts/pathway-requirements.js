@@ -14,7 +14,7 @@ function isRealIsoDate(value) {
   return Number.isFinite(date.getTime()) && date.toISOString().slice(0, 10) === value;
 }
 
-function validateRequirement(requirement, pathway, evidenceById) {
+function validateRequirement(requirement, pathway, evidenceById, validationDate = process.env.VALIDATION_AS_OF || new Date().toISOString().slice(0, 10)) {
   const errors = [];
   const fail = message => errors.push(message);
   if (!requirement || typeof requirement !== 'object' || Array.isArray(requirement)) return ['requirement must be an object'];
@@ -35,6 +35,7 @@ function validateRequirement(requirement, pathway, evidenceById) {
         if (evidence.pathwayId !== pathway.id) fail(`evidence ${id} does not belong to route ${pathway.id}`);
         if (definition && evidence.field !== definition.evidenceField) fail(`evidence ${id} must support field ${definition.evidenceField}`);
         if (requirement.sourceUrl && evidence.sourceUrl !== requirement.sourceUrl) fail(`sourceUrl must match cited evidence ${id}`);
+        if (isRealIsoDate(evidence.reviewAfter) && isRealIsoDate(validationDate) && evidence.reviewAfter < validationDate) fail(`evidence ${id} is past reviewAfter and cannot back a structured requirement`);
         if (requirement.jurisdiction && evidence.jurisdiction !== requirement.jurisdiction) fail(`jurisdiction must match cited evidence ${id}`);
         if (isRealIsoDate(requirement.effectiveDate) && evidence.effectiveDate && evidence.effectiveDate !== requirement.effectiveDate) {
           fail(`effectiveDate must match cited evidence ${id} when evidence declares one`);
@@ -65,7 +66,7 @@ function validateRequirement(requirement, pathway, evidenceById) {
   return errors;
 }
 
-function validatePathwayRequirements(pathways, evidenceRecords) {
+function validatePathwayRequirements(pathways, evidenceRecords, validationDate = process.env.VALIDATION_AS_OF || new Date().toISOString().slice(0, 10)) {
   const errors = [];
   const evidenceById = new Map(evidenceRecords.map(record => [record.id, record]));
   for (const pathway of pathways) {
@@ -79,7 +80,7 @@ function validatePathwayRequirements(pathways, evidenceRecords) {
       const requirementId = requirement?.id || `index ${index}`;
       if (ids.has(requirement?.id)) errors.push(`route ${pathway.id} has duplicate requirement id ${requirement.id}`);
       if (requirement?.id) ids.add(requirement.id);
-      for (const error of validateRequirement(requirement, pathway, evidenceById)) {
+      for (const error of validateRequirement(requirement, pathway, evidenceById, validationDate)) {
         errors.push(`route ${pathway.id} requirement ${requirementId}: ${error}`);
       }
     }
