@@ -1,6 +1,6 @@
 # Phase Status — Global Route
 
-**Reconciled:** 2026-10-11 | **Assessed SHA:** `e7ccd592b703d62867267ddb5573b73a2d2bc0ea` | **Release: NO-GO**
+**Reconciled:** 2026-10-11 | **Assessed SHA:** `1284684c18a7fa311cd62c52875b38d62a354a0b` | **Release: NO-GO**
 
 This is the canonical phase tracker. Historical phase/sprint docs preserve original product intent but their old dates, percentages, counts and URLs do not override this tracker or the active sprint.
 
@@ -26,3 +26,8 @@ This is the canonical phase tracker. Historical phase/sprint docs preserve origi
 ## Documentation organization finding
 
 The repo has `docs/phase-0`, `docs/phase-1` and `docs/phase-3`, but no `docs/phase-2` despite Phase 2 in the roadmap. `docs/phase-1` contains revenue work and `docs/phase-3` contains older blog artifacts. Do not mass-move files mid-sprint; this tracker is the current status source. A later cleanup should map legacy files to the canonical phase taxonomy and label historical artifacts.
+
+
+## Current-head verification — 2026-10-11
+
+Assessed SHA: 1284684c18a7fa311cd62c52875b38d62a354a0b. Quality Gate PASS (17 suites / 113 tests): https://github.com/global-route/myglobalroute/actions/runs/38115941501. Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38115941407. Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38115941416. These confirm source-tree gates only. Phase 0 remains open because deployment identity, deployed SHA, live CSP and owner branch protection are unverified. Phase 1 remains open because the 26 country landing-source anchors have not all been rechecked and conditional requirement coverage is incomplete.

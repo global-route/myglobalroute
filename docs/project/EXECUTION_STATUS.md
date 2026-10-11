@@ -1,6 +1,6 @@
 # Global Route — Execution Status
 
-**Reconciled:** 2026-10-11 | **Branch:** `main` | **SHA:** `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`  
+**Reconciled:** 2026-10-11 | **Branch:** `main` | **SHA:** `1284684c18a7fa311cd62c52875b38d62a354a0b`  
 **Active work:** P0 production verification + P1 data/route-quality work  
 **Release:** **NO-GO**
 
@@ -8,7 +8,7 @@
 
 ## Current verified baseline
 
-- Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38113182546), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38113182590), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38113182545), all on the same SHA.
+- Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38115941501), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38115941407), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38115941416), all on the same SHA.
 - 26 countries; 56 pathways (52 publishable / 4 research_required); 193 evidence records.
 - Latest recorded freshness inventory: 193 current, 0 overdue, 0 missing and 0 invalid review dates.
 - Structured requirements: 9 declarations across 2 pathways; 54/56 have no structured declarations.
@@ -37,3 +37,8 @@
 9. Expand structured requirements and route-quality tests; missing declarations remain unknown.
 
 Monetization activation and scale work remain gated. A green CI run proves source/build checks, not production.
+
+
+## Current-head reconciliation — 2026-10-11
+
+The current main SHA is 1284684c18a7fa311cd62c52875b38d62a354a0b. Quality Gate, Lint and Browser Smoke all pass on this same SHA; Quality Gate reports 17 suites / 113 tests, with build-integrity and SEO/accessibility checks passing. P0-S3 and source-tree P0-S4 are verified; P0-S5 and Phase 0 are not complete. Next independent work is the 26-country source review described in docs/sprints/NEXT_SPRINT_P1_DATA_REFRESH.md.

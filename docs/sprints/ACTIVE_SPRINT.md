@@ -1,14 +1,14 @@
 # Active Sprint — Production Integrity & Migration Intelligence
 
-**Reconciled:** 2026-10-11 | **Branch / SHA:** `main` / `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`  
+**Reconciled:** 2026-10-11 | **Branch / SHA:** `main` / `1284684c18a7fa311cd62c52875b38d62a354a0b`  
 **Status:** P0-S5 active and externally blocked; data and route-quality work continues concurrently  
 **Release:** **NO-GO**
 
 ## Verified checkpoint
 
-- Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38113182546)
-- Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38113182590)
-- Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38113182545)
+- Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38115941501)
+- Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38115941407)
+- Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38115941416)
 - 26 countries; 56 pathways (52 publishable / 4 research_required); 193 evidence records.
 - Latest recorded freshness report: 193 current / 0 overdue / 0 missing / 0 invalid.
 - 9 structured requirement declarations across 2 pathways (UK Skilled Worker and Canada study); 54/56 pathways have no structured declarations.
@@ -48,3 +48,16 @@
 - Do not treat the 26-country registry as fully researched, or absent requirements as no requirements.
 - Do not promote research-required routes without current exact-scope primary evidence.
 - Do not claim production readiness or activate monetization based on CI alone.
+
+
+## Current-head verification — 2026-10-11
+
+Assessed main SHA: 1284684c18a7fa311cd62c52875b38d62a354a0b. Quality Gate PASS (17 suites / 113 tests): https://github.com/global-route/myglobalroute/actions/runs/38115941501. Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38115941407. Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38115941416. Registry: 26 countries, 56 pathways (52 publishable / 4 research_required), 193 evidence records; freshness inventory 193 current / 0 overdue / 0 missing / 0 invalid review dates. This does not prove all 26 country landing-source anchors were reopened. countries.json dataset.asOf=2026-09-05 remains stale. Phase 0 is NOT complete; P0-S5 remains externally blocked on authoritative production host/domain, deployed SHA, live CSP/security headers, production smoke and owner-level branch protection.
+
+## Ordered next work
+
+1. P0-S5 external release gate: confirm provider/project/domain, deployed revision, live security headers and branch rules; do not infer the host.
+2. P1-S1 source refresh: execute NEXT_SPRINT_P1_DATA_REFRESH.md across all 26 registry entries; do not advance dates before actual source review.
+3. P1-REQ: expand exact-source conditional requirements and tests for effective date, family size, region, costs and exceptions.
+4. P1-ROUTE: add route-safety tests for missing inputs, stale/mismatched evidence, alternatives and no-match.
+5. Keep Phase 0/1 open until documented exit gates are genuinely met.
