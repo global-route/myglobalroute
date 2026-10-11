@@ -16,4 +16,4 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 
 ## CI evidence note — 2026-10-11
-The implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426` passed Quality Gate, Lint and Browser Smoke on the same SHA (run links recorded in the active sprint and release verification docs). The follow-up CI configuration SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` passed Quality Gate and Lint; its Browser Smoke run remains pending at last check. Release remains **NO-GO** due external production and human source-review gates.
+The implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426` passed Quality Gate, Lint and Browser Smoke on the same SHA (run links recorded in the active sprint and release verification docs). The follow-up CI configuration SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` passed Quality Gate, Lint and Browser Smoke on the same SHA. Release remains **NO-GO** due external production and human source-review gates.

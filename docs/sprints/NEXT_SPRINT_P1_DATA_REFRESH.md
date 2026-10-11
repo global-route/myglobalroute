@@ -133,6 +133,6 @@ Quality Gate output: 26 countries, 56 pathways, 193 evidence records; 0 dependen
 **CI configuration follow-up SHA:** `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`
 - Quality Gate — PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183966 (includes the explicit country-manifest synchronization step).
 - Lint — PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183952
-- Browser Smoke — pending at last check: https://github.com/global-route/myglobalroute/actions/runs/38144183936
+- Browser Smoke — PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183936
 
-The application/data implementation is verified on one SHA. The later commit only added the explicit manifest check to the Quality Gate workflow and changelog; its own Browser Smoke run must finish before claiming all three workflows are green on that later SHA. Do not mark P1-S1, P0-S5, or any phase complete based on these CI results alone.
+The application/data implementation is verified on one SHA. The later commit only added the explicit manifest check to the Quality Gate workflow and changelog; all three workflows are now green on that later SHA. Do not mark P1-S1, P0-S5, or any phase complete based on these CI results alone.
