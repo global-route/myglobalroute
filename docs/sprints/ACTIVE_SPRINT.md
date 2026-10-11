@@ -94,3 +94,12 @@ No thresholds were guessed or bulk-converted from narrative evidence. Current so
 - Browser Smoke PASS: [run 38105471079](https://github.com/global-route/myglobalroute/actions/runs/38105471079).
 - The browser test now checks the DOM option's native `disabled` property directly; the previous Playwright matcher failed despite the rendered option carrying `disabled`. All three checks passed on the same SHA.
 - This verifies source-tree checks only. P0-S5 remains blocked on the authoritative hosting project/origin, deployed SHA, production smoke, CSP, and owner decision on repository visibility/branch policy. Structured requirements are still a schema/validator foundation; real threshold data remains unknown unless sourced and entered with exact-route evidence.
+
+
+## P1-REQ-READINESS — Requirement coverage reporting (implemented; current-head CI pending)
+
+Added `scripts/report-requirement-readiness.js` and the `npm run requirements:readiness` command. The report summarizes how many canonical pathways declare structured requirement records, per-field requirement counts, and evidence-record counts by evidence field; it lists pathways without structured requirements for controlled research prioritization.
+
+This is an inventory/reporting aid, **not** evidence that a pathway is eligible and not a substitute for manual source verification. It deliberately does not infer numeric thresholds from narrative claims, populate unknown values, promote pathways, or treat evidence-record volume as proof of coverage. Regression coverage is in `tests/requirement-readiness.test.js`.
+
+**Next:** run the readiness report and current Quality Gate/Lint/Browser Smoke. Use the report to prioritize exact-route research and only transcribe a requirement when its exact-scope authoritative source and evidence record support the value, units, jurisdiction and effective date.
