@@ -58,6 +58,13 @@ describe('pathway requirement schema validation', () => {
     expect(validateRequirement(income, pathway, new Map([[evidence.id, evidence]]))).toContain('minimum_monthly_income period must be monthly');
   });
 
+
+  test('does not use evidence after its review deadline for structured matching', () => {
+    const staleEvidence = { ...evidence, reviewAfter: '2026-10-10' };
+    const errors = validateRequirement(validMoney, pathway, new Map([[evidence.id, staleEvidence]]), '2026-10-11');
+    expect(errors).toContain('evidence GB-work-finance-2026-10-01 is past reviewAfter and cannot back a structured requirement');
+  });
+
   test('rejects evidence from a different pathway or evidence field', () => {
     const wrongScope = { ...evidence, pathwayId: 'OTHER', field: 'eligibility' };
     const errors = validateRequirement(validMoney, pathway, new Map([[evidence.id, wrongScope]]));
