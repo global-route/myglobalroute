@@ -38,7 +38,7 @@ The remaining P0 work is decomposed in `docs/sprints/P0_DELIVERY_PLAN.md` and tr
 - [x] **P0-S1 — Exact Pathway Closure:** 4 routes promoted (NZ SMC x3, Austria Other Key Workers); Italy Flussi and AU-189 explicitly blocked with documented evidence gaps.
 - [x] **P0-S2 — Remaining-Country Evidence Closure audit:** current registry reconciled to 56 pathways (52 publishable / 4 research_required); each remaining pathway has explicit evidence gaps. Ongoing source maintenance continues under Phase 1.
 - [x] **P0-S3 — Data / Recommendation Quality Gate:** same-head checks passed at 1284684c18a7fa311cd62c52875b38d62a354a0b (17 suites / 113 tests; build and SEO/A11y checks included).
-- [ ] **P0-S4 — Browser / Release Gate:** browser/E2E, deep links, calculator/recommendation flows and generated SEO/accessibility verification.
+- [x] **P0-S4 — Source-tree Browser / Release Gate:** Browser Smoke, generated deep links, build integrity and SEO/accessibility verification passed on the assessed source SHA; live production verification remains P0-S5.
 - [ ] **P0-S5 — Deployment Verification & P0 Exit (ACTIVE / BLOCKED):** authoritative host/domain, deployed SHA, live CSP/security headers, production smoke and owner-level branch protection remain unverified.
 
 **Exit gate:** reproducible build, validated data shape, passing tests, working deep links, verified production origin, production smoke, appropriate security/SEO configuration and no known critical runtime defects.
@@ -63,13 +63,13 @@ The remaining P0 work is decomposed in `docs/sprints/P0_DELIVERY_PLAN.md` and tr
 - [ ] Expand evidence batches until the highest-value pathways can safely become publishable.
 - [ ] Establish production freshness/review automation beyond local validation.
 
-**Current registry checkpoint (2026-10-11 CI-verified):** 26 countries / 56 canonical pathways; 52 publishable and 4 research_required. Four exact subroute records are marked promoted and align to canonical pathway IDs; they are not additional pathways. The two remaining explicit exact-subroute candidates (Australia subclass 189 and Italy Flussi) remain research_required outside the canonical pathway registry.
+**Current registry checkpoint (2026-10-11 CI-verified at source SHA 1284684c18a7fa311cd62c52875b38d62a354a0b):** 26 countries / 56 canonical pathways; 52 publishable and 4 research_required. Four exact subroute records are marked promoted and align to canonical pathway IDs; they are not additional pathways. The two remaining explicit exact-subroute candidates (Australia subclass 189 and Italy Flussi) remain research_required outside the canonical pathway registry.
 
 **Critical rule:** never fabricate missing data to reach the 26-country target.
 
 ## Phase 2 — Canonical Product Core (P0)
 
-- [x] Introduce pathway-level records: 52 pathways across 26 countries.
+- [x] Introduce pathway-level records: 56 canonical pathways across 26 countries.
 - [x] Build country explorer around pathway entities and evidence-aware statuses.
 - [x] Build programmatic country/pathway pages with eligibility/evidence/source presentation.
 - [x] Make the calculator consume the canonical evidence-gated data model.

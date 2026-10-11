@@ -351,7 +351,7 @@ The plan can gain additional sprints if a phase discovers material work that can
 
 `→ P6-S1 → P6-S2 → P6-S3 → P6-S4 → P6-S5`
 
-The current sprint remains P0-S1. No later phase is treated as complete merely because it has been planned; each phase advances only after its sprint exit gates are actually verified.
+The current sprint is P0-S5 — Deployment Verification & Phase 0 Exit, active and externally blocked. P0-S1 through P0-S4 are completed/verified only within their documented scope; Phase 0 remains open until P0-S5 exits. No phase advances merely because later work has been planned.
 
 
 ## Current status reconciliation — 2026-10-11
