@@ -1,3 +1,5 @@
+> HISTORICAL ARCHIVE — NOT THE ACTIVE SPRINT. Reconciled 2026-10-11. This August Sprint 4/Phase 3 dashboard has expired dates and obsolete status claims. Use ACTIVE_SPRINT.md, ../project/PHASE_STATUS.md and README.md for current status. Do not use this document to mark a current sprint or phase complete.
+
 # 🎯 ACTIVE SPRINT STATUS & EXECUTION LOG
 
 **Current Date:** August 18, 2026  
