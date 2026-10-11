@@ -54,6 +54,7 @@ describe('canonical route engine', () => {
       5
     );
     expect(result).toHaveLength(1);
+    expect(result).toHaveLength(1);
     expect(result[0].pathway.id).toBe('gb-work');
     expect(result.every(item => item.score >= 0 && item.score <= 100)).toBe(true);
   });
