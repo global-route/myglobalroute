@@ -1,6 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { isIsoDate, isOnOrBefore, isOnOrAfter } = require('./date-utils');
+const { validatePathwayRequirements } = require('./pathway-requirements');
 
 const root = path.join(__dirname, '..');
 const readJson = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
@@ -85,6 +86,8 @@ for (const [index, record] of (evidence || []).entries()) {
   list.push(record);
   evidenceByPathway.set(record.pathwayId, list);
 }
+
+errors.push(...validatePathwayRequirements(pathways, evidence));
 
 for (const pathway of pathways) {
   const records = evidenceByPathway.get(pathway.id) || [];
