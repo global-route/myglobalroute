@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "policy": "Pathway records are publishable only when every material claim has primary-source evidence and the record scope matches the evidence scope.",
+  "policy": "Pathway records are publishable only when every material claim has primary-source evidence and the record scope matches the evidence scope. Structured requirement declarations are evidence metadata and must not be treated as route-matching inputs until the engine explicitly supports each field and its conditions.",
   "pathways": [
     {
       "id": "GB-skilled-worker",
