@@ -11,7 +11,7 @@
 - Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119296014), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119295995), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119295980), all on current main SHA `933ca27d1542083078de104e2ac3550d8fde59c5` (the tested source implementation baseline is `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`).
 - 26 countries; 56 pathways (52 publishable / 4 research_required); 193 evidence records.
 - Latest recorded freshness inventory: 193 current, 0 overdue, 0 missing and 0 invalid review dates.
-- Structured requirements: 9 declarations across 2 pathways; 54/56 have no structured declarations.
+- Structured requirements: 12 declarations across 5 pathways; 54/56 have no structured declarations.
 - `countries.json` `dataset.asOf=2026-09-05` is stale and needs a source-by-source review before it is changed.
 
 ## Completed
@@ -62,3 +62,7 @@ Last fully verified same-SHA CI checkpoint before this status reconciliation: `f
 
 - Public origin check on 2026-10-11: `https://myglobalroute.com/` serves a visa-consultancy site branded “Global Routes,” with service charges and consultation pages, not the Global Route migration-intelligence application described by this repository. Do **not** assume it is this repo's production origin or set canonicals to it without owner confirmation.
 - `https://vrenum.app/` was not accessible through the public-page inspection tool; that is inconclusive and does not prove the host is down.
+
+
+## P1-REQ update — 2026-10-11
+Three evidence-backed declarations added: UK Student admission offer; New Zealand student annual living-funds threshold with explicit scope; Ireland Critical Skills qualifying job offer. Structured coverage is 12 declarations across 5/56 pathways; 51 remain unstructured. P1-REQ remains open.

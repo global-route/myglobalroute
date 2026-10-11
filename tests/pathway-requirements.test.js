@@ -171,3 +171,25 @@ describe('pathway requirement schema validation', () => {
     expect(validatePathwayRequirements([{ ...pathway }], [])).toEqual([]);
   });
 });
+
+const fs = require('node:fs');
+const path = require('node:path');
+const dataRoot = path.join(__dirname, '..');
+const loadJson = relative => JSON.parse(fs.readFileSync(path.join(dataRoot, relative), 'utf8'));
+const pathwayRegistry = loadJson('src/data/pathways.json').pathways;
+const evidenceRegistry = [
+  ...(loadJson('src/data/evidence/primary-source-verified.json').records || []),
+  ...fs.readdirSync(path.join(dataRoot, 'src/data/evidence/addenda')).filter(file => file.endsWith('.json')).sort()
+    .flatMap(file => loadJson(path.join('src/data/evidence/addenda', file)).records || [])
+];
+describe('additional evidence-backed pathway declarations', () => {
+  test('UK student admission, NZ student funds and Ireland Critical Skills job-offer requirements use exact-pathway evidence', () => {
+    const ids = ['GB-student', 'NZ-student', 'IE-critical-skills'];
+    const selected = pathwayRegistry.filter(pathway => ids.includes(pathway.id));
+    expect(selected).toHaveLength(3);
+    expect(validatePathwayRequirements(selected, evidenceRegistry, '2026-10-11')).toEqual([]);
+    expect(selected.find(pathway => pathway.id === 'GB-student').requirements.map(item => item.field)).toContain('admission_offer');
+    expect(selected.find(pathway => pathway.id === 'NZ-student').requirements.find(item => item.field === 'minimum_funds').conditions.componentsExcluded).toEqual(['tuition', 'onward travel']);
+    expect(selected.find(pathway => pathway.id === 'IE-critical-skills').requirements.map(item => item.field)).toContain('job_offer');
+  });
+});

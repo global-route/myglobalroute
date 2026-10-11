@@ -166,3 +166,9 @@ After refreshing the current Luxembourg student rule page and aligning the dupli
 
 - Public origin check on 2026-10-11: `https://myglobalroute.com/` serves a visa-consultancy site branded “Global Routes,” with service charges and consultation pages, not the Global Route migration-intelligence application described by this repository. Do **not** assume it is this repo's production origin or set canonicals to it without owner confirmation.
 - `https://vrenum.app/` was not accessible through the public-page inspection tool; that is inconclusive and does not prove the host is down.
+
+
+## Structured requirements delta — 2026-10-11
+- Three evidence-backed declarations added to UK Student, New Zealand Fee Paying Student and Ireland Critical Skills.
+- Current coverage: 12 declarations across 5 of 56 pathways; 51 remain unstructured. Missing requirement data remains unknown.
+- Validation regression checks exact-pathway evidence and scoped New Zealand funds conditions. P1-REQ remains open.

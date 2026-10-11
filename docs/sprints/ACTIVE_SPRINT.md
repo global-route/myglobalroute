@@ -12,7 +12,7 @@
 - All three runs completed on the same current `main` SHA `933ca27d1542083078de104e2ac3550d8fde59c5`; implementation changes in the tested tree are through `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`.
 - 26 countries; 56 pathways (52 publishable / 4 research_required); 193 evidence records.
 - Latest recorded freshness report: 193 current / 0 overdue / 0 missing / 0 invalid.
-- 9 structured requirement declarations across 2 pathways (UK Skilled Worker and Canada study); 54/56 pathways have no structured declarations.
+- 12 structured requirement declarations across 5 pathways (UK Skilled Worker and Canada study); 51/56 pathways have no structured declarations.
 - `countries.json` `dataset.asOf=2026-09-05` is stale; do not bump it without reviewing the 26 source anchors.
 
 ## Current task board
@@ -57,7 +57,7 @@ Last fully verified same-SHA CI checkpoint before this status reconciliation: `f
 
 1. **P1-S1 — Country source review (next executable sprint):** follow `NEXT_SPRINT_P1_DATA_REFRESH.md` in registry order. Generate the machine-readable manifest and baseline output first; then review each official anchor, logging outcomes and affected claims. Keep all 26 checklist rows unchecked until individually reviewed.
 2. **P0-S5 — External release gate (parallel, owner-dependent):** confirm provider/project/custom domain, reconcile Worker `myglobalroute`, observed Cloudflare build label `globalroute`, and Netlify config without guessing. Capture deployed SHA, verify live app/registries, run `npm run deploy:verify`, inspect live CSP, and obtain owner-level branch-protection evidence.
-3. **P1-REQ — Structured requirements:** extend only from exact official sources; preserve effective date, family size, region, expense components, exemptions and alternative rules. Current coverage is 9 declarations across 2 pathways; 54/56 pathways remain unstructured.
+3. **P1-REQ — Structured requirements:** extend only from exact official sources; preserve effective date, family size, region, expense components, exemptions and alternative rules. Current coverage is 12 declarations across 5 pathways; 54/56 pathways remain unstructured.
 4. **P1-ROUTE — Recommendation safety:** add and verify stale/mismatched evidence, missing-input, alternatives, threshold-boundary and no-match tests.
 5. **P1-SEO / P1-PRIV:** proceed on work that does not require an unverified production origin; absolute canonical URLs, live consent verification and production claims remain gated.
 
@@ -83,3 +83,9 @@ Next executable sprint handover: [P1-S1 Country Source Refresh & Dataset Reconci
 
 - Public origin check on 2026-10-11: `https://myglobalroute.com/` serves a visa-consultancy site branded “Global Routes,” with service charges and consultation pages, not the Global Route migration-intelligence application described by this repository. Do **not** assume it is this repo's production origin or set canonicals to it without owner confirmation.
 - `https://vrenum.app/` was not accessible through the public-page inspection tool; that is inconclusive and does not prove the host is down.
+
+
+## P1-REQ implementation delta — 2026-10-11
+- Added three evidence-backed declarations: UK Student admission offer; New Zealand Fee Paying Student annual living-funds threshold with duration/funding caveats; Ireland Critical Skills qualifying job offer.
+- Structured declarations now total **12 across 5 of 56 pathways**; 51 pathways remain without structured declarations. Absence continues to mean unknown, not unrestricted or zero.
+- Added regression coverage validating these declarations against exact-pathway evidence. Broader pathway coverage remains open.

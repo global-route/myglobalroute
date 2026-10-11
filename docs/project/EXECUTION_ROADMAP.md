@@ -169,7 +169,7 @@ The requirement schema now validates conditional metadata for application date, 
 
 ## Full reassessment — 2026-10-11 — `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`
 
-This update supersedes earlier status claims for current delivery. Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38113182546), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38113182590), and Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38113182545) all passed on this SHA. Current registry: 26 countries; 56 pathways (52 publishable / 4 research_required); 193 evidence records; 9 structured requirement declarations across 2 pathways. The latest recorded freshness report has 193 current, 0 overdue, 0 missing and 0 invalid review dates, but country dataset `asOf=2026-09-05` remains stale and needs a source-by-source review. Phase 0 exit is blocked by host/domain/deployed-SHA/live-header/branch-protection evidence. Phase 1 data completeness and Phase 2 structured decision quality remain incomplete. See `docs/project/PHASE_STATUS.md` and `docs/project/PROJECT_ASSESSMENT.md`.
+This update supersedes earlier status claims for current delivery. Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38113182546), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38113182590), and Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38113182545) all passed on this SHA. Current registry: 26 countries; 56 pathways (52 publishable / 4 research_required); 193 evidence records; 12 structured requirement declarations across 5 pathways. The latest recorded freshness report has 193 current, 0 overdue, 0 missing and 0 invalid review dates, but country dataset `asOf=2026-09-05` remains stale and needs a source-by-source review. Phase 0 exit is blocked by host/domain/deployed-SHA/live-header/branch-protection evidence. Phase 1 data completeness and Phase 2 structured decision quality remain incomplete. See `docs/project/PHASE_STATUS.md` and `docs/project/PROJECT_ASSESSMENT.md`.
 
 
 ## Current-head status and next sprint — 2026-10-11
@@ -193,3 +193,11 @@ Same-SHA source-tree gates pass at 1284684c18a7fa311cd62c52875b38d62a354a0b: Qua
 - [x] Add manifest synchronization to standard verification and route-safety regression tests.
 - [ ] Complete human sign-off and resolve or formally except blockers before changing `dataset.asOf`.
 - [ ] Close P0-S5: production host/deployed SHA, live CSP/security headers, production smoke and owner-level branch protection. GitHub API reports `main` unprotected and no rulesets.
+
+
+## Structured requirement expansion — 2026-10-11
+- [x] Add UK Student admission-offer requirement from exact-pathway evidence.
+- [x] Add New Zealand Fee Paying Student annual living-funds threshold with duration/funding caveats and separate tuition/onward travel.
+- [x] Add Ireland Critical Skills qualifying job-offer requirement.
+- [x] Validate declarations against exact-pathway evidence in regression tests.
+- [ ] Continue expanding only when evidence supports exact route, jurisdiction, effective date and exception scope. Current: 12 declarations across 5/56 pathways; 51 remain unstructured.

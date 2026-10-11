@@ -56,6 +56,20 @@
       "evidenceIds": [
         "GB-student-eligibility-2026-09-12",
         "GB-student-finance-2026-09-12"
+      ],
+      "requirements": [
+        {
+          "id": "GB-student-admission-offer-2026-09-12",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "United Kingdom",
+          "effectiveDate": "2026-09-12",
+          "sourceUrl": "https://www.gov.uk/student-visa",
+          "evidenceIds": [
+            "GB-student-eligibility-2026-09-12"
+          ]
+        }
       ]
     },
     {
@@ -316,6 +330,34 @@
       "evidenceIds": [
         "NZ-student-eligibility-2026-09-13",
         "NZ-student-finance-2026-09-13"
+      ],
+      "requirements": [
+        {
+          "id": "NZ-student-minimum-funds-2026-09-13",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 20000,
+          "currency": "NZD",
+          "period": "annual",
+          "jurisdiction": "New Zealand",
+          "effectiveDate": "2026-09-13",
+          "sourceUrl": "https://www.immigration.govt.nz/visas/fee-paying-student-visa/",
+          "evidenceIds": [
+            "NZ-student-finance-2026-09-13"
+          ],
+          "conditions": {
+            "region": "Tertiary, English-language or other non-compulsory study; full year",
+            "componentsIncluded": [
+              "living expenses"
+            ],
+            "componentsExcluded": [
+              "tuition",
+              "onward travel"
+            ],
+            "notes": "Annual amount for self-funded study; shorter study may use NZD 1,667 per month. Acceptable sponsorship or other approved funding mechanisms may satisfy the requirement."
+          },
+          "notes": "Conditional self-funded annual living-cost threshold; tuition and onward travel are separate. Not universal for all study durations or funding arrangements."
+        }
       ]
     },
     {
@@ -400,6 +442,20 @@
       "evidenceIds": [
         "IE-critical-skills-eligibility-2026-09-12",
         "IE-critical-skills-finance-2026-09-12"
+      ],
+      "requirements": [
+        {
+          "id": "IE-critical-skills-job-offer-2026-05-13",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Ireland",
+          "effectiveDate": "2026-05-13",
+          "sourceUrl": "https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/permit-types/critical-skills-employment-permit/",
+          "evidenceIds": [
+            "IE-critical-skills-eligibility-2026-09-12"
+          ]
+        }
       ]
     },
     {

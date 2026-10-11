@@ -108,3 +108,7 @@ Generated from the current countries.json registry (26 unique records). Mark a r
 3. P0-S5 continues in parallel; Phase 0 cannot close until host, deployed SHA, live security headers, production smoke and branch protection are verified.
 
 This plan is not evidence of completion. Do not mark P1-S1 or Phase 1 complete until exit criteria are demonstrated in code, docs and verification.
+
+
+## Parallel P1-REQ delta — 2026-10-11
+Three declarations were added for UK Student, New Zealand Fee Paying Student and Ireland Critical Skills. The schema validator test checks exact evidence, URL, jurisdiction, effective date and scoped cost components. Total: 12 declarations across 5/56 pathways; 51 remain unstructured. P1-REQ remains open.
