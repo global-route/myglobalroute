@@ -639,7 +639,34 @@
       "status": "publishable",
       "evidenceIds": [
         "FI-study-eligibility-2026-09-14",
-        "FI-study-finance-2026-09-14"
+        "FI-study-finance-2026-09-14",
+        "FI-study-finance-2026-09-06"
+      ],
+      "requirements": [
+        {
+          "id": "FI-study-minimum-living-funds-monthly-2026-09-06",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 800,
+          "currency": "EUR",
+          "period": "monthly",
+          "jurisdiction": "Finland",
+          "effectiveDate": "2026-09-06",
+          "sourceUrl": "https://migri.fi/en/income-requirement-for-students",
+          "evidenceIds": [
+            "FI-study-finance-2026-09-06"
+          ],
+          "conditions": {
+            "componentsIncluded": [
+              "living expenses"
+            ],
+            "componentsExcluded": [
+              "tuition fees"
+            ],
+            "notes": "For a first study residence permit. For studies lasting at least one year, EUR 9,600 must be available when applying. Study duration and permit circumstances matter."
+          },
+          "notes": "EUR 800 per month for living costs; tuition funds are additional where applicable. Do not treat this as an annual amount or a universal rule for every permit circumstance."
+        }
       ]
     },
     {
@@ -665,7 +692,34 @@
       "status": "publishable",
       "evidenceIds": [
         "SE-study-eligibility-2026-09-13",
-        "SE-study-finance-2026-09-13"
+        "SE-study-finance-2026-09-13",
+        "SE-study-finance-2026-09-07"
+      ],
+      "requirements": [
+        {
+          "id": "SE-study-minimum-maintenance-monthly-2026-09-07",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 10656,
+          "currency": "SEK",
+          "period": "monthly",
+          "jurisdiction": "Sweden",
+          "effectiveDate": "2026-01-01",
+          "sourceUrl": "https://www.migrationsverket.se/en/you-want-to-apply/study/higher-education.html",
+          "evidenceIds": [
+            "SE-study-finance-2026-09-07"
+          ],
+          "conditions": {
+            "componentsIncluded": [
+              "living expenses"
+            ],
+            "componentsExcluded": [
+              "tuition fees"
+            ],
+            "notes": "2026 amount for the higher-education study residence permit. The authority notes that the required amount may be reduced where free food or housing is provided."
+          },
+          "notes": "SEK 10,656 per month for maintenance in 2026, subject to permitted reductions and the applicant's circumstances. Confirm the current authority guidance before applying."
+        }
       ]
     },
     {
@@ -678,7 +732,25 @@
       "status": "publishable",
       "evidenceIds": [
         "SE-work-eligibility-2026-09-14",
-        "SE-work-finance-2026-09-14"
+        "SE-work-finance-2026-09-14",
+        "SE-work-salary-2026-09-07"
+      ],
+      "requirements": [
+        {
+          "id": "SE-work-minimum-monthly-salary-2026-09-07",
+          "field": "minimum_monthly_salary",
+          "kind": "money",
+          "value": 34470,
+          "currency": "SEK",
+          "period": "monthly",
+          "jurisdiction": "Sweden",
+          "effectiveDate": "2026-06-16",
+          "sourceUrl": "https://www.migrationsverket.se/en/word-explanations/salary-requirements-for-a-work-permit.html",
+          "evidenceIds": [
+            "SE-work-salary-2026-09-07"
+          ],
+          "notes": "Salary threshold for covered Swedish work-permit applications from 1 June 2026, based on 90% of the median salary (SEK 38,300 published on 16 June 2026). Exemptions and transitional rules apply. This is the job's salary threshold, not the applicant's personal monthly income."
+        }
       ]
     },
     {
