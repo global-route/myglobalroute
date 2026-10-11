@@ -98,9 +98,10 @@
       settings.addEventListener('click', () => {
         const panel = document.getElementById('analytics-consent');
         if (panel) {
+          syncConsentInputs(panel);
           panel.hidden = false;
           settings.hidden = true;
-          panel.querySelector('[data-consent-mode]')?.focus();
+          panel.querySelector('[data-consent-option="analytics"]')?.focus();
         }
       });
       mount.appendChild(settings);
@@ -112,34 +113,55 @@
       banner.setAttribute('role', 'region');
       banner.setAttribute('aria-label', 'Analytics and advertising preferences');
       banner.setAttribute('aria-live', 'polite');
-      banner.innerHTML = '<p>Choose separately whether to allow analytics measurement and advertising storage. Declining does not affect access to migration information.</p><div><button type="button" data-consent-mode="all">Allow analytics and advertising</button><button type="button" data-consent-mode="analytics">Analytics only</button><button type="button" data-consent-mode="none">Reject optional measurement and advertising</button></div>';
+      banner.innerHTML = '<p>Choose independently whether to allow analytics measurement and advertising storage. Your choice does not affect access to migration information.</p><div class="consent-options"><label><input type="checkbox" data-consent-option="analytics"> Allow analytics measurement</label><label><input type="checkbox" data-consent-option="advertising"> Allow advertising storage and eligible ad placements</label></div><div class="consent-actions"><button type="button" data-save-consent>Save choices</button><button type="button" data-reject-consent>Reject all optional measurement and advertising</button></div>';
       mount.appendChild(banner);
     }
 
-    banner.querySelectorAll('[data-consent-mode]').forEach(button => {
-      if (button.dataset.consentBound === 'true') return;
-      button.dataset.consentBound = 'true';
-      button.addEventListener('click', () => {
-        const mode = button.getAttribute('data-consent-mode');
-        const analyticsChoice = mode === 'all' || mode === 'analytics' ? 'granted' : 'denied';
-        const advertisingChoice = mode === 'all' ? 'granted' : 'denied';
-        setConsent(analyticsChoice);
-        setAdvertisingConsent(advertisingChoice);
-        try {
-          window.localStorage.setItem(analyticsKey, analyticsChoice);
-          window.localStorage.setItem(advertisingKey, advertisingChoice);
-        } catch (_) {}
-        banner.hidden = true;
-        settings.hidden = false;
-        settings.setAttribute('aria-label', `Privacy settings; analytics ${analyticsChoice}, advertising ${advertisingChoice}`);
-        root.GlobalRoute?.Monetization?.refreshAfterConsent?.();
-        settings.focus();
+    syncConsentInputs(banner);
+
+    const saveButton = banner.querySelector('[data-save-consent]');
+    if (saveButton && saveButton.dataset.consentBound !== 'true') {
+      saveButton.dataset.consentBound = 'true';
+      saveButton.addEventListener('click', () => {
+        const analyticsChoice = banner.querySelector('[data-consent-option="analytics"]')?.checked ? 'granted' : 'denied';
+        const advertisingChoice = banner.querySelector('[data-consent-option="advertising"]')?.checked ? 'granted' : 'denied';
+        persistConsentChoices(analyticsChoice, advertisingChoice, analyticsKey, advertisingKey, banner, settings);
       });
-    });
+    }
+
+    const rejectButton = banner.querySelector('[data-reject-consent]');
+    if (rejectButton && rejectButton.dataset.consentBound !== 'true') {
+      rejectButton.dataset.consentBound = 'true';
+      rejectButton.addEventListener('click', () => {
+        syncConsentInputs(banner, false, false);
+        persistConsentChoices('denied', 'denied', analyticsKey, advertisingKey, banner, settings);
+      });
+    }
 
     banner.hidden = consentState !== 'unknown' && advertisingConsentState !== 'unknown';
     settings.hidden = !banner.hidden;
     settings.setAttribute('aria-label', `Privacy settings; analytics ${consentState}, advertising ${advertisingConsentState}`);
+  }
+
+  function syncConsentInputs(panel, analyticsGranted = consentState === 'granted', advertisingGranted = advertisingConsentState === 'granted') {
+    const analyticsInput = panel.querySelector('[data-consent-option="analytics"]');
+    const advertisingInput = panel.querySelector('[data-consent-option="advertising"]');
+    if (analyticsInput) analyticsInput.checked = analyticsGranted;
+    if (advertisingInput) advertisingInput.checked = advertisingGranted;
+  }
+
+  function persistConsentChoices(analyticsChoice, advertisingChoice, analyticsKey, advertisingKey, banner, settings) {
+    setConsent(analyticsChoice);
+    setAdvertisingConsent(advertisingChoice);
+    try {
+      window.localStorage.setItem(analyticsKey, analyticsChoice);
+      window.localStorage.setItem(advertisingKey, advertisingChoice);
+    } catch (_) {}
+    banner.hidden = true;
+    settings.hidden = false;
+    settings.setAttribute('aria-label', `Privacy settings; analytics ${analyticsChoice}, advertising ${advertisingChoice}`);
+    root.GlobalRoute?.Monetization?.refreshAfterConsent?.();
+    settings.focus();
   }
 
   function setConsent(state) {
