@@ -113,3 +113,11 @@ describe('canonical route engine', () => {
     expect(result.reasons[0]).toMatch(/experience requirement/);
   });
 });
+
+describe('route recommendation safety regressions',()=>{
+const work={id:'gb-work',countryId:'GB',type:'work',status:'publishable',evidenceIds:['evidence-work'],sourceUrl:'https://example.gov/work'};
+test('absence of structured requirements is not proof of eligibility',()=>{const r=recommend({goal:'work'},[{id:'GB',dataStatus:'evidence_required'}],[{...work}],5);expect(r).toHaveLength(1);expect(r[0].pathway.requirements).toBeUndefined();expect(r[0].country.dataStatus).toBe('evidence_required');});
+test('missing country reference is not recommended',()=>{expect(recommend({goal:'work'},[],[{...work}],5)).toHaveLength(0);});
+test('research-required routes are never recommended',()=>{expect(recommend({goal:'work'},[{id:'GB',dataStatus:'publishable'}],[{...work,status:'research_required'}],5)).toHaveLength(0);});
+test('unknown thresholds are not defaulted to zero or reported compatible',()=>{const r=scorePathway({...work,minFunds:undefined,minExperienceYears:undefined,minMonthlyIncome:undefined},{id:'GB',dataStatus:'evidence_required'},{goal:'work'});expect(r.eligible).toBe(true);expect(r.score).toBe(35);expect(r.reasons).not.toContain('budget appears compatible');expect(r.reasons).not.toContain('experience requirement appears compatible');expect(r.reasons).not.toContain('income requirement appears compatible');});
+});

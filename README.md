@@ -2,20 +2,20 @@
 
 **Radical Transparency for African Students, Professionals & Business Owners**
 
-**Status:** Phase 2 Complete - Blog Foundation Launched 🚀  
-**Progress:** 10 pages built | 5 blog posts live | 35 files | 70K+ words
+**Current status (2026-10-11):** Active development — **release NO-GO**. Phase 0 production exit is blocked; Phases 1–5 remain incomplete and Phase 6 is deferred. See [active sprint](docs/sprints/ACTIVE_SPRINT.md), [phase tracker](docs/project/PHASE_STATUS.md), and [release verification](docs/project/RELEASE_VERIFICATION_2026-10-08.md).  
+**Current data baseline:** 26 countries, 56 pathways (52 publishable / 4 research-required), 193 evidence records; country source review is in progress. Aggregate approval rates, costs and timelines remain null where field-level evidence is missing.
 
 ---
 
 ## 📋 Project Overview
 
-Global Route is a content-driven platform providing verified, actionable migration pathways for African passport holders. Unlike inflated visa approval statistics, we audit **true acceptance rates** and hidden costs across 26 countries, offering sector-specific strategies for students, professionals, and business owners.
+Global Route is an evidence-gated mobility platform for African passport holders. It organizes migration pathways, official source trails and requirements for students and professionals. It does not claim true acceptance rates or total costs where reliable field-level evidence and a defensible methodology are unavailable.
 
 **Mission:** Empower African talent to navigate global mobility with honesty, strategy, and confidence.
 
 ---
 
-## 🚀 What's New (July 21, 2026)
+## Historical milestone — July 21, 2026 (not current project status)
 
 ### Blog Foundation Launched
 - ✅ **5 cornerstone articles** written (25,400+ words)
@@ -34,13 +34,13 @@ Global Route is a content-driven platform providing verified, actionable migrati
 
 ## 🎯 Core Features
 
-- **Country Reality Audits:** True visa approval rates for African applicants
+- **Country/source registry:** Evidence-gated country metadata; unsupported approval rates, costs and timelines remain unknown
 - **Budget Calculators:** Interactive tools to find affordable pathways
 - **Sector-Specific Playbooks:** Student, Professional, and Business strategies
 - **Cost Breakdowns:** Transparent financial barriers (tuition, blocked accounts, etc.)
 - **Blog Content:** 25K+ words across 5 cornerstone articles
 - **SEO-Optimized Content:** High-intent keywords for organic discovery
-- **AdMob Monetization:** Contextually relevant travel & financial services ads
+- **Monetization:** Consent-aware foundations only; no live provider, partner or revenue status is implied
 
 ---
 

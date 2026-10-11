@@ -1,0 +1,503 @@
+{
+  "manifestVersion": 1,
+  "registryPath": "src/data/countries.json",
+  "registryDatasetAsOf": "2026-09-05",
+  "countryCount": 26,
+  "policy": "Tracks country-level source-anchor review only; does not verify pathway-specific eligibility, funds, costs, approval rates or timelines. Tool errors are not evidence a source is down. Human sign-off is required before freshness metadata advances.",
+  "countries": [
+    {
+      "countryId": "GB",
+      "countryName": "United Kingdom",
+      "authority": "UK Visas and Immigration",
+      "registeredUrl": "https://www.gov.uk/browse/visas-immigration",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_relevant_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Registered URL opened and landing-page content inspected",
+        "observedTitle": "Visas and immigration - GOV.UK",
+        "observedUrl": "https://www.gov.uk/browse/visas-immigration",
+        "evidenceUrl": "https://www.gov.uk/browse/visas-immigration",
+        "outcome": "Official UK government hub for visit, work, study, family and settlement.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "CA",
+      "countryName": "Canada",
+      "authority": "Government of Canada",
+      "registeredUrl": "https://www.canada.ca/en/services/immigration-citizenship.html",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_relevant_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Registered URL opened and landing-page content inspected",
+        "observedTitle": "Immigration and citizenship - Canada.ca",
+        "observedUrl": "https://www.canada.ca/en/services/immigration-citizenship.html",
+        "evidenceUrl": "https://www.canada.ca/en/services/immigration-citizenship.html",
+        "outcome": "Official Government of Canada immigration hub; page details showed 2026-09-28.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "AU",
+      "countryName": "Australia",
+      "authority": "Department of Home Affairs",
+      "registeredUrl": "https://immi.homeaffairs.gov.au/",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_relevant_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Registered URL opened and landing-page content inspected",
+        "observedTitle": "Immigration and citizenship",
+        "observedUrl": "https://immi.homeaffairs.gov.au/",
+        "evidenceUrl": "https://immi.homeaffairs.gov.au/",
+        "outcome": "Department of Home Affairs immigration and citizenship entry point.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "NZ",
+      "countryName": "New Zealand",
+      "authority": "Immigration New Zealand",
+      "registeredUrl": "https://www.immigration.govt.nz/",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_relevant_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Registered URL opened and landing-page content inspected",
+        "observedTitle": "Immigration New Zealand",
+        "observedUrl": "https://www.immigration.govt.nz/",
+        "evidenceUrl": "https://www.immigration.govt.nz/",
+        "outcome": "Official portal covers visit, study, work and residence.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "IE",
+      "countryName": "Ireland",
+      "authority": "Immigration Service Delivery",
+      "registeredUrl": "https://www.irishimmigration.ie/",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_relevant_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Registered URL opened and landing-page content inspected",
+        "observedTitle": "Irish Immigration Service",
+        "observedUrl": "https://www.irishimmigration.ie/",
+        "evidenceUrl": "https://www.irishimmigration.ie/",
+        "outcome": "Official immigration service entry point with visit, work, study, live and family categories.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "DE",
+      "countryName": "Germany",
+      "authority": "Federal Foreign Office",
+      "registeredUrl": "https://www.auswaertiges-amt.de/en/visa-service",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_relevant_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Registered URL opened and landing-page content inspected",
+        "observedTitle": "Visa & Service - Federal Foreign Office",
+        "observedUrl": "https://www.auswaertiges-amt.de/en/visa-service",
+        "evidenceUrl": "https://www.auswaertiges-amt.de/en/visa-service",
+        "outcome": "Official Federal Foreign Office visa-service entry point.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "IT",
+      "countryName": "Italy",
+      "authority": "Italian Ministry of Foreign Affairs",
+      "registeredUrl": "https://vistoperitalia.esteri.it/",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_relevant_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Registered URL opened and landing-page content inspected",
+        "observedTitle": "Italian visa portal",
+        "observedUrl": "https://vistoperitalia.esteri.it/",
+        "evidenceUrl": "https://vistoperitalia.esteri.it/",
+        "outcome": "Official Italian visa portal opened; no pathway-specific Flussi claim verified.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "FR",
+      "countryName": "France",
+      "authority": "France-Visas",
+      "registeredUrl": "https://france-visas.gouv.fr/",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_relevant_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Registered URL opened and landing-page content inspected",
+        "observedTitle": "France-Visas",
+        "observedUrl": "https://france-visas.gouv.fr/",
+        "evidenceUrl": "https://france-visas.gouv.fr/",
+        "outcome": "Official France-Visas portal.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "HU",
+      "countryName": "Hungary",
+      "authority": "National Directorate-General for Aliens Policing",
+      "registeredUrl": "https://oif.gov.hu/",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_relevant_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Registered URL opened and landing-page content inspected",
+        "observedTitle": "OIF",
+        "observedUrl": "https://oif.gov.hu/",
+        "evidenceUrl": "https://oif.gov.hu/",
+        "outcome": "Official National Directorate-General for Aliens Policing site; confirm preferred English entry point.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "FI",
+      "countryName": "Finland",
+      "authority": "Finnish Immigration Service",
+      "registeredUrl": "https://migri.fi/en/home",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_alternate_official_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Official alternative/indexed page inspected; direct registered URL not always retrievable",
+        "observedTitle": "Home | Maahanmuuttovirasto",
+        "observedUrl": "https://migri.fi/en/home?userLang=en",
+        "evidenceUrl": "https://migri.fi/en/home?userLang=en",
+        "outcome": "Official Finnish Immigration Service page covers permits and citizenship; registered URL not directly retrievable by tool.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "SE",
+      "countryName": "Sweden",
+      "authority": "Swedish Migration Agency",
+      "registeredUrl": "https://www.migrationsverket.se/",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_authority_homepage_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Registered URL opened and landing-page content inspected",
+        "observedTitle": "Migrationsverket",
+        "observedUrl": "https://www.migrationsverket.se/",
+        "evidenceUrl": "https://www.migrationsverket.se/",
+        "outcome": "Official Swedish Migration Agency homepage opened; confirm English entry point.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "NO",
+      "countryName": "Norway",
+      "authority": "Norwegian Directorate of Immigration",
+      "registeredUrl": "https://www.udi.no/en/",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_alternate_official_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Official alternative/indexed page inspected; direct registered URL not always retrievable",
+        "observedTitle": "Immigration to Norway - UDI",
+        "observedUrl": "https://www.udi.no/EN",
+        "evidenceUrl": "https://www.udi.no/EN",
+        "outcome": "Official UDI page covers applications, renewals, checklists and waiting times.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "LU",
+      "countryName": "Luxembourg",
+      "authority": "Guichet.lu",
+      "registeredUrl": "https://guichet.public.lu/en.html",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "redirected_needs_manual_confirmation_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Registered URL opened and redirect recorded",
+        "observedTitle": "Citizens - Guichet.lu",
+        "observedUrl": "https://guichet.public.lu/en/citoyens.html",
+        "evidenceUrl": "https://guichet.public.lu/en/citoyens.html",
+        "outcome": "Official portal redirects to a general citizens page; immigration entry-point specificity remains unconfirmed.",
+        "nextReviewDue": null
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "LT",
+      "countryName": "Lithuania",
+      "authority": "Migration Department of Lithuania",
+      "registeredUrl": "https://migracija.lrv.lt/en/",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_relevant_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Registered URL opened and landing-page content inspected",
+        "observedTitle": "Lithuania Migration Department",
+        "observedUrl": "https://migracija.lrv.lt/en/",
+        "evidenceUrl": "https://migracija.lrv.lt/en/",
+        "outcome": "Official Migration Department English entry point.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "IS",
+      "countryName": "Iceland",
+      "authority": "Directorate of Immigration Iceland",
+      "registeredUrl": "https://island.is/en/o/directorate-of-immigration",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_alternate_official_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Official alternative/indexed page inspected; direct registered URL not always retrievable",
+        "observedTitle": "Directorate of Immigration",
+        "observedUrl": "https://island.is/en/o/directorate-of-immigration",
+        "evidenceUrl": "https://island.is/en/o/directorate-of-immigration",
+        "outcome": "Official page lists residence permits, visas, citizenship and international protection.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "PT",
+      "countryName": "Portugal",
+      "authority": "AIMA / Portuguese Government",
+      "registeredUrl": "https://aima.gov.pt/",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_alternate_official_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Official alternative/indexed page inspected; direct registered URL not always retrievable",
+        "observedTitle": "AIMA residence permit requirements",
+        "observedUrl": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-regime-e-requisitos-gerais-art-o-77-o-n-o-1",
+        "evidenceUrl": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-regime-e-requisitos-gerais-art-o-77-o-n-o-1",
+        "outcome": "Official AIMA residence-permit page; registered root needs direct human confirmation.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "ES",
+      "countryName": "Spain",
+      "authority": "Spanish Ministry of Inclusion, Social Security and Migration",
+      "registeredUrl": "https://www.inclusion.gob.es/",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_authority_homepage_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Registered URL opened and landing-page content inspected",
+        "observedTitle": "Spanish Ministry of Inclusion and Migration",
+        "observedUrl": "https://www.inclusion.gob.es/",
+        "evidenceUrl": "https://www.inclusion.gob.es/",
+        "outcome": "Official ministry homepage includes migration in its remit.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "AT",
+      "countryName": "Austria",
+      "authority": "Austrian Government",
+      "registeredUrl": "https://www.oesterreich.gv.at/en/themen/menschen_aus_anderen_staaten",
+      "registryRetrievedAt": "2026-10-11",
+      "review": {
+        "status": "reviewed_alternate_official_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Official alternative/indexed page inspected; direct registered URL not always retrievable",
+        "observedTitle": "People from other countries",
+        "observedUrl": "https://www.oesterreich.gv.at/en/themen/menschen_aus_anderen_staaten",
+        "evidenceUrl": "https://www.oesterreich.gv.at/en/themen/menschen_aus_anderen_staaten",
+        "outcome": "Official Austrian government page covers residence, asylum, citizenship and visas; registry anchor updated.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "JP",
+      "countryName": "Japan",
+      "authority": "Immigration Services Agency of Japan",
+      "registeredUrl": "https://www.moj.go.jp/isa/",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_alternate_official_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Official alternative/indexed page inspected; direct registered URL not always retrievable",
+        "observedTitle": "Immigration Services Agency of Japan",
+        "observedUrl": "https://www.moj.go.jp/isa/guidebook_all.html",
+        "evidenceUrl": "https://www.moj.go.jp/isa/guidebook_all.html",
+        "outcome": "Official agency page found; preferred English entry point needs human confirmation.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "KR",
+      "countryName": "South Korea",
+      "authority": "Korea Immigration Service",
+      "registeredUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_relevant_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Registered URL opened and landing-page content inspected",
+        "observedTitle": "Korea Immigration Service",
+        "observedUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
+        "evidenceUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
+        "outcome": "Official English-language immigration service entry point.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "CN",
+      "countryName": "China",
+      "authority": "National Immigration Administration of China",
+      "registeredUrl": "https://en.nia.gov.cn/",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_relevant_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Registered URL opened and landing-page content inspected",
+        "observedTitle": "National Immigration Administration",
+        "observedUrl": "https://en.nia.gov.cn/",
+        "evidenceUrl": "https://en.nia.gov.cn/",
+        "outcome": "Official National Immigration Administration English site.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "PL",
+      "countryName": "Poland",
+      "authority": "Office for Foreigners Poland",
+      "registeredUrl": "https://www.gov.pl/web/udsc-en",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_relevant_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Registered URL opened and landing-page content inspected",
+        "observedTitle": "Office for Foreigners",
+        "observedUrl": "https://www.gov.pl/web/udsc-en",
+        "evidenceUrl": "https://www.gov.pl/web/udsc-en",
+        "outcome": "Official Polish Office for Foreigners English entry point.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "MT",
+      "countryName": "Malta",
+      "authority": "Identità Malta",
+      "registeredUrl": "https://identita.gov.mt/",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_alternate_official_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Official alternative/indexed page inspected; direct registered URL not always retrievable",
+        "observedTitle": "Working & Residing in Malta - Identità",
+        "observedUrl": "https://identita.gov.mt/working-residing-in-malta/",
+        "evidenceUrl": "https://identita.gov.mt/working-residing-in-malta/",
+        "outcome": "Official page states the Expatriates Unit handles residence documents and migration policy.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "RU",
+      "countryName": "Russia",
+      "authority": "Russian Ministry of Foreign Affairs",
+      "registeredUrl": "https://mid.ru/en/",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "manual_review_required_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Registered URL could not be inspected; no official alternative verified",
+        "observedTitle": null,
+        "observedUrl": null,
+        "evidenceUrl": null,
+        "outcome": "Registered URL could not be inspected and no alternate official source verified; this is not evidence the site is down.",
+        "nextReviewDue": null
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "CH",
+      "countryName": "Switzerland",
+      "authority": "State Secretariat for Migration Switzerland",
+      "registeredUrl": "https://www.sem.admin.ch/sem/en/home.html",
+      "registryRetrievedAt": "2026-09-05",
+      "review": {
+        "status": "reviewed_authority_homepage_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Registered URL opened and landing-page content inspected",
+        "observedTitle": "Swiss State Secretariat for Migration",
+        "observedUrl": "https://www.sem.admin.ch/sem/en/home.html",
+        "evidenceUrl": "https://www.sem.admin.ch/sem/en/home.html",
+        "outcome": "Official State Secretariat for Migration English homepage.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "CZ",
+      "countryName": "Czechia",
+      "authority": "Ministry of the Interior of the Czech Republic",
+      "registeredUrl": "https://ipc.gov.cz/en/",
+      "registryRetrievedAt": "2026-10-11",
+      "review": {
+        "status": "reviewed_replacement_found_human_signoff_pending",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
+        "method": "Old URL redirected to archive; official replacement inspected",
+        "observedTitle": "Official Information Portal for Foreigners",
+        "observedUrl": "https://ipc.gov.cz/en/",
+        "evidenceUrl": "https://ipc.gov.cz/en/",
+        "outcome": "Old Ministry URL redirects to archive; current official Ministry of Interior portal found and registry anchor updated.",
+        "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    }
+  ]
+}

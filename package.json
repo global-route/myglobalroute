@@ -21,9 +21,11 @@
     "seo:a11y:verify": "node scripts/verify-seo-a11y.js",
     "deploy": "npm run build && wrangler deploy",
     "deploy:verify": "node scripts/verify-deployed-site.js",
-    "verify": "npm run data:validate && npm run requirements:readiness && npm run evidence:freshness && npm run commercial:validate && npm run evidence:candidates && npm test -- --runInBand && npm run build && npm run build:verify && npm run seo:a11y:verify && npm run lint",
+    "verify": "npm run data:validate && npm run data:country-manifest && npm run requirements:readiness && npm run evidence:freshness && npm run commercial:validate && npm run evidence:candidates && npm test -- --runInBand && npm run build && npm run build:verify && npm run seo:a11y:verify && npm run lint",
     "requirements:readiness": "node scripts/report-requirement-readiness.js",
-    "evidence:freshness": "node scripts/report-evidence-freshness.js"
+    "evidence:freshness": "node scripts/report-evidence-freshness.js",
+    "data:country-manifest": "node scripts/generate-country-source-manifest.js --check",
+    "data:country-manifest:write": "node scripts/generate-country-source-manifest.js --write"
   },
   "keywords": [
     "visa",
