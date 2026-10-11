@@ -11,7 +11,10 @@
     let score = 0;
     const reasons = [];
     const goal = profile.goal || 'any';
-    const budget = number(profile.budget);
+    const rawBudget = profile.budget;
+    const parsedBudget = Number(rawBudget);
+    const hasValidBudget = rawBudget !== undefined && rawBudget !== null && String(rawBudget).trim() !== '' && Number.isFinite(parsedBudget) && parsedBudget >= 0;
+    const budget = hasValidBudget ? parsedBudget : 0;
     const income = number(profile.monthlyIncome);
     const experience = number(profile.experienceYears);
     if (goal !== 'any' && pathway.type === goal) { score += 35; reasons.push('matches your stated route goal'); }
@@ -26,9 +29,12 @@
       if (income >= number(pathway.minMonthlyIncome)) { score += 10; reasons.push('income requirement appears compatible'); }
       else return { score: 0, reasons: ['income requirement is a likely blocker'], eligible: false };
     }
-    if (pathway.minFunds !== undefined && budget > 0) {
-      if (budget >= number(pathway.minFunds)) { score += 15; reasons.push('budget appears compatible'); }
-      else return { score: 0, reasons: ['available budget is below the known minimum funds requirement'], eligible: false };
+    if (pathway.minFunds !== undefined) {
+      const minimumFunds = number(pathway.minFunds);
+      if (minimumFunds > 0 && (!hasValidBudget || budget < minimumFunds)) {
+        return { score: 0, reasons: ['a valid budget meeting the known minimum funds requirement is required'], eligible: false };
+      }
+      if (minimumFunds > 0) { score += 15; reasons.push('budget appears compatible'); }
     }
     return { score: clamp(score, 0, 100), reasons, eligible: true };
   }
