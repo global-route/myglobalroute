@@ -32,7 +32,7 @@ function validateRequirement(requirement, pathway, evidenceById) {
       const evidence = evidenceById.get(id);
       if (!evidence) fail(`evidence ${id} does not exist`);
       else {
-        if (evidence.pathwayId !== pathway.id) fail(`evidence ${id} does not belong to pathway ${pathway.id}`);
+        if (evidence.pathwayId !== pathway.id) fail(`evidence ${id} does not belong to route ${pathway.id}`);
         if (definition && evidence.field !== definition.evidenceField) fail(`evidence ${id} must support field ${definition.evidenceField}`);
         if (requirement.sourceUrl && evidence.sourceUrl !== requirement.sourceUrl) fail(`sourceUrl must match cited evidence ${id}`);
         if (requirement.jurisdiction && evidence.jurisdiction !== requirement.jurisdiction) fail(`jurisdiction must match cited evidence ${id}`);
@@ -71,16 +71,16 @@ function validatePathwayRequirements(pathways, evidenceRecords) {
   for (const pathway of pathways) {
     if (pathway.requirements === undefined) continue;
     if (!Array.isArray(pathway.requirements)) {
-      errors.push(`pathway ${pathway.id} requirements must be an array`);
+      errors.push(`route ${pathway.id} requirements must be an array`);
       continue;
     }
     const ids = new Set();
     for (const [index, requirement] of pathway.requirements.entries()) {
       const requirementId = requirement?.id || `index ${index}`;
-      if (ids.has(requirement?.id)) errors.push(`pathway ${pathway.id} has duplicate requirement id ${requirement.id}`);
+      if (ids.has(requirement?.id)) errors.push(`route ${pathway.id} has duplicate requirement id ${requirement.id}`);
       if (requirement?.id) ids.add(requirement.id);
       for (const error of validateRequirement(requirement, pathway, evidenceById)) {
-        errors.push(`pathway ${pathway.id} requirement ${requirementId}: ${error}`);
+        errors.push(`route ${pathway.id} requirement ${requirementId}: ${error}`);
       }
     }
   }
