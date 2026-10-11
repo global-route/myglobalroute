@@ -7,7 +7,7 @@
 **Estimated effort:** 1-2 hours  
 **Confidence:** High (all evidence complete, application-document and points matrices attached)
 
-## What's Done
+## Historical checkpoint notes (not a current completion report)
 
 ✅ All evidence is complete and attached to the exact candidate  
 ✅ Application-document matrix present (official requirements)  
@@ -31,12 +31,12 @@ Execute final promotion validation for Austria Other Key Workers:
   - application-document-matrix ✓
   - points-validation ✓
 
-**Current Status:**
+**Historical candidate status at time of writing (not current):**
 - Candidate status: `research_required`
 - Missing material fields: `["promotion-validation"]`
 - Scope note: "Exact sub-route candidate. Official application-document and points-validation matrices are now attached; final promotion validation remains open."
 
-## Promotion Gate Criteria
+## Historical promotion gate criteria (retained for audit)
 
 For Austria Other Key Workers, verify:
 - [ ] All 5 required evidence IDs are present and valid

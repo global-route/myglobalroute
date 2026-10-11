@@ -7,7 +7,7 @@
 **Estimated effort:** 1-2 hours per route (3 routes total)  
 **Confidence:** High (all evidence complete, tests passing)
 
-## What's Done
+## Historical checkpoint notes (not a current completion report)
 
 ✅ All evidence is complete and attached to the exact candidates  
 ✅ All regression tests are passing (4/4 NZ SMC promotion gates)  
@@ -37,7 +37,7 @@ Execute final promotion validation for the three NZ SMC child routes:
    - Test: `tests/nz-smc-promotion-gates.test.js` (passing)
    - Action: Validate against promotion gate criteria and mark status
 
-## Promotion Gate Criteria
+## Historical promotion gate criteria (retained for audit)
 
 For each route, verify:
 - [ ] All required evidence IDs are present and valid
