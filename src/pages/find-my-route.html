@@ -15,27 +15,18 @@
   <main id="main" class="main">
     <section class="container" aria-labelledby="route-title">
       <h1 id="route-title">Find My Route</h1>
-      <p>Recommendations are deliberately conservative: a pathway is only recommended after its material claims have passed evidence review.</p>
+      <p>This page filters evidence-gated pathways by goal; it is not an eligibility decision or approval prediction. Budget, income and experience are not yet structured as comparable, evidence-backed route fields, so they are not collected or used for ranking.</p>
       <form id="route-form">
         <label>Goal
           <select name="goal">
-            <option value="any">Any</option><option value="study">Study</option><option value="work">Work</option><option value="business">Business</option>
+            <option value="any">Choose a goal</option><option value="study">Study</option><option value="work">Work</option><option value="business" disabled>Business (not yet covered)</option>
           </select>
-        </label>
-        <label>Budget (USD equivalent)
-          <input name="budget" type="number" min="0" inputmode="decimal">
-        </label>
-        <label>Monthly income (USD equivalent)
-          <input name="monthlyIncome" type="number" min="0" inputmode="decimal">
-        </label>
-        <label>Years of relevant experience
-          <input name="experienceYears" type="number" min="0" step="0.5" inputmode="decimal">
         </label>
         <button type="submit" class="btn btn-primary">Find routes</button>
       </form>
       <section id="route-results" aria-live="polite" class="featured" style="margin-top:2rem">
-        <h2>Evidence-gated results</h2>
-        <p>Complete the profile above. Unverified pathways will not be presented as viable recommendations.</p>
+        <h2>Evidence-gated pathway matches</h2>
+        <p>Select Study or Work to view pathways whose exact-route records have passed the current evidence gate. Unverified pathways will not be recommended.</p>
       </section>
     </section>
   </main>
@@ -55,10 +46,10 @@
         const profile = Object.fromEntries(new FormData(form).entries());
         const matches = window.GlobalRoute.RouteEngine.recommend(profile, countries.countries, pathways.pathways, 5);
         if (!matches.length) {
-          results.innerHTML = '<h2>No verified route can be recommended yet</h2><p>No route matched your profile using the current evidence-gated rules. Some country-level cost, timeline and approval-rate fields remain unavailable; those fields are not inferred from pathway evidence. Verify exact requirements with the linked official authority before acting.</p>';
+          results.innerHTML = '<h2>No pathway matches yet</h2><p>Choose Study or Work to filter the current registry. We do not rank arbitrary pathways when no goal is selected. Business pathways and structured route-level budget, income and experience filters are not yet available.</p>';
           return;
         }
-        results.innerHTML = '<h2>Recommended routes</h2>' + matches.map(match => `<article><h3>${escapeHtml(match.country.name)} — ${escapeHtml(match.pathway.name)}</h3><p>Fit score: ${match.score}/100</p><ul>${match.reasons.map(reason => `<li>${escapeHtml(reason)}</li>`).join('')}</ul><a href="${escapeHtml(match.pathway.sourceUrl)}" rel="noopener noreferrer">Review official source</a></article>`).join('');
+        results.innerHTML = '<h2>Pathways matching your goal</h2><p>These are goal matches, not eligibility assessments. Review the official source and confirm current requirements before acting.</p>' + matches.map(match => `<article><h3>${escapeHtml(match.country.name)} — ${escapeHtml(match.pathway.name)}</h3><ul>${match.reasons.map(reason => `<li>${escapeHtml(reason)}</li>`).join('')}</ul><a href="${escapeHtml(match.pathway.sourceUrl)}" rel="noopener noreferrer">Review official source</a></article>`).join('');
       } catch (error) {
         results.innerHTML = `<h2>Route engine unavailable</h2><p>${escapeHtml(error.message)}</p>`;
       }
