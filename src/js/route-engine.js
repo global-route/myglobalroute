@@ -8,6 +8,11 @@
     if (!pathway || !country || pathway.status !== 'publishable' || country.dataStatus !== 'publishable') {
       return { score: 0, reasons: ['not recommendation-eligible until evidence review is complete'], eligible: false };
     }
+    const hasEvidenceIds = Array.isArray(pathway.evidenceIds) && pathway.evidenceIds.length > 0 && pathway.evidenceIds.every(id => typeof id === 'string' && id.trim().length > 0);
+    const hasSecureSource = typeof pathway.sourceUrl === 'string' && /^https:\/\//i.test(pathway.sourceUrl);
+    if (!hasEvidenceIds || !hasSecureSource) {
+      return { score: 0, reasons: ['missing evidence references or secure source provenance'], eligible: false };
+    }
     let score = 0;
     const reasons = [];
     const goal = profile.goal || 'any';
