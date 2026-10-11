@@ -1,6 +1,6 @@
 # Active Sprint — Production Integrity & Migration Intelligence
 
-> **Execution adjustment — 2026-10-11:** Test-writing and test-running work is paused by user direction. Continue non-test data/schema/documentation work; do not claim new changes are validated. The last fully verified source-tree SHA remains `89998ab5410aceb6dede8e997dae0b836d3b4d92`.
+> **Execution adjustment — 2026-10-11:** Test-writing, test-running and CI execution are paused by user direction. Continue non-test implementation, data/schema and documentation work; do not claim new changes are validated. The last fully verified source-tree SHA remains `89998ab5410aceb6dede8e997dae0b836d3b4d92`.
 
 **Reconciled:** 2026-10-11 | **Branch:** `main`
 **Release:** **NO-GO**
