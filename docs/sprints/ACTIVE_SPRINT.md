@@ -60,3 +60,10 @@ Last fully verified same-SHA CI checkpoint before this status reconciliation: `f
 3. **P1-REQ — Structured requirements:** extend only from exact official sources; preserve effective date, family size, region, expense components, exemptions and alternative rules. Current coverage is 9 declarations across 2 pathways; 54/56 pathways remain unstructured.
 4. **P1-ROUTE — Recommendation safety:** add and verify stale/mismatched evidence, missing-input, alternatives, threshold-boundary and no-match tests.
 5. **P1-SEO / P1-PRIV:** proceed on work that does not require an unverified production origin; absolute canonical URLs, live consent verification and production claims remain gated.
+
+
+## Handover reconciliation — 2026-10-11
+
+The sprint is **not complete**. Task statuses remain as listed above: P0-S1 complete with explicit blocked candidates; P0-S2 audit complete but source work ongoing; P0-S3/P0-S4 source-tree verified; P0-S5 active and externally blocked; P1-DATA, P1-REQ, P1-ROUTE, P1-SEO and P1-PRIV open; P1-REV foundations only. Do not mark the sprint or Phase 0/1 complete based on green CI alone.
+
+Next executable sprint handover: [P1-S1 Country Source Refresh & Dataset Reconciliation](NEXT_SPRINT_P1_DATA_REFRESH.md). Cross-task/phase handover: [Handover — 2026-10-11](HANDOVER_NEXT_P1_S1_2026-10-11.md).
