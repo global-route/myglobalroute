@@ -1,15 +1,11 @@
 'use strict';
 
-const REQUIREMENT_FIELDS = Object.freeze({
-  minimum_funds: { kind: 'money', evidenceField: 'financial-requirement' },
-  minimum_monthly_income: { kind: 'money', evidenceField: 'financial-requirement' },
-  minimum_experience_years: { kind: 'number', evidenceField: 'eligibility' },
-  language_test: { kind: 'language', evidenceField: 'eligibility' },
-  qualification: { kind: 'text', evidenceField: 'eligibility' },
-  job_offer: { kind: 'boolean', evidenceField: 'eligibility' },
-  admission_offer: { kind: 'boolean', evidenceField: 'eligibility' },
-  sponsorship: { kind: 'boolean', evidenceField: 'eligibility' }
-});
+const fs = require('node:fs');
+const path = require('node:path');
+const schema = JSON.parse(fs.readFileSync(path.join(__dirname, '../src/data/pathway-requirement-schema.json'), 'utf8'));
+const REQUIREMENT_FIELDS = Object.freeze(Object.fromEntries(
+  Object.entries(schema.fields).map(([field, definition]) => [field, { kind: definition.kind, evidenceField: definition.evidenceField }])
+));
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 function isRealIsoDate(value) {
@@ -50,6 +46,7 @@ function validateRequirement(requirement, pathway, evidenceById) {
     if (typeof requirement.value !== 'number' || !Number.isFinite(requirement.value) || requirement.value <= 0) fail('money value must be a positive finite number');
     if (typeof requirement.currency !== 'string' || !/^[A-Z]{3}$/.test(requirement.currency)) fail('currency must be a three-letter uppercase code');
     if (!['total', 'monthly', 'annual'].includes(requirement.period)) fail('period must be total, monthly or annual');
+    if (requirement.field === 'minimum_monthly_income' && requirement.period !== 'monthly') fail('minimum_monthly_income period must be monthly');
   } else if (definition?.kind === 'number') {
     if (typeof requirement.value !== 'number' || !Number.isFinite(requirement.value) || requirement.value < 0) fail('numeric value must be a non-negative finite number');
     if (requirement.unit !== 'years') fail('unit must be years');
