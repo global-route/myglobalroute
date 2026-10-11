@@ -188,3 +188,11 @@ Quality Gate output: 26 countries, 56 pathways, 193 evidence records; 0 dependen
 - Browser Smoke — PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183936
 
 The application/data implementation is verified on one SHA. The later commit only added the explicit manifest check to the Quality Gate workflow and changelog; all three workflows are now green on that later SHA. Do not mark P1-S1, P0-S5, or any phase complete based on these CI results alone.
+
+
+## Verification reconciliation — 2026-10-11
+- Current verified implementation/data SHA: `95f960c081367305dea0144034d48a4ab7892426`; Quality Gate, Lint and Browser Smoke passed on this exact SHA.
+- CI workflow follow-up SHA: `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`; Quality Gate, Lint and Browser Smoke also passed on this exact SHA. Run links are recorded in `docs/sprints/ACTIVE_SPRINT.md` and this release record.
+- Structured requirements now total 12 declarations across 5/56 pathways; 51 remain unstructured. P1-REQ remains open.
+- Country-source review outcomes are recorded for all 26 anchors; relevant official pages/alternatives inspected for 25. Russia requires mission-jurisdiction confirmation for the target applicant market, and human sign-off remains required.
+- Release remains **NO-GO** until P0-S5 external production evidence and human source-review sign-off are complete.

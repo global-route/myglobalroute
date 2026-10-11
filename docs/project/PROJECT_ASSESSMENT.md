@@ -1,6 +1,6 @@
 # Global Route — Current Project Assessment
 
-**Reconciled:** 2026-10-11 | **Branch:** main | **Last fully verified same-SHA CI checkpoint:** `fc3c06a0a6078df4473d2f09015391cff09eef3f` | **Verified implementation SHA:** `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`  
+**Reconciled:** 2026-10-11 | **Branch:** main | **Last fully verified same-SHA CI checkpoint:** `95f960c081367305dea0144034d48a4ab7892426` | **Verified implementation SHA:** `95f960c081367305dea0144034d48a4ab7892426`  
 **Release readiness: NO-GO for production; source-tree CI is green.**
 
 ## Executive finding
@@ -13,7 +13,7 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 
 | Area | Current state | Meaning |
 |---|---|---|
-| Current source | `e7ccd592b703d62867267ddb5573b73a2d2bc0ea` | Assessment baseline |
+| Current source | `95f960c081367305dea0144034d48a4ab7892426` | Assessment baseline |
 | Quality Gate | [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119296014) | 17 suites / 113 tests; 0 dependency vulnerabilities; build and SEO/A11y pass |
 | Lint | [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119295995) | Current main verification |
 | Browser Smoke | [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119295980) | Source-tree only; not production verification |
@@ -59,7 +59,7 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 ### P0 — production release blockers
 1. Confirm authoritative hosting account/project, canonical hostname and custom-domain mapping from provider configuration.
 2. Reconcile Worker name `myglobalroute`, observed Cloudflare build label `globalroute`, and Netlify configuration; do not guess the live provider.
-3. Capture deployed source SHA and compare live registries, assets and routes with `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`.
+3. Capture deployed source SHA and compare live registries, assets and routes with `95f960c081367305dea0144034d48a4ab7892426`.
 4. Run `npm run deploy:verify` and smoke-test homepage, country/pathway deep links, JSON, calculator and route matching against the confirmed origin.
 5. Inspect actual live CSP/security headers against the actual script/analytics/ad/partner inventory.
 6. Obtain owner-level main-branch protection/ruleset and required-check evidence.
@@ -94,7 +94,7 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 
 ## Latest verification/status reconciliation — 2026-10-11
 
-Last fully verified same-SHA CI checkpoint before this status reconciliation: `fc3c06a0a6078df4473d2f09015391cff09eef3f`; verified implementation SHA: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`. Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957166), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957132), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957147) on the same current main SHA. The country source checklist is ready but no anchor is marked reviewed; `dataset.asOf=2026-09-05` remains stale by design until all 26 reviews are evidenced. Current phase status is canonical in `PHASE_STATUS.md`: Phase 0 exit blocked, Phase 1 incomplete, Phase 2 decision-quality incomplete, Phase 3/4 partial, Phase 5 not live, Phase 6 deferred. No phase completion percentage should override those exit gates.
+Last fully verified same-SHA CI checkpoint before this status reconciliation: `95f960c081367305dea0144034d48a4ab7892426`; verified implementation SHA: `95f960c081367305dea0144034d48a4ab7892426`. Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957166), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957132), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957147) on the same current main SHA. The country source checklist is ready but no anchor is marked reviewed; `dataset.asOf=2026-09-05` remains stale by design until all 26 reviews are evidenced. Current phase status is canonical in `PHASE_STATUS.md`: Phase 0 exit blocked, Phase 1 incomplete, Phase 2 decision-quality incomplete, Phase 3/4 partial, Phase 5 not live, Phase 6 deferred. No phase completion percentage should override those exit gates.
 
 
 ## Current delivery delta — 2026-10-11
@@ -115,3 +115,11 @@ Last fully verified same-SHA CI checkpoint before this status reconciliation: `f
 - Luxembourg official third-country immigration alternatives have been identified; the registered homepage still redirects generically.
 - Russia official MFA guidance located in this pass is mission-specific to Denmark and cannot be applied to other nationalities without jurisdiction verification.
 - Current source review: 25/26 entries have relevant official pages or alternatives inspected; one jurisdiction-specific blocker remains and human sign-off is required.
+
+
+## Verification reconciliation — 2026-10-11
+- Current verified implementation/data SHA: `95f960c081367305dea0144034d48a4ab7892426`; Quality Gate, Lint and Browser Smoke passed on this exact SHA.
+- CI workflow follow-up SHA: `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`; Quality Gate, Lint and Browser Smoke also passed on this exact SHA. Run links are recorded in `docs/sprints/ACTIVE_SPRINT.md` and this release record.
+- Structured requirements now total 12 declarations across 5/56 pathways; 51 remain unstructured. P1-REQ remains open.
+- Country-source review outcomes are recorded for all 26 anchors; relevant official pages/alternatives inspected for 25. Russia requires mission-jurisdiction confirmation for the target applicant market, and human sign-off remains required.
+- Release remains **NO-GO** until P0-S5 external production evidence and human source-review sign-off are complete.
