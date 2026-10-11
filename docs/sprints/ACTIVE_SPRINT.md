@@ -14,7 +14,8 @@
 - Extended the schema for maintenance balances, minimum age and points-based thresholds. Australia remains `research_required`; 65 points does not guarantee an invitation and does not close subclass-specific financial evidence gaps.
 - Structured requirement inventory: 19 declarations across 9 pathways; 47/56 pathways have no structured declarations. Missing declarations remain unknown.
 - Added scoped monthly living-funds requirements for Finland and Sweden higher-education study, and a distinct Swedish employer monthly-salary threshold field so employer salary is not conflated with applicant personal income. These declarations are not yet consumed by route matching and remain unvalidated.
-- Implemented independent analytics and advertising consent choices, a persistent Privacy settings control, local preference persistence where available, and an ad-placement gate tied to advertising consent. Updated privacy copy to explain limits and remaining review needs.
+- Implemented independent analytics and advertising consent choices, a persistent Privacy settings control, local preference persistence where available, and an ad-placement gate tied to advertising consent. Updated privacy copy and added an engineering data-inventory draft covering route finder, calculator, consent storage, analytics, contact and monetization flows.
+- Removed the unconnected contact form, which had no submission handler and could otherwise default to GET-style query submission; the page now clearly directs users to email and warns against sending identity documents. The contact/mailbox process remains unverified.
 - Corrected homepage/About copy that overstated approval-rate coverage and universal evidence gating; unsupported rates and costs are now described as unpublished or unverified. Added About-page links to the country registry, disclaimer, privacy and contact pages.
 - Per user direction, testing and CI execution are paused; these changes are **not validated** and do not change the release NO-GO decision.
 
@@ -77,7 +78,7 @@ Quality Gate output on the verified implementation/data SHA:
 | P1-REQ | Structured requirements | **Open / active** | 19 declarations across 9 of 56 pathways; 47 remain unstructured |
 | P1-ROUTE | Recommendation quality | **Active; threshold hardening and boundary/no-match regressions verified at `9ed09f0`** | Continue stale/mismatched evidence, alternatives, missing-input and broader requirement-boundary tests |
 | P1-SEO | Editorial/technical SEO | **Implementation advanced; open** | Homepage/About unsupported claims corrected; canonical origin remains blocked on confirmed production host; continue legacy metadata/links and editorial audit (content changes unvalidated) |
-| P1-PRIV | Privacy/compliance/accessibility | **Implementation advanced; open** | Consent UI and separate analytics/ad choice implemented (unvalidated); complete legal review, data/retention inventory, deployed-provider review and real-browser accessibility checks |
+| P1-PRIV | Privacy/compliance/accessibility | **Implementation advanced; open** | Consent UI and separate analytics/ad choice implemented (unvalidated); review the draft data inventory, confirm retention and contact ownership, complete legal review, deployed-provider review and real-browser accessibility checks |
 | P1-REV | Monetization readiness | **Foundations only; not live** | Provider approval, consent, disclosures and reconciliation before activation |
 
 ## Country source-review result
