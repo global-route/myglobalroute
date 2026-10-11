@@ -177,9 +177,10 @@ This update supersedes earlier status claims for current delivery. Quality Gate 
 Same-SHA source-tree gates pass at 1284684c18a7fa311cd62c52875b38d62a354a0b: Quality Gate https://github.com/global-route/myglobalroute/actions/runs/38115941501 (17 suites / 113 tests), Lint https://github.com/global-route/myglobalroute/actions/runs/38115941407, Browser Smoke https://github.com/global-route/myglobalroute/actions/runs/38115941416. This verifies P0-S3 and the source-tree portion of P0-S4 only. P0-S5 and Phase 0 remain open. The next independently executable sprint is docs/sprints/NEXT_SPRINT_P1_DATA_REFRESH.md; its source-by-source checklist must be completed before country dataset dates change.
 
 
-## Current execution checkpoint — 2026-10-11
+## Current execution checkpoint — 2026-10-11 (authoritative status)
 
 - Current main SHA: `933ca27d1542083078de104e2ac3550d8fde59c5` (documentation-only); verified implementation SHA: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`.
 - Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38116957166 (17 suites / 113 tests; 0 dependency vulnerabilities; 26 countries / 56 pathways / 193 evidence records; build integrity and SEO/A11y pass).
 - Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38116957132. Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38116957147.
-- Phase 0 remains open at P0-S5; Phase 1 remains open at P1-S1 source review; Phase 2 remains open on structured requirement coverage and route-quality work. No later phase is marked complete.
+- Phase 0 remains open at P0-S5; Phase 1 remains open at P1-S1 source review; Phase 2 remains open on structured requirement coverage and route-quality work. Phase 3/4 remain partial, Phase 5 is preparation only, and Phase 6 is deferred. No later phase is marked complete.
+- Next executable sprint: P1-S1 source review; P0-S5 runs in parallel only when owner/provider evidence becomes available.

@@ -84,6 +84,17 @@ Generated from the current countries.json registry (26 unique records). Mark a r
 | [ ] | CH | Switzerland | https://www.sem.admin.ch/sem/en/home.html | Not reviewed in this sprint |
 | [ ] | CZ | Czechia | https://mv.gov.cz/mvcren/ | Not reviewed in this sprint |
 
+## Baseline and execution log — 2026-10-11
+
+- Current main planning baseline: `c5af6cd29dd381fc56070f277fbacb273b9fe85b`; implementation baseline: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`.
+- Quality Gate PASS: [run 38116957166](https://github.com/global-route/myglobalroute/actions/runs/38116957166) — 17 suites / 113 tests; 0 dependency vulnerabilities; data validation 26 countries / 56 pathways / 193 evidence records; build integrity and SEO/A11y checks passed (168 generated HTML files).
+- Lint PASS: [run 38116957132](https://github.com/global-route/myglobalroute/actions/runs/38116957132).
+- Browser Smoke PASS: [run 38116957147](https://github.com/global-route/myglobalroute/actions/runs/38116957147).
+- Freshness inventory: 193 current / 0 overdue / 0 missing / 0 invalid review dates. This is a review-date inventory, not evidence that all country anchors were reopened.
+- Country source-review checklist: **0/26 reviewed in this sprint**. All rows intentionally remain unchecked.
+- `dataset.asOf=2026-09-05` is unchanged. Do not advance it until the 26-anchor review has auditable outcomes and the manifest/date guard is verified.
+- P1-S1.1 remains open: the Markdown checklist exists, but a machine-readable manifest and captured baseline artifact have not yet been committed.
+
 ## Next after P1-S1
 
 1. P1-REQ — expand structured requirements from exact official sources, preserving date, family-size, region, cost components and exceptions.

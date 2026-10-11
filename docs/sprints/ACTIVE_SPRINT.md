@@ -55,8 +55,8 @@ Current main SHA: `933ca27d1542083078de104e2ac3550d8fde59c5` (documentation/chec
 
 ## Ordered next work
 
-1. P0-S5 external release gate: confirm provider/project/domain, deployed revision, live security headers and branch rules; do not infer the host.
-2. P1-S1 source refresh: execute NEXT_SPRINT_P1_DATA_REFRESH.md across all 26 registry entries; do not advance dates before actual source review.
-3. P1-REQ: expand exact-source conditional requirements and tests for effective date, family size, region, costs and exceptions.
-4. P1-ROUTE: add route-safety tests for missing inputs, stale/mismatched evidence, alternatives and no-match.
-5. Keep Phase 0/1 open until documented exit gates are genuinely met.
+1. **P1-S1 — Country source review (next executable sprint):** follow `NEXT_SPRINT_P1_DATA_REFRESH.md` in registry order. Generate the machine-readable manifest and baseline output first; then review each official anchor, logging outcomes and affected claims. Keep all 26 checklist rows unchecked until individually reviewed.
+2. **P0-S5 — External release gate (parallel, owner-dependent):** confirm provider/project/custom domain, reconcile Worker `myglobalroute`, observed Cloudflare build label `globalroute`, and Netlify config without guessing. Capture deployed SHA, verify live app/registries, run `npm run deploy:verify`, inspect live CSP, and obtain owner-level branch-protection evidence.
+3. **P1-REQ — Structured requirements:** extend only from exact official sources; preserve effective date, family size, region, expense components, exemptions and alternative rules. Current coverage is 9 declarations across 2 pathways; 54/56 pathways remain unstructured.
+4. **P1-ROUTE — Recommendation safety:** add and verify stale/mismatched evidence, missing-input, alternatives, threshold-boundary and no-match tests.
+5. **P1-SEO / P1-PRIV:** proceed on work that does not require an unverified production origin; absolute canonical URLs, live consent verification and production claims remain gated.

@@ -35,6 +35,8 @@ The plan can gain additional sprints if a phase discovers material work that can
 
 **Current phase.** Goal: establish a trustworthy, reproducible and deployable production baseline.
 
+**Execution checkpoint (2026-10-11):** P0-S3 and source-tree P0-S4 are verified; P0-S5 is externally blocked. The next executable sprint is P1-S1 country source review, with all 26 anchors currently unchecked. See `docs/sprints/ACTIVE_SPRINT.md` and `docs/sprints/NEXT_SPRINT_P1_DATA_REFRESH.md`. Do not advance to phase exit based on CI alone.
+
 ### Sprint P0-S1 — Exact Pathway Closure — COMPLETE WITH BLOCKED CANDIDATES DOCUMENTED
 - AU-189 financial/material verification
 - NZ Points final promotion validation
