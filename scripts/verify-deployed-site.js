@@ -12,7 +12,7 @@ if (!origin) {
 let base;
 try {
   base = new URL(origin);
-  if (!['http:', 'https:'].includes(base.protocol)) throw new Error('origin must use http or https');
+  if (base.protocol !== 'https:') throw new Error('origin must use HTTPS');
   if (base.pathname !== '/' || base.search || base.hash) throw new Error('PRODUCTION_URL must be an origin only, without path, query or fragment');
 } catch (error) {
   console.error(`DEPLOYED SITE VERIFICATION FAILED: invalid PRODUCTION_URL (${error.message})`);

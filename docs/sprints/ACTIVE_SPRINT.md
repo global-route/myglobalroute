@@ -174,3 +174,8 @@ The readiness report now separates evidence with a valid but overdue `reviewAfte
 Added `npm run evidence:freshness`, a deterministic inventory over the primary evidence registry and all JSON addenda. It groups evidence by country and classifies each record as current, overdue, missing a review date, or carrying an invalid/impossible review date. The report preserves source URLs and route scope to support an auditable refresh queue. It is diagnostic only: no dates are extended, no claims are auto-approved, and no unknown country aggregates are filled. It is now included in `npm run verify` and covered by tests.
 
 **Queue policy:** first recheck records that support structured requirements; next refresh high-impact eligibility/financial claims for pathways currently presented as publishable; then review policy-update and process claims. If an official source cannot be confirmed, keep the record stale and mark the affected claim for review rather than changing its date. Continue country by country until the 26-country evidence inventory is reconciled.
+
+
+## Production verifier transport guard — 2026-10-11
+
+The deployed-site verification script now rejects `http://` origins before attempting any fetch, aligning production verification with the HTTPS-only security baseline. The verifier still requires an independently confirmed origin and exact registry match; no hostname is guessed from repository history or deployment provider names.

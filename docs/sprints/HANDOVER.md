@@ -116,3 +116,8 @@ Cloudflare's GitHub integration reports a successful Workers production build ch
 ## Evidence freshness inventory — 2026-10-11
 
 Use `npm run evidence:freshness` to inventory every primary/addendum evidence record by country, route, field, source URL and review status. Statuses are current, overdue, missing review date and invalid review date. The report is part of `npm run verify`; it does not refresh evidence automatically. Refresh dates only after direct official-source review, preserve unknowns, and keep unsupported country-level metrics unfilled. Prioritize structured-requirement dependencies and stale material claims on publishable routes, then work through remaining countries in a tracked queue.
+
+
+## Production verification guard — 2026-10-11
+
+The production verifier now requires an HTTPS origin and rejects HTTP before network requests. Cloudflare's production build check is available for the current repository SHA, but authoritative hostname and deployed-content equality are not yet established. Repository is public; branch protection remains unverified because the GitHub integration cannot read branch protection settings (HTTP 403). Do not close issue #2 or mark release GO until owner-level branch settings and live-host verification are complete.
