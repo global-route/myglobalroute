@@ -12,9 +12,9 @@
 ## Current product checkpoint
 
 - Canonical migration registry: 26 countries / 56 pathways (recounted directly from the current `src/data/pathways.json` contents during this handover review).
-- Current source-file status counts: 52 `publishable`, 4 `research_required`; four records have no evidence IDs (consistent with research-required count, but still requires the repository validator to confirm the full evidence boundary).
-- Evidence registry total remains 193 only as a historical documented count; current evidence-record count has not been independently recomputed in this pass.
-- P0-S1 through P0-S4 are documented as complete. Current-head Quality Gate, Lint and Browser Smoke all passed at `3deb2f4c9d770a54057ae3f5938109a58f06832b` on 2026-10-08/09 UTC; links are recorded in `docs/project/RELEASE_VERIFICATION_2026-10-08.md`.
+- Current source-file status counts: 52 `publishable`, 4 `research_required`; four records have no evidence IDs. The Quality Gate's migration-data validation passed on the recorded current code SHA.
+- Evidence registry independently recounted from all 29 JSON files: **193 records** (18 in the primary registry and 175 across 28 addenda files).
+- P0-S1 through P0-S4 are documented as complete. Current-head Quality Gate, Lint and Browser Smoke all passed at `c1670297f7e4846cb1ffd35a955e78f2da678e50` on 2026-10-08/09 UTC; links are recorded in `docs/project/RELEASE_VERIFICATION_2026-10-08.md`.
 - Production release remains blocked until the authoritative deployment project/origin and deployed commit are independently verified.
 
 ## P0 delivery sprint map
@@ -26,10 +26,10 @@ Exact-route gates were closed or explicitly blocked. Do not promote research-req
 All previously research-required canonical pathways were audited; four remain explicitly blocked. Continue targeted evidence refresh where policy or source freshness warrants it.
 
 ### P0-S3 — Data / Recommendation Quality Gate — VERIFIED AT CURRENT RECORDED SHA
-Quality Gate passed at `3deb2f4c9d770a54057ae3f5938109a58f06832b`, including data validation, unit tests, build integrity, generated-output verification and SEO/accessibility checks. Re-run if `main` advances.
+Quality Gate passed at `c1670297f7e4846cb1ffd35a955e78f2da678e50`, including data validation, 75/75 unit tests, build integrity, generated-output verification and SEO/accessibility checks. Re-run if `main` advances.
 
 ### P0-S4 — Browser / Release Gate — SOURCE-TREE VERIFIED AT CURRENT RECORDED SHA
-Browser Smoke passed at `3deb2f4c9d770a54057ae3f5938109a58f06832b`; see the linked run in the release record. This does not replace production-origin/deployed-SHA verification.
+Browser Smoke passed at `c1670297f7e4846cb1ffd35a955e78f2da678e50`; see the linked run in the release record. This does not replace production-origin/deployed-SHA verification.
 
 ### P0-S5 — Deployment Verification & P0 Exit — ACTIVE / BLOCKED
 
@@ -52,7 +52,7 @@ The strategy and documentation are complete. Implementation now includes privacy
 - [x] Measurement and consent foundation implemented.
 - [x] Ad/partner slot configuration and page hosts wired.
 - [x] Commercial registry validation and redirect expiry/security checks implemented.
-- [x] Re-run current quality/browser workflows and record exact results against explicit `main` SHA `3deb2f4c9d770a54057ae3f5938109a58f06832b`; Quality Gate, Lint and Browser Smoke all passed.
+- [x] Re-run current quality/browser workflows and record exact results against explicit `main` SHA `c1670297f7e4846cb1ffd35a955e78f2da678e50`; Quality Gate, Lint and Browser Smoke all passed.
 - [x] Harden evidence provenance date validation (`retrievedAt`, `reviewAfter`, optional `effectiveDate`) and add valid/invalid calendar-date tests. Code and unit coverage are implemented; Quality Gate passed at `542bba327342e699bd2800a1865a1bd4c6bb8099`.
 - [ ] Verify the commercial redirect adapter is deployed and runtime-compatible with the confirmed hosting platform; the current Netlify Function implementation is not evidence that a Netlify deployment exists.
 - [ ] Provider-specific click/revenue reconciliation after a real provider is selected.
@@ -68,4 +68,4 @@ Implementation + documentation + verification. Never mark a production or data-t
 Before accepting this sprint handover, refresh the current `main` SHA, inspect the latest completed Actions jobs, recompute pathway/evidence counts, and reconcile the P0-S2 backlog. The 2026-10-09 reconciliation record is authoritative for ordered actions and status vocabulary.
 
 
-Current-head update (2026-10-11): Quality Gate, Lint and Browser Smoke all passed on `3deb2f4c9d770a54057ae3f5938109a58f06832b`. The release record contains the exact workflow links and gate scope. Source-tree P0-S3/P0-S4 checks are green at that SHA; P0-S5 remains blocked on authoritative hosting-project/domain/deployment evidence, live-origin smoke, CSP review and repository hardening. Evidence-record total has not yet been independently recounted. Re-run checks if `main` advances.
+Current-head update (2026-10-11): Quality Gate, Lint and Browser Smoke all passed on `c1670297f7e4846cb1ffd35a955e78f2da678e50` (75/75 unit tests). The release record contains exact workflow links and scope. Evidence registry count independently reconciled to 193 records across 29 JSON files. Route recommendations now fail closed unless publishable pathways include non-empty evidence IDs and an HTTPS source; known positive `minFunds` thresholds require a valid supplied budget. The deployed-site verifier now compares served country/pathway registries with checked-out source and checks application identity, critical assets, and direct 2xx routes. P0-S5 remains blocked on authoritative hosting-project/domain/deployment evidence, live-origin smoke, CSP review and repository hardening. Re-run checks if `main` advances.

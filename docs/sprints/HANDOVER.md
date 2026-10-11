@@ -25,7 +25,7 @@
 
 ## Current source-tree verification — 2026-10-11
 
-Current `main` SHA recorded at verification: `3deb2f4c9d770a54057ae3f5938109a58f06832b`. Quality Gate, Lint and Browser Smoke all completed successfully on that exact SHA. See [`docs/project/RELEASE_VERIFICATION_2026-10-08.md`](../project/RELEASE_VERIFICATION_2026-10-08.md) for workflow links and scope. Recheck all gates if `main` advances. This is not proof of a live deployment.
+Current `main` SHA recorded at verification: `c1670297f7e4846cb1ffd35a955e78f2da678e50`. Quality Gate, Lint and Browser Smoke all completed successfully on that exact SHA. See [`docs/project/RELEASE_VERIFICATION_2026-10-08.md`](../project/RELEASE_VERIFICATION_2026-10-08.md) for workflow links and scope. Recheck all gates if `main` advances. This is not proof of a live deployment.
 
 ## Current monetization implementation
 
@@ -61,7 +61,7 @@ Current `main` SHA recorded at verification: `3deb2f4c9d770a54057ae3f5938109a58f
 ## Next execution sequence
 
 1. Read `docs/project/HANDOVER_RECONCILIATION_2026-10-09.md` and inspect the latest `main` SHA plus completed Actions jobs.
-2. Re-run and record current-head data validation, unit tests, build/generated-output checks, SEO/accessibility, lint and browser E2E; fix failures before claiming a pass.
+2. Recheck current-head data validation, unit tests, build/generated-output checks, SEO/accessibility, lint and browser E2E if code changes; all three source-tree gates passed at `c1670297f7e4846cb1ffd35a955e78f2da678e50`.
 3. Recompute pathway/evidence counts. Do not act on the stale P0-S2 instruction to audit 24 pathways until current registry state is verified.
 4. Establish the authoritative hosting project, domain mapping and deployed SHA from provider configuration; do not infer Netlify or Cloudflare from historical notes.
 5. Run production smoke and origin-dependent SEO/CSP checks only after origin confirmation.
@@ -69,3 +69,12 @@ Current `main` SHA recorded at verification: `3deb2f4c9d770a54057ae3f5938109a58f
 7. Keep live monetization and lead collection gated until their own prerequisites pass.
 
 If CI is unavailable, continue independent implementation and record **Not Tested — CI unavailable**. Do not claim a green test or production pass without evidence.
+
+
+## Current verification delta — 2026-10-11
+
+- `main` code checkpoint `c1670297f7e4846cb1ffd35a955e78f2da678e50`: Quality Gate, Lint and Browser Smoke all passed; Quality Gate reports 75/75 unit tests.
+- Evidence records independently recounted: 193 records across the primary registry and 28 addenda files.
+- Route engine now requires evidence IDs and HTTPS source provenance at runtime and blocks a known positive funds threshold when budget is missing, invalid, or insufficient.
+- Production verifier now checks app identity, critical assets, direct 2xx routes and equality of deployed country/pathway registries to the checked-out source.
+- Production origin and deployed SHA remain unverified. Netlify and Cloudflare configuration both exist in the repository; this is not proof of which provider owns production. Do not run the manual Production Smoke workflow until the authoritative origin is confirmed.

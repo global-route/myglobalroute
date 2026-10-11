@@ -4,21 +4,23 @@
 
 ## Current result
 
-**Production release remains NO-GO.** Source-tree verification is green at `3deb2f4c9d770a54057ae3f5938109a58f06832b`, but the authoritative hosting project/origin and deployed commit have not been independently confirmed. Live monetization remains gated.
+**Production release remains NO-GO.** Source-tree verification is green at `c1670297f7e4846cb1ffd35a955e78f2da678e50`, but the authoritative hosting project/origin and deployed commit have not been independently confirmed. Live monetization remains gated.
 
 ## Current-head CI verification — 2026-10-11
 
-All three required source-tree workflows completed successfully on the same current `main` SHA, `3deb2f4c9d770a54057ae3f5938109a58f06832b`:
+All three required source-tree workflows completed successfully on the same current `main` SHA, `c1670297f7e4846cb1ffd35a955e78f2da678e50`:
 
-- **Quality Gate — PASS:** [run 37857907630](https://github.com/global-route/myglobalroute/actions/runs/37857907630). Includes dependency audit, migration-data validation, unit tests, build, generated-artifact verification and SEO/accessibility checks.
-- **Lint — PASS:** [run 37857907626](https://github.com/global-route/myglobalroute/actions/runs/37857907626).
-- **Browser Smoke — PASS:** [run 37857907619](https://github.com/global-route/myglobalroute/actions/runs/37857907619). Browser smoke completed successfully after fixing root-relative asset output paths, disabling unconfigured advertising code and preserving the hidden state of inactive ad/partner slots.
+- **Quality Gate — PASS:** [run 38103017870](https://github.com/global-route/myglobalroute/actions/runs/38103017870). Includes dependency audit, migration-data validation, unit tests, build, generated-artifact verification and SEO/accessibility checks.
+- **Lint — PASS:** [run 38103017906](https://github.com/global-route/myglobalroute/actions/runs/38103017906).
+- **Browser Smoke — PASS:** [run 38103017883](https://github.com/global-route/myglobalroute/actions/runs/38103017883). Browser smoke completed successfully after fixing root-relative asset output paths, disabling unconfigured advertising code and preserving the hidden state of inactive ad/partner slots.
 
-These are current source-tree results, not production-host verification. Recheck CI if `main` advances.
+These are current source-tree results, not production-host verification. The code SHA includes runtime evidence/provenance guards in the route engine, required-budget enforcement for known funds thresholds, and a hardened deployed-site verifier that compares served registries with checked-out source. Recheck CI if `main` advances.
 
 ## Implemented since the earlier checkpoint
 
 - Strict ISO calendar-date validation for dataset/evidence dates and corresponding unit tests.
+- Route recommendations now fail closed when a publishable pathway lacks non-empty evidence IDs or an HTTPS source URL; positive `minFunds` thresholds require a valid supplied budget.
+- Deployed-site smoke now compares served country/pathway registries with the checked-out source and checks application identity, critical assets, and direct 2xx responses.
 - Explicit Eleventy passthrough mapping for CSS and JavaScript paths referenced by pages.
 - Fail-closed legacy advertising loader when a real approved publisher ID is absent.
 - Correct publisher-ID validation and CSS rules that keep unconfigured ad/partner placements hidden.

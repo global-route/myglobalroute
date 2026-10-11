@@ -10,7 +10,7 @@ This record reconciles the prior handovers, active sprint, P0 delivery plan, rev
 
 **Source-tree CI is GREEN; production release and live monetization remain NO-GO until their respective external gates are evidenced.**
 
-At `3deb2f4c9d770a54057ae3f5938109a58f06832b`, Quality Gate passed ([run](https://github.com/global-route/myglobalroute/actions/runs/37857907630)), Lint passed ([run](https://github.com/global-route/myglobalroute/actions/runs/37857907626)), and Browser Smoke passed ([run](https://github.com/global-route/myglobalroute/actions/runs/37857907619)). These runs verify source-tree behavior only; they do not establish the production origin or deployed SHA. Recheck if `main` advances.
+At `c1670297f7e4846cb1ffd35a955e78f2da678e50`, Quality Gate passed ([run](https://github.com/global-route/myglobalroute/actions/runs/38103017870)), Lint passed ([run](https://github.com/global-route/myglobalroute/actions/runs/38103017906)), and Browser Smoke passed ([run](https://github.com/global-route/myglobalroute/actions/runs/38103017883)). These runs verify source-tree behavior only; they do not establish the production origin or deployed SHA. Recheck if `main` advances.
 
 ## Reconciled workstreams
 
@@ -70,7 +70,7 @@ Keep ad/partner activation and lead collection blocked until the actual origin, 
 
 ## Handover acceptance checklist
 
-- [x] Record current main SHA and current workflow results (`3deb2f4c9d770a54057ae3f5938109a58f06832b`; Quality Gate, Lint and Browser Smoke all passed).
+- [x] Record current main SHA and current workflow results (`c1670297f7e4846cb1ffd35a955e78f2da678e50`; Quality Gate, Lint and Browser Smoke all passed).
 - [x] Recount pathway totals/statuses from the current source file (56 total; 52 publishable; 4 research-required; 26 country IDs).
 - [x] Run repository validation and independently recompute evidence-record totals (193 records across 29 evidence JSON files; Quality Gate data-validation step passed on the recorded CI SHA).
 - [ ] Reconcile P0-S2 backlog to the actual registry.
@@ -91,4 +91,9 @@ A source review of `scripts/validate-data.js` found that evidence records requir
 Strict ISO calendar-date validation has been implemented in `scripts/date-utils.js` and `scripts/validate-data.js`, with unit coverage in `tests/date-utils.test.js`. The Quality Gate and Lint passed on `542bba327342e699bd2800a1865a1bd4c6bb8099`; the Quality Gate includes data validation, unit tests, build, generated-output verification and SEO/accessibility checks. Browser Smoke on the prior SHA failed because two consent tests could not find the consent banner. `.eleventy.js` now maps CSS and JS to the root-relative paths used by the HTML. The retest was still in progress at the time of this update, so the browser gate remains open. Production stays NO-GO pending origin and deployed-SHA verification.
 
 
-Follow-up browser diagnosis: Browser Smoke on `542bba327342e699bd2800a1865a1bd4c6bb8099` confirmed the asset mapping change restored the consent banner, then failed on two monetization assertions. The legacy `src/js/admob-loader.js` was still configured to load a placeholder AdSense publisher script, and `.ad-unit` CSS overrode the HTML `hidden` attribute. The loader now fails closed without a verified publisher, its ID check is corrected, and inactive ad/partner slots are forced hidden in CSS. These changes are in `3dcbc1e9ee3719aa4b3eac6dda1fed5ce4ef0198`, `ed3155c43532628c3f26bcb56588620680adff28`, and `fa3732f60f915758e25178597a8e0d53320f506b`. A successful Browser Smoke run on the final code is still required; release remains NO-GO until that and hosting-origin verification pass.
+Follow-up browser diagnosis: Browser Smoke on `542bba327342e699bd2800a1865a1bd4c6bb8099` confirmed the asset mapping change restored the consent banner, then failed on two monetization assertions. The legacy `src/js/admob-loader.js` was still configured to load a placeholder AdSense publisher script, and `.ad-unit` CSS overrode the HTML `hidden` attribute. The loader now fails closed without a verified publisher, its ID check is corrected, and inactive ad/partner slots are forced hidden in CSS. These changes are in `3dcbc1e9ee3719aa4b3eac6dda1fed5ce4ef0198`, `ed3155c43532628c3f26bcb56588620680adff28`, and `fa3732f60f915758e25178597a8e0d53320f506b`. Browser Smoke subsequently passed on `c1670297f7e4846cb1ffd35a955e78f2da678e50`; exact run links are in the release record. Production remains NO-GO until hosting-origin/deployed-SHA verification passes.
+
+
+## Current-head update — 2026-10-11
+
+Quality Gate ([run](https://github.com/global-route/myglobalroute/actions/runs/38103017870)), Lint ([run](https://github.com/global-route/myglobalroute/actions/runs/38103017906)) and Browser Smoke ([run](https://github.com/global-route/myglobalroute/actions/runs/38103017883)) all passed on `c1670297f7e4846cb1ffd35a955e78f2da678e50`. Quality Gate passed 75/75 unit tests. The evidence registry was independently recounted at 193 records across 29 JSON files. Route-engine runtime guards now require evidence IDs and HTTPS source provenance; a known positive funds threshold blocks missing/invalid/insufficient budgets. `scripts/verify-deployed-site.js` now rejects redirects for required routes and checks app identity, critical asset availability and exact equality between deployed and checked-out country/pathway registries. These are source-tree checks; authoritative hosting project, production origin, deployed SHA and live-origin smoke remain unresolved. Repository branch-protection status could not be rechecked with the available integration permissions; issue #2 remains open.
