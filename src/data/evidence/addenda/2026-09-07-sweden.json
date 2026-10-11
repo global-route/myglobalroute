@@ -11,10 +11,10 @@
       "sourceUrl": "https://www.migrationsverket.se/en/word-explanations/salary-requirements-for-a-work-permit.html",
       "jurisdiction": "Sweden",
       "effectiveDate": "2026-06-01",
-      "retrievedAt": "2026-09-07",
-      "methodology": "Direct review of current Swedish Migration Agency work-permit guidance",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current Swedish Migration Agency salary-requirement guidance on 2026-10-11. Confirmed 90% of median salary for covered first-time work-permit decisions from 1 June 2026; current threshold is SEK 34,470/month for applications received from 16 June 2026. Transitional and exempt categories remain applicable.",
       "confidence": "high",
-      "reviewAfter": "2026-10-07"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "SE-study-finance-maintenance-2026-09-07",

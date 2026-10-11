@@ -29,10 +29,10 @@
       "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html",
       "jurisdiction": "Canada",
       "effectiveDate": "2026-09-01",
-      "retrievedAt": "2026-09-13",
-      "methodology": "Direct review of current IRCC financial-support table and surrounding requirements; Quebec uses separate financial rules.",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current IRCC financial-support guidance on 2026-10-11. Verified the annual living-funds schedule effective 2026-09-01: CAD 23,448 for one person outside Quebec, excluding tuition and transportation; higher amounts apply for additional family members and Quebec has separate rules.",
       "confidence": "high",
-      "reviewAfter": "2026-10-13"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "AU-student-eligibility-2026-09-13",
