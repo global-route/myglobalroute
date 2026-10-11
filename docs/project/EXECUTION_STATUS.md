@@ -8,6 +8,13 @@
 
 > This supersedes stale September status/counts. See `PROJECT_ASSESSMENT.md`, `PHASE_STATUS.md`, `EXECUTION_ROADMAP.md` and `../sprints/ACTIVE_SPRINT.md` for authoritative detail.
 
+## Non-test progress after the last verified checkpoint — 2026-10-11
+
+- Structured requirements now total 16 evidence-linked declarations across 6/56 pathways; 50 remain without structured declarations. Missing declarations remain unknown.
+- Implemented independent analytics and advertising consent choices, a persistent Privacy settings entry point, local preference persistence where available, and ad-slot gating on advertising consent.
+- Updated the privacy page to explain separate data purposes, persistence limits and remaining legal/provider review; corrected homepage/About copy that overstated evidence coverage and approval-rate availability; added About-page trust/contact links.
+- Static repository readback confirms these files and documented counts are present. No tests were manually run and no CI workflows were manually dispatched for these changes, per user direction. The changes remain unvalidated; production release remains **NO-GO**.
+
 ## Latest full source-tree verification — 2026-10-11
 
 Source-tree SHA: `89998ab5410aceb6dede8e997dae0b836d3b4d92`
