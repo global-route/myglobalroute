@@ -53,9 +53,11 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 
 ### Phase 4 — Trust, compliance and accessibility foundations
 - [x] Privacy, terms and migration disclaimer pages exist.
+- [x] Added an engineering privacy data-inventory draft covering route finder, calculator, consent state, analytics, contact and monetization source-visible flows.
+- [x] Removed the unconnected contact form to prevent accidental default GET submission of entered fields; current contact route points to email and warns against sending sensitive documents.
 - [x] Analytics event payloads are allowlisted and sensitive profile fields are excluded.
 - [x] Independent analytics and advertising choices, persistent preference access, and advertising-consent gating are implemented in source.
-- [ ] Validate consent behavior in a real browser after testing is resumed; review actual provider behavior, storage/retention, jurisdiction-specific legal requirements and accessibility with accountable owners. Latest consent changes are not validated.
+- [ ] Validate consent/contact behavior in a real browser after testing is resumed; confirm actual provider behavior, storage/retention, contact mailbox ownership, jurisdiction-specific legal requirements and accessibility with accountable owners. Latest changes are not validated.
 
 ### Phase 2 — Canonical product core
 - [x] Find My Route / canonical matching foundations and generated source trails exist.
