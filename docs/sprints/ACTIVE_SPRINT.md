@@ -199,3 +199,8 @@ Refreshed only claims checked against current official sources: Austria student 
 ## Evidence refresh batch 4 — Japan, Luxembourg, New Zealand and Sweden — 2026-10-11
 
 Refreshed five overdue claims after reviewing official sources: Japan's general Student and Engineer/Specialist residence-status scope, Luxembourg's salaried-worker authorisation sequence, New Zealand's SMC/work-to-residence changes effective 2026-08-24, and Sweden's 2026 work-permit rule changes including salary transitions, health insurance and employer-condition grounds. The Luxembourg student work-rights record remains overdue because the available English guidance was last updated in 2023 and the current student-work detail was not independently revalidated; it has not been silently extended.
+
+
+## Evidence refresh batch 5 — Luxembourg student work/post-study rules — 2026-10-11
+
+Closed the remaining overdue Luxembourg student work-rights record after reviewing the current official French Guichet.lu page updated 2026-10-01. The record now distinguishes the general 15-hour weekly average limit (with listed exceptions) from the narrow post-study simplified route for qualifying graduates of a five-year university cycle. The older English page's 2023 update date was not treated as evidence of current rules; the newer official French page was used instead.

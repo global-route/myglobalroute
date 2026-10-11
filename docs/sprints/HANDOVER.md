@@ -141,3 +141,8 @@ Official-source review refreshed five overdue records and aligned the duplicate 
 ## Evidence refresh batch 4 — Japan, Luxembourg, New Zealand and Sweden — 2026-10-11
 
 Official-source review refreshed five overdue records: Japan Student and Engineer/Specialist status scope; Luxembourg third-country salaried-worker authorisation sequence; New Zealand's 2026 skilled-residence policy changes; and Sweden's June 2026 work-permit policy, including salary transitions, comprehensive health insurance and employer-condition grounds. The Luxembourg student work-rights record is intentionally left overdue because the available English page was last updated in 2023 and the current rule was not independently confirmed. The evidence-freshness inventory and CI must be checked on the final head.
+
+
+## Evidence refresh batch 5 — Luxembourg student rules — 2026-10-11
+
+The previously held Luxembourg student work-rights record was refreshed after reviewing the current official French Guichet.lu page updated 2026-10-01. The claim now states the 15-hour weekly average limit and enumerated exceptions, and scopes post-study eligibility to qualifying graduates of a five-year university cycle who apply before their student permit expires. This supersedes the earlier handover note that the record remained overdue pending current-source confirmation.

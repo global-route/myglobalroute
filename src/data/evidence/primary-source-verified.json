@@ -173,15 +173,15 @@
       "countryId": "LU",
       "pathwayId": "LU-study",
       "field": "work-rights",
-      "claim": "Third-country students in Luxembourg may undertake salaried activity subject to the applicable student work limit; after completing qualifying higher education in Luxembourg, a simplified route can apply for salaried or self-employed activity subject to conditions.",
+      "claim": "Third-country students in Luxembourg may generally undertake salaried work for an average of up to 15 hours per week over a month outside study time, with exceptions for school holidays, qualifying doctoral research and University of Luxembourg assistant contracts. Eligible graduates who complete the final year of a qualifying five-year university cycle may use a simplified route to salaried or self-employed activity, subject to conditions and application before the student permit expires.",
       "sourceAuthority": "Guichet.lu",
-      "sourceUrl": "https://guichet.public.lu/en/citoyens/immigration/plus-3-mois/ressortissant-tiers/etudiant/etudiant-pays-tiers.html",
+      "sourceUrl": "https://guichet.public.lu/fr/citoyens/immigration/plus-3-mois/ressortissant-tiers/etudiant/etudiant-pays-tiers.html",
       "jurisdiction": "Luxembourg",
       "effectiveDate": "2026-09-06",
-      "retrievedAt": "2026-09-06",
-      "methodology": "Direct review of Luxembourg government student residence guidance",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current Luxembourg Guichet.lu student residence guidance on 2026-10-11. The French official page was updated 1 October 2026 and states the 15-hour weekly average limit and its exceptions, plus the simplified post-study procedure for qualifying five-year university-cycle graduates. No broader graduate entitlement is inferred.",
       "confidence": "high",
-      "reviewAfter": "2026-10-06"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "AT-student-work-2026-09-06",
