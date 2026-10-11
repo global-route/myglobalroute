@@ -47,6 +47,10 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 - [ ] Revalidate material pathway claims at exact legal scope.
 - [ ] Four canonical pathways remain research_required.
 
+### Phase 3 — Content and acquisition cleanup
+- [x] Removed unsupported claims of universal evidence coverage and universally available true approval rates from the homepage/About copy.
+- [ ] Continue legacy link/category cleanup and editorial fact-audit; canonical metadata remains blocked on confirmed production origin. Latest content changes are unvalidated.
+
 ### Phase 4 — Trust, compliance and accessibility foundations
 - [x] Privacy, terms and migration disclaimer pages exist.
 - [x] Analytics event payloads are allowlisted and sensitive profile fields are excluded.
