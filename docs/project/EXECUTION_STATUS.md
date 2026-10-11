@@ -8,7 +8,7 @@
 
 ## Current verified baseline
 
-- Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119296014), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119295995), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119295980), all on current main SHA `933ca27d1542083078de104e2ac3550d8fde59c5` (the tested source implementation baseline is `95f960c081367305dea0144034d48a4ab7892426`).
+- Implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426`: Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38144112572), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38144112454), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38144112490), all on the same SHA.
 - 26 countries; 56 pathways (52 publishable / 4 research_required); 193 evidence records.
 - Latest recorded freshness inventory: 193 current, 0 overdue, 0 missing and 0 invalid review dates.
 - Structured requirements: 12 declarations across 5 pathways; 51/56 have no structured declarations.
@@ -41,7 +41,17 @@ Monetization activation and scale work remain gated. A green CI run proves sourc
 
 ## Current-head reconciliation — 2026-10-11
 
-Last fully verified same-SHA CI checkpoint before this status reconciliation: `95f960c081367305dea0144034d48a4ab7892426`; verified implementation SHA: `95f960c081367305dea0144034d48a4ab7892426`. Quality Gate reports 17 suites / 113 tests, zero dependency vulnerabilities, successful data validation (26 countries / 56 pathways / 193 evidence records), build-integrity and SEO/A11y checks (168 generated HTML files). P0-S3 and source-tree P0-S4 are verified; P0-S5 and Phase 0 are not complete. The freshness report says 193 current / 0 overdue / 0 missing / 0 invalid review dates, but this does not mean all 26 country landing-source anchors were reopened. The next data task is the open P1-S1 review described in `docs/sprints/NEXT_SPRINT_P1_DATA_REFRESH.md`; keep `dataset.asOf=2026-09-05` unchanged until its exit criteria pass.
+Implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426` and CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` both passed Quality Gate, Lint and Browser Smoke on their respective same SHA. **Implementation/data SHA:** `95f960c081367305dea0144034d48a4ab7892426`
+- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112572
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112454
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112490
+
+**CI workflow follow-up SHA:** `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`
+- Quality Gate PASS (includes country-manifest synchronization): https://github.com/global-route/myglobalroute/actions/runs/38144183966
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183952
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183936
+
+Quality Gate output: 26 countries, 56 pathways, 193 evidence records; 0 dependency vulnerabilities; manifest synchronized; 18 suites / 122 tests passed; build integrity passed; SEO/accessibility checks passed across 168 generated HTML files. These are source-tree checks, not production verification. P0-S3 and source-tree P0-S4 are verified; P0-S5 and Phase 0 are not complete. All 26 country anchors have recorded outcomes; 25 relevant official pages/alternatives were inspected, while Russia needs mission-jurisdiction confirmation and human sign-off remains open. Keep `dataset.asOf=2026-09-05` unchanged.
 
 
 ## Task/sprint/phase handover — 2026-10-11

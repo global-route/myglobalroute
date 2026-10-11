@@ -4,17 +4,25 @@
 
 ## Current result
 
-**Production release remains NO-GO.** The last fully tested code checkpoint is `12cca13f8ddfe3c6976e29b3965435fe1bd25657`; subsequent commits reconcile documentation and the documentation-only head `12cca13f8ddfe3c6976e29b3965435fe1bd25657` also passed all three workflows. The authoritative hosting project/origin and deployed commit have not been independently confirmed. Live monetization remains gated.
+**Production release remains NO-GO.** Implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426` and CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` both passed Quality Gate, Lint and Browser Smoke on their respective same SHA. These are source-tree checks only; authoritative hosting project/origin, deployed commit and live security headers remain unverified.
 
-## Current-head CI verification — 2026-10-11
+## Current same-SHA CI verification — 2026-10-11
 
-All three required source-tree workflows completed successfully on the same tested code SHA, `12cca13f8ddfe3c6976e29b3965435fe1bd25657` (the latest fully tested implementation checkpoint):
+**Implementation/data SHA:** `95f960c081367305dea0144034d48a4ab7892426`
+- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112572
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112454
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112490
 
-- **Quality Gate — PASS:** [run 38103141925](https://github.com/global-route/myglobalroute/actions/runs/38103141925). Includes dependency audit, migration-data validation, unit tests, build, generated-artifact verification and SEO/accessibility checks.
-- **Lint — PASS:** [run 38103141947](https://github.com/global-route/myglobalroute/actions/runs/38103141947).
-- **Browser Smoke — PASS:** [run 38103141902](https://github.com/global-route/myglobalroute/actions/runs/38103141902). Browser smoke completed successfully after fixing root-relative asset output paths, disabling unconfigured advertising code and preserving the hidden state of inactive ad/partner slots.
+**CI workflow follow-up SHA:** `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`
+- Quality Gate PASS (includes country-manifest synchronization): https://github.com/global-route/myglobalroute/actions/runs/38144183966
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183952
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183936
 
-These are current source-tree results, not production-host verification. The same three gates also passed on documentation head `12cca13f8ddfe3c6976e29b3965435fe1bd25657`: [Quality Gate](https://github.com/global-route/myglobalroute/actions/runs/38103141925), [Lint](https://github.com/global-route/myglobalroute/actions/runs/38103141947), and [Browser Smoke](https://github.com/global-route/myglobalroute/actions/runs/38103141902); Quality Gate reports 75/75 unit tests. The code SHA includes runtime evidence/provenance guards in the route engine, required-budget enforcement for known funds thresholds, and a hardened deployed-site verifier that compares served registries with checked-out source. Recheck CI if `main` advances.
+Quality Gate output: 26 countries, 56 pathways, 193 evidence records; 0 dependency vulnerabilities; manifest synchronized; 18 suites / 122 tests passed; build integrity passed; SEO/accessibility checks passed across 168 generated HTML files. These are source-tree checks, not production verification.
+
+Country-source review: outcomes recorded for all 26 anchors; 25 relevant official pages/alternatives inspected. Russia requires mission-jurisdiction confirmation and human sign-off remains open. `dataset.asOf=2026-09-05` remains unchanged. Structured requirement coverage is 12 declarations across 5/56 pathways; 51 remain unstructured. Release remains **NO-GO** until P0-S5 and source-review sign-off gates are closed.
+
+## Historical implementation details from earlier checkpoints
 
 ## Implemented since the earlier checkpoint
 

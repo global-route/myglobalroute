@@ -28,14 +28,25 @@ This is the canonical phase tracker. Historical phase/sprint docs preserve origi
 The repo has `docs/phase-0`, `docs/phase-1` and `docs/phase-3`, but no `docs/phase-2` despite Phase 2 in the roadmap. `docs/phase-1` contains revenue work and `docs/phase-3` contains older blog artifacts. Do not mass-move files mid-sprint; this tracker is the current status source. A later cleanup should map legacy files to the canonical phase taxonomy and label historical artifacts.
 
 
-## Current-head verification — 2026-10-11
+## Current verified source-tree checkpoint — 2026-10-11
 
-Last fully verified same-SHA CI checkpoint before this status reconciliation: `95f960c081367305dea0144034d48a4ab7892426`; verified implementation SHA: `95f960c081367305dea0144034d48a4ab7892426`. Quality Gate PASS (17 suites / 113 tests): https://github.com/global-route/myglobalroute/actions/runs/38119296014. Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38119295995. Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38119295980. These confirm source-tree gates only. Phase 0 remains open because deployment identity, deployed SHA, live CSP and owner branch protection are unverified. Phase 1 remains open because 25 relevant official pages/alternatives have been inspected; Russia needs mission-jurisdiction confirmation and human sign-off remains open and conditional requirement coverage is incomplete. Country dataset `asOf=2026-09-05` remains stale; no date was advanced.
+**Implementation/data SHA:** `95f960c081367305dea0144034d48a4ab7892426`
+- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112572
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112454
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112490
 
+**CI workflow follow-up SHA:** `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`
+- Quality Gate PASS (includes country-manifest synchronization): https://github.com/global-route/myglobalroute/actions/runs/38144183966
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183952
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183936
+
+Quality Gate output: 26 countries, 56 pathways, 193 evidence records; 0 dependency vulnerabilities; manifest synchronized; 18 suites / 122 tests passed; build integrity passed; SEO/accessibility checks passed across 168 generated HTML files. These are source-tree checks, not production verification.
+
+Country review outcomes are recorded for all 26 anchors; 25 relevant official pages/alternatives were inspected. Russia requires mission-jurisdiction confirmation and human sign-off remains open. `dataset.asOf=2026-09-05` is unchanged. Phase 0 and Phase 1 remain open; release remains NO-GO.
 
 ## Handover reconciliation — 2026-10-11
 
-No phase should be marked fully complete from the current evidence. Phase 0 remains blocked on production host/domain identity, deployed SHA, live CSP/security headers, production smoke and owner-level branch rules. Phase 1 remains open pending auditable review of all 26 country source anchors, metadata reconciliation and unresolved pathway evidence. Phase 2 remains incomplete because 51/56 pathways lack structured requirement declarations and route-quality coverage remains open. Phases 3–5 retain their listed SEO/content, privacy/compliance and monetization gates; Phase 6 is deferred. See [next-sprint handover](../sprints/HANDOVER_NEXT_P1_S1_2026-10-11.md).
+No phase should be marked fully complete from the current evidence. Phase 0 remains blocked on production host/domain identity, deployed SHA, live CSP/security headers, production smoke and owner-level branch rules. Phase 1 remains open pending human sign-off on the 26 recorded source outcomes, Russia mission-jurisdiction confirmation, metadata reconciliation and unresolved pathway evidence. Phase 2 remains incomplete because 51/56 pathways lack structured requirement declarations and route-quality coverage remains open. Phases 3–5 retain their listed SEO/content, privacy/compliance and monetization gates; Phase 6 is deferred. See [next-sprint handover](../sprints/HANDOVER_NEXT_P1_S1_2026-10-11.md).
 
 
 ## Reconciliation update — 2026-10-11

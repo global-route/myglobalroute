@@ -14,15 +14,15 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 | Area | Current state | Meaning |
 |---|---|---|
 | Current source | `95f960c081367305dea0144034d48a4ab7892426` | Assessment baseline |
-| Quality Gate | [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119296014) | 17 suites / 113 tests; 0 dependency vulnerabilities; build and SEO/A11y pass |
-| Lint | [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119295995) | Current main verification |
-| Browser Smoke | [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119295980) | Source-tree only; not production verification |
+| Quality Gate | [PASS](https://github.com/global-route/myglobalroute/actions/runs/38144112572) | 18 suites / 122 tests; 0 dependency vulnerabilities; manifest, build and SEO/A11y pass |
+| Lint | [PASS](https://github.com/global-route/myglobalroute/actions/runs/38144112454) | Implementation/data SHA `95f960c` |
+| Browser Smoke | [PASS](https://github.com/global-route/myglobalroute/actions/runs/38144112490) | Source-tree only; not production verification |
 | Country registry | 26 records | Not 26 fully verified country profiles |
 | Canonical pathways | 56: 52 publishable / 4 research_required | Publishability is evidence-scope-specific |
 | Evidence inventory | 193 records | Still needs ongoing source review |
 | Evidence freshness | Latest recorded report: 193 current, 0 overdue, 0 missing, 0 invalid | Review dates do not prove all sources were reopened today |
 | Country metadata | `dataset.asOf=2026-09-05` | 36 days old; refresh only after reviewing all 26 source anchors |
-| Structured requirements | 12 declarations across 5 pathways: 2 UK Skilled Worker + 7 Canada study family-size thresholds | 51/56 pathways have no structured declarations; this means unknown coverage, not no requirements |
+| Structured requirements | 12 declarations across 5 pathways: UK Skilled Worker, Canada study, UK Student, New Zealand Student and Ireland Critical Skills | 51/56 pathways have no structured declarations; this means unknown coverage, not no requirements |
 | Aggregate country metrics | Costs, timelines and approval rates remain null/evidence-gated where unsupported | Correctly avoids fabricated estimates |
 | Hosting | `wrangler.jsonc` names Worker `myglobalroute`; observed Cloudflare build service label was `globalroute`; Netlify config/functions also exist | Hosting identity unresolved; do not infer or change DNS/service names |
 | Security/release | CSP configured in repo; live headers and deployed SHA not verified; branch-protection inspection returned 403 | Provider/owner evidence needed |
@@ -94,7 +94,7 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 
 ## Latest verification/status reconciliation — 2026-10-11
 
-Last fully verified same-SHA CI checkpoint before this status reconciliation: `95f960c081367305dea0144034d48a4ab7892426`; verified implementation SHA: `95f960c081367305dea0144034d48a4ab7892426`. Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957166), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957132), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957147) on the same current main SHA. The machine-readable manifest records outcomes for all 26 anchors; 25 relevant official pages/alternatives were inspected. Russia requires mission-jurisdiction confirmation and human sign-off remains open; `dataset.asOf=2026-09-05` is unchanged. Current phase status is canonical in `PHASE_STATUS.md`: Phase 0 exit blocked, Phase 1 incomplete, Phase 2 decision-quality incomplete, Phase 3/4 partial, Phase 5 not live, Phase 6 deferred. No phase completion percentage should override those exit gates.
+Implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426` and CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` both passed Quality Gate, Lint and Browser Smoke on the same respective SHA. The manifest records outcomes for all 26 anchors; 25 relevant official pages/alternatives were inspected; Russia requires mission-jurisdiction confirmation and human sign-off remains open. `dataset.asOf=2026-09-05` is unchanged. Phase 0 exit is blocked; Phase 1 and Phase 2 remain incomplete; Phase 3/4 are partial; Phase 5 is not live; Phase 6 is deferred.
 
 
 ## Current delivery delta — 2026-10-11

@@ -1,6 +1,6 @@
 # Handover — Production Integrity, Migration Intelligence & Revenue Readiness
 
-> **Reconciliation authority:** read [`docs/project/HANDOVER_RECONCILIATION_2026-10-09.md`](../project/HANDOVER_RECONCILIATION_2026-10-09.md) first. This document is the canonical cross-handover status and ordered next-action record; refresh live main/CI/registry evidence before changing any status.
+ > **Current authority:** use [`ACTIVE_SPRINT.md`](ACTIVE_SPRINT.md), [`PHASE_STATUS.md`](../project/PHASE_STATUS.md) and [`NEXT_SPRINT_P1_DATA_REFRESH.md`](NEXT_SPRINT_P1_DATA_REFRESH.md) for current status. `HANDOVER_RECONCILIATION_2026-10-09.md` is a historical snapshot with a current reconciliation banner. Refresh live main/CI/registry evidence before changing status.
 
 **Branch:** `main`  
 **Active P0 sprint:** P0-S5 — Deployment Verification & P0 Exit  

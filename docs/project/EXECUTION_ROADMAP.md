@@ -4,6 +4,8 @@
 **Status:** Active execution  
 **Reconciled:** October 11, 2026
 
+> Current verification authority: implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426` and CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` both pass Quality Gate, Lint and Browser Smoke. Older checkpoint summaries below are historical snapshots; use `ACTIVE_SPRINT.md` and `PHASE_STATUS.md` for current status.
+
 > The original Global Route vision is preserved. Execution priority is corrected from the repository's actual state: production integrity and trustworthy migration intelligence precede content and growth scaling.
 
 ## Product north star
@@ -201,3 +203,20 @@ Same-SHA source-tree gates pass at 1284684c18a7fa311cd62c52875b38d62a354a0b: Qua
 - [x] Add Ireland Critical Skills qualifying job-offer requirement.
 - [x] Validate declarations against exact-pathway evidence in regression tests.
 - [ ] Continue expanding only when evidence supports exact route, jurisdiction, effective date and exception scope. Current: 12 declarations across 5/56 pathways; 51 remain unstructured.
+
+
+## Latest same-SHA verification — 2026-10-11
+
+**Implementation/data SHA:** `95f960c081367305dea0144034d48a4ab7892426`
+- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112572
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112454
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112490
+
+**CI workflow follow-up SHA:** `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`
+- Quality Gate PASS (includes country-manifest synchronization): https://github.com/global-route/myglobalroute/actions/runs/38144183966
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183952
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183936
+
+Quality Gate output: 26 countries, 56 pathways, 193 evidence records; 0 dependency vulnerabilities; manifest synchronized; 18 suites / 122 tests passed; build integrity passed; SEO/accessibility checks passed across 168 generated HTML files. These are source-tree checks, not production verification.
+
+Current migration-data status: all 26 source anchors have recorded outcomes; 25 relevant official pages/alternatives inspected; Russia mission-jurisdiction confirmation and human sign-off remain open. Structured requirements are 12 declarations across 5/56 pathways; 51 remain unstructured. P0-S5 remains blocked on authoritative host/deployment/security/branch-protection evidence.
