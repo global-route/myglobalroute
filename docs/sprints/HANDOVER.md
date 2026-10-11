@@ -96,3 +96,8 @@ The schema has no machine-readable route-level budget, income, experience or lan
 - [Browser Smoke PASS](https://github.com/global-route/myglobalroute/actions/runs/38105471079)
 
 The browser smoke assertion was corrected to inspect the native `option.disabled` property, avoiding a Playwright matcher false failure. All three workflows pass on the same head. This is not production verification. Continue with exact-route authoritative data, then verify host/project and deployed commit; do not invent missing financial, language or experience thresholds. Repository issue #2 remains open and visibility must not be changed without project-owner confirmation.
+
+
+## Evidence refresh delta — 2026-10-11
+
+The current `GB-skilled-worker` structured requirement evidence was rechecked against the two official GOV.UK pages on 2026-10-11. The standard salary baseline remains £41,700 per year or the occupation-specific going rate, whichever is higher; the record retains lower-threshold and transitional caveats. Only those two records were refreshed (`retrievedAt=2026-10-11`, `reviewAfter=2026-11-10`). Other records were not implicitly refreshed. The source-tree Quality Gate, Lint and Browser Smoke passed on pre-refresh code SHA e3bc6ee0b56178b3f9b4a1fb2b6616ee28edb47e; the evidence-only commit must still complete current-head CI. Production host/deployed SHA, CSP and branch-hardening gates remain unresolved; release stays NO-GO.

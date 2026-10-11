@@ -145,3 +145,11 @@ The readiness report now breaks down pathways without structured requirements by
 - No thresholds were inferred for the other 55 pathways. No UI eligibility scoring is enabled from this first record; it is a data-schema increment and readiness signal, not an eligibility decision.
 - The cited records have a review deadline of 2026-10-12. If not refreshed with current source evidence by then, structured-requirement validation should fail closed rather than silently continue using stale values.
 - Tests added for annual-unit enforcement and mandatory caveats. Run the full Quality Gate, Lint and Browser Smoke on the resulting code SHA before marking this increment verified.
+
+
+## Evidence refresh — Skilled Worker structured requirements (2026-10-11)
+
+- Rechecked the two exact-route GOV.UK sources supporting the `GB-skilled-worker` structured job-offer and annual-salary requirements on 2026-10-11. The official salary guidance still states the usual baseline is £41,700/year **or the occupation-specific going rate, whichever is higher**, with specified lower-threshold and transitional cases.
+- Updated only the two cited evidence records' `retrievedAt` / `reviewAfter` and source-review methodology; retained their effective date and threshold caveats rather than conflating retrieval date with legal effective date.
+- Review deadline moved to 2026-11-10 after direct source recheck. This is a review cadence, not a guarantee that rules cannot change before then. Other evidence records remain untouched and their freshness status must be triaged separately.
+- Current `main` before this refresh: e3bc6ee0b56178b3f9b4a1fb2b6616ee28edb47e. Quality Gate, Lint and Browser Smoke all passed on that SHA: [Quality Gate](https://github.com/global-route/myglobalroute/actions/runs/38109950355), [Lint](https://github.com/global-route/myglobalroute/actions/runs/38109950365), [Browser Smoke](https://github.com/global-route/myglobalroute/actions/runs/38109950372). These are source-tree checks, not production verification.

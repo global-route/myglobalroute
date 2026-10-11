@@ -41,10 +41,10 @@
       "sourceUrl": "https://www.gov.uk/skilled-worker-visa",
       "jurisdiction": "United Kingdom",
       "effectiveDate": "2026-09-12",
-      "retrievedAt": "2026-09-12",
-      "methodology": "Direct review of current GOV.UK Skilled Worker overview and eligibility guidance",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Rechecked the current GOV.UK Skilled Worker overview on 2026-10-11; confirmed job offer, approved sponsor, eligible occupation and role-specific rules remain required.",
       "confidence": "high",
-      "reviewAfter": "2026-10-12"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "GB-skilled-worker-finance-2026-09-12",
@@ -56,10 +56,10 @@
       "sourceUrl": "https://www.gov.uk/skilled-worker-visa/your-job",
       "jurisdiction": "United Kingdom",
       "effectiveDate": "2026-09-12",
-      "retrievedAt": "2026-09-12",
-      "methodology": "Direct review of current GOV.UK Skilled Worker salary guidance",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Rechecked the current GOV.UK Skilled Worker salary guidance on 2026-10-11; the standard baseline remains £41,700 or the occupation-specific going rate, whichever is higher. Lower-salary and transitional categories remain exceptions.",
       "confidence": "high",
-      "reviewAfter": "2026-10-12"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "IE-study-eligibility-2026-09-12",
