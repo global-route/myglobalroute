@@ -75,7 +75,7 @@ Quality Gate output on the verified implementation/data SHA:
 | P1-S1.4 | Same-SHA verification/handover | **Implementation verified** | CI passes on the two SHAs above; do not treat this as production verification |
 | P1-REQ | Structured requirements | **Open / active** | 16 declarations across 6 of 56 pathways; 50 remain unstructured |
 | P1-ROUTE | Recommendation quality | **Active; threshold hardening and boundary/no-match regressions verified at `9ed09f0`** | Continue stale/mismatched evidence, alternatives, missing-input and broader requirement-boundary tests |
-| P1-SEO | Editorial/technical SEO | **Open** | Canonical origins wait for confirmed production host; clean legacy metadata/links |
+| P1-SEO | Editorial/technical SEO | **Implementation advanced; open** | Homepage/About unsupported claims corrected; canonical origin remains blocked on confirmed production host; continue legacy metadata/links and editorial audit (content changes unvalidated) |
 | P1-PRIV | Privacy/compliance/accessibility | **Implementation advanced; open** | Consent UI and separate analytics/ad choice implemented (unvalidated); complete legal review, data/retention inventory, deployed-provider review and real-browser accessibility checks |
 | P1-REV | Monetization readiness | **Foundations only; not live** | Provider approval, consent, disclosures and reconciliation before activation |
 
