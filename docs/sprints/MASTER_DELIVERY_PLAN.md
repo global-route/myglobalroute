@@ -1,7 +1,7 @@
 # Global Route — Master Phase & Sprint Delivery Plan
 
 **Status:** Active delivery map  
-**Baseline:** 14 September 2026  
+**Baseline:** 14 September 2026 | **Reconciled:** 11 October 2026  
 **Scope:** Current Phase 0 through final Phase 6 / Scale exit
 
 This is the master delivery sequence for the remaining lifecycle. It preserves the original product blueprint while converting every phase into explicit delivery sprints with dependencies and exit gates.
@@ -35,7 +35,7 @@ The plan can gain additional sprints if a phase discovers material work that can
 
 **Current phase.** Goal: establish a trustworthy, reproducible and deployable production baseline.
 
-### Sprint P0-S1 — Exact Pathway Closure — ACTIVE
+### Sprint P0-S1 — Exact Pathway Closure — COMPLETE WITH BLOCKED CANDIDATES DOCUMENTED
 - AU-189 financial/material verification
 - NZ Points final promotion validation
 - NZ Skilled Work Experience red/amber + wage/evidence regression
@@ -47,7 +47,7 @@ The plan can gain additional sprints if a phase discovers material work that can
 
 **Exit:** every promoted exact route passes exact-scope evidence gates; unresolved routes remain research-required.
 
-### Sprint P0-S2 — Remaining-Country Evidence Closure
+### Sprint P0-S2 — Remaining-Country Evidence Closure — AUDIT COMPLETE; MAINTENANCE CONTINUES
 - Audit all research-required canonical pathways
 - Prioritize high-value routes
 - Add authoritative dated evidence
@@ -56,7 +56,7 @@ The plan can gain additional sprints if a phase discovers material work that can
 
 **Exit:** every remaining research-required route has either a promotion package or an explicit documented material evidence gap.
 
-### Sprint P0-S3 — Data & Recommendation Quality Gate
+### Sprint P0-S3 — Data & Recommendation Quality Gate — VERIFIED AT CURRENT HEAD
 - data validation
 - evidence registry and boundary tests
 - recommendation safety tests
@@ -66,7 +66,7 @@ The plan can gain additional sprints if a phase discovers material work that can
 
 **Exit:** validated tree and safe recommendation behavior with recorded verification.
 
-### Sprint P0-S4 — Browser & Release Gate
+### Sprint P0-S4 — Browser & Release Gate — SOURCE-TREE VERIFIED; PRODUCTION GATE OPEN
 - Browser/E2E representative route flows
 - deep links/assets
 - calculator
@@ -76,7 +76,7 @@ The plan can gain additional sprints if a phase discovers material work that can
 
 **Exit:** representative browser/runtime flows verified and release blockers resolved or explicitly documented.
 
-### Sprint P0-S5 — Deployment Verification & Phase 0 Exit
+### Sprint P0-S5 — Deployment Verification & Phase 0 Exit — ACTIVE / EXTERNALLY BLOCKED
 - identify authoritative Netlify site/project/hostname
 - verify deployed commit
 - production smoke
@@ -352,3 +352,8 @@ The plan can gain additional sprints if a phase discovers material work that can
 `→ P6-S1 → P6-S2 → P6-S3 → P6-S4 → P6-S5`
 
 The current sprint remains P0-S1. No later phase is treated as complete merely because it has been planned; each phase advances only after its sprint exit gates are actually verified.
+
+
+## Current status reconciliation — 2026-10-11
+
+Current head 1284684c18a7fa311cd62c52875b38d62a354a0b: Quality Gate PASS (17 suites / 113 tests), Lint PASS, Browser Smoke PASS. P0-S1 documentation/validation objective is complete with four promoted routes and two explicitly blocked exact candidates (Australia subclass 189 and Italy Flussi); those blocked routes are not publishable. P0-S2 audit is complete at current count (4 research-required canonical pathways); source maintenance continues. P0-S3 and source-tree P0-S4 verified. P0-S5 and Phase 0 remain open. Next independent sprint: NEXT_SPRINT_P1_DATA_REFRESH.md.

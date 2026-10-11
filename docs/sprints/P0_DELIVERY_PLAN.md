@@ -43,7 +43,7 @@ This plan decomposes the remaining P0 work into delivery sprints. A sprint is no
 
 ### Workstreams
 
-- Recompute the canonical registry's pathway statuses on current `main` before defining the research backlog. Earlier plan text says 24 research-required pathways, while the latest recorded snapshot says 4; neither number is current until validation is rerun.
+- Recompute the canonical registry's pathway statuses on current `main` before defining the research backlog. Current CI-verified registry contains 4 research-required pathways; regenerate the count from current validation before acting.
 - Build the remaining worklist from actual current `research_required` records and material evidence gaps, not a copied historical count.
 - Prioritize by user value, legal stability, evidence availability, source freshness and recommendation impact.
 - Add authoritative primary-source evidence in dated, field-level records.
@@ -59,7 +59,7 @@ This plan decomposes the remaining P0 work into delivery sprints. A sprint is no
 
 ## P0-S3 — Data / Recommendation Quality Gate
 
-**Current execution rule:** re-run every gate against one explicit current `main` SHA after the latest consent/monetization changes. The September PASS table is historical and must not be copied forward without new results.
+**Current execution rule:** same-head gates passed at 1284684c18a7fa311cd62c52875b38d62a354a0b (17 suites / 113 tests; Lint and Browser Smoke passed). Re-run after each code change; this is not production verification.
 
 ### Workstreams
 
@@ -129,3 +129,8 @@ A dedicated P1 revenue phase is now established at `docs/phase-1/` with the impl
 The first implementation task is **REV-01 Measurement Foundation**. It establishes privacy-aware event contracts and revenue attribution before any advertising or partner monetization is activated.
 
 P0-S5 remains authoritative for production release. Advertising activation requires the verified production origin, consent/privacy readiness and actual publisher configuration. Do not assume the Netlify Functions adapter is deployed if the actual host is Cloudflare Pages or another platform.
+
+
+## Current handoff — 2026-10-11
+
+P0-S3 and source-tree P0-S4 are verified at 1284684c18a7fa311cd62c52875b38d62a354a0b. P0-S5 is active and blocked on provider/domain/deployed-SHA/live-CSP/branch-protection evidence. P1-S1 source refresh is the next independent sprint: docs/sprints/NEXT_SPRINT_P1_DATA_REFRESH.md. Structured requirements and route-quality tests can proceed in parallel. Never mark a phase complete because CI is green.

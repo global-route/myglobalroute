@@ -36,10 +36,10 @@ The blog remains an acquisition/education layer. Country + pathway + evidence + 
 The remaining P0 work is decomposed in `docs/sprints/P0_DELIVERY_PLAN.md` and tracked in `docs/sprints/ACTIVE_SPRINT.md`.
 
 - [x] **P0-S1 — Exact Pathway Closure:** 4 routes promoted (NZ SMC x3, Austria Other Key Workers); Italy Flussi and AU-189 explicitly blocked with documented evidence gaps.
-- [ ] **P0-S2 — Remaining-Country Evidence Closure:** audit and complete the 24 research-required canonical pathways or document authoritative material gaps.
-- [ ] **P0-S3 — Data / Recommendation Quality Gate:** data validation, evidence/boundary/recommendation tests, build, generated output and lint.
+- [x] **P0-S2 — Remaining-Country Evidence Closure audit:** current registry reconciled to 56 pathways (52 publishable / 4 research_required); each remaining pathway has explicit evidence gaps. Ongoing source maintenance continues under Phase 1.
+- [x] **P0-S3 — Data / Recommendation Quality Gate:** same-head checks passed at 1284684c18a7fa311cd62c52875b38d62a354a0b (17 suites / 113 tests; build and SEO/A11y checks included).
 - [ ] **P0-S4 — Browser / Release Gate:** browser/E2E, deep links, calculator/recommendation flows and generated SEO/accessibility verification.
-- [ ] **P0-S5 — Deployment Verification & P0 Exit:** authoritative Netlify origin, production smoke, canonical/OG/sitemap restoration, CSP audit and repository hardening.
+- [ ] **P0-S5 — Deployment Verification & P0 Exit (ACTIVE / BLOCKED):** authoritative host/domain, deployed SHA, live CSP/security headers, production smoke and owner-level branch protection remain unverified.
 
 **Exit gate:** reproducible build, validated data shape, passing tests, working deep links, verified production origin, production smoke, appropriate security/SEO configuration and no known critical runtime defects.
 
@@ -55,7 +55,7 @@ The remaining P0 work is decomposed in `docs/sprints/P0_DELIVERY_PLAN.md` and tr
 - [x] Distinguish required evidence from unsupported estimates; approval rates/costs/timelines remain null where not evidenced.
 - [x] Establish material-field requirements by pathway type.
 - [x] Add 26-country evidence-gated registry without fabricating missing data.
-- [x] Add 52 pathway records across 26 countries.
+- [x] Maintain 56 canonical pathway records across 26 countries.
 - [x] Add dated field-level primary-source evidence across registry and addenda.
 - [x] Establish exact legal subroute candidate architecture outside the canonical 52.
 - [ ] Complete material-field evidence audit for remaining pathways.
@@ -170,3 +170,8 @@ The requirement schema now validates conditional metadata for application date, 
 ## Full reassessment — 2026-10-11 — `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`
 
 This update supersedes earlier status claims for current delivery. Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38113182546), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38113182590), and Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38113182545) all passed on this SHA. Current registry: 26 countries; 56 pathways (52 publishable / 4 research_required); 193 evidence records; 9 structured requirement declarations across 2 pathways. The latest recorded freshness report has 193 current, 0 overdue, 0 missing and 0 invalid review dates, but country dataset `asOf=2026-09-05` remains stale and needs a source-by-source review. Phase 0 exit is blocked by host/domain/deployed-SHA/live-header/branch-protection evidence. Phase 1 data completeness and Phase 2 structured decision quality remain incomplete. See `docs/project/PHASE_STATUS.md` and `docs/project/PROJECT_ASSESSMENT.md`.
+
+
+## Current-head status and next sprint — 2026-10-11
+
+Same-SHA source-tree gates pass at 1284684c18a7fa311cd62c52875b38d62a354a0b: Quality Gate https://github.com/global-route/myglobalroute/actions/runs/38115941501 (17 suites / 113 tests), Lint https://github.com/global-route/myglobalroute/actions/runs/38115941407, Browser Smoke https://github.com/global-route/myglobalroute/actions/runs/38115941416. This verifies P0-S3 and the source-tree portion of P0-S4 only. P0-S5 and Phase 0 remain open. The next independently executable sprint is docs/sprints/NEXT_SPRINT_P1_DATA_REFRESH.md; its source-by-source checklist must be completed before country dataset dates change.
