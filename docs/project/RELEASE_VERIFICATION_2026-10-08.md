@@ -65,3 +65,10 @@ A second mismatch was that the UI collected budget, monthly income and experienc
 ## Release decision
 
 **NO-GO for production release and live monetization until the production and provider gates above are evidenced.**
+
+
+## Requirement-schema implementation update — 2026-10-11
+
+A machine-readable requirement schema and validator have been added. Declared pathway requirements must have explicit types/units, jurisdiction, valid effective dates, HTTPS source URLs and evidence IDs whose records match the exact pathway and expected evidence field. Money values require ISO-like three-letter currency codes and explicit periods; minimum monthly income specifically requires a monthly period. Unknowns are not interpreted as zero or as a pass, and country aggregate data cannot substitute for exact-pathway evidence.
+
+No numeric thresholds have been populated from narrative claims. This avoids false precision while the exact requirement values are reviewed. New regression tests have been added; **current-head verification remains pending** until all required workflows pass on the same SHA.

@@ -112,3 +112,15 @@ A direct schema audit found a material mismatch between route data and the recom
 **Verification status:** the latest code commits are in GitHub Actions, but a complete green workflow set for the new route-engine/UI/E2E changes has not yet been confirmed in this handover update. Keep the new changes as pending verification until Quality Gate, Lint and Browser Smoke finish successfully on one SHA. Previous green runs on 12cca13f8ddfe3c6976e29b3965435fe1bd25657 do not verify later code.
 
 **Next implementation task:** build a pathway-level, evidence-backed requirement schema (with explicit units, currency, jurisdiction, effective date, and evidence IDs) for finances, experience, language and other applicant-specific requirements. Enable each input only when its matching structured field has complete source provenance and passing validation. Do not substitute country-wide aggregate data or guessed thresholds.
+
+## Structured pathway requirements — 2026-10-11
+
+Implemented the first schema/validation layer for requirement-level matching:
+- `src/data/pathway-requirement-schema.json` defines allowed requirement fields, expected types, evidence fields and anti-inference policy.
+- `scripts/pathway-requirements.js` reads that schema as its source of truth and validates structured values.
+- `scripts/validate-data.js` now rejects declared requirements with missing or wrong-scope evidence, invalid dates, non-HTTPS sources, jurisdiction/source mismatches, invalid money currencies/periods, or malformed numeric/language/boolean values.
+- `tests/pathway-requirements.test.js` covers schema behavior and negative provenance cases.
+
+No unverified route thresholds were added. Existing narrative claims do not automatically become numeric matcher inputs; each structured value must cite evidence attached to the exact pathway and matching evidence field. Requirement absence remains unknown, not zero or unrestricted. Currency conversion is not allowed without separate dated FX evidence.
+
+**Verification pending:** wait for the new Quality Gate, Lint and Browser Smoke workflows to finish on the same latest main SHA, inspect any failures, and update the release record from actual results.

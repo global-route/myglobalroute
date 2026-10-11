@@ -69,3 +69,12 @@ Before accepting this sprint handover, refresh the current `main` SHA, inspect t
 
 
 Current-head update (2026-10-11): Quality Gate, Lint and Browser Smoke all passed on `12cca13f8ddfe3c6976e29b3965435fe1bd25657` (75/75 unit tests). The release record contains exact workflow links and scope. Evidence registry count independently reconciled to 193 records across 29 JSON files. Route recommendations now require pathway-level publishable status, non-empty evidence IDs and an HTTPS source, while no longer treating aggregate country-level `evidence_required` status as a veto on an exact-pathway record. The Find My Route UI no longer collects budget/income/experience values that the schema cannot evaluate; business routes are marked not covered, and arbitrary `Any` rankings are suppressed. The deployed-site verifier now compares served country/pathway registries with checked-out source and checks application identity, critical assets, and direct 2xx routes. P0-S5 remains blocked on authoritative hosting-project/domain/deployment evidence, live-origin smoke, CSP review and repository hardening. Latest route-engine/UI/E2E commits need a completed green workflow set before marking current-head verification passed.
+
+
+## P1-REQ — Structured pathway requirements (implementation started, verification pending)
+
+Added `src/data/pathway-requirement-schema.json` as the machine-readable field contract and `scripts/pathway-requirements.js` as its validator. The data gate now validates declared pathway requirements against field-level evidence, exact pathway scope, source URL, jurisdiction, effective date, units and currency. Supported fields include minimum funds, monthly income, experience years, language test, qualification, job offer, admission offer and sponsorship.
+
+**Important limitation:** no numerical requirement values were bulk-filled from the existing narrative evidence. Current pathway records remain unstructured until each exact threshold can be transcribed and checked against its cited primary-source record. Unknown values must remain absent, not zero or unrestricted. Money matching must not convert currencies without separately dated exchange-rate evidence.
+
+Regression tests cover real versus impossible dates, exact-pathway provenance, evidence field mismatches, currency/period validation, and monthly-income unit semantics. The latest commits still require a completed green Quality Gate, Lint and Browser Smoke set on the same SHA before verification can be claimed.
