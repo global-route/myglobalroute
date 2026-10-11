@@ -10,7 +10,7 @@
 
 ## Non-test progress after the last verified checkpoint — 2026-10-11
 
-- Structured requirements now total 16 evidence-linked declarations across 6/56 pathways; 50 remain without structured declarations. Missing declarations remain unknown.
+- Structured requirements now total 19 evidence-linked declarations across 9/56 pathways; 47 remain without structured declarations. Missing declarations remain unknown.
 - Implemented independent analytics and advertising consent choices, a persistent Privacy settings entry point, local preference persistence where available, and ad-slot gating on advertising consent.
 - Updated the privacy page to explain separate data purposes, persistence limits and remaining legal/provider review; corrected homepage/About copy that overstated evidence coverage and approval-rate availability; added About-page trust/contact links.
 - Static repository readback confirms these files and documented counts are present. No tests were manually run and no CI workflows were manually dispatched for these changes, per user direction. The changes remain unvalidated; production release remains **NO-GO**.
@@ -31,14 +31,14 @@ Implementation SHA: `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`
 - Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394817
 - Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394822
 
-The route engine now rejects malformed declared funds/income/experience thresholds rather than interpreting them as zero. Existing regression coverage covers funds boundaries, malformed thresholds, no-match outcomes and recommendation limits. Current structured requirements total 16 declarations across 6/56 pathways; 50 remain unstructured. Country review still requires human sign-off. Official Russian Embassy-in-Nigeria visa material has been located, but product target-market scope and mission/jurisdiction coverage remain unresolved. `dataset.asOf=2026-09-05` remains unchanged. Production verification is not established by CI; P0-S5 is open and release remains NO-GO.
+The route engine now rejects malformed declared funds/income/experience thresholds rather than interpreting them as zero. Existing regression coverage covers funds boundaries, malformed thresholds, no-match outcomes and recommendation limits. Current structured requirements total 19 declarations across 9/56 pathways; 47 remain unstructured. Country review still requires human sign-off. Official Russian Embassy-in-Nigeria visa material has been located, but product target-market scope and mission/jurisdiction coverage remain unresolved. `dataset.asOf=2026-09-05` remains unchanged. Production verification is not established by CI; P0-S5 is open and release remains NO-GO.
 
 ## Previous verified baseline
 
 - Implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426`: Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38144112572), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38144112454), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38144112490), all on the same SHA.
 - 26 countries; 56 pathways (52 publishable / 4 research_required); 193 evidence records.
 - Latest recorded freshness inventory: 193 current, 0 overdue, 0 missing and 0 invalid review dates.
-- Structured requirements: 16 declarations across 6 pathways; 50/56 have no structured declarations.
+- Structured requirements: 19 declarations across 9 pathways; 47/56 have no structured declarations.
 - `countries.json` `dataset.asOf=2026-09-05` is stale and needs a source-by-source review before it is changed.
 
 ## Completed
