@@ -76,7 +76,7 @@ describe('pathway requirement schema validation', () => {
     const errors = validatePathwayRequirements([
       { ...pathway, requirements: [validMoney, { ...validMoney }] }
     ], [evidence]);
-    expect(errors).toContain('pathway GB-work has duplicate requirement id funds-minimum');
+    expect(errors).toContain('route GB-work has duplicate requirement id funds-minimum');
   });
 
   test('allows the current registry to keep unstructured requirements explicitly absent', () => {
