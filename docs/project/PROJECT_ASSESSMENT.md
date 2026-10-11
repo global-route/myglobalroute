@@ -54,7 +54,7 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 ### Phase 4 — Trust, compliance and accessibility foundations
 - [x] Privacy, terms and migration disclaimer pages exist.
 - [x] Analytics event payloads are allowlisted and sensitive profile fields are excluded.
-- [x] Separate analytics and advertising choices, persistent preference access, and advertising-consent gating are implemented in source.
+- [x] Independent analytics and advertising choices, persistent preference access, and advertising-consent gating are implemented in source.
 - [ ] Validate consent behavior in a real browser after testing is resumed; review actual provider behavior, storage/retention, jurisdiction-specific legal requirements and accessibility with accountable owners. Latest consent changes are not validated.
 
 ### Phase 2 — Canonical product core
