@@ -71,7 +71,7 @@ describe('canonical route engine', () => {
 
   test('accepts a known minimum-funds route only when the supplied budget meets the threshold', () => {
     const result = scorePathway(
-      { type: 'study', status: 'publishable', minFunds: 5000 },
+      { type: 'study', status: 'publishable', minFunds: 5000, evidenceIds: ['evidence-study'], sourceUrl: 'https://example.gov/study' },
       { id: 'GB', dataStatus: 'publishable' },
       { goal: 'study', budget: '5000' }
     );
