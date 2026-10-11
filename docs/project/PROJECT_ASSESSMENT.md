@@ -1,94 +1,92 @@
 # Global Route — Current Project Assessment
 
-**Reconciled:** September 5, 2026  
-**Status:** Active remediation  
-**Release readiness:** Not production-ready yet
+**Reconciled:** 2026-10-11 | **Branch:** main | **Assessed SHA:** `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`  
+**Release readiness: NO-GO for production; source-tree CI is green.**
 
 ## Executive finding
 
-The project has a strong product direction and substantial planning/content work, but the repository's hardest product risks were previously underweighted: migration-data trust, duplicated runtime logic, deployment correctness, and missing automated quality gates.
+Global Route has moved beyond a static-country/blog prototype. It now has a generated multi-page product, canonical pathway registry, pathway-scoped evidence, guarded route matching, data/build/SEO checks, browser smoke automation, a structured-requirements schema, freshness reporting, and fail-closed monetization foundations.
 
-The correct next phase is **Production Integrity → Migration Intelligence Core**, not simply more blog volume.
+The main remaining risks are (1) unverified production host/deployed content/security, (2) stale country-dataset metadata and claims needing source-by-source revalidation, and (3) sparse structured pathway requirements. A green build or a record marked publishable is not a personalized legal eligibility verdict.
 
-## Critical findings
+## Verified snapshot
 
-| Finding | Severity | Current state |
+| Area | Current state | Meaning |
 |---|---|---|
-| Runtime data path mismatch | P0 | Fixed |
-| Duplicate calculator implementations | P0 | Fixed |
-| Calculator currency inconsistency | P0 | Fixed in canonical engine |
-| Timeline range parsing bug | P0 | Fixed |
-| Unsafe HTML rendering of data-controlled values | P0 | Hardened in active modules |
-| Static deployment SPA rewrite | P0 | Removed |
-| Destructive gzip build step | P0 | Removed |
-| Missing data validation script | P0 | Added |
-| Migration provenance | P0 | Standard documented; implementation pending |
-| Incomplete 26-country coverage | P0 | Still open; no fabricated records added |
-| Pathway-level product model | P0 | Still open |
-| Automated tests/build smoke tests | P0 | Still open |
-| SEO completeness | P1 | Audit/implementation pending |
-| Privacy/analytics governance | P1 | Audit pending |
+| Current source | `e7ccd592b703d62867267ddb5573b73a2d2bc0ea` | Assessment baseline |
+| Quality Gate | [PASS](https://github.com/global-route/myglobalroute/actions/runs/38113182546) | Source-tree verification |
+| Lint | [PASS](https://github.com/global-route/myglobalroute/actions/runs/38113182590) | Source-tree verification |
+| Browser Smoke | [PASS](https://github.com/global-route/myglobalroute/actions/runs/38113182545) | Not production verification |
+| Country registry | 26 records | Not 26 fully verified country profiles |
+| Canonical pathways | 56: 52 publishable / 4 research_required | Publishability is evidence-scope-specific |
+| Evidence inventory | 193 records | Still needs ongoing source review |
+| Evidence freshness | Latest recorded report: 193 current, 0 overdue, 0 missing, 0 invalid | Review dates do not prove all sources were reopened today |
+| Country metadata | `dataset.asOf=2026-09-05` | 36 days old; refresh only after reviewing all 26 source anchors |
+| Structured requirements | 9 declarations across 2 pathways: 2 UK Skilled Worker + 7 Canada study family-size thresholds | 54/56 pathways have no structured declarations; this means unknown coverage, not no requirements |
+| Aggregate country metrics | Costs, timelines and approval rates remain null/evidence-gated where unsupported | Correctly avoids fabricated estimates |
+| Hosting | `wrangler.jsonc` names Worker `myglobalroute`; observed Cloudflare build service label was `globalroute`; Netlify config/functions also exist | Hosting identity unresolved; do not infer or change DNS/service names |
+| Security/release | CSP configured in repo; live headers and deployed SHA not verified; branch-protection inspection returned 403 | Provider/owner evidence needed |
+| Monetization | Consent, registry and fail-closed redirect foundations exist; no verified live provider/revenue | Keep activation gated |
 
-## Verified technical corrections
+## Completed work by phase
 
-### Runtime
+### Phase 0 — Production integrity foundations
+- [x] Canonical runtime/build paths, generated routes and static output repaired.
+- [x] Calculator/search foundations hardened; duplicate calculator logic removed.
+- [x] Data/evidence validators, unit tests, build-integrity and SEO/accessibility gates implemented.
+- [x] Browser Smoke and Lint pass on the assessed SHA.
+- [x] Evidence freshness inventory runs in CI.
+- [x] Promoted exact-subroute records are checked against matching canonical pathways and evidence coverage.
+- [ ] Phase exit blocked by production host/domain, deployed SHA/content, live security headers, origin smoke and owner-level branch protection.
 
-Eleventy copies `src/data` into the generated `/data` output. The application now requests `/data/countries.json` instead of the source-tree path.
+### Phase 1 — Migration intelligence foundation
+- [x] 26-country registry, 56 canonical pathways and 193 evidence records exist.
+- [x] Evidence provenance, freshness reporting and evidence-gated route statuses are implemented.
+- [x] Unsupported aggregate country cost/timeline/rate values remain null.
+- [ ] Country `asOf` metadata is stale; source-check all 26 records.
+- [ ] Revalidate material pathway claims at exact legal scope.
+- [ ] Four canonical pathways remain research_required.
 
-### Calculator
+### Phase 2 — Canonical product core
+- [x] Find My Route / canonical matching foundations and generated source trails exist.
+- [x] Zero-fit and arbitrary no-goal rankings are suppressed; country-level aggregate status is not used as a blanket veto for an evidenced pathway.
+- [x] Structured requirement schema, conditional metadata validation and readiness report exist.
+- [ ] Only 2/56 pathways have structured requirements; model exceptions, alternatives, dates, family size, region, tuition/funds separation and evidence freshness.
+- [ ] Expand route evaluation tests and ensure uncertainty is surfaced; matches must not be described as legal eligibility decisions.
 
-`calculator.js` is now the canonical calculation engine. The application layer only reads form values, calls the engine and renders results. Currency conversion is centralized and unsupported currencies fail explicitly. Timeline ranges such as `8-16 months` preserve both endpoints instead of losing the maximum value.
+## Uncompleted work, in priority order
 
-### Search
+### P0 — production release blockers
+1. Confirm authoritative hosting account/project, canonical hostname and custom-domain mapping from provider configuration.
+2. Reconcile Worker name `myglobalroute`, observed Cloudflare build label `globalroute`, and Netlify configuration; do not guess the live provider.
+3. Capture deployed source SHA and compare live registries, assets and routes with `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`.
+4. Run `npm run deploy:verify` and smoke-test homepage, country/pathway deep links, JSON, calculator and route matching against the confirmed origin.
+5. Inspect actual live CSP/security headers against the actual script/analytics/ad/partner inventory.
+6. Obtain owner-level main-branch protection/ruleset and required-check evidence.
+7. Keep all three CI workflows green on the same SHA after changes.
 
-Search now uses Fuse.js when the browser bundle provides it, with a deterministic substring fallback. Result rendering escapes data-controlled text and IDs are encoded before insertion into links.
+### P0 — data trust and route quality
+8. Review all 26 country source anchors; update `retrievedAt`, `reviewAfter` and `dataset.asOf` only for sources actually checked.
+9. Close or explicitly preserve evidence gaps for the four research-required pathways; do not promote by quota.
+10. Expand structured requirements only with exact primary-source evidence and conditional rules.
+11. Test stale/expired/mismatched evidence, insufficient funds, missing profile data, alternative routes, exceptions and no-match behavior.
+12. Ensure every displayed requirement/recommendation maps to exact pathway evidence and source dates.
 
-### Deployment
+### P1 — trust, content and growth
+13. Clean legacy blog/category links, duplicate/historical pages, internal links and editorial SEO/accessibility.
+14. Complete privacy/data inventory, retention/deletion, consent evidence, analytics minimization, legal boundary and incident/contact ownership.
+15. Verify real provider approvals/contracts, ad consent and placement behavior, commercial redirect ownership, disclosures and click/revenue reconciliation before activation.
+16. Run live responsive, keyboard/accessibility, performance and CSP checks on the confirmed host.
 
-The Netlify configuration no longer contains two competing `[build]` blocks, no longer rewrites every URL to `index.html`, and no longer gzip-replaces source files in-place while retaining their original extensions.
+### P2 — defer until launch controls are proven
+17. Scale content, acquisition, newsletters, advanced personalization, lead marketplace, paid tiers and provider revenue reporting only after production/data/privacy gates pass.
 
-## Data trust risk
+## Important distinctions
 
-The country dataset must not be treated as a verified migration database merely because records exist. Legal requirements, fees, processing times, approval rates and relocation costs change and require source/effective/verification metadata.
+- 26 countries ≠ 26 fully researched country profiles.
+- 52 publishable pathway records ≠ 52 fully structured eligibility rules.
+- Current evidence review dates ≠ proof every official source was re-opened today.
+- Passing source-tree CI ≠ a verified live deployment.
+- A configured monetization slot ≠ approved provider or real revenue.
 
-See `docs/reference/DATA_TRUST_STANDARD.md`.
-
-The current coverage is below the 26-country blueprint target. Expansion is intentionally blocked on evidence quality rather than filled with guessed values.
-
-## Architecture target
-
-Move from:
-
-`country → static aggregate data → calculator/blog`
-
-toward:
-
-`country → pathway → eligibility → evidence → cost → timeline → risks → recommendation → next action`
-
-This preserves the original vision while making the product capable of answering user-specific route questions reliably.
-
-## Release gates
-
-The project should not be called production-ready until all P0 gates pass:
-
-1. `npm run build` succeeds reproducibly.
-2. `npm run data:validate` passes without critical errors.
-3. Unit tests cover calculator/search/data validation.
-4. Generated routes and static assets are smoke-tested.
-5. Representative deep links work on the deployed site.
-6. Migration claims have source/provenance metadata.
-7. Unsupported or stale statistics are clearly labelled.
-8. Accessibility and security baselines pass.
-
-## What not to do yet
-
-- Do not inflate the country count with unverified records.
-- Do not publish estimated approval rates as official statistics.
-- Do not add a second calculator/search implementation.
-- Do not treat old percentage-complete numbers as release gates.
-- Do not prioritize social/monetization work over P0 trust and correctness.
-
-## Next execution sequence
-
-**P0 now:** schema + provenance → tests → build/deploy smoke tests → pathway model.  
-**Then:** evidence-backed country expansion → `Find My Route` → SEO → trust/compliance → growth.
+**Recommended order:** resolve host and deployed identity; verify live security and production behavior; review 26 country sources; address four research-required pathways; expand structured route requirements and decision tests; complete privacy/SEO/accessibility; then activate growth. Production remains **NO-GO**.

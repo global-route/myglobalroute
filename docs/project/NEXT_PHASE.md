@@ -1,3 +1,5 @@
+> **STATUS NOTICE — 2026-10-11:** This is a historical Phase 3 blog/content plan from July–August 2026, not the current sprint. Its dates, percentages, traffic targets and unchecked tasks are not current status evidence. Use [Phase Status](PHASE_STATUS.md), [Project Assessment](PROJECT_ASSESSMENT.md), [Execution Roadmap](EXECUTION_ROADMAP.md) and [Active Sprint](../sprints/ACTIVE_SPRINT.md). Preserve this file as historical product intent; do not use it to override production/data-trust gates.
+
 # Global Route: Phase 3 Tasks & Roadmap
 
 **Current Status:** Phase 2 Blog Foundation Complete (20%)  

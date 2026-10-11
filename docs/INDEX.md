@@ -1,17 +1,18 @@
 # Global Route Documentation Hub
 
 **Status:** Active execution  
-**Last reconciled:** October 11, 2026
+**Last reconciled:** October 11, 2026 — full project reassessment
 
 Global Route's original roadmap remains the product blueprint. The execution order is now dependency-aware: production integrity and trustworthy migration intelligence precede content and growth scaling.
 
 ## Start here
 
 ### Project / product
-1. `project/PROJECT_ASSESSMENT.md` — current health and critical risks.
-2. `project/EXECUTION_ROADMAP.md` — master roadmap and phase dependencies.
-3. `sprints/ACTIVE_SPRINT.md` — current executable task list.
-4. `reference/DATA_TRUST_STANDARD.md` — non-negotiable data/evidence rules.
+1. `project/PROJECT_ASSESSMENT.md` — current health, risks and open work.
+2. `project/PHASE_STATUS.md` — canonical status across all phases.
+3. `project/EXECUTION_ROADMAP.md` — master roadmap and phase dependencies.
+4. `sprints/ACTIVE_SPRINT.md` — current executable task list.
+5. `reference/DATA_TRUST_STANDARD.md` — non-negotiable data/evidence rules.
 
 ### Developers
 1. `guides/QUICK_START.md`
@@ -79,3 +80,8 @@ Personalization, alerts, policy-change notifications, premium intelligence and B
 ## Maintenance rule
 
 If an older document conflicts with `ACTIVE_SPRINT.md`, `EXECUTION_ROADMAP.md` or `DATA_TRUST_STANDARD.md`, reconcile the older document instead of creating another parallel plan.
+
+
+## Reassessment — 2026-10-11
+
+Use `project/PHASE_STATUS.md` as the canonical phase tracker. Phase 0 exit is blocked; Phase 1 data trust and Phase 2 route decision quality remain incomplete; Phase 3 editorial cleanup is open; Phase 4 privacy/compliance/accessibility is partial; Phase 5 monetization is not live; Phase 6 scale is deferred. Current assessed SHA: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`. See `project/PROJECT_ASSESSMENT.md` for the full backlog.

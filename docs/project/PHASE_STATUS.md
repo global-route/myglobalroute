@@ -1,0 +1,28 @@
+# Phase Status — Global Route
+
+**Reconciled:** 2026-10-11 | **Assessed SHA:** `e7ccd592b703d62867267ddb5573b73a2d2bc0ea` | **Release: NO-GO**
+
+This is the canonical phase tracker. Historical phase/sprint docs preserve original product intent but their old dates, percentages, counts and URLs do not override this tracker or the active sprint.
+
+| Phase | Status | Completed | Uncompleted / exit gate |
+|---|---|---|---|
+| Phase 0 — Production integrity | **Foundations complete; exit blocked** | Runtime/build repairs, canonical modules, validators, unit/SEO/A11y gates, lint and browser smoke | Confirm host/domain, deployed SHA/content, live CSP, production smoke and branch protection |
+| Phase 1 — Migration intelligence | **Partially complete; ongoing P0** | 26-country registry, 56 pathways, 193 evidence records, provenance and freshness reporting | Country metadata `asOf` stale; source-check all 26 countries; verify material pathway claims; 4 pathways research_required |
+| Phase 2 — Canonical product core | **Core exists; decision quality incomplete** | Route matching, zero-fit suppression, source trails, requirement schema/readiness | Only 2/56 pathways structured; conditional eligibility, alternatives/exemptions, stale-evidence behavior and route-quality tests open |
+| Phase 3 — Content & acquisition | **Partially delivered; cleanup open** | Generated content/routes and search foundations | Legacy blog/category links, historical/duplicate pages, editorial freshness, internal links and SEO/A11y review; canonical URLs wait for confirmed origin |
+| Phase 4 — Trust/compliance/accessibility | **Foundations only** | Privacy/terms/disclaimer baseline, consent-aware analytics, CSP config, dependency audit, static accessibility checks | Live CSP, data inventory/retention, production consent, legal review, browser accessibility/performance and ownership processes |
+| Phase 5 — Growth/monetization | **Preparation only; not live** | Empty verified commercial registry, fail-closed redirects, consent/measurement foundations | Provider contracts/approval, publisher ID, live placement/consent, lead governance, revenue reconciliation; no real revenue claim |
+| Phase 6 — Scale | **Deferred / not started as a scale phase** | No scale exit claimed | Start after production, data trust, privacy and monetization controls are proven |
+
+## Task-status rules
+
+- Mark complete only when implementation, docs and required verification exist.
+- Publishable means evidence-backed for a defined pathway scope; it is not an approval guarantee.
+- Missing structured requirements means unknown, not zero or unrestricted.
+- Current review dates do not prove sources were all re-opened today.
+- Source-tree CI does not prove a live deployment.
+- Do not bypass P0/P1 trust gates to scale content or revenue.
+
+## Documentation organization finding
+
+The repo has `docs/phase-0`, `docs/phase-1` and `docs/phase-3`, but no `docs/phase-2` despite Phase 2 in the roadmap. `docs/phase-1` contains revenue work and `docs/phase-3` contains older blog artifacts. Do not mass-move files mid-sprint; this tracker is the current status source. A later cleanup should map legacy files to the canonical phase taxonomy and label historical artifacts.
