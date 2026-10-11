@@ -1,6 +1,6 @@
 # Next Sprint Handover — P1-S1 Country Source Refresh & Dataset Reconciliation
 
-> **Follow-up route-test candidate (2026-10-11):** [`ec0f02c2b2d171d98262d8a3fc4adc807bbe3328`](https://github.com/global-route/myglobalroute/commit/ec0f02c2b2d171d98262d8a3fc4adc807bbe3328) adds income and experience threshold boundary tests. Confirm Quality Gate, Lint and Browser Smoke on that exact SHA before marking this extension verified. This does not change P1-S1's open human sign-off gate or P0-S5's external blockers.
+> **Execution adjustment — 2026-10-11:** Per user direction, testing and CI work is paused while non-test data/schema/documentation tasks continue. Recent structured-requirement changes are not validated. P1-S1 human sign-off and Russia jurisdiction confirmation, and P0-S5 external production gates, remain open.
 
 > **Checkpoint update — 2026-10-11:** This document began as the P1-S1 starting plan. The country manifest and first-pass source review have since been implemented. Current state: 26/26 country anchors have explicit outcomes; relevant official pages/alternatives were inspected for 25; Russia still needs mission/jurisdiction confirmation and all AI-assisted observations require human sign-off. Remaining P1-S1 work is human sign-off, accepted-exception recording, and safe metadata reconciliation—not initial manifest generation. Use `docs/sprints/ACTIVE_SPRINT.md` as the canonical task board.
 
