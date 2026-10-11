@@ -59,11 +59,14 @@ describe('pathway requirement schema validation', () => {
       componentsExcluded: ['tuition']
     })).toEqual(expect.arrayContaining([
       'conditions.applicationDateFrom must be a real ISO date (YYYY-MM-DD)',
-      'conditions.applicationDateFrom cannot be after conditions.applicationDateTo',
       'conditions.familySize must be a positive integer',
       'conditions.region must be a non-empty string',
       'expense components cannot be both included and excluded'
     ]));
+    expect(validateConditions({
+      applicationDateFrom: '2026-09-01',
+      applicationDateTo: '2025-01-01'
+    })).toContain('conditions.applicationDateFrom cannot be after conditions.applicationDateTo');
   });
 
   test('requires explicit conditions and scope notes for minimum-funds thresholds', () => {
