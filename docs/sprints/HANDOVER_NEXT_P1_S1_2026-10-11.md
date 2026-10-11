@@ -1,5 +1,8 @@
 # Next Sprint Handover — P1-S1 Country Source Refresh & Dataset Reconciliation
 
+> **Checkpoint update — 2026-10-11:** This document began as the P1-S1 starting plan. The country manifest and first-pass source review have since been implemented. Current state: 26/26 country anchors have explicit outcomes; relevant official pages/alternatives were inspected for 25; Russia still needs mission/jurisdiction confirmation and all AI-assisted observations require human sign-off. Remaining P1-S1 work is human sign-off, accepted-exception recording, and safe metadata reconciliation—not initial manifest generation. Use `docs/sprints/ACTIVE_SPRINT.md` as the canonical task board.
+
+
 **Prepared:** 2026-10-11  
 **Repository:** `global-route/myglobalroute`  
 **Branch:** `main`  
