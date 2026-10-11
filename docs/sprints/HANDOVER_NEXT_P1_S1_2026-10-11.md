@@ -1,6 +1,6 @@
 # Next Sprint Handover — P1-S1 Country Source Refresh & Dataset Reconciliation
 
-> **Execution adjustment — 2026-10-11:** Per user direction, testing and CI work is paused while non-test data/schema/documentation tasks continue. Recent structured-requirement changes are not validated. P1-S1 human sign-off and Russia jurisdiction confirmation, and P0-S5 external production gates, remain open.
+> **Execution adjustment — 2026-10-11:** Per user direction, test-writing, test-running and CI work is paused while non-test implementation/data/schema/documentation tasks continue. Structured-requirement additions, separate analytics/advertising consent controls, and evidence-aligned homepage/About edits are not validated. P1-S1 human sign-off and Russia jurisdiction confirmation, and P0-S5 external production gates, remain open.
 
 > **Checkpoint update — 2026-10-11:** This document began as the P1-S1 starting plan. The country manifest and first-pass source review have since been implemented. Current state: 26/26 country anchors have explicit outcomes; relevant official pages/alternatives were inspected for 25; Russia still needs mission/jurisdiction confirmation and all AI-assisted observations require human sign-off. Remaining P1-S1 work is human sign-off, accepted-exception recording, and safe metadata reconciliation—not initial manifest generation. Use `docs/sprints/ACTIVE_SPRINT.md` as the canonical task board.
 
@@ -30,8 +30,8 @@ Latest Actions observed during this handover: Lint and Quality Gate succeeded on
 | P1-S1 — country source refresh | Manifest complete; outcomes recorded for 26/26, 25 official alternatives inspected; human sign-off and Russia jurisdiction confirmation open | IN PROGRESS |
 | P1-REQ — structured requirements | Open | 16 declarations across 6 pathways; 50/56 pathways remain without structured declarations |
 | P1-ROUTE — recommendation quality | Open | Add evidence mismatch/staleness, missing-input, boundary, alternative and no-match tests |
-| P1-SEO | Open | Origin-dependent canonical URLs wait for confirmed production origin |
-| P1-PRIV — privacy/compliance/accessibility | Open | Live consent/security, retention, legal review and browser accessibility/performance remain |
+| P1-SEO | Implementation advanced; open | Homepage/About unsupported claims corrected; origin-dependent canonical URLs wait for confirmed production origin; legacy metadata/link cleanup remains |
+| P1-PRIV — privacy/compliance/accessibility | Implementation advanced; open | Separate analytics/ad choices and persistent settings implemented but unvalidated; live provider/security, retention, legal review and browser accessibility/performance remain |
 | P1-REV — monetization | Foundations only; not live | Keep activation and lead delivery gated |
 | Phase 0 | Foundations complete; exit blocked | NOT COMPLETE |
 | Phase 1 | Partially complete; ongoing | NOT COMPLETE |
