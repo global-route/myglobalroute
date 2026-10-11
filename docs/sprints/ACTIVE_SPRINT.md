@@ -85,3 +85,12 @@ Regression tests cover real versus impossible dates, exact-pathway provenance, e
 The structured pathway-requirements validator now reads its allowed fields/types from `src/data/pathway-requirement-schema.json` and is applied to both canonical pathways and exact subroutes. It requires exact-route evidence (no inheritance), expected evidence field, matching HTTPS source and jurisdiction, real effective dates, explicit money currency/period, correct units, and rejects evidence past its `reviewAfter` date from backing a structured match. The schema covers money, monthly income, experience, language tests, qualifications, job offers, admission offers and sponsorship.
 
 No thresholds were guessed or bulk-converted from narrative evidence. Current source-tree verification for the newest implementation is pending; the latest Quality Gate, Lint and Browser Smoke must pass on one SHA before this lane can be called verified.
+
+
+### Verification update — 2026-10-11, commit `c224696bdc4487dd17a7b9b28304f4ad25012f34`
+
+- Quality Gate PASS: [run 38105471129](https://github.com/global-route/myglobalroute/actions/runs/38105471129).
+- Lint PASS: [run 38105471109](https://github.com/global-route/myglobalroute/actions/runs/38105471109).
+- Browser Smoke PASS: [run 38105471079](https://github.com/global-route/myglobalroute/actions/runs/38105471079).
+- The browser test now checks the DOM option's native `disabled` property directly; the previous Playwright matcher failed despite the rendered option carrying `disabled`. All three checks passed on the same SHA.
+- This verifies source-tree checks only. P0-S5 remains blocked on the authoritative hosting project/origin, deployed SHA, production smoke, CSP, and owner decision on repository visibility/branch policy. Structured requirements are still a schema/validator foundation; real threshold data remains unknown unless sourced and entered with exact-route evidence.
