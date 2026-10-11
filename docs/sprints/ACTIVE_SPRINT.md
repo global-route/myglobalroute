@@ -14,6 +14,7 @@
 - Extended the schema for maintenance balances, minimum age and points-based thresholds. Australia remains `research_required`; 65 points does not guarantee an invitation and does not close subclass-specific financial evidence gaps.
 - Structured requirement inventory: 16 declarations across 6 pathways; 50/56 pathways have no structured declarations. Missing declarations remain unknown.
 - Implemented separate analytics and advertising consent choices, a persistent Privacy settings control, local preference persistence where available, and an ad-placement gate tied to advertising consent. Updated privacy copy to explain limits and remaining review needs.
+- Corrected homepage/About copy that overstated approval-rate coverage and universal evidence gating; unsupported rates and costs are now described as unpublished or unverified.
 - Per user direction, testing and CI execution are paused; these changes are **not validated** and do not change the release NO-GO decision.
 
 ## Current decision
