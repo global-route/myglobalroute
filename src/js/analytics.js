@@ -173,6 +173,10 @@
       throw new Error('Analytics provider must expose emit(eventName, payload)');
     }
     provider = adapter;
+    if (provider && typeof provider.setConsent === 'function') provider.setConsent(consentState);
+    if (provider && typeof provider.setAdvertisingConsent === 'function') {
+      provider.setAdvertisingConsent(advertisingConsentState);
+    }
   }
 
   function track(eventName, payload = {}) {
