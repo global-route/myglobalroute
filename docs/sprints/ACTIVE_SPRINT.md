@@ -184,3 +184,8 @@ The deployed-site verification script now rejects `http://` origins before attem
 ## CI wiring correction — 2026-10-11
 
 Review of the completed Quality Gate log found that the new evidence-freshness inventory was included in package.json's verify script but the GitHub Actions workflow runs individual steps and had not invoked the new command. The Quality Gate step now explicitly runs both `npm run requirements:readiness` and `npm run evidence:freshness`. This is a verification-wiring fix; the prior run's 17 suites / 108 tests passed, but did not yet execute the new freshness inventory in CI. All workflows must pass again on the new head.
+
+
+## Evidence refresh batch 2 — Sweden and Norway — 2026-10-11
+
+After the freshness inventory reported 193 records (171 current, 22 overdue, none missing or malformed), this batch refreshed only claims whose exact official pages were reviewed: Sweden higher-education maintenance, student work limits, and post-study job-seeker permit; Norway study-permit eligibility and study-finance scope. The Sweden work limit is now explicitly stated as 15 hours/week for bachelor's/master's permits granted on/after 2026-06-11, with official exceptions retained. Sweden 2026 study maintenance remains SEK 10,656/month, with reductions/family additions where applicable. No generic threshold was promoted for Norway because amounts vary by programme type and duration.

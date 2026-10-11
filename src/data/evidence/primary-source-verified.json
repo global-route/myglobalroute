@@ -253,25 +253,25 @@
       "sourceUrl": "https://www.migrationsverket.se/en/you-want-to-apply/study/higher-education.html",
       "jurisdiction": "Sweden",
       "effectiveDate": "2026-01-01",
-      "retrievedAt": "2026-09-07",
-      "methodology": "Direct review of current Swedish Migration Agency higher-education permit guidance",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current Swedish Migration Agency higher-education permit guidance on 2026-10-11. Confirmed maintenance requirement of SEK 10,656/month for 2026 applications, possible food/housing reductions, family additions, and related permit conditions.",
       "confidence": "high",
-      "reviewAfter": "2026-10-07"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "SE-study-work-rights-2026-09-07",
       "countryId": "SE",
       "pathwayId": "SE-study",
       "field": "work-rights",
-      "claim": "For bachelor's and master's students whose Swedish residence permit was granted on or after 11 June 2026, work is limited to a maximum of 15 hours per week.",
+      "claim": "For bachelor's and master's students whose Swedish residence permit was granted on or after 11 June 2026, work is limited to a maximum of 15 hours per week, with specified exceptions for work forming part of education and certain university duties.",
       "sourceAuthority": "Swedish Migration Agency",
-      "sourceUrl": "https://www.migrationsverket.se/en/you-want-to-extend/study/higher-education.html",
+      "sourceUrl": "https://www.migrationsverket.se/en/you-want-to-apply/study/higher-education.html",
       "jurisdiction": "Sweden",
       "effectiveDate": "2026-06-11",
-      "retrievedAt": "2026-09-07",
-      "methodology": "Direct review of current Swedish Migration Agency higher-education permit guidance",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current Swedish Migration Agency higher-education permit guidance on 2026-10-11; the official page states the 15-hour weekly limit applies to bachelor's/master's permits granted on or after 11 June 2026 and lists exceptions.",
       "confidence": "high",
-      "reviewAfter": "2026-10-07"
+      "reviewAfter": "2026-11-10"
     }
   ]
 }

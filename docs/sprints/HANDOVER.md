@@ -126,3 +126,8 @@ The production verifier now requires an HTTPS origin and rejects HTTP before net
 ## CI freshness-inventory wiring — 2026-10-11
 
 Corrected .github/workflows/quality.yml: the evidence-readiness step now runs both `npm run requirements:readiness` and `npm run evidence:freshness`. The previous Quality Gate was green (17 suites, 108 tests), but log inspection showed the newly added inventory command had not been called by the workflow because CI invokes individual steps instead of `npm run verify`. The new head must pass all three workflows; inspect the Quality Gate log to confirm the inventory actually runs.
+
+
+## Evidence refresh batch 2 — Sweden and Norway — 2026-10-11
+
+Official source review refreshed four overdue Sweden/Norway records, including the Swedish study maintenance threshold (SEK 10,656/month for 2026 applications), the 15-hour weekly work limit for bachelor's/master's study permits granted on/after 2026-06-11 (with exceptions), post-study job-seeker permit conditions, and Norway's programme-dependent study permit/financial requirements. Retrieval and review dates were changed only for these checked records; no universal Norway funds amount was inferred. The freshness inventory's pre-batch baseline was 22 overdue records across 10 countries; rerun the report after this commit to obtain the updated counts.

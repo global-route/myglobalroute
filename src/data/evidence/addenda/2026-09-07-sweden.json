@@ -36,15 +36,15 @@
       "countryId": "SE",
       "pathwayId": "SE-study",
       "field": "post-study",
-      "claim": "Eligible graduates with a Swedish higher-education qualification can apply for a residence permit to look for work or explore starting a business after completing qualifying studies, subject to the applicable conditions and maintenance requirement.",
+      "claim": "Eligible graduates who completed a qualifying higher-education programme lasting at least two semesters may apply before their current permit expires for a residence permit of up to one year (bachelor's/master's) or up to 18 months (doctoral studies) to seek work or explore starting a business, subject to financial maintenance and insurance conditions.",
       "sourceAuthority": "Swedish Migration Agency",
       "sourceUrl": "https://www.migrationsverket.se/en/you-want-to-extend/study/look-for-work-after-completing-your-studies-in-sweden.html",
       "jurisdiction": "Sweden",
       "effectiveDate": "2026-09-07",
-      "retrievedAt": "2026-09-07",
-      "methodology": "Direct review of current Swedish Migration Agency post-study guidance",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current Swedish Migration Agency post-study guidance on 2026-10-11, including programme-completion, application timing, financial maintenance, insurance and permit-duration conditions.",
       "confidence": "high",
-      "reviewAfter": "2026-10-07"
+      "reviewAfter": "2026-11-10"
     }
   ]
 }

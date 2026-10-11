@@ -88,10 +88,10 @@
       "sourceUrl": "https://www.udi.no/en/want-to-apply/studies/",
       "jurisdiction": "Norway",
       "effectiveDate": "2026-09-12",
-      "retrievedAt": "2026-09-12",
-      "methodology": "Direct review of current UDI study-permit requirements; no unsupported numeric amount is inserted where the source page's applicable figure depends on the current application context.",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current Norwegian Directorate of Immigration study-permit guidance on 2026-10-11. The official guidance gives different maintenance amounts by study type and duration, so this record remains a general financial-requirement statement and does not promote one amount as universal.",
       "confidence": "high",
-      "reviewAfter": "2026-10-12"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "NO-work-eligibility-2026-09-12",
