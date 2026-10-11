@@ -22,7 +22,7 @@ Latest Actions observed during this handover: Lint and Quality Gate succeeded on
 | P0-S3 — data/recommendation quality gate | Source-tree verified | Verified only at the recorded tested SHA |
 | P0-S4 — browser/source-tree gate | Source-tree verified | Does not establish live production behavior |
 | P0-S5 — deployment verification / Phase 0 exit | Active / externally blocked | OPEN |
-| P1-S1 — country source refresh | Ready for execution; source review not started | NEXT SPRINT; OPEN |
+| P1-S1 — country source refresh | Manifest complete; outcomes recorded for 26/26, 25 official alternatives inspected; human sign-off and Russia jurisdiction confirmation open | IN PROGRESS |
 | P1-REQ — structured requirements | Open | 12 declarations across 5 pathways; 51/56 pathways remain without structured declarations |
 | P1-ROUTE — recommendation quality | Open | Add evidence mismatch/staleness, missing-input, boundary, alternative and no-match tests |
 | P1-SEO | Open | Origin-dependent canonical URLs wait for confirmed production origin |

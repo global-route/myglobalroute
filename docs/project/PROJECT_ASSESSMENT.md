@@ -51,7 +51,7 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 - [x] Find My Route / canonical matching foundations and generated source trails exist.
 - [x] Zero-fit and arbitrary no-goal rankings are suppressed; country-level aggregate status is not used as a blanket veto for an evidenced pathway.
 - [x] Structured requirement schema, conditional metadata validation and readiness report exist.
-- [ ] 9 declarations across 2/56 pathways (2 UK Skilled Worker + 7 Canada study family-size thresholds); 54 pathways have no structured declarations. Model alternatives/exemptions, date/region conditions, tuition/funds separation, stale-evidence behavior and route-quality cases.
+- [ ] 12 declarations across 5/56 pathways (2 UK Skilled Worker + 7 Canada study family-size thresholds); 51 pathways have no structured declarations. Model alternatives/exemptions, date/region conditions, tuition/funds separation, stale-evidence behavior and route-quality cases.
 - [ ] Expand route evaluation tests and ensure uncertainty is surfaced; matches must not be described as legal eligibility decisions.
 
 ## Uncompleted work, in priority order
@@ -94,7 +94,7 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 
 ## Latest verification/status reconciliation — 2026-10-11
 
-Last fully verified same-SHA CI checkpoint before this status reconciliation: `95f960c081367305dea0144034d48a4ab7892426`; verified implementation SHA: `95f960c081367305dea0144034d48a4ab7892426`. Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957166), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957132), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957147) on the same current main SHA. The country source checklist is ready but no anchor is marked reviewed; `dataset.asOf=2026-09-05` remains stale by design until all 26 reviews are evidenced. Current phase status is canonical in `PHASE_STATUS.md`: Phase 0 exit blocked, Phase 1 incomplete, Phase 2 decision-quality incomplete, Phase 3/4 partial, Phase 5 not live, Phase 6 deferred. No phase completion percentage should override those exit gates.
+Last fully verified same-SHA CI checkpoint before this status reconciliation: `95f960c081367305dea0144034d48a4ab7892426`; verified implementation SHA: `95f960c081367305dea0144034d48a4ab7892426`. Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957166), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957132), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957147) on the same current main SHA. The machine-readable manifest records outcomes for all 26 anchors; 25 relevant official pages/alternatives were inspected. Russia requires mission-jurisdiction confirmation and human sign-off remains open; `dataset.asOf=2026-09-05` is unchanged. Current phase status is canonical in `PHASE_STATUS.md`: Phase 0 exit blocked, Phase 1 incomplete, Phase 2 decision-quality incomplete, Phase 3/4 partial, Phase 5 not live, Phase 6 deferred. No phase completion percentage should override those exit gates.
 
 
 ## Current delivery delta — 2026-10-11

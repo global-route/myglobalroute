@@ -151,7 +151,7 @@ All three required workflows passed on the exact same current `main` head:
 
 The structured-requirement model now validates condition metadata and includes seven Canada study living-expense thresholds for family sizes 1–7 outside Quebec for applications on/after 2026-09-01. The amounts are CAD 23,448; 29,192; 35,888; 43,572; 49,419; 55,736; 62,054 per year. They exclude tuition and transportation; Quebec has separate rules and the incremental amount for family sizes above seven is not modelled as a fixed threshold. Official source: [IRCC proof of financial support](https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html).
 
-Structured coverage is 9 declarations across 2/56 pathways; 54 pathways remain without structured requirements. This is a limited first tranche, not complete eligibility modelling. The 193-record evidence inventory has 0 overdue/missing/invalid review dates, but CI still warns that country dataset `asOf=2026-09-05` is 36 days old; do not bump it without a 26-source review. Production remains NO-GO for the hostname/deployed SHA, live CSP and branch-protection reasons already recorded.
+Structured coverage is 12 declarations across 5/56 pathways; 51 pathways remain without structured requirements. This is a limited first tranche, not complete eligibility modelling. The 193-record evidence inventory has 0 overdue/missing/invalid review dates, but CI still warns that country dataset `asOf=2026-09-05` is 36 days old; do not bump it without a 26-source review. Production remains NO-GO for the hostname/deployed SHA, live CSP and branch-protection reasons already recorded.
 
 
 ## P1-S1 and P0-S5 update — 2026-10-11
