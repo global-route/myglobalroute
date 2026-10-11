@@ -72,7 +72,7 @@ Next executable sprint handover: [P1-S1 Country Source Refresh & Dataset Reconci
 ## Execution update — 2026-10-11 (country manifest and source review)
 
 - P1-S1.1 — **Manifest generated** at `docs/data/country-source-review-manifest.json`; generator and test keep it synchronized.
-- P1-S1.2 — **Outcomes recorded for all 26 anchors; relevant official pages or alternatives inspected for 24.** Luxembourg needs a more specific official entry point; Russia needs manual verification. AI-assisted observations require human sign-off; tool errors are not treated as outages.
+- P1-S1.2 — **Outcomes recorded for all 26 anchors; relevant official pages or alternatives inspected for 24.** Luxembourg official third-country immigration pages were found, though the registered root still redirects generically; Russia needs mission-jurisdiction confirmation. AI-assisted observations require human sign-off; tool errors are not treated as outages.
 - Austria and Czechia registry URLs updated to more relevant official government pages; only those country retrieval dates changed. `dataset.asOf=2026-09-05` remains unchanged.
 - P1-S1.3 and P1-S1.4 remain **OPEN** pending sign-off, blockers and final same-head CI.
 - P0-S5 — GitHub branch API reports `main.protected=false`; repository rulesets endpoint returned an empty list. Owner-level branch protection/required checks are not evidenced.
@@ -89,3 +89,8 @@ Next executable sprint handover: [P1-S1 Country Source Refresh & Dataset Reconci
 - Added three evidence-backed declarations: UK Student admission offer; New Zealand Fee Paying Student annual living-funds threshold with duration/funding caveats; Ireland Critical Skills qualifying job offer.
 - Structured declarations now total **12 across 5 of 56 pathways**; 51 pathways remain without structured declarations. Absence continues to mean unknown, not unrestricted or zero.
 - Added regression coverage validating these declarations against exact-pathway evidence. Broader pathway coverage remains open.
+
+
+## Source-review follow-up — 2026-10-11
+- Luxembourg: official third-country immigration pages are now recorded as an alternate source; the registered root still redirects to a generic citizens page, so a more direct anchor may be preferable.
+- Russia: an official Russian MFA consular page was found, but it is mission-specific to Denmark. Do not use its instructions for other nationalities; confirm the correct mission/official entry point before closing review.

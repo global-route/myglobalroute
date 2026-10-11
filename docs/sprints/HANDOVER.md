@@ -155,7 +155,7 @@ After refreshing the current Luxembourg student rule page and aligning the dupli
 
 ## Handover update — 2026-10-11 (P1-S1 execution)
 - Machine-readable manifest created: `docs/data/country-source-review-manifest.json`.
-- 26/26 anchors have outcomes; 24 official entry points/alternatives inspected. Luxembourg redirects to a general citizens page and needs a specific migration entry point. Russia remains a manual verification blocker. Human sign-off required.
+- 26/26 anchors have outcomes; 24 official entry points/alternatives inspected. Luxembourg official third-country immigration pages were found and logged; Russia remains blocked pending jurisdiction confirmation. Human sign-off required.
 - Austria and Czechia source URLs updated to official pages; only these per-country retrieval dates changed. Dataset-wide `asOf` unchanged.
 - Added manifest generator/check, tests and verify-pipeline integration; added route-safety regression tests without inferring missing thresholds.
 - GitHub reports `main` unprotected and rulesets empty. Host/provider, deployed SHA, live CSP/security headers and production smoke remain unverified.

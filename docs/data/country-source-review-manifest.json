@@ -240,15 +240,15 @@
       "registeredUrl": "https://guichet.public.lu/en.html",
       "registryRetrievedAt": "2026-09-05",
       "review": {
-        "status": "redirected_needs_manual_confirmation_human_signoff_pending",
+        "status": "reviewed_alternate_official_page_human_signoff_pending",
         "checkedAt": "2026-10-11",
         "reviewer": "AI-assisted public-source audit; human sign-off required",
-        "method": "Registered URL opened and redirect recorded",
-        "observedTitle": "Citizens - Guichet.lu",
-        "observedUrl": "https://guichet.public.lu/en/citoyens.html",
-        "evidenceUrl": "https://guichet.public.lu/en/citoyens.html",
-        "outcome": "Official portal redirects to a general citizens page; immigration entry-point specificity remains unconfirmed.",
-        "nextReviewDue": null
+        "method": "Registered homepage redirected to a general citizens page; official third-country immigration pages inspected through search-indexed official pages",
+        "observedTitle": "Titre de séjour travailleur salarié — Guichet.lu (French page)",
+        "observedUrl": "https://guichet.public.lu/en/citoyens/immigration/vivre/non-luxembourg/immigration/pays-tiers/salarie/salarie-pays-tiers.html",
+        "evidenceUrl": "https://guichet.public.lu/en/citoyens/immigration/vivre/non-luxembourg/immigration/pays-tiers/salarie/salarie-pays-tiers.html",
+        "outcome": "Official Guichet.lu third-country salaried-worker residence page located; a current French version was also indexed as updated 2026-10-01. The registered homepage still redirects to a generic citizens page, so consider a more direct country anchor. This is a source-navigation review only, not verification of any route claim.",
+        "nextReviewDue": "2026-11-10"
       },
       "pathwayClaimsVerified": false
     },
@@ -449,14 +449,14 @@
       "registeredUrl": "https://mid.ru/en/",
       "registryRetrievedAt": "2026-09-05",
       "review": {
-        "status": "manual_review_required_human_signoff_pending",
+        "status": "manual_review_required_jurisdiction_confirmation",
         "checkedAt": "2026-10-11",
         "reviewer": "AI-assisted public-source audit; human sign-off required",
-        "method": "Registered URL could not be inspected; no official alternative verified",
-        "observedTitle": null,
-        "observedUrl": null,
-        "evidenceUrl": null,
-        "outcome": "Registered URL could not be inspected and no alternate official source verified; this is not evidence the site is down.",
+        "method": "Registered Russian MFA URL could not be inspected; official Russian MFA consular visa page on a Danish mission subdomain found via search",
+        "observedTitle": "Visa application procedure — Russian MFA consular site (Denmark)",
+        "observedUrl": "https://denmark.kdmid.ru/en/consular-functions/visa-application-procedure/",
+        "evidenceUrl": "https://denmark.kdmid.ru/en/consular-functions/visa-application-procedure/",
+        "outcome": "An official Russian MFA consular visa page was found, but it contains Denmark-mission-specific application instructions and cannot be assumed to apply to Nigerian applicants. Select and verify the correct mission/official entry point before closing this review. Original URL tool error is not evidence the site is down.",
         "nextReviewDue": null
       },
       "pathwayClaimsVerified": false

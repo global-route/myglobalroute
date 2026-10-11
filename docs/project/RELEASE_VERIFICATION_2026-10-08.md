@@ -155,7 +155,7 @@ Structured coverage is 9 declarations across 2/56 pathways; 54 pathways remain w
 
 
 ## P1-S1 and P0-S5 update — 2026-10-11
-- Manifest committed and synchronized from registry. 26/26 outcomes recorded; 24 relevant official pages/alternatives inspected; Luxembourg and Russia remain blockers. Human sign-off required.
+- Manifest committed and synchronized from registry. 26/26 outcomes recorded; 25 relevant official pages/alternatives inspected; Luxembourg has an official alternative recorded; Russia remains blocked pending jurisdiction confirmation. Human sign-off required.
 - Austria and Czechia registry URLs updated; their source retrieval dates reflect the review date. `dataset.asOf` remains `2026-09-05`.
 - Public GitHub branch metadata reports `main` unprotected and no repository rulesets. Detailed protection endpoint returned 403 to this integration.
 - No authoritative production host/deployment record provided. Do not infer host, deployed SHA, live CSP or smoke results from repository config alone.

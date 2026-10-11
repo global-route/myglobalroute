@@ -35,7 +35,7 @@ Re-open the official landing-source anchor for every country in src/data/countri
 
 ### P1-S1.2 — Review every official anchor
 - [x] Record an auditable outcome for each of 26 anchors, including redirects and tool access limitations.
-- [x] Inspect official landing pages or alternatives for 24 entries; record Luxembourg as needing a more specific migration entry point and Russia as requiring manual verification.
+- [x] Inspect official landing pages or alternatives for 25 entries; record Luxembourg as needing a more specific migration entry point and Russia as requiring manual verification.
 - [x] Update only two registry URLs whose current official replacements were verified (Austria and Czechia).
 - [ ] Obtain human sign-off and resolve/accept the two blocked anchors.
 
@@ -112,3 +112,9 @@ This plan is not evidence of completion. Do not mark P1-S1 or Phase 1 complete u
 
 ## Parallel P1-REQ delta — 2026-10-11
 Three declarations were added for UK Student, New Zealand Fee Paying Student and Ireland Critical Skills. The schema validator test checks exact evidence, URL, jurisdiction, effective date and scoped cost components. Total: 12 declarations across 5/56 pathways; 51 remain unstructured. P1-REQ remains open.
+
+
+### Follow-up — Luxembourg and Russia
+- Luxembourg official third-country immigration pages have been logged as alternatives; the registered root remains a generic redirect and may be replaced after human review.
+- Russia's official MFA consular page found in this pass is Denmark-mission-specific. Verify the applicable mission/official source for the target applicant jurisdiction before closing the source review.
+- `dataset.asOf` remains unchanged pending human sign-off.
