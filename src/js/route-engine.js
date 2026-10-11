@@ -15,6 +15,12 @@
     if (!hasEvidenceIds || !hasSecureSource) {
       return { score: 0, reasons: ['missing evidence references or secure source provenance'], eligible: false };
     }
+    // A missing threshold is unknown; a malformed declared threshold must not be treated as zero.
+    for (const field of ['minFunds', 'minMonthlyIncome', 'minExperienceYears']) {
+      if (pathway[field] !== undefined && (typeof pathway[field] !== 'number' || !Number.isFinite(pathway[field]) || pathway[field] < 0)) {
+        return { score: 0, reasons: [`invalid ${field} threshold prevents safe recommendation`], eligible: false };
+      }
+    }
     let score = 0;
     const reasons = [];
     const goal = profile.goal || 'any';
@@ -28,12 +34,12 @@
     // Do not invent a ranking when the user has not selected a goal or no other structured fit signal exists.
     if (profile.countryId && profile.countryId === country.id) { score += 5; reasons.push('destination preference matches'); }
     if (profile.language && pathway.language && pathway.language.includes(profile.language)) { score += 10; reasons.push('language fit'); }
-    if (pathway.minExperienceYears !== undefined) {
-      if (experience >= number(pathway.minExperienceYears)) { score += 15; reasons.push('experience requirement appears compatible'); }
+    if (pathway.minExperienceYears > 0) {
+      if (experience >= pathway.minExperienceYears) { score += 15; reasons.push('experience requirement appears compatible'); }
       else return { score: 0, reasons: ['experience requirement is a likely blocker'], eligible: false };
     }
-    if (pathway.minMonthlyIncome !== undefined) {
-      if (income >= number(pathway.minMonthlyIncome)) { score += 10; reasons.push('income requirement appears compatible'); }
+    if (pathway.minMonthlyIncome > 0) {
+      if (income >= pathway.minMonthlyIncome) { score += 10; reasons.push('income requirement appears compatible'); }
       else return { score: 0, reasons: ['income requirement is a likely blocker'], eligible: false };
     }
     if (pathway.minFunds !== undefined) {
