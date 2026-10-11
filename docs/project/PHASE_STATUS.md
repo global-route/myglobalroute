@@ -1,6 +1,6 @@
 # Phase Status — Global Route
 
-**Reconciled:** 2026-10-11 | **Latest verified implementation SHA:** `9ed09f07e9e7b73b62884da02fc406ccdb40f10a` | **Last fully verified implementation/data SHA:** `95f960c081367305dea0144034d48a4ab7892426` (Quality Gate, Lint and Browser Smoke pass); CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` also passed all three. | **Release: NO-GO**
+**Reconciled:** 2026-10-11 | **Latest verified implementation SHA:** `9ed09f07e9e7b73b62884da02fc406ccdb40f10a` (Quality Gate, Lint and Browser Smoke pass on this exact SHA) | **Previous implementation/data checkpoint:** `95f960c081367305dea0144034d48a4ab7892426`; earlier CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` remains historical evidence. | **Release: NO-GO**
 
 This is the canonical phase tracker. Historical phase/sprint docs preserve original product intent but their old dates, percentages, counts and URLs do not override this tracker or the active sprint.
 
