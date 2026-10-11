@@ -51,6 +51,8 @@ Source-tree SHA: `89998ab5410aceb6dede8e997dae0b836d3b4d92`
 
 ## 2026-10-11 — Migration-data integrity and status reconciliation
 
+> Historical checkpoint before the later non-test updates recorded at the top of this changelog.
+
 - Added machine-readable 26-country source-review manifest, generator/check command and regression tests.
 - Added route recommendation tests for missing country records, research-required routes, absent structured requirements and unknown thresholds.
 - Expanded structured requirements with evidence-backed declarations for UK Student admission offer, New Zealand Fee Paying Student funds (with duration/funding caveats), and Ireland Critical Skills job offer; coverage is 12 declarations across 5/56 pathways.
