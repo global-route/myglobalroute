@@ -1,3 +1,5 @@
+> SUPERSEDED — 2026-10-11. Do not execute this old promotion checklist as an open task. Current registry/validator state has the three NZ SMC routes promoted and aligned to canonical pathway records. Re-run current validation before changes. Active work is P0-S5 deployment verification and the 26-country source refresh sprint in NEXT_SPRINT_P1_DATA_REFRESH.md. Historical checklist retained below for audit trail.
+
 # Next Active Task — NZ SMC Final Promotion Validation
 
 **Priority:** P0-S1 Exact Pathway Closure  
@@ -84,3 +86,8 @@ npm run build && npm run build:verify
 **Current head:** `5d3f091` (docs: update P0-S1 checkpoint and active sprint status)  
 **Last verified:** 2026-09-27  
 **Next checkpoint:** After NZ SMC promotion validation complete
+
+
+## Supersession record
+
+This file is no longer the next task. Use ACTIVE_SPRINT.md as the current task board. Route promotion is not a guarantee of eligibility and does not close Phase 0.
