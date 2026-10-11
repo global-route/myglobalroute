@@ -8,7 +8,7 @@ Dates reflect repository commits; a changelog entry is not release approval.
 - Encoded the UK Skilled Worker route's GBP 1,270 maintenance balance with its 28-day holding condition, application timing, exemption/employer-certification caveats, official source and matching evidence record.
 - Extended the requirement schema policy to distinguish maintenance balances from annual living-cost or tuition requirements.
 - Added an evidence-linked approved-sponsor declaration for UK Skilled Worker and a scoped minimum-age declaration for the UK Student route, with under-18 caveats.
-- Structured requirement inventory is now 15 declarations across 5 pathways (4 UK Skilled Worker, 7 Canada study family-size thresholds, 2 UK Student, 1 New Zealand Student, 1 Ireland Critical Skills). 51/56 pathways still have no structured declarations. Absence remains unknown, not a pass or zero.
+- Structured requirement inventory is now 16 declarations across 6 pathways (4 UK Skilled Worker, 7 Canada study family-size thresholds, 2 UK Student, 1 New Zealand Student, 1 Ireland Critical Skills, 1 Australia Skilled EOI points threshold). 50/56 pathways still have no structured declarations. Australia's generic skilled pathway remains `research_required`; the 65-point threshold does not imply invitation or promotion. Absence remains unknown, not a pass or zero.
 - No tests or CI workflows were run for these changes, per the instruction to skip testing-related work. Validation status remains unverified; production release remains **NO-GO**.
 
 
