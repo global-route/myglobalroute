@@ -2,6 +2,15 @@
 
 Dates reflect repository commits; a changelog entry is not release approval.
 
+## 2026-10-11 — Structured maintenance-balance requirement
+
+- Added a dedicated `minimum_maintenance_funds` field so a required available balance is not misrepresented as annual spending.
+- Encoded the UK Skilled Worker route's GBP 1,270 maintenance balance with its 28-day holding condition, application timing, exemption/employer-certification caveats, official source and matching evidence record.
+- Extended the requirement schema policy to distinguish maintenance balances from annual living-cost or tuition requirements.
+- Structured requirement inventory is now 13 declarations across 5 pathways; 51/56 pathways still have no structured declarations. Absence remains unknown, not a pass or zero.
+- No tests or CI workflows were run for this change, per the instruction to skip testing-related work. Validation status remains unverified; production release remains **NO-GO**.
+
+
 ## 2026-10-11 — Route-quality regression expansion
 
 - Added monthly-income and experience threshold boundary tests (below, at, and above the declared minimum), plus a regression confirming absent declarations do not create compatibility claims.
