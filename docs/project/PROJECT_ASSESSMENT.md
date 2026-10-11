@@ -1,7 +1,7 @@
 # Global Route — Current Project Assessment
 
 **Reconciled:** 2026-10-11 | **Branch:** main | **Last fully verified same-SHA CI checkpoint:** `95f960c081367305dea0144034d48a4ab7892426` | **Verified implementation SHA:** `95f960c081367305dea0144034d48a4ab7892426`  
-**Release readiness: NO-GO for production; source-tree CI is green.**
+**Release readiness: NO-GO for production. Earlier source-tree CI checkpoints are green; the latest non-test data/schema/documentation changes have not been validated because testing and CI are paused.**
 
 ## Executive finding
 
@@ -22,7 +22,7 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 | Evidence inventory | 193 records | Still needs ongoing source review |
 | Evidence freshness | Latest recorded report: 193 current, 0 overdue, 0 missing, 0 invalid | Review dates do not prove all sources were reopened today |
 | Country metadata | `dataset.asOf=2026-09-05` | 36 days old; refresh only after reviewing all 26 source anchors |
-| Structured requirements | 16 declarations across 6 pathways: UK Skilled Worker, Canada study, UK Student, New Zealand Student and Ireland Critical Skills | 50/56 pathways have no structured declarations; this means unknown coverage, not no requirements |
+| Structured requirements | 16 declarations across 6 pathways: UK Skilled Worker, Canada study, UK Student, New Zealand Student, Ireland Critical Skills and Australia Skilled EOI | 50/56 pathways have no structured declarations; this means unknown coverage, not no requirements |
 | Aggregate country metrics | Costs, timelines and approval rates remain null/evidence-gated where unsupported | Correctly avoids fabricated estimates |
 | Hosting | `wrangler.jsonc` names Worker `myglobalroute`; observed Cloudflare build service label was `globalroute`; Netlify config/functions also exist | Hosting identity unresolved; do not infer or change DNS/service names |
 | Security/release | CSP configured in repo; live headers and deployed SHA not verified; branch-protection inspection returned 403 | Provider/owner evidence needed |
