@@ -1,5 +1,7 @@
 # Release Verification — 2026-10-08
 
+> **Verification candidate update — 2026-10-11:** [`ec0f02c2b2d171d98262d8a3fc4adc807bbe3328`](https://github.com/global-route/myglobalroute/commit/ec0f02c2b2d171d98262d8a3fc4adc807bbe3328) adds route threshold boundary tests for monthly income and experience. The candidate's required workflow results have not yet been confirmed; the last verified source-tree SHA and its run links remain the checkpoint below. Production remains NO-GO.
+
 > **Current-head verification update:** 2026-10-11. This record retains its original filename for continuity; use the latest dated verification section below for current CI status.
 
 ## Current result
