@@ -65,7 +65,7 @@ Quality Gate output: 26 countries, 56 pathways, 193 evidence records; 0 dependen
 - Austria and Czechia source anchors updated; only their per-country retrieval dates changed. Dataset `asOf` remains 2026-09-05; no unsupported aggregates populated.
 - Route-quality regression tests added for unknown requirements, missing country references and research-required routes.
 - GitHub reports `main` unprotected and no rulesets. Production host/deployed SHA/live headers remain unverified.
-- Final commit requires same-SHA CI verification. Release remains **NO-GO**.
+- Same-SHA source-tree verification is recorded for implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426` and CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` in `ACTIVE_SPRINT.md` and `RELEASE_VERIFICATION_2026-10-08.md`. Subsequent changes in this documentation reconciliation are docs-only; they do not alter the tested implementation. Production host, deployed SHA, live headers and owner-level branch rules remain unverified. Release remains **NO-GO**.
 
 
 ## Public-origin check — 2026-10-11
