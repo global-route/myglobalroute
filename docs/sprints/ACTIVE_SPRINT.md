@@ -128,3 +128,11 @@ This is an inventory/reporting aid, **not** evidence that a pathway is eligible 
 ### Requirement-readiness reporting improvement — 2026-10-11
 
 The readiness report now breaks down pathways without structured requirements by status, reports pathway counts by status, and lists evidence records whose `reviewAfter` is earlier than the validation date. The report is diagnostic only: it does not alter review dates, bless stale evidence, or manufacture requirement values. Regression tests cover overdue/today/future boundaries and status breakdown. Validation of this change is pending until all workflows complete on the same current `main` SHA.
+
+## Current-head update — 2026-10-11
+
+- Latest code head before the CI-readiness change: `739b4121b2ddb3460d1ed52b171cd89fcd80f046`; Quality Gate, Lint and Browser Smoke passed on that SHA: [Quality Gate](https://github.com/global-route/myglobalroute/actions/runs/38106462155), [Lint](https://github.com/global-route/myglobalroute/actions/runs/38106462131), [Browser Smoke](https://github.com/global-route/myglobalroute/actions/runs/38106462148).
+- Added `npm run requirements:readiness` as an explicit Quality Gate step in `.github/workflows/quality.yml` (commit `c4afaae4a7f695eea19d8bed8a2930194bd0e06a`). This executes the existing report for structured pathway-requirement coverage and evidence review dates in CI; it does not refresh evidence or invent requirements.
+- CI for `c4afaae4a7f695eea19d8bed8a2930194bd0e06a` is pending at handover time. Do not mark this SHA green until all three workflows complete successfully.
+- Data truth remains a separate blocker: the last completed validator reports 26 countries, 56 pathways, 193 evidence records, 52 publishable and 4 research-required pathways, with three subroute-status warnings. The report/validator passing means structural validation passed; it does not mean evidence freshness is current or all routes are production-ready.
+- Next actions: confirm the new CI results; use the readiness report to build a route-scoped evidence refresh queue; keep routes blocked where official current evidence cannot be independently confirmed; continue P0-S5 production-host/deployed-SHA verification only with provider-account evidence.
