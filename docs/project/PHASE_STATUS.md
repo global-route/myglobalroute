@@ -1,5 +1,7 @@
 # Phase Status — Global Route
 
+> **New verification candidate (2026-10-11):** [`ec0f02c2b2d171d98262d8a3fc4adc807bbe3328`](https://github.com/global-route/myglobalroute/commit/ec0f02c2b2d171d98262d8a3fc4adc807bbe3328) adds monthly-income and experience threshold boundary tests. CI status is not yet confirmed on this exact SHA; existing phase exit gates remain unchanged.
+
 **Reconciled:** 2026-10-11 | **Latest verified implementation SHA:** `9ed09f07e9e7b73b62884da02fc406ccdb40f10a` | **Latest verified source-tree SHA:** `89998ab5410aceb6dede8e997dae0b836d3b4d92` (Quality Gate, Lint and Browser Smoke pass on this exact SHA) | **Previous implementation/data checkpoint:** `95f960c081367305dea0144034d48a4ab7892426`; earlier CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` remains historical evidence. | **Release: NO-GO**
 
 This is the canonical phase tracker. Historical phase/sprint docs preserve original product intent but their old dates, percentages, counts and URLs do not override this tracker or the active sprint.
