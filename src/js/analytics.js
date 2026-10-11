@@ -92,6 +92,7 @@
         const panel = document.getElementById('analytics-consent');
         if (panel) {
           panel.hidden = false;
+          settings.hidden = true;
           panel.querySelector('[data-consent]')?.focus();
         }
       });
@@ -116,6 +117,7 @@
         setConsent(state);
         try { window.localStorage.setItem(key, state); } catch (_) {}
         banner.hidden = true;
+        settings.hidden = false;
         settings.setAttribute('aria-label', `Privacy settings; analytics consent is ${state}`);
         // Consent also gates eligible advertising placements. Refresh only after
         // the user's explicit choice has been applied.
@@ -127,6 +129,7 @@
     // Existing decisions stay in force, but the user can reopen this panel
     // from the persistent settings control to change or withdraw consent.
     banner.hidden = consentState !== 'unknown';
+    settings.hidden = !banner.hidden;
     settings.setAttribute('aria-label', `Privacy settings; analytics consent is ${consentState}`);
   }
 
