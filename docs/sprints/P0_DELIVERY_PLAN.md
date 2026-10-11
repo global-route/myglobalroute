@@ -134,3 +134,8 @@ P0-S5 remains authoritative for production release. Advertising activation requi
 ## Current handoff — 2026-10-11
 
 P0-S3 and source-tree P0-S4 are verified at 1284684c18a7fa311cd62c52875b38d62a354a0b. P0-S5 is active and blocked on provider/domain/deployed-SHA/live-CSP/branch-protection evidence. P1-S1 source refresh is the next independent sprint: docs/sprints/NEXT_SPRINT_P1_DATA_REFRESH.md. Structured requirements and route-quality tests can proceed in parallel. Never mark a phase complete because CI is green.
+
+
+## Verified status reconciliation — 2026-10-11
+
+Current main SHA: `933ca27d1542083078de104e2ac3550d8fde59c5`; verified implementation baseline: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`. Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957166) (17 suites / 113 tests, 0 dependency vulnerabilities), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957132), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957147). P0-S3 and source-tree P0-S4 are verified; P0-S5 is still ACTIVE/BLOCKED. Phase 0 is not complete. The exact-route outcome for the current candidate set is four promoted subroutes aligned to canonical pathways, with Australia subclass 189 and Italy Flussi remaining research_required; ongoing regression expansion remains in P1-REQ/P1-ROUTE. Next independent task: P1-S1 source review; see `NEXT_SPRINT_P1_DATA_REFRESH.md`.

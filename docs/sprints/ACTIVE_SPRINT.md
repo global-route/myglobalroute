@@ -1,14 +1,15 @@
 # Active Sprint — Production Integrity & Migration Intelligence
 
-**Reconciled:** 2026-10-11 | **Branch:** `main` | **Last verified implementation SHA:** `1284684c18a7fa311cd62c52875b38d62a354a0b` (subsequent commits are documentation-only)  
+**Reconciled:** 2026-10-11 | **Branch:** `main` | **Verified implementation SHA:** `e7ccd592b703d62867267ddb5573b73a2d2bc0ea` | **Current documentation/CI head:** `933ca27d1542083078de104e2ac3550d8fde59c5`  
 **Status:** P0-S5 active and externally blocked; data and route-quality work continues concurrently  
 **Release:** **NO-GO**
 
 ## Verified checkpoint
 
-- Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38115941501)
-- Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38115941407)
-- Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38115941416)
+- Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957166) — 17 suites / 113 tests; 0 dependency vulnerabilities; data validation passed; build integrity and SEO/A11y checked 168 generated HTML files.
+- Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957132).
+- Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957147).
+- All three runs completed on the same current `main` SHA `933ca27d1542083078de104e2ac3550d8fde59c5`; implementation changes in the tested tree are through `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`.
 - 26 countries; 56 pathways (52 publishable / 4 research_required); 193 evidence records.
 - Latest recorded freshness report: 193 current / 0 overdue / 0 missing / 0 invalid.
 - 9 structured requirement declarations across 2 pathways (UK Skilled Worker and Canada study); 54/56 pathways have no structured declarations.
@@ -32,14 +33,12 @@
 
 ## Execution order
 
-1. Confirm provider/project/custom domain from account settings; reconcile Worker `myglobalroute`, observed Cloudflare build label `globalroute`, and Netlify config.
-2. Capture deployed SHA and compare live registries/assets with this source head.
-3. Run `npm run deploy:verify` and route/calculator smoke tests against confirmed origin.
-4. Inspect actual live CSP/security headers.
-5. Obtain owner-level branch protection/ruleset and required-check evidence.
-6. Source-review all 26 country records before refreshing metadata.
-7. Expand conditional route requirements and route evaluation tests.
-8. Continue SEO/privacy/accessibility/monetization readiness without guessing host identity or activating providers.
+1. **P0-S5 external gate:** owner confirms provider/project/custom domain; reconcile Worker `myglobalroute`, observed Cloudflare build label `globalroute`, and Netlify config without renaming or DNS changes by inference.
+2. Capture deployed SHA and compare live registries/assets with source; run `npm run deploy:verify` and route/calculator smoke tests against the confirmed origin.
+3. Inspect actual live CSP/security headers and obtain owner-level branch-protection/ruleset plus required-check evidence.
+4. **P1-S1 data refresh:** work through `NEXT_SPRINT_P1_DATA_REFRESH.md` country by country; preserve dates and `dataset.asOf` until the checklist has auditable outcomes for all 26 anchors.
+5. **P1-REQ/P1-ROUTE:** add exact-source conditional requirements and route evaluation tests, then verify all three workflows on one SHA.
+6. Continue SEO/privacy/accessibility/monetization readiness without guessing host identity or activating providers.
 
 ## Acceptance rules
 
@@ -52,7 +51,7 @@
 
 ## Current-head verification — 2026-10-11
 
-Assessed main SHA: 1284684c18a7fa311cd62c52875b38d62a354a0b. Quality Gate PASS (17 suites / 113 tests): https://github.com/global-route/myglobalroute/actions/runs/38115941501. Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38115941407. Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38115941416. Registry: 26 countries, 56 pathways (52 publishable / 4 research_required), 193 evidence records; freshness inventory 193 current / 0 overdue / 0 missing / 0 invalid review dates. This does not prove all 26 country landing-source anchors were reopened. countries.json dataset.asOf=2026-09-05 remains stale. Phase 0 is NOT complete; P0-S5 remains externally blocked on authoritative production host/domain, deployed SHA, live CSP/security headers, production smoke and owner-level branch protection.
+Current main SHA: `933ca27d1542083078de104e2ac3550d8fde59c5` (documentation/checklist update); verified implementation SHA: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`. Quality Gate PASS (17 suites / 113 tests): https://github.com/global-route/myglobalroute/actions/runs/38116957166. Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38116957132. Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38116957147. Registry: 26 countries, 56 pathways (52 publishable / 4 research_required), 193 evidence records; freshness inventory 193 current / 0 overdue / 0 missing / 0 invalid review dates. CI warns that country dataset metadata `dataset.asOf=2026-09-05` is 36 days old. The source inventory checklist is prepared, but the 26 registered country anchors have not all been substantively reviewed. Phase 0 is NOT complete; P0-S5 remains externally blocked on authoritative production host/domain, deployed SHA, live CSP/security headers, production smoke and owner-level branch protection.
 
 ## Ordered next work
 

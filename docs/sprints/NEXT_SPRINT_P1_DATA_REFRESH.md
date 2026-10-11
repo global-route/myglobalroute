@@ -1,8 +1,10 @@
 # Next Sprint — P1-S1 Country Source Refresh & Dataset Reconciliation
 
-**Status:** Planned / not yet started.  
+**Status:** Ready for execution / source review not started.  
 **Prepared:** 2026-10-11.  
-**Baseline SHA:** 9d03a746311b6f3cf532afe8b7965068a43a8285.  
+**Planning baseline:** `933ca27d1542083078de104e2ac3550d8fde59c5`.  
+**Current implementation baseline:** `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`.  
+**Exit status:** OPEN — no country anchor is marked reviewed until an auditable outcome is recorded.  
 **Priority:** Data-trust work concurrent with externally blocked P0-S5.
 
 ## Objective
@@ -23,6 +25,8 @@ Re-open the official landing-source anchor for every country in src/data/countri
 - [ ] Fetch current main and extract all 26 country IDs, names and URLs directly from countries.json.
 - [ ] Generate a machine-readable manifest; assert 26 unique IDs and no missing URLs.
 - [ ] Record baseline validation and evidence-freshness output.
+
+**Clarification:** the Markdown checklist below is prepared, but this does not complete the machine-readable manifest task. Keep P1-S1.1 open until the generated manifest and baseline output are committed and validated.
 
 **Exit:** inventory is generated from the actual registry, not hand-entered guesses.
 

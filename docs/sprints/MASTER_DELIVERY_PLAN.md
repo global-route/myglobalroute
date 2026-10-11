@@ -1,7 +1,7 @@
 # Global Route — Master Phase & Sprint Delivery Plan
 
 **Status:** Active delivery map  
-**Baseline:** 14 September 2026 | **Reconciled:** 11 October 2026  
+**Baseline:** 14 September 2026 | **Reconciled:** 11 October 2026 | **Current main:** `933ca27d1542083078de104e2ac3550d8fde59c5`  
 **Scope:** Current Phase 0 through final Phase 6 / Scale exit
 
 This is the master delivery sequence for the remaining lifecycle. It preserves the original product blueprint while converting every phase into explicit delivery sprints with dependencies and exit gates.
@@ -43,7 +43,7 @@ The plan can gain additional sprints if a phase discovers material work that can
 - Austria Other Key Workers document/points/promotion validation
 - Italy 2026 Flussi employer/quota/compensation/applicant evidence matrices
 
-**Checkpoint:** NZ Skilled Work Experience and Trades & Technician route matrices are now documented from current INZ instructions. Machine-testable occupation/wage regressions and final promotion validation remain open. AU-189 remains blocked on the explicit financial/material gap; Austria and Italy remain on their documented promotion gates.
+**Checkpoint:** the current promotion disposition is reconciled: four exact subroutes are promoted and aligned with canonical records; Australia subclass 189 and Italy Flussi remain research_required on documented evidence gaps. Remaining occupation/wage and route-edge regression work stays open under P1-REQ/P1-ROUTE; it does not authorize further promotion or close Phase 0.
 
 **Exit:** every promoted exact route passes exact-scope evidence gates; unresolved routes remain research-required.
 
@@ -357,3 +357,15 @@ The current sprint is P0-S5 — Deployment Verification & Phase 0 Exit, active a
 ## Current status reconciliation — 2026-10-11
 
 Current head 1284684c18a7fa311cd62c52875b38d62a354a0b: Quality Gate PASS (17 suites / 113 tests), Lint PASS, Browser Smoke PASS. P0-S1 documentation/validation objective is complete with four promoted routes and two explicitly blocked exact candidates (Australia subclass 189 and Italy Flussi); those blocked routes are not publishable. P0-S2 audit is complete at current count (4 research-required canonical pathways); source maintenance continues. P0-S3 and source-tree P0-S4 verified. P0-S5 and Phase 0 remain open. Next independent sprint: NEXT_SPRINT_P1_DATA_REFRESH.md.
+
+
+## Current verified delivery checkpoint — 2026-10-11
+
+- Current main SHA: `933ca27d1542083078de104e2ac3550d8fde59c5`; implementation baseline: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`.
+- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38116957166 (17 suites / 113 tests; 0 dependency vulnerabilities; data validation, build integrity and SEO/A11y checks passed).
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38116957132; Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38116957147.
+- P0-S1: promotion decisions closed for the current candidate set; two explicit candidates remain blocked. Do not infer all future exact subroute work is complete.
+- P0-S2: evidence-gap audit complete; evidence maintenance remains ongoing.
+- P0-S3 and source-tree P0-S4: verified. P0-S5 and Phase 0 exit remain blocked.
+- P1-S1 is the next executable data sprint. All 26 country anchors remain unchecked in its source-review checklist; country metadata `asOf=2026-09-05` remains unchanged.
+- Phase 1 and Phase 2 remain open; later phases remain partial/deferred as recorded in `docs/project/PHASE_STATUS.md`.
