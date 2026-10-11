@@ -4,17 +4,17 @@
 
 ## Current result
 
-**Production release remains NO-GO.** The last fully tested code checkpoint is `c1670297f7e4846cb1ffd35a955e78f2da678e50`; subsequent commits reconcile documentation and the latest documentation-only head is undergoing its own workflow run. The authoritative hosting project/origin and deployed commit have not been independently confirmed. Live monetization remains gated.
+**Production release remains NO-GO.** The last fully tested code checkpoint is `12cca13f8ddfe3c6976e29b3965435fe1bd25657`; subsequent commits reconcile documentation and the documentation-only head `12cca13f8ddfe3c6976e29b3965435fe1bd25657` also passed all three workflows. The authoritative hosting project/origin and deployed commit have not been independently confirmed. Live monetization remains gated.
 
 ## Current-head CI verification — 2026-10-11
 
-All three required source-tree workflows completed successfully on the same tested code SHA, `c1670297f7e4846cb1ffd35a955e78f2da678e50` (the latest fully tested implementation checkpoint):
+All three required source-tree workflows completed successfully on the same tested code SHA, `12cca13f8ddfe3c6976e29b3965435fe1bd25657` (the latest fully tested implementation checkpoint):
 
-- **Quality Gate — PASS:** [run 38103017870](https://github.com/global-route/myglobalroute/actions/runs/38103017870). Includes dependency audit, migration-data validation, unit tests, build, generated-artifact verification and SEO/accessibility checks.
-- **Lint — PASS:** [run 38103017906](https://github.com/global-route/myglobalroute/actions/runs/38103017906).
-- **Browser Smoke — PASS:** [run 38103017883](https://github.com/global-route/myglobalroute/actions/runs/38103017883). Browser smoke completed successfully after fixing root-relative asset output paths, disabling unconfigured advertising code and preserving the hidden state of inactive ad/partner slots.
+- **Quality Gate — PASS:** [run 38103141925](https://github.com/global-route/myglobalroute/actions/runs/38103141925). Includes dependency audit, migration-data validation, unit tests, build, generated-artifact verification and SEO/accessibility checks.
+- **Lint — PASS:** [run 38103141947](https://github.com/global-route/myglobalroute/actions/runs/38103141947).
+- **Browser Smoke — PASS:** [run 38103141902](https://github.com/global-route/myglobalroute/actions/runs/38103141902). Browser smoke completed successfully after fixing root-relative asset output paths, disabling unconfigured advertising code and preserving the hidden state of inactive ad/partner slots.
 
-These are current source-tree results, not production-host verification. The code SHA includes runtime evidence/provenance guards in the route engine, required-budget enforcement for known funds thresholds, and a hardened deployed-site verifier that compares served registries with checked-out source. Recheck CI if `main` advances.
+These are current source-tree results, not production-host verification. The same three gates also passed on documentation head `12cca13f8ddfe3c6976e29b3965435fe1bd25657`: [Quality Gate](https://github.com/global-route/myglobalroute/actions/runs/38103141925), [Lint](https://github.com/global-route/myglobalroute/actions/runs/38103141947), and [Browser Smoke](https://github.com/global-route/myglobalroute/actions/runs/38103141902); Quality Gate reports 75/75 unit tests. The code SHA includes runtime evidence/provenance guards in the route engine, required-budget enforcement for known funds thresholds, and a hardened deployed-site verifier that compares served registries with checked-out source. Recheck CI if `main` advances.
 
 ## Implemented since the earlier checkpoint
 
