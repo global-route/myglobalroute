@@ -66,6 +66,19 @@
             "notes": "Normally required maintenance funds; this is an available balance, not an annual cost. Fees and the immigration health surcharge are separate and vary by circumstances."
           },
           "notes": "Do not interpret as a universal additional cost or standalone eligibility decision; applicable exemptions and employer certification can satisfy or disapply the personal-funds requirement."
+        },
+        {
+          "id": "GB-skilled-worker-approved-sponsorship-2026-09-06",
+          "field": "sponsorship",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "United Kingdom",
+          "effectiveDate": "2026-09-06",
+          "sourceUrl": "https://www.gov.uk/skilled-worker-visa/your-job",
+          "evidenceIds": [
+            "GB-skilled-worker-eligibility-2026-09-06"
+          ],
+          "notes": "The employer must be an approved sponsor and the route requires a Certificate of Sponsorship. An offer alone does not establish that the job, occupation or salary qualifies."
         }
       ]
     },
@@ -93,6 +106,20 @@
           "evidenceIds": [
             "GB-student-eligibility-2026-09-12"
           ]
+        },
+        {
+          "id": "GB-student-minimum-age-2026-09-06",
+          "field": "minimum_age",
+          "kind": "number",
+          "value": 16,
+          "unit": "years",
+          "jurisdiction": "United Kingdom",
+          "effectiveDate": "2026-09-06",
+          "sourceUrl": "https://www.gov.uk/student-visa",
+          "evidenceIds": [
+            "GB-student-eligibility-2026-09-06"
+          ],
+          "notes": "General minimum age stated for the Student route. Additional consent and safeguarding evidence applies to applicants under 18; age alone does not establish eligibility."
         }
       ]
     },
