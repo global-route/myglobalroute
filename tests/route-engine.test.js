@@ -12,7 +12,7 @@ describe('canonical route engine', () => {
     expect(result.reasons[0]).toMatch(/evidence review/);
   });
 
-  test('rewards a matching goal only when country and pathway are publishable', () => {
+  test('rewards a matching goal when pathway is publishable and provenance exists', () => {
     const result = scorePathway(
       { type: 'work', status: 'publishable', evidenceIds: ['evidence-work'], sourceUrl: 'https://example.gov/work' },
       { id: 'GB', dataStatus: 'publishable' },
@@ -23,14 +23,14 @@ describe('canonical route engine', () => {
     expect(result.eligible).toBe(true);
   });
 
-  test('rejects a publishable pathway when the country is still evidence-gated', () => {
+  test('does not let aggregate country-data gaps suppress an independently evidenced pathway', () => {
     const result = scorePathway(
       { type: 'work', status: 'publishable', evidenceIds: ['evidence-work'], sourceUrl: 'https://example.gov/work' },
       { id: 'GB', dataStatus: 'evidence_required' },
       { goal: 'work' }
     );
-    expect(result.score).toBe(0);
-    expect(result.eligible).toBe(false);
+    expect(result.score).toBe(35);
+    expect(result.eligible).toBe(true);
   });
 
   test.each([
