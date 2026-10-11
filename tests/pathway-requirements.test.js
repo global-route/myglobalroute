@@ -79,6 +79,13 @@ describe('pathway requirement schema validation', () => {
     expect(errors).toContain('route GB-work has duplicate requirement id funds-minimum');
   });
 
+
+  test('does not allow exact subroutes to inherit a parent pathway requirement citation', () => {
+    const subroute = { id: 'GB-work-subroute', requirements: [validMoney] };
+    const errors = validatePathwayRequirements([subroute], [evidence]);
+    expect(errors).toContain('route GB-work-subroute requirement funds-minimum: evidence GB-work-finance-2026-10-01 does not belong to route GB-work-subroute');
+  });
+
   test('allows the current registry to keep unstructured requirements explicitly absent', () => {
     expect(validatePathwayRequirements([{ ...pathway }], [])).toEqual([]);
   });
