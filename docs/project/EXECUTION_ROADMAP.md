@@ -202,7 +202,7 @@ Same-SHA source-tree gates pass at 1284684c18a7fa311cd62c52875b38d62a354a0b: Qua
 - [x] Add New Zealand Fee Paying Student annual living-funds threshold with duration/funding caveats and separate tuition/onward travel.
 - [x] Add Ireland Critical Skills qualifying job-offer requirement.
 - [x] Validate declarations against exact-pathway evidence in regression tests.
-- [ ] Continue expanding only when evidence supports exact route, jurisdiction, effective date and exception scope. Current: 12 declarations across 5/56 pathways; 51 remain unstructured.
+- [ ] Continue expanding only when evidence supports exact route, jurisdiction, effective date and exception scope. Current baseline: 16 declarations across 6/56 pathways; 50 remain unstructured.
 
 
 ## Latest same-SHA verification — 2026-10-11
@@ -219,4 +219,4 @@ Same-SHA source-tree gates pass at 1284684c18a7fa311cd62c52875b38d62a354a0b: Qua
 
 Quality Gate output: 26 countries, 56 pathways, 193 evidence records; 0 dependency vulnerabilities; manifest synchronized; 18 suites / 122 tests passed; build integrity passed; SEO/accessibility checks passed across 168 generated HTML files. These are source-tree checks, not production verification.
 
-Current migration-data status: all 26 source anchors have recorded outcomes; 25 relevant official pages/alternatives inspected; Russia mission-jurisdiction confirmation and human sign-off remain open. Structured requirements are 12 declarations across 5/56 pathways; 51 remain unstructured. P0-S5 remains blocked on authoritative host/deployment/security/branch-protection evidence.
+Current migration-data status: all 26 source anchors have recorded outcomes; 25 relevant official pages/alternatives inspected; Russia mission-jurisdiction confirmation and human sign-off remain open. Current structured requirements are 16 declarations across 6/56 pathways; 50 remain unstructured. P0-S5 remains blocked on authoritative host/deployment/security/branch-protection evidence.
