@@ -1,6 +1,6 @@
 # Global Route — Execution Status
 
-**Reconciled:** 2026-10-11 | **Branch:** `main` | **Verified implementation SHA:** `e7ccd592b703d62867267ddb5573b73a2d2bc0ea` | **Last fully verified same-SHA CI checkpoint:** `fc3c06a0a6078df4473d2f09015391cff09eef3f`  
+**Reconciled:** 2026-10-11 | **Branch:** `main` | **Verified implementation SHA:** `95f960c081367305dea0144034d48a4ab7892426` | **Last fully verified implementation/data SHA:** `95f960c081367305dea0144034d48a4ab7892426` (Quality Gate, Lint and Browser Smoke pass); CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` also passed all three.  
 **Active work:** P0 production verification + P1 data/route-quality work  
 **Release:** **NO-GO**
 
@@ -8,10 +8,10 @@
 
 ## Current verified baseline
 
-- Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119296014), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119295995), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119295980), all on current main SHA `933ca27d1542083078de104e2ac3550d8fde59c5` (the tested source implementation baseline is `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`).
+- Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119296014), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119295995), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119295980), all on current main SHA `933ca27d1542083078de104e2ac3550d8fde59c5` (the tested source implementation baseline is `95f960c081367305dea0144034d48a4ab7892426`).
 - 26 countries; 56 pathways (52 publishable / 4 research_required); 193 evidence records.
 - Latest recorded freshness inventory: 193 current, 0 overdue, 0 missing and 0 invalid review dates.
-- Structured requirements: 12 declarations across 5 pathways; 54/56 have no structured declarations.
+- Structured requirements: 12 declarations across 5 pathways; 51/56 have no structured declarations.
 - `countries.json` `dataset.asOf=2026-09-05` is stale and needs a source-by-source review before it is changed.
 
 ## Completed
@@ -41,7 +41,7 @@ Monetization activation and scale work remain gated. A green CI run proves sourc
 
 ## Current-head reconciliation — 2026-10-11
 
-Last fully verified same-SHA CI checkpoint before this status reconciliation: `fc3c06a0a6078df4473d2f09015391cff09eef3f`; verified implementation SHA: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`. Quality Gate reports 17 suites / 113 tests, zero dependency vulnerabilities, successful data validation (26 countries / 56 pathways / 193 evidence records), build-integrity and SEO/A11y checks (168 generated HTML files). P0-S3 and source-tree P0-S4 are verified; P0-S5 and Phase 0 are not complete. The freshness report says 193 current / 0 overdue / 0 missing / 0 invalid review dates, but this does not mean all 26 country landing-source anchors were reopened. The next data task is the open P1-S1 review described in `docs/sprints/NEXT_SPRINT_P1_DATA_REFRESH.md`; keep `dataset.asOf=2026-09-05` unchanged until its exit criteria pass.
+Last fully verified same-SHA CI checkpoint before this status reconciliation: `95f960c081367305dea0144034d48a4ab7892426`; verified implementation SHA: `95f960c081367305dea0144034d48a4ab7892426`. Quality Gate reports 17 suites / 113 tests, zero dependency vulnerabilities, successful data validation (26 countries / 56 pathways / 193 evidence records), build-integrity and SEO/A11y checks (168 generated HTML files). P0-S3 and source-tree P0-S4 are verified; P0-S5 and Phase 0 are not complete. The freshness report says 193 current / 0 overdue / 0 missing / 0 invalid review dates, but this does not mean all 26 country landing-source anchors were reopened. The next data task is the open P1-S1 review described in `docs/sprints/NEXT_SPRINT_P1_DATA_REFRESH.md`; keep `dataset.asOf=2026-09-05` unchanged until its exit criteria pass.
 
 
 ## Task/sprint/phase handover — 2026-10-11

@@ -1,11 +1,11 @@
 # Next Sprint — P1-S1 Country Source Refresh & Dataset Reconciliation
 
-**Status:** IN PROGRESS — manifest generated; source outcomes recorded; human sign-off and two source blockers remain.  
+**Status:** IN PROGRESS — manifest generated; outcomes recorded for all 26; human sign-off and Russia jurisdiction confirmation remain; Luxembourg alternative logged.  
 **Prepared:** 2026-10-11.  
 **Initial planning baseline:** `933ca27d1542083078de104e2ac3550d8fde59c5`.
-**Last pre-change source-tree checkpoint:** `cb1d5882442be39ef1f16a84e904125bf6c2f331` (Quality Gate pass; final same-head three-workflow verification pending).  
-**Current implementation baseline:** `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`.  
-**Exit status:** OPEN — no country anchor is marked reviewed until an auditable outcome is recorded.  
+**Verified implementation/data checkpoint:** `95f960c081367305dea0144034d48a4ab7892426` (all three workflows pass); CI workflow follow-up `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` also passed all three.  
+**Current implementation baseline:** `95f960c081367305dea0144034d48a4ab7892426`.  
+**Exit status:** OPEN — outcomes are recorded for all 26 anchors; 25 relevant official pages/alternatives inspected; Russia needs mission-jurisdiction confirmation and human sign-off remains open.  
 **Priority:** Data-trust work concurrent with externally blocked P0-S5.
 
 ## Objective
@@ -92,7 +92,7 @@ Generated from the current countries.json registry (26 unique records). Mark a r
 
 ## Baseline and execution log — 2026-10-11
 
-- Latest completed same-SHA CI checkpoint: `fc3c06a0a6078df4473d2f09015391cff09eef3f`; implementation baseline: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`.
+- Latest completed same-SHA CI checkpoint: `95f960c081367305dea0144034d48a4ab7892426`; implementation baseline: `95f960c081367305dea0144034d48a4ab7892426`.
 - Quality Gate PASS: [run 38116957166](https://github.com/global-route/myglobalroute/actions/runs/38119296014) — 17 suites / 113 tests; 0 dependency vulnerabilities; data validation 26 countries / 56 pathways / 193 evidence records; build integrity and SEO/A11y checks passed (168 generated HTML files).
 - Lint PASS: [run 38116957132](https://github.com/global-route/myglobalroute/actions/runs/38119295995).
 - Browser Smoke PASS: [run 38116957147](https://github.com/global-route/myglobalroute/actions/runs/38119295980).
