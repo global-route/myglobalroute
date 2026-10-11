@@ -90,3 +90,17 @@ All three required workflows completed successfully on this exact `main` head:
 - **Browser Smoke — PASS:** [run 38105471079](https://github.com/global-route/myglobalroute/actions/runs/38105471079)
 
 The E2E test now asserts the browser's native disabled property for the uncovered Business option. These checks establish source-tree integrity only. Production remains **NO-GO** until the authoritative hosting project/origin and deployed SHA are verified, production smoke and CSP review pass, and issue #2's branch/visibility decisions are resolved with the project owner. The structured requirement schema and evidence gates are implemented, but pathway-level numeric thresholds remain unpopulated where exact authoritative evidence has not been captured.
+
+
+## Authoritative current-head verification — 2026-10-11
+
+Current `main`: `f35291921b780b387a36e16f3be0bc52cd000c97`.
+
+- **Quality Gate PASS:** [run 38105758475](https://github.com/global-route/myglobalroute/actions/runs/38105758475). Job log: migration data validation passed (26 countries, 56 pathways, 193 evidence records); **14/14 test suites and 97/97 tests passed**; dependency audit, build, generated-output verification and SEO/accessibility smoke steps completed.
+- **Lint PASS:** [run 38105758492](https://github.com/global-route/myglobalroute/actions/runs/38105758492).
+- **Browser Smoke PASS:** [run 38105758360](https://github.com/global-route/myglobalroute/actions/runs/38105758360).
+- `npm run verify` now includes `requirements:readiness`. This report measures declared structured requirements; it does not create authoritative eligibility data or imply complete pathway coverage.
+- Data validation emitted warnings that the country dataset is 36 days old and multiple evidence records are due for review. These are not CI failures, but they are material freshness risks. Revalidate source claims before using them for current recommendations; do not merely move review dates forward.
+- Four subroutes are flagged because their status is not `research_required`. Review them against canonical pathway promotion rules; do not treat the warning as independent proof of publishability.
+
+**Release decision remains NO-GO.** Passing source-tree checks does not establish the deployed origin/SHA, authoritative migration facts, full structured requirements coverage, privacy/compliance readiness or live-provider approvals. The hosting project/domain mapping and deployed commit remain unverified.
