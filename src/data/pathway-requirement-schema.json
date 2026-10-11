@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "policy": "Requirement values are pathway-scoped and may be used for matching only when every value has an explicit unit or structure, jurisdiction, effective date, HTTPS source and matching field-level evidence. Absence means unknown, never zero or unrestricted. Structured annual salary thresholds must be distinguished from monthly income and must preserve source caveats, exceptions and any higher occupation-specific threshold. Conditional thresholds must preserve application-date, family-size, regional and cost-component scope in structured conditions; a scoped threshold must never be presented as universal. Maintenance balances are distinct from annual living-cost or tuition requirements; their holding period, exemptions and accepted alternatives must be preserved in conditions and notes.",
+  "policy": "Requirement values are pathway-scoped and may be used for matching only when every value has an explicit unit or structure, jurisdiction, effective date, HTTPS source and matching field-level evidence. Absence means unknown, never zero or unrestricted. Structured annual salary thresholds must be distinguished from monthly income and must preserve source caveats, exceptions and any higher occupation-specific threshold. Conditional thresholds must preserve application-date, family-size, regional and cost-component scope in structured conditions; a scoped threshold must never be presented as universal. Maintenance balances are distinct from annual living-cost or tuition requirements; their holding period, exemptions and accepted alternatives must be preserved in conditions and notes. Monthly employer salary thresholds must be represented separately from an applicant's personal monthly income and must preserve exemptions and transitional scope.",
   "fields": {
     "minimum_funds": {
       "kind": "money",
@@ -154,6 +154,20 @@
         "evidenceIds",
         "notes"
       ]
+    },
+    "minimum_monthly_salary": {
+      "kind": "money",
+      "evidenceField": "financial-requirement",
+      "requiredProperties": [
+        "value",
+        "currency",
+        "period",
+        "jurisdiction",
+        "effectiveDate",
+        "sourceUrl",
+        "evidenceIds",
+        "notes"
+      ]
     }
   },
   "matchingPolicy": {
@@ -163,7 +177,8 @@
     "noRequirementMayInheritEvidenceFromParentPathway": true,
     "countryAggregateFieldsDoNotSubstituteForPathwayRequirements": true,
     "userProfileMustNotBeTreatedAsAnEligibilityDecision": true,
-    "maintenanceBalanceIsNotAnnualSpending": true
+    "maintenanceBalanceIsNotAnnualSpending": true,
+    "salaryThresholdIsNotApplicantIncome": true
   },
   "conditionFields": {
     "applicationDateFrom": {
