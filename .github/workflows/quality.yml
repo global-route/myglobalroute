@@ -26,6 +26,8 @@ jobs:
         run: npm audit --audit-level=high --omit=dev
       - name: Validate migration data
         run: npm run data:validate
+      - name: Report structured requirement and evidence freshness readiness
+        run: npm run requirements:readiness
       - name: Unit tests
         run: npm test -- --coverage --runInBand
       - name: Build site
