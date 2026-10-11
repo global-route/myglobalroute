@@ -19,7 +19,7 @@
 
 ## Current decision
 
-Continue source-trust and route-quality work, but do not release. Quality Gate, Lint and Browser Smoke pass on the latest implementation SHA `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`; earlier data and CI-workflow checkpoints are retained below as history. Production identity/security and human source-review sign-off remain unresolved.
+Continue source-trust and route-quality work, but do not release. Quality Gate, Lint and Browser Smoke passed on the last fully verified implementation checkpoint `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`; earlier data and CI-workflow checkpoints are retained below as history. Production identity/security and human source-review sign-off remain unresolved.
 
 ## Latest full source-tree checkpoint — 2026-10-11
 
