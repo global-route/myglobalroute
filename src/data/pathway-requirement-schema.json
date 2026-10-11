@@ -126,6 +126,20 @@
         "conditions",
         "notes"
       ]
+    },
+    "minimum_age": {
+      "kind": "number",
+      "unit": "years",
+      "evidenceField": "eligibility",
+      "requiredProperties": [
+        "value",
+        "unit",
+        "jurisdiction",
+        "effectiveDate",
+        "sourceUrl",
+        "evidenceIds",
+        "notes"
+      ]
     }
   },
   "matchingPolicy": {
