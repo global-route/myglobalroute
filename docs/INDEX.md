@@ -69,7 +69,7 @@ Country explorer, pathway pages, calculator, comparison and `Find My Route` reco
 Technical SEO, structured data, internal linking, programmatic country/pathway pages and analytics.
 
 ### Phase E — Trust & Compliance (P1)
-Privacy, terms, disclaimers, accessibility, security hardening and transparent sourcing.
+Privacy, terms, disclaimers, accessibility, security hardening and transparent sourcing. See [Privacy Data Inventory — Engineering Draft](phase-4/PRIVACY_DATA_INVENTORY.md) for current source-visible flows and outstanding legal/provider gates.
 
 ### Phase F — Growth (P1)
 Newsletter, referrals, partnerships and trusted affiliate infrastructure.
@@ -84,4 +84,4 @@ If an older document conflicts with `ACTIVE_SPRINT.md`, `EXECUTION_ROADMAP.md` o
 
 ## Reassessment — 2026-10-11
 
-Use `project/PHASE_STATUS.md` as the canonical phase tracker. Phase 0 exit is blocked; Phase 1 data trust and Phase 2 route decision quality remain incomplete; Phase 3 editorial cleanup is open; Phase 4 privacy/compliance/accessibility is partial; Phase 5 monetization is not live; Phase 6 scale is deferred. Current assessed SHA: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`. See `project/PROJECT_ASSESSMENT.md` for the full backlog.
+Use `project/PHASE_STATUS.md` as the canonical phase tracker. Phase 0 exit is blocked; Phase 1 data trust and Phase 2 route decision quality remain incomplete; Phase 3 editorial cleanup is open; Phase 4 privacy/compliance/accessibility is partial (consent controls and an engineering data-inventory draft are committed but unvalidated); Phase 5 monetization is not live; Phase 6 scale is deferred. Current assessed SHA: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`. See `project/PROJECT_ASSESSMENT.md` for the full backlog.
