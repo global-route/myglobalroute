@@ -23,6 +23,10 @@
 - Latest documented evidence registry: 193 records.
 - These are prior recorded counts, not a substitute for re-running current data validation.
 
+## Current source-tree verification — 2026-10-11
+
+Current `main` SHA recorded at verification: `3deb2f4c9d770a54057ae3f5938109a58f06832b`. Quality Gate, Lint and Browser Smoke all completed successfully on that exact SHA. See [`docs/project/RELEASE_VERIFICATION_2026-10-08.md`](../project/RELEASE_VERIFICATION_2026-10-08.md) for workflow links and scope. Recheck all gates if `main` advances. This is not proof of a live deployment.
+
 ## Current monetization implementation
 
 - Provider-neutral analytics contract, explicit consent UI and shared loading are implemented.
@@ -31,7 +35,7 @@
 - Commercial registry is empty; no live partner should be inferred.
 - Registry validation and redirect-time status, HTTPS, review-date and expiry checks are implemented.
 - Provider-specific revenue reconciliation, live AdSense setup and qualified lead delivery remain open.
-- Current CI must be inspected after the latest changes; production behavior is not established by source-tree tests.
+- Source-tree CI is green at the recorded SHA, including browser smoke for consent and inactive ad placements; production behavior is not established by source-tree tests.
 
 ## P0-S5 — mandatory release gates
 
