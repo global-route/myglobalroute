@@ -47,16 +47,38 @@ Re-open the official landing-source anchor for every country in src/data/countri
 
 **Exit:** same-head gates pass and the next sprint has a concrete backlog.
 
-## Country review checklist
+## Exact country review checklist
 
-The first task must generate one row per exact country ID/name/URL directly from countries.json. Do not hand-enter a guessed list or infer missing rows from memory. Mark each row complete only after the registered official source has actually been reviewed and the outcome recorded.
+Generated from the current countries.json registry (26 unique records). Mark a row complete only after the registered official anchor is actually reviewed and the result is recorded. A checked box means source review occurred, not merely that the URL exists.
 
-- [ ] Generate source manifest from current countries.json.
-- [ ] Review each of 26 official country anchors.
-- [ ] Reconcile changed authorities/URLs and evidence impacts.
-- [ ] Update country source dates only for reviewed entries.
-- [ ] Reconcile dataset.asOf after all 26 are reviewed.
-- [ ] Run all required same-SHA verification.
+| Done | ID | Country | Official anchor currently registered | Review outcome / evidence |
+|---|---|---|---|---|
+| [ ] | GB | United Kingdom | https://www.gov.uk/browse/visas-immigration | Not reviewed in this sprint |
+| [ ] | CA | Canada | https://www.canada.ca/en/services/immigration-citizenship.html | Not reviewed in this sprint |
+| [ ] | AU | Australia | https://immi.homeaffairs.gov.au/ | Not reviewed in this sprint |
+| [ ] | NZ | New Zealand | https://www.immigration.govt.nz/ | Not reviewed in this sprint |
+| [ ] | IE | Ireland | https://www.irishimmigration.ie/ | Not reviewed in this sprint |
+| [ ] | DE | Germany | https://www.auswaertiges-amt.de/en/visa-service | Not reviewed in this sprint |
+| [ ] | IT | Italy | https://vistoperitalia.esteri.it/ | Not reviewed in this sprint |
+| [ ] | FR | France | https://france-visas.gouv.fr/ | Not reviewed in this sprint |
+| [ ] | HU | Hungary | https://oif.gov.hu/ | Not reviewed in this sprint |
+| [ ] | FI | Finland | https://migri.fi/en/home | Not reviewed in this sprint |
+| [ ] | SE | Sweden | https://www.migrationsverket.se/ | Not reviewed in this sprint |
+| [ ] | NO | Norway | https://www.udi.no/en/ | Not reviewed in this sprint |
+| [ ] | LU | Luxembourg | https://guichet.public.lu/en.html | Not reviewed in this sprint |
+| [ ] | LT | Lithuania | https://migracija.lrv.lt/en/ | Not reviewed in this sprint |
+| [ ] | IS | Iceland | https://island.is/en/o/directorate-of-immigration | Not reviewed in this sprint |
+| [ ] | PT | Portugal | https://aima.gov.pt/ | Not reviewed in this sprint |
+| [ ] | ES | Spain | https://www.inclusion.gob.es/ | Not reviewed in this sprint |
+| [ ] | AT | Austria | https://www.oesterreich.gv.at/en/themen/migration_und_integration.html | Not reviewed in this sprint |
+| [ ] | JP | Japan | https://www.moj.go.jp/isa/ | Not reviewed in this sprint |
+| [ ] | KR | South Korea | https://www.immigration.go.kr/immigration_eng/index.do | Not reviewed in this sprint |
+| [ ] | CN | China | https://en.nia.gov.cn/ | Not reviewed in this sprint |
+| [ ] | PL | Poland | https://www.gov.pl/web/udsc-en | Not reviewed in this sprint |
+| [ ] | MT | Malta | https://identita.gov.mt/ | Not reviewed in this sprint |
+| [ ] | RU | Russia | https://mid.ru/en/ | Not reviewed in this sprint |
+| [ ] | CH | Switzerland | https://www.sem.admin.ch/sem/en/home.html | Not reviewed in this sprint |
+| [ ] | CZ | Czechia | https://mv.gov.cz/mvcren/ | Not reviewed in this sprint |
 
 ## Next after P1-S1
 
