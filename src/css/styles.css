@@ -593,7 +593,8 @@ a:focus {
 
 
 /* Consent controls: persistent access to change or withdraw the stored choice. */
-#analytics-consent[hidden] {
+#analytics-consent[hidden],
+#analytics-consent-settings[hidden] {
   display: none !important;
 }
 
