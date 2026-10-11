@@ -95,7 +95,7 @@ Quality Gate output: 26 countries, 56 pathways, 193 evidence records; 0 dependen
 
 
 ## P1-REQ update — 2026-10-11
-Three evidence-backed declarations added: UK Student admission offer; New Zealand student annual living-funds threshold with explicit scope; Ireland Critical Skills qualifying job offer. Structured coverage is 12 declarations across 5/56 pathways; 51 remain unstructured. P1-REQ remains open.
+Historical checkpoint before later 2026-10-11 additions: three evidence-backed declarations had been added (UK Student admission offer, New Zealand student annual living-funds threshold with explicit scope, and Ireland Critical Skills qualifying job offer). At that checkpoint, structured coverage was 12 declarations across 5/56 pathways; 51 were unstructured. P1-REQ remains open.
 
 
 
