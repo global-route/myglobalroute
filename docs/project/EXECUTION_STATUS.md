@@ -13,7 +13,7 @@ Implementation SHA: `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`
 - Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394817
 - Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394822
 
-The route engine now rejects malformed declared funds/income/experience thresholds rather than interpreting them as zero. Tests cover funds boundaries, malformed thresholds, no-match outcomes and recommendation limits. Structured requirements remain 12 declarations across 5/56 pathways; 51 remain unstructured. Country review still requires human sign-off and Russia jurisdiction confirmation. `dataset.asOf=2026-09-05` remains unchanged. Production verification is not established by CI; P0-S5 is open and release remains NO-GO.
+The route engine now rejects malformed declared funds/income/experience thresholds rather than interpreting them as zero. Tests cover funds boundaries, malformed thresholds, no-match outcomes and recommendation limits. Structured requirements remain 12 declarations across 5/56 pathways; 51 remain unstructured. Country review still requires human sign-off. Official Russian Embassy-in-Nigeria visa material has been located, but product target-market scope and mission/jurisdiction coverage remain unresolved. `dataset.asOf=2026-09-05` remains unchanged. Production verification is not established by CI; P0-S5 is open and release remains NO-GO.
 
 ## Previous verified baseline
 

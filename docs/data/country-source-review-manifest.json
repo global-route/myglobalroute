@@ -452,11 +452,11 @@
         "status": "manual_review_required_jurisdiction_confirmation",
         "checkedAt": "2026-10-11",
         "reviewer": "AI-assisted public-source audit; human sign-off required",
-        "method": "Registered Russian MFA URL could not be inspected; official Russian MFA consular visa page on a Danish mission subdomain found via search",
-        "observedTitle": "Visa application procedure — Russian MFA consular site (Denmark)",
-        "observedUrl": "https://denmark.kdmid.ru/en/consular-functions/visa-application-procedure/",
-        "evidenceUrl": "https://denmark.kdmid.ru/en/consular-functions/visa-application-procedure/",
-        "outcome": "An official Russian MFA consular visa page was found, but it contains Denmark-mission-specific application instructions and cannot be assumed to apply to Nigerian applicants. Select and verify the correct mission/official entry point before closing this review. Original URL tool error is not evidence the site is down.",
+        "method": "Official Russian Embassy in Nigeria visa material located through public search; document content/metadata inspected; target-market coverage not independently confirmed",
+        "observedTitle": "TOURIST VISA — Russian Embassy in Nigeria",
+        "observedUrl": "https://nigeria.mid.ru/upload/iblock/841/ewh0w0sis0vj08rcu28qiqic2qe44r75.pdf",
+        "evidenceUrl": "https://nigeria.mid.ru/upload/iblock/841/ewh0w0sis0vj08rcu28qiqic2qe44r75.pdf",
+        "outcome": "An official Russian Embassy in Nigeria tourist-visa checklist was located, so the earlier Denmark-mission page is not the only available official mission material. The Nigeria document is not sufficient to verify all target applicant jurisdictions or pathway-specific claims. Confirm the product's applicant-market policy and appropriate mission source(s), then obtain human sign-off. Source discovery does not establish current requirements.",
         "nextReviewDue": null
       },
       "pathwayClaimsVerified": false

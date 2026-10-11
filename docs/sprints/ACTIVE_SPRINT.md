@@ -49,7 +49,7 @@ Quality Gate output on the verified implementation/data SHA:
 | P0-S4 | Browser/source-tree gate | **Source-tree verified** | CI browser smoke is not proof of production behavior |
 | P0-S5 | Deployment verification / Phase 0 exit | **Active / blocked** | Confirm authoritative host, deployed SHA, live CSP/security headers, production smoke and owner branch rules |
 | P1-S1.1 | Machine-readable country manifest | **Complete** | Generator, manifest, tests and CI synchronization check are committed |
-| P1-S1.2 | Country source-anchor review | **Outcomes recorded; sign-off open** | 25/26 entries have a relevant official page or alternative inspected; Russia requires correct mission/jurisdiction confirmation; human sign-off remains required |
+| P1-S1.2 | Country source-anchor review | **Outcomes recorded; sign-off open** | 25/26 entries have a relevant official page or alternative inspected; Russia now has Nigeria-specific official mission material located, but target-market jurisdiction confirmation and human sign-off remain required |
 | P1-S1.3 | Dataset metadata reconciliation | **Open** | Keep `dataset.asOf=2026-09-05` until review is signed off and exceptions are accepted |
 | P1-S1.4 | Same-SHA verification/handover | **Implementation verified** | CI passes on the two SHAs above; do not treat this as production verification |
 | P1-REQ | Structured requirements | **Open / active** | 12 declarations across 5 of 56 pathways; 51 remain unstructured |
@@ -67,7 +67,7 @@ Quality Gate output on the verified implementation/data SHA:
 - Manifest: `docs/data/country-source-review-manifest.json`; generated from `src/data/countries.json`.
 - All 26 anchors have explicit outcomes. 25 relevant official pages/alternatives were inspected; all machine-assisted observations still require human sign-off.
 - Luxembourg official third-country immigration alternatives are logged, although the registered root still redirects to a generic citizens page. Consider a more direct country anchor after human sign-off.
-- Russia's official MFA page found in this pass is mission-specific to Denmark; confirm the correct official source for each target applicant jurisdiction before closing the review.
+- Official Russian Embassy in Nigeria tourist-visa material was located after the initial pass. It is a candidate for Nigeria-specific source navigation, not proof for other target applicant jurisdictions or route-level claims; human sign-off remains open.
 - Austria and Czechia country source URLs were updated to more relevant official government pages; their retrieval dates alone were changed.
 - `dataset.asOf=2026-09-05` is intentionally unchanged. Do not infer approval rates, costs, timelines or pathway eligibility from country-level landing pages.
 

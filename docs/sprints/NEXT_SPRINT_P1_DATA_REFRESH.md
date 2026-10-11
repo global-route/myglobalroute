@@ -32,7 +32,7 @@ Quality Gate output: 26 countries, 56 pathways, 193 evidence records; zero depen
 
 - [x] Record an auditable outcome for each of the 26 country anchors.
 - [x] Inspect relevant official pages or official alternatives for 25 entries.
-- [ ] Confirm the correct Russian MFA/consular source for the applicable target applicant jurisdictions; the source found in this pass is Denmark-mission-specific.
+- [ ] Confirm the correct Russian MFA/consular source for the applicable target applicant jurisdictions; official Nigeria-mission visa material has now been located, but target-market coverage and human sign-off remain unresolved.
 - [ ] Obtain human sign-off for all AI-assisted observations.
 - [x] Update Austria and Czechia registry URLs only where more relevant official government entry points were verified.
 - [x] Record Luxembourg official third-country immigration alternatives; consider replacing its generic root anchor after sign-off.
@@ -87,13 +87,13 @@ A checked row means an official page or official alternative was inspected and t
 | [x] | CN | China | https://en.nia.gov.cn/ | **reviewed_relevant_human_signoff_pending** — Official National Immigration Administration English site. Source: https://en.nia.gov.cn/ |
 | [x] | PL | Poland | https://www.gov.pl/web/udsc-en | **reviewed_relevant_human_signoff_pending** — Official Polish Office for Foreigners English entry point. Source: https://www.gov.pl/web/udsc-en |
 | [x] | MT | Malta | https://identita.gov.mt/ | **reviewed_alternate_official_human_signoff_pending** — Official page states the Expatriates Unit handles residence documents and migration policy. Source: https://identita.gov.mt/working-residing-in-malta/ |
-| [ ] | RU | Russia | https://mid.ru/en/ | **manual_review_required_jurisdiction_confirmation** — An official Russian MFA consular visa page was found, but it contains Denmark-mission-specific application instructions and cannot be assumed to apply to Nigerian applicants. Select and verify the correct mission/official entry point before closing this review. Original URL tool error is not evidence the site is down. Source: https://denmark.kdmid.ru/en/consular-functions/visa-application-procedure/ |
+| [ ] | RU | Russia | https://mid.ru/en/ | **manual_review_required_jurisdiction_confirmation** — An official Russian Embassy in Nigeria tourist-visa checklist was located: https://nigeria.mid.ru/upload/iblock/841/ewh0w0sis0vj08rcu28qiqic2qe44r75.pdf. This is a better Nigeria-specific candidate than the previously found Denmark-mission page, but does not establish source coverage for every target applicant jurisdiction or verify pathway claims. Keep the blocker and human sign-off requirement open. |
 | [x] | CH | Switzerland | https://www.sem.admin.ch/sem/en/home.html | **reviewed_authority_homepage_human_signoff_pending** — Official State Secretariat for Migration English homepage. Source: https://www.sem.admin.ch/sem/en/home.html |
 | [x] | CZ | Czechia | https://ipc.gov.cz/en/ | **reviewed_replacement_found_human_signoff_pending** — Old Ministry URL redirects to archive; current official Ministry of Interior portal found and registry anchor updated. Source: https://ipc.gov.cz/en/ |
 
 ## Remaining handover
 
-1. Confirm the Russia official consular source for the relevant applicant jurisdictions and record a human reviewer/date.
+1. Confirm whether the platform's target market is Nigeria-only or broader African applicants; select the corresponding official Russian mission source(s), inspect them directly, and record human reviewer/date.
 2. Obtain human sign-off on the 26-country review batch; review Luxembourg's registered root URL choice.
 3. Keep `dataset.asOf` unchanged until review and exceptions are signed off.
 4. Continue P1-REQ and P1-ROUTE separately; current structured requirement coverage is 12 declarations across 5/56 pathways, with 51 pathways still unstructured.

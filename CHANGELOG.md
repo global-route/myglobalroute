@@ -8,6 +8,7 @@ Dates reflect repository commits; a changelog entry is not release approval.
 - Added regression cases for funds-threshold boundaries, malformed declared thresholds, no-match outcomes and recommendation limits.
 - Implementation SHA: `9ed09f07e9e7b73b62884da02fc406ccdb40f10a` — [Quality Gate PASS](https://github.com/global-route/myglobalroute/actions/runs/38145394933), [Lint PASS](https://github.com/global-route/myglobalroute/actions/runs/38145394817), [Browser Smoke PASS](https://github.com/global-route/myglobalroute/actions/runs/38145394822), all on the same SHA.
 - P1-ROUTE remains open for further stale/mismatched evidence, alternatives and broader requirement-boundary coverage. P1-REQ remains open; missing requirement declarations remain unknown.
+- P1-S1 Russia follow-up: located official Russian Embassy-in-Nigeria tourist-visa material. It does not establish coverage for all target applicant jurisdictions or verify pathway requirements; human sign-off remains open.
 - P0-S5 remains externally blocked. These CI results do not establish the production host, deployed SHA, live security headers or owner-level branch rules; release remains NO-GO.
 
 

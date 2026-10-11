@@ -29,7 +29,7 @@ The route engine fails closed on malformed declared numeric thresholds; tests no
 
 Quality Gate output: 26 countries, 56 pathways, 193 evidence records; 0 dependency vulnerabilities; manifest synchronized; 18 suites / 122 tests passed; build integrity passed; SEO/accessibility checks passed across 168 generated HTML files. These are source-tree checks, not production verification.
 
-Country-source review: outcomes recorded for all 26 anchors; 25 relevant official pages/alternatives inspected. Russia requires mission-jurisdiction confirmation and human sign-off remains open. `dataset.asOf=2026-09-05` remains unchanged. Structured requirement coverage is 12 declarations across 5/56 pathways; 51 remain unstructured. Release remains **NO-GO** until P0-S5 and source-review sign-off gates are closed.
+Country-source review: outcomes recorded for all 26 anchors; 25 relevant official pages/alternatives inspected. Official Russian Embassy-in-Nigeria visa material has been located, but mission coverage for the product's full target applicant market and human sign-off remain open. `dataset.asOf=2026-09-05` remains unchanged. Structured requirement coverage is 12 declarations across 5/56 pathways; 51 remain unstructured. Release remains **NO-GO** until P0-S5 and source-review sign-off gates are closed.
 
 ## Historical implementation details from earlier checkpoints
 

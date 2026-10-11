@@ -7,7 +7,7 @@ This is the canonical phase tracker. Historical phase/sprint docs preserve origi
 | Phase | Status | Completed | Uncompleted / exit gate |
 |---|---|---|---|
 | Phase 0 — Production integrity | **Foundations complete; exit blocked** | Runtime/build repairs, canonical modules, validators, unit/SEO/A11y gates, lint and browser smoke | Confirm host/domain, deployed SHA/content, live CSP, production smoke and branch protection |
-| Phase 1 — Migration intelligence | **Partially complete; ongoing P0** | 26-country registry, 56 pathways, 193 evidence records, provenance and freshness reporting | Country metadata `asOf` stale; human sign-off for 26 recorded country-source outcomes; confirm Russia mission/jurisdiction and pathway-specific claims; 4 pathways research_required |
+| Phase 1 — Migration intelligence | **Partially complete; ongoing P0** | 26-country registry, 56 pathways, 193 evidence records, provenance and freshness reporting | Country metadata `asOf` stale; human sign-off for 26 recorded country-source outcomes; confirm Russia mission/jurisdiction coverage (Nigeria-specific official material now located) and pathway-specific claims; 4 pathways research_required |
 | Phase 2 — Canonical product core | **Core exists; decision quality incomplete** | Route matching, zero-fit suppression, source trails, requirement schema/readiness; 12 declarations across UK Skilled Worker, Canada study, UK Student, New Zealand Student and Ireland Critical Skills | 5/56 pathways now have structured declarations (51 remain unstructured); conditional eligibility, alternatives/exemptions, stale-evidence behavior and route-quality tests open |
 | Phase 3 — Content & acquisition | **Partially delivered; cleanup open** | Generated content/routes and search foundations | Legacy blog/category links, historical/duplicate pages, editorial freshness, internal links and SEO/A11y review; canonical URLs wait for confirmed origin |
 | Phase 4 — Trust/compliance/accessibility | **Foundations only** | Privacy/terms/disclaimer baseline, consent-aware analytics, CSP config, dependency audit, static accessibility checks | Live CSP, data inventory/retention, production consent, legal review, browser accessibility/performance and ownership processes |
@@ -51,7 +51,7 @@ Malformed declared route thresholds now fail closed. Added regression coverage f
 
 Quality Gate output: 26 countries, 56 pathways, 193 evidence records; 0 dependency vulnerabilities; manifest synchronized; 18 suites / 122 tests passed; build integrity passed; SEO/accessibility checks passed across 168 generated HTML files. These are source-tree checks, not production verification.
 
-Country review outcomes are recorded for all 26 anchors; 25 relevant official pages/alternatives were inspected. Russia requires mission-jurisdiction confirmation and human sign-off remains open. `dataset.asOf=2026-09-05` is unchanged. Phase 0 and Phase 1 remain open; release remains NO-GO.
+Country review outcomes are recorded for all 26 anchors; 25 relevant official pages/alternatives were inspected. Russia's official Embassy-in-Nigeria visa material has now been located, but target-market jurisdiction confirmation and human sign-off remain open. `dataset.asOf=2026-09-05` is unchanged. Phase 0 and Phase 1 remain open; release remains NO-GO.
 
 ## Handover reconciliation — 2026-10-11
 
