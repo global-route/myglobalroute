@@ -14,7 +14,7 @@
 - Canonical migration registry: 26 countries / 56 pathways (recounted directly from the current `src/data/pathways.json` contents during this handover review).
 - Current source-file status counts: 52 `publishable`, 4 `research_required`. The four research-required canonical pathways intentionally remain blocked without promotion evidence; their missing evidence IDs must not be filled with placeholders.
 - Evidence registry independently recounted from all 29 JSON files: **193 records** (18 in the primary registry and 175 across 28 addenda files).
-- Quality Gate, Lint and Browser Smoke all passed on current `main` head `6aebb9b0feddecbcf5b8c635e5648d934eb34453`; this supersedes earlier checkpoint references for source-tree verification.
+- Quality Gate, Lint and Browser Smoke all passed on current `main` head `6569cfd5dba4e519d34461ec47ba14ed7d10e5ca`; this supersedes earlier checkpoint references for source-tree verification.
 - Production release remains blocked until the authoritative deployment project/origin and deployed commit are independently verified.
 
 ## P0 delivery sprint map
@@ -26,10 +26,10 @@ Exact-route gates were closed or explicitly blocked. Do not promote research-req
 All previously research-required canonical pathways were audited; four remain explicitly blocked. Continue targeted evidence refresh where policy or source freshness warrants it.
 
 ### P0-S3 — Data / Recommendation Quality Gate — VERIFIED AT CURRENT HEAD
-Quality Gate passed at `6aebb9b0feddecbcf5b8c635e5648d934eb34453`: 17 suites / 110 tests passed, dependency audit found 0 vulnerabilities, 26-country/56-pathway validation passed, build integrity passed, and SEO/accessibility verification checked 168 generated HTML files.
+Quality Gate passed at `6569cfd5dba4e519d34461ec47ba14ed7d10e5ca`: 17 suites / 113 tests passed, dependency audit found 0 vulnerabilities, 26-country/56-pathway validation passed, build integrity passed, and SEO/accessibility verification checked 168 generated HTML files.
 
 ### P0-S4 — Browser / Release Gate — SOURCE-TREE VERIFIED AT CURRENT HEAD
-Browser Smoke passed at `6aebb9b0feddecbcf5b8c635e5648d934eb34453`; see the current release record. This does not replace production-origin/deployed-SHA verification.
+Browser Smoke passed at `6569cfd5dba4e519d34461ec47ba14ed7d10e5ca`; see the current release record. This does not replace production-origin/deployed-SHA verification.
 
 ### P0-S5 — Deployment Verification & P0 Exit — ACTIVE / BLOCKED
 
@@ -228,6 +228,15 @@ The CI inventory on the pre-Luxembourg-refresh head reported 193 records: 189 cu
 - Lint PASS: [38112873379](https://github.com/global-route/myglobalroute/actions/runs/38112873379).
 - Browser Smoke PASS: [38112873378](https://github.com/global-route/myglobalroute/actions/runs/38112873378).
 - Data/evidence: 193 evidence records; all review dates valid and current (0 overdue); country dataset `asOf` metadata is still 36 days old and requires a source-by-source refresh before changing that date.
-- Structured requirements: 1/56 canonical pathways declares structured requirements (2 fields on UK Skilled Worker); 55/56 remain unstructured. This is an explicit coverage gap, not proof that the other pathways have no requirements.
+- Structured requirements: 2/56 canonical pathways declare structured requirements (2 UK Skilled Worker fields plus 7 Canada study family-size-specific living-funds thresholds); 54/56 remain unstructured. This is an explicit coverage gap, not proof that the other pathways have no requirements.
 - Subroute validator now rejects promoted records that do not map to a matching publishable canonical pathway or lack exact-route evidence coverage. The previously emitted false-positive warnings for already-promoted NZ/Austria routes are resolved.
 - Production remains NO-GO for the previously recorded origin, deployment SHA, live CSP and branch-protection reasons.
+
+
+### Structured requirement delivery — 2026-10-11 — `6569cfd5dba4e519d34461ec47ba14ed7d10e5ca`
+
+- Added validated conditional threshold metadata for application date, family size, region, and included/excluded expense components.
+- Added seven official Canada study living-expense thresholds for family sizes 1–7 outside Quebec for applications on/after 2026-09-01: CAD 23,448; 29,192; 35,888; 43,572; 49,419; 55,736; 62,054 per year. Tuition and transportation are excluded. The >7 increment and Quebec rules are not flattened into this table; the source evidence records those caveats.
+- Quality Gate PASS: [38113089851](https://github.com/global-route/myglobalroute/actions/runs/38113089851), 17 suites / 113 tests. Lint PASS: [38113089859](https://github.com/global-route/myglobalroute/actions/runs/38113089859). Browser Smoke PASS: [38113089864](https://github.com/global-route/myglobalroute/actions/runs/38113089864).
+- Current evidence inventory: 193 records, 0 overdue/missing/invalid review dates. Country dataset metadata still warns that `asOf=2026-09-05` is 36 days old; refresh source metadata individually before changing it.
+- Production release remains NO-GO on unresolved origin/deployed SHA, live CSP and branch-protection gates.

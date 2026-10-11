@@ -168,7 +168,19 @@ The deployment release blocker is unchanged: authoritative production origin and
 - Lint PASS: [38112873379](https://github.com/global-route/myglobalroute/actions/runs/38112873379).
 - Browser Smoke PASS: [38112873378](https://github.com/global-route/myglobalroute/actions/runs/38112873378).
 - Evidence freshness: 193 records / 26 countries; 193 current, 0 overdue, 0 missing dates, 0 invalid dates. The country aggregate dataset `asOf` value remains 2026-09-05 (36 days old by CI warning) and must be refreshed only after its 26 source records are reviewed.
-- Structured requirements: 1/56 canonical pathways, 2 declarations total; 55 pathways remain unstructured. This must be a research/implementation lane, not treated as an eligibility-data completeness claim.
+- Structured requirements: 2/56 canonical pathways, 9 declarations total (2 UK Skilled Worker fields and 7 Canada study family-size thresholds); 54 pathways remain unstructured. This must be a research/implementation lane, not treated as an eligibility-data completeness claim.
 - Exact-subroute validation now checks promoted subroute/canonical alignment and evidence-field coverage; the 4 already-promoted NZ/Austria records are no longer flagged as incorrectly pending promotion.
 
 P0-S5 remains blocked on authoritative production host/domain mapping and deployed SHA, live CSP/security header checks, and owner-level branch protection. Additional configuration mismatch to reconcile: `wrangler.jsonc` names `myglobalroute`; the observed Cloudflare Workers Builds service was `globalroute`. Netlify config is also present but is not evidence that Netlify is the live host. Do not rename services or alter DNS by inference.
+
+
+## Current verified source-tree checkpoint — 2026-10-11 — `6569cfd5dba4e519d34461ec47ba14ed7d10e5ca`
+
+- Quality Gate PASS: [38113089851](https://github.com/global-route/myglobalroute/actions/runs/38113089851) — 17 suites / 113 tests, 0 dependency vulnerabilities, build integrity and SEO/A11y pass.
+- Lint PASS: [38113089859](https://github.com/global-route/myglobalroute/actions/runs/38113089859).
+- Browser Smoke PASS: [38113089864](https://github.com/global-route/myglobalroute/actions/runs/38113089864).
+- Structured requirement schema supports conditions for application date, family size, region and included/excluded cost components. Canada study now has 7 scoped annual living-expense thresholds for family sizes 1–7 outside Quebec, applications on/after 2026-09-01. Tuition and transportation are excluded; Quebec and family sizes above seven require distinct handling.
+- Requirement coverage: 9 declarations across 2/56 canonical pathways; 54 pathways remain unstructured. No route-engine eligibility verdict is implied by these data entries alone.
+- Evidence freshness: 193 records / 26 countries, all review dates current; country dataset `asOf` remains 2026-09-05 and triggers a 36-day-old metadata warning. Refresh source-by-source before updating this date.
+
+Production remains NO-GO pending authoritative hostname/deployed SHA, live CSP/security header verification, and owner-level branch protection. Cloudflare service name and `wrangler.jsonc` Worker name still require owner reconciliation.

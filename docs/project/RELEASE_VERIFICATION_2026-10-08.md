@@ -136,6 +136,19 @@ All three required workflows passed on the exact same current `main` head:
 
 The validator now checks that a `promoted` exact subroute maps to a matching publishable canonical pathway and has the required exact-scope evidence fields. Regression coverage was added. Registry counts remain 26 countries, 56 pathways (52 publishable / 4 research_required), and 193 evidence records. Evidence freshness is 193 current / 0 overdue / 0 missing / 0 invalid review dates. However, `src/data/countries.json` still has `dataset.asOf=2026-09-05` and CI warns that the aggregate dataset metadata is 36 days old. Do not bump `asOf` without reviewing the 26 source records; all aggregate approval-rate, cost and timeline fields remain null.
 
-Structured requirements are still very limited: 1 of 56 canonical pathways has structured requirements (2 fields on UK Skilled Worker); 55 have none. Do not infer absence of legal requirements from absence of structured records, and do not populate thresholds without exact-scope official evidence and conditional-rule modelling.
+Structured requirements remain limited: 2 of 56 canonical pathways have structured requirements (2 UK Skilled Worker fields plus 7 Canada study family-size-specific thresholds); 54 have none. Do not infer absence of legal requirements from absence of structured records, and do not populate thresholds without exact-scope official evidence and conditional-rule modelling.
 
 **Production remains NO-GO.** The public hostname, deployed content SHA equality, live CSP/security headers and owner-level main-branch rules remain unverified. Configuration identity needs owner confirmation because `wrangler.jsonc` names Worker `myglobalroute`, while the observed Cloudflare Workers Builds service was labelled `globalroute`; `netlify.toml` is also present but does not prove Netlify is the active host.
+
+
+## Latest source-tree verification — 2026-10-11 — `6569cfd5dba4e519d34461ec47ba14ed7d10e5ca`
+
+All three required workflows passed on the exact same current `main` head:
+
+- **Quality Gate — PASS:** [run 38113089851](https://github.com/global-route/myglobalroute/actions/runs/38113089851). 17/17 suites and 113/113 tests passed; dependency audit reported 0 vulnerabilities; data validation, build integrity and SEO/A11y verification passed (168 generated HTML files).
+- **Lint — PASS:** [run 38113089859](https://github.com/global-route/myglobalroute/actions/runs/38113089859).
+- **Browser Smoke — PASS:** [run 38113089864](https://github.com/global-route/myglobalroute/actions/runs/38113089864).
+
+The structured-requirement model now validates condition metadata and includes seven Canada study living-expense thresholds for family sizes 1–7 outside Quebec for applications on/after 2026-09-01. The amounts are CAD 23,448; 29,192; 35,888; 43,572; 49,419; 55,736; 62,054 per year. They exclude tuition and transportation; Quebec has separate rules and the incremental amount for family sizes above seven is not modelled as a fixed threshold. Official source: [IRCC proof of financial support](https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html).
+
+Structured coverage is 9 declarations across 2/56 pathways; 54 pathways remain without structured requirements. This is a limited first tranche, not complete eligibility modelling. The 193-record evidence inventory has 0 overdue/missing/invalid review dates, but CI still warns that country dataset `asOf=2026-09-05` is 36 days old; do not bump it without a 26-source review. Production remains NO-GO for the hostname/deployed SHA, live CSP and branch-protection reasons already recorded.
