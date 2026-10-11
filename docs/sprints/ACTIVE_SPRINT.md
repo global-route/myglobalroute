@@ -12,7 +12,7 @@
 ## Current product checkpoint
 
 - Canonical migration registry: 26 countries / 56 pathways (recounted directly from the current `src/data/pathways.json` contents during this handover review).
-- Current source-file status counts: 52 `publishable`, 4 `research_required`; four records have no evidence IDs. The Quality Gate's migration-data validation passed on the recorded current code SHA.
+- Current source-file status counts: 52 `publishable`, 4 `research_required`. The four research-required canonical pathways intentionally remain blocked without promotion evidence; their missing evidence IDs must not be filled with placeholders.
 - Evidence registry independently recounted from all 29 JSON files: **193 records** (18 in the primary registry and 175 across 28 addenda files).
 - Quality Gate, Lint and Browser Smoke all passed on current source head `5a823021e18b6c8fcfa56cd2ad13b0c7bb597820`; this supersedes earlier checkpoint references for source-tree verification.
 - Production release remains blocked until the authoritative deployment project/origin and deployed commit are independently verified.
@@ -52,7 +52,7 @@ The strategy and documentation are complete. Implementation now includes privacy
 - [x] Measurement and consent foundation implemented.
 - [x] Ad/partner slot configuration and page hosts wired.
 - [x] Commercial registry validation and redirect expiry/security checks implemented.
-- [x] Re-run current quality/browser workflows and record exact results against explicit `main` SHA `12cca13f8ddfe3c6976e29b3965435fe1bd25657`; Quality Gate, Lint and Browser Smoke all passed.
+- [x] Re-run current quality/browser workflows and record exact results against the latest verified implementation SHA; exact current run links are recorded in the release verification document.
 - [x] Harden evidence provenance date validation (`retrievedAt`, `reviewAfter`, optional `effectiveDate`) and add valid/invalid calendar-date tests. Code and unit coverage are implemented; Quality Gate passed at `542bba327342e699bd2800a1865a1bd4c6bb8099`.
 - [ ] Verify the commercial redirect adapter is deployed and runtime-compatible with the confirmed hosting platform; the current Netlify Function implementation is not evidence that a Netlify deployment exists.
 - [ ] Provider-specific click/revenue reconciliation after a real provider is selected.

@@ -2,7 +2,7 @@
 
 **Version:** 2.4.0  
 **Status:** Active execution  
-**Reconciled:** September 14, 2026
+**Reconciled:** October 11, 2026
 
 > The original Global Route vision is preserved. Execution priority is corrected from the repository's actual state: production integrity and trustworthy migration intelligence precede content and growth scaling.
 
@@ -63,7 +63,7 @@ The remaining P0 work is decomposed in `docs/sprints/P0_DELIVERY_PLAN.md` and tr
 - [ ] Expand evidence batches until the highest-value pathways can safely become publishable.
 - [ ] Establish production freshness/review automation beyond local validation.
 
-**Current registry checkpoint:** 26 countries / 56 canonical pathways; 32 publishable and 24 research-required. Exact subroutes remain outside the canonical 56 until their promotion gates pass.
+**Current registry checkpoint (2026-10-11 CI-verified):** 26 countries / 56 canonical pathways; 52 publishable and 4 research_required. Four exact subroute records are marked promoted and align to canonical pathway IDs; they are not additional pathways. The two remaining explicit exact-subroute candidates (Australia subclass 189 and Italy Flussi) remain research_required outside the canonical pathway registry.
 
 **Critical rule:** never fabricate missing data to reach the 26-country target.
 
@@ -125,15 +125,15 @@ The remaining P0 work is decomposed in `docs/sprints/P0_DELIVERY_PLAN.md` and tr
 | Gate | State | Rule |
 |---|---|---|
 | 26-country registry | Complete | Evidence-gated; no fabricated claims |
-| 52 pathways | Complete | 28 publishable; 24 research-required |
+| 56 pathways | Complete | 52 publishable; 4 research-required |
 | Field-level evidence | Active | Expanding through exact-route batches |
 | Exact subroute architecture | Complete | Candidates remain outside canonical 52 until promotion |
 | Route engine | Complete | Hard publishability/evidence gate |
 | Calculator safety | Complete | Unverified costs not actionable |
 | Country/pathway pages | Complete | Source/evidence trails generated |
-| Generated build verification | Pending current-head verification | Must be re-run on current delivery head |
-| Core SEO/A11y smoke | Pending current-head verification | Must be re-run on current delivery head |
-| CI quality gate | Pending current-head verification | Never infer green from historical runs |
+| Generated build verification | Passed at a53940f | Build integrity and generated detail/deep-link checks passed in Quality Gate |
+| Core SEO/A11y smoke | Passed at a53940f | 168 generated HTML files checked in Quality Gate |
+| CI quality gate | Passed at a53940f | 17 suites / 110 tests; current run links are recorded in release verification |
 | Browser/E2E | Open | P0-S4 |
 | Netlify origin | Open | Must identify actual deployment; never guess |
 | Production smoke | Open | P0-S5 and blocked by origin verification |
@@ -150,3 +150,8 @@ Content volume is intentionally not allowed to outrun data trust.
 `PLAN → IMPLEMENT → VERIFY → DOCUMENT → COMMIT → RECHECK`
 
 A task is not complete because a file exists. Legal/data claims require evidence; code requires verification; deployment requires a production smoke test. If CI is unavailable, record **Not Tested — CI unavailable** rather than claiming a pass.
+
+
+### Current-head reconciliation — 2026-10-11
+
+The current Quality Gate, Lint and Browser Smoke must all pass on the same SHA before the source-tree lane is considered verified. The verified data checkpoint at `a53940fc6ed02a5c1660ae3bcd0d2df98d220b30` reports 26 countries, 56 pathways (52 publishable / 4 research_required), 193 evidence records, 0 overdue review dates, 0 missing review dates and 0 invalid review dates. Country-level aggregate cost/timeline/approval-rate values remain null until field-level evidence is collected. Production remains blocked on authoritative hostname/deployment SHA, live security headers and branch protection.

@@ -1,7 +1,7 @@
 # Global Route Documentation Hub
 
 **Status:** Active execution  
-**Last reconciled:** September 5, 2026
+**Last reconciled:** October 11, 2026
 
 Global Route's original roadmap remains the product blueprint. The execution order is now dependency-aware: production integrity and trustworthy migration intelligence precede content and growth scaling.
 
@@ -28,16 +28,18 @@ Global Route's original roadmap remains the product blueprint. The execution ord
 
 | Area | State | Priority |
 |---|---|---|
-| Runtime/data loading | Fixed | P0 |
-| Calculator architecture | Canonical engine established | P0 |
+| Runtime/data loading | Build and generated-output integrity verified in current-head CI | P0 |
+| Calculator architecture | Canonical engine established; production behavior awaits live-host verification | P0 |
 | Search | Canonical module + Fuse fallback | P0 |
-| Static deployment config | Corrected | P0 |
-| Data validation | Initial validator added | P0 |
-| Migration evidence/provenance | Standard established; implementation pending | P0 |
-| Country coverage | Incomplete versus 26-country blueprint | P0 |
-| Pathway model | Pending | P0 |
-| SEO | Partial / audit required | P1 |
-| Growth/monetization | Blueprint stage | P1/P2 |
+| Static deployment config | Build configuration exists; authoritative production host remains unverified | P0 |
+| Data validation | Current CI validates 26 countries, 56 pathways and 193 evidence records | P0 |
+| Migration evidence/provenance | 193 records; all review dates currently valid/current; ongoing source revalidation required | P0 |
+| Country coverage | 26-country registry exists; unsupported aggregate costs, timelines and approval rates remain null | P0 |
+| Pathway model | 56 canonical pathways: 52 publishable, 4 research_required; promoted exact subroutes align with canonical IDs | P0 |
+| Structured requirements | Schema/validator implemented; only explicitly evidenced route-specific requirements may be populated | P0 |
+| SEO | Generated metadata and accessibility smoke checks pass; absolute canonicals/sitemap wait for verified origin | P1 |
+| Growth/monetization | Consent and fail-closed foundations implemented; live provider activation remains blocked | P1/P2 |
+| Production release | NO-GO until canonical origin, deployed SHA/content, live CSP and branch protection are verified | P0 |
 
 ## Important correction to older docs
 
