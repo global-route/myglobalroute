@@ -71,7 +71,7 @@ Quality Gate output on the verified implementation/data SHA:
 | P1-S1.2 | Country source-anchor review | **Outcomes recorded; sign-off open** | 25/26 entries have a relevant official page or alternative inspected; Russia now has Nigeria-specific official mission material located, but target-market jurisdiction confirmation and human sign-off remain required |
 | P1-S1.3 | Dataset metadata reconciliation | **Open** | Keep `dataset.asOf=2026-09-05` until review is signed off and exceptions are accepted |
 | P1-S1.4 | Same-SHA verification/handover | **Implementation verified** | CI passes on the two SHAs above; do not treat this as production verification |
-| P1-REQ | Structured requirements | **Open / active** | 12 declarations across 5 of 56 pathways; 51 remain unstructured |
+| P1-REQ | Structured requirements | **Open / active** | 16 declarations across 6 of 56 pathways; 50 remain unstructured |
 | P1-ROUTE | Recommendation quality | **Active; threshold hardening and boundary/no-match regressions verified at `9ed09f0`** | Continue stale/mismatched evidence, alternatives, missing-input and broader requirement-boundary tests |
 | P1-SEO | Editorial/technical SEO | **Open** | Canonical origins wait for confirmed production host; clean legacy metadata/links |
 | P1-PRIV | Privacy/compliance/accessibility | **Open** | Complete legal/privacy review, consent and real-browser accessibility checks |
