@@ -9,7 +9,7 @@ Dates reflect repository commits; a changelog entry is not release approval.
 - Extended the requirement schema policy to distinguish maintenance balances from annual living-cost or tuition requirements.
 - Added an evidence-linked approved-sponsor declaration for UK Skilled Worker and a scoped minimum-age declaration for the UK Student route, with under-18 caveats.
 - Structured requirement inventory is now 16 declarations across 6 pathways (4 UK Skilled Worker, 7 Canada study family-size thresholds, 2 UK Student, 1 New Zealand Student, 1 Ireland Critical Skills, 1 Australia Skilled EOI points threshold). 50/56 pathways still have no structured declarations. Australia's generic skilled pathway remains `research_required`; the 65-point threshold does not imply invitation or promotion. Absence remains unknown, not a pass or zero.
-- No tests or CI workflows were run for these changes, per the instruction to skip testing-related work. Validation status remains unverified; production release remains **NO-GO**.
+- No tests were manually run and no CI workflows were manually dispatched for these changes, per the instruction to skip testing-related work. Validation status remains unverified; production release remains **NO-GO**.
 - Reconciled current structured-coverage counts and pathway lists across the active sprint, P1-S1 handover, assessment, phase tracker, execution status and roadmap. Older dated counts remain as historical checkpoints rather than the current baseline.
 - Added independent analytics and advertising consent controls (including a reject-all option) and a persistent Privacy settings control to reopen or change either choice. Advertising slots now read the advertising-consent state rather than inheriting analytics consent.
 - Updated the privacy page to describe the consent behavior, local-storage persistence limits, data-minimization intent, and outstanding legal/deployment review. These code and documentation changes are unvalidated because testing/CI remain paused.
@@ -69,16 +69,16 @@ The implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426` passed Qu
 ## Verification reconciliation — 2026-10-11
 - Current verified implementation/data SHA: `95f960c081367305dea0144034d48a4ab7892426`; Quality Gate, Lint and Browser Smoke passed on this exact SHA.
 - CI workflow follow-up SHA: `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`; Quality Gate, Lint and Browser Smoke also passed on this exact SHA. Run links are recorded in `docs/sprints/ACTIVE_SPRINT.md` and this release record.
-- Structured requirements now total 12 declarations across 5/56 pathways; 51 remain unstructured. P1-REQ remains open.
+- At this historical checkpoint before later 2026-10-11 additions, structured requirements totalled 12 declarations across 5/56 pathways; 51 were unstructured. P1-REQ remained open.
 - Country-source review outcomes are recorded for all 26 anchors; relevant official pages/alternatives inspected for 25. Russia requires mission-jurisdiction confirmation for the target applicant market, and human sign-off remains required.
 - Release remains **NO-GO** until P0-S5 external production evidence and human source-review sign-off are complete.
 
-## Current execution checkpoint — 2026-10-11
+## Historical execution checkpoint — 2026-10-11 (superseded by the current status entry at the top of this changelog)
 
 - P1-S1.1 is implemented: `docs/data/country-source-review-manifest.json` is generated from `src/data/countries.json`; `npm run data:country-manifest` checks synchronization and the check is included in `npm run verify`/Quality Gate.
 - P1-S1.2 has recorded outcomes for all 26 country anchors. Relevant official pages or alternatives were inspected for 25; Russia remains blocked on mission/jurisdiction confirmation. The observations are AI-assisted and require human sign-off. Luxembourg's official alternative is recorded, but its registered root remains a generic redirect.
 - P1-S1.3 remains open: keep `dataset.asOf=2026-09-05` unchanged until human review/sign-off and documented exception acceptance. Country landing pages do not verify pathway-specific requirements.
-- Structured requirements remain 12 declarations across 5/56 pathways; 51 pathways have no structured declarations. Unknown stays unknown. Route-quality test coverage has improved, but P1-REQ and P1-ROUTE remain open.
+- At this historical checkpoint, structured requirements were 12 declarations across 5/56 pathways; 51 pathways had no structured declarations. Unknown stays unknown. Route-quality test coverage had improved, but P1-REQ and P1-ROUTE remained open.
 - Same-SHA source-tree evidence remains recorded for implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426` and CI workflow SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`; run links are in `docs/sprints/ACTIVE_SPRINT.md`. These checks do not verify production.
 - P0-S5 remains blocked on owner/provider evidence: authoritative host, deployed SHA, live CSP/security headers, production smoke, and branch-protection/required-check proof. Release remains **NO-GO**.
 
