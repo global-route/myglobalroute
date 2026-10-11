@@ -49,6 +49,9 @@ Quality Gate output on the verified implementation/data SHA:
 
 ## Country source-review result
 
+> **P1-S1 checkpoint clarification (2026-10-11):** The manifest and first-pass source review are implemented; 26/26 outcomes are recorded and 25 relevant official pages/alternatives were inspected. This does not close P1-S1: human sign-off, Russia mission/jurisdiction confirmation, any accepted exception record, and safe `dataset.asOf` reconciliation remain open. Do not treat AI-assisted landing-page inspection as pathway-level evidence.
+
+
 - Registry baseline: 26 countries, 56 pathways (52 publishable / 4 research-required), 193 evidence records.
 - Manifest: `docs/data/country-source-review-manifest.json`; generated from `src/data/countries.json`.
 - All 26 anchors have explicit outcomes. 25 relevant official pages/alternatives were inspected; all machine-assisted observations still require human sign-off.
