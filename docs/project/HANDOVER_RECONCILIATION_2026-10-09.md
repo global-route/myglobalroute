@@ -40,7 +40,7 @@ For each gate record PASS, FAIL, or NOT TESTED with command/workflow URL, SHA an
 
 ### Migration-intelligence data baseline
 
-The current `src/data/pathways.json` file was directly recounted during this review: 56 pathways, 52 `publishable`, 4 `research_required`, spanning 26 distinct country IDs. Four records have empty/missing evidence-ID arrays. This is a source-file recount, not a successful execution of the repository's validator; treat the full evidence boundary as unverified until `npm run data:validate` passes on a recorded SHA. The 193 evidence-record count remains historical and was not independently recomputed in this pass.
+The current `src/data/pathways.json` file was directly recounted during this review: 56 pathways, 52 `publishable`, 4 `research_required`, spanning 26 distinct country IDs. Four records have empty/missing evidence-ID arrays. This is a source-file recount, not a successful execution of the repository's validator; treat the full evidence boundary as unverified until `npm run data:validate` passes on a recorded SHA. The evidence registry has now been independently recounted from all 29 JSON files: 18 records in `primary-source-verified.json` plus 175 records across 28 addenda files, for **193 total records**. The Quality Gate data-validation step also passed on the recorded CI SHA.
 
 **Plan correction:** older P0-S2 prose that says to audit 24 research-required pathways conflicts with the later recorded 52/4 state. Do not execute a 24-pathway backlog from stale prose. Recompute current pathway status; then prioritize only actual unresolved candidates and evidence freshness gaps. Preserve nulls and research-required status when exact-scope primary evidence is missing.
 
@@ -72,7 +72,7 @@ Keep ad/partner activation and lead collection blocked until the actual origin, 
 
 - [x] Record current main SHA and current workflow results (`3deb2f4c9d770a54057ae3f5938109a58f06832b`; Quality Gate, Lint and Browser Smoke all passed).
 - [x] Recount pathway totals/statuses from the current source file (56 total; 52 publishable; 4 research-required; 26 country IDs).
-- [ ] Run repository validation and independently recompute evidence-record totals.
+- [x] Run repository validation and independently recompute evidence-record totals (193 records across 29 evidence JSON files; Quality Gate data-validation step passed on the recorded CI SHA).
 - [ ] Reconcile P0-S2 backlog to the actual registry.
 - [ ] Record verified hosting project, origin and deployed SHA, or retain the explicit blocker.
 - [x] Record current-head test outcomes without inference; exact run links are in `docs/project/RELEASE_VERIFICATION_2026-10-08.md`.
