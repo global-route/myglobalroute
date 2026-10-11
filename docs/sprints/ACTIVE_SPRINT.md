@@ -7,14 +7,14 @@
 **Priority:** P0 production integrity  
 **Delivery plan:** `docs/sprints/P0_DELIVERY_PLAN.md`  
 **Current handover:** `docs/sprints/HANDOVER.md`  
-**Latest release record:** `docs/project/RELEASE_VERIFICATION_2026-10-08.md`
+**Latest release record:** `docs/project/RELEASE_VERIFICATION_2026-10-08.md` (filename retained; authoritative current-head update appended 2026-10-11).
 
 ## Current product checkpoint
 
 - Canonical migration registry: 26 countries / 56 pathways (recounted directly from the current `src/data/pathways.json` contents during this handover review).
 - Current source-file status counts: 52 `publishable`, 4 `research_required`; four records have no evidence IDs. The Quality Gate's migration-data validation passed on the recorded current code SHA.
 - Evidence registry independently recounted from all 29 JSON files: **193 records** (18 in the primary registry and 175 across 28 addenda files).
-- P0-S1 through P0-S4 have prior passing source-tree evidence. Latest route-matching code changes are awaiting a completed green workflow set on the new code head; do not treat the earlier `12cca13f8ddfe3c6976e29b3965435fe1bd25657` pass as verification of subsequent code.
+- Quality Gate, Lint and Browser Smoke all passed on current source head `5a823021e18b6c8fcfa56cd2ad13b0c7bb597820`; this supersedes earlier checkpoint references for source-tree verification.
 - Production release remains blocked until the authoritative deployment project/origin and deployed commit are independently verified.
 
 ## P0 delivery sprint map
@@ -25,11 +25,11 @@ Exact-route gates were closed or explicitly blocked. Do not promote research-req
 ### P0-S2 — Remaining-Country Evidence Closure — DOCUMENTED COMPLETE
 All previously research-required canonical pathways were audited; four remain explicitly blocked. Continue targeted evidence refresh where policy or source freshness warrants it.
 
-### P0-S3 — Data / Recommendation Quality Gate — VERIFIED AT CURRENT RECORDED SHA
-Quality Gate passed at `12cca13f8ddfe3c6976e29b3965435fe1bd25657`, including data validation, 75/75 unit tests, build integrity, generated-output verification and SEO/accessibility checks. Re-run if `main` advances.
+### P0-S3 — Data / Recommendation Quality Gate — VERIFIED AT CURRENT HEAD
+Quality Gate passed at `5a823021e18b6c8fcfa56cd2ad13b0c7bb597820`: 17 suites / 108 tests passed, dependency audit found 0 vulnerabilities, 26-country/56-pathway validation passed, build integrity passed, and SEO/accessibility verification checked 168 generated HTML files.
 
-### P0-S4 — Browser / Release Gate — SOURCE-TREE VERIFIED AT CURRENT RECORDED SHA
-Browser Smoke passed at `12cca13f8ddfe3c6976e29b3965435fe1bd25657`; see the linked run in the release record. This does not replace production-origin/deployed-SHA verification.
+### P0-S4 — Browser / Release Gate — SOURCE-TREE VERIFIED AT CURRENT HEAD
+Browser Smoke passed at `5a823021e18b6c8fcfa56cd2ad13b0c7bb597820`; see the current release record. This does not replace production-origin/deployed-SHA verification.
 
 ### P0-S5 — Deployment Verification & P0 Exit — ACTIVE / BLOCKED
 
@@ -209,3 +209,14 @@ Closed the remaining overdue Luxembourg student work-rights record after reviewi
 ## Evidence freshness queue triage — 2026-10-11
 
 The CI inventory on the pre-Luxembourg-refresh head reported 193 records: 189 current, 4 overdue, 0 missing review dates and 0 invalid dates. Subsequent source-reviewed updates refreshed Luxembourg student work/post-study conditions and the duplicate Swedish student maintenance record. The remaining unverified overdue claims are Norway job-offer confirmation and Portugal's generic work-route process index. Direct fetch of the official UDI page returned HTTP 403 and the AIMA index timed out; therefore those review dates were deliberately not extended. Recheck them through an accessible official source or preserve them as overdue. The current head must rerun the freshness inventory to confirm the new count.
+
+
+## Current-head verification — 2026-10-11 — `5a823021e18b6c8fcfa56cd2ad13b0c7bb597820`
+
+- Quality Gate PASS: [run 38112189841](https://github.com/global-route/myglobalroute/actions/runs/38112189841). 17/17 suites and 108/108 tests passed; dependency audit reported 0 vulnerabilities; generated build-integrity check passed; SEO/A11y check covered 168 generated HTML files.
+- Lint PASS: [run 38112189847](https://github.com/global-route/myglobalroute/actions/runs/38112189847).
+- Browser Smoke PASS: [run 38112189856](https://github.com/global-route/myglobalroute/actions/runs/38112189856).
+- Evidence freshness: 193 records across 26 countries; 193 current, 0 overdue, 0 missing review dates and 0 invalid review dates.
+- Canonical pathways: 56 total; 52 publishable, 4 research_required. All 26 country-level aggregate records remain evidence-gated; this does not imply validated universal costs, timelines or approval rates.
+- Structured requirement coverage remains limited; only exact-source, exact-pathway rules may be added. The UK Skilled Worker salary figure remains a baseline with documented exceptions and must not be used as a standalone eligibility verdict.
+- Production release remains NO-GO: authoritative production hostname and deployed SHA/content are not confirmed; live CSP/security headers and owner-level main branch protection remain unverified.

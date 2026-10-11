@@ -109,3 +109,18 @@ Current `main`: `f35291921b780b387a36e16f3be0bc52cd000c97`.
 ### Readiness report freshness visibility — 2026-10-11
 
 The requirement-readiness report now emits status-level structured-requirement coverage and a sorted list/count of evidence records past `reviewAfter`, using the same strict-before-date boundary as data validation. It is a reporting change only; no evidence was refreshed and no requirement values were inferred. Regression coverage was added for overdue, due-today and future review dates. Current-head workflow verification is pending.
+
+
+## Authoritative latest verification — 2026-10-11 — `5a823021e18b6c8fcfa56cd2ad13b0c7bb597820`
+
+The following workflow runs all completed successfully on the exact current `main` SHA:
+
+- **Quality Gate — PASS:** [run 38112189841](https://github.com/global-route/myglobalroute/actions/runs/38112189841). 17/17 suites and 108/108 tests passed; dependency audit found 0 vulnerabilities; data validation passed; build integrity passed; SEO/A11y verification checked 168 generated HTML files.
+- **Lint — PASS:** [run 38112189847](https://github.com/global-route/myglobalroute/actions/runs/38112189847).
+- **Browser Smoke — PASS:** [run 38112189856](https://github.com/global-route/myglobalroute/actions/runs/38112189856).
+
+Evidence freshness output: 193 records / 26 countries; 193 current, 0 overdue, 0 missing review dates, 0 invalid review dates. The previously overdue Norway and Portugal process records were refreshed in commit `5a823021e18b6c8fcfa56cd2ad13b0c7bb597820`; the Portugal index claim is deliberately narrow because direct retrieval of the AIMA index timed out, and its route-specific requirements remain separately sourced.
+
+Current source registry: 56 pathways, 52 publishable and 4 research_required; all 26 country aggregate records remain `evidence_required` for aggregate cost/timeline/rate claims. Requirement schema coverage is not equivalent to complete structured eligibility coverage.
+
+**Release decision remains NO-GO.** These results verify repository source and build output, not the public production deployment. The canonical hostname, deployed SHA/content equality, live CSP/security headers, and owner-level branch protection/ruleset are still not independently verified. Do not infer a production hostname from the worker name or historical docs.

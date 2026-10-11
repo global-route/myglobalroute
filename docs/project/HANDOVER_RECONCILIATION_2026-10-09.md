@@ -146,3 +146,17 @@ This report is a visibility/control improvement, not evidence refresh. The valid
 The requirement schema now distinguishes `minimum_annual_salary` from `minimum_monthly_income`, enforces annual units and requires caveat text. The first populated pathway is `GB-skilled-worker`, using existing evidence IDs for (1) the approved-employer job-offer condition and (2) the £41,700 annual baseline. Its notes explicitly preserve the higher occupation-going-rate rule and lower-salary/transitional exceptions. No values were extrapolated to other routes, and this increment does not activate eligibility scoring in the UI.
 
 **Evidence freshness warning:** the two supporting evidence records are scheduled for review by 2026-10-12. Refresh from the official source before that deadline or allow the validator to fail closed. Verification is pending until the latest code SHA passes all required workflows.
+
+
+## Current verified checkpoint — 2026-10-11 — `5a823021e18b6c8fcfa56cd2ad13b0c7bb597820`
+
+The latest current-head CI check supersedes the older SHA references above for source-tree verification:
+
+- Quality Gate PASS: [38112189841](https://github.com/global-route/myglobalroute/actions/runs/38112189841) — 17 suites / 108 tests; 0 high-or-higher dependency vulnerabilities; build integrity and SEO/A11y checks passed.
+- Lint PASS: [38112189847](https://github.com/global-route/myglobalroute/actions/runs/38112189847).
+- Browser Smoke PASS: [38112189856](https://github.com/global-route/myglobalroute/actions/runs/38112189856).
+- Evidence freshness: 193 records, 26 countries, 193 current, 0 overdue, 0 missing review dates, 0 invalid review dates.
+- Pathways: 56 total, 52 publishable, 4 research_required. Country aggregate cost/timeline/approval-rate fields remain evidence-gated and null where unsupported.
+- Overdue evidence refresh: Norway job-offer verification and Portugal AIMA work-index evidence updated in the same SHA. Portugal index claim remains intentionally limited because direct index retrieval timed out.
+
+The deployment release blocker is unchanged: authoritative production origin and deployed content SHA are not independently verified, actual live CSP/security headers are not checked, and the GitHub integration lacks permission to inspect/change branch protection. Owner-level evidence/action remains required; release and live monetization stay NO-GO.
