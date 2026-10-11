@@ -40,13 +40,13 @@ For each gate record PASS, FAIL, or NOT TESTED with command/workflow URL, SHA an
 
 ### Migration-intelligence data baseline
 
-The current `src/data/pathways.json` file was directly recounted during this review: 56 pathways, 52 `publishable`, 4 `research_required`, spanning 26 distinct country IDs. Four records have empty/missing evidence-ID arrays. This is a source-file recount, not a successful execution of the repository's validator; treat the full evidence boundary as unverified until `npm run data:validate` passes on a recorded SHA. The evidence registry has now been independently recounted from all 29 JSON files: 18 records in `primary-source-verified.json` plus 175 records across 28 addenda files, for **193 total records**. The Quality Gate data-validation step also passed on the recorded CI SHA.
+The current `src/data/pathways.json` file was directly recounted during this review: 56 pathways, 52 `publishable`, 4 `research_required`, spanning 26 distinct country IDs. Four records have empty/missing evidence-ID arrays. The source-file recount is backed by the Quality Gate's successful data-validation step on code checkpoint `c1670297f7e4846cb1ffd35a955e78f2da678e50`. The evidence registry has now been independently recounted from all 29 JSON files: 18 records in `primary-source-verified.json` plus 175 records across 28 addenda files, for **193 total records**. The Quality Gate data-validation step also passed on the recorded CI SHA.
 
 **Plan correction:** older P0-S2 prose that says to audit 24 research-required pathways conflicts with the later recorded 52/4 state. Do not execute a 24-pathway backlog from stale prose. Recompute current pathway status; then prioritize only actual unresolved candidates and evidence freshness gaps. Preserve nulls and research-required status when exact-scope primary evidence is missing.
 
 ### P1-REV — Revenue readiness (concurrent; not a release bypass)
 
-Implemented foundations recorded: provider-neutral analytics contract, consent UI/persistence, configurable placement hosts, empty commercial registry, validation and fail-closed redirect checks. Current-head/browser verification remains pending. No live ad provider, approved partner, actual revenue or MRR is implied.
+Implemented foundations recorded: provider-neutral analytics contract, consent UI/persistence, configurable placement hosts, empty commercial registry, validation and fail-closed redirect checks. Quality Gate, Lint and Browser Smoke passed on the last fully tested code checkpoint `c1670297f7e4846cb1ffd35a955e78f2da678e50`; no live ad provider, approved partner, actual revenue or MRR is implied.
 
 Keep ad/partner activation and lead collection blocked until the actual origin, consent/privacy, provider approval, runtime compatibility, secure delivery and reconciliation gates are satisfied. Commercial payout must not influence pathway eligibility, evidence state or route ranking.
 

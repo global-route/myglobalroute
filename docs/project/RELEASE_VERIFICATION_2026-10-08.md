@@ -4,11 +4,11 @@
 
 ## Current result
 
-**Production release remains NO-GO.** Source-tree verification is green at `c1670297f7e4846cb1ffd35a955e78f2da678e50`, but the authoritative hosting project/origin and deployed commit have not been independently confirmed. Live monetization remains gated.
+**Production release remains NO-GO.** The last fully tested code checkpoint is `c1670297f7e4846cb1ffd35a955e78f2da678e50`; subsequent commits reconcile documentation and the latest documentation-only head is undergoing its own workflow run. The authoritative hosting project/origin and deployed commit have not been independently confirmed. Live monetization remains gated.
 
 ## Current-head CI verification — 2026-10-11
 
-All three required source-tree workflows completed successfully on the same current `main` SHA, `c1670297f7e4846cb1ffd35a955e78f2da678e50`:
+All three required source-tree workflows completed successfully on the same tested code SHA, `c1670297f7e4846cb1ffd35a955e78f2da678e50` (the latest fully tested implementation checkpoint):
 
 - **Quality Gate — PASS:** [run 38103017870](https://github.com/global-route/myglobalroute/actions/runs/38103017870). Includes dependency audit, migration-data validation, unit tests, build, generated-artifact verification and SEO/accessibility checks.
 - **Lint — PASS:** [run 38103017906](https://github.com/global-route/myglobalroute/actions/runs/38103017906).
