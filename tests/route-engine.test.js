@@ -59,6 +59,16 @@ describe('canonical route engine', () => {
     expect(result.every(item => item.score >= 0 && item.score <= 100)).toBe(true);
   });
 
+  test('does not rank arbitrary pathways when the user selects Any and no structured fit signal exists', () => {
+    const result = recommend(
+      { goal: 'any' },
+      [{ id: 'GB', dataStatus: 'evidence_required' }],
+      [{ id: 'gb-work', countryId: 'GB', type: 'work', status: 'publishable', evidenceIds: ['evidence-work'], sourceUrl: 'https://example.gov/work' }],
+      5
+    );
+    expect(result).toHaveLength(0);
+  });
+
   test.each([undefined, null, '', 'not-a-number', -1, 0])('blocks a known positive minimum-funds route when budget is missing or invalid (%s)', budget => {
     const result = scorePathway(
       { type: 'study', status: 'publishable', minFunds: 5000, evidenceIds: ['evidence-study'], sourceUrl: 'https://example.gov/study' },
