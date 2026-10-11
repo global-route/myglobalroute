@@ -49,7 +49,7 @@ describe('structured pathway requirement readiness report', () => {
 
   test('ignores unknown requirement field names in the schema breakdown rather than inventing a field', () => {
     const summary = summarizeRequirementReadiness([
-      { id: 'GB-work', countryId: 'GB', type: 'work', status: 'publishable', requirements: [{ field: 'unrecognized' } }
+      { id: 'GB-work', countryId: 'GB', type: 'work', status: 'publishable', requirements: [{ field: 'unrecognized' }] }
     ], [], schema, '2026-10-11');
     expect(summary.declaredRequirementCount).toBe(0);
     expect(summary.requirementsByField).toEqual({ minimum_funds: 0, job_offer: 0, language_test: 0 });
