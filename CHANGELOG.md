@@ -34,3 +34,13 @@ The implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426` passed Qu
 - Structured requirements remain 12 declarations across 5/56 pathways; 51 pathways have no structured declarations. Unknown stays unknown. Route-quality test coverage has improved, but P1-REQ and P1-ROUTE remain open.
 - Same-SHA source-tree evidence remains recorded for implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426` and CI workflow SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`; run links are in `docs/sprints/ACTIVE_SPRINT.md`. These checks do not verify production.
 - P0-S5 remains blocked on owner/provider evidence: authoritative host, deployed SHA, live CSP/security headers, production smoke, and branch-protection/required-check proof. Release remains **NO-GO**.
+
+
+## Documentation checkpoint CI — 2026-10-11
+
+The documentation-only checkpoint `27bcfd93780cf42416612c7f6486735f6c0ceae1` passed all three required source-tree workflows on that exact SHA:
+- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38145214511
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38145214551
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38145214463
+
+This is a documentation-only checkpoint, not a new implementation/data SHA and not production verification. The implementation/data SHA remains `95f960c081367305dea0144034d48a4ab7892426`; the manifest-check CI follow-up SHA remains `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`. P0-S5 and human source-review sign-off remain open; release stays **NO-GO**.

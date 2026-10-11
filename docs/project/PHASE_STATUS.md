@@ -7,7 +7,7 @@ This is the canonical phase tracker. Historical phase/sprint docs preserve origi
 | Phase | Status | Completed | Uncompleted / exit gate |
 |---|---|---|---|
 | Phase 0 — Production integrity | **Foundations complete; exit blocked** | Runtime/build repairs, canonical modules, validators, unit/SEO/A11y gates, lint and browser smoke | Confirm host/domain, deployed SHA/content, live CSP, production smoke and branch protection |
-| Phase 1 — Migration intelligence | **Partially complete; ongoing P0** | 26-country registry, 56 pathways, 193 evidence records, provenance and freshness reporting | Country metadata `asOf` stale; source-check all 26 countries; verify material pathway claims; 4 pathways research_required |
+| Phase 1 — Migration intelligence | **Partially complete; ongoing P0** | 26-country registry, 56 pathways, 193 evidence records, provenance and freshness reporting | Country metadata `asOf` stale; human sign-off for 26 recorded country-source outcomes; confirm Russia mission/jurisdiction and pathway-specific claims; 4 pathways research_required |
 | Phase 2 — Canonical product core | **Core exists; decision quality incomplete** | Route matching, zero-fit suppression, source trails, requirement schema/readiness; 12 declarations across UK Skilled Worker, Canada study, UK Student, New Zealand Student and Ireland Critical Skills | 5/56 pathways now have structured declarations (51 remain unstructured); conditional eligibility, alternatives/exemptions, stale-evidence behavior and route-quality tests open |
 | Phase 3 — Content & acquisition | **Partially delivered; cleanup open** | Generated content/routes and search foundations | Legacy blog/category links, historical/duplicate pages, editorial freshness, internal links and SEO/A11y review; canonical URLs wait for confirmed origin |
 | Phase 4 — Trust/compliance/accessibility | **Foundations only** | Privacy/terms/disclaimer baseline, consent-aware analytics, CSP config, dependency audit, static accessibility checks | Live CSP, data inventory/retention, production consent, legal review, browser accessibility/performance and ownership processes |
@@ -59,3 +59,8 @@ No phase should be marked fully complete from the current evidence. Phase 0 rema
 
 ## Structured-requirement coverage update — 2026-10-11
 Three declarations were added for UK Student, New Zealand Fee Paying Student and Ireland Critical Skills. Current total: 12 declarations across 5/56 pathways; 51 pathways remain without structured declarations. Missing fields remain unknown, not unrestricted. Phase 2 remains incomplete.
+
+
+## Documentation checkpoint CI — 2026-10-11
+
+Documentation-only checkpoint `27bcfd93780cf42416612c7f6486735f6c0ceae1` passed all required source-tree workflows on the same SHA: [Quality Gate](https://github.com/global-route/myglobalroute/actions/runs/38145214511), [Lint](https://github.com/global-route/myglobalroute/actions/runs/38145214551), and [Browser Smoke](https://github.com/global-route/myglobalroute/actions/runs/38145214463). This does not change implementation/data verification or close production/human-review gates. Phase 0 and Phase 1 remain open; release remains **NO-GO**.

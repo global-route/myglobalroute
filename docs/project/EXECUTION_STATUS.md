@@ -32,7 +32,7 @@
 4. Run production verifier and representative route smoke.
 5. Verify live CSP/security headers.
 6. Obtain owner-level branch rules/required-check evidence.
-7. Review all 26 country sources before refreshing dataset metadata.
+7. Obtain human sign-off for the 26 recorded country-source outcomes, confirm Russia mission/jurisdiction, and document accepted exceptions before refreshing dataset metadata.
 8. Close or preserve documented evidence gaps for four research-required pathways.
 9. Expand structured requirements and route-quality tests; missing declarations remain unknown.
 
@@ -94,3 +94,8 @@ Quality Gate output: 26 countries, 56 pathways, 193 evidence records; 0 dependen
 - Browser Smoke — PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183936
 
 The application/data implementation is verified on one SHA. The later commit only added the explicit manifest check to the Quality Gate workflow and changelog; all three workflows are now green on that later SHA. Do not mark P1-S1, P0-S5, or any phase complete based on these CI results alone.
+
+
+## Documentation checkpoint CI — 2026-10-11
+
+Documentation-only checkpoint `27bcfd93780cf42416612c7f6486735f6c0ceae1` passed Quality Gate (https://github.com/global-route/myglobalroute/actions/runs/38145214511), Lint (https://github.com/global-route/myglobalroute/actions/runs/38145214551), and Browser Smoke (https://github.com/global-route/myglobalroute/actions/runs/38145214463) on the same SHA. The implementation/data SHA remains `95f960c081367305dea0144034d48a4ab7892426`; these checks do not verify production. Human source-review sign-off and P0-S5 remain open; release stays **NO-GO**.

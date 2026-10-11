@@ -28,6 +28,8 @@ Quality Gate output on the verified implementation/data SHA:
 - 18 test suites / 122 tests passed.
 - Build integrity passed; SEO/accessibility checks passed across 168 generated HTML files.
 
+**Documentation/status checkpoint SHA:** `27bcfd93780cf42416612c7f6486735f6c0ceae1` — Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38145214511), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38145214551), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38145214463), all on the same documentation-only SHA. This does not replace the implementation/data SHA above or verify production.
+
 ## Current task board
 
 | ID | Task | Status | Remaining exit condition |
