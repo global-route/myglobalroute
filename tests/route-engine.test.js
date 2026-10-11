@@ -172,3 +172,58 @@ describe('route threshold and no-match boundaries', () => {
     expect(result).toHaveLength(2);
   });
 });
+
+describe('income and experience requirement boundaries', () => {
+  const country = { id: 'GB', dataStatus: 'evidence_required' };
+  const evidencedWork = {
+    id: 'gb-work-boundary',
+    countryId: 'GB',
+    type: 'work',
+    status: 'publishable',
+    evidenceIds: ['work-evidence'],
+    sourceUrl: 'https://example.gov/work'
+  };
+
+  test.each([
+    [999, false],
+    [1000, true],
+    [1001, true]
+  ])('checks monthly income against the declared minimum (%s)', (monthlyIncome, eligible) => {
+    const result = scorePathway(
+      { ...evidencedWork, minMonthlyIncome: 1000 },
+      country,
+      { goal: 'work', monthlyIncome }
+    );
+    expect(result.eligible).toBe(eligible);
+    if (eligible) {
+      expect(result.reasons).toContain('income requirement appears compatible');
+    } else {
+      expect(result.reasons[0]).toMatch(/income requirement is a likely blocker/);
+    }
+  });
+
+  test.each([
+    [1, false],
+    [2, true],
+    [3, true]
+  ])('checks experience against the declared minimum (%s)', (experienceYears, eligible) => {
+    const result = scorePathway(
+      { ...evidencedWork, minExperienceYears: 2 },
+      country,
+      { goal: 'work', experienceYears }
+    );
+    expect(result.eligible).toBe(eligible);
+    if (eligible) {
+      expect(result.reasons).toContain('experience requirement appears compatible');
+    } else {
+      expect(result.reasons[0]).toMatch(/experience requirement is a likely blocker/);
+    }
+  });
+
+  test('does not infer income or experience requirements when declarations are absent', () => {
+    const result = scorePathway(evidencedWork, country, { goal: 'work' });
+    expect(result.eligible).toBe(true);
+    expect(result.reasons).not.toContain('income requirement appears compatible');
+    expect(result.reasons).not.toContain('experience requirement appears compatible');
+  });
+});
