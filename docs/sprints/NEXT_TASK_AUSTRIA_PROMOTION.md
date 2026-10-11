@@ -1,9 +1,9 @@
-> SUPERSEDED — 2026-10-11. Do not execute this old promotion checklist as an open task. Current registry/validator state has Austria Other Key Workers promoted and aligned to its canonical pathway record. Re-run current validation before changes. Active work is P0-S5 deployment verification and the 26-country source refresh sprint in NEXT_SPRINT_P1_DATA_REFRESH.md. Historical checklist retained below for audit trail.
+> **ARCHIVED / SUPERSEDED — 2026-10-11.** Audit trail only; statuses and checkboxes below are historical, not actionable. Current state is maintained in `docs/sprints/ACTIVE_SPRINT.md`; Austria is recorded as promoted/aligned in the current registry.
 
-# Next Active Task — Austria Other Key Workers Promotion Validation
+# Historical Task Record — Austria Other Key Workers Promotion Validation (Superseded)
 
 **Priority:** P0-S1 Exact Pathway Closure  
-**Status:** Ready to execute  
+**Historical status at time of writing (superseded; do not execute):** Ready to execute  
 **Estimated effort:** 1-2 hours  
 **Confidence:** High (all evidence complete, application-document and points matrices attached)
 
@@ -16,7 +16,7 @@
 ✅ Unit tests all passing (30/30)  
 ✅ Build integrity verified
 
-## What's Next
+## What was next at time of writing (historical only)
 
 Execute final promotion validation for Austria Other Key Workers:
 

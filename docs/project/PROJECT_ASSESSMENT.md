@@ -95,3 +95,11 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 ## Latest verification/status reconciliation — 2026-10-11
 
 Last fully verified same-SHA CI checkpoint before this status reconciliation: `fc3c06a0a6078df4473d2f09015391cff09eef3f`; verified implementation SHA: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`. Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957166), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957132), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957147) on the same current main SHA. The country source checklist is ready but no anchor is marked reviewed; `dataset.asOf=2026-09-05` remains stale by design until all 26 reviews are evidenced. Current phase status is canonical in `PHASE_STATUS.md`: Phase 0 exit blocked, Phase 1 incomplete, Phase 2 decision-quality incomplete, Phase 3/4 partial, Phase 5 not live, Phase 6 deferred. No phase completion percentage should override those exit gates.
+
+
+## Current delivery delta — 2026-10-11
+- The README's prior "Phase 2 Complete" statement is superseded by the canonical phase tracker: Phase 2 core exists, but decision quality is incomplete.
+- A machine-readable 26-country source review manifest and generator/check are committed. Source review outcomes are recorded for all 26; 24 relevant official pages/alternatives inspected, Luxembourg and Russia remain blockers, and human sign-off is required.
+- Austria and Czechia country source anchors updated to official government pages; no country-wide as-of date or unsupported aggregate value was advanced.
+- Recommendation regression tests explicitly preserve unknown structured requirements and suppress missing-country/research-required routes.
+- P0-S5 remains blocked: GitHub reports main unprotected/no rulesets; production host, deployed SHA, live headers and smoke need owner/provider evidence. Release remains NO-GO.

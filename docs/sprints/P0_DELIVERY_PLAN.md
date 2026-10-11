@@ -139,3 +139,9 @@ P0-S3 and source-tree P0-S4 are verified at 1284684c18a7fa311cd62c52875b38d62a35
 ## Verified status reconciliation — 2026-10-11
 
 Current main SHA: `933ca27d1542083078de104e2ac3550d8fde59c5`; verified implementation baseline: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`. Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119296014) (17 suites / 113 tests, 0 dependency vulnerabilities), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119295995), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38119295980). P0-S3 and source-tree P0-S4 are verified; P0-S5 is still ACTIVE/BLOCKED. Phase 0 is not complete. The exact-route outcome for the current candidate set is four promoted subroutes aligned to canonical pathways, with Australia subclass 189 and Italy Flussi remaining research_required; ongoing regression expansion remains in P1-REQ/P1-ROUTE. Next independent task: P1-S1 source review; see `NEXT_SPRINT_P1_DATA_REFRESH.md`.
+
+## P0-S5 evidence update — 2026-10-11
+- GitHub branch metadata reports `main.protected=false`; repository rulesets endpoint is empty. Treat owner-level branch protection and required-check setup as an open release blocker.
+- Detailed branch protection could not be read by the current integration (403); the branch response itself reports protection disabled.
+- Host/provider project, authoritative production hostname, deployed SHA, live CSP/security headers and production smoke still require owner/provider evidence. Repository configuration alone is not deployment proof.
+- Do not close P0-S5 or Phase 0 until all external gates are evidenced and recorded against the intended deployed SHA.

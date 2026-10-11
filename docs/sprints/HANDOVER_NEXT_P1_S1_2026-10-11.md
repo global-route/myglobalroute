@@ -76,3 +76,12 @@ A checklist being prepared is not completion. A current review-date inventory is
 ## 6. Immediate next action
 
 Start with P1-S1.1: inspect the current registry, generate the manifest and baseline output, then review sources in registry order. Keep P0-S5 open and continue independent P1-REQ/P1-ROUTE work without promoting unsupported pathways. Do not close the sprint or phase until exit criteria are demonstrated.
+
+
+## Execution addendum — 2026-10-11
+- P1-S1.1: manifest generated from the live registry; generator and tests added.
+- P1-S1.2: 26/26 outcomes recorded. 24 relevant official pages/alternatives inspected; Luxembourg and Russia remain blockers. Human sign-off required.
+- Austria and Czechia anchors updated to official government entry points. No dataset-wide freshness date advanced and no unsupported aggregates added.
+- Route-quality tests preserve unknown requirements and reject missing country references/research-required recommendations.
+- GitHub reports `main` unprotected and no rulesets. Production origin, deployed SHA and live security headers need owner/provider evidence.
+- Acceptance pending all three workflows passing on the same final SHA. Release remains **NO-GO**.

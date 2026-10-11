@@ -152,3 +152,11 @@ All three required workflows passed on the exact same current `main` head:
 The structured-requirement model now validates condition metadata and includes seven Canada study living-expense thresholds for family sizes 1–7 outside Quebec for applications on/after 2026-09-01. The amounts are CAD 23,448; 29,192; 35,888; 43,572; 49,419; 55,736; 62,054 per year. They exclude tuition and transportation; Quebec has separate rules and the incremental amount for family sizes above seven is not modelled as a fixed threshold. Official source: [IRCC proof of financial support](https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html).
 
 Structured coverage is 9 declarations across 2/56 pathways; 54 pathways remain without structured requirements. This is a limited first tranche, not complete eligibility modelling. The 193-record evidence inventory has 0 overdue/missing/invalid review dates, but CI still warns that country dataset `asOf=2026-09-05` is 36 days old; do not bump it without a 26-source review. Production remains NO-GO for the hostname/deployed SHA, live CSP and branch-protection reasons already recorded.
+
+
+## P1-S1 and P0-S5 update — 2026-10-11
+- Manifest committed and synchronized from registry. 26/26 outcomes recorded; 24 relevant official pages/alternatives inspected; Luxembourg and Russia remain blockers. Human sign-off required.
+- Austria and Czechia registry URLs updated; their source retrieval dates reflect the review date. `dataset.asOf` remains `2026-09-05`.
+- Public GitHub branch metadata reports `main` unprotected and no repository rulesets. Detailed protection endpoint returned 403 to this integration.
+- No authoritative production host/deployment record provided. Do not infer host, deployed SHA, live CSP or smoke results from repository config alone.
+- Final SHA must pass Quality Gate, Lint and Browser Smoke. Release remains **NO-GO**.
