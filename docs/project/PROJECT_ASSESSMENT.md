@@ -22,7 +22,7 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 | Evidence inventory | 193 records | Still needs ongoing source review |
 | Evidence freshness | Latest recorded report: 193 current, 0 overdue, 0 missing, 0 invalid | Review dates do not prove all sources were reopened today |
 | Country metadata | `dataset.asOf=2026-09-05` | 36 days old; refresh only after reviewing all 26 source anchors |
-| Structured requirements | 15 declarations across 5 pathways: UK Skilled Worker, Canada study, UK Student, New Zealand Student and Ireland Critical Skills | 51/56 pathways have no structured declarations; this means unknown coverage, not no requirements |
+| Structured requirements | 16 declarations across 6 pathways: UK Skilled Worker, Canada study, UK Student, New Zealand Student and Ireland Critical Skills | 50/56 pathways have no structured declarations; this means unknown coverage, not no requirements |
 | Aggregate country metrics | Costs, timelines and approval rates remain null/evidence-gated where unsupported | Correctly avoids fabricated estimates |
 | Hosting | `wrangler.jsonc` names Worker `myglobalroute`; observed Cloudflare build service label was `globalroute`; Netlify config/functions also exist | Hosting identity unresolved; do not infer or change DNS/service names |
 | Security/release | CSP configured in repo; live headers and deployed SHA not verified; branch-protection inspection returned 403 | Provider/owner evidence needed |
@@ -51,7 +51,7 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 - [x] Find My Route / canonical matching foundations and generated source trails exist.
 - [x] Zero-fit and arbitrary no-goal rankings are suppressed; country-level aggregate status is not used as a blanket veto for an evidenced pathway.
 - [x] Structured requirement schema, conditional metadata validation and readiness report exist.
-- [ ] 15 declarations across 5/56 pathways (4 UK Skilled Worker + 7 Canada study family-size thresholds + 2 UK Student); 51 pathways have no structured declarations. Model alternatives/exemptions, date/region conditions, tuition/funds separation, stale-evidence behavior and route-quality cases.
+- [ ] 16 declarations across 6/56 pathways (4 UK Skilled Worker + 7 Canada study family-size thresholds + 2 UK Student + 1 Australia Skilled EOI); 51 pathways have no structured declarations. Model alternatives/exemptions, date/region conditions, tuition/funds separation, stale-evidence behavior and route-quality cases.
 - [ ] Expand route evaluation tests and ensure uncertainty is surfaced; matches must not be described as legal eligibility decisions.
 
 ## Uncompleted work, in priority order
@@ -107,7 +107,7 @@ Implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426` and CI workfl
 
 ## Structured requirements update — 2026-10-11
 - Expanded structured requirements with evidence-backed declarations for UK Student admission, New Zealand student living-funds scope, and Ireland Critical Skills job offers.
-- Coverage is now 15 declarations across 5 of 56 pathways. 51 pathways remain without structured declarations; absence is unknown, never a pass or zero.
+- Coverage is now 16 declarations across 5 of 56 pathways. 51 pathways remain without structured declarations; absence is unknown, never a pass or zero.
 - The full validator/test suite must pass on the final SHA before these additions are accepted. P1-REQ remains open.
 
 
@@ -120,6 +120,6 @@ Implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426` and CI workfl
 ## Verification reconciliation — 2026-10-11
 - Current verified implementation/data SHA: `95f960c081367305dea0144034d48a4ab7892426`; Quality Gate, Lint and Browser Smoke passed on this exact SHA.
 - CI workflow follow-up SHA: `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`; Quality Gate, Lint and Browser Smoke also passed on this exact SHA. Run links are recorded in `docs/sprints/ACTIVE_SPRINT.md` and this release record.
-- Structured requirements now total 15 declarations across 5/56 pathways; 51 remain unstructured. P1-REQ remains open.
+- Structured requirements now total 16 declarations across 6/56 pathways; 51 remain unstructured. P1-REQ remains open.
 - Country-source review outcomes are recorded for all 26 anchors; relevant official pages/alternatives inspected for 25. Russia requires mission-jurisdiction confirmation for the target applicant market, and human sign-off remains required.
 - Release remains **NO-GO** until P0-S5 external production evidence and human source-review sign-off are complete.
