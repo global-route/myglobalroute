@@ -2,6 +2,15 @@
 
 Dates reflect repository commits; a changelog entry is not release approval.
 
+## 2026-10-11 — Route-quality regression expansion
+
+- Added monthly-income and experience threshold boundary tests (below, at, and above the declared minimum), plus a regression confirming absent declarations do not create compatibility claims.
+- Test change: [`ec0f02c2b2d171d98262d8a3fc4adc807bbe3328`](https://github.com/global-route/myglobalroute/commit/ec0f02c2b2d171d98262d8a3fc4adc807bbe3328).
+- Exact-SHA Quality Gate, Lint and Browser Smoke confirmation for this test change is still pending; do not count this change as verified until the run links are recorded.
+- P1-ROUTE and P1-REQ remain open. Unknown requirements stay unknown; no pathway eligibility is inferred from absent declarations.
+- P1-S1 remains open for human sign-off and Russia applicant-market/mission-jurisdiction confirmation. P0-S5 remains externally blocked; release remains **NO-GO**.
+
+
 ## 2026-10-11 — Same-SHA verification after source-review follow-up
 
 Source-tree SHA: `89998ab5410aceb6dede8e997dae0b836d3b4d92`
