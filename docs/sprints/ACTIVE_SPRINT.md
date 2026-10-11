@@ -8,6 +8,13 @@
 **Latest verified source-tree SHA:** `89998ab5410aceb6dede8e997dae0b836d3b4d92`
 **Earlier CI workflow follow-up SHA:** `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`
 
+## Non-test delivery update — 2026-10-11
+
+- Added evidence-linked structured declarations for the UK Skilled Worker maintenance balance and approved sponsor, the UK Student route minimum age, and Australia's 65-point Skilled EOI threshold.
+- Extended the schema for maintenance balances, minimum age and points-based thresholds. Australia remains `research_required`; 65 points does not guarantee an invitation and does not close subclass-specific financial evidence gaps.
+- Structured requirement inventory: 16 declarations across 6 pathways; 50/56 pathways have no structured declarations. Missing declarations remain unknown.
+- Per user direction, testing and CI execution are paused; these changes are **not validated** and do not change the release NO-GO decision.
+
 ## Current decision
 
 Continue source-trust and route-quality work, but do not release. Quality Gate, Lint and Browser Smoke pass on the latest implementation SHA `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`; earlier data and CI-workflow checkpoints are retained below as history. Production identity/security and human source-review sign-off remain unresolved.
