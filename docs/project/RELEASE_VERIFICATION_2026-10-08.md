@@ -6,7 +6,16 @@
 
 **Production release remains NO-GO.** Implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426` and CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` both passed Quality Gate, Lint and Browser Smoke on their respective same SHA. These are source-tree checks only; authoritative hosting project/origin, deployed commit and live security headers remain unverified.
 
-## Current same-SHA CI verification — 2026-10-11
+## Latest implementation same-SHA CI verification — 2026-10-11
+
+Implementation SHA: `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`
+- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394933
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394817
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394822
+
+The route engine fails closed on malformed declared numeric thresholds; tests now cover below/equal/above funds boundaries, malformed thresholds, no-match recommendations and result limits. This source-tree checkpoint does not resolve the external production gate. Host/deployed SHA/live CSP and security headers/production smoke/owner-level branch rules remain unverified. Release remains NO-GO.
+
+## Previous same-SHA CI verification — 2026-10-11
 
 **Implementation/data SHA:** `95f960c081367305dea0144034d48a4ab7892426`
 - Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112572

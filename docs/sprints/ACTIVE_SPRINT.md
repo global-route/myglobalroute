@@ -2,14 +2,23 @@
 
 **Reconciled:** 2026-10-11 | **Branch:** `main`
 **Release:** **NO-GO**
-**Verified implementation/data SHA:** `95f960c081367305dea0144034d48a4ab7892426`
-**Verified CI workflow follow-up SHA:** `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`
+**Latest verified implementation SHA:** `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`
+**Earlier CI workflow follow-up SHA:** `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`
 
 ## Current decision
 
 Continue source-trust and route-quality work, but do not release. CI is green on the implementation/data SHA and on the follow-up SHA that adds the explicit manifest check to Quality Gate. Production identity/security and human source-review sign-off remain unresolved.
 
-## Verified checkpoint
+## Latest implementation checkpoint — 2026-10-11
+
+**Implementation SHA:** `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`
+- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394933
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394817
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394822
+
+Route-engine hardening rejects malformed declared numeric thresholds rather than coercing them to zero. Regression tests cover funds threshold below/equal/above boundaries, malformed thresholds, no-match recommendations and caller result limits. Missing requirements remain unknown. This is source-tree verification only; P0-S5 remains open and release remains NO-GO.
+
+## Previous verified checkpoint — 2026-10-11
 
 **Implementation/data SHA:** `95f960c081367305dea0144034d48a4ab7892426`
 - Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112572
@@ -44,7 +53,7 @@ Quality Gate output on the verified implementation/data SHA:
 | P1-S1.3 | Dataset metadata reconciliation | **Open** | Keep `dataset.asOf=2026-09-05` until review is signed off and exceptions are accepted |
 | P1-S1.4 | Same-SHA verification/handover | **Implementation verified** | CI passes on the two SHAs above; do not treat this as production verification |
 | P1-REQ | Structured requirements | **Open / active** | 12 declarations across 5 of 56 pathways; 51 remain unstructured |
-| P1-ROUTE | Recommendation quality | **Open** | Extend stale/mismatched evidence, threshold boundaries, alternatives, missing-input and no-match tests |
+| P1-ROUTE | Recommendation quality | **Active; threshold hardening and boundary/no-match regressions verified at `9ed09f0`** | Continue stale/mismatched evidence, alternatives, missing-input and broader requirement-boundary tests |
 | P1-SEO | Editorial/technical SEO | **Open** | Canonical origins wait for confirmed production host; clean legacy metadata/links |
 | P1-PRIV | Privacy/compliance/accessibility | **Open** | Complete legal/privacy review, consent and real-browser accessibility checks |
 | P1-REV | Monetization readiness | **Foundations only; not live** | Provider approval, consent, disclosures and reconciliation before activation |

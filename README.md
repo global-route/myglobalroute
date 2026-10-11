@@ -44,82 +44,42 @@ Global Route is an evidence-gated mobility platform for African passport holders
 
 ---
 
-## 📁 Project Structure
+## 📁 Current Repository Structure
 
+The outline below highlights the current working areas; it is not an exhaustive file listing. The canonical project status and active work are tracked in `docs/project/` and `docs/sprints/ACTIVE_SPRINT.md`.
+
+```text
+/
+├── README.md, CHANGELOG.md, package.json
+├── .github/workflows/                 # Quality Gate, Lint, Browser Smoke
+├── src/
+│   ├── data/                          # Countries, pathways, subroutes, requirements, evidence
+│   ├── js/                            # App, search, calculator, route engine, analytics
+│   ├── css/                           # Site and blog styles
+│   ├── pages/                         # Generated public pages
+│   ├── templates/                     # Eleventy templates
+│   └── content/blog/                  # Editorial source content
+├── scripts/                           # Validation, manifest, freshness, build and deploy checks
+├── tests/                             # Jest unit and regression tests
+├── e2e/                               # Browser-level checks
+├── docs/
+│   ├── project/                       # Phase status, assessment, roadmap, release verification
+│   ├── sprints/                       # Active sprint, tasks and historical handovers
+│   ├── data/                           # Country source-review manifest
+│   ├── reference/                     # Architecture, data trust, privacy, SEO and stack
+│   ├── guides/                        # Contributor and operational guides
+│   ├── monetization/                  # Monetization design and readiness
+│   └── phase-0/, phase-1/, phase-3/   # Legacy phase-organized material; see PHASE_STATUS.md
+├── content/                           # Additional editorial content
+├── public/                            # Static assets
+├── netlify.toml
+└── wrangler.jsonc
 ```
-Global Route/
-├── README.md                          # Project overview & quick start
-├── .gitignore                         # Git exclusions
-├── package.json                       # Dependencies & scripts
-├── netlify.toml                       # Deployment configuration
-│
-├── 📂 /docs
-│   ├── MISSION_STATEMENT.md           # Vision, values, core purpose
-│   ├── ARCHITECTURE.md                # Tech stack & system design
-│   ├── CONTENT_STRATEGY.md            # Editorial roadmap & keywords
-│   ├── ADMOB_INTEGRATION.md           # Monetization strategy
-│   ├── DEPLOYMENT.md                  # Build & deployment guide
-│   └── CONTRIBUTING.md                # Developer contribution guidelines
-│
-├── 📂 /internal
-│   ├── blueprint.md                   # Original editorial blueprint (REFERENCE ONLY)
-│   ├── data-structure.json            # Country database schema
-│   ├── timeline.md                    # Project phase timeline
-│   ├── team-roles.md                  # Team structure & responsibilities
-│   └── financial-model.md             # Revenue projections & cost breakdown
-│
-├── 📂 /src
-│   ├── index.html                     # Homepage entry point
-│   ├── css/
-│   │   ├── styles.css                 # Main stylesheet
-│   │   └── responsive.css             # Mobile-first responsive design
-│   ├── js/
-│   │   ├── app.js                     # Core application logic
-│   │   ├── search.js                  # Semantic search functionality
-│   │   ├── calculator.js              # Budget calculator logic
-│   │   └── admob-loader.js            # AdMob integration
-│   ├── pages/
-│   │   ├── home.html                  # Homepage template
-│   │   ├── countries.html             # Country directory
-│   │   ├── student-playbook.html      # Student pathways
-│   │   ├── professional-playbook.html # Professional pathways
-│   │   ├── business-playbook.html     # Business & wealth pathways
-│   │   ├── calculator.html            # Budget calculator
-│   │   ├── about.html                 # About & mission
-│   │   ├── blog.html                  # Blog listing
-│   │   └── contact.html               # Contact form
-│   ├── data/
-│   │   ├── countries.json             # Master country database
-│   │   ├── playbooks.json             # Sector playbooks data
-│   │   └── keywords.json              # SEO target keywords
-│   └── components/
-│       ├── header.html                # Navigation header
-│       ├── footer.html                # Footer with links
-│       ├── country-card.html          # Reusable country card
-│       └── blog-card.html             # Reusable blog card
-│
-├── 📂 /content
-│   ├── blog/
-│   │   ├── 01-germany-blocked-account.md
-│   │   ├── 02-italy-dsu-scholarship.md
-│   │   ├── 03-canada-visa-reality.md
-│   │   ├── 04-us-llc-setup.md
-│   │   └── _index.md
-│   ├── pages/
-│   │   ├── student-guide.md
-│   │   ├── professional-guide.md
-│   │   └── business-guide.md
-│   └── faq.md
-│
-├── 📂 /public
-│   ├── assets/
-│   │   ├── icons/
-│   │   ├── flags/
-│   │   └── logos/
-│   ├── robots.txt                     # SEO robots file
-│   └── sitemap.xml                    # SEO sitemap
-│
-└── 📂 /tests
-    ├── calculator.test.js             # Budget calculator tests
-    ├── search.test.js                 # Search functionality tests
-    └── data-validation.test.js        # Country data validation
+
+Useful entry points:
+- [Documentation index](docs/INDEX.md)
+- [Architecture](docs/reference/ARCHITECTURE.md) and [tech stack](docs/reference/TECH_STACK.md)
+- [Contribution guide](docs/guides/CONTRIBUTING.md)
+- [Active sprint](docs/sprints/ACTIVE_SPRINT.md)
+- [Phase status](docs/project/PHASE_STATUS.md)
+- [Country source-review manifest](docs/data/country-source-review-manifest.json)

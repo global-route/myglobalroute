@@ -1,6 +1,6 @@
 # Phase Status — Global Route
 
-**Reconciled:** 2026-10-11 | **Verified implementation SHA:** `95f960c081367305dea0144034d48a4ab7892426` | **Last fully verified implementation/data SHA:** `95f960c081367305dea0144034d48a4ab7892426` (Quality Gate, Lint and Browser Smoke pass); CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` also passed all three. | **Release: NO-GO**
+**Reconciled:** 2026-10-11 | **Latest verified implementation SHA:** `9ed09f07e9e7b73b62884da02fc406ccdb40f10a` | **Last fully verified implementation/data SHA:** `95f960c081367305dea0144034d48a4ab7892426` (Quality Gate, Lint and Browser Smoke pass); CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` also passed all three. | **Release: NO-GO**
 
 This is the canonical phase tracker. Historical phase/sprint docs preserve original product intent but their old dates, percentages, counts and URLs do not override this tracker or the active sprint.
 
@@ -28,7 +28,16 @@ This is the canonical phase tracker. Historical phase/sprint docs preserve origi
 The repo has `docs/phase-0`, `docs/phase-1` and `docs/phase-3`, but no `docs/phase-2` despite Phase 2 in the roadmap. `docs/phase-1` contains revenue work and `docs/phase-3` contains older blog artifacts. Do not mass-move files mid-sprint; this tracker is the current status source. A later cleanup should map legacy files to the canonical phase taxonomy and label historical artifacts.
 
 
-## Current verified source-tree checkpoint — 2026-10-11
+## Latest implementation verification — 2026-10-11
+
+Implementation SHA: `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`
+- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394933
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394817
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394822
+
+Malformed declared route thresholds now fail closed. Added regression coverage for funds-threshold boundaries, malformed declarations, no-match results and result limits. This improves route-quality safety but does not close P1-ROUTE or P1-REQ. Missing declarations remain unknown; Phase 2 remains incomplete. P0-S5 and Phase 0 remain blocked; release remains NO-GO.
+
+## Previous verified source-tree checkpoint — 2026-10-11
 
 **Implementation/data SHA:** `95f960c081367305dea0144034d48a4ab7892426`
 - Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112572

@@ -1,12 +1,21 @@
 # Global Route — Execution Status
 
-**Reconciled:** 2026-10-11 | **Branch:** `main` | **Verified implementation SHA:** `95f960c081367305dea0144034d48a4ab7892426` | **Last fully verified implementation/data SHA:** `95f960c081367305dea0144034d48a4ab7892426` (Quality Gate, Lint and Browser Smoke pass); CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` also passed all three.  
+**Reconciled:** 2026-10-11 | **Branch:** `main` | **Latest verified implementation SHA:** `9ed09f07e9e7b73b62884da02fc406ccdb40f10a` (Quality Gate, Lint and Browser Smoke all pass on this exact SHA). Earlier implementation/data and CI-workflow checkpoints remain recorded below as historical evidence.  
 **Active work:** P0 production verification + P1 data/route-quality work  
 **Release:** **NO-GO**
 
 > This supersedes stale September status/counts. See `PROJECT_ASSESSMENT.md`, `PHASE_STATUS.md`, `EXECUTION_ROADMAP.md` and `../sprints/ACTIVE_SPRINT.md` for authoritative detail.
 
-## Current verified baseline
+## Latest implementation verification — 2026-10-11
+
+Implementation SHA: `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`
+- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394933
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394817
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394822
+
+The route engine now rejects malformed declared funds/income/experience thresholds rather than interpreting them as zero. Tests cover funds boundaries, malformed thresholds, no-match outcomes and recommendation limits. Structured requirements remain 12 declarations across 5/56 pathways; 51 remain unstructured. Country review still requires human sign-off and Russia jurisdiction confirmation. `dataset.asOf=2026-09-05` remains unchanged. Production verification is not established by CI; P0-S5 is open and release remains NO-GO.
+
+## Previous verified baseline
 
 - Implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426`: Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38144112572), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38144112454), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38144112490), all on the same SHA.
 - 26 countries; 56 pathways (52 publishable / 4 research_required); 193 evidence records.

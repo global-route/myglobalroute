@@ -2,6 +2,15 @@
 
 Dates reflect repository commits; a changelog entry is not release approval.
 
+## 2026-10-11 — Route threshold hardening and regression coverage
+
+- Route recommendations now fail closed when a declared funds, monthly-income or experience threshold is malformed; an absent threshold remains unknown and is not synthesized as zero.
+- Added regression cases for funds-threshold boundaries, malformed declared thresholds, no-match outcomes and recommendation limits.
+- Implementation SHA: `9ed09f07e9e7b73b62884da02fc406ccdb40f10a` — [Quality Gate PASS](https://github.com/global-route/myglobalroute/actions/runs/38145394933), [Lint PASS](https://github.com/global-route/myglobalroute/actions/runs/38145394817), [Browser Smoke PASS](https://github.com/global-route/myglobalroute/actions/runs/38145394822), all on the same SHA.
+- P1-ROUTE remains open for further stale/mismatched evidence, alternatives and broader requirement-boundary coverage. P1-REQ remains open; missing requirement declarations remain unknown.
+- P0-S5 remains externally blocked. These CI results do not establish the production host, deployed SHA, live security headers or owner-level branch rules; release remains NO-GO.
+
+
 ## 2026-10-11 — Migration-data integrity and status reconciliation
 
 - Added machine-readable 26-country source-review manifest, generator/check command and regression tests.
