@@ -1,5 +1,7 @@
 # Global Route — Execution Status
 
+> **Verification candidate — 2026-10-11:** commit [`ec0f02c2b2d171d98262d8a3fc4adc807bbe3328`](https://github.com/global-route/myglobalroute/commit/ec0f02c2b2d171d98262d8a3fc4adc807bbe3328) adds route-engine monthly-income and experience boundary tests. CI on this candidate is pending confirmation; do not treat it as verified until exact-SHA workflow links are recorded. Last fully verified source-tree SHA remains `89998ab5410aceb6dede8e997dae0b836d3b4d92`.
+
 **Reconciled:** 2026-10-11 | **Branch:** `main` | **Latest verified implementation SHA:** `9ed09f07e9e7b73b62884da02fc406ccdb40f10a` | **Latest verified source-tree SHA:** `89998ab5410aceb6dede8e997dae0b836d3b4d92` (Quality Gate, Lint and Browser Smoke all pass on this exact SHA). Earlier implementation/data and CI-workflow checkpoints remain recorded below as historical evidence.  
 **Active work:** P0 production verification + P1 data/route-quality work  
 **Release:** **NO-GO**
