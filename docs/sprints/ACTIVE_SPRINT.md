@@ -103,3 +103,23 @@ Added `scripts/report-requirement-readiness.js` and the `npm run requirements:re
 This is an inventory/reporting aid, **not** evidence that a pathway is eligible and not a substitute for manual source verification. It deliberately does not infer numeric thresholds from narrative claims, populate unknown values, promote pathways, or treat evidence-record volume as proof of coverage. Regression coverage is in `tests/requirement-readiness.test.js`.
 
 **Next:** run the readiness report and current Quality Gate/Lint/Browser Smoke. Use the report to prioritize exact-route research and only transcribe a requirement when its exact-scope authoritative source and evidence record support the value, units, jurisdiction and effective date.
+
+
+## Current-head reconciliation — 2026-10-11 (authoritative update)
+
+- **Current `main` SHA:** `f35291921b780b387a36e16f3be0bc52cd000c97`.
+- **Quality Gate PASS:** [run 38105758475](https://github.com/global-route/myglobalroute/actions/runs/38105758475). The job reports **14/14 suites and 97/97 tests passing**, data validation passing for 26 countries, 56 pathways and 193 evidence records, and the requirement-readiness report included in `npm run verify`.
+- **Lint PASS:** [run 38105758492](https://github.com/global-route/myglobalroute/actions/runs/38105758492).
+- **Browser Smoke PASS:** [run 38105758360](https://github.com/global-route/myglobalroute/actions/runs/38105758360).
+- These runs are source-tree checks only. Production remains **NO-GO** until hosting project, origin and deployed SHA are independently established.
+- **Freshness work is now a first-class task:** latest validation emits a warning that the country dataset is 36 days old and flags multiple evidence records as due for review. Revalidate each flagged source against the exact route/claim; do not automatically extend `reviewAfter`, change statuses, or infer current rules from the retrieval date.
+- **Structured requirement coverage remains incomplete:** the readiness report is now part of verification, but adding a schema/validator does not mean pathway data is populated. Continue filling fields only when backed by current, route-scoped evidence. Unknown values remain unknown.
+- **Subroute architecture warning:** four subroutes are not `research_required`; any canonical promotion must still use the canonical pathway architecture and full evidence gates. Do not mistake this warning alone for proof that those records are publishable.
+
+### Next execution order
+
+1. Refresh and triage every overdue evidence record; record source access/date and exact claim disposition, preserving stale/unknown values when source evidence cannot be revalidated.
+2. Add tests that prove overdue evidence cannot support current structured requirements or route matching, and that freshness status is surfaced distinctly from missing evidence.
+3. Improve readiness reporting to distinguish “no structured requirement declared,” “declared and evidenced,” “evidence overdue,” and “invalid declaration”; never label missing coverage as zero requirements or a pass.
+4. Reconcile the four subroute status warnings and stale sprint/handover counts against current registry contents.
+5. Continue P0-S5 hosting/deployed-SHA discovery only from account/configuration evidence; no guessed production origin.
