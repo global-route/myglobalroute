@@ -123,3 +123,8 @@ This is an inventory/reporting aid, **not** evidence that a pathway is eligible 
 3. Improve readiness reporting to distinguish “no structured requirement declared,” “declared and evidenced,” “evidence overdue,” and “invalid declaration”; never label missing coverage as zero requirements or a pass.
 4. Reconcile the four subroute status warnings and stale sprint/handover counts against current registry contents.
 5. Continue P0-S5 hosting/deployed-SHA discovery only from account/configuration evidence; no guessed production origin.
+
+
+### Requirement-readiness reporting improvement — 2026-10-11
+
+The readiness report now breaks down pathways without structured requirements by status, reports pathway counts by status, and lists evidence records whose `reviewAfter` is earlier than the validation date. The report is diagnostic only: it does not alter review dates, bless stale evidence, or manufacture requirement values. Regression tests cover overdue/today/future boundaries and status breakdown. Validation of this change is pending until all workflows complete on the same current `main` SHA.
