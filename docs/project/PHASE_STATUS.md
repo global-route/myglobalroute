@@ -78,7 +78,7 @@ No phase should be marked fully complete from the current evidence. Phase 0 rema
 
 
 ## Structured-requirement coverage update — 2026-10-11
-Three declarations were added for UK Student, New Zealand Fee Paying Student and Ireland Critical Skills. Current total: 12 declarations across 5/56 pathways; 51 pathways remain without structured declarations. Missing fields remain unknown, not unrestricted. Phase 2 remains incomplete.
+Historical checkpoint before later 2026-10-11 additions: three declarations had been added for UK Student, New Zealand Fee Paying Student and Ireland Critical Skills, bringing the then-current total to 12 declarations across 5/56 pathways; 51 pathways were unstructured. Missing fields remain unknown, not unrestricted. Phase 2 remains incomplete.
 
 
 ## Documentation checkpoint CI — 2026-10-11
