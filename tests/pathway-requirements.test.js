@@ -46,6 +46,18 @@ describe('pathway requirement schema validation', () => {
     ]));
   });
 
+
+  test('requires monthly units for minimum monthly income', () => {
+    const income = {
+      ...validMoney,
+      id: 'monthly-income',
+      field: 'minimum_monthly_income',
+      value: 2500,
+      period: 'annual'
+    };
+    expect(validateRequirement(income, pathway, new Map([[evidence.id, evidence]]))).toContain('minimum_monthly_income period must be monthly');
+  });
+
   test('rejects evidence from a different pathway or evidence field', () => {
     const wrongScope = { ...evidence, pathwayId: 'OTHER', field: 'eligibility' };
     const errors = validateRequirement(validMoney, pathway, new Map([[evidence.id, wrongScope]]));
