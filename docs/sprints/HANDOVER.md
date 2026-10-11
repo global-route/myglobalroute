@@ -86,3 +86,13 @@ The canonical registry has 52 publishable pathway records with evidence IDs and 
 The schema has no machine-readable route-level budget, income, experience or language thresholds, and no business pathways (30 work / 26 study records). The Find My Route UI therefore no longer asks for budget/income/experience values it cannot use, labels results as goal matches rather than eligibility decisions, disables the uncovered business option, and avoids arbitrary rankings when no goal is selected. E2E coverage was added.
 
 **New code verification is pending** until Quality Gate, Lint and Browser Smoke pass on the same new SHA. The prior green SHA is not evidence for these later changes. Production origin/deployed SHA, CSP review and branch hardening remain separate release blockers.
+
+## Latest verified source-tree head — 2026-10-11
+
+`main` head: `c224696bdc4487dd17a7b9b28304f4ad25012f34`.
+
+- [Quality Gate PASS](https://github.com/global-route/myglobalroute/actions/runs/38105471129)
+- [Lint PASS](https://github.com/global-route/myglobalroute/actions/runs/38105471109)
+- [Browser Smoke PASS](https://github.com/global-route/myglobalroute/actions/runs/38105471079)
+
+The browser smoke assertion was corrected to inspect the native `option.disabled` property, avoiding a Playwright matcher false failure. All three workflows pass on the same head. This is not production verification. Continue with exact-route authoritative data, then verify host/project and deployed commit; do not invent missing financial, language or experience thresholds. Repository issue #2 remains open and visibility must not be changed without project-owner confirmation.
