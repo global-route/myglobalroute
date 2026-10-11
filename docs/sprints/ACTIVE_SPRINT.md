@@ -13,6 +13,7 @@
 - Added evidence-linked structured declarations for the UK Skilled Worker maintenance balance and approved sponsor, the UK Student route minimum age, and Australia's 65-point Skilled EOI threshold.
 - Extended the schema for maintenance balances, minimum age and points-based thresholds. Australia remains `research_required`; 65 points does not guarantee an invitation and does not close subclass-specific financial evidence gaps.
 - Structured requirement inventory: 16 declarations across 6 pathways; 50/56 pathways have no structured declarations. Missing declarations remain unknown.
+- Implemented separate analytics and advertising consent choices, a persistent Privacy settings control, local preference persistence where available, and an ad-placement gate tied to advertising consent. Updated privacy copy to explain limits and remaining review needs.
 - Per user direction, testing and CI execution are paused; these changes are **not validated** and do not change the release NO-GO decision.
 
 ## Current decision
@@ -74,7 +75,7 @@ Quality Gate output on the verified implementation/data SHA:
 | P1-REQ | Structured requirements | **Open / active** | 16 declarations across 6 of 56 pathways; 50 remain unstructured |
 | P1-ROUTE | Recommendation quality | **Active; threshold hardening and boundary/no-match regressions verified at `9ed09f0`** | Continue stale/mismatched evidence, alternatives, missing-input and broader requirement-boundary tests |
 | P1-SEO | Editorial/technical SEO | **Open** | Canonical origins wait for confirmed production host; clean legacy metadata/links |
-| P1-PRIV | Privacy/compliance/accessibility | **Open** | Complete legal/privacy review, consent and real-browser accessibility checks |
+| P1-PRIV | Privacy/compliance/accessibility | **Implementation advanced; open** | Consent UI and separate analytics/ad choice implemented (unvalidated); complete legal review, data/retention inventory, deployed-provider review and real-browser accessibility checks |
 | P1-REV | Monetization readiness | **Foundations only; not live** | Provider approval, consent, disclosures and reconciliation before activation |
 
 ## Country source-review result
