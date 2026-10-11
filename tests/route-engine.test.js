@@ -14,7 +14,7 @@ describe('canonical route engine', () => {
 
   test('rewards a matching goal only when country and pathway are publishable', () => {
     const result = scorePathway(
-      { type: 'work', status: 'publishable' },
+      { type: 'work', status: 'publishable', evidenceIds: ['evidence-work'], sourceUrl: 'https://example.gov/work' },
       { id: 'GB', dataStatus: 'publishable' },
       { goal: 'work' }
     );
@@ -25,7 +25,7 @@ describe('canonical route engine', () => {
 
   test('rejects a publishable pathway when the country is still evidence-gated', () => {
     const result = scorePathway(
-      { type: 'work', status: 'publishable' },
+      { type: 'work', status: 'publishable', evidenceIds: ['evidence-work'], sourceUrl: 'https://example.gov/work' },
       { id: 'GB', dataStatus: 'evidence_required' },
       { goal: 'work' }
     );
@@ -33,13 +33,23 @@ describe('canonical route engine', () => {
     expect(result.eligible).toBe(false);
   });
 
+  test.each([
+    [{ type: 'work', status: 'publishable', sourceUrl: 'https://example.gov/work' }, 'missing evidence IDs'],
+    [{ type: 'work', status: 'publishable', evidenceIds: ['evidence-work'], sourceUrl: 'http://example.gov/work' }, 'insecure source']
+  ])('fails closed when a publishable pathway has incomplete provenance (%s)', pathway => {
+    const result = scorePathway(pathway, { id: 'GB', dataStatus: 'publishable' }, { goal: 'work' });
+    expect(result.score).toBe(0);
+    expect(result.eligible).toBe(false);
+    expect(result.reasons[0]).toMatch(/missing evidence references or secure source provenance/);
+  });
+
   test('returns only eligible, ranked, bounded recommendations', () => {
     const result = recommend(
       { goal: 'work' },
       [{ id: 'GB', dataStatus: 'publishable' }, { id: 'DE', dataStatus: 'publishable' }],
       [
-        { id: 'gb-work', countryId: 'GB', type: 'work', status: 'publishable' },
-        { id: 'de-study', countryId: 'DE', type: 'study', status: 'publishable' }
+        { id: 'gb-work', countryId: 'GB', type: 'work', status: 'publishable', evidenceIds: ['evidence-work'], sourceUrl: 'https://example.gov/work' },
+        { id: 'de-study', countryId: 'DE', type: 'study', status: 'publishable', evidenceIds: ['evidence-study'], sourceUrl: 'https://example.gov/study' }
       ],
       5
     );
@@ -50,7 +60,7 @@ describe('canonical route engine', () => {
 
   test.each([undefined, null, '', 'not-a-number', -1, 0])('blocks a known positive minimum-funds route when budget is missing or invalid (%s)', budget => {
     const result = scorePathway(
-      { type: 'study', status: 'publishable', minFunds: 5000 },
+      { type: 'study', status: 'publishable', minFunds: 5000, evidenceIds: ['evidence-study'], sourceUrl: 'https://example.gov/study' },
       { id: 'GB', dataStatus: 'publishable' },
       { goal: 'study', budget }
     );
@@ -72,7 +82,7 @@ describe('canonical route engine', () => {
 
   test('applies numeric blockers only when the pathway explicitly declares them', () => {
     const result = scorePathway(
-      { type: 'work', status: 'publishable', minExperienceYears: 5 },
+      { type: 'work', status: 'publishable', minExperienceYears: 5, evidenceIds: ['evidence-work'], sourceUrl: 'https://example.gov/work' },
       { id: 'GB', dataStatus: 'publishable' },
       { goal: 'work', experienceYears: 2 }
     );
