@@ -1,114 +1,83 @@
 # Active Sprint — Production Integrity & Migration Intelligence
 
-**Reconciled:** 2026-10-11 | **Branch:** `main` | **Verified implementation SHA:** `95f960c081367305dea0144034d48a4ab7892426` | **Last fully verified implementation/data SHA:** `95f960c081367305dea0144034d48a4ab7892426` (Quality Gate, Lint and Browser Smoke pass); CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` also passed all three.  
-**Status:** P0-S5 active and externally blocked; data and route-quality work continues concurrently  
+**Reconciled:** 2026-10-11 | **Branch:** `main`
 **Release:** **NO-GO**
+**Verified implementation/data SHA:** `95f960c081367305dea0144034d48a4ab7892426`
+**Verified CI workflow follow-up SHA:** `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`
+
+## Current decision
+
+Continue source-trust and route-quality work, but do not release. CI is green on the implementation/data SHA and on the follow-up SHA that adds the explicit manifest check to Quality Gate. Production identity/security and human source-review sign-off remain unresolved.
 
 ## Verified checkpoint
 
-- Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957166) — 17 suites / 113 tests; 0 dependency vulnerabilities; data validation passed; build integrity and SEO/A11y checked 168 generated HTML files.
-- Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957132).
-- Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38116957147).
-- All three runs completed on the same current `main` SHA `933ca27d1542083078de104e2ac3550d8fde59c5`; implementation changes in the tested tree are through `95f960c081367305dea0144034d48a4ab7892426`.
-- 26 countries; 56 pathways (52 publishable / 4 research_required); 193 evidence records.
-- Latest recorded freshness report: 193 current / 0 overdue / 0 missing / 0 invalid.
-- 12 structured requirement declarations across 5 pathways (UK Skilled Worker and Canada study); 51/56 pathways have no structured declarations.
-- `countries.json` `dataset.asOf=2026-09-05` is stale; do not bump it without reviewing the 26 source anchors.
+**Implementation/data SHA:** `95f960c081367305dea0144034d48a4ab7892426`
+- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112572
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112454
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112490
+
+**CI workflow follow-up SHA:** `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`
+- Quality Gate PASS (includes manifest synchronization): https://github.com/global-route/myglobalroute/actions/runs/38144183966
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183952
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183936
+
+Quality Gate output on the verified implementation/data SHA:
+- 26 countries, 56 pathways, 193 evidence records.
+- 0 dependency vulnerabilities.
+- Country-source manifest synchronized: 26 unique registry entries.
+- 18 test suites / 122 tests passed.
+- Build integrity passed; SEO/accessibility checks passed across 168 generated HTML files.
 
 ## Current task board
 
-| ID | Task | Status | Next action / exit condition |
+| ID | Task | Status | Remaining exit condition |
 |---|---|---|---|
-| P0-S1 | Exact-subroute closure | **Complete with explicit blocked candidates** | Four promoted subroutes align to canonical records; AU subclass 189 and Italy Flussi remain research_required until exact-source gaps close |
-| P0-S2 | Audit pathway evidence gaps | **Audit complete; source work ongoing** | Four canonical pathways remain research_required; refresh claims as sources/policy require, never promote by count |
-| P0-S3 | Data/recommendation quality gate | **Source-tree verified** | Validators, freshness, tests, build integrity and SEO/A11y pass on assessed SHA |
-| P0-S4 | Browser/source-tree gate | **Source-tree verified** | Browser Smoke passes; production behavior remains separate |
-| P0-S5 | Deployment verification / Phase 0 exit | **Active / blocked** | Confirm host, domain, deployed SHA, live CSP, production smoke and owner branch rules |
-| P1-DATA | Country-source freshness | **Open / next** | Review all 26 source anchors before changing `retrievedAt`, `reviewAfter` or `dataset.asOf` |
-| P1-REQ | Structured requirements | **Open / active** | Add exact-source conditional requirements to priority routes; test date/family/region/exceptions |
-| P1-ROUTE | Recommendation quality | **Open** | Test stale/mismatched evidence, insufficient funds, missing profile, alternatives, exceptions and no-match states |
-| P1-SEO | Editorial/technical SEO | **Open** | Clean legacy links/metadata; absolute canonicals and sitemap wait for confirmed origin |
-| P1-PRIV | Privacy/compliance/accessibility | **Open** | Data lifecycle, consent, legal review and real-browser accessibility/performance |
+| P0-S1 | Exact-subroute closure | **Complete with explicit blocked candidates** | AU subclass 189 and Italy Flussi remain research-required until exact-scope evidence closes their gaps |
+| P0-S2 | Audit pathway evidence gaps | **Audit complete; source work ongoing** | Maintain evidence freshness; do not promote based on record count |
+| P0-S3 | Data/recommendation quality gate | **Source-tree verified** | Keep validation and tests green as data changes |
+| P0-S4 | Browser/source-tree gate | **Source-tree verified** | CI browser smoke is not proof of production behavior |
+| P0-S5 | Deployment verification / Phase 0 exit | **Active / blocked** | Confirm authoritative host, deployed SHA, live CSP/security headers, production smoke and owner branch rules |
+| P1-S1.1 | Machine-readable country manifest | **Complete** | Generator, manifest, tests and CI synchronization check are committed |
+| P1-S1.2 | Country source-anchor review | **Outcomes recorded; sign-off open** | 25/26 entries have a relevant official page or alternative inspected; Russia requires correct mission/jurisdiction confirmation; human sign-off remains required |
+| P1-S1.3 | Dataset metadata reconciliation | **Open** | Keep `dataset.asOf=2026-09-05` until review is signed off and exceptions are accepted |
+| P1-S1.4 | Same-SHA verification/handover | **Implementation verified** | CI passes on the two SHAs above; do not treat this as production verification |
+| P1-REQ | Structured requirements | **Open / active** | 12 declarations across 5 of 56 pathways; 51 remain unstructured |
+| P1-ROUTE | Recommendation quality | **Open** | Extend stale/mismatched evidence, threshold boundaries, alternatives, missing-input and no-match tests |
+| P1-SEO | Editorial/technical SEO | **Open** | Canonical origins wait for confirmed production host; clean legacy metadata/links |
+| P1-PRIV | Privacy/compliance/accessibility | **Open** | Complete legal/privacy review, consent and real-browser accessibility checks |
 | P1-REV | Monetization readiness | **Foundations only; not live** | Provider approval, consent, disclosures and reconciliation before activation |
+
+## Country source-review result
+
+- Registry baseline: 26 countries, 56 pathways (52 publishable / 4 research-required), 193 evidence records.
+- Manifest: `docs/data/country-source-review-manifest.json`; generated from `src/data/countries.json`.
+- All 26 anchors have explicit outcomes. 25 relevant official pages/alternatives were inspected; all machine-assisted observations still require human sign-off.
+- Luxembourg official third-country immigration alternatives are logged, although the registered root still redirects to a generic citizens page. Consider a more direct country anchor after human sign-off.
+- Russia's official MFA page found in this pass is mission-specific to Denmark; confirm the correct official source for each target applicant jurisdiction before closing the review.
+- Austria and Czechia country source URLs were updated to more relevant official government pages; their retrieval dates alone were changed.
+- `dataset.asOf=2026-09-05` is intentionally unchanged. Do not infer approval rates, costs, timelines or pathway eligibility from country-level landing pages.
+
+## P0-S5 external release gate
+
+GitHub branch metadata reports `main.protected=false` and the repository rulesets endpoint is empty. The detailed branch-protection endpoint returned 403 to this integration. Owner-level branch protection/required-check evidence is therefore still missing.
+
+Public-origin checks:
+- `https://myglobalroute.com/` serves a visa-consultancy site branded “Global Routes,” not this repository's migration-intelligence application. Do not treat it as the production origin without owner confirmation.
+- `https://vrenum.app/` could not be inspected by the public-page tool; that is inconclusive, not proof of outage.
+
+Still required from the hosting owner/provider:
+1. Authoritative provider/project/custom-domain record and production hostname.
+2. Deployed commit SHA and comparison of live registries/assets against source.
+3. Live CSP and security-header evidence.
+4. Production route/calculator smoke results on the confirmed host.
+5. Main branch protection / required-check configuration.
 
 ## Execution order
 
-1. **P0-S5 external gate:** owner confirms provider/project/custom domain; reconcile Worker `myglobalroute`, observed Cloudflare build label `globalroute`, and Netlify config without renaming or DNS changes by inference.
-2. Capture deployed SHA and compare live registries/assets with source; run `npm run deploy:verify` and route/calculator smoke tests against the confirmed origin.
-3. Inspect actual live CSP/security headers and obtain owner-level branch-protection/ruleset plus required-check evidence.
-4. **P1-S1 data refresh:** work through `NEXT_SPRINT_P1_DATA_REFRESH.md` country by country; preserve dates and `dataset.asOf` until the checklist has auditable outcomes for all 26 anchors.
-5. **P1-REQ/P1-ROUTE:** add exact-source conditional requirements and route evaluation tests, then verify all three workflows on one SHA.
-6. Continue SEO/privacy/accessibility/monetization readiness without guessing host identity or activating providers.
+1. Resolve P0-S5 owner/provider evidence in parallel.
+2. Complete human sign-off for P1-S1; confirm Russia source jurisdiction and decide whether to replace Luxembourg's generic anchor.
+3. Keep `dataset.asOf` unchanged until source review is signed off and exceptions are formally accepted.
+4. Expand requirements only where exact-pathway evidence supports values and scope; unknown remains unknown.
+5. Continue route-quality, SEO, privacy/accessibility and monetization foundations without making unsupported production claims.
 
-## Acceptance rules
-
-- Re-run all three CI workflows on the same SHA after changes.
-- Implementation requires docs and tests; a task is not complete merely because a file exists.
-- Do not treat the 26-country registry as fully researched, or absent requirements as no requirements.
-- Do not promote research-required routes without current exact-scope primary evidence.
-- Do not claim production readiness or activate monetization based on CI alone.
-
-
-## Current-head verification — 2026-10-11
-
-Last fully verified same-SHA CI checkpoint before this status reconciliation: `95f960c081367305dea0144034d48a4ab7892426`; verified implementation SHA: `95f960c081367305dea0144034d48a4ab7892426`. Quality Gate PASS (17 suites / 113 tests): https://github.com/global-route/myglobalroute/actions/runs/38119296014. Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38119295995. Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38119295980. Registry: 26 countries, 56 pathways (52 publishable / 4 research_required), 193 evidence records; freshness inventory 193 current / 0 overdue / 0 missing / 0 invalid review dates. CI warns that country dataset metadata `dataset.asOf=2026-09-05` is 36 days old. The source inventory checklist is prepared, but the 26 registered country anchors have not all been substantively reviewed. Phase 0 is NOT complete; P0-S5 remains externally blocked on authoritative production host/domain, deployed SHA, live CSP/security headers, production smoke and owner-level branch protection.
-
-## Ordered next work
-
-1. **P1-S1 — Country source review (next executable sprint):** follow `NEXT_SPRINT_P1_DATA_REFRESH.md` in registry order. Generate the machine-readable manifest and baseline output first; then review each official anchor, logging outcomes and affected claims. Keep all 26 checklist rows unchecked until individually reviewed.
-2. **P0-S5 — External release gate (parallel, owner-dependent):** confirm provider/project/custom domain, reconcile Worker `myglobalroute`, observed Cloudflare build label `globalroute`, and Netlify config without guessing. Capture deployed SHA, verify live app/registries, run `npm run deploy:verify`, inspect live CSP, and obtain owner-level branch-protection evidence.
-3. **P1-REQ — Structured requirements:** extend only from exact official sources; preserve effective date, family size, region, expense components, exemptions and alternative rules. Current coverage is 12 declarations across 5 pathways; 51/56 pathways remain unstructured.
-4. **P1-ROUTE — Recommendation safety:** add and verify stale/mismatched evidence, missing-input, alternatives, threshold-boundary and no-match tests.
-5. **P1-SEO / P1-PRIV:** proceed on work that does not require an unverified production origin; absolute canonical URLs, live consent verification and production claims remain gated.
-
-
-## Handover reconciliation — 2026-10-11
-
-The sprint is **not complete**. Task statuses remain as listed above: P0-S1 complete with explicit blocked candidates; P0-S2 audit complete but source work ongoing; P0-S3/P0-S4 source-tree verified; P0-S5 active and externally blocked; P1-DATA, P1-REQ, P1-ROUTE, P1-SEO and P1-PRIV open; P1-REV foundations only. Do not mark the sprint or Phase 0/1 complete based on green CI alone.
-
-Next executable sprint handover: [P1-S1 Country Source Refresh & Dataset Reconciliation](NEXT_SPRINT_P1_DATA_REFRESH.md). Cross-task/phase handover: [Handover — 2026-10-11](HANDOVER_NEXT_P1_S1_2026-10-11.md).
-
-
-## Execution update — 2026-10-11 (country manifest and source review)
-
-- P1-S1.1 — **Manifest generated** at `docs/data/country-source-review-manifest.json`; generator and test keep it synchronized.
-- P1-S1.2 — **Outcomes recorded for all 26 anchors; relevant official pages or alternatives inspected for 24.** Luxembourg official third-country immigration pages were found, though the registered root still redirects generically; Russia needs mission-jurisdiction confirmation. AI-assisted observations require human sign-off; tool errors are not treated as outages.
-- Austria and Czechia registry URLs updated to more relevant official government pages; only those country retrieval dates changed. `dataset.asOf=2026-09-05` remains unchanged.
-- P1-S1.3 and P1-S1.4 remain **OPEN** pending sign-off, blockers and final same-head CI.
-- P0-S5 — GitHub branch API reports `main.protected=false`; repository rulesets endpoint returned an empty list. Owner-level branch protection/required checks are not evidenced.
-- Production hostname, deployed SHA, live CSP/security headers and production smoke remain blocked on authoritative hosting-owner/provider evidence. Release remains **NO-GO**.
-
-
-## Public-origin verification — 2026-10-11
-
-- Public origin check on 2026-10-11: `https://myglobalroute.com/` serves a visa-consultancy site branded “Global Routes,” with service charges and consultation pages, not the Global Route migration-intelligence application described by this repository. Do **not** assume it is this repo's production origin or set canonicals to it without owner confirmation.
-- `https://vrenum.app/` was not accessible through the public-page inspection tool; that is inconclusive and does not prove the host is down.
-
-
-## P1-REQ implementation delta — 2026-10-11
-- Added three evidence-backed declarations: UK Student admission offer; New Zealand Fee Paying Student annual living-funds threshold with duration/funding caveats; Ireland Critical Skills qualifying job offer.
-- Structured declarations now total **12 across 5 of 56 pathways**; 51 pathways remain without structured declarations. Absence continues to mean unknown, not unrestricted or zero.
-- Added regression coverage validating these declarations against exact-pathway evidence. Broader pathway coverage remains open.
-
-
-## Source-review follow-up — 2026-10-11
-- Luxembourg: official third-country immigration pages are now recorded as an alternate source; the registered root still redirects to a generic citizens page, so a more direct anchor may be preferable.
-- Russia: an official Russian MFA consular page was found, but it is mission-specific to Denmark. Do not use its instructions for other nationalities; confirm the correct mission/official entry point before closing review.
-
-
-
-## Same-SHA verification evidence — 2026-10-11
-
-**Implementation/data SHA tested:** `95f960c081367305dea0144034d48a4ab7892426`
-- Quality Gate — PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112572
-- Lint — PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112454
-- Browser Smoke — PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112490
-
-Quality Gate output: 26 countries, 56 pathways, 193 evidence records; 0 dependency vulnerabilities; country-source manifest synchronized; 18 test suites and 122 tests passed; build integrity passed; SEO/accessibility checks passed across 168 generated HTML files.
-
-**CI configuration follow-up SHA:** `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`
-- Quality Gate — PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183966 (includes the explicit country-manifest synchronization step).
-- Lint — PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183952
-- Browser Smoke — PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183936
-
-The application/data implementation is verified on one SHA. The later commit only added the explicit manifest check to the Quality Gate workflow and changelog; all three workflows are now green on that later SHA. Do not mark P1-S1, P0-S5, or any phase complete based on these CI results alone.
+**Sprint status: NOT COMPLETE. Phase 0 and Phase 1 remain incomplete. Release remains NO-GO.**
