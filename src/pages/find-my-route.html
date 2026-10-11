@@ -55,7 +55,7 @@
         const profile = Object.fromEntries(new FormData(form).entries());
         const matches = window.GlobalRoute.RouteEngine.recommend(profile, countries.countries, pathways.pathways, 5);
         if (!matches.length) {
-          results.innerHTML = '<h2>No verified route can be recommended yet</h2><p>This is intentional. The current dataset contains research-required pathways while primary-source verification is being completed. We will not convert incomplete evidence into a migration recommendation.</p>';
+          results.innerHTML = '<h2>No verified route can be recommended yet</h2><p>No route matched your profile using the current evidence-gated rules. Some country-level cost, timeline and approval-rate fields remain unavailable; those fields are not inferred from pathway evidence. Verify exact requirements with the linked official authority before acting.</p>';
           return;
         }
         results.innerHTML = '<h2>Recommended routes</h2>' + matches.map(match => `<article><h3>${escapeHtml(match.country.name)} — ${escapeHtml(match.pathway.name)}</h3><p>Fit score: ${match.score}/100</p><ul>${match.reasons.map(reason => `<li>${escapeHtml(reason)}</li>`).join('')}</ul><a href="${escapeHtml(match.pathway.sourceUrl)}" rel="noopener noreferrer">Review official source</a></article>`).join('');
