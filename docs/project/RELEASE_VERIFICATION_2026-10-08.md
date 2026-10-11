@@ -72,3 +72,10 @@ A second mismatch was that the UI collected budget, monthly income and experienc
 A machine-readable requirement schema and validator have been added. Declared pathway requirements must have explicit types/units, jurisdiction, valid effective dates, HTTPS source URLs and evidence IDs whose records match the exact pathway and expected evidence field. Money values require ISO-like three-letter currency codes and explicit periods; minimum monthly income specifically requires a monthly period. Unknowns are not interpreted as zero or as a pass, and country aggregate data cannot substitute for exact-pathway evidence.
 
 No numeric thresholds have been populated from narrative claims. This avoids false precision while the exact requirement values are reviewed. New regression tests have been added; **current-head verification remains pending** until all required workflows pass on the same SHA.
+
+
+### Requirement schema guardrails — 2026-10-11
+
+The structured pathway-requirements validator now reads its allowed fields/types from `src/data/pathway-requirement-schema.json` and is applied to both canonical pathways and exact subroutes. It requires exact-route evidence (no inheritance), expected evidence field, matching HTTPS source and jurisdiction, real effective dates, explicit money currency/period, correct units, and rejects evidence past its `reviewAfter` date from backing a structured match. The schema covers money, monthly income, experience, language tests, qualifications, job offers, admission offers and sponsorship.
+
+No thresholds were guessed or bulk-converted from narrative evidence. Current source-tree verification for the newest implementation is pending; the latest Quality Gate, Lint and Browser Smoke must pass on one SHA before this lane can be called verified.

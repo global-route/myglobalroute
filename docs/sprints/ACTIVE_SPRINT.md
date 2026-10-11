@@ -78,3 +78,10 @@ Added `src/data/pathway-requirement-schema.json` as the machine-readable field c
 **Important limitation:** no numerical requirement values were bulk-filled from the existing narrative evidence. Current pathway records remain unstructured until each exact threshold can be transcribed and checked against its cited primary-source record. Unknown values must remain absent, not zero or unrestricted. Money matching must not convert currencies without separately dated exchange-rate evidence.
 
 Regression tests cover real versus impossible dates, exact-pathway provenance, evidence field mismatches, currency/period validation, and monthly-income unit semantics. The latest commits still require a completed green Quality Gate, Lint and Browser Smoke set on the same SHA before verification can be claimed.
+
+
+### Requirement schema guardrails — 2026-10-11
+
+The structured pathway-requirements validator now reads its allowed fields/types from `src/data/pathway-requirement-schema.json` and is applied to both canonical pathways and exact subroutes. It requires exact-route evidence (no inheritance), expected evidence field, matching HTTPS source and jurisdiction, real effective dates, explicit money currency/period, correct units, and rejects evidence past its `reviewAfter` date from backing a structured match. The schema covers money, monthly income, experience, language tests, qualifications, job offers, admission offers and sponsorship.
+
+No thresholds were guessed or bulk-converted from narrative evidence. Current source-tree verification for the newest implementation is pending; the latest Quality Gate, Lint and Browser Smoke must pass on one SHA before this lane can be called verified.

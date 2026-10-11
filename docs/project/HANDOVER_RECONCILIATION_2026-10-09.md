@@ -124,3 +124,10 @@ Implemented the first schema/validation layer for requirement-level matching:
 No unverified route thresholds were added. Existing narrative claims do not automatically become numeric matcher inputs; each structured value must cite evidence attached to the exact pathway and matching evidence field. Requirement absence remains unknown, not zero or unrestricted. Currency conversion is not allowed without separate dated FX evidence.
 
 **Verification pending:** wait for the new Quality Gate, Lint and Browser Smoke workflows to finish on the same latest main SHA, inspect any failures, and update the release record from actual results.
+
+
+### Requirement schema guardrails — 2026-10-11
+
+The structured pathway-requirements validator now reads its allowed fields/types from `src/data/pathway-requirement-schema.json` and is applied to both canonical pathways and exact subroutes. It requires exact-route evidence (no inheritance), expected evidence field, matching HTTPS source and jurisdiction, real effective dates, explicit money currency/period, correct units, and rejects evidence past its `reviewAfter` date from backing a structured match. The schema covers money, monthly income, experience, language tests, qualifications, job offers, admission offers and sponsorship.
+
+No thresholds were guessed or bulk-converted from narrative evidence. Current source-tree verification for the newest implementation is pending; the latest Quality Gate, Lint and Browser Smoke must pass on one SHA before this lane can be called verified.
