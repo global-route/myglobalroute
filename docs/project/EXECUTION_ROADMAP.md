@@ -95,7 +95,8 @@ The remaining P0 work is decomposed in `docs/sprints/P0_DELIVERY_PLAN.md` and tr
 
 ## Phase 4 — Trust, Compliance & Accessibility (P1)
 
-- [ ] Privacy and analytics consent model where required.
+- [x] Implement separate analytics and advertising consent choices, persistent preference access, and advertising-consent gating for ad slots (latest changes unvalidated; do not treat as a legal compliance sign-off).
+- [ ] Confirm privacy and analytics consent model with qualified legal review for applicable jurisdictions and actual provider configuration.
 - [x] Terms and migration-information disclaimer architecture.
 - [x] Source attribution for factual pathway claims.
 - [ ] Full browser accessibility audit and keyboard navigation.
