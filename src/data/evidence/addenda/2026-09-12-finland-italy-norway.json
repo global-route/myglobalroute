@@ -13,10 +13,10 @@
       "sourceUrl": "https://migri.fi/income-requirement-for-students",
       "jurisdiction": "Finland",
       "effectiveDate": "2026-09-12",
-      "retrievedAt": "2026-09-12",
-      "methodology": "Direct review of current Finnish Immigration Service student income guidance.",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current Finnish Immigration Service student income guidance on 2026-10-11. Confirmed EUR 800/month and EUR 9,600 for studies lasting at least one year, with tuition funds required separately where applicable and reduced amounts possible where the institution provides specified support.",
       "confidence": "high",
-      "reviewAfter": "2026-10-12"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "FI-study-eligibility-2026-09-12",

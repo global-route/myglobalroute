@@ -131,3 +131,8 @@ Corrected .github/workflows/quality.yml: the evidence-readiness step now runs bo
 ## Evidence refresh batch 2 — Sweden and Norway — 2026-10-11
 
 Official source review refreshed four overdue Sweden/Norway records, including the Swedish study maintenance threshold (SEK 10,656/month for 2026 applications), the 15-hour weekly work limit for bachelor's/master's study permits granted on/after 2026-06-11 (with exceptions), post-study job-seeker permit conditions, and Norway's programme-dependent study permit/financial requirements. Retrieval and review dates were changed only for these checked records; no universal Norway funds amount was inferred. The freshness inventory's pre-batch baseline was 22 overdue records across 10 countries; rerun the report after this commit to obtain the updated counts.
+
+
+## Evidence refresh batch 3 — Austria, Finland and Portugal — 2026-10-11
+
+Official-source review refreshed five overdue records and aligned the duplicate Finnish study-finance record: Austria's 20-hour student work permit condition and 12-month graduate job-search extension; Finland's EUR 800/month / EUR 9,600 student maintenance requirement and study-permit scope; and Portugal's remote-work residence document requirements. Only reviewed records had their retrieval/review dates changed; no threshold was inferred from a document checklist. The freshness inventory and full CI must be rerun on the resulting head.

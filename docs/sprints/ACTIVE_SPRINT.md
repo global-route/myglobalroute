@@ -189,3 +189,8 @@ Review of the completed Quality Gate log found that the new evidence-freshness i
 ## Evidence refresh batch 2 — Sweden and Norway — 2026-10-11
 
 After the freshness inventory reported 193 records (171 current, 22 overdue, none missing or malformed), this batch refreshed only claims whose exact official pages were reviewed: Sweden higher-education maintenance, student work limits, and post-study job-seeker permit; Norway study-permit eligibility and study-finance scope. The Sweden work limit is now explicitly stated as 15 hours/week for bachelor's/master's permits granted on/after 2026-06-11, with official exceptions retained. Sweden 2026 study maintenance remains SEK 10,656/month, with reductions/family additions where applicable. No generic threshold was promoted for Norway because amounts vary by programme type and duration.
+
+
+## Evidence refresh batch 3 — Austria, Finland and Portugal — 2026-10-11
+
+Refreshed only claims checked against current official sources: Austria student work rights and graduate job-search extension; Finland study eligibility and student financial maintenance (including duplicate financial evidence alignment); and Portugal's digital-nomad residence document checklist. Finland's current guidance confirms EUR 800/month and EUR 9,600 for a study period of at least one year, with tuition and qualifying institutional-support exceptions handled separately. Portugal's document checklist was not used to infer an income threshold.

@@ -133,10 +133,10 @@
       "sourceUrl": "https://migri.fi/en/residence-permit-application-for-studies",
       "jurisdiction": "Finland",
       "effectiveDate": "2026-09-06",
-      "retrievedAt": "2026-09-06",
-      "methodology": "Direct review of current Migri study residence permit guidance",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current Finnish Immigration Service study residence-permit guidance on 2026-10-11; confirmed qualifying studies/admission and sufficient financial resources remain central conditions.",
       "confidence": "high",
-      "reviewAfter": "2026-10-06"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "FI-study-finance-2026-09-06",
@@ -148,10 +148,10 @@
       "sourceUrl": "https://migri.fi/en/income-requirement-for-students",
       "jurisdiction": "Finland",
       "effectiveDate": "2026-09-06",
-      "retrievedAt": "2026-09-06",
-      "methodology": "Direct review of current Migri student income requirement guidance",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current Migri student income requirement guidance on 2026-10-11. Confirmed EUR 800/month and EUR 9,600 for studies lasting at least one year, with tuition funds separately required where applicable and reductions for qualifying institutional support.",
       "confidence": "high",
-      "reviewAfter": "2026-10-06"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "LU-salaried-eligibility-2026-09-06",
@@ -193,10 +193,10 @@
       "sourceUrl": "https://www.migration.gv.at/en/faq/",
       "jurisdiction": "Austria",
       "effectiveDate": "2026-09-06",
-      "retrievedAt": "2026-09-06",
-      "methodology": "Direct review of current Austrian government migration FAQ",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current Austrian Government migration FAQ on 2026-10-11. Confirmed third-country students may be granted an employment permit for up to 20 hours per week without a labour-market test; the prospective employer must apply to AMS.",
       "confidence": "high",
-      "reviewAfter": "2026-10-06"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "AT-student-poststudy-2026-09-06",
@@ -208,10 +208,10 @@
       "sourceUrl": "https://www.migration.gv.at/en/faq/",
       "jurisdiction": "Austria",
       "effectiveDate": "2026-09-06",
-      "retrievedAt": "2026-09-06",
-      "methodology": "Direct review of current Austrian government migration FAQ",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current Austrian Government migration FAQ on 2026-10-11. Confirmed qualifying graduates of listed Austrian higher-education programmes may renew the student residence permit for 12 months to search for employment or start a business, subject to general residence requirements.",
       "confidence": "high",
-      "reviewAfter": "2026-10-06"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "SE-work-salary-2026-09-07",

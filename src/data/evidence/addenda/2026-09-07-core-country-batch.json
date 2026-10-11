@@ -71,10 +71,10 @@
       "sourceUrl": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-o-exercicio-de-atividade-profissional-prestada-de-forma-remota-com-visto-de-residencia-para-o-exercicio-de-atividade-profissional-prestada-de-forma-remota-para-fora-do-territorio-nacional-art-88-o-n-o-1-nomadas-digitais",
       "jurisdiction": "Portugal",
       "effectiveDate": "2026-09-07",
-      "retrievedAt": "2026-09-07",
-      "methodology": "Direct review of current AIMA remote-work residence guidance",
+      "retrievedAt": "2026-10-11",
+      "methodology": "Direct review of current AIMA remote-work residence authorisation guidance on 2026-10-11. Confirmed the valid passport and residence visa, foreign employment/service relationship declaration, and residence-address declaration/evidence; no income threshold was inferred from this document checklist.",
       "confidence": "high",
-      "reviewAfter": "2026-10-07"
+      "reviewAfter": "2026-11-10"
     },
     {
       "id": "PT-working-routes-2026-09-07",
