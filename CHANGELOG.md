@@ -10,6 +10,6 @@ Dates reflect repository commits; a changelog entry is not release approval.
 - README no longer claims Phase 2 complete or describes approval rates and monetization as live capabilities.
 - Updated Austria and Czechia source anchors to current official government entry points; their retrieval dates alone were updated.
 - Added country-manifest check to standard `npm run verify`; superseded task documents now explicitly identify historical checklists.
-- 26/26 country anchors have outcomes; relevant official pages/alternatives inspected for 24. Luxembourg needs a specific migration entry point and Russia needs manual source verification. Human sign-off required.
+- 26/26 country anchors have outcomes; relevant official pages/alternatives inspected for 24. Luxembourg official alternatives are recorded; Russia needs mission-jurisdiction confirmation. Human sign-off required.
 - `dataset.asOf` remains `2026-09-05`. No pathway-specific claims inferred from country landing pages.
 - GitHub API reports `main` unprotected and no repository rulesets. Production host, deployed SHA and live CSP remain unverified. Release **NO-GO**.

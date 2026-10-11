@@ -99,7 +99,7 @@ Last fully verified same-SHA CI checkpoint before this status reconciliation: `f
 
 ## Current delivery delta — 2026-10-11
 - The README's prior "Phase 2 Complete" statement is superseded by the canonical phase tracker: Phase 2 core exists, but decision quality is incomplete.
-- A machine-readable 26-country source review manifest and generator/check are committed. Source review outcomes are recorded for all 26; 24 relevant official pages/alternatives inspected, Luxembourg and Russia remain blockers, and human sign-off is required.
+- A machine-readable 26-country source review manifest and generator/check are committed. Source review outcomes are recorded for all 26; 25 relevant official pages/alternatives inspected, Luxembourg and Russia remain blockers, and human sign-off is required.
 - Austria and Czechia country source anchors updated to official government pages; no country-wide as-of date or unsupported aggregate value was advanced.
 - Recommendation regression tests explicitly preserve unknown structured requirements and suppress missing-country/research-required routes.
 - P0-S5 remains blocked: GitHub reports main unprotected/no rulesets; production host, deployed SHA, live headers and smoke need owner/provider evidence. Release remains NO-GO.
@@ -109,3 +109,9 @@ Last fully verified same-SHA CI checkpoint before this status reconciliation: `f
 - Expanded structured requirements with evidence-backed declarations for UK Student admission, New Zealand student living-funds scope, and Ireland Critical Skills job offers.
 - Coverage is now 12 declarations across 5 of 56 pathways. 51 pathways remain without structured declarations; absence is unknown, never a pass or zero.
 - The full validator/test suite must pass on the final SHA before these additions are accepted. P1-REQ remains open.
+
+
+## Source-review refinement — 2026-10-11
+- Luxembourg official third-country immigration alternatives have been identified; the registered homepage still redirects generically.
+- Russia official MFA guidance located in this pass is mission-specific to Denmark and cannot be applied to other nationalities without jurisdiction verification.
+- Current source review: 25/26 entries have relevant official pages or alternatives inspected; one jurisdiction-specific blocker remains and human sign-off is required.

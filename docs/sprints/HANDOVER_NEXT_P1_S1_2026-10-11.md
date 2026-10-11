@@ -80,7 +80,7 @@ Start with P1-S1.1: inspect the current registry, generate the manifest and base
 
 ## Execution addendum — 2026-10-11
 - P1-S1.1: manifest generated from the live registry; generator and tests added.
-- P1-S1.2: 26/26 outcomes recorded. 24 relevant official pages/alternatives inspected; Luxembourg and Russia remain blockers. Human sign-off required.
+- P1-S1.2: 26/26 outcomes recorded. 25 relevant official pages/alternatives inspected; Luxembourg official alternatives are recorded; Russia remains blocked pending mission-jurisdiction confirmation. Human sign-off required.
 - Austria and Czechia anchors updated to official government entry points. No dataset-wide freshness date advanced and no unsupported aggregates added.
 - Route-quality tests preserve unknown requirements and reject missing country references/research-required recommendations.
 - GitHub reports `main` unprotected and no rulesets. Production origin, deployed SHA and live security headers need owner/provider evidence.
@@ -90,3 +90,9 @@ Start with P1-S1.1: inspect the current registry, generate the manifest and base
 ## Structured requirements addendum — 2026-10-11
 - Added three evidence-backed declarations: UK Student admission offer, New Zealand Fee Paying Student annual living-funds threshold with scoped caveats, and Ireland Critical Skills job offer.
 - Total: 12 declarations across 5/56 pathways; 51 remain unstructured. Missing requirements remain unknown. P1-REQ is still open.
+
+
+## Source-review refinement — 2026-10-11
+- Luxembourg: official third-country immigration pages are recorded as alternatives; consider replacing the generic redirecting country anchor after human sign-off.
+- Russia: official Russian MFA consular guidance found is Denmark-mission-specific. Verify the correct mission/source for the target applicant jurisdiction; keep this blocker open.
+- 25/26 entries have relevant official pages or alternatives inspected; all machine-assisted observations still require human sign-off.
