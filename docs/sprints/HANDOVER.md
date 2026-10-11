@@ -78,3 +78,11 @@ If CI is unavailable, continue independent implementation and record **Not Teste
 - Route engine now requires evidence IDs and HTTPS source provenance at runtime and blocks a known positive funds threshold when budget is missing, invalid, or insufficient.
 - Production verifier now checks app identity, critical assets, direct 2xx routes and equality of deployed country/pathway registries to the checked-out source.
 - Production origin and deployed SHA remain unverified. Netlify and Cloudflare configuration both exist in the repository; this is not proof of which provider owns production. Do not run the manual Production Smoke workflow until the authoritative origin is confirmed.
+
+## Route-matching integrity correction — 2026-10-11
+
+The canonical registry has 52 publishable pathway records with evidence IDs and HTTPS source URLs, but all 26 country records remain evidence_required because aggregate country costs/timelines/rates are still unverified. The route engine previously used country status as a hard veto for every route, conflating country-wide aggregate data with exact-pathway evidence. That veto has been removed; pathway status/provenance remains mandatory, and no country-level values are inferred.
+
+The schema has no machine-readable route-level budget, income, experience or language thresholds, and no business pathways (30 work / 26 study records). The Find My Route UI therefore no longer asks for budget/income/experience values it cannot use, labels results as goal matches rather than eligibility decisions, disables the uncovered business option, and avoids arbitrary rankings when no goal is selected. E2E coverage was added.
+
+**New code verification is pending** until Quality Gate, Lint and Browser Smoke pass on the same new SHA. The prior green SHA is not evidence for these later changes. Production origin/deployed SHA, CSP review and branch hardening remain separate release blockers.

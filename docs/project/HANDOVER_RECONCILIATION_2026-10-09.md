@@ -97,3 +97,18 @@ Follow-up browser diagnosis: Browser Smoke on `542bba327342e699bd2800a1865a1bd4c
 ## Current-head update — 2026-10-11
 
 Quality Gate ([run](https://github.com/global-route/myglobalroute/actions/runs/38103141925)), Lint ([run](https://github.com/global-route/myglobalroute/actions/runs/38103141947)) and Browser Smoke ([run](https://github.com/global-route/myglobalroute/actions/runs/38103141902)) all passed on `12cca13f8ddfe3c6976e29b3965435fe1bd25657`. Quality Gate passed 75/75 unit tests. The evidence registry was independently recounted at 193 records across 29 JSON files. Route-engine runtime guards now require evidence IDs and HTTPS source provenance; a known positive funds threshold blocks missing/invalid/insufficient budgets. `scripts/verify-deployed-site.js` now rejects redirects for required routes and checks app identity, critical asset availability and exact equality between deployed and checked-out country/pathway registries. These are source-tree checks; authoritative hosting project, production origin, deployed SHA and live-origin smoke remain unresolved. Repository branch-protection status could not be rechecked with the available integration permissions; issue #2 remains open.
+
+## Product-integrity audit — 2026-10-11
+
+A direct schema audit found a material mismatch between route data and the recommendation interface:
+
+- All 26 country records currently have dataStatus = evidence_required, because aggregate country cost/timeline/approval-rate fields remain null and unverified.
+- The canonical pathway registry contains 56 records (52 publishable, 4 research_required); all 52 publishable pathways have non-empty evidence IDs and HTTPS source URLs in the source-file audit.
+- The prior route engine also required country.dataStatus = publishable, which made every route ineligible despite pathway-level evidence passing. That coupled two different evidence scopes and prevented the 52 exact-pathway records from being considered.
+- The route engine now evaluates pathway-level status/provenance independently from aggregate country-level fields. It must not infer country costs, timelines or approval rates from a pathway source.
+- The registry has zero machine-readable minFunds, minMonthlyIncome, minExperienceYears, or language fields; pathway types currently comprise 30 work and 26 study records, with no business records. The old UI collected budget, income and experience inputs even though the current schema could not use them. Those misleading inputs have been removed; business is explicitly marked not yet covered; no-goal submissions no longer receive arbitrary rankings.
+- The Find My Route UI now describes results as goal matches, not eligibility assessments, and calls out missing structured filters. An E2E test covers the goal-only flow and disclosure.
+
+**Verification status:** the latest code commits are in GitHub Actions, but a complete green workflow set for the new route-engine/UI/E2E changes has not yet been confirmed in this handover update. Keep the new changes as pending verification until Quality Gate, Lint and Browser Smoke finish successfully on one SHA. Previous green runs on 12cca13f8ddfe3c6976e29b3965435fe1bd25657 do not verify later code.
+
+**Next implementation task:** build a pathway-level, evidence-backed requirement schema (with explicit units, currency, jurisdiction, effective date, and evidence IDs) for finances, experience, language and other applicant-specific requirements. Enable each input only when its matching structured field has complete source provenance and passing validation. Do not substitute country-wide aggregate data or guessed thresholds.

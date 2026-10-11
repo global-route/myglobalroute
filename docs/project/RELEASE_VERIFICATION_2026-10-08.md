@@ -54,6 +54,14 @@ Required evidence:
 - Qualified-lead collection remains blocked until consent, data minimization, secure delivery and reconciliation are designed and verified.
 - Monetization must never influence pathway eligibility, evidence status or recommendation ranking.
 
+## Route-matching schema audit — 2026-10-11
+
+The code review found that all 26 country-level records remain evidence_required while 52 canonical pathways are marked publishable with evidence IDs and HTTPS source URLs. The route engine previously coupled pathway eligibility to country aggregate status, causing all routes to be suppressed. The engine now separates pathway-level evidence from aggregate country-level cost/timeline/rate fields and never infers the latter from the former.
+
+A second mismatch was that the UI collected budget, monthly income and experience although none of the 56 pathway records had machine-readable minFunds, minMonthlyIncome, or minExperienceYears fields; no pathway has a structured language field either. The UI no longer collects these ignored values, marks business coverage as unavailable (0 business pathways), and labels outputs as goal matches rather than eligibility predictions. An E2E regression test was added.
+
+**Verification of this latest code change is pending** until Quality Gate, Lint and Browser Smoke complete successfully on the same new SHA. The earlier green checkpoint does not verify code committed after it.
+
 ## Release decision
 
 **NO-GO for production release and live monetization until the production and provider gates above are evidenced.**
