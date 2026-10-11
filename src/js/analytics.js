@@ -76,25 +76,58 @@
     let stored = null;
     try { stored = window.localStorage.getItem(key); } catch (_) {}
     if (stored && ['granted', 'denied'].includes(stored)) setConsent(stored);
-    if (document.getElementById('analytics-consent')) return;
-    const banner = document.createElement('aside');
-    banner.id = 'analytics-consent';
-    banner.setAttribute('role', 'dialog');
-    banner.setAttribute('aria-label', 'Analytics consent');
-    banner.innerHTML = '<p>We use privacy-aware analytics to understand product usage. No migration profile details are sent to analytics.</p><div><button type="button" data-consent="granted">Allow analytics</button><button type="button" data-consent="denied">Decline</button></div>';
+
     const mount = document.body;
     if (!mount) return;
-    mount.appendChild(banner);
-    banner.querySelectorAll('[data-consent]').forEach(button => button.addEventListener('click', () => {
-      const state = button.getAttribute('data-consent');
-      setConsent(state);
-      try { window.localStorage.setItem(key, state); } catch (_) {}
-      banner.remove();
-      // Consent is also the gate for eligible ad placements. Refresh them only
-      // after the user's explicit choice has been persisted.
-      root.GlobalRoute?.Monetization?.refreshAfterConsent?.();
-    }));
-    if (consentState !== 'unknown') banner.remove();
+    let banner = document.getElementById('analytics-consent');
+    let settings = document.getElementById('analytics-consent-settings');
+
+    if (!settings) {
+      settings = document.createElement('button');
+      settings.id = 'analytics-consent-settings';
+      settings.type = 'button';
+      settings.textContent = 'Privacy settings';
+      settings.setAttribute('aria-controls', 'analytics-consent');
+      settings.addEventListener('click', () => {
+        const panel = document.getElementById('analytics-consent');
+        if (panel) {
+          panel.hidden = false;
+          panel.querySelector('[data-consent]')?.focus();
+        }
+      });
+      mount.appendChild(settings);
+    }
+
+    if (!banner) {
+      banner = document.createElement('aside');
+      banner.id = 'analytics-consent';
+      banner.setAttribute('role', 'region');
+      banner.setAttribute('aria-label', 'Analytics and advertising preferences');
+      banner.setAttribute('aria-live', 'polite');
+      banner.innerHTML = '<p>Analytics and eligible advertising placements remain disabled until you choose. Event measurement does not need your migration profile details.</p><div><button type="button" data-consent="granted">Allow analytics</button><button type="button" data-consent="denied">Decline analytics</button></div>';
+      mount.appendChild(banner);
+    }
+
+    banner.querySelectorAll('[data-consent]').forEach(button => {
+      if (button.dataset.consentBound === 'true') return;
+      button.dataset.consentBound = 'true';
+      button.addEventListener('click', () => {
+        const state = button.getAttribute('data-consent');
+        setConsent(state);
+        try { window.localStorage.setItem(key, state); } catch (_) {}
+        banner.hidden = true;
+        settings.setAttribute('aria-label', `Privacy settings; analytics consent is ${state}`);
+        // Consent also gates eligible advertising placements. Refresh only after
+        // the user's explicit choice has been applied.
+        root.GlobalRoute?.Monetization?.refreshAfterConsent?.();
+        settings.focus();
+      });
+    });
+
+    // Existing decisions stay in force, but the user can reopen this panel
+    // from the persistent settings control to change or withdraw consent.
+    banner.hidden = consentState !== 'unknown';
+    settings.setAttribute('aria-label', `Privacy settings; analytics consent is ${consentState}`);
   }
 
   function setConsent(state) {
