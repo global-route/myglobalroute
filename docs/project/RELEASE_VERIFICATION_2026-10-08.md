@@ -6,6 +6,12 @@
 
 **Production release remains NO-GO.** Latest implementation SHA `9ed09f07e9e7b73b62884da02fc406ccdb40f10a` passed Quality Gate, Lint and Browser Smoke on the same SHA (links below). The earlier implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426` and CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` are retained as prior checkpoints. All CI results are source-tree checks only; authoritative hosting project/origin, deployed commit and live security headers remain unverified.
 
+## Latest source-tree same-SHA CI verification — 2026-10-11
+
+${shaBlock}
+
+The source tree includes the route-threshold hardening and the updated Russia source-review note. These are source-tree checks only. Production release remains NO-GO pending authoritative host/deployment identity, live CSP/security headers, production smoke, and owner-level branch-rule evidence.
+
 ## Latest implementation same-SHA CI verification — 2026-10-11
 
 Implementation SHA: `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`

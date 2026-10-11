@@ -1,10 +1,16 @@
 # Global Route — Execution Status
 
-**Reconciled:** 2026-10-11 | **Branch:** `main` | **Latest verified implementation SHA:** `9ed09f07e9e7b73b62884da02fc406ccdb40f10a` (Quality Gate, Lint and Browser Smoke all pass on this exact SHA). Earlier implementation/data and CI-workflow checkpoints remain recorded below as historical evidence.  
+**Reconciled:** 2026-10-11 | **Branch:** `main` | **Latest verified implementation SHA:** `9ed09f07e9e7b73b62884da02fc406ccdb40f10a` | **Latest verified source-tree SHA:** `89998ab5410aceb6dede8e997dae0b836d3b4d92` (Quality Gate, Lint and Browser Smoke all pass on this exact SHA). Earlier implementation/data and CI-workflow checkpoints remain recorded below as historical evidence.  
 **Active work:** P0 production verification + P1 data/route-quality work  
 **Release:** **NO-GO**
 
 > This supersedes stale September status/counts. See `PROJECT_ASSESSMENT.md`, `PHASE_STATUS.md`, `EXECUTION_ROADMAP.md` and `../sprints/ACTIVE_SPRINT.md` for authoritative detail.
+
+## Latest full source-tree verification — 2026-10-11
+
+${shaBlock}
+
+The manifest-sync check and source-tree tests passed. Russia's Nigeria-mission visa material remains a candidate source only; human sign-off and target-market jurisdiction coverage remain open. P0-S5 remains blocked.
 
 ## Latest implementation verification — 2026-10-11
 

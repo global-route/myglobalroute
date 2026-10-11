@@ -3,11 +3,18 @@
 **Reconciled:** 2026-10-11 | **Branch:** `main`
 **Release:** **NO-GO**
 **Latest verified implementation SHA:** `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`
+**Latest verified source-tree SHA:** `89998ab5410aceb6dede8e997dae0b836d3b4d92`
 **Earlier CI workflow follow-up SHA:** `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`
 
 ## Current decision
 
 Continue source-trust and route-quality work, but do not release. Quality Gate, Lint and Browser Smoke pass on the latest implementation SHA `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`; earlier data and CI-workflow checkpoints are retained below as history. Production identity/security and human source-review sign-off remain unresolved.
+
+## Latest full source-tree checkpoint — 2026-10-11
+
+${shaBlock}
+
+Quality Gate verified the source-review manifest synchronization on this exact tree. Russia's Nigeria-mission document is a source candidate only; direct PDF retrieval returned 502, which is not evidence the source is down. Human sign-off and target-market jurisdiction confirmation remain open. Release remains NO-GO.
 
 ## Latest implementation checkpoint — 2026-10-11
 

@@ -2,6 +2,19 @@
 
 Dates reflect repository commits; a changelog entry is not release approval.
 
+## 2026-10-11 — Same-SHA verification after source-review follow-up
+
+Source-tree SHA: `89998ab5410aceb6dede8e997dae0b836d3b4d92`
+- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703290
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703239
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703394
+
+- Quality Gate confirmed country-source manifest synchronization and passed the unit-test/build checks on this exact source-tree SHA.
+- Russia follow-up: official Russian Embassy-in-Nigeria visa material was located in indexed search results; direct PDF retrieval returned 502 and is not treated as proof the source is down. This candidate does not close mission coverage across the target applicant market or human sign-off.
+- The route-engine code change remains at implementation SHA `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`; all three required workflows passed on that SHA as well.
+- P0-S5 remains externally blocked; release remains NO-GO.
+
+
 ## 2026-10-11 — Route threshold hardening and regression coverage
 
 - Route recommendations now fail closed when a declared funds, monthly-income or experience threshold is malformed; an absent threshold remains unknown and is not synthesized as zero.

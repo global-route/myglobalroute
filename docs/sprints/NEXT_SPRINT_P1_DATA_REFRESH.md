@@ -4,7 +4,13 @@
 **Prepared / reconciled:** 2026-10-11
 **Release:** **NO-GO**
 
-## Verified implementation and CI evidence
+## Latest source-tree verification — 2026-10-11
+
+${shaBlock}
+
+This exact source tree passed manifest synchronization, unit-test/build checks, lint and browser smoke. The Russia record now includes a Nigeria-specific official visa document candidate, but direct retrieval returned 502; treat that as an inspection limitation, not evidence the source is down. Human sign-off and applicant-jurisdiction coverage remain open.
+
+## Earlier implementation and CI evidence (prior checkpoint)
 
 **Implementation/data SHA:** `95f960c081367305dea0144034d48a4ab7892426`
 - Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112572

@@ -1,6 +1,6 @@
 # Phase Status — Global Route
 
-**Reconciled:** 2026-10-11 | **Latest verified implementation SHA:** `9ed09f07e9e7b73b62884da02fc406ccdb40f10a` (Quality Gate, Lint and Browser Smoke pass on this exact SHA) | **Previous implementation/data checkpoint:** `95f960c081367305dea0144034d48a4ab7892426`; earlier CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` remains historical evidence. | **Release: NO-GO**
+**Reconciled:** 2026-10-11 | **Latest verified implementation SHA:** `9ed09f07e9e7b73b62884da02fc406ccdb40f10a` | **Latest verified source-tree SHA:** `89998ab5410aceb6dede8e997dae0b836d3b4d92` (Quality Gate, Lint and Browser Smoke pass on this exact SHA) | **Previous implementation/data checkpoint:** `95f960c081367305dea0144034d48a4ab7892426`; earlier CI workflow follow-up SHA `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5` remains historical evidence. | **Release: NO-GO**
 
 This is the canonical phase tracker. Historical phase/sprint docs preserve original product intent but their old dates, percentages, counts and URLs do not override this tracker or the active sprint.
 
@@ -27,6 +27,12 @@ This is the canonical phase tracker. Historical phase/sprint docs preserve origi
 
 The repo has `docs/phase-0`, `docs/phase-1` and `docs/phase-3`, but no `docs/phase-2` despite Phase 2 in the roadmap. `docs/phase-1` contains revenue work and `docs/phase-3` contains older blog artifacts. Do not mass-move files mid-sprint; this tracker is the current status source. A later cleanup should map legacy files to the canonical phase taxonomy and label historical artifacts.
 
+
+## Latest full source-tree verification — 2026-10-11
+
+${shaBlock}
+
+This checkpoint includes the current Russia source-review note and manifest synchronization. It does not close human source sign-off or P0-S5 production verification.
 
 ## Latest implementation verification — 2026-10-11
 
