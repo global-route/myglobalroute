@@ -88,6 +88,7 @@ for (const [index, record] of (evidence || []).entries()) {
 }
 
 errors.push(...validatePathwayRequirements(pathways, evidence));
+errors.push(...validatePathwayRequirements(subroutes, evidence));
 
 for (const pathway of pathways) {
   const records = evidenceByPathway.get(pathway.id) || [];
