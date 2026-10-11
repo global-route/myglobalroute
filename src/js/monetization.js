@@ -116,7 +116,7 @@
 
   function init() {
     const analytics = root.GlobalRoute?.Analytics;
-    const consentGranted = analytics?.getConsentState?.() === 'granted';
+    const consentGranted = analytics?.getAdvertisingConsentState?.() === 'granted';
     return mountSlots({ consentGranted });
   }
 
