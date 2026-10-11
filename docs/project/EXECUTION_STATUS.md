@@ -8,7 +8,10 @@
 
 ## Latest full source-tree verification — 2026-10-11
 
-${shaBlock}
+Source-tree SHA: `89998ab5410aceb6dede8e997dae0b836d3b4d92`
+- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703290
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703239
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703394
 
 The manifest-sync check and source-tree tests passed. Russia's Nigeria-mission visa material remains a candidate source only; human sign-off and target-market jurisdiction coverage remain open. P0-S5 remains blocked.
 

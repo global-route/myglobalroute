@@ -8,7 +8,10 @@
 
 ## Latest source-tree same-SHA CI verification — 2026-10-11
 
-${shaBlock}
+Source-tree SHA: `89998ab5410aceb6dede8e997dae0b836d3b4d92`
+- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703290
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703239
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703394
 
 The source tree includes the route-threshold hardening and the updated Russia source-review note. These are source-tree checks only. Production release remains NO-GO pending authoritative host/deployment identity, live CSP/security headers, production smoke, and owner-level branch-rule evidence.
 

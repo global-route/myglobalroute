@@ -12,7 +12,10 @@ Continue source-trust and route-quality work, but do not release. Quality Gate, 
 
 ## Latest full source-tree checkpoint — 2026-10-11
 
-${shaBlock}
+Source-tree SHA: `89998ab5410aceb6dede8e997dae0b836d3b4d92`
+- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703290
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703239
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703394
 
 Quality Gate verified the source-review manifest synchronization on this exact tree. Russia's Nigeria-mission document is a source candidate only; direct PDF retrieval returned 502, which is not evidence the source is down. Human sign-off and target-market jurisdiction confirmation remain open. Release remains NO-GO.
 

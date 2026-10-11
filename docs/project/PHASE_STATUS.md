@@ -30,7 +30,10 @@ The repo has `docs/phase-0`, `docs/phase-1` and `docs/phase-3`, but no `docs/pha
 
 ## Latest full source-tree verification — 2026-10-11
 
-${shaBlock}
+Source-tree SHA: `89998ab5410aceb6dede8e997dae0b836d3b4d92`
+- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703290
+- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703239
+- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703394
 
 This checkpoint includes the current Russia source-review note and manifest synchronization. It does not close human source sign-off or P0-S5 production verification.
 
