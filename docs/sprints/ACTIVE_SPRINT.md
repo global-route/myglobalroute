@@ -60,6 +60,8 @@ Quality Gate output on the verified implementation/data SHA:
 - 18 test suites / 122 tests passed.
 - Build integrity passed; SEO/accessibility checks passed across 168 generated HTML files.
 
+**Root cause identified (2026-10-14):** Cloudflare Pages dashboard build command was set to `npm run build && npx wrangler deploy`. Running `wrangler deploy` inside a Pages Git-integration context treats the project as a Worker (not Pages), causing the ASSETS binding error and origin failure (523). **Fix applied in repo:** `package.json` `deploy` script renamed — `cf:pages:build` is the correct Pages-only build command (`npm run build`). Dashboard must be updated to match.
+
 **Documentation/status checkpoint SHA:** `27bcfd93780cf42416612c7f6486735f6c0ceae1` — Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38145214511), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38145214551), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38145214463), all on the same documentation-only SHA. This does not replace the implementation/data SHA above or verify production.
 
 ## Current task board
