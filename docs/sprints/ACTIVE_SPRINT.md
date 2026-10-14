@@ -2,7 +2,7 @@
 
 > **Execution adjustment — 2026-10-11:** Test-writing, test-running and CI execution are paused by user direction. Continue non-test implementation, data/schema and documentation work; do not claim new changes are validated. The last fully verified source-tree SHA remains `89998ab5410aceb6dede8e997dae0b836d3b4d92`.
 
-**Reconciled:** 2026-10-11 | **Branch:** `main`
+**Reconciled:** 2026-10-14 | **Branch:** `main`
 **Release:** **NO-GO**
 **Latest verified implementation SHA:** `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`
 **Latest verified source-tree SHA:** `89998ab5410aceb6dede8e997dae0b836d3b4d92`
@@ -72,7 +72,7 @@ Quality Gate output on the verified implementation/data SHA:
 | P0-S2 | Audit pathway evidence gaps | **Audit complete; source work ongoing** | Maintain evidence freshness; do not promote based on record count |
 | P0-S3 | Data/recommendation quality gate | **Source-tree verified** | Keep validation and tests green as data changes |
 | P0-S4 | Browser/source-tree gate | **Source-tree verified** | CI browser smoke is not proof of production behavior |
-| P0-S5 | Deployment verification / Phase 0 exit | **Active / blocked** | Confirm authoritative host, deployed SHA, live CSP/security headers, production smoke and owner branch rules |
+| P0-S5 | Deployment verification / Phase 0 exit | **Active — root cause fixed; dashboard action required** | ✅ CF Pages ASSETS binding root cause identified and fixed in repo (build command fix committed `495ac54`). ⏳ Cloudflare dashboard must be updated: set build command to `npm run build`, output dir to `dist`, then trigger new deploy. Then: confirm deployed SHA, run production smoke, audit live CSP/security headers, owner branch rules. |
 | P1-S1.1 | Machine-readable country manifest | **Complete** | Generator, manifest, tests and CI synchronization check are committed |
 | P1-S1.2 | Country source-anchor review | **Outcomes recorded; sign-off open** | 25/26 entries have a relevant official page or alternative inspected; Russia now has Nigeria-specific official mission material located, but target-market jurisdiction confirmation and human sign-off remain required |
 | P1-S1.3 | Dataset metadata reconciliation | **Open** | Keep `dataset.asOf=2026-09-05` until review is signed off and exceptions are accepted |
@@ -111,12 +111,42 @@ Still required from the hosting owner/provider:
 4. Production route/calculator smoke results on the confirmed host.
 5. Main branch protection / required-check configuration.
 
-## Execution order
+## Up next — ordered by priority
 
-1. Resolve P0-S5 owner/provider evidence in parallel.
-2. Complete human sign-off for P1-S1; confirm Russia source jurisdiction and decide whether to replace Luxembourg's generic anchor.
-3. Keep `dataset.asOf` unchanged until source review is signed off and exceptions are formally accepted.
-4. Expand requirements only where exact-pathway evidence supports values and scope; unknown remains unknown.
-5. Continue route-quality, SEO, privacy/accessibility and monetization foundations without making unsupported production claims.
+### 🔴 P0-S5 BLOCKER — Do these first (production is down)
 
-**Sprint status: NOT COMPLETE. Phase 0 and Phase 1 remain incomplete. Release remains NO-GO.**
+1. **[OWNER ACTION] Fix Cloudflare Pages dashboard build command**
+   - Go to: CF Dashboard → Pages → `myglobalroute` → Settings → Builds & deployments
+   - Set build command: `npm run build`
+   - Set output directory: `dist`
+   - Trigger a new deploy (or the pending push will auto-trigger)
+
+2. **Confirm deployment matches HEAD** — once deploy succeeds, verify the live deployment SHA matches `495ac54` (or latest `main`)
+
+3. **Run production smoke** — `PRODUCTION_URL=https://vrenum.app npm run deploy:verify`
+
+4. **Restore canonical / OG / sitemap URLs** to `https://vrenum.app` (blocked until origin confirmed live)
+
+5. **Audit live CSP and security headers** against actual deployed third-party inventory
+
+6. **Owner: configure branch protection on `main`** — required checks, no direct push without CI pass
+
+7. **Reconcile and close P0** — update roadmap, active sprint and release verification; record P0 exit formally
+
+---
+
+### 🟡 P1 — Parallel / after P0-S5 unblocks
+
+8. **P1-S1.2 human sign-off** — confirm Russia mission/jurisdiction; decide Luxembourg anchor; formally accept any exceptions; update `dataset.asOf` only after sign-off
+
+9. **P1-REQ structured requirements** — expand from 19 declarations (9 pathways) toward remaining 47 unstructured pathways; prioritise high-traffic routes
+
+10. **P1-ROUTE recommendation quality** — continue stale/mismatched evidence tests, alternatives, missing-input and broader requirement-boundary regression coverage
+
+11. **P1-SEO** — unblock canonical SEO work once production origin is confirmed; continue legacy metadata/links and editorial audit
+
+12. **P1-PRIV** — review draft data inventory, confirm retention and contact ownership, complete legal review, real-browser accessibility checks (consent UI unvalidated)
+
+---
+
+**Sprint status: P0-S5 partially unblocked (root cause fixed). Production deploy pending dashboard fix. Release remains NO-GO until production smoke passes.**
