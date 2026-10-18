@@ -1,68 +1,15 @@
 # Active Sprint — Production Integrity & Migration Intelligence
 
-> **Execution adjustment — 2026-10-11:** Test-writing, test-running and CI execution are paused by user direction. Continue non-test implementation, data/schema and documentation work; do not claim new changes are validated. The last fully verified source-tree SHA remains `89998ab5410aceb6dede8e997dae0b836d3b4d92`.
+> **Execution adjustment — 2026-10-17:** Testing and CI remain paused by user direction. The current production blocker is live-domain ownership/DNS configuration rather than code functionality: Wrangler is failing to attach `vrenum.app` because Cloudflare reports externally managed DNS records.
 
-**Reconciled:** 2026-10-14 | **Branch:** `main`
+**Reconciled:** 2026-10-18 | **Branch:** `main`
 **Release:** **NO-GO**
-**Latest verified implementation SHA:** `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`
-**Latest verified source-tree SHA:** `89998ab5410aceb6dede8e997dae0b836d3b4d92`
-**Earlier CI workflow follow-up SHA:** `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`
-
-## Non-test delivery update — 2026-10-11
-
-- Added evidence-linked structured declarations for the UK Skilled Worker maintenance balance and approved sponsor, the UK Student route minimum age, and Australia's 65-point Skilled EOI threshold.
-- Extended the schema for maintenance balances, minimum age and points-based thresholds. Australia remains `research_required`; 65 points does not guarantee an invitation and does not close subclass-specific financial evidence gaps.
-- Structured requirement inventory: 19 declarations across 9 pathways; 47/56 pathways have no structured declarations. Missing declarations remain unknown.
-- Added scoped monthly living-funds requirements for Finland and Sweden higher-education study, and a distinct Swedish employer monthly-salary threshold field so employer salary is not conflated with applicant personal income. These declarations are not yet consumed by route matching and remain unvalidated.
-- Implemented independent analytics and advertising consent choices, a persistent Privacy settings control, local preference persistence where available, and an ad-placement gate tied to advertising consent. Updated privacy copy and added an engineering data-inventory draft covering route finder, calculator, consent storage, analytics, contact and monetization flows.
-- Removed the unconnected contact form, which had no submission handler and could otherwise default to GET-style query submission; the page now clearly directs users to email and warns against sending identity documents. The contact/mailbox process remains unverified.
-- Corrected homepage/About copy that overstated approval-rate coverage and universal evidence gating; unsupported rates and costs are now described as unpublished or unverified. Added About-page links to the country registry, disclaimer, privacy and contact pages.
-- Per user direction, testing and CI execution are paused; these changes are **not validated** and do not change the release NO-GO decision.
+**Current blocker:** Cloudflare custom-domain attachment for `vrenum.app` is failing because DNS is externally managed; production host identity and owner-side deployment configuration remain unresolved.
+**Relevant verification:** historical source-tree checks remain recorded from 2026-10-11; no fresh same-SHA validation is available because CI remains paused.
 
 ## Current decision
 
-Continue source-trust and route-quality work, but do not release. Quality Gate, Lint and Browser Smoke passed on the last fully verified implementation checkpoint `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`; earlier data and CI-workflow checkpoints are retained below as history. Production identity/security and human source-review sign-off remain unresolved.
-
-## Latest full source-tree checkpoint — 2026-10-11
-
-Source-tree SHA: `89998ab5410aceb6dede8e997dae0b836d3b4d92`
-- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703290
-- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703239
-- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38145703394
-
-Quality Gate verified the source-review manifest synchronization on this exact tree. Russia's Nigeria-mission document is a source candidate only; direct PDF retrieval returned 502, which is not evidence the source is down. Human sign-off and target-market jurisdiction confirmation remain open. Release remains NO-GO.
-
-## Latest implementation checkpoint — 2026-10-11
-
-**Implementation SHA:** `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`
-- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394933
-- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394817
-- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394822
-
-Route-engine hardening rejects malformed declared numeric thresholds rather than coercing them to zero. Regression tests cover funds threshold below/equal/above boundaries, malformed thresholds, no-match recommendations and caller result limits. Missing requirements remain unknown. This is source-tree verification only; P0-S5 remains open and release remains NO-GO.
-
-## Previous verified checkpoint — 2026-10-11
-
-**Implementation/data SHA:** `95f960c081367305dea0144034d48a4ab7892426`
-- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112572
-- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112454
-- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38144112490
-
-**CI workflow follow-up SHA:** `84b6582f0a2c1dab3971e2a5fac8eb68b38bf9f5`
-- Quality Gate PASS (includes manifest synchronization): https://github.com/global-route/myglobalroute/actions/runs/38144183966
-- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183952
-- Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183936
-
-Quality Gate output on the verified implementation/data SHA:
-- 26 countries, 56 pathways, 193 evidence records.
-- 0 dependency vulnerabilities.
-- Country-source manifest synchronized: 26 unique registry entries.
-- 18 test suites / 122 tests passed.
-- Build integrity passed; SEO/accessibility checks passed across 168 generated HTML files.
-
-**Root cause identified (2026-10-14):** Cloudflare Pages dashboard build command was set to `npm run build && npx wrangler deploy`. Running `wrangler deploy` inside a Pages Git-integration context treats the project as a Worker (not Pages), causing the ASSETS binding error and origin failure (523). **Fix applied in repo:** `package.json` `deploy` script renamed — `cf:pages:build` is the correct Pages-only build command (`npm run build`). Dashboard must be updated to match.
-
-**Documentation/status checkpoint SHA:** `27bcfd93780cf42416612c7f6486735f6c0ceae1` — Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38145214511), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38145214551), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38145214463), all on the same documentation-only SHA. This does not replace the implementation/data SHA above or verify production.
+Continue only the owner-side deployment and evidence tasks that can be completed without guessing the production environment. Do not release, do not claim live production readiness, and do not treat historical green checks as proof of live deployment.
 
 ## Current task board
 
@@ -70,83 +17,46 @@ Quality Gate output on the verified implementation/data SHA:
 |---|---|---|---|
 | P0-S1 | Exact-subroute closure | **Complete with explicit blocked candidates** | AU subclass 189 and Italy Flussi remain research-required until exact-scope evidence closes their gaps |
 | P0-S2 | Audit pathway evidence gaps | **Audit complete; source work ongoing** | Maintain evidence freshness; do not promote based on record count |
-| P0-S3 | Data/recommendation quality gate | **Source-tree verified** | Keep validation and tests green as data changes |
-| P0-S4 | Browser/source-tree gate | **Source-tree verified** | CI browser smoke is not proof of production behavior |
-| P0-S5 | Deployment verification / Phase 0 exit | **Active — root cause fixed; dashboard action required** | ✅ CF Pages ASSETS binding root cause identified and fixed in repo (build command fix committed `495ac54`). ⏳ Cloudflare dashboard must be updated: set build command to `npm run build`, output dir to `dist`, then trigger new deploy. Then: confirm deployed SHA, run production smoke, audit live CSP/security headers, owner branch rules. |
-| P1-S1.1 | Machine-readable country manifest | **Complete** | Generator, manifest, tests and CI synchronization check are committed |
-| P1-S1.2 | Country source-anchor review | **Outcomes recorded; sign-off open** | 25/26 entries have a relevant official page or alternative inspected; Russia now has Nigeria-specific official mission material located, but target-market jurisdiction confirmation and human sign-off remain required |
-| P1-S1.3 | Dataset metadata reconciliation | **Open** | Keep `dataset.asOf=2026-09-05` until review is signed off and exceptions are accepted |
-| P1-S1.4 | Same-SHA verification/handover | **Implementation verified** | CI passes on the two SHAs above; do not treat this as production verification |
-| P1-REQ | Structured requirements | **Open / active** | 19 declarations across 9 of 56 pathways; 47 remain unstructured |
-| P1-ROUTE | Recommendation quality | **Active; threshold hardening and boundary/no-match regressions verified at `9ed09f0`** | Continue stale/mismatched evidence, alternatives, missing-input and broader requirement-boundary tests |
-| P1-SEO | Editorial/technical SEO | **Implementation advanced; open** | Homepage/About unsupported claims corrected; canonical origin remains blocked on confirmed production host; continue legacy metadata/links and editorial audit (content changes unvalidated) |
-| P1-PRIV | Privacy/compliance/accessibility | **Implementation advanced; open** | Consent UI and separate analytics/ad choice implemented (unvalidated); review the draft data inventory, confirm retention and contact ownership, complete legal review, deployed-provider review and real-browser accessibility checks |
-| P1-REV | Monetization readiness | **Foundations only; not live** | Provider approval, consent, disclosures and reconciliation before activation |
+| P0-S3 | Data/recommendation quality gate | **Historically verified** | Keep validation and tests green as data changes; do not claim new validation without a fresh run |
+| P0-S4 | Browser/source-tree gate | **Historically verified** | CI/browser smoke is not proof of production behavior |
+| P0-S5 | Deployment verification / Phase 0 exit | **Blocked by external DNS / custom-domain ownership** | Cloudflare is rejecting the custom-domain attach to `vrenum.app` because DNS is externally managed. Owner must fix DNS ownership or use a different hostname. Then confirm live SHA, run production smoke, audit CSP/security headers, and verify branch rules. |
+| P1-S1.1 | Machine-readable country manifest | **Complete** | Manifest and evidence outcomes are committed; source review still requires human sign-off |
+| P1-S1.2 | Country source-anchor review | **Human sign-off recorded for LU/RU** | Luxembourg updated to direct immigration portal; Russia national authority and consular scope confirmed |
+| P1-S1.3 | Dataset metadata reconciliation | **Open** | Update `dataset.asOf` after full manifest sign-off sync |
+| P1-REQ | Structured requirements | **Active** | 49 declarations across 35 of 56 pathways (Central Europe batch added); 21 remain unstructured |
+| P1-ROUTE | Recommendation quality | **Active** | Continue stale/mismatched evidence, alternatives, missing-input, and no-match regression work |
+| P1-SEO | Editorial/technical SEO | **Implementation advanced; open** | Canonical origin remains blocked until production host is confirmed; legacy metadata and editorial cleanup remain open |
+| P1-PRIV | Privacy/compliance/accessibility | **Implementation advanced; open** | Consent/contact/provider behavior still unvalidated; legal review and live-browser checks remain open |
+| P1-REV | Monetization readiness | **Foundations only; not live** | Provider approval, consent, disclosures and revenue reconciliation remain required |
 
-## Country source-review result
+## Current production blocker
 
-> **P1-S1 checkpoint clarification (2026-10-11):** The manifest and first-pass source review are implemented; 26/26 outcomes are recorded and 25 relevant official pages/alternatives were inspected. This does not close P1-S1: human sign-off, Russia mission/jurisdiction confirmation, any accepted exception record, and safe `dataset.asOf` reconciliation remain open. Do not treat AI-assisted landing-page inspection as pathway-level evidence.
+The live deployment failure is explicit and reproducible:
+- `wrangler deploy` succeeds in asset upload, but the custom-domain trigger fails because `vrenum.app` has externally managed DNS records.
+- Cloudflare responds with `code: 100117` and rejects the custom-domain attach.
+- This means the project cannot complete a live deployment until the underlying host/DNS ownership is corrected by the owner or an alternate hostname is used.
 
+## Next task
 
-- Registry baseline: 26 countries, 56 pathways (52 publishable / 4 research-required), 193 evidence records.
-- Manifest: `docs/data/country-source-review-manifest.json`; generated from `src/data/countries.json`.
-- All 26 anchors have explicit outcomes. 25 relevant official pages/alternatives were inspected; all machine-assisted observations still require human sign-off.
-- Luxembourg official third-country immigration alternatives are logged, although the registered root still redirects to a generic citizens page. Consider a more direct country anchor after human sign-off.
-- Official Russian Embassy in Nigeria tourist-visa material was located after the initial pass. It is a candidate for Nigeria-specific source navigation, not proof for other target applicant jurisdictions or route-level claims; human sign-off remains open.
-- Austria and Czechia country source URLs were updated to more relevant official government pages; their retrieval dates alone were changed.
-- `dataset.asOf=2026-09-05` is intentionally unchanged. Do not infer approval rates, costs, timelines or pathway eligibility from country-level landing pages.
+### 🔴 P0-S5-1 — Resolve the production hostname ownership and Cloudflare routing configuration
 
-## P0-S5 external release gate
+Owner-side actions required:
+1. Confirm whether `vrenum.app` is the intended production hostname.
+2. If yes, remove or transfer the externally managed DNS records so Cloudflare can own the custom domain.
+3. If not, select the correct hostname and configure the Pages/Worker binding for that host.
+4. Re-run the deploy and verify the live SHA and response headers.
 
-GitHub branch metadata reports `main.protected=false` and the repository rulesets endpoint is empty. The detailed branch-protection endpoint returned 403 to this integration. Owner-level branch protection/required-check evidence is therefore still missing.
+Once this is fixed, continue:
+5. Run `PRODUCTION_URL=https://<host> npm run deploy:verify`
+6. Audit CSP and security headers
+7. Confirm branch protection
+8. Close Phase 0
 
-Public-origin checks:
-- `https://myglobalroute.com/` serves a visa-consultancy site branded “Global Routes,” not this repository's migration-intelligence application. Do not treat it as the production origin without owner confirmation.
-- `https://vrenum.app/` could not be inspected by the public-page tool; that is inconclusive, not proof of outage.
+## Phase 1 follow-up
 
-Still required from the hosting owner/provider:
-1. Authoritative provider/project/custom-domain record and production hostname.
-2. Deployed commit SHA and comparison of live registries/assets against source.
-3. Live CSP and security-header evidence.
-4. Production route/calculator smoke results on the confirmed host.
-5. Main branch protection / required-check configuration.
+After the production host is fixed and verified:
+- complete the Russia/Luxembourg human sign-off
+- update `dataset.asOf` only after review is accepted
+- expand structured requirement declarations for the remaining pathways
 
-## Up next — ordered by priority
-
-### 🔴 P0-S5 BLOCKER — Do these first (production is down)
-
-1. **[OWNER ACTION] Fix Cloudflare Pages dashboard build command**
-   - Go to: CF Dashboard → Pages → `myglobalroute` → Settings → Builds & deployments
-   - Set build command: `npm run build`
-   - Set output directory: `dist`
-   - Trigger a new deploy (or the pending push will auto-trigger)
-
-2. **Confirm deployment matches HEAD** — once deploy succeeds, verify the live deployment SHA matches `495ac54` (or latest `main`)
-
-3. **Run production smoke** — `PRODUCTION_URL=https://vrenum.app npm run deploy:verify`
-
-4. **Restore canonical / OG / sitemap URLs** to `https://vrenum.app` (blocked until origin confirmed live)
-
-5. **Audit live CSP and security headers** against actual deployed third-party inventory
-
-6. **Owner: configure branch protection on `main`** — required checks, no direct push without CI pass
-
-7. **Reconcile and close P0** — update roadmap, active sprint and release verification; record P0 exit formally
-
----
-
-### 🟡 P1 — Parallel / after P0-S5 unblocks
-
-8. **P1-S1.2 human sign-off** — confirm Russia mission/jurisdiction; decide Luxembourg anchor; formally accept any exceptions; update `dataset.asOf` only after sign-off
-
-9. **P1-REQ structured requirements** — expand from 19 declarations (9 pathways) toward remaining 47 unstructured pathways; prioritise high-traffic routes
-
-10. **P1-ROUTE recommendation quality** — continue stale/mismatched evidence tests, alternatives, missing-input and broader requirement-boundary regression coverage
-
-11. **P1-SEO** — unblock canonical SEO work once production origin is confirmed; continue legacy metadata/links and editorial audit
-
-12. **P1-PRIV** — review draft data inventory, confirm retention and contact ownership, complete legal review, real-browser accessibility checks (consent UI unvalidated)
-
----
-
-**Sprint status: P0-S5 partially unblocked (root cause fixed). Production deploy pending dashboard fix. Release remains NO-GO until production smoke passes.**
+**Sprint status: production deployment is externally blocked by custom-domain/DNS ownership. Release remains NO-GO until the host is confirmed and verified.**

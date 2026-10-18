@@ -1,8 +1,13 @@
 # Global Route — Full Task Spec
 
-**Generated:** 2026-10-15 | **Source:** ACTIVE_SPRINT, PHASE_STATUS, EXECUTION_ROADMAP, PROJECT_ASSESSMENT  
+**Generated:** 2026-10-17 | **Source:** ACTIVE_SPRINT, PHASE_STATUS, EXECUTION_ROADMAP, PROJECT_ASSESSMENT  
 **Release:** NO-GO until P0-S5 closes  
 **Execution rule:** implement → verify → document → commit. A task is not done because a file exists.
+
+## Current next task
+
+**P0-S5-1 — Resolve production hostname ownership / Cloudflare custom-domain routing**  
+This is the immediate task because the live deployment is blocked by a Cloudflare API error: `Hostname 'vrenum.app' already has externally managed DNS records`. Until that ownership or hostname issue is resolved, the project cannot complete a live deployment or close Phase 0.
 
 ---
 
@@ -56,34 +61,34 @@
 **What:** For each of AU-skilled, NZ-skilled, RU-study, RU-work — either find high-confidence primary-source evidence that closes the gap, or write a formal exception record explaining why the pathway stays research_required indefinitely.  
 **Accept:** Each pathway has either been promoted (with evidence) or has a `permanentBlocker` field with a dated rationale. No pathway stays research_required by default.
 
-### P1-REQ-1 · Structured requirements — DE pathways (DE-study, DE-opportunity-card)
+### P1-REQ-1 · Structured requirements — DE pathways (DE-study, DE-opportunity-card) [COMPLETE]
 **What:** Add evidence-backed requirement declarations for both DE pathways. Minimum fields: eligibility, financial-requirement, language-requirement (if applicable).  
 **Source:** DAAD, Make it in Germany, German missions  
-**Accept:** Declarations committed to `pathway-requirements.json`. Evidence records added. `npm run requirements:readiness` shows DE pathways covered. Tests pass.
+**Status:** Complete. Encoded `admission_offer`, `minimum_funds` (€1,091/month), and `minimum_points_score` (6 points) with evidence IDs and criteria.
 
-### P1-REQ-2 · Structured requirements — FR pathways (FR-study, FR-talent)
+### P1-REQ-2 · Structured requirements — FR pathways (FR-study, FR-talent) [COMPLETE]
 **What:** Add declarations for both FR pathways.  
 **Source:** Campus France, French Ministry of Interior  
-**Accept:** Same as P1-REQ-1 for FR.
+**Status:** Complete. Encoded `admission_offer`, `minimum_funds` (€877.50/month), `job_offer`, and `minimum_annual_salary` (€59,373/year) with evidence IDs.
 
-### P1-REQ-3 · Structured requirements — JP pathways (JP-student, JP-engineer)
+### P1-REQ-3 · Structured requirements — JP pathways (JP-student, JP-engineer) [COMPLETE]
 **What:** Add declarations for both JP pathways.  
 **Source:** JASSO, METI, Japanese Embassy  
-**Accept:** Same as P1-REQ-1 for JP.
+**Status:** Complete. Encoded `admission_offer` and `job_offer` with matching official evidence records.
 
-### P1-REQ-4 · Structured requirements — PT pathways (PT-study, PT-digital-nomad)
+### P1-REQ-4 · Structured requirements — PT pathways (PT-study, PT-digital-nomad) [COMPLETE]
 **What:** Add declarations for both PT pathways.  
 **Source:** SEF/AIMA, Portuguese consulates  
-**Accept:** Same as P1-REQ-1 for PT.
+**Status:** Complete. Encoded `admission_offer` and `job_offer` declarations with evidence links.
 
-### P1-REQ-5 · Structured requirements — ES pathways (ES-study, ES-digital-nomad)
+### P1-REQ-5 · Structured requirements — ES pathways (ES-study, ES-digital-nomad) [COMPLETE]
 **What:** Add declarations for both ES pathways.  
 **Source:** Spanish Ministry of Foreign Affairs, Exteriores  
-**Accept:** Same as P1-REQ-1 for ES.
+**Status:** Complete. Encoded `admission_offer` and `job_offer` declarations with evidence links.
 
-### P1-REQ-6 · Structured requirements — remaining 37 unstructured pathways
+### P1-REQ-6 · Structured requirements — remaining unstructured pathways [ACTIVE]
 **What:** Expand structured declarations to all remaining pathways without declarations. Batch by region: Nordics (NO, IS), Baltics (LT), Central Europe (CZ, PL, HU, MT), Asia (KR, CN), Oceania (AU-student, NZ-student), Americas (CA, GB remaining).  
-**Accept:** All 56 pathways have at least eligibility + financial-requirement declarations. `requirements:readiness` shows 0 unstructured. Tests pass.
+**Status:** Partially completed. Added declarations for NO (`NO-study`, `NO-work`), IS (`IS-study`, `IS-work`), LT (`LT-study`, `LT-work`), CZ (`CZ-study`, `CZ-work`), PL (`PL-study`, `PL-work`), HU (`HU-study`, `HU-work`), MT (`MT-study`, `MT-work`), and LU (`LU-study`, `LU-work`). Overall coverage stands at 49 declarations across 35 pathways (21 pathways remaining).
 
 ### P1-ROUTE-1 · Stale/mismatched evidence behavior
 **What:** Route engine must surface a warning when a matched pathway has evidence older than its `reviewAfter` date. Add tests for: evidence overdue → recommendation includes staleness flag; evidence missing → route suppressed or flagged.  

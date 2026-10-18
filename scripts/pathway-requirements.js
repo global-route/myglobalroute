@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const schema = JSON.parse(fs.readFileSync(path.join(__dirname, '../src/data/pathway-requirement-schema.json'), 'utf8'));
 const REQUIREMENT_FIELDS = Object.freeze(Object.fromEntries(
-  Object.entries(schema.fields).map(([field, definition]) => [field, { kind: definition.kind, evidenceField: definition.evidenceField }])
+  Object.entries(schema.fields).map(([field, definition]) => [field, { kind: definition.kind, evidenceField: definition.evidenceField, unit: definition.unit }])
 ));
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
@@ -84,7 +84,8 @@ function validateRequirement(requirement, pathway, evidenceById, validationDate 
     if (requirement.field === 'minimum_annual_salary' && (typeof requirement.notes !== 'string' || !requirement.notes.trim())) fail('minimum_annual_salary requires notes describing threshold caveats and exceptions');
   } else if (definition?.kind === 'number') {
     if (typeof requirement.value !== 'number' || !Number.isFinite(requirement.value) || requirement.value < 0) fail('numeric value must be a non-negative finite number');
-    if (requirement.unit !== 'years') fail('unit must be years');
+    const expectedUnit = definition.unit || 'years';
+    if (requirement.unit !== expectedUnit) fail(`unit must be ${expectedUnit}`);
   } else if (definition?.kind === 'language') {
     if (typeof requirement.value !== 'object' || requirement.value === null || Array.isArray(requirement.value)) fail('language value must be a structured object');
     else {

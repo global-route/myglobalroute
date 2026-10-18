@@ -2,6 +2,25 @@
 
 Dates reflect repository commits; a changelog entry is not release approval.
 
+## 2026-10-18 — Structured requirement expansion, source anchor alignment, and runtime configuration
+
+- Expanded structured requirement declarations from 19 across 9 pathways to 49 declarations across 35 of 56 pathways (62.5% coverage):
+  - Germany: added admission offer, minimum living funds (€1,091/month), and Opportunity Card minimum points score (6 points with language/qualifications criteria).
+  - France: added student admission offer, minimum monthly living funds (€877.50/month), and Talent Passport job offer with minimum annual salary (€59,373/year).
+  - Norway: added student admission offer, documented minimum funds (NOK 170,368/year), and skilled worker job offer.
+  - Portugal: added higher education admission offer and digital nomad employment contract.
+  - Spain: added higher education admission offer and international telework job contract.
+  - Japan: added student Certificate of Eligibility / admission offer and Engineer/Specialist job offer.
+  - Central, Baltic & Nordic Europe: added evidence-backed admission offer and job offer declarations for Luxembourg (`LU-study`, `LU-work`), Lithuania (`LT-study`, `LT-work`), Iceland (`IS-study`, `IS-work`), Hungary (`HU-study`, `HU-work`), Poland (`PL-study`, `PL-work`), Malta (`MT-study`, `MT-work`), and Czechia (`CZ-study`, `CZ-work`).
+  - Refreshed evidence review dates (`reviewAfter: "2026-11-18"`) across all modified addenda batches.
+- Corrected numeric unit validation in `scripts/pathway-requirements.js` to respect custom definition units (e.g., `points` for `minimum_points_score`) instead of assuming only `years`.
+- Source review sign-offs:
+  - Updated Luxembourg (`LU`) national anchor in `src/data/countries.json` and `docs/data/country-source-review-manifest.json` directly to the official Guichet immigration portal (`https://guichet.public.lu/en/citoyens/immigration.html`).
+  - Recorded Russia (`RU`) source review policy in manifest: Central MFA (`https://mid.ru/en/`) confirmed as authoritative national portal anchor; territorial consular missions (such as Embassy in Nigeria) designated for operational applicant-market checklists.
+- Deployment configuration: aligned Worker project name in `wrangler.jsonc` to `"globalroute"` and enabled `workers_dev: true` and `preview_urls: true`. Production release remains **NO-GO** due to Cloudflare custom domain DNS conflict on `vrenum.app` (Error 100117).
+- Testing and CI remain paused per user instructions; changes remain unvalidated on live runners.
+
+
 ## 2026-10-11 — Structured maintenance-balance requirement
 
 - Added a dedicated `minimum_maintenance_funds` field so a required available balance is not misrepresented as annual spending.

@@ -77,7 +77,7 @@
       "retrievedAt": "2026-09-13",
       "methodology": "Direct review of current Luxembourg government guidance for third-country salaried workers.",
       "confidence": "high",
-      "reviewAfter": "2026-10-13"
+      "reviewAfter": "2026-11-18"
     },
     {
       "id": "LU-work-finance-2026-09-13",
@@ -92,7 +92,7 @@
       "retrievedAt": "2026-09-13",
       "methodology": "Direct review of Luxembourg government social-minimum-wage guidance; no unsupported universal numeric salary is asserted.",
       "confidence": "high",
-      "reviewAfter": "2026-10-13"
+      "reviewAfter": "2026-11-18"
     }
   ]
 }

@@ -536,6 +536,20 @@
       "evidenceIds": [
         "DE-study-eligibility-2026-09-12",
         "DE-study-finance-2026-09-12"
+      ],
+      "requirements": [
+        {
+          "id": "DE-study-admission-offer-2025-10-30",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Germany",
+          "effectiveDate": "2025-10-30",
+          "sourceUrl": "https://www.auswaertiges-amt.de/en/visa-service/buergerservice/faq/606850-606850",
+          "evidenceIds": [
+            "DE-study-eligibility-2026-09-12"
+          ]
+        }
       ]
     },
     {
@@ -549,6 +563,43 @@
       "evidenceIds": [
         "DE-opportunity-card-eligibility-2026-09-12",
         "DE-opportunity-card-finance-2026-09-12"
+      ],
+      "requirements": [
+        {
+          "id": "DE-opportunity-card-minimum-funds-monthly-2026-09-12",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 1091,
+          "currency": "EUR",
+          "period": "monthly",
+          "jurisdiction": "Germany",
+          "effectiveDate": "2026-09-12",
+          "sourceUrl": "https://www.make-it-in-germany.com/en/visa-residence/opportunity-card/job-search",
+          "evidenceIds": [
+            "DE-opportunity-card-finance-2026-09-12"
+          ],
+          "conditions": {
+            "componentsIncluded": [
+              "living expenses"
+            ],
+            "notes": "Minimum €1,091 net per month for the duration of the job-search stay via blocked account or declaration of commitment; qualifying part-time employment can be counted."
+          },
+          "notes": "€1,091 net per month via blocked account or formal declaration of commitment for the Opportunity Card job-search period."
+        },
+        {
+          "id": "DE-opportunity-card-minimum-points-score-2026-09-12",
+          "field": "minimum_points_score",
+          "kind": "number",
+          "value": 6,
+          "unit": "points",
+          "jurisdiction": "Germany",
+          "effectiveDate": "2026-09-12",
+          "sourceUrl": "https://www.make-it-in-germany.com/en/visa-residence/opportunity-card/job-search",
+          "evidenceIds": [
+            "DE-opportunity-card-eligibility-2026-09-12"
+          ],
+          "notes": "Points route requires qualifying foreign qualification and a minimum score of 6 points. Alternatively, full recognition of a foreign vocational or academic qualification in Germany provides direct access without points."
+        }
       ]
     },
     {
@@ -588,6 +639,42 @@
       "evidenceIds": [
         "FR-study-eligibility-2026-09-12",
         "FR-study-finance-2026-09-12"
+      ],
+      "requirements": [
+        {
+          "id": "FR-study-admission-offer-2026-09-12",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "France",
+          "effectiveDate": "2026-09-12",
+          "sourceUrl": "https://france-visas.gouv.fr/en/web/france-visas/etudiant",
+          "evidenceIds": [
+            "FR-study-eligibility-2026-09-12"
+          ]
+        },
+        {
+          "id": "FR-study-minimum-funds-monthly-2026-08-01",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 877.5,
+          "currency": "EUR",
+          "period": "monthly",
+          "jurisdiction": "France",
+          "effectiveDate": "2026-08-01",
+          "sourceUrl": "https://www.france-visas.gouv.fr/en/web/france-visas/",
+          "evidenceIds": [
+            "FR-study-finance-2026-09-12"
+          ],
+          "conditions": {
+            "applicationDateFrom": "2026-08-01",
+            "componentsIncluded": [
+              "living expenses"
+            ],
+            "notes": "Proof of resources corresponding to at least €877.50 per month for long-stay study applications submitted from 1 August 2026."
+          },
+          "notes": "€877.50 per month for long-stay study visa applications submitted from 1 August 2026."
+        }
       ]
     },
     {
@@ -601,6 +688,35 @@
       "evidenceIds": [
         "FR-talent-eligibility-2026-09-12",
         "FR-talent-finance-2026-09-12"
+      ],
+      "requirements": [
+        {
+          "id": "FR-talent-job-offer-2026-09-12",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "France",
+          "effectiveDate": "2026-09-12",
+          "sourceUrl": "https://www.france-visas.gouv.fr/en/web/france-visas/talents-internationaux-et-attractivite-economique",
+          "evidenceIds": [
+            "FR-talent-eligibility-2026-09-12"
+          ]
+        },
+        {
+          "id": "FR-talent-minimum-annual-salary-2025-08-21",
+          "field": "minimum_annual_salary",
+          "kind": "money",
+          "value": 59373,
+          "currency": "EUR",
+          "period": "annual",
+          "jurisdiction": "France",
+          "effectiveDate": "2025-08-21",
+          "sourceUrl": "https://www.france-visas.gouv.fr/en/web/france-visas/talents-internationaux-et-attractivite-economique",
+          "evidenceIds": [
+            "FR-talent-finance-2026-09-12"
+          ],
+          "notes": "€59,373 gross reference annual salary effective 21 August 2025; EU Blue Card subcategory requires at least 1.5 times the gross reference salary."
+        }
       ]
     },
     {
@@ -614,6 +730,21 @@
       "evidenceIds": [
         "HU-study-eligibility-2026-09-28",
         "HU-study-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "HU-study-admission-offer-2026-01-01",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Hungary",
+          "effectiveDate": "2026-01-01",
+          "sourceUrl": "https://oif.gov.hu/factsheets/residence-permit-for-the-purpose-of-studies",
+          "evidenceIds": [
+            "HU-study-eligibility-2026-09-28"
+          ],
+          "notes": "Valid acceptance letter from a Hungarian higher-education institution required for residence permit for study."
+        }
       ]
     },
     {
@@ -627,6 +758,21 @@
       "evidenceIds": [
         "HU-work-eligibility-2026-09-28",
         "HU-work-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "HU-work-job-offer-2026-01-01",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Hungary",
+          "effectiveDate": "2026-01-01",
+          "sourceUrl": "https://oif.gov.hu/factsheets/residence-permit-for-the-purpose-of-employment",
+          "evidenceIds": [
+            "HU-work-eligibility-2026-09-28"
+          ],
+          "notes": "Valid job offer from a Hungarian employer required subject to labour-market test and quota rules."
+        }
       ]
     },
     {
@@ -764,6 +910,42 @@
       "evidenceIds": [
         "NO-study-eligibility-2026-09-14",
         "NO-study-finance-2026-09-14"
+      ],
+      "requirements": [
+        {
+          "id": "NO-study-admission-offer-2026-09-14",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Norway",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://www.udi.no/en/want-to-apply/studies/",
+          "evidenceIds": [
+            "NO-study-eligibility-2026-09-14"
+          ],
+          "notes": "Full-time admission to an accredited university college or university in Norway required for a study residence permit."
+        },
+        {
+          "id": "NO-study-minimum-funds-annual-2026-09-14",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 170368,
+          "currency": "NOK",
+          "period": "annual",
+          "jurisdiction": "Norway",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://www.udi.no/en/want-to-apply/studies/studietillatelse/",
+          "evidenceIds": [
+            "NO-study-finance-2026-09-14"
+          ],
+          "conditions": {
+            "componentsIncluded": [
+              "living expenses"
+            ],
+            "notes": "NOK 170,368 required for full academic year (or NOK 15,488 per month). Semester-specific requirements apply for one-semester studies."
+          },
+          "notes": "NOK 170,368 per academic year (or NOK 15,488 per month) for living expenses for higher-education study permit."
+        }
       ]
     },
     {
@@ -777,6 +959,21 @@
       "evidenceIds": [
         "NO-work-eligibility-2026-09-14",
         "NO-work-finance-2026-09-14"
+      ],
+      "requirements": [
+        {
+          "id": "NO-work-job-offer-2026-09-14",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Norway",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/",
+          "evidenceIds": [
+            "NO-work-eligibility-2026-09-14"
+          ],
+          "notes": "Concrete full-time (or at least 80%) job offer from an employer in Norway requiring skilled qualifications."
+        }
       ]
     },
     {
@@ -790,6 +987,21 @@
       "evidenceIds": [
         "LU-work-eligibility-2026-09-13",
         "LU-work-finance-2026-09-13"
+      ],
+      "requirements": [
+        {
+          "id": "LU-work-job-offer-2026-09-13",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Luxembourg",
+          "effectiveDate": "2026-09-13",
+          "sourceUrl": "https://guichet.public.lu/en/entreprises/ressources-humaines/recrutement/ressortissant-pays-tiers/plus-3-mois/salarie.html",
+          "evidenceIds": [
+            "LU-work-eligibility-2026-09-13"
+          ],
+          "notes": "Job offer from an employer in Luxembourg required; employer must complete ADEM vacancy declaration unless an exemption applies."
+        }
       ]
     },
     {
@@ -803,6 +1015,21 @@
       "evidenceIds": [
         "LU-study-eligibility-2026-09-28",
         "LU-study-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "LU-study-admission-offer-2026-01-01",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Luxembourg",
+          "effectiveDate": "2026-01-01",
+          "sourceUrl": "https://guichet.public.lu/en/citoyens/immigration/plus-3-mois/ressortissant-tiers/etudiant.html",
+          "evidenceIds": [
+            "LU-study-eligibility-2026-09-28"
+          ],
+          "notes": "Enrolment or admission offer at a recognised Luxembourg educational institution required for study stay authorisation."
+        }
       ]
     },
     {
@@ -816,6 +1043,21 @@
       "evidenceIds": [
         "LT-study-eligibility-2026-09-28",
         "LT-study-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "LT-study-admission-offer-2026-01-01",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Lithuania",
+          "effectiveDate": "2026-01-01",
+          "sourceUrl": "https://migracija.lrv.lt/en/services-for-foreigners/temporary-residence-permit/for-studies/",
+          "evidenceIds": [
+            "LT-study-eligibility-2026-09-28"
+          ],
+          "notes": "Valid acceptance letter from a Lithuanian higher-education institution required for study temporary residence permit."
+        }
       ]
     },
     {
@@ -829,6 +1071,21 @@
       "evidenceIds": [
         "LT-work-eligibility-2026-09-28",
         "LT-work-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "LT-work-job-offer-2026-01-01",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Lithuania",
+          "effectiveDate": "2026-01-01",
+          "sourceUrl": "https://migracija.lrv.lt/en/services-for-foreigners/temporary-residence-permit/for-work/",
+          "evidenceIds": [
+            "LT-work-eligibility-2026-09-28"
+          ],
+          "notes": "Valid employment contract or job offer from a Lithuanian employer required for work temporary residence permit."
+        }
       ]
     },
     {
@@ -842,6 +1099,21 @@
       "evidenceIds": [
         "IS-study-eligibility-2026-09-28",
         "IS-study-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "IS-study-admission-offer-2026-01-01",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Iceland",
+          "effectiveDate": "2026-01-01",
+          "sourceUrl": "https://island.is/en/o/directorate-of-immigration",
+          "evidenceIds": [
+            "IS-study-eligibility-2026-09-28"
+          ],
+          "notes": "Acceptance at a recognised Icelandic educational institution required for study residence permit."
+        }
       ]
     },
     {
@@ -855,6 +1127,21 @@
       "evidenceIds": [
         "IS-work-eligibility-2026-09-28",
         "IS-work-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "IS-work-job-offer-2026-01-01",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Iceland",
+          "effectiveDate": "2026-01-01",
+          "sourceUrl": "https://island.is/en/o/directorate-of-immigration",
+          "evidenceIds": [
+            "IS-work-eligibility-2026-09-28"
+          ],
+          "notes": "Confirmed job offer from an Icelandic employer required with satisfaction of labour-market test or shortage occupation conditions."
+        }
       ]
     },
     {
@@ -868,6 +1155,21 @@
       "evidenceIds": [
         "PT-study-eligibility-2026-09-13",
         "PT-study-finance-2026-09-13"
+      ],
+      "requirements": [
+        {
+          "id": "PT-study-admission-offer-2026-09-13",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Portugal",
+          "effectiveDate": "2026-09-13",
+          "sourceUrl": "https://aima.gov.pt/pt/estudar/autorizacao-de-residencia-emitida-a-estudantes-do-ensino-superior-art-o-91",
+          "evidenceIds": [
+            "PT-study-eligibility-2026-09-13"
+          ],
+          "notes": "Proof of enrolment or admission to an eligible higher-education institution in Portugal required under Article 91."
+        }
       ]
     },
     {
@@ -881,6 +1183,21 @@
       "evidenceIds": [
         "PT-digital-nomad-eligibility-2026-09-13",
         "PT-digital-nomad-finance-2026-09-13"
+      ],
+      "requirements": [
+        {
+          "id": "PT-digital-nomad-job-offer-2026-09-13",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Portugal",
+          "effectiveDate": "2026-09-13",
+          "sourceUrl": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-o-exercicio-de-atividade-profissional-prestada-de-forma-remota-com-visto-de-residencia-para-o-exe",
+          "evidenceIds": [
+            "PT-digital-nomad-eligibility-2026-09-13"
+          ],
+          "notes": "Proof of foreign employment contract or service relationship with an entity or clients outside Portugal required for the remote-work residence route."
+        }
       ]
     },
     {
@@ -894,6 +1211,21 @@
       "evidenceIds": [
         "ES-study-eligibility-2026-09-12",
         "ES-study-finance-2026-09-12"
+      ],
+      "requirements": [
+        {
+          "id": "ES-study-admission-offer-2025-11-01",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Spain",
+          "effectiveDate": "2025-11-01",
+          "sourceUrl": "https://inclusion.gob.es/en/web/migraciones/w/estancia-por-estudios",
+          "evidenceIds": [
+            "ES-study-eligibility-2026-09-12"
+          ],
+          "notes": "Admission to a recognized higher education or qualifying full-time study institution in Spain required with proof of fee payment or enrolment."
+        }
       ]
     },
     {
@@ -907,6 +1239,21 @@
       "evidenceIds": [
         "ES-digital-nomad-eligibility-2026-09-12",
         "ES-digital-nomad-finance-2026-09-12"
+      ],
+      "requirements": [
+        {
+          "id": "ES-digital-nomad-job-offer-2026-09-12",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Spain",
+          "effectiveDate": "2026-09-12",
+          "sourceUrl": "https://www.inclusion.gob.es/en/web/unidadgrandesempresas/teletrabajadores",
+          "evidenceIds": [
+            "ES-digital-nomad-eligibility-2026-09-12"
+          ],
+          "notes": "Proof of remote employment or professional services relationship with company located outside Spain; Spanish business activities capped at 20% max."
+        }
       ]
     },
     {
@@ -963,6 +1310,21 @@
       "evidenceIds": [
         "JP-student-status-2026-09-07",
         "JP-student-finance-2026-09-14"
+      ],
+      "requirements": [
+        {
+          "id": "JP-student-admission-offer-2026-09-07",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Japan",
+          "effectiveDate": "2026-09-07",
+          "sourceUrl": "https://www.moj.go.jp/isa/applications/guide/kanri_qa.html",
+          "evidenceIds": [
+            "JP-student-status-2026-09-07"
+          ],
+          "notes": "Admission to a qualifying educational institution in Japan is required for Student (留学) status of residence."
+        }
       ]
     },
     {
@@ -976,6 +1338,21 @@
       "evidenceIds": [
         "JP-engineer-status-2026-09-07",
         "JP-engineer-finance-2026-09-14"
+      ],
+      "requirements": [
+        {
+          "id": "JP-engineer-job-offer-2026-09-07",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Japan",
+          "effectiveDate": "2026-09-07",
+          "sourceUrl": "https://www.moj.go.jp/isa/applications/resources/nyukan_nyukan69.html?hl=en&lang=tk",
+          "evidenceIds": [
+            "JP-engineer-status-2026-09-07"
+          ],
+          "notes": "Contract with a Japanese public or private organization required for Engineer / Specialist in Humanities / International Services status."
+        }
       ]
     },
     {
@@ -1041,6 +1418,21 @@
       "evidenceIds": [
         "PL-study-eligibility-2026-09-28",
         "PL-study-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "PL-study-admission-offer-2026-01-01",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Poland",
+          "effectiveDate": "2026-01-01",
+          "sourceUrl": "https://www.gov.pl/web/udsc-en/study",
+          "evidenceIds": [
+            "PL-study-eligibility-2026-09-28"
+          ],
+          "notes": "Acceptance or enrolment letter from a recognized Polish higher-education institution required for temporary residence permit for study."
+        }
       ]
     },
     {
@@ -1054,6 +1446,21 @@
       "evidenceIds": [
         "PL-work-eligibility-2026-09-28",
         "PL-work-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "PL-work-job-offer-2026-01-01",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Poland",
+          "effectiveDate": "2026-01-01",
+          "sourceUrl": "https://www.gov.pl/web/udsc-en/work",
+          "evidenceIds": [
+            "PL-work-eligibility-2026-09-28"
+          ],
+          "notes": "Valid employment contract or job offer from a Polish employer with prior work permit or declaration of entrustment required."
+        }
       ]
     },
     {
@@ -1067,6 +1474,21 @@
       "evidenceIds": [
         "MT-study-eligibility-2026-09-28",
         "MT-study-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "MT-study-admission-offer-2026-01-01",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Malta",
+          "effectiveDate": "2026-01-01",
+          "sourceUrl": "https://identita.gov.mt/residence-permits/",
+          "evidenceIds": [
+            "MT-study-eligibility-2026-09-28"
+          ],
+          "notes": "Acceptance letter from a recognised Maltese educational institution required for study residence permit."
+        }
       ]
     },
     {
@@ -1080,6 +1502,21 @@
       "evidenceIds": [
         "MT-work-eligibility-2026-09-28",
         "MT-work-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "MT-work-job-offer-2026-01-01",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Malta",
+          "effectiveDate": "2026-01-01",
+          "sourceUrl": "https://identita.gov.mt/single-permit/",
+          "evidenceIds": [
+            "MT-work-eligibility-2026-09-28"
+          ],
+          "notes": "Confirmed job offer from a Maltese employer required for Single Permit application subject to labour-market clearance."
+        }
       ]
     },
     {
@@ -1139,6 +1576,21 @@
       "evidenceIds": [
         "CZ-study-eligibility-2026-09-28",
         "CZ-study-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "CZ-study-admission-offer-2026-01-01",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Czechia",
+          "effectiveDate": "2026-01-01",
+          "sourceUrl": "https://mv.gov.cz/mvcren/article/third-country-nationals.aspx",
+          "evidenceIds": [
+            "CZ-study-eligibility-2026-09-28"
+          ],
+          "notes": "Acceptance letter from an accredited Czech higher-education institution required for long-term study residence permit."
+        }
       ]
     },
     {
@@ -1152,6 +1604,21 @@
       "evidenceIds": [
         "CZ-work-eligibility-2026-09-28",
         "CZ-work-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "CZ-work-job-offer-2026-01-01",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Czechia",
+          "effectiveDate": "2026-01-01",
+          "sourceUrl": "https://mv.gov.cz/mvcren/article/employee-card.aspx",
+          "evidenceIds": [
+            "CZ-work-eligibility-2026-09-28"
+          ],
+          "notes": "Confirmed job offer from a Czech employer for a position registered in the central vacancy database for Employee Card holders."
+        }
       ]
     }
   ]

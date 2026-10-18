@@ -2,11 +2,19 @@
 
 > **Historical verification candidate — 2026-10-11:** commit [`ec0f02c2b2d171d98262d8a3fc4adc807bbe3328`](https://github.com/global-route/myglobalroute/commit/ec0f02c2b2d171d98262d8a3fc4adc807bbe3328) added route-engine monthly-income and experience boundary tests before the user paused testing. No test or CI work is being run now; all subsequent non-test implementation, data/schema and documentation changes remain unvalidated. Last fully verified source-tree SHA remains `89998ab5410aceb6dede8e997dae0b836d3b4d92`.
 
-**Reconciled:** 2026-10-11 | **Branch:** `main` | **Latest verified implementation SHA:** `9ed09f07e9e7b73b62884da02fc406ccdb40f10a` | **Latest verified source-tree SHA:** `89998ab5410aceb6dede8e997dae0b836d3b4d92` (Quality Gate, Lint and Browser Smoke all pass on this exact SHA). Earlier implementation/data and CI-workflow checkpoints remain recorded below as historical evidence.  
+**Reconciled:** 2026-10-18 | **Branch:** `main` | **Latest verified implementation SHA:** `9ed09f07e9e7b73b62884da02fc406ccdb40f10a` | **Latest verified source-tree SHA:** `89998ab5410aceb6dede8e997dae0b836d3b4d92` (Quality Gate, Lint and Browser Smoke all pass on this exact SHA). Earlier implementation/data and CI-workflow checkpoints remain recorded below as historical evidence.  
 **Active work:** P0 production verification + P1 data/route-quality work  
 **Release:** **NO-GO**
 
 > This supersedes stale September status/counts. See `PROJECT_ASSESSMENT.md`, `PHASE_STATUS.md`, `EXECUTION_ROADMAP.md` and `../sprints/ACTIVE_SPRINT.md` for authoritative detail.
+
+## Non-test progress after the last verified checkpoint — 2026-10-18
+
+- Structured requirements now total 49 evidence-linked declarations across 35/56 pathways (62.5% coverage); 21 remain without structured declarations. Missing declarations remain unknown.
+- Added declarations across DE, FR, JP, PT, ES, NO, LU, LT, IS, HU, PL, MT, and CZ. Fixed custom unit check in requirement validator.
+- Updated Luxembourg source anchor to Guichet immigration portal and recorded Russia MFA national anchor sign-off and consulate checklist scope.
+- Reconciled Worker name in `wrangler.jsonc` to `"globalroute"` and enabled `workers_dev: true` / `preview_urls: true`.
+- Testing and CI remain paused per user instructions; changes remain unvalidated on live runners; production release remains **NO-GO** due to custom domain DNS conflict on `vrenum.app` (Error 100117).
 
 ## Non-test progress after the last verified checkpoint — 2026-10-11
 
@@ -31,14 +39,14 @@ Implementation SHA: `9ed09f07e9e7b73b62884da02fc406ccdb40f10a`
 - Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394817
 - Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38145394822
 
-The route engine now rejects malformed declared funds/income/experience thresholds rather than interpreting them as zero. Existing regression coverage covers funds boundaries, malformed thresholds, no-match outcomes and recommendation limits. Current structured requirements total 19 declarations across 9/56 pathways; 47 remain unstructured. Country review still requires human sign-off. Official Russian Embassy-in-Nigeria visa material has been located, but product target-market scope and mission/jurisdiction coverage remain unresolved. `dataset.asOf=2026-09-05` remains unchanged. Production verification is not established by CI; P0-S5 is open and release remains NO-GO.
+The route engine now rejects malformed declared funds/income/experience thresholds rather than interpreting them as zero. Existing regression coverage covers funds boundaries, malformed thresholds, no-match outcomes and recommendation limits. Current structured requirements total 49 declarations across 35/56 pathways; 21 remain unstructured. Country review still requires human sign-off. Official Russian Embassy-in-Nigeria visa material has been located, but product target-market scope and mission/jurisdiction coverage remain unresolved. `dataset.asOf=2026-09-05` remains unchanged. Production verification is not established by CI; P0-S5 is open and release remains NO-GO.
 
 ## Previous verified baseline
 
 - Implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426`: Quality Gate [PASS](https://github.com/global-route/myglobalroute/actions/runs/38144112572), Lint [PASS](https://github.com/global-route/myglobalroute/actions/runs/38144112454), Browser Smoke [PASS](https://github.com/global-route/myglobalroute/actions/runs/38144112490), all on the same SHA.
 - 26 countries; 56 pathways (52 publishable / 4 research_required); 193 evidence records.
 - Latest recorded freshness inventory: 193 current, 0 overdue, 0 missing and 0 invalid review dates.
-- Structured requirements: 19 declarations across 9 pathways; 47/56 have no structured declarations.
+- Structured requirements: 49 declarations across 35 pathways; 21/56 have no structured declarations.
 - `countries.json` `dataset.asOf=2026-09-05` is stale and needs a source-by-source review before it is changed.
 
 ## Completed

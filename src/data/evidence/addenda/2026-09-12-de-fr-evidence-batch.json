@@ -17,7 +17,7 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current German Federal Foreign Office study-visa guidance",
       "confidence": "high",
-      "reviewAfter": "2026-10-12"
+      "reviewAfter": "2026-11-18"
     },
     {
       "id": "DE-study-finance-2026-09-12",
@@ -32,7 +32,7 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current German Federal Foreign Office financing guidance",
       "confidence": "high",
-      "reviewAfter": "2026-10-12"
+      "reviewAfter": "2026-11-18"
     },
     {
       "id": "DE-opportunity-card-eligibility-2026-09-12",
@@ -47,7 +47,7 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current German government Opportunity Card guidance",
       "confidence": "high",
-      "reviewAfter": "2026-10-12"
+      "reviewAfter": "2026-11-18"
     },
     {
       "id": "DE-opportunity-card-finance-2026-09-12",
@@ -62,7 +62,7 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current German government Opportunity Card financing guidance",
       "confidence": "high",
-      "reviewAfter": "2026-10-12"
+      "reviewAfter": "2026-11-18"
     },
     {
       "id": "FR-study-eligibility-2026-09-12",
@@ -77,7 +77,7 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current France-Visas student guidance",
       "confidence": "high",
-      "reviewAfter": "2026-10-12"
+      "reviewAfter": "2026-11-18"
     },
     {
       "id": "FR-study-finance-2026-09-12",
@@ -92,7 +92,7 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current France-Visas student campaign notice",
       "confidence": "high",
-      "reviewAfter": "2026-10-12"
+      "reviewAfter": "2026-11-18"
     },
     {
       "id": "FR-talent-eligibility-2026-09-12",
@@ -107,7 +107,7 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current France-Visas international-talent guidance",
       "confidence": "high",
-      "reviewAfter": "2026-10-12"
+      "reviewAfter": "2026-11-18"
     },
     {
       "id": "FR-talent-finance-2026-09-12",
@@ -122,7 +122,7 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current France-Visas international-talent salary guidance",
       "confidence": "high",
-      "reviewAfter": "2026-10-12"
+      "reviewAfter": "2026-11-18"
     },
     {
       "id": "ES-study-eligibility-2026-09-12",
@@ -137,7 +137,7 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current Spanish government study-stay guidance",
       "confidence": "high",
-      "reviewAfter": "2026-10-12"
+      "reviewAfter": "2026-11-18"
     },
     {
       "id": "ES-study-finance-2026-09-12",
@@ -152,7 +152,7 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current Spanish government financial-means guidance",
       "confidence": "high",
-      "reviewAfter": "2026-10-12"
+      "reviewAfter": "2026-11-18"
     },
     {
       "id": "ES-digital-nomad-eligibility-2026-09-12",
@@ -167,7 +167,7 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current Spanish UGE teleworker guidance and FAQ",
       "confidence": "high",
-      "reviewAfter": "2026-10-12"
+      "reviewAfter": "2026-11-18"
     },
     {
       "id": "ES-digital-nomad-finance-2026-09-12",
@@ -182,7 +182,7 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current Spanish UGE international-teleworker FAQ",
       "confidence": "high",
-      "reviewAfter": "2026-10-12"
+      "reviewAfter": "2026-11-18"
     }
   ]
 }

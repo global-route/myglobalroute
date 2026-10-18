@@ -14,7 +14,7 @@
       "retrievedAt": "2026-09-14",
       "methodology": "Direct review of current official Study in Japan immigration-procedures guidance; recorded as a documentary evidence requirement rather than a fixed universal yen threshold.",
       "confidence": "high",
-      "reviewAfter": "2026-10-14"
+      "reviewAfter": "2026-11-18"
     },
     {
       "id": "JP-student-process-2026-09-14",
@@ -29,7 +29,7 @@
       "retrievedAt": "2026-09-14",
       "methodology": "Direct review of current official Study in Japan immigration-procedures guidance.",
       "confidence": "high",
-      "reviewAfter": "2026-10-14"
+      "reviewAfter": "2026-11-18"
     },
     {
       "id": "JP-engineer-finance-2026-09-14",
@@ -44,7 +44,7 @@
       "retrievedAt": "2026-09-14",
       "methodology": "Direct review of the Immigration Services Agency's current Engineer/Specialist in Humanities/International Services status and application guidance, with the remuneration criterion recorded without inventing a numeric salary floor.",
       "confidence": "high",
-      "reviewAfter": "2026-10-14"
+      "reviewAfter": "2026-11-18"
     },
     {
       "id": "JP-engineer-process-2026-09-14",
@@ -59,7 +59,7 @@
       "retrievedAt": "2026-09-14",
       "methodology": "Direct review of the current Immigration Services Agency status-specific application page and its document requirements.",
       "confidence": "high",
-      "reviewAfter": "2026-10-14"
+      "reviewAfter": "2026-11-18"
     }
   ]
 }
