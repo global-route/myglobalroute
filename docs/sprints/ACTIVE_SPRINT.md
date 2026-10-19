@@ -62,34 +62,26 @@ After the production host is fixed and verified:
 **Sprint status: production deployment is externally blocked by custom-domain/DNS ownership. Release remains NO-GO until the host is confirmed and verified.**
 
 
-## P1-UI — Classic UI redesign and full route audit (planned; not tested)
 
-**Plan:** `docs/product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md`
+## P1-UI — Classic UI redesign and full route audit
 
-The redesign workstream is added without displacing P0 production integrity or Phase 1 evidence quality. First enumerate the actual generated routes and inspect current templates, CSS, scripts, and data contracts. Treat reported screenshot issues as **reported — recheck** until reproduced; distinguish confirmed defects from audit-required items.
+**Plan:** `docs/product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md`  
+**Task register:** `docs/sprints/P1_UI_CLASSIC_REDESIGN_TASKS.md`  
+**Status:** Active; source-backed fixes committed, but not tested.  
+**Release:** **NO-GO** remains unchanged.
 
-| Work item | Status | Exit condition |
+| Work item | Current status | Remaining exit condition |
 |---|---|---|
-| P1-UI-A — Route/screen inventory and evidence-backed visual audit | **In progress — source pass started** | Static page source inventory and initial findings are recorded; capture the complete generated-route manifest and continue screen/state coverage |
-| P1-UI-B — Figma-ready design foundations and shared shell | **Planned** | Tokens, typography, spacing, icon rules, shared navigation/footer, focus and responsive states specified |
-| P1-UI-C — Core migration journeys | **Planned** | Homepage, country discovery/detail, route finder/results, calculator and comparison states specified against real data contracts |
-| P1-UI-D — Editorial/support route consistency | **Planned** | Blog/research duplication, article data/template/style agreement, supporting routes, metadata and error states audited |
-| P1-UI-E — Final visual/accessibility handoff | **Blocked on testing pause for verification** | Viewport and keyboard evidence captured; outstanding findings explicit; tests/CI only resume if user permits |
+| P1-UI-A — Route/screen inventory and source audit | **In progress** | Static page inventory and seven initial findings recorded; capture actual generated-route manifest and inspect every route/state |
+| P1-UI-B — Figma-ready design foundations/shared shell | **Specification drafted** | Convert tokens, components, states and responsive frames into approved design artifacts and implementation mapping |
+| P1-UI-C — Core migration journeys | **Open** | Audit and refine homepage, countries, route finder/results, calculator, comparisons, and all empty/error states |
+| P1-UI-D — Editorial/support route integrity | **Implementation advanced — Not Tested** | Blog loader schema, article URL, image path and category-card link fixes committed; inspect generated output and decide canonical blog landing/template |
+| P1-UI-E — Final visual/accessibility handoff | **Blocked on verification pause** | Capture viewport/keyboard evidence and resolve or explicitly defer findings; no tests/CI under current user instruction |
 
-**Initial evidence recorded (2026-10-19):** source inspection confirmed a blog data-field mismatch (`url`/`published_date`/`emoji` expected by the legacy loader versus `slug`/`date`/`featuredImage` in the visible JSON), category cards linking back to the blog landing page, two blog landing surfaces, and two divergent article templates/metadata contracts. These are documented in the UI/UX roadmap; runtime effects remain untested.\n\n**Execution constraints:** User direction remains to skip testing/CI. Mark implementation changes **Not Tested**; do not claim accessibility conformance, passing checks, or production readiness. Existing custom-domain/DNS/production verification blocker remains open and release stays **NO-GO**.
+**Source changes committed (not tested):**
+- Aligned the legacy blog loader with current JSON fields (`date`, `slug`/Markdown source path, `featuredImage`, and `readTime`) rather than stale `published_date`, `url`, and `emoji` fields.
+- Corrected article URL derivation to use the content path and normalized public image paths.
+- Updated category archive cards to link to the matching generated article and use the real featured image instead of the same landing-page URL/emoji placeholder.
+- These changes have not been run through build, browser, accessibility, or CI checks. Do not label them verified.
 
-## P1-UI — Classic UI redesign and full route audit (planned; not tested)
-
-**Plan:** `docs/product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md`
-
-The redesign workstream is added without displacing P0 production integrity or Phase 1 evidence quality. First enumerate the actual generated routes and inspect current templates, CSS, scripts, and data contracts. Treat reported screenshot issues as **reported — recheck** until reproduced; distinguish confirmed defects from audit-required items.
-
-| Work item | Status | Exit condition |
-|---|---|---|
-| P1-UI-A — Route/screen inventory and evidence-backed visual audit | **Planned** | Every generated route and shared state is mapped; findings have evidence, severity, confidence, and user impact |
-| P1-UI-B — Figma-ready design foundations and shared shell | **Planned** | Tokens, typography, spacing, icon rules, shared navigation/footer, focus and responsive states specified |
-| P1-UI-C — Core migration journeys | **Planned** | Homepage, country discovery/detail, route finder/results, calculator and comparison states specified against real data contracts |
-| P1-UI-D — Editorial/support route consistency | **Planned** | Blog/research duplication, article data/template/style agreement, supporting routes, metadata and error states audited |
-| P1-UI-E — Final visual/accessibility handoff | **Blocked on testing pause for verification** | Viewport and keyboard evidence captured; outstanding findings explicit; tests/CI only resume if user permits |
-
-**Execution constraints:** User direction remains to skip testing/CI. Mark implementation changes **Not Tested**; do not claim accessibility conformance, passing checks, or production readiness. Existing custom-domain/DNS/production verification blocker remains open and release stays **NO-GO**.
+**Execution constraints:** Do not run tests/CI until the user changes that instruction. Keep P0 production integrity and Phase 1 source-trust gates ahead of release. The custom-domain/DNS ownership blocker and release **NO-GO** remain open.
