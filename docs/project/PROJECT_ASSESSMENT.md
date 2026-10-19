@@ -135,3 +135,11 @@ Implementation/data SHA `95f960c081367305dea0144034d48a4ab7892426` and CI workfl
 - Current structured requirements total 19 declarations across 9/56 pathways; 47 remain unstructured. P1-REQ remains open.
 - Country-source review outcomes are recorded for all 26 anchors; relevant official pages/alternatives inspected for 25. Russia requires mission-jurisdiction confirmation for the target applicant market, and human sign-off remains required.
 - Release remains **NO-GO** until P0-S5 external production evidence and human source-review sign-off are complete.
+
+## UI/UX audit addition — 2026-10-19
+
+The repository did not contain a recognizable committed UI/UX redesign roadmap when the current `main` tree was inspected. Added `docs/product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md` as the source of truth for the redesign plan.
+
+The plan records screenshot-reported issues to recheck (contrast/hierarchy, oversized hero/actions, cramped metric cards, footer heading visibility, inconsistent whitespace, privacy-control overlap, and icon/component inconsistency) and explicitly separates these from defects confirmed by current-source inspection. It enumerates core product, editorial, supporting, error, responsive, accessibility, interaction, data-integrity, and SEO coverage. It defines Figma-first foundations and a phased UI execution sequence.
+
+**Assessment limits:** this documentation commit is not a fresh visual inspection of every page. Route enumeration and source-by-source findings remain planned. Do not treat hypotheses about blog schema/template/loader mismatch as confirmed until current files are compared. Testing and CI remain paused by user direction; no new verification is claimed. Production remains **NO-GO** on the existing deployment and human-review blockers.
