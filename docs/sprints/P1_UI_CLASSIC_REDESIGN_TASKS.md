@@ -9,7 +9,7 @@
 ## Status semantics
 
 - **Complete:** the documented task's exit evidence exists. Do not use this for work that needs browser/build/test evidence that has not been collected.
-- **Implemented — Not Tested:** source changes are committed, but no build, browser, automated test, accessibility audit, or CI verification has been run.
+- **Implemented — Not Tested:** source changes are committed, but no build, browser, automated test, accessibility audit, or CI verification has been run. This includes the privacy-control positioning rule and blog styling pass.
 - **In progress:** evidence-backed inspection or implementation has started but the full exit criteria are not met.
 - **Planned:** not yet executed.
 - **Blocked:** depends on external ownership, a user decision, or verification currently disallowed by user instruction.
@@ -24,7 +24,7 @@
 | UI-A4 | Inspect every route/template, global shell, viewport, and interaction state | **In progress** | Source-only pass started; not a full visual audit | Route-by-route evidence register with viewport, steps, file/route, severity, confidence, impact, recommendation, acceptance criteria |
 | UI-B1 | Specify classic visual foundations: colors, typography, spacing, widths, breakpoints, radii, elevation, focus | **Specification drafted** | Roadmap contains Figma-first design-system requirements | Approve actual token values and map them to implementation; create visual/design artifacts |
 | UI-B2 | Specify shared components and states | **Specification drafted** | Header, navigation, footer, buttons, forms, cards, alerts, source blocks, overlays and status states listed | Create component/state matrix and implementation mapping |
-| UI-B3 | Fix global shell, contrast, footer headings, oversized hero/actions, cramped metrics and privacy-control overlap | **Planned / audit required** | Issues remain screenshot-reported until reproduced against current source/output | Reproduce each issue, implement scoped fix, collect visual evidence; privacy overlap is a high-priority check |
+| UI-B3 | Fix global shell, contrast, footer headings, oversized hero/actions, cramped metrics and privacy-control overlap | **Partially implemented — Not Tested** | Added a narrow-screen consent/settings separation rule in `src/css/styles.css` and a restrained editorial style pass in `src/css/blog.css` | Inspect actual viewport behavior; recheck footer/hero/metrics and all other reported findings; no visual verification has been run |
 | UI-C1 | Homepage, country directory/detail, route finder/results, calculator and comparison UI | **Planned** | Core journey acceptance scope documented | Inspect and implement every relevant state without changing matching semantics or fabricating unknown requirements |
 | UI-C2 | Search, filters, validation, empty/error/loading/no-match states | **Planned** | State coverage requirements documented | Verify each control's advertised behavior and define keyboard/responsive handling |
 | UI-D1 | Align legacy blog loader with current post data fields | **Implemented — Not Tested** | `src/js/blog-loader.js` uses `date`, `featuredImage`, `readTime`, and derives article URL from Markdown source path | Inspect generated output and confirm field/path contract; no build/test run yet |
@@ -79,4 +79,4 @@
 
 ## Current handoff
 
-The source-backed blog fixes are **implemented but not tested**. The redesign is not complete: no full generated-route manifest, Figma artifact, full visual review, or accessibility verification is claimed. Continue with source inspection and implementation work that can be done safely without tests; leave verification-dependent tasks open rather than inventing completion.
+The source-backed blog fixes, narrow-screen privacy-control positioning rule, and initial blog styling pass are **implemented but not tested**. The redesign is not complete: no full generated-route manifest, Figma artifact, full visual review, or accessibility verification is claimed. Continue with source inspection and implementation work that can be done safely without tests; leave verification-dependent tasks open rather than inventing completion.
