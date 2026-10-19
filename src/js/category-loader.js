@@ -112,13 +112,13 @@ class CategoryArchiveLoader {
             <p>${this.escapeHtml(post.excerpt)}</p>
             <div class="blog-post-meta">
               <div class="blog-post-date">
-                <span>${this.formatDate(post.date)}</span>
+                <span>${this.formatDate(post.date || post.updated)}</span>
               </div>
-              <span class="blog-post-read-time">${post.readTime}</span>
+              <span class="blog-post-read-time">${this.getReadTime(post)} min read</span>
             </div>
           </div>
           <div style="padding: 1rem 1.5rem; border-top: 1px solid #e5e7eb; margin-top: auto;">
-            <a href="/pages/blog.html" class="blog-post-link">Read Article →</a>
+            <a href="${this.escapeHtml(this.getArticleUrl(post))}" class="blog-post-link">Read Article →</a>
           </div>
         </article>
       `;
