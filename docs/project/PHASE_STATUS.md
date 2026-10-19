@@ -111,7 +111,7 @@ Documentation-only checkpoint `27bcfd93780cf42416612c7f6486735f6c0ceae1` passed 
 
 - **Status:** Active; static source review and initial code corrections underway. No UI phase is complete.
 - **Completed documentation work:** redesign roadmap, seven initial source findings, and cross-links in the index, active sprint, phase status, assessment, roadmap and changelog.
-- **Implemented — Not Tested:** blog loader schema alignment, article URL generation from Markdown source paths, public image-path normalization, and category archive article links/image rendering.
+- **Implemented — Not Tested:** blog loader schema alignment, article URL generation from Markdown source paths, public image-path normalization, category archive article links/image rendering, narrow-screen consent/settings separation, and initial classic editorial styling.
 - **Still open:** full generated-route inventory, all-screen visual review, Figma/design-system artifacts, core journey implementation, canonical blog/template decision, accessibility/responsive review, generated-output inspection, and final handover.
 - **Testing constraint:** tests, build verification, browser automation and CI have not been run for these UI changes per user instruction. Do not claim they pass.
 - **Release:** Phase 0 remains blocked by authoritative production host/domain/DNS/deployed-SHA/security-header/smoke evidence. Release remains **NO-GO**.
