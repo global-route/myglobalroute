@@ -206,7 +206,7 @@ For every finding record: page/route, viewport, reproduction steps, evidence/sou
 
 - **Implemented — Not Tested:** legacy blog loader now consumes current `date`, `featuredImage`, `readTime`, and Markdown source-path fields rather than stale `published_date`, `emoji`, and `url` fields.
 - **Implemented — Not Tested:** article URLs are derived from `content/blog/...` paths; public asset paths are normalized from the source `/public/` prefix.
-- **Implemented — Not Tested:** category archive cards link to the corresponding article and use featured image data rather than a single landing-page destination and generic icon.
+- **Implemented — Not Tested:** category archive cards in both initial and load-more rendering paths link to the corresponding article and use featured image data rather than a single landing-page destination and generic icon.
 - **Partially implemented — Not Tested:** a narrow-screen CSS rule moves the persistent privacy-settings control above the visible consent panel; a restrained classic editorial pass applies shared tokens, clearer hierarchy, bordered cards, and explicit focus states to the legacy blog styles.
 - **No tests/build/browser/CI run** per user direction. Generated output, image existence, route behavior, and visual states still require inspection when verification is authorized.
 - The complete generated-route inventory, canonical blog landing/template decision, shared-shell redesign, core product journey implementation, responsive/a11y evidence and final handoff remain open. Track each item in `docs/sprints/P1_UI_CLASSIC_REDESIGN_TASKS.md`.
