@@ -9,11 +9,14 @@ Reconciled 2026-10-11. This index is the current entry point; old August sprint 
 3. ../project/EXECUTION_STATUS.md — verified baseline and P0 blockers.
 4. P0_DELIVERY_PLAN.md — P0 sprint definitions and acceptance criteria.
 5. MASTER_DELIVERY_PLAN.md — lifecycle plan through Phase 6.
-6. HANDOVER.md — ordered continuation.
+6. P1_UI_CLASSIC_REDESIGN_TASKS.md — UI redesign task status and exit gates.
+7. HANDOVER.md — ordered continuation.
 
 ## Active sprint
 
-P0-S5 — Deployment Verification & Phase 0 Exit. Active and externally blocked. Source-tree CI passes, but production origin and deployed content are not verified. Phase 0 is not complete.
+P0-S5 — Deployment Verification & Phase 0 Exit remains externally blocked. Source-tree CI is historical; production origin and deployed content are not verified. Phase 0 is not complete.
+
+P1-UI — Classic UI redesign is an active cross-cutting workstream. Use [P1 UI task register](P1_UI_CLASSIC_REDESIGN_TASKS.md) and [design roadmap](../product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md). Blog source fixes are implemented but **not tested**; no build/CI/browser checks have been run under the current user instruction. Production NO-GO and migration-data trust gates remain unchanged.
 
 ## Next independently executable sprint
 
