@@ -228,7 +228,8 @@ class BlogLoader {
     }
 
     // Skip featured post in grid
-    const gridPosts = postsToShow.length > 1 ? postsToShow.slice(1) : [];
+    const featuredPost = this.filteredPosts.find(post => post.featured) || this.filteredPosts[0];
+    const gridPosts = postsToShow.filter(post => post !== featuredPost);
 
     container.innerHTML = gridPosts.map(post => {
       const readTime = this.getReadTime(post);
@@ -273,11 +274,11 @@ class BlogLoader {
     const postsToAdd = this.filteredPosts.slice(startIndex, endIndex);
 
     const gridHtml = postsToAdd.map(post => {
-      const readTime = this.calculateReadTime(post.content);
+      const readTime = this.getReadTime(post);
       return `
         <article class="blog-post-card">
           <div class="blog-post-image">
-            ${post.emoji || '📖'}
+            ${this.renderPostImage(post)}
           </div>
           <div class="blog-post-body">
             <span class="post-category">${this.getCategoryLabel(post.category)}</span>
@@ -285,13 +286,13 @@ class BlogLoader {
             <p>${this.escapeHtml(post.excerpt)}</p>
             <div class="blog-post-meta">
               <div class="blog-post-date">
-                <span>${this.formatDate(post.published_date)}</span>
+                <span>${this.formatDate(post.date)}</span>
               </div>
               <span class="blog-post-read-time">${readTime}min</span>
             </div>
           </div>
           <div style="padding: 1rem 1.5rem; border-top: 1px solid #e5e7eb; margin-top: auto;">
-            <a href="${this.escapeHtml(post.url)}" class="blog-post-link">Read Article →</a>
+            <a href="${this.escapeHtml(this.getArticleUrl(post))}" class="blog-post-link">Read Article →</a>
           </div>
         </article>
       `;
@@ -364,9 +365,8 @@ class BlogLoader {
 
   // The JSON data points to source files; public assets are served from the public root.
   renderPostImage(post) {
-    const image = typeof post.featuredImage === 'string'
-      ? post.featuredImage.replace(/^\\/public\\//, '/')
-      : '';
+    const rawImage = typeof post.featuredImage === 'string' ? post.featuredImage : '';
+    const image = rawImage.startsWith('/public/') ? rawImage.slice('/public'.length) : rawImage;
     if (image && image.startsWith('/')) {
       return `<img src="${this.escapeHtml(image)}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">`;
     }
