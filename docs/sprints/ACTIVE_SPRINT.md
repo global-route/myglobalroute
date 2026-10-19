@@ -73,7 +73,7 @@ After the production host is fixed and verified:
 | Work item | Current status | Remaining exit condition |
 |---|---|---|
 | P1-UI-A — Route/screen inventory and source audit | **In progress** | Static page inventory and seven initial findings recorded; capture actual generated-route manifest and inspect every route/state |
-| P1-UI-B — Figma-ready design foundations/shared shell | **Specification drafted** | Convert tokens, components, states and responsive frames into approved design artifacts and implementation mapping |
+| P1-UI-B — Figma-ready design foundations/shared shell | **Specification drafted; initial CSS foundations applied** | Convert tokens, components, states and responsive frames into approved design artifacts and implementation mapping |
 | P1-UI-C — Core migration journeys | **Open** | Audit and refine homepage, countries, route finder/results, calculator, comparisons, and all empty/error states |
 | P1-UI-D — Editorial/support route integrity | **Implementation advanced — Not Tested** | Blog loader schema, article URL, image path and category-card link fixes committed; inspect generated output and decide canonical blog landing/template |
 | P1-UI-E — Final visual/accessibility handoff | **Blocked on verification pause** | Capture viewport/keyboard evidence and resolve or explicitly defer findings; no tests/CI under current user instruction |
@@ -82,6 +82,7 @@ After the production host is fixed and verified:
 - Aligned the legacy blog loader with current JSON fields (`date`, `slug`/Markdown source path, `featuredImage`, and `readTime`) rather than stale `published_date`, `url`, and `emoji` fields.
 - Corrected article URL derivation to use the content path and normalized public image paths.
 - Updated category archive cards to link to the matching generated article and use the real featured image instead of the same landing-page URL/emoji placeholder.
+- Added a narrow-screen CSS rule to move persistent privacy settings away from a visible consent panel, plus a restrained classic editorial styling pass for the legacy blog.
 - These changes have not been run through build, browser, accessibility, or CI checks. Do not label them verified.
 
 **Execution constraints:** Do not run tests/CI until the user changes that instruction. Keep P0 production integrity and Phase 1 source-trust gates ahead of release. The custom-domain/DNS ownership blocker and release **NO-GO** remain open.
