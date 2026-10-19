@@ -5,6 +5,8 @@
 - Added `docs/product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md` with a complete route/screen inventory target, reported visual issues to recheck, Figma-first design-system foundations, responsive/accessibility coverage, interaction/data integrity checks, prioritized UI sprints, and definition of done.
 - Linked the workstream from the documentation hub, active sprint, phase status, project assessment, and execution roadmap.
 - Added an initial source-backed findings register: blog field-contract mismatch, category cards linking to the landing page, duplicate blog landing surfaces, divergent article templates/metadata contracts, image-path verification, and styling-token audit targets.
+- Added `docs/sprints/P1_UI_CLASSIC_REDESIGN_TASKS.md` and reconciled the active sprint/phase tracker to a single UI workstream.
+- Committed source fixes in `src/js/blog-loader.js` and `src/js/category-loader.js` for current post fields, generated article URL derivation, public image paths, and category-card article links/image rendering. These are **Not Tested**; build/browser/CI verification was intentionally not run.
 - Enumerated static page source files and clearly noted that dynamic/generated routes still need a built-route manifest.
 - Clearly separated confirmed source mismatches from runtime behavior that has not been reproduced; no claim that all routes have already been visually inspected.
 - Preserved the original product blueprint, testing/CI pause, unresolved production deployment gates, and **NO-GO** release status.
