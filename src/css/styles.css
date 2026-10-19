@@ -697,3 +697,12 @@ a:focus {
   flex-wrap: wrap;
   gap: 0.5rem;
 }
+
+/* Keep the persistent privacy-settings control clear of the consent panel on narrow screens. */
+@media (max-width: 720px) {
+  body:has(#analytics-consent:not([hidden])) #analytics-consent-settings {
+    top: calc(env(safe-area-inset-top, 0px) + 5rem);
+    right: 0.75rem;
+    bottom: auto;
+  }
+}
