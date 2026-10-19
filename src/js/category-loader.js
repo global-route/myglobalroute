@@ -38,7 +38,7 @@ class CategoryArchiveLoader {
         container.innerHTML = `
           <div class="blog-empty-state" style="grid-column: 1 / -1;">
             <h3>No posts in this category yet</h3>
-            <p><a href="/pages/blog.html">← Back to all posts</a></p>
+            <p><a href="/blog/">← Back to all posts</a></p>
           </div>
         `;
       }
@@ -61,13 +61,13 @@ class CategoryArchiveLoader {
             <p>${this.escapeHtml(post.excerpt)}</p>
             <div class="blog-post-meta">
               <div class="blog-post-date">
-                <span>${this.formatDate(post.date)}</span>
+                <span>${this.formatDate(post.date || post.updated)}</span>
               </div>
-              <span class="blog-post-read-time">${post.readTime}</span>
+              <span class="blog-post-read-time">${this.getReadTime(post)} min read</span>
             </div>
           </div>
           <div style="padding: 1rem 1.5rem; border-top: 1px solid #e5e7eb; margin-top: auto;">
-            <a href="/pages/blog.html" class="blog-post-link">Read Article →</a>
+            <a href="${this.escapeHtml(this.getArticleUrl(post))}" class="blog-post-link">Read Article →</a>
           </div>
         </article>
       `;
@@ -130,6 +130,35 @@ class CategoryArchiveLoader {
     if (loadMoreBtn && endIndex >= this.posts.length) {
       loadMoreBtn.style.display = 'none';
     }
+  }
+
+
+  getArticleUrl(post) {
+    const sourcePath = typeof post.content === 'string' ? post.content : '';
+    if (sourcePath.startsWith('content/blog/') && sourcePath.endsWith('.md')) {
+      return '/' + sourcePath.slice('content/blog/'.length, -3) + '/';
+    }
+    if (typeof post.slug === 'string' && /^[a-z0-9-]+$/i.test(post.slug)) {
+      return '/blog/' + post.slug + '/';
+    }
+    return '/blog/';
+  }
+
+  renderPostImage(post) {
+    const image = typeof post.featuredImage === 'string'
+      ? post.featuredImage.replace(/^\\/public\\//, '/')
+      : '';
+    if (image && image.startsWith('/')) {
+      return `<img src="${this.escapeHtml(image)}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">`;
+    }
+    return '<span aria-hidden="true">📖</span>';
+  }
+
+  getReadTime(post) {
+    if (typeof post.readTime === 'string' && post.readTime.trim()) {
+      return post.readTime.replace(/\\s*min(?:ute)?s?\\s*/i, '').trim();
+    }
+    return '1';
   }
 
   getCategoryLabel(category) {
