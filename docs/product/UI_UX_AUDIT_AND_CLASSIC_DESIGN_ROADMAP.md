@@ -1,6 +1,6 @@
 # UI/UX Audit & Classic Design Roadmap
 
-**Status:** Planned — audit baseline documented; screen-by-screen implementation and visual verification remain open  
+**Status:** Active — audit baseline documented; initial blog source fixes implemented but not tested; screen-by-screen implementation and visual verification remain open  
 **Reconciled:** 2026-10-19  
 **Branch:** `main`  
 **Release impact:** This work does not change production release status. Global Route remains **NO-GO** until the existing production integrity gates are satisfied.  
@@ -201,6 +201,14 @@ For every finding record: page/route, viewport, reproduction steps, evidence/sou
 - [ ] Resolve or explicitly defer all P0/P1 findings with owners and rationale.
 - [ ] Resume tests/CI only when user direction permits; then rerun required checks on the final implementation SHA.
 - **Exit:** all routes accounted for, outstanding issues transparent, final SHA and verification evidence recorded. This UI exit does not override the separate production release gates.
+
+## 9A. Implementation checkpoint — 2026-10-19
+
+- **Implemented — Not Tested:** legacy blog loader now consumes current `date`, `featuredImage`, `readTime`, and Markdown source-path fields rather than stale `published_date`, `emoji`, and `url` fields.
+- **Implemented — Not Tested:** article URLs are derived from `content/blog/...` paths; public asset paths are normalized from the source `/public/` prefix.
+- **Implemented — Not Tested:** category archive cards link to the corresponding article and use featured image data rather than a single landing-page destination and generic icon.
+- **No tests/build/browser/CI run** per user direction. Generated output, image existence, route behavior, and visual states still require inspection when verification is authorized.
+- The complete generated-route inventory, canonical blog landing/template decision, shared-shell redesign, core product journey implementation, responsive/a11y evidence and final handoff remain open. Track each item in `docs/sprints/P1_UI_CLASSIC_REDESIGN_TASKS.md`.
 
 ## 10. Definition of done
 
