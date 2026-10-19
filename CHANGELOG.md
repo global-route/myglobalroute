@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-19 — Classic UI redesign audit and roadmap
+
+- Added `docs/product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md` with a complete route/screen inventory target, reported visual issues to recheck, Figma-first design-system foundations, responsive/accessibility coverage, interaction/data integrity checks, prioritized UI sprints, and definition of done.
+- Linked the workstream from the documentation hub, active sprint, phase status, project assessment, and execution roadmap.
+- Clearly separated confirmed project constraints from reported visual issues and audit-required hypotheses; no claim that all routes have already been visually inspected.
+- Preserved the original product blueprint, testing/CI pause, unresolved production deployment gates, and **NO-GO** release status.
+- Documentation-only change. No tests or CI were run, per user direction.
+
 Dates reflect repository commits; a changelog entry is not release approval.
 
 ## 2026-10-18 — Structured requirement expansion, source anchor alignment, and runtime configuration
