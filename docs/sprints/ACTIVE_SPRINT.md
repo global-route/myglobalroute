@@ -81,7 +81,7 @@ After the production host is fixed and verified:
 **Source changes committed (not tested):**
 - Aligned the legacy blog loader with current JSON fields (`date`, `slug`/Markdown source path, `featuredImage`, and `readTime`) rather than stale `published_date`, `url`, and `emoji` fields.
 - Corrected article URL derivation to use the content path and normalized public image paths.
-- Updated category archive cards to link to the matching generated article and use the real featured image instead of the same landing-page URL/emoji placeholder.
+- Updated category archive cards in both initial render and load-more paths to link to the matching generated article, format read time consistently, and use the real featured image instead of the same landing-page URL/emoji placeholder.
 - Added a narrow-screen CSS rule to move persistent privacy settings away from a visible consent panel, plus a restrained classic editorial styling pass for the legacy blog.
 - These changes have not been run through build, browser, accessibility, or CI checks. Do not label them verified.
 
