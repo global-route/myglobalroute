@@ -4,7 +4,9 @@
 
 - Added `docs/product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md` with a complete route/screen inventory target, reported visual issues to recheck, Figma-first design-system foundations, responsive/accessibility coverage, interaction/data integrity checks, prioritized UI sprints, and definition of done.
 - Linked the workstream from the documentation hub, active sprint, phase status, project assessment, and execution roadmap.
-- Clearly separated confirmed project constraints from reported visual issues and audit-required hypotheses; no claim that all routes have already been visually inspected.
+- Added an initial source-backed findings register: blog field-contract mismatch, category cards linking to the landing page, duplicate blog landing surfaces, divergent article templates/metadata contracts, image-path verification, and styling-token audit targets.
+- Enumerated static page source files and clearly noted that dynamic/generated routes still need a built-route manifest.
+- Clearly separated confirmed source mismatches from runtime behavior that has not been reproduced; no claim that all routes have already been visually inspected.
 - Preserved the original product blueprint, testing/CI pause, unresolved production deployment gates, and **NO-GO** release status.
 - Documentation-only change. No tests or CI were run, per user direction.
 
