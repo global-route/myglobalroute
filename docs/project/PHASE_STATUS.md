@@ -1,6 +1,6 @@
 # Phase Status — Global Route
 
-> **Reconciled:** 2026-10-18 | **Release:** **NO-GO** | **Current status:** implementation and data work are in good shape, but production identity, DNS ownership, live deployment verification, and human source sign-off remain incomplete.
+> **Reconciled:** 2026-10-19 | **Release:** **NO-GO** | **Current status:** implementation and data work are in good shape, but production identity, DNS ownership, live deployment verification, and human source sign-off remain incomplete.
 
 This is the canonical phase tracker. Historical phase/sprint documents remain useful as audit context, but the active status is governed by the current sprint board and the owner-side deployment blockers below.
 
@@ -35,14 +35,6 @@ This is the canonical phase tracker. Historical phase/sprint documents remain us
 - Source-tree CI does not prove a live deployment.
 - Do not bypass P0/P1 trust gates to scale content or revenue.
 
-## Task-status rules
-
-- Mark complete only when implementation, docs and required verification exist.
-- Publishable means evidence-backed for a defined pathway scope; it is not an approval guarantee.
-- Missing structured requirements means unknown, not zero or unrestricted.
-- Current review dates do not prove sources were all re-opened today.
-- Source-tree CI does not prove a live deployment.
-- Do not bypass P0/P1 trust gates to scale content or revenue.
 
 ## Documentation organization finding
 
@@ -111,22 +103,15 @@ Historical checkpoint before later 2026-10-11 additions: three declarations had 
 Documentation-only checkpoint `27bcfd93780cf42416612c7f6486735f6c0ceae1` passed all required source-tree workflows on the same SHA: [Quality Gate](https://github.com/global-route/myglobalroute/actions/runs/38145214511), [Lint](https://github.com/global-route/myglobalroute/actions/runs/38145214551), and [Browser Smoke](https://github.com/global-route/myglobalroute/actions/runs/38145214463). This does not change implementation/data verification or close production/human-review gates. Phase 0 and Phase 1 remain open; release remains **NO-GO**.
 
 
-## UI/UX redesign workstream — 2026-10-19
-
-A repository-managed audit and roadmap now exists at `docs/product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md`. This adds a cross-cutting product-design workstream; it does not mark any phase complete or replace the original product blueprint.
-
-- **Status:** Planned; route-by-route current-source audit and implementation remain open.
-- **Coverage target:** all generated routes, shared templates/components, responsive states, interactions, accessibility, data/content integrity, SEO and trust surfaces.
-- **Sequence:** inventory and evidence-backed audit → design foundations/shared shell → core migration journeys → editorial/support routes → handoff.
-- **Verification:** tests and CI remain paused by user direction; UI changes are not tested unless that instruction changes. No production release gate is waived.
-- **Release:** **NO-GO**; authoritative host/domain/DNS/deployed-SHA/security evidence and required human source sign-off remain separate exit gates.
 
 ## UI/UX redesign workstream — 2026-10-19
 
-A repository-managed audit and roadmap now exists at `docs/product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md`. This adds a cross-cutting product-design workstream; it does not mark any phase complete or replace the original product blueprint.
+**Task register:** `docs/sprints/P1_UI_CLASSIC_REDESIGN_TASKS.md`  
+**Design specification:** `docs/product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md`
 
-- **Status:** Planned; route-by-route current-source audit and implementation remain open.
-- **Coverage target:** all generated routes, shared templates/components, responsive states, interactions, accessibility, data/content integrity, SEO and trust surfaces.
-- **Sequence:** inventory and evidence-backed audit → design foundations/shared shell → core migration journeys → editorial/support routes → handoff.
-- **Verification:** tests and CI remain paused by user direction; UI changes are not tested unless that instruction changes. No production release gate is waived.
-- **Release:** **NO-GO**; authoritative host/domain/DNS/deployed-SHA/security evidence and required human source sign-off remain separate exit gates.
+- **Status:** Active; static source review and initial code corrections underway. No UI phase is complete.
+- **Completed documentation work:** redesign roadmap, seven initial source findings, and cross-links in the index, active sprint, phase status, assessment, roadmap and changelog.
+- **Implemented — Not Tested:** blog loader schema alignment, article URL generation from Markdown source paths, public image-path normalization, and category archive article links/image rendering.
+- **Still open:** full generated-route inventory, all-screen visual review, Figma/design-system artifacts, core journey implementation, canonical blog/template decision, accessibility/responsive review, generated-output inspection, and final handover.
+- **Testing constraint:** tests, build verification, browser automation and CI have not been run for these UI changes per user instruction. Do not claim they pass.
+- **Release:** Phase 0 remains blocked by authoritative production host/domain/DNS/deployed-SHA/security-header/smoke evidence. Release remains **NO-GO**.
