@@ -85,3 +85,7 @@ If an older document conflicts with `ACTIVE_SPRINT.md`, `EXECUTION_ROADMAP.md` o
 ## Reassessment — 2026-10-11
 
 Use `project/PHASE_STATUS.md` as the canonical phase tracker. Phase 0 exit is blocked; Phase 1 data trust and Phase 2 route decision quality remain incomplete; Phase 3 editorial cleanup is open; Phase 4 privacy/compliance/accessibility is partial (consent controls and an engineering data-inventory draft are committed but unvalidated); Phase 5 monetization is not live; Phase 6 scale is deferred. Current assessed SHA: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`. See `project/PROJECT_ASSESSMENT.md` for the full backlog.
+
+## UI / product experience
+
+- `product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md` — comprehensive route inventory, reported visual issues to recheck, Figma-first design system, accessibility/responsive coverage, interaction/data integrity, prioritized UI sprints, and definition of done. This is a planning baseline; page-by-page inspection and implementation remain open.
