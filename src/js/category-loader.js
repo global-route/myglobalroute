@@ -145,9 +145,8 @@ class CategoryArchiveLoader {
   }
 
   renderPostImage(post) {
-    const image = typeof post.featuredImage === 'string'
-      ? post.featuredImage.replace(/^\\/public\\//, '/')
-      : '';
+    const rawImage = typeof post.featuredImage === 'string' ? post.featuredImage : '';
+    const image = rawImage.startsWith('/public/') ? rawImage.slice('/public'.length) : rawImage;
     if (image && image.startsWith('/')) {
       return `<img src="${this.escapeHtml(image)}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">`;
     }
