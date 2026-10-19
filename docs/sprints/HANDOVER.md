@@ -190,3 +190,12 @@ Quality Gate output: 26 countries, 56 pathways, 193 evidence records; 0 dependen
 - Browser Smoke — PASS: https://github.com/global-route/myglobalroute/actions/runs/38144183936
 
 The application/data implementation is verified on one SHA. The later commit only added the explicit manifest check to the Quality Gate workflow and changelog; all three workflows are now green on that later SHA. Do not mark P1-S1, P0-S5, or any phase complete based on these CI results alone.
+
+## UI redesign handover — 2026-10-19
+
+- Canonical UI specification: `../product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md`.
+- Canonical UI task board: `P1_UI_CLASSIC_REDESIGN_TASKS.md`.
+- Initial blog source fixes committed to `src/js/blog-loader.js` and `src/js/category-loader.js`: field alignment, article URL derivation, image-path normalization, and category-card links/images. Status is **Implemented — Not Tested**.
+- Continue with the generated-route inventory, inspect actual output when permitted, resolve canonical blog/template architecture, then design foundations and core product journeys.
+- User instruction: do not run tests/CI. Do not infer successful build, browser behavior, accessibility conformance or release readiness.
+- P0 production DNS/domain/deployed-SHA/security evidence remains unresolved; release stays **NO-GO**.
