@@ -221,3 +221,16 @@ Same-SHA source-tree gates pass at 1284684c18a7fa311cd62c52875b38d62a354a0b: Qua
 Quality Gate output: 26 countries, 56 pathways, 193 evidence records; 0 dependency vulnerabilities; manifest synchronized; 18 suites / 122 tests passed; build integrity passed; SEO/accessibility checks passed across 168 generated HTML files. These are source-tree checks, not production verification.
 
 Current migration-data status: all 26 source anchors have recorded outcomes; 25 relevant official pages/alternatives inspected; Russia mission-jurisdiction confirmation and human sign-off remain open. Current structured requirements are 19 declarations across 9/56 pathways; 47 remain unstructured. P0-S5 remains blocked on authoritative host/deployment/security/branch-protection evidence.
+
+## Cross-cutting workstream — Classic UI / product experience (added 2026-10-19)
+
+Plan: `docs/product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md`.
+
+This workstream preserves the original Global Route north star and should proceed in dependency-aware increments:
+1. Inventory actual generated routes, templates, shared components, interactive states, and current visual evidence.
+2. Specify Figma-ready tokens, typography, spacing, icon rules, component variants, responsive behavior, and accessibility states.
+3. Apply the system to core migration journeys without changing route-matching semantics or implying unsupported requirements.
+4. Align editorial/support templates and their data contracts; retain useful content and canonical URLs.
+5. Complete visual and accessibility evidence collection and document remaining defects.
+
+Do not let visual work outrank P0 production integrity or migration-data trust. Avoid framework migration unless a separate evidence-backed architecture decision justifies it. Testing/CI remain paused by user direction; implementation must be marked **Not Tested** until verification is authorized. This workstream does not change the production **NO-GO** decision.
