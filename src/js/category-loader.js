@@ -52,8 +52,8 @@ class CategoryArchiveLoader {
     container.innerHTML = postsToShow.map(post => {
       return `
         <article class="blog-post-card">
-          <div class="blog-post-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
-            📖
+          <div class="blog-post-image">
+            ${this.renderPostImage(post)}
           </div>
           <div class="blog-post-body">
             <span class="post-category">${this.getCategoryLabel(post.category)}</span>
@@ -103,8 +103,8 @@ class CategoryArchiveLoader {
     const gridHtml = postsToAdd.map(post => {
       return `
         <article class="blog-post-card">
-          <div class="blog-post-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
-            📖
+          <div class="blog-post-image">
+            ${this.renderPostImage(post)}
           </div>
           <div class="blog-post-body">
             <span class="post-category">${this.getCategoryLabel(post.category)}</span>
