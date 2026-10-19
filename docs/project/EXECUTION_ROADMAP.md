@@ -234,3 +234,7 @@ This workstream preserves the original Global Route north star and should procee
 5. Complete visual and accessibility evidence collection and document remaining defects.
 
 Do not let visual work outrank P0 production integrity or migration-data trust. Avoid framework migration unless a separate evidence-backed architecture decision justifies it. Testing/CI remain paused by user direction; implementation must be marked **Not Tested** until verification is authorized. This workstream does not change the production **NO-GO** decision.
+
+## UI redesign execution sequence — 2026-10-19
+
+The canonical P1-UI task board is `docs/sprints/P1_UI_CLASSIC_REDESIGN_TASKS.md`; the design specification is `docs/product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md`. Initial source-backed fixes have been committed for the legacy blog loader and category archive. Status is **Implemented — Not Tested**. Continue with generated-route inventory, article route/output inspection, canonical blog/template decision, design foundations, core product journeys and supporting routes. Do not run tests/CI under the current user instruction, and do not let this workstream bypass the unresolved P0 production blocker or Phase 1 human source-review gates.
