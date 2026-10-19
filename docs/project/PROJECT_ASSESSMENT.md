@@ -147,3 +147,7 @@ The plan records screenshot-reported issues to recheck (contrast/hierarchy, over
 ## UI redesign execution update — 2026-10-19
 
 The P1-UI task register is now maintained at `docs/sprints/P1_UI_CLASSIC_REDESIGN_TASKS.md`. The active sprint and phase tracker have been reconciled to one UI workstream entry. Initial code corrections are committed in `src/js/blog-loader.js` and `src/js/category-loader.js`: current JSON field alignment, article URL derivation, public image path normalization, category card article links, and actual featured-image rendering. These changes are **Implemented — Not Tested**; no build, browser, accessibility or CI verification was run. The full route inventory, canonical blog/template decision, core journey redesign, responsive and accessibility evidence, and Figma artifact remain open. Existing Phase 0 and migration-data trust gates are unchanged; release remains **NO-GO**.
+
+## UI styling follow-up — 2026-10-19
+
+Additional source-level UI corrections have been committed: the persistent privacy-settings control is repositioned when the consent panel is visible on narrow screens, and the legacy blog receives a restrained editorial styling pass using the existing design tokens, more deliberate heading/metric/card hierarchy, and clearer focus states. These are **Not Tested**. Other reported visual findings remain audit-required until reproduced and reviewed across the actual routes.
