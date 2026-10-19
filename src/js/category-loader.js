@@ -136,7 +136,7 @@ class CategoryArchiveLoader {
   getArticleUrl(post) {
     const sourcePath = typeof post.content === 'string' ? post.content : '';
     if (sourcePath.startsWith('content/blog/') && sourcePath.endsWith('.md')) {
-      return '/' + sourcePath.slice('content/blog/'.length, -3) + '/';
+      return '/blog/' + sourcePath.slice('content/blog/'.length, -3) + '/';
     }
     if (typeof post.slug === 'string' && /^[a-z0-9-]+$/i.test(post.slug)) {
       return '/blog/' + post.slug + '/';
@@ -155,7 +155,7 @@ class CategoryArchiveLoader {
 
   getReadTime(post) {
     if (typeof post.readTime === 'string' && post.readTime.trim()) {
-      return post.readTime.replace(/\\s*min(?:ute)?s?\\s*/i, '').trim();
+      return post.readTime.toLowerCase().replace('minutes', '').replace('minute', '').replace('mins', '').replace('min', '').trim();
     }
     return '1';
   }
