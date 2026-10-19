@@ -70,13 +70,13 @@ The redesign workstream is added without displacing P0 production integrity or P
 
 | Work item | Status | Exit condition |
 |---|---|---|
-| P1-UI-A — Route/screen inventory and evidence-backed visual audit | **Planned** | Every generated route and shared state is mapped; findings have evidence, severity, confidence, and user impact |
+| P1-UI-A — Route/screen inventory and evidence-backed visual audit | **In progress — source pass started** | Static page source inventory and initial findings are recorded; capture the complete generated-route manifest and continue screen/state coverage |
 | P1-UI-B — Figma-ready design foundations and shared shell | **Planned** | Tokens, typography, spacing, icon rules, shared navigation/footer, focus and responsive states specified |
 | P1-UI-C — Core migration journeys | **Planned** | Homepage, country discovery/detail, route finder/results, calculator and comparison states specified against real data contracts |
 | P1-UI-D — Editorial/support route consistency | **Planned** | Blog/research duplication, article data/template/style agreement, supporting routes, metadata and error states audited |
 | P1-UI-E — Final visual/accessibility handoff | **Blocked on testing pause for verification** | Viewport and keyboard evidence captured; outstanding findings explicit; tests/CI only resume if user permits |
 
-**Execution constraints:** User direction remains to skip testing/CI. Mark implementation changes **Not Tested**; do not claim accessibility conformance, passing checks, or production readiness. Existing custom-domain/DNS/production verification blocker remains open and release stays **NO-GO**.
+**Initial evidence recorded (2026-10-19):** source inspection confirmed a blog data-field mismatch (`url`/`published_date`/`emoji` expected by the legacy loader versus `slug`/`date`/`featuredImage` in the visible JSON), category cards linking back to the blog landing page, two blog landing surfaces, and two divergent article templates/metadata contracts. These are documented in the UI/UX roadmap; runtime effects remain untested.\n\n**Execution constraints:** User direction remains to skip testing/CI. Mark implementation changes **Not Tested**; do not claim accessibility conformance, passing checks, or production readiness. Existing custom-domain/DNS/production verification blocker remains open and release stays **NO-GO**.
 
 ## P1-UI — Classic UI redesign and full route audit (planned; not tested)
 
