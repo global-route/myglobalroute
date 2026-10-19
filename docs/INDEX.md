@@ -93,3 +93,5 @@ Use `project/PHASE_STATUS.md` as the canonical phase tracker. Phase 0 exit is bl
 ## UI / product experience
 
 - `product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md` — comprehensive route inventory, reported visual issues to recheck, Figma-first design system, accessibility/responsive coverage, interaction/data integrity, prioritized UI sprints, and definition of done. This is a planning baseline; page-by-page inspection and implementation remain open.
+
+- `sprints/P1_UI_CLASSIC_REDESIGN_TASKS.md` — detailed P1-UI task register, status semantics, current source-backed implementation, and remaining exit gates.
