@@ -134,3 +134,7 @@ The application/data implementation is verified on one SHA. The later commit onl
 ## Documentation checkpoint CI — 2026-10-11
 
 Documentation-only checkpoint `27bcfd93780cf42416612c7f6486735f6c0ceae1` passed Quality Gate (https://github.com/global-route/myglobalroute/actions/runs/38145214511), Lint (https://github.com/global-route/myglobalroute/actions/runs/38145214551), and Browser Smoke (https://github.com/global-route/myglobalroute/actions/runs/38145214463) on the same SHA. The implementation/data SHA remains `95f960c081367305dea0144034d48a4ab7892426`; these checks do not verify production. Human source-review sign-off and P0-S5 remain open; release stays **NO-GO**.
+
+## Current UI implementation checkpoint — 2026-10-19
+
+The classic UI redesign is tracked in `docs/sprints/P1_UI_CLASSIC_REDESIGN_TASKS.md`. Source-backed blog loader and category archive fixes have been committed, but are **Not Tested**. The route-by-route visual audit, generated output manifest, canonical blog/template decision, Figma artifacts, core journey redesign, and accessibility/responsive evidence remain open. Testing/CI are paused by user direction. No phase closure or release decision changes; production remains **NO-GO**.
