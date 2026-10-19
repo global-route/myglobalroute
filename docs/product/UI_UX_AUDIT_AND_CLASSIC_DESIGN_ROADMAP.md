@@ -134,6 +134,26 @@ Visual polish must not hide missing or uncertain data.
 - [ ] Keep source date, review status, uncertainty, and disclaimer close to the claims they qualify.
 - [ ] Preserve search indexing, canonical URLs, internal linking, and existing useful content during visual refactors.
 
+## 7A. Initial source-backed findings register — 2026-10-19
+
+This is a static source inspection of the current repository files, not a browser reproduction or test run. These findings are stronger than screenshot-only hypotheses but still need runtime/visual confirmation. Testing/CI were not run.
+
+| ID | Finding | Evidence in current source | Priority | Confidence / impact | Next action |
+|---|---|---|---|---|---|
+| UI-001 | Blog loader expects fields that do not match the visible blog JSON schema | `src/js/blog-loader.js` renders `post.url`, `post.published_date`, and `post.emoji`; `src/data/blog-posts.json` records visibly use `slug`, `date`, and `featuredImage` | P1 | **Source mismatch confirmed**; actual broken display/link behavior not runtime-tested | Define one canonical post contract; map slug to generated article URL and date/image fields; add fallback only where semantically correct |
+| UI-002 | Category archive cards all link back to the blog landing page instead of the specific article | `src/js/category-loader.js` renders `href="/pages/blog.html"` for each card, in both initial render and load-more render paths | P1 | **Source behavior confirmed**; category cards cannot navigate directly to their own article from this handler | Generate a canonical article URL per record and use it in both render paths; check category archive route convention |
+| UI-003 | Two blog landing experiences are present | Static `src/pages/blog.html` loads `/js/blog-loader.js`; `content/blog/index.njk` defines permalink `/blog/index.html` and renders content-driven posts | P1 | **Duplicate surfaces confirmed in source**; which one is canonical requires route/link and build-output review | Select a canonical landing experience, map internal links/redirects/canonical metadata, and preserve article content/SEO equity |
+| UI-004 | Two article templates exist with different markup contracts | `src/templates/blog-post.njk` uses `.post-header`, `.post-content`, `.sidebar`; `src/templates/blog-post.html` uses `.article-hero`, `.article-content`, `.article-sidebar` | P1 | **Template divergence confirmed**; actual generation usage and CSS mismatch require generator/route tracing | Trace each template's consumers and generated routes; converge on one supported article template or document a justified separation |
+| UI-005 | Article template contract and metadata naming are inconsistent | Nunjucks template uses `date`, `image`, `content`; HTML template uses `published_date`, `featured_image`, `page_url`, and related fields | P1 | **Contract divergence confirmed**; downstream metadata defects need generated-output inspection | Define canonical front-matter/data fields and explicitly map them to SEO/schema/social metadata |
+| UI-006 | Article data includes image paths under `/public/blog/images/` | Visible `featuredImage` values in `src/data/blog-posts.json` use that prefix | P1 | **Path values confirmed**, asset existence and deployed URL correctness not yet verified | Compare the image paths to actual public asset locations and generated URLs; avoid broken image fallbacks |
+| UI-007 | Design system uses a small set of global tokens but needs an inventory for consistency | `src/css/styles.css` defines root color/spacing/type tokens; `src/css/blog.css` and `src/css/blog-post.css` contain page-specific visual systems | P2 | **Multiple styling layers confirmed**; visual inconsistency is not automatically a defect | Audit token reuse, duplicate overrides, contrast, responsive rules and component states before broad CSS changes |
+
+### Current static page inventory (source tree)
+
+The current `src/pages/` directory contains: `about.html`, `blog-category-business-playbooks.html`, `blog-category-case-studies.html`, `blog-category-country-audits.html`, `blog-category-guides.html`, `blog-category-policy-updates.html`, `blog-category-professional-playbooks.html`, `blog-category-student-playbooks.html`, `blog.html`, `business-playbook.html`, `calculator.html`, `contact.html`, `countries.html`, `disclaimer.html`, `faq.html`, `find-my-route.html`, `privacy.html`, `professional-playbook.html`, `student-playbook.html`, and `terms.html`.
+
+Additional route families are generated from `content/countries.njk`, `content/pathways.njk`, `content/pathways/pathway.njk`, `content/blog/index.njk`, and the Markdown content tree. This list is therefore a **source-file inventory, not a complete generated-route manifest**. The actual built route list still needs to be captured before declaring route coverage complete.
+
 ## 8. Technical inspection map
 
 Review these source areas and expand the inventory based on the current recursive repository tree and generated routes:
