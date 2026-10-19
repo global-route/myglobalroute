@@ -109,3 +109,14 @@ Historical checkpoint before later 2026-10-11 additions: three declarations had 
 ## Documentation checkpoint CI — 2026-10-11
 
 Documentation-only checkpoint `27bcfd93780cf42416612c7f6486735f6c0ceae1` passed all required source-tree workflows on the same SHA: [Quality Gate](https://github.com/global-route/myglobalroute/actions/runs/38145214511), [Lint](https://github.com/global-route/myglobalroute/actions/runs/38145214551), and [Browser Smoke](https://github.com/global-route/myglobalroute/actions/runs/38145214463). This does not change implementation/data verification or close production/human-review gates. Phase 0 and Phase 1 remain open; release remains **NO-GO**.
+
+
+## UI/UX redesign workstream — 2026-10-19
+
+A repository-managed audit and roadmap now exists at `docs/product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md`. This adds a cross-cutting product-design workstream; it does not mark any phase complete or replace the original product blueprint.
+
+- **Status:** Planned; route-by-route current-source audit and implementation remain open.
+- **Coverage target:** all generated routes, shared templates/components, responsive states, interactions, accessibility, data/content integrity, SEO and trust surfaces.
+- **Sequence:** inventory and evidence-backed audit → design foundations/shared shell → core migration journeys → editorial/support routes → handoff.
+- **Verification:** tests and CI remain paused by user direction; UI changes are not tested unless that instruction changes. No production release gate is waived.
+- **Release:** **NO-GO**; authoritative host/domain/DNS/deployed-SHA/security evidence and required human source sign-off remain separate exit gates.
