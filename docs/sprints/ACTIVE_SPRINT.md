@@ -28,6 +28,7 @@ Continue only the owner-side deployment and evidence tasks that can be completed
 | P1-SEO | Editorial/technical SEO | **Implementation advanced; open** | Canonical origin remains blocked until production host is confirmed; legacy metadata and editorial cleanup remain open |
 | P1-PRIV | Privacy/compliance/accessibility | **Implementation advanced; open** | Consent/contact/provider behavior still unvalidated; legal review and live-browser checks remain open |
 | P1-REV | Monetization readiness | **Foundations only; not live** | Provider approval, consent, disclosures and revenue reconciliation remain required |
+| P1-SEO-GROWTH | SEO, organic acquisition & AdSense readiness | **Plan added; foundations only** | See P1_SEO_GROWTH_ADSENSE_TASKS.md; production origin, SEO cleanup, privacy/provider review and approval gates remain open |
 
 ## Current production blocker
 
@@ -86,3 +87,11 @@ After the production host is fixed and verified:
 - These changes have not been run through build, browser, accessibility, or CI checks. Do not label them verified.
 
 **Execution constraints:** Do not run tests/CI until the user changes that instruction. Keep P0 production integrity and Phase 1 source-trust gates ahead of release. The custom-domain/DNS ownership blocker and release **NO-GO** remain open.
+
+
+## P1-SEO-GROWTH & AdSense readiness
+
+**Task register:** docs/sprints/P1_SEO_GROWTH_ADSENSE_TASKS.md  
+**Status:** Planned; related SEO, consent and monetization foundations exist, but this workstream is not complete and no live AdSense approval or revenue is claimed.
+
+The sequence is production-origin resolution → technical/editorial SEO and content trust → consent-aware measurement and Search Console → AdSense eligibility/privacy review → approved, restrained placement → ongoing policy/revenue/user-experience monitoring. AdMob is deferred unless a native mobile app receives a separate product scope. Do not enable live ads or mark this workstream complete while provider, production, legal/privacy and verification gates remain open. Production **NO-GO** remains unchanged.
