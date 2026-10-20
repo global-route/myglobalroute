@@ -238,3 +238,20 @@ Do not let visual work outrank P0 production integrity or migration-data trust. 
 ## UI redesign execution sequence — 2026-10-19
 
 The canonical P1-UI task board is `docs/sprints/P1_UI_CLASSIC_REDESIGN_TASKS.md`; the design specification is `docs/product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md`. Initial source-backed fixes have been committed for the legacy blog loader and category archive. Status is **Implemented — Not Tested**. Continue with generated-route inventory, article route/output inspection, canonical blog/template decision, design foundations, core product journeys and supporting routes. Do not run tests/CI under the current user instruction, and do not let this workstream bypass the unresolved P0 production blocker or Phase 1 human source-review gates.
+
+
+## P1-SEO-GROWTH — Organic acquisition & AdSense readiness (added 2026-10-20)
+
+Canonical task register: [docs/sprints/P1_SEO_GROWTH_ADSENSE_TASKS.md](../sprints/P1_SEO_GROWTH_ADSENSE_TASKS.md).
+
+Deliver in dependency order:
+
+1. **Production identity first:** resolve the external DNS/custom-domain issue, confirm the authoritative origin and deployed SHA, and complete production gates when testing is authorized.
+2. **Technical SEO:** inventory generated routes and indexability; audit titles/descriptions, canonical and social metadata, internal links, structured data, sitemap and robots rules. Do not guess the canonical origin.
+3. **Content quality and search intent:** finish blog/template decisions; prioritize useful, original, evidence-backed country/pathway guides and fact-check existing claims. Avoid thin programmatic content or unsupported legal/financial assertions.
+4. **Measurement:** establish Search Console after domain verification and create a privacy-conscious analytics event plan for organic landing → route finder → results → calculator/product actions. Record baselines; do not promise rankings or traffic.
+5. **AdSense readiness:** review current eligibility and policies, consent/disclosure requirements and provider configuration; map restrained, clearly labelled placements that do not obstruct core journeys. Apply and integrate only after appropriate gates and approval.
+6. **Operations:** monitor indexing, query performance, useful conversion, policy status, ad revenue and user experience; define a rollback owner. Forecast revenue only from explicit assumptions and measured data.
+7. **AdMob:** defer until a native Android/iOS app is an explicit product scope; it is not the website-ad solution.
+
+**Dependencies and status:** Phase 3 content/SEO and Phase 5 growth remain open; Phase 4 privacy/provider review is required. Advertising-consent scaffolding exists but is not a compliance sign-off. Production remains **NO-GO**; no live AdSense approval, placement or revenue is claimed. Testing/CI remain paused under current user direction.
