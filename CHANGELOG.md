@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-20 — SEO growth and AdSense workstream
+
+- Added docs/sprints/P1_SEO_GROWTH_ADSENSE_TASKS.md with a phased task register for technical SEO, editorial/search-intent improvements, Search Console, consent-aware analytics, AdSense eligibility/approval, safe placements, revenue/policy monitoring and deferred native-app AdMob.
+- Linked the workstream from the active sprint, sprint index, phase status, execution roadmap and documentation index.
+- Clarified that SEO, content acquisition and monetization are related but distinct; existing consent/ad-slot foundations do not mean AdSense is approved or live.
+- Preserved the production **NO-GO** decision, the unresolved hostname/DNS blocker, and the user-directed testing/CI pause. This is documentation-only; no code, tests, build, browser checks or CI were run.
+
 ## 2026-10-19 — Classic UI redesign audit and roadmap
 
 - Added `docs/product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md` with a complete route/screen inventory target, reported visual issues to recheck, Figma-first design-system foundations, responsive/accessibility coverage, interaction/data integrity checks, prioritized UI sprints, and definition of done.
