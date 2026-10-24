@@ -19,7 +19,7 @@
     X-Frame-Options = "DENY"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com; frame-ancestors 'none'"
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.google-analytics.com https://www.sabilytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com https://www.sabilytics.com; frame-ancestors 'none'"
 
 [[headers]]
   for = "/*.html"
