@@ -14,21 +14,31 @@ permalink: "pages/countries/{{ country.id }}/index.html"
   <title>{{ country.name }} Migration Intelligence | Global Route</title>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/enhancements.css">
+  <link rel="canonical" href="https://mypathway2global.org.uk/pages/countries/{{ country.id }}/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body data-page-type="country">
   <a href="#main" class="skip-link">Skip to main content</a>
   <header id="header" class="header">
     <div class="header-container">
       <div class="logo"><a href="/" class="logo-link"><span class="logo-icon">🌍</span><span class="logo-text">Global Route</span></a></div>
       <nav class="navigation" aria-label="Primary">
         <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-        <ul class="nav-menu"><li><a href="/">Home</a></li><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-my-route.html">Find My Route</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/content/blog/">Research</a></li></ul>
+        <ul class="nav-menu"><li><a href="/">Home</a></li><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-my-route.html" class="nav-cta">Find My Route &rarr;</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Research</a></li><li><a href="/pages/about.html">About</a></li></ul>
       </nav>
     </div>
   </header>
 
   <main id="main" class="main">
-    <section class="hero"><div class="hero-content"><p><a href="/pages/countries.html">← 26-country directory</a></p><h1>{{ country.flag }} {{ country.name }}</h1><p class="hero-subtitle">Evidence-gated migration intelligence. Current country data status: <strong>{{ country.dataStatus }}</strong>.</p></div></section>
+    <div class="page-header">
+      <div class="container">
+        <p style="margin-bottom:0.75rem;"><a href="/pages/countries.html" style="color:rgba(255,255,255,0.65);font-size:0.875rem;">&larr; 26-country directory</a></p>
+        <h1>{{ country.flag }} {{ country.name }}</h1>
+        <p class="page-header-subtitle">Evidence-gated migration intelligence &mdash; data status: <strong style="color:#fed7aa;">{{ country.dataStatus }}</strong></p>
+      </div>
+    </div>
     <section class="content-section"><div class="container">
       <div class="card"><h2>Country evidence status</h2>
         <p>{{ country.summary or 'Country intelligence is being verified against primary sources.' }}</p>
@@ -43,6 +53,18 @@ permalink: "pages/countries/{{ country.id }}/index.html"
           <article class="evidence-item">
             <h3><a href="/pathways/{{ pathway.id }}/">{{ pathway.name }}</a></h3>
             <p>{{ pathway.type | title }} · <strong>{{ pathway.status }}</strong></p>
+            {% if pathway.status == "publishable" and pathway.requirements %}
+              <ul class="route-requirements">
+                {% for req in pathway.requirements | slice(0, 3) %}
+                  <li>{{ req.field | replace('_', ' ') | title }}: {% if req.currency %}{{ req.currency }} {% endif %}{{ req.value }}</li>
+                {% endfor %}
+              </ul>
+              <p><a href="/pathways/{{ pathway.id }}/">Full details →</a></p>
+            {% elif pathway.status == "research_required" %}
+              <p class="evidence-note">{{ pathway.permanentBlocker }}</p>
+            {% else %}
+              <p><a href="/pathways/{{ pathway.id }}/">View pathway →</a></p>
+            {% endif %}
             <p><a href="{{ pathway.sourceUrl }}" target="_blank" rel="noopener noreferrer">Official source →</a></p>
           </article>
         {% else %}
@@ -59,7 +81,7 @@ permalink: "pages/countries/{{ country.id }}/index.html"
     </div></section>
     <aside class="container" data-ad-slot="ad_country_mid" hidden aria-label="Advertisement"></aside>
 </main>
-  <footer id="footer" class="footer"><div class="footer-content"><div class="footer-section"><h4>Global Route</h4><p>Evidence-gated global mobility intelligence.</p></div><div class="footer-section"><h4>Trust</h4><ul><li><a href="/pages/privacy.html">Privacy</a></li><li><a href="/pages/disclaimer.html">Disclaimer</a></li><li><a href="/pages/terms.html">Terms</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 Global Route. All rights reserved.</p></div></footer>
+  <footer id="footer" class="footer"><div class="footer-content"><div class="footer-section"><h4>Global Route</h4><p>Evidence-gated global mobility intelligence.</p></div><div class="footer-section"><h4>Explore</h4><ul><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-my-route.html">Find My Route</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Research</a></li></ul></div><div class="footer-section"><h4>Guides</h4><ul><li><a href="/pages/student-playbook.html">Student</a></li><li><a href="/pages/professional-playbook.html">Professional</a></li><li><a href="/pages/business-playbook.html">Business</a></li></ul></div><div class="footer-section"><h4>Trust</h4><ul><li><a href="/pages/privacy.html">Privacy</a></li><li><a href="/pages/disclaimer.html">Disclaimer</a></li><li><a href="/pages/terms.html">Terms</a></li><li><a href="/pages/contact.html">Contact</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 Global Route. All rights reserved.</p></div></footer>
   <script src="/js/monetization.js"></script>
   <script src="/js/analytics.js"></script>
   <script src="/js/app.js"></script>

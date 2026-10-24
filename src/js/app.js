@@ -42,6 +42,15 @@ const GlobalRoute = (() => {
     if (!navToggle || !navMenu) return;
     navToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
     navMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navMenu.classList.remove('active')));
+    // Active state: match current path to nav links
+    const path = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+    navMenu.querySelectorAll('a').forEach(link => {
+      const href = link.getAttribute('href').replace(/\.html$/, '').replace(/\/$/, '') || '/';
+      const current = path.replace(/\/$/, '') || '/';
+      if (href === current || (href !== '/' && current.startsWith(href))) {
+        link.classList.add('active');
+      }
+    });
   };
 
   const initializeSearch = () => {
@@ -71,15 +80,28 @@ const GlobalRoute = (() => {
       });
 
       if (grid) {
-        grid.innerHTML = filtered.map(country => `
+        grid.innerHTML = filtered.length ? filtered.map(country => {
+          const cost = country.trueCost?.total != null
+            ? `${escapeHtml(country.trueCost.currency)} ${escapeHtml(String(country.trueCost.total))}`
+            : '<span style="color:var(--color-neutral-400)">Not yet verified</span>';
+          const rate = country.africanRate != null
+            ? escapeHtml(country.africanRate)
+            : '<span style="color:var(--color-neutral-400)">Not published</span>';
+          const statusColour = country.dataStatus === 'publishable' ? 'var(--color-secondary)' : 'var(--color-warning)';
+          return `
           <article class="country-card" id="${escapeHtml(country.id)}">
-            <div class="country-card-header"><span>${escapeHtml(country.flag)}</span><h3><a href="/pages/countries/${encodeURIComponent(country.id)}/">${escapeHtml(country.name)}</a></h3></div>
-            <p>${escapeHtml(country.summary || 'Country pathway intelligence is being verified.')}</p>
-            <p><strong>Data status:</strong> ${escapeHtml(country.dataStatus || 'unknown')}</p>
-            <p><strong>Approval rate:</strong> ${country.africanRate == null ? 'Not published / not verified' : escapeHtml(country.africanRate)}</p>
-            <p><strong>Planning cost:</strong> ${country.trueCost?.total == null ? 'Not yet verified' : `${escapeHtml(country.trueCost.currency)} ${escapeHtml(country.trueCost.total)}`}</p>
-          </article>
-        `).join('') || '<p>No countries match the selected filters.</p>';
+            <div class="country-card-header">
+              <span style="font-size:1.75rem;line-height:1;" aria-hidden="true">${escapeHtml(country.flag)}</span>
+              <h3 style="margin-bottom:0;"><a href="/pages/countries/${encodeURIComponent(country.id)}/">${escapeHtml(country.name)}</a></h3>
+              <span style="margin-left:auto;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:${statusColour};">${escapeHtml(country.dataStatus || 'unknown')}</span>
+            </div>
+            <p style="font-size:0.875rem;color:var(--color-neutral-600);margin:0.5rem 0 0.75rem;">${escapeHtml(country.summary || 'Country pathway intelligence is being verified.')}</p>
+            <dl style="display:grid;grid-template-columns:auto 1fr;gap:0.2rem 0.75rem;font-size:0.8rem;margin:0;">
+              <dt style="color:var(--color-neutral-500);font-weight:600;">African rate</dt><dd style="margin:0;">${rate}</dd>
+              <dt style="color:var(--color-neutral-500);font-weight:600;">Planning cost</dt><dd style="margin:0;">${cost}</dd>
+            </dl>
+          </article>`;
+        }).join('') : '<p style="grid-column:1/-1;color:var(--color-neutral-500);">No countries match the selected filters.</p>';
       }
 
       if (tableBody) {
@@ -138,10 +160,13 @@ const GlobalRoute = (() => {
 
     list.innerHTML = countries.map(country => `
       <article class="country-result">
-        <h4>${escapeHtml(country.flag)} ${escapeHtml(country.name)}</h4>
-        <p>Verified planning cost: ${escapeHtml(country.trueCost.currency)} ${escapeHtml(country.trueCost.total)}</p>
-        <p>Affordability: ${escapeHtml(country.affordability.rating)}</p>
-        <a href="/pages/countries/${encodeURIComponent(country.id)}/">Country evidence →</a>
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+          <span style="font-size:1.5rem;" aria-hidden="true">${escapeHtml(country.flag)}</span>
+          <h4 style="margin:0;">${escapeHtml(country.name)}</h4>
+          <span style="margin-left:auto;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--color-secondary);">${escapeHtml(country.affordability.rating)}</span>
+        </div>
+        <p style="font-size:0.875rem;color:var(--color-neutral-600);margin:0 0 0.5rem;">Verified planning cost: <strong>${escapeHtml(country.trueCost.currency)} ${escapeHtml(String(country.trueCost.total))}</strong></p>
+        <a href="/pages/countries/${encodeURIComponent(country.id)}/" style="font-size:0.875rem;font-weight:600;">View country evidence &rarr;</a>
       </article>
     `).join('');
     container.style.display = 'block';

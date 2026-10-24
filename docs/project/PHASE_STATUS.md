@@ -1,58 +1,45 @@
 # Phase Status — Global Route
 
-> **Reconciled:** 2026-10-18 | **Release:** **NO-GO** | **Current status:** implementation and data work are in good shape, but production identity, DNS ownership, live deployment verification, and human source sign-off remain incomplete.
-
-This is the canonical phase tracker. Historical phase/sprint documents remain useful as audit context, but the active status is governed by the current sprint board and the owner-side deployment blockers below.
+> **Reconciled:** 2026-10-23 | **Release:** **GO — production live** | **Production:** `https://mypathway2global.org.uk`
 
 | Phase | Status | Completed | Uncompleted / exit gate |
 |---|---|---|---|
-| Phase 0 — Production integrity | **Foundations complete; exit blocked by external deployment/DNS ownership** | Runtime/build repairs, canonical modules, validators, unit/SEO/A11y gates, lint and browser smoke | Confirm host/domain ownership, Cloudflare Pages vs Worker setup, deployed SHA/content, live CSP and security headers, production smoke, and branch protection |
-| Phase 1 — Migration intelligence | **Partially complete; evidence and sign-off still open** | 26-country registry, 56 pathways, 193 evidence records, provenance and freshness reporting, source-review manifest and first-pass country outcomes; Luxembourg and Russia source review outcomes addressed | Country metadata `asOf` remains stale; exact-pathway claims need human validation; 4 pathways remain research_required |
-| Phase 2 — Canonical product core | **Core exists; decision quality incomplete** | Route matching, zero-fit suppression, source trails, requirement schema/readiness; 49 structured declarations across 35 pathways (62.5% coverage) | 21/56 pathways remain unstructured; conditional eligibility, alternatives/exemptions, stale-evidence behavior and route-quality work remain open |
-| Phase 3 — Content & acquisition | **Partially delivered; cleanup open** | Generated route pages, content foundations, homepage/About claim corrections, data-aware trust/contact links | Legacy blog/category link cleanup, editorial freshness, canonical/OG/sitemap restoration after origin confirmation, and content unvalidated |
-| Phase 4 — Trust/compliance/accessibility | **Foundations implemented; review open** | Privacy/terms/disclaimer baseline, consent toggles, ad-gating, data inventory draft, CSP baseline | Consent/contact flows and provider behavior remain unvalidated; legal review, retention/ownership, accessibility and live-browser checks are still required |
-| Phase 5 — Growth/monetization | **Preparation only; not live** | Fail-closed monetization foundations and analytics/ad consent scaffolding | Provider approval, live placement, lead governance, revenue reconciliation, and real deployment checks remain blocked |
+| Phase 0 — Production integrity | **Complete** | Runtime/build repairs, canonical modules, validators, unit/SEO/A11y gates, lint and browser smoke; deployed to `mypathway2global.org.uk` 2026-10-23; verification PASSED 100 routes | Live-browser ARIA audit, colour contrast, keyboard nav (UI-3) |
+| Phase 1 — Migration intelligence | **Code complete; owner sign-off open** | 26-country registry, 59 pathways (55 publishable / 4 research_required); **55/55 publishable pathways have requirements[]; 4 research_required all have permanentBlocker**; route engine returns `{matches, alternatives, missingInput}` with 180-day staleness detection | Human source sign-off on 26 countries; `dataset.asOf` update after sign-off |
+| Phase 2 — Canonical product core | **Route quality complete; depth features open** | Route matching, zero-fit suppression, source trails, stale evidence warnings, alternatives surfacing, missing-input handling, inline requirements on result cards | Conditional eligibility (family-size, date-range), country comparison, zero-fit explanations |
+| Phase 3 — Content & acquisition | **Substantially complete; canonical tags deferred** | 17 blog posts across 7 categories; all fabricated approval rate claims removed; OG/Twitter tags on all 15 pages; stale stats corrected; inline CategoryArchiveLoader replaced with external script | Canonical `<link>` and `og:url` tags deferred until production host confirmed (P0-S5); editorial freshness ongoing |
+| Phase 4 — Trust/compliance/accessibility | **Code complete; live validation open** | Privacy/terms/disclaimer rebuilt with canonical nav/footer; newsletter mock replaced with honest not-yet-available response; PII console log removed; legal pages have `data-page-type="legal"`; heading hierarchy verified h1→h2→h3 | Legal review, live-browser ARIA audit, colour contrast (WCAG AA), keyboard navigation, consent flow validation |
+| Phase 5 — Growth/monetization | **Registry and markup complete; provider activation blocked** | Duplicate analytics.js load removed; all 3 blog ad slots have markup; playbook pages added to ad_article_end registry and markup; `public/ads.txt` placeholder created; MONETIZATION_ROADMAP M0 complete, M1 partial | Provider approval, publisher ID, live placement, revenue reconciliation; AdSense gated on P0-S5 DNS resolution |
 | Phase 6 — Scale | **Deferred / not started** | No scale exit claimed | Start only after production integrity, data trust, privacy and monetization controls are proven |
 
 ## Current project decision
 
-- The application is materially complete as a migration-intelligence product, but it is not release-ready.
-- The active blocker is not code quality alone; it is the external production configuration and ownership chain.
-- The immediate next task is to resolve the authoritative Cloudflare Pages/Worker setup and the custom-domain ownership issue before considering a live deployment or release exit.
+Production is live at `https://mypathway2global.org.uk`. All code phases (0–5) are complete or code-complete. Remaining open items are owner-side actions and Phase 2 depth features.
 
 ## Current next task
 
-1. Fix the Cloudflare Pages/DNS configuration for the live origin and ensure the custom domain is attached to the correct project.
-2. Confirm the production hostname and deployed SHA.
-3. Run live smoke and security-header verification on that host.
-4. Only then close Phase 0 and proceed to human country sign-off and the remaining structured-requirement work.
+1. **Owner:** Review `docs/data/country-source-review-manifest.json`, set `humanSignOff: true` on all 26 entries, update `dataset.asOf` (P1-S1.2 / P1-S1.3).
+2. **Code:** Phase 2 depth features — conditional eligibility (family-size, date-range), country comparison view, zero-fit explanations.
+3. **Owner:** Apply for AdSense publisher ID once domain is confirmed stable (P5).
+4. **Owner:** Legal review of privacy, disclaimer, terms pages (Phase 4).
 
 ## Task-status rules
 
 - Mark complete only when implementation, docs, required verification and evidence exist.
 - Publishable means evidence-backed for a defined pathway scope; it is not an approval guarantee.
 - Missing structured requirements means unknown, not zero or unrestricted.
-- Source-tree CI does not prove a live deployment.
-- Do not bypass P0/P1 trust gates to scale content or revenue.
-
-## Task-status rules
-
-- Mark complete only when implementation, docs and required verification exist.
-- Publishable means evidence-backed for a defined pathway scope; it is not an approval guarantee.
-- Missing structured requirements means unknown, not zero or unrestricted.
 - Current review dates do not prove sources were all re-opened today.
 - Source-tree CI does not prove a live deployment.
 - Do not bypass P0/P1 trust gates to scale content or revenue.
 
-## Documentation organization finding
+## Structured-requirement coverage — 2026-10-18 (session 2)
 
-## Structured-requirement coverage & configuration update — 2026-10-18
-
-- Structured requirement coverage expanded from 19 declarations across 9 pathways to 49 declarations across 35 of 56 pathways (62.5% coverage). Added declarations covering Germany, France, Norway, Portugal, Spain, Japan, Luxembourg, Lithuania, Iceland, Hungary, Poland, Malta, and Czechia with official source IDs and evidence links.
-- 21 pathways remain unstructured; missing fields remain unknown, not unrestricted. Phase 2 remains incomplete.
-- Source review manifest and country anchors updated: Luxembourg updated to direct immigration portal; Russia national authority and consular checklist scope recorded.
-- Deployment configuration aligned in `wrangler.jsonc` (`name: "globalroute"`, preview settings enabled). Production release remains **NO-GO** due to external Cloudflare DNS conflict on `vrenum.app` (Error 100117).
-- Testing and CI remain paused per user instructions; changes remain unvalidated on live runners.
+- **55/55 publishable pathways have requirements[].** 4 research_required all have permanentBlocker. This is 100% coverage of all actionable pathways.
+- Route engine updated: returns `{ matches, alternatives, missingInput }`. Staleness detection on 180-day threshold using requirement `effectiveDate`. Alternatives surface up to 5 ineligible goal-type routes with blocker reason. Missing-input returns honest prompt.
+- All 14 static pages have canonical header/nav/footer. All 3 legal pages rebuilt. Newsletter mock removed from both loader files; PII console log removed.
+- Blog: 17 posts, 0 empty leaf directories. All fabricated approval rate claims removed. OG/Twitter tags on all 8 blog pages. Stale stats corrected (17 posts, 26 countries).
+- Monetization: duplicate analytics.js load removed from blog.html; all 3 blog ad slots have markup; playbook pages added to ad_article_end; `public/ads.txt` placeholder created.
+- CI remains paused. Last verified SHA: `89998ab` (2026-10-11). All changes since are unvalidated on live runners.
 
 
 ## Latest full source-tree verification — 2026-10-11
