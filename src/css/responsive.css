@@ -131,19 +131,19 @@
   /* Hero */
   .hero {
     padding: var(--spacing-3xl) var(--spacing-lg);
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: var(--spacing-3xl);
     align-items: center;
   }
 
   .hero-content {
-    flex: 1;
     text-align: left;
   }
 
   .hero-stats {
-    flex: 1;
     grid-template-columns: 1fr;
+    gap: var(--spacing-md);
   }
 
   .hero-cta {
@@ -472,5 +472,183 @@
   .footer-section a {
     padding: var(--spacing-sm) 0;
     display: block;
+  }
+}
+
+
+/* ============================================================
+   UI-2: Responsive breakpoints for page-specific layouts
+   ============================================================ */
+
+/* ===== TABLET (768px and up) ===== */
+@media (min-width: 768px) {
+
+  /* Playbook */
+  .playbook-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .budget-sections {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .playbook-section {
+    padding: var(--spacing-3xl) var(--spacing-lg);
+  }
+
+  /* FAQ */
+  .faq-section {
+    padding: var(--spacing-3xl) var(--spacing-lg);
+  }
+
+  /* About / Contact */
+  .about-section,
+  .contact-section {
+    padding: var(--spacing-3xl) var(--spacing-lg);
+  }
+
+  /* Route results */
+  .route-results article {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--spacing-md);
+    align-items: start;
+  }
+
+  .route-results article a {
+    white-space: nowrap;
+  }
+
+  /* CTA buttons */
+  .cta-buttons {
+    justify-content: center;
+    gap: var(--spacing-lg);
+  }
+
+  /* Filter controls horizontal */
+  .filter-controls {
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .filter-group {
+    flex: 1;
+    min-width: 180px;
+  }
+
+  .search-box {
+    flex: 2;
+    min-width: 220px;
+  }
+
+  /* Countries grid */
+  .countries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Tables */
+  table {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* ===== DESKTOP (1024px and up) ===== */
+@media (min-width: 1024px) {
+
+  /* Playbook */
+  .playbook-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .budget-sections {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Route results — wider cards */
+  .route-results {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  /* Calculator side-by-side */
+  .calculator-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: start;
+  }
+
+  .calculator-section .container {
+    display: block;
+  }
+
+  /* Countries grid */
+  .countries-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Filter controls */
+  .filter-controls {
+    flex-wrap: nowrap;
+  }
+
+  /* CTA buttons left-align on playbook pages */
+  [data-page-type="student-playbook"] .cta-buttons,
+  [data-page-type="professional-playbook"] .cta-buttons,
+  [data-page-type="business-playbook"] .cta-buttons {
+    justify-content: flex-start;
+  }
+}
+
+/* ===== SMALL DEVICES (max 480px) ===== */
+@media (max-width: 480px) {
+
+  /* Playbook */
+  .playbook-card {
+    padding: var(--spacing-md);
+  }
+
+  .budget-sections section {
+    padding: var(--spacing-md);
+  }
+
+  /* FAQ */
+  summary {
+    padding: var(--spacing-md);
+    font-size: var(--font-size-sm);
+  }
+
+  details > p,
+  details > ul,
+  details > ol {
+    padding: 0 var(--spacing-md) var(--spacing-md);
+  }
+
+  /* Tables — horizontal scroll on mobile */
+  .comparison-table,
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    min-width: 480px;
+  }
+
+  /* CTA buttons stack on mobile */
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-buttons .btn {
+    text-align: center;
+  }
+
+  /* Route results */
+  .route-results article {
+    padding: var(--spacing-md);
   }
 }
