@@ -3,18 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Global Route Budget Calculator - Find affordable countries based on your savings">
+  <meta name="description" content="Evidence-gated budget calculator for African students and professionals — plan migration costs using verified country data, not estimates.">
   <title>Budget Calculator | Global Route</title>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="canonical" href="https://mypathway2global.org.uk/pages/calculator">
+  <meta property="og:url" content="https://mypathway2global.org.uk/pages/calculator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body data-page-type="calculator">
   <a href="#main" class="skip-link">Skip to main content</a>
-  <header id="header" class="header"><div class="header-container"><div class="logo"><a href="/" class="logo-link"><span class="logo-icon">🌍</span><span class="logo-text">Global Route</span></a></div><nav class="navigation"><button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button><ul class="nav-menu"><li><a href="/">Home</a></li><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/pages/blog.html">Blog</a></li></ul></nav></div></header>
+  <header id="header" class="header"><div class="header-container"><div class="logo"><a href="/" class="logo-link"><span class="logo-icon" aria-hidden="true">🌍</span><span class="logo-text">Global Route</span></a></div><nav class="navigation" aria-label="Primary"><button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button><ul class="nav-menu"><li><a href="/">Home</a></li><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-my-route.html">Find My Route</a></li><li><a href="/pages/calculator.html" class="active">Calculator</a></li><li><a href="/blog/">Research</a></li><li><a href="/pages/about.html">About</a></li></ul></nav></div></header>
 
   <main id="main" class="main">
     <section class="hero"><div class="hero-content"><h1>Budget Calculator</h1><p class="hero-subtitle">Find countries where you can realistically migrate based on your finances</p></div></section>
     <section class="calculator-section"><div class="container">
+      <div class="calculator-layout">
       <form id="budget-calculator" class="calculator-form">
         <fieldset><legend>Your Financial Situation</legend>
           <div class="form-group"><label for="current-savings">Current Savings (USD) *<input type="number" id="current-savings" name="savings" placeholder="e.g., 5000" min="0" required></label><small>Liquid cash you can use now</small></div>
@@ -25,16 +31,17 @@
         </fieldset>
       </form>
 
-      <div id="calculator-results" class="results-container" style="display:none"><h2>Your Results</h2><div class="savings-analysis"><h3>Your Financial Profile</h3><dl><dt>Liquid Savings:</dt><dd id="result-savings">$0</dd><dt>Monthly Savings Potential:</dt><dd id="result-monthly-savings">$0</dd><dt>12-Month Potential:</dt><dd id="result-yearly-savings">$0</dd></dl></div><div class="affordable-countries"><h3>Affordable Countries (sorted by cost)</h3><div id="affordable-list" class="countries-list"></div></div><aside data-ad-slot="ad_calculator_result" hidden aria-label="Advertisement"></aside><div class="next-steps"><h2>Next Steps</h2><ol><li>Explore countries in your budget range</li><li>Read the detailed country guides</li><li>Review the appropriate playbook</li><li>Create your migration plan</li></ol></div><button type="button" class="btn btn-secondary" onclick="document.getElementById('budget-calculator').reset();document.getElementById('calculator-results').style.display='none';">Recalculate</button></div>
+      <div id="calculator-results" class="results-container" aria-live="polite" style="display:none"><h2>Your Results</h2><div class="savings-analysis"><h3>Your Financial Profile</h3><dl><dt>Liquid Savings:</dt><dd id="result-savings">$0</dd><dt>Monthly Savings Potential:</dt><dd id="result-monthly-savings">$0</dd><dt>12-Month Potential:</dt><dd id="result-yearly-savings">$0</dd></dl></div><div class="affordable-countries"><h3>Affordable Countries (sorted by cost)</h3><div id="affordable-list" class="countries-list"></div></div><aside data-ad-slot="ad_calculator_result" hidden aria-label="Advertisement"></aside><div class="next-steps"><h2>Next Steps</h2><ol><li>Explore countries in your budget range</li><li>Read the detailed country guides</li><li>Review the appropriate playbook</li><li>Create your migration plan</li></ol></div><button type="button" class="btn btn-secondary" onclick="document.getElementById('budget-calculator').reset();document.getElementById('calculator-results').style.display='none';">Recalculate</button></div>
 
       <div id="no-results" class="no-results" style="display:none"><p>Based on your budget, we didn't find countries in your exact range.</p><p>Consider increasing your timeline, seeking scholarships, or considering lower-upfront-cost pathways.</p><a href="/pages/countries.html" class="btn btn-primary">Browse All Countries</a></div>
+      </div><!-- /.calculator-layout -->
     </div></section>
 
     <section class="calculator-info"><div class="container"><h2>How This Calculator Works</h2><div class="info-grid"><article><h3>1. Financial Assessment</h3><p>We analyze current savings, income, and expenses.</p></article><article><h3>2. Affordability Matching</h3><p>Your savings are compared against available country cost records.</p></article><article><h3>3. Timeline Projection</h3><p>Monthly savings potential can be used for readiness planning.</p></article><article><h3>4. Personalized Recommendations</h3><p>Results are sorted by normalized cost and goal fit.</p></article></div></div></section>
     <section class="cta-final"><div class="container"><h2>Ready to Move Forward?</h2><p>Get your personalized migration roadmap today.</p><a href="/pages/countries.html" class="btn btn-primary btn-large">Explore Countries</a></div></section>
   </main>
 
-  <footer id="footer" class="footer"><div class="footer-content"><div class="footer-section"><h4>Global Route</h4><p>Radical transparency for African global mobility.</p></div><div class="footer-section"><h4>Quick Links</h4><ul><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/student-playbook.html">Student Guide</a></li><li><a href="/pages/blog.html">Blog</a></li><li><a href="/pages/contact.html">Contact</a></li></ul></div></div></footer>
+  <footer id="footer" class="footer"><div class="footer-content"><div class="footer-section"><h4>Global Route</h4><p>Evidence-gated global mobility intelligence.</p></div><div class="footer-section"><h4>Explore</h4><ul><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-my-route.html">Find My Route</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Research</a></li></ul></div><div class="footer-section"><h4>Guides</h4><ul><li><a href="/pages/student-playbook.html">Student</a></li><li><a href="/pages/professional-playbook.html">Professional</a></li><li><a href="/pages/business-playbook.html">Business</a></li></ul></div><div class="footer-section"><h4>Trust</h4><ul><li><a href="/pages/privacy.html">Privacy</a></li><li><a href="/pages/disclaimer.html">Disclaimer</a></li><li><a href="/pages/terms.html">Terms</a></li><li><a href="/pages/contact.html">Contact</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 Global Route. All rights reserved.</p></div></footer>
 
   <div id="admob-container"></div>
   <!-- Domain modules must load before app.js because app.js wires their APIs. -->

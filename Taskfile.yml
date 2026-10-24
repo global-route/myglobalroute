@@ -1,0 +1,617 @@
+version: "3"
+
+# ─────────────────────────────────────────────
+# Global Route — Taskfile
+# Run tasks with: task <name>
+# Install Task: https://taskfile.dev/installation/
+# ─────────────────────────────────────────────
+
+vars:
+  SRC_CSS: src/css
+  SRC_JS: src/js
+  SRC_PAGES: src/pages
+  DIST: dist
+  SCRIPTS: scripts
+
+# ══════════════════════════════════════════════
+# DEV & BUILD
+# ══════════════════════════════════════════════
+tasks:
+
+  dev:
+    desc: Start Eleventy dev server with live reload
+    cmds:
+      - npx @11ty/eleventy --serve
+
+  build:
+    desc: Production Eleventy build
+    cmds:
+      - npx @11ty/eleventy
+    env:
+      NODE_ENV: production
+
+  build:verify:
+    desc: Verify build output integrity
+    cmds:
+      - node {{.SCRIPTS}}/verify-build.js
+
+  # ══════════════════════════════════════════════
+  # TESTING
+  # ══════════════════════════════════════════════
+
+  test:
+    desc: Run all Jest unit tests
+    cmds:
+      - npx jest
+
+  test:watch:
+    desc: Jest in watch mode
+    cmds:
+      - npx jest --watch
+
+  test:e2e:
+    desc: Run Playwright end-to-end smoke tests
+    cmds:
+      - npx playwright test
+
+  test:all:
+    desc: Unit tests + e2e in sequence
+    cmds:
+      - task: test
+      - task: test:e2e
+
+  # ══════════════════════════════════════════════
+  # LINT & FORMAT
+  # ══════════════════════════════════════════════
+
+  lint:
+    desc: ESLint all JS in src/js
+    cmds:
+      - npx eslint {{.SRC_JS}}
+
+  lint:fix:
+    desc: ESLint with auto-fix
+    cmds:
+      - npx eslint {{.SRC_JS}} --fix
+
+  format:
+    desc: Prettier format all src files
+    cmds:
+      - npx prettier --write "src/**/*.{js,css,html,md}"
+
+  format:check:
+    desc: Prettier check (no write — for CI)
+    cmds:
+      - npx prettier --check "src/**/*.{js,css,html,md}"
+
+  # ══════════════════════════════════════════════
+  # DATA & EVIDENCE
+  # ══════════════════════════════════════════════
+
+  data:validate:
+    desc: Validate countries + pathways JSON schemas
+    cmds:
+      - node {{.SCRIPTS}}/validate-data.js
+
+  data:country-manifest:
+    desc: Check country source-review manifest (read-only)
+    cmds:
+      - node {{.SCRIPTS}}/generate-country-source-manifest.js --check
+
+  data:country-manifest:write:
+    desc: Regenerate and write country source-review manifest
+    cmds:
+      - node {{.SCRIPTS}}/generate-country-source-manifest.js --write
+
+  evidence:freshness:
+    desc: Report evidence freshness across all pathways
+    cmds:
+      - node {{.SCRIPTS}}/report-evidence-freshness.js
+
+  evidence:candidates:
+    desc: Report pathways that are candidates for promotion
+    cmds:
+      - node {{.SCRIPTS}}/report-promotion-candidates.js
+
+  requirements:readiness:
+    desc: Report requirement field readiness across pathways
+    cmds:
+      - node {{.SCRIPTS}}/report-requirement-readiness.js
+
+  commercial:validate:
+    desc: Validate commercial/affiliate registry
+    cmds:
+      - node {{.SCRIPTS}}/validate-commercial-registry.js
+
+  # ══════════════════════════════════════════════
+  # SEO & ACCESSIBILITY
+  # ══════════════════════════════════════════════
+
+  seo:verify:
+    desc: Verify SEO + a11y on built pages
+    cmds:
+      - node {{.SCRIPTS}}/verify-seo-a11y.js
+
+  a11y:audit:
+    desc: Run axe-core accessibility audit against built dist (requires axe-cli)
+    cmds:
+      - |
+        if ! command -v axe &> /dev/null; then
+          echo "Installing axe-cli..."
+          npm install -g axe-cli
+        fi
+        axe {{.DIST}}/**/*.html --exit
+
+  lighthouse:
+    desc: Run Lighthouse CI audit on built site (requires lhci)
+    cmds:
+      - |
+        if ! command -v lhci &> /dev/null; then
+          echo "Installing @lhci/cli..."
+          npm install -g @lhci/cli
+        fi
+        lhci autorun
+
+  # ══════════════════════════════════════════════
+  # DEPLOY
+  # ══════════════════════════════════════════════
+
+  deploy:wrangler:
+    desc: Build then deploy via Wrangler (Cloudflare Pages)
+    cmds:
+      - task: build
+      - npx wrangler deploy
+
+  deploy:verify:
+    desc: Verify the deployed live site
+    cmds:
+      - node {{.SCRIPTS}}/verify-deployed-site.js
+
+  # ══════════════════════════════════════════════
+  # STYLING ENHANCEMENTS  (from assessment)
+  # ══════════════════════════════════════════════
+
+  style:fix-orphan-css:
+    desc: |
+      Fix the orphaned CSS rule in styles.css (dangling `padding` block
+      with no selector around line ~530). Prints the offending lines.
+    cmds:
+      - |
+        echo "=== Scanning for orphaned rules in {{.SRC_CSS}}/styles.css ==="
+        grep -n "^  padding:" {{.SRC_CSS}}/styles.css | head -20
+        echo ""
+        echo "Open src/css/styles.css and wrap the orphaned padding block in its missing selector."
+        echo "Hint: look for a closing brace followed immediately by a padding declaration with no selector above it."
+
+  style:inject-fonts:
+    desc: |
+      Inject Inter (body) + DM Serif Display (headings) Google Fonts link
+      into every HTML page that is missing it.
+    cmds:
+      - |
+        FONT_TAG='<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">'
+        for f in {{.SRC_PAGES}}/*.html src/index.html; do
+          if ! grep -q "fonts.googleapis.com" "$f"; then
+            sed -i '' "s|</head>|${FONT_TAG}\n</head>|" "$f"
+            echo "  ✓ Injected fonts → $f"
+          else
+            echo "  – Already has fonts → $f"
+          fi
+        done
+
+  style:css-vars-audit:
+    desc: |
+      Audit blog.css and blog-post.css for hard-coded hex values that
+      should reference CSS custom properties from styles.css.
+    cmds:
+      - |
+        echo "=== Hard-coded hex values in blog.css ==="
+        grep -n "#[0-9a-fA-F]\{3,6\}" {{.SRC_CSS}}/blog.css | head -40
+        echo ""
+        echo "=== Hard-coded hex values in blog-post.css ==="
+        grep -n "#[0-9a-fA-F]\{3,6\}" {{.SRC_CSS}}/blog-post.css | head -40
+        echo ""
+        echo "Replace each with the matching var() from styles.css :root block."
+
+  style:migrate-css-vars:
+    desc: |
+      Auto-migrate the most common hard-coded hex values in blog.css and
+      blog-post.css to their CSS custom property equivalents.
+    cmds:
+      - |
+        for f in {{.SRC_CSS}}/blog.css {{.SRC_CSS}}/blog-post.css; do
+          sed -i '' \
+            -e 's/#2563eb/var(--color-primary)/g' \
+            -e 's/#1e40af/var(--color-primary-dark)/g' \
+            -e 's/#dbeafe/var(--color-primary-light)/g' \
+            -e 's/#ea580c/var(--color-accent)/g' \
+            -e 's/#c2410c/var(--color-accent-dark, #c2410c)/g' \
+            -e 's/#fed7aa/var(--color-accent-light)/g' \
+            -e 's/#16a34a/var(--color-secondary)/g' \
+            -e 's/#22c55e/var(--color-success)/g' \
+            -e 's/#f97316/var(--color-warning)/g' \
+            -e 's/#ef4444/var(--color-error)/g' \
+            -e 's/#f9fafb/var(--color-neutral-50)/g' \
+            -e 's/#f3f4f6/var(--color-neutral-100)/g' \
+            -e 's/#e5e7eb/var(--color-neutral-200)/g' \
+            -e 's/#d1d5db/var(--color-neutral-300)/g' \
+            -e 's/#9ca3af/var(--color-neutral-400)/g' \
+            -e 's/#6b7280/var(--color-neutral-500)/g' \
+            -e 's/#4b5563/var(--color-neutral-600)/g' \
+            -e 's/#374151/var(--color-neutral-700)/g' \
+            -e 's/#1f2937/var(--color-neutral-800)/g' \
+            -e 's/#111827/var(--color-neutral-900)/g' \
+            "$f"
+          echo "  ✓ Migrated CSS vars → $f"
+        done
+
+  style:add-skeleton-css:
+    desc: |
+      Append skeleton/shimmer loading CSS to styles.css for the
+      countries grid and any other dynamic loading states.
+    cmds:
+      - |
+        cat >> {{.SRC_CSS}}/styles.css << 'EOF'
+
+        /* ── Skeleton / shimmer loading states ── */
+        @keyframes shimmer {
+          0%   { background-position: -600px 0; }
+          100% { background-position: 600px 0; }
+        }
+
+        .skeleton {
+          background: linear-gradient(90deg,
+            var(--color-neutral-200) 25%,
+            var(--color-neutral-100) 50%,
+            var(--color-neutral-200) 75%
+          );
+          background-size: 600px 100%;
+          animation: shimmer 1.4s ease-in-out infinite;
+          border-radius: var(--radius-md);
+        }
+
+        .skeleton-card {
+          height: 180px;
+          border-radius: var(--radius-lg);
+        }
+
+        .skeleton-line {
+          height: 1rem;
+          margin-bottom: var(--spacing-sm);
+        }
+
+        .skeleton-line.short { width: 60%; }
+        .skeleton-line.medium { width: 80%; }
+        .skeleton-line.full { width: 100%; }
+        EOF
+        echo "  ✓ Skeleton CSS appended to styles.css"
+
+  style:add-scroll-animations:
+    desc: |
+      Append scroll-reveal animation CSS to styles.css.
+      Elements with [data-reveal] fade+slide in when they enter the viewport.
+      Respects prefers-reduced-motion.
+    cmds:
+      - |
+        cat >> {{.SRC_CSS}}/styles.css << 'EOF'
+
+        /* ── Scroll-reveal entrance animations ── */
+        [data-reveal] {
+          opacity: 0;
+          transform: translateY(20px);
+          transition:
+            opacity var(--transition-slow),
+            transform var(--transition-slow);
+        }
+
+        [data-reveal].revealed {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        [data-reveal="fade"] {
+          transform: none;
+        }
+
+        [data-reveal="left"] {
+          transform: translateX(-24px);
+        }
+
+        [data-reveal="right"] {
+          transform: translateX(24px);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          [data-reveal] {
+            opacity: 1;
+            transform: none;
+            transition: none;
+          }
+        }
+        EOF
+        echo "  ✓ Scroll-reveal CSS appended to styles.css"
+
+  style:add-dark-mode-css:
+    desc: |
+      Append a complete dark mode block to styles.css, covering all
+      surfaces that the current stub misses (cards, footer, forms, etc.).
+    cmds:
+      - |
+        cat >> {{.SRC_CSS}}/styles.css << 'EOF'
+
+        /* ── Dark mode — complete surface coverage ── */
+        @media (prefers-color-scheme: dark) {
+          .header { background-color: var(--color-neutral-100); border-bottom: 1px solid var(--color-neutral-200); }
+          .nav-menu { background-color: var(--color-neutral-100); }
+          .nav-menu a { color: var(--color-neutral-700); }
+          .logo-link { color: var(--color-neutral-900); }
+
+          .hero { background: linear-gradient(135deg, #1e3a5f 0%, #3b1f0a 100%); }
+          .hero-content h1 { color: #93c5fd; }
+
+          .problem-card,
+          .featured-card,
+          .tool-card,
+          .card,
+          .country-card,
+          .playbook-card,
+          .route-results article,
+          .country-result { background-color: var(--color-neutral-100); border-color: var(--color-neutral-200); }
+
+          .approach-card { background-color: var(--color-neutral-100); }
+
+          details { background-color: var(--color-neutral-100); border-color: var(--color-neutral-200); }
+          summary { color: var(--color-neutral-800); }
+
+          .filter-group select,
+          .search-box input,
+          .newsletter-form input { background-color: var(--color-neutral-100); border-color: var(--color-neutral-200); color: var(--color-neutral-900); }
+
+          .results-container { background-color: var(--color-neutral-100); border-color: var(--color-neutral-200); }
+
+          .evidence-note { background-color: #1e3a5f; border-color: var(--color-primary); }
+
+          .testimonial { background-color: var(--color-neutral-100); }
+
+          .footer { background-color: #0a0f1a; }
+
+          th { background-color: #1e3a5f; }
+          tr:nth-child(even) td { background-color: var(--color-neutral-100); }
+          tr:hover td { background-color: #1e3a5f; }
+
+          .ad-unit { background-color: var(--color-neutral-100); }
+          #analytics-consent { background-color: var(--color-neutral-100); border-color: var(--color-neutral-200); color: var(--color-neutral-900); }
+        }
+        EOF
+        echo "  ✓ Complete dark mode CSS appended to styles.css"
+
+  style:add-brand-tokens:
+    desc: |
+      Append brand-specific CSS custom properties to :root in styles.css —
+      accent-dark, gradient shorthands, and font-family-heading for when
+      the custom typeface is injected.
+    cmds:
+      - |
+        # Insert new tokens just before the closing of :root block
+        python3 - << 'PYEOF'
+        import re, pathlib
+        p = pathlib.Path("src/css/styles.css")
+        src = p.read_text()
+        tokens = """
+          /* Brand extensions */
+          --color-accent-dark: #c2410c;
+          --color-brand-gradient: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent-light) 100%);
+          --color-brand-gradient-dark: linear-gradient(135deg, #1e3a5f 0%, #3b1f0a 100%);
+          --font-family-heading: 'DM Serif Display', Georgia, serif;
+          --font-family-body: 'Inter', var(--font-family);
+        """
+        # Insert before the first closing brace of :root
+        src = src.replace(
+            "  /* Z-index */",
+            tokens + "\n  /* Z-index */",
+            1
+        )
+        p.write_text(src)
+        print("  ✓ Brand tokens injected into :root")
+        PYEOF
+
+  style:use-brand-fonts:
+    desc: |
+      Update styles.css body and heading font-family declarations to use
+      the new brand token variables (requires style:add-brand-tokens first).
+    cmds:
+      - |
+        sed -i '' \
+          's/font-family: var(--font-family);/font-family: var(--font-family-body);/' \
+          {{.SRC_CSS}}/styles.css
+        sed -i '' \
+          's/h1, h2, h3, h4, h5, h6 {/h1, h2, h3, h4, h5, h6 {\n  font-family: var(--font-family-heading);/' \
+          {{.SRC_CSS}}/styles.css
+        echo "  ✓ Brand font vars applied to body and headings"
+
+  style:add-focus-visible:
+    desc: |
+      Replace broad `a:focus, button:focus` outline rules with the modern
+      :focus-visible selector so keyboard users get outlines but mouse
+      clicks do not trigger them.
+    cmds:
+      - |
+        sed -i '' \
+          's/button:focus,\na:focus {/:focus-visible {/' \
+          {{.SRC_CSS}}/styles.css
+        echo "  ✓ focus → focus-visible updated in styles.css"
+
+  style:add-card-hover-transitions:
+    desc: |
+      Append enhanced card hover micro-interactions to styles.css —
+      scale + shadow lift on country cards, blog cards, and tool cards.
+    cmds:
+      - |
+        cat >> {{.SRC_CSS}}/styles.css << 'EOF'
+
+        /* ── Enhanced card hover micro-interactions ── */
+        .country-card,
+        .blog-post-card,
+        .featured-card,
+        .tool-card,
+        .related-article-card {
+          will-change: transform;
+        }
+
+        .country-card:hover,
+        .featured-card:hover,
+        .tool-card:hover {
+          transform: translateY(-4px) scale(1.01);
+          box-shadow: var(--shadow-xl);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .country-card:hover,
+          .featured-card:hover,
+          .tool-card:hover {
+            transform: none;
+          }
+        }
+        EOF
+        echo "  ✓ Card hover micro-interactions appended"
+
+  # ══════════════════════════════════════════════
+  # DEPENDENCY & SECURITY
+  # ══════════════════════════════════════════════
+
+  deps:audit:
+    desc: npm audit for known vulnerabilities
+    cmds:
+      - npm audit
+
+  deps:audit:fix:
+    desc: npm audit with auto-fix (non-breaking)
+    cmds:
+      - npm audit fix
+
+  deps:outdated:
+    desc: List outdated npm packages
+    cmds:
+      - npm outdated
+
+  deps:update:
+    desc: Interactive dependency update (requires npm-check-updates)
+    cmds:
+      - |
+        if ! command -v ncu &> /dev/null; then
+          npm install -g npm-check-updates
+        fi
+        ncu --interactive
+
+  # ══════════════════════════════════════════════
+  # PERFORMANCE & BUNDLE
+  # ══════════════════════════════════════════════
+
+  perf:bundle-size:
+    desc: Report CSS and JS asset sizes in dist
+    cmds:
+      - |
+        echo "=== CSS bundle sizes ==="
+        find {{.DIST}} -name "*.css" -exec du -sh {} \; 2>/dev/null || find src/css -name "*.css" -exec du -sh {} \;
+        echo ""
+        echo "=== JS bundle sizes ==="
+        find {{.DIST}} -name "*.js" -exec du -sh {} \; 2>/dev/null || find src/js -name "*.js" -exec du -sh {} \;
+
+  perf:images:
+    desc: |
+      Optimise images in public/ using sharp-cli (lossless PNG + WebP).
+      Installs sharp-cli if not present.
+    cmds:
+      - |
+        if ! command -v sharp &> /dev/null; then
+          echo "Installing sharp-cli..."
+          npm install -g sharp-cli
+        fi
+        find public -name "*.png" | while read f; do
+          sharp -i "$f" -o "${f%.png}.webp" --webp
+          echo "  ✓ WebP → $f"
+        done
+        find public -name "*.jpg" -o -name "*.jpeg" | while read f; do
+          sharp -i "$f" -o "${f%.*}.webp" --webp
+          echo "  ✓ WebP → $f"
+        done
+
+  perf:unused-css:
+    desc: |
+      Run PurgeCSS against built HTML to report unused CSS rules.
+      Installs purgecss if not present.
+    cmds:
+      - |
+        if ! npx purgecss --version &> /dev/null 2>&1; then
+          npm install -g purgecss
+        fi
+        npx purgecss \
+          --css "{{.SRC_CSS}}/*.css" \
+          --content "{{.SRC_PAGES}}/*.html" "src/index.html" \
+          --output /tmp/purgecss-report \
+          --rejected
+        echo "Rejected (unused) rules written to /tmp/purgecss-report"
+
+  # ══════════════════════════════════════════════
+  # CHANGELOG
+  # ══════════════════════════════════════════════
+
+  changelog:
+    desc: Generate CHANGELOG entry from git log since last tag
+    cmds:
+      - |
+        LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+        if [ -z "$LAST_TAG" ]; then
+          git log --oneline --pretty="- %s (%h)" | head -30
+        else
+          echo "Changes since $LAST_TAG:"
+          git log "${LAST_TAG}..HEAD" --oneline --pretty="- %s (%h)"
+        fi
+
+  # ══════════════════════════════════════════════
+  # COMPOSITE PIPELINES
+  # ══════════════════════════════════════════════
+
+  verify:
+    desc: Full pre-release verification pipeline (mirrors npm run verify)
+    cmds:
+      - task: data:validate
+      - task: data:country-manifest
+      - task: requirements:readiness
+      - task: evidence:freshness
+      - task: commercial:validate
+      - task: evidence:candidates
+      - task: test
+      - task: build
+      - task: build:verify
+      - task: seo:verify
+      - task: lint
+
+  enhance:styling:
+    desc: |
+      Run all styling enhancement tasks in the correct order.
+      Safe to run on a clean working tree — review git diff afterwards.
+    cmds:
+      - task: style:add-brand-tokens
+      - task: style:migrate-css-vars
+      - task: style:use-brand-fonts
+      - task: style:inject-fonts
+      - task: style:fix-orphan-css
+      - task: style:add-skeleton-css
+      - task: style:add-scroll-animations
+      - task: style:add-dark-mode-css
+      - task: style:add-card-hover-transitions
+      - task: style:add-focus-visible
+      - echo ""
+      - echo "✅ All styling enhancements applied."
+      - echo "   Next: review git diff, then run: task build && task a11y:audit"
+
+  ci:
+    desc: CI pipeline — lint + format check + test + build + verify
+    cmds:
+      - task: lint
+      - task: format:check
+      - task: test
+      - task: build
+      - task: build:verify
+      - task: seo:verify

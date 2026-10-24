@@ -4,13 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Country Audits | Global Route Blog</title>
-  <meta name="description" content="Real visa approval rates, true costs, and requirements for 26+ countries. Transparent data for African students and professionals.">
-  <meta name="keywords" content="visa approval rates, country guide, study abroad, work visa, immigration">
-  <meta property="og:title" content="Country Audits - Global Route">
-  <meta property="og:description" content="Transparent visa and cost breakdowns for countries worldwide">
+  <meta name="description" content="Country-by-country migration audits for African applicants: visa requirements, official source trails and evidence-gated cost data for 26+ destinations.">
+  <meta property="og:title" content="Country Audits — Global Route">
+  <meta property="og:description" content="Evidence-gated visa requirements and cost data for 26+ countries — official sources only, no fabricated approval rates.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/blog.css">
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -24,7 +28,7 @@
           <span>Global Route</span>
         </a>
       </div>
-      <nav class="navigation">
+      <nav class="navigation" aria-label="Primary">
         <button class="nav-toggle" aria-label="Toggle menu">
           <span></span>
           <span></span>
@@ -32,10 +36,11 @@
         </button>
         <ul class="nav-menu">
           <li><a href="/">Home</a></li>
-          <li><a href="/pages/blog.html">Blog</a></li>
-          <li><a href="/pages/calculator.html">Calculator</a></li>
           <li><a href="/pages/countries.html">Countries</a></li>
-          <li><a href="/pages/contact.html">Contact</a></li>
+          <li><a href="/pages/find-my-route.html">Find My Route</a></li>
+          <li><a href="/pages/calculator.html">Calculator</a></li>
+          <li><a href="/blog/" class="active">Research</a></li>
+          <li><a href="/pages/about.html">About</a></li>
         </ul>
       </nav>
     </div>
@@ -45,7 +50,7 @@
   <section class="blog-hero">
     <div class="container">
       <h1>🌍 Country Audits</h1>
-      <p class="blog-hero-subtitle">Real visa approval rates, true costs & requirements for countries worldwide</p>
+      <p class="blog-hero-subtitle">Evidence-gated visa requirements and cost data — official sources, no fabricated approval rates</p>
     </div>
   </section>
 
@@ -156,209 +161,7 @@
     </div>
   </footer>
 
-  <script>
-    // Category archive loader
-    class CategoryArchiveLoader {
-      constructor(category) {
-        this.category = category;
-        this.posts = [];
-        this.postsPerPage = 12;
-        this.currentPage = 1;
-        this.init();
-      }
-
-      async init() {
-        await this.loadBlogPosts();
-        this.filterByCategory();
-        this.renderPosts();
-        this.setupEventListeners();
-      }
-
-      async loadBlogPosts() {
-        try {
-          const response = await fetch('/data/blog-posts.json');
-          this.posts = await response.json();
-          console.log(`✅ Loaded ${this.posts.length} blog posts`);
-        } catch (error) {
-          console.error('Error loading blog posts:', error);
-          this.showError('Unable to load blog posts. Please try again later.');
-        }
-      }
-
-      filterByCategory() {
-        this.posts = this.posts.filter(post => post.category === this.category);
-        console.log(`📁 Filtered to ${this.posts.length} posts in "${this.category}" category`);
-      }
-
-      renderPosts() {
-        const container = document.getElementById('blog-posts-grid');
-        if (!container || this.posts.length === 0) {
-          if (container) {
-            container.innerHTML = `
-              <div class="blog-empty-state" style="grid-column: 1 / -1;">
-                <h3>No posts in this category yet</h3>
-                <p><a href="/pages/blog.html">← Back to all posts</a></p>
-              </div>
-            `;
-          }
-          return;
-        }
-
-        const startIndex = 0;
-        const endIndex = this.postsPerPage * this.currentPage;
-        const postsToShow = this.posts.slice(startIndex, endIndex);
-
-        container.innerHTML = postsToShow.map(post => {
-          return `
-            <article class="blog-post-card">
-              <div class="blog-post-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
-                📖
-              </div>
-              <div class="blog-post-body">
-                <span class="post-category">${this.getCategoryLabel(post.category)}</span>
-                <h3>${this.escapeHtml(post.title)}</h3>
-                <p>${this.escapeHtml(post.excerpt)}</p>
-                <div class="blog-post-meta">
-                  <div class="blog-post-date">
-                    <span>${this.formatDate(post.date)}</span>
-                  </div>
-                  <span class="blog-post-read-time">${post.readTime}</span>
-                </div>
-              </div>
-              <div style="padding: 1rem 1.5rem; border-top: 1px solid #e5e7eb; margin-top: auto;">
-                <a href="/pages/blog.html" class="blog-post-link">Read Article →</a>
-              </div>
-            </article>
-          `;
-        }).join('');
-
-        // Show/hide load more button
-        const loadMoreBtn = document.getElementById('load-more-btn');
-        if (loadMoreBtn) {
-          const hasMore = endIndex < this.posts.length;
-          loadMoreBtn.style.display = hasMore ? 'block' : 'none';
-        }
-      }
-
-      setupEventListeners() {
-        const loadMoreBtn = document.getElementById('load-more-btn');
-        if (loadMoreBtn) {
-          loadMoreBtn.addEventListener('click', () => this.loadMorePosts());
-        }
-
-        const newsletterForm = document.getElementById('blog-newsletter-form');
-        if (newsletterForm) {
-          newsletterForm.addEventListener('submit', (e) => this.handleNewsletterSignup(e));
-        }
-      }
-
-      loadMorePosts() {
-        this.currentPage++;
-        
-        const container = document.getElementById('blog-posts-grid');
-        const startIndex = this.postsPerPage * (this.currentPage - 1);
-        const endIndex = this.postsPerPage * this.currentPage;
-        const postsToAdd = this.posts.slice(startIndex, endIndex);
-
-        const gridHtml = postsToAdd.map(post => {
-          return `
-            <article class="blog-post-card">
-              <div class="blog-post-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
-                📖
-              </div>
-              <div class="blog-post-body">
-                <span class="post-category">${this.getCategoryLabel(post.category)}</span>
-                <h3>${this.escapeHtml(post.title)}</h3>
-                <p>${this.escapeHtml(post.excerpt)}</p>
-                <div class="blog-post-meta">
-                  <div class="blog-post-date">
-                    <span>${this.formatDate(post.date)}</span>
-                  </div>
-                  <span class="blog-post-read-time">${post.readTime}</span>
-                </div>
-              </div>
-              <div style="padding: 1rem 1.5rem; border-top: 1px solid #e5e7eb; margin-top: auto;">
-                <a href="/pages/blog.html" class="blog-post-link">Read Article →</a>
-              </div>
-            </article>
-          `;
-        }).join('');
-
-        container.insertAdjacentHTML('beforeend', gridHtml);
-
-        // Hide load more if no more posts
-        const loadMoreBtn = document.getElementById('load-more-btn');
-        if (loadMoreBtn && endIndex >= this.posts.length) {
-          loadMoreBtn.style.display = 'none';
-        }
-      }
-
-      getCategoryLabel(category) {
-        const labels = {
-          'country-audits': '🌍 Country Audits',
-          'student-playbooks': '🎓 Student Playbooks',
-          'professional-playbooks': '💼 Professional Playbooks',
-          'business-playbooks': '📊 Business Playbooks',
-          'case-studies': '📖 Case Studies',
-          'policy-updates': '📰 Policy Updates',
-          'guides': '📚 Guides'
-        };
-        return labels[category] || category;
-      }
-
-      formatDate(dateString) {
-        const options = { year: 'numeric', month: 'short', day: 'numeric' };
-        return new Date(dateString).toLocaleDateString('en-US', options);
-      }
-
-      escapeHtml(text) {
-        const div = document.createElement('div');
-        div.textContent = text;
-        return div.innerHTML;
-      }
-
-      async handleNewsletterSignup(e) {
-        e.preventDefault();
-        const form = e.target;
-        const button = form.querySelector('button');
-        button.disabled = true;
-        button.textContent = 'Subscribing...';
-
-        try {
-          await new Promise(resolve => setTimeout(resolve, 1000));
-          button.textContent = '✅ Subscribed!';
-          button.style.backgroundColor = '#22c55e';
-          
-          setTimeout(() => {
-            form.reset();
-            button.disabled = false;
-            button.textContent = 'Subscribe';
-            button.style.backgroundColor = '';
-          }, 2000);
-        } catch (error) {
-          console.error('Newsletter signup error:', error);
-          button.textContent = 'Error - Try again';
-          button.disabled = false;
-        }
-      }
-
-      showError(message) {
-        const container = document.getElementById('blog-posts-grid');
-        if (container) {
-          container.innerHTML = `
-            <div class="blog-empty-state" style="grid-column: 1 / -1;">
-              <h3>⚠️ Error</h3>
-              <p>${message}</p>
-            </div>
-          `;
-        }
-      }
-    }
-
-    // Initialize on DOM ready
-    document.addEventListener('DOMContentLoaded', () => {
-      new CategoryArchiveLoader('country-audits');
-    });
-  </script>
+  <script src="/js/category-loader.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => { new CategoryArchiveLoader('country-audits'); });</script>
 </body>
 </html>
