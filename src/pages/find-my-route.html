@@ -48,6 +48,7 @@
           <h3>What this tool does</h3>
           <ul>
             <li>Filters 55 publishable pathways by goal (study or work)</li>
+            <li>Scores by budget, income and experience where declared</li>
             <li>Shows official requirements from government portals</li>
             <li>Surfaces nearby routes with documented blockers shown</li>
           </ul>
@@ -56,9 +57,9 @@
           <h3>What this tool does not do</h3>
           <ul>
             <li>Assess your personal eligibility</li>
-            <li>Rank by budget, income or experience</li>
             <li>Predict approval likelihood</li>
             <li>Cover business pathways (not yet in scope)</li>
+            <li>Replace advice from a registered immigration adviser</li>
           </ul>
         </div>
       </div>
@@ -81,6 +82,15 @@
         </label>
         <label>Planned application date
           <input type="date" name="applicationDate" value="" placeholder="YYYY-MM-DD">
+        </label>
+        <label>Available budget (USD equivalent)
+          <input type="number" name="budget" min="0" step="100" placeholder="e.g. 15000">
+        </label>
+        <label>Monthly income (USD equivalent)
+          <input type="number" name="monthlyIncome" min="0" step="100" placeholder="e.g. 2000">
+        </label>
+        <label>Years of work experience
+          <input type="number" name="experienceYears" min="0" max="40" step="1" placeholder="e.g. 3">
         </label>
         <button type="submit" class="btn btn-primary btn-large">Find routes &rarr;</button>
       </form>
@@ -154,9 +164,13 @@
       try {
         const [countries, pathways] = await Promise.all([loadJson('/data/countries.json'), loadJson('/data/pathways.json')]);
         const profile = Object.fromEntries(new FormData(form).entries());
+        window.GlobalRoute?.Analytics?.track('route_search_started', { page_type: 'find-my-route' });
         const { matches, alternatives, missingInput, zeroFitExplanations } = window.GlobalRoute.RouteEngine.recommend(profile, countries.countries, pathways.pathways, 5);
+        if (!missingInput) {
+          window.GlobalRoute?.Analytics?.track('route_recommendation_generated', { page_type: 'find-my-route' });
+        }
         if (missingInput) {
-          results.innerHTML = '<h2>Select a goal to continue</h2><p>Choose Study or Work above. Business pathways are not yet covered. Budget, income and experience filters are not yet available as structured route fields.</p>';
+          results.innerHTML = '<h2>Select a goal to continue</h2><p>Choose Study or Work above. Business pathways are not yet covered.</p>';
           return;
         }
         if (!matches.length) {

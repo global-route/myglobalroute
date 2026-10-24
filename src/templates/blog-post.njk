@@ -22,6 +22,30 @@
     <meta name="twitter:description" content="{{ excerpt or content | excerpt }}">
     <meta name="twitter:image" content="{{ image }}">
     <link rel="canonical" href="https://mypathway2global.org.uk{{ page.url }}">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{ title }}",
+      "description": "{{ excerpt }}",
+      "datePublished": "{{ date }}",
+      "dateModified": "{{ date }}",
+      "author": {
+        "@type": "Organization",
+        "name": "Global Route Research Team",
+        "url": "https://mypathway2global.org.uk/pages/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Global Route",
+        "url": "https://mypathway2global.org.uk"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://mypathway2global.org.uk{{ page.url }}"
+      }
+    }
+    </script>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/blog-post.css">
 </head>

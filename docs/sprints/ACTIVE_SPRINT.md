@@ -1,82 +1,87 @@
-# Active Sprint — Production Integrity & Migration Intelligence
+# Active Sprint — Growth & 10/10
 
-> **Updated:** 2026-10-24 — Production is live. DNS resolved. All code tasks complete. Remaining items are owner-action only.
+> **Updated:** 2026-10-24 | **Branch:** `main` | **Release:** GO — production live
 
-**Reconciled:** 2026-10-24 | **Branch:** `main`
-**Release:** **GO — production live**
-**Production host:** `https://mypathway2global.org.uk` (Cloudflare Workers, worker name `globalroute`)
-**Deployed:** 2026-10-24 | Latest SHA: `17c8b98` | Verification: PASSED — 100 routes, 26 countries, 59 pathways
-**CI status:** Paused by user direction. All UI, SEO, data and styling work is deployed and verified on production.
-
-## Current decision
-
-All code work is complete. Production is live and verified. Remaining open items are owner-side actions (country source sign-off, AdSense publisher ID, legal review) and Phase 2 depth features (conditional eligibility, country comparison).
-
-## Pre-sprint REQUIRED tasks
-
-Before next sprint phases are defined, the following must be completed. All tasks below are now **Done**. See `CHANGELOG.md` 2026-10-18 entries for detail.
-
-| ID | Task | Status |
-|---|---|---|
-| REQ-DATA-1 | Close NZ-skilled umbrella with permanentBlocker | **Done** |
-| REQ-DATA-2 | Add permanentBlocker to RU-study + RU-work with dated rationale | **Done** |
-| REQ-DATA-3 | Research AU-skilled subclasses 189/190/491 — create pathway records or formal blockers | **Done** |
-| REQ-DATA-4–6 | Fill requirements[] for CA-federal-skilled-worker, AU-student, IE-study (Batch A) | **Done** |
-| REQ-DATA-7 | Fill requirements[] for NZ-smc three routes (Batch B) | **Done** |
-| REQ-DATA-8–9 | Fill requirements[] for IT, FI, AT, CH, KR, CN pathways (Batch C+D) | **Done** |
-| REQ-DATA-10 | Dedup AT-red-white-red vs AT-rwr-other-key-workers | **Done** |
-| REQ-BLOG-1 | Correct Germany post — remove unsupported 62-68% approval rate claim | **Done** |
-| REQ-BLOG-2 | Correct Canada Express Entry post — remove unsupported 78-85% approval rate claim | **Done** |
-| REQ-BLOG-3–7 | Write country audits for Canada, Italy, Portugal, UK, USA (empty directories) | **Done** |
-| REQ-BLOG-8–10 | Write rejection analysis, application guide, financial guide (empty directories) | **Done** |
+**Production:** `https://mypathway2global.org.uk` (Cloudflare Workers — `globalroute`)
+**Latest SHA:** `e43fcad` | **Tests:** 18/18 suites, 139/139 passing | **CI:** paused by user direction
 
 ---
 
-## Current task board
+## Sprint goal
 
-| ID | Task | Status | Remaining exit condition |
-|---|---|---|---|
-| P0-S1 | Exact-subroute closure | **Complete with explicit blocked candidates** | AU subclass 189 and Italy Flussi remain research-required until exact-scope evidence closes their gaps |
-| P0-S2 | Audit pathway evidence gaps | **Audit complete; source work ongoing** | Maintain evidence freshness; do not promote based on record count |
-| P0-S3 | Data/recommendation quality gate | **Historically verified** | Keep validation and tests green as data changes; do not claim new validation without a fresh run |
-| P0-S4 | Browser/source-tree gate | **Historically verified** | CI/browser smoke is not proof of production behavior |
-| P0-S5 | Deployment verification / Phase 0 exit | **Complete** | Deployed to `mypathway2global.org.uk` via Cloudflare Workers (`globalroute`). Verification PASSED: 100 routes, 26 countries, 59 pathways, registries match source. 2026-10-23. |
-| P1-S1.1 | Machine-readable country manifest | **Complete** | Manifest and evidence outcomes are committed; source review still requires human sign-off |
-| P1-S1.2 | Country source-anchor review | **Human sign-off recorded for LU/RU** | Luxembourg updated to direct immigration portal; Russia national authority and consular scope confirmed |
-| P1-S1.3 | Dataset metadata reconciliation | **Open** | Update `dataset.asOf` after full manifest sign-off sync |
-| P1-REQ | Structured requirements | **Complete** | 59 total pathways (3 AU subclasses added): 55 publishable all have requirements[], 4 research_required all have permanentBlocker. P1-REQ-6 and REQ-DATA-3 closed 2026-10-18. |
-| P1-ROUTE | Recommendation quality | **Complete** | Stale evidence warnings (180-day threshold on requirement effectiveDate), alternatives surfacing (up to 5 ineligible goal-type routes with blocker), missingInput flag and prompt, inline requirements on result cards. Engine returns `{ matches, alternatives, missingInput }`. |
-| P1-SEO | Editorial/technical SEO | **Complete** | Fabricated "real visa approval rates / true costs" claims removed from `blog.html` meta+hero and `blog-category-country-audits.html` meta+hero. Stale stats updated (17 posts, 26 countries). OG title/description/type and twitter:card added to all 8 blog pages. `keywords` meta removed. Inline CategoryArchiveLoader (~200 lines) in `blog-category-country-audits.html` replaced with external `/js/category-loader.js` reference. Canonical tags remain deferred until production host is confirmed. |
-| P1-PRIV | Privacy/compliance/accessibility | **Complete** | Newsletter mock subscription replaced with honest "not yet available" response in `blog-loader.js` and `category-loader.js` — PII console log removed, no fake API call. `privacy.html` updated with newsletter-not-active disclosure. All three legal pages (`privacy.html`, `disclaimer.html`, `terms.html`) rebuilt with canonical header/nav/footer, `responsive.css`, OG/Twitter tags, and `data-page-type="legal"`. Legal review and live-browser ARIA/contrast checks remain owner-side actions. |
-| P1-REV | Monetization readiness | **Complete** | Duplicate `analytics.js` load removed from `blog.html` head. `ad_article_top` and `ad_article_mid` slot markup added to `blog.html`. Playbook page types (`student-playbook`, `professional-playbook`, `business-playbook`) added to `ad_article_end` in registry and slot markup added to all three pages. `public/ads.txt` placeholder created with explicit gate conditions. `MONETIZATION_ROADMAP.md` updated to reflect M0 complete, M1 partial, M2 blocked on DNS/publisher ID. Provider approval, live ad configuration and revenue reconciliation remain owner-side actions. |
-| UI-0 | Page foundation — nav, layout, broken pages | **Complete** | All 5 broken/corrupt pages fixed 2026-10-18: `find-my-route.html` header/footer added; `about.html` and `contact.html` rebuilt with full content; `business-playbook.html` rebuilt from corrupt state; `faq.html` rebuilt with clean details elements. Nav standardised across all fixed pages. |
-| UI-1 | Page completion — content | **Complete** | `student-playbook.html` and `professional-playbook.html` rebuilt with evidence-gated content, canonical nav, 4-col footer. All 14 static pages have complete content. |
-| UI-2 | Visual design — CSS completion | **Complete** | Added `.playbook-section`, `.playbook-card`, `.budget-sections`, `.faq-section` (details/summary accordion), `.about-section`, `.contact-section`, `.route-results article`, `.cta-buttons`, table styles, nav active state by `data-page-type`, evidence-note component. Responsive breakpoints added for all new classes at 480px, 768px, 1024px. |
-| UI-3 | Accessibility + pre-launch | **Heading hierarchy verified** | h1→h2→h3 correct on all rebuilt pages. Footer h4s are landmark headings — acceptable. ARIA audit, colour contrast check and full browser smoke remain open (require live browser). |
-## Production
+Move from a complete, verified product to a competitive, revenue-generating platform.
+All infrastructure is done. This sprint is about signal, trust and money.
 
-- **Live URL:** `https://mypathway2global.org.uk`
-- **Worker:** `globalroute` (Cloudflare Workers)
-- **Verified:** 2026-10-23 — 100 routes PASSED, registries match source
-- **workers.dev fallback:** `https://globalroute.cfproject.workers.dev`
+---
 
-## Next task
+## Active task board
 
-**P1-S1.2 — Country source sign-off [OWNER ACTION]**
-- Review `docs/data/country-source-review-manifest.json` for all 26 entries.
-- Confirm Russia mission/jurisdiction source for Nigerian applicants.
-- Set `humanSignOff: true` with reviewer name and date on all 26 entries.
-- Then update `dataset.asOf` (P1-S1.3).
+| ID | Task | Owner | Status | Exit condition |
+|---|---|---|---|---|
+| S3-R1 | Apply for AdSense | Owner | **Open** | Publisher ID received |
+| S3-R2 | Populate `public/ads.txt` | Owner | **Open** | `task revenue:ads-txt PUBLISHER_ID=...` |
+| S3-R3 | Activate AdSense script on blog/playbook pages | Code | **Blocked on S3-R1** | `task revenue:activate-adsense` |
+| S3-R4 | Unhide ad slots | Code | **Blocked on S3-R3** | `task revenue:unhide-ad-slots` |
+| S3-S1 | Add FAQPage schema to faq.html | Code | **Open** | `task seo:add-faq-schema` + build + deploy |
+| S3-S2 | Add Article schema to blog-post.njk | Code | **Open** | `task seo:add-article-schema` + build + deploy |
+| S3-S3 | Add BreadcrumbList schema to countries.njk | Code | **Open** | `task seo:add-breadcrumb-schema` + build + deploy |
+| S3-S4 | Regenerate sitemap with lastmod dates | Code | **Open** | `task seo:sitemap-lastmod` + deploy |
+| S3-E1 | Add budget/income/experience inputs to Find My Route | Code | **Open** | `task engine:add-profile-inputs` + test + deploy |
+| S3-A1 | Wire route_search_started event | Code | **Open** | `task analytics:audit` → add 2 track() calls |
+| S3-T1 | ARIA audit — 4 core pages | Owner | **Open** | 0 critical/serious axe violations |
+| S3-T2 | Legal review — privacy/disclaimer/terms | Owner | **Open** | Solicitor sign-off |
+| S3-T3 | Country source sign-off (26 entries) | Owner | **Open** | `humanSignOff: true` on all 26 manifest entries |
+| S3-T4 | Update `dataset.asOf` | Owner | **Blocked on S3-T3** | After manifest sign-off |
+| S3-C1 | Write 3 new country audits (UK, Australia, Italy depth) | Owner | **Open** | Published, evidence-gated, source-linked |
+| S3-C2 | Set up email capture (Mailchimp) | Owner | **Open** | `task content:email-capture-setup` |
 
-**UI-3 — Live browser checks [requires live browser]**
-- ARIA audit (axe or equivalent) on homepage, country page, Find My Route, Calculator.
-- Colour contrast check (WCAG AA).
-- Keyboard navigation test.
-- 0 critical/serious violations required before release.
+---
 
-**P5 — AdSense / provider activation [OWNER ACTION — gated on P0-S5]**
-- Apply for AdSense account after production domain is confirmed.
-- Obtain real publisher ID — then and only then populate `public/ads.txt`.
-- Activate first ad placement only after consent validation passes.
+## Priority order this sprint
 
-**Sprint status: production live at `https://mypathway2global.org.uk`. All code tasks complete. Remaining items are owner-action only.**
+1. **S3-S1 → S3-S4** — schema + sitemap (code, 1–2 hours, compounds immediately in search)
+2. **S3-E1** — route engine profile inputs (code, 1 hour, product differentiation)
+3. **S3-A1** — analytics wiring (code, 30 min, funnel visibility)
+4. **S3-R1 → S3-R4** — revenue (owner action first, then code)
+5. **S3-T1 → S3-T4** — trust closure (owner actions)
+6. **S3-C1 → S3-C2** — content scale (owner actions)
+
+---
+
+## Production snapshot
+
+| Metric | Value |
+|---|---|
+| Countries | 26 |
+| Pathways | 59 (55 publishable / 4 research_required) |
+| Evidence records | 193+ |
+| Blog posts | 17 across 7 categories |
+| Test suites | 18/18 PASS |
+| Tests | 139/139 PASS |
+| Canonical tags | All 183 generated HTML files |
+| Analytics | Sabilytics live on all pages |
+| Schema markup | None yet — S3-S1/S2/S3 |
+| Ad revenue | £0 — blocked on AdSense application |
+
+---
+
+## Useful commands
+
+```bash
+task ten-out-of-ten        # full checklist
+task verify                # full pre-release pipeline
+task seo:schema-audit      # see what's missing schema markup
+task engine:test-profile   # test route engine with a full profile
+task analytics:audit       # see which events are unwired
+task revenue:status        # monetization readiness
+```
+
+---
+
+## Owner actions (no code blocked)
+
+- **AdSense:** apply at https://adsense.google.com — use `mypathway2global.org.uk`
+- **Country sign-off:** open `docs/data/country-source-review-manifest.json`, set `humanSignOff: true` on all 26 entries
+- **Legal review:** see `task trust:legal-review-checklist`
+- **ARIA audit:** open Chrome DevTools → axe extension on homepage, Find My Route, Calculator, any country page
+- **Content:** see `task seo:content-gaps` for the prioritised keyword list

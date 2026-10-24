@@ -1,87 +1,80 @@
-# Global Route Documentation Hub
+# Global Route — Documentation Index
 
-**Status:** Active execution  
-**Last reconciled:** October 18, 2026 — full project reassessment and structured requirements expansion
+> **Updated:** 2026-10-24 | **Production:** `https://mypathway2global.org.uk` | **SHA:** `e43fcad`
 
-Global Route's original roadmap remains the product blueprint. The execution order is now dependency-aware: production integrity and trustworthy migration intelligence precede content and growth scaling.
+---
 
 ## Start here
 
-### Project / product
-1. `project/PROJECT_ASSESSMENT.md` — current health, risks and open work.
-2. `project/PHASE_STATUS.md` — canonical status across all phases.
-3. `project/EXECUTION_ROADMAP.md` — master roadmap and phase dependencies.
-4. `sprints/ACTIVE_SPRINT.md` — current executable task list.
-5. `reference/DATA_TRUST_STANDARD.md` — non-negotiable data/evidence rules.
+| Doc | What it is |
+|---|---|
+| [Active Sprint](sprints/ACTIVE_SPRINT.md) | Current task board, priority order, owner actions |
+| [Sprint 3 Task Spec](sprints/SPRINT_3_GROWTH.md) | Detailed walkthrough for every Sprint 3 task |
+| [Phase Status](project/PHASE_STATUS.md) | Phase 0–6 completion state, open gates |
+| [10/10 Taskfile](../Taskfile.yml) | All 50 tasks — run `task ten-out-of-ten` for the checklist |
 
-### Developers
-1. `guides/QUICK_START.md`
-2. `reference/ARCHITECTURE.md`
-3. `reference/DEPLOYMENT.md`
-4. `reference/DATA_TRUST_STANDARD.md`
+---
 
-### Content / research
-1. `guides/CONTENT_STRATEGY.md`
-2. `phase-3/BLOG_POSTS_GUIDE.md`
-3. `reference/DATA_TRUST_STANDARD.md`
+## Reference
 
-## Current state
+| Doc | What it is |
+|---|---|
+| [Architecture](reference/ARCHITECTURE.md) | System overview, tech stack, data schema |
+| [Data Trust Standard](reference/DATA_TRUST_STANDARD.md) | Evidence model, metric classes, approval-rate policy |
+| [Evidence Schema](reference/EVIDENCE_SCHEMA.md) | Evidence record fields and validation rules |
+| [SEO Architecture](reference/SEO_ARCHITECTURE.md) | Canonical tags, OG/Twitter, schema markup strategy |
+| [Tech Stack](reference/TECH_STACK.md) | Eleventy, Cloudflare Workers, Jest, Playwright |
+| [Deployment](reference/DEPLOYMENT.md) | Wrangler deploy, verify, rollback |
+| [Privacy & Security](reference/PRIVACY_SECURITY_COMPLIANCE.md) | CSP, consent, GDPR/PECR notes |
 
-| Area | State | Priority |
-|---|---|---|
-| Runtime/data loading | Build and generated-output integrity verified in current-head CI | P0 |
-| Calculator architecture | Canonical engine established; production behavior awaits live-host verification | P0 |
-| Search | Canonical module + Fuse fallback | P0 |
-| Static deployment config | Build configuration exists; authoritative production host remains unverified | P0 |
-| Data validation | Current CI validates 26 countries, 56 pathways and 193 evidence records | P0 |
-| Migration evidence/provenance | 193 records; all review dates currently valid/current; ongoing source revalidation required | P0 |
-| Country coverage | 26-country registry exists; unsupported aggregate costs, timelines and approval rates remain null | P0 |
-| Pathway model | 56 canonical pathways: 52 publishable, 4 research_required; promoted exact subroutes align with canonical IDs | P0 |
-| Structured requirements | Schema/validator implemented; only explicitly evidenced route-specific requirements may be populated | P0 |
-| SEO | Generated metadata and accessibility smoke checks pass; absolute canonicals/sitemap wait for verified origin | P1 |
-| Growth/monetization | Consent and fail-closed foundations implemented; live provider activation remains blocked | P1/P2 |
-| Production release | NO-GO until canonical origin, deployed SHA/content, live CSP and branch protection are verified | P0 |
+---
 
-## Important correction to older docs
+## Data
 
-Older sprint pages describe the project as if the main blocker were blog production. That is no longer the correct execution priority. Do not mark the 26-country database complete merely because records exist; legal, cost, approval and processing claims require provenance and freshness under the data trust standard.
+| Doc | What it is |
+|---|---|
+| [Country Source Manifest](data/country-source-review-manifest.json) | 26-country source review status — needs human sign-off |
 
-Likewise, avoid using old completion percentages as a release signal. Current production readiness is determined by verified gates, not document percentages.
+---
 
-## Execution chain
+## Monetization
 
-`ROADMAP → PHASE → SPRINT → TASK → ISSUE/PR → COMMIT → VERIFICATION`
+| Doc | What it is |
+|---|---|
+| [Monetization Roadmap](monetization/MONETIZATION_ROADMAP.md) | M0 complete, M1 partial, M2 blocked on publisher ID |
+| [Ad Placement Map](monetization/AD_PLACEMENT_MAP.md) | Which slots go on which pages |
+| [AdSense Strategy](monetization/ADSENSE_STRATEGY.md) | Application checklist, placement rules, revenue model |
 
-When a change lands, update the active sprint and the relevant implementation/reference document in the same delivery cycle.
+---
 
-## Phase strategy
+## Guides
 
-### Phase A — Production Integrity (P0)
-Canonical runtime, data validation, calculator/search correctness, deployment, tests and security baseline.
+| Doc | What it is |
+|---|---|
+| [Contributing](guides/CONTRIBUTING.md) | How to add countries, pathways, evidence records |
+| [Quick Start](guides/QUICK_START.md) | Dev setup in 5 minutes |
 
-### Phase B — Migration Intelligence (P0)
-Evidence-backed country/pathway records, provenance, freshness, confidence and policy updates.
+---
 
-### Phase C — Core Product (P0)
-Country explorer, pathway pages, calculator, comparison and `Find My Route` recommendation engine.
+## Sprint history
 
-### Phase D — Acquisition (P1)
-Technical SEO, structured data, internal linking, programmatic country/pathway pages and analytics.
+| Doc | What it is |
+|---|---|
+| [Sprint 3 — Growth](sprints/SPRINT_3_GROWTH.md) | Current sprint |
+| [UI Overwork Spec](sprints/UI_OVERWORK_SPEC.md) | All 14 UI tasks — complete |
+| [Master Delivery Plan](sprints/MASTER_DELIVERY_PLAN.md) | Full project delivery timeline |
 
-### Phase E — Trust & Compliance (P1)
-Privacy, terms, disclaimers, accessibility, security hardening and transparent sourcing. See [Privacy Data Inventory — Engineering Draft](phase-4/PRIVACY_DATA_INVENTORY.md) for current source-visible flows and outstanding legal/provider gates.
+---
 
-### Phase F — Growth (P1)
-Newsletter, referrals, partnerships and trusted affiliate infrastructure.
+## Key numbers (2026-10-24)
 
-### Phase G — Scale (P2)
-Personalization, alerts, policy-change notifications, premium intelligence and B2B/API products.
-
-## Maintenance rule
-
-If an older document conflicts with `ACTIVE_SPRINT.md`, `EXECUTION_ROADMAP.md` or `DATA_TRUST_STANDARD.md`, reconcile the older document instead of creating another parallel plan.
-
-
-## Reassessment — 2026-10-11
-
-Use `project/PHASE_STATUS.md` as the canonical phase tracker. Phase 0 exit is blocked; Phase 1 data trust and Phase 2 route decision quality remain incomplete; Phase 3 editorial cleanup is open; Phase 4 privacy/compliance/accessibility is partial (consent controls and an engineering data-inventory draft are committed but unvalidated); Phase 5 monetization is not live; Phase 6 scale is deferred. Current assessed SHA: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`. See `project/PROJECT_ASSESSMENT.md` for the full backlog.
+| Metric | Value |
+|---|---|
+| Countries | 26 |
+| Pathways | 59 (55 publishable / 4 research_required) |
+| Evidence records | 193+ |
+| Blog posts | 17 |
+| Test suites | 18/18 PASS |
+| Tests | 139/139 PASS |
+| Generated HTML files | 183 |
+| Ad revenue | £0 — blocked on AdSense application |
