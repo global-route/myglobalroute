@@ -53,10 +53,10 @@ describe('canonical route engine', () => {
       ],
       5
     );
-    expect(result).toHaveLength(1);
-    expect(result).toHaveLength(1);
-    expect(result[0].pathway.id).toBe('gb-work');
-    expect(result.every(item => item.score >= 0 && item.score <= 100)).toBe(true);
+    expect(result.matches).toHaveLength(1);
+    expect(result.matches).toHaveLength(1);
+    expect(result.matches[0].pathway.id).toBe('gb-work');
+    expect(result.matches.every(item => item.score >= 0 && item.score <= 100)).toBe(true);
   });
 
   test('returns exact-pathway matches without treating aggregate country fields as verified', () => {
@@ -66,9 +66,9 @@ describe('canonical route engine', () => {
       [{ id: 'gb-work', countryId: 'GB', type: 'work', status: 'publishable', evidenceIds: ['evidence-work'], sourceUrl: 'https://example.gov/work' }],
       5
     );
-    expect(result).toHaveLength(1);
-    expect(result[0].pathway.id).toBe('gb-work');
-    expect(result[0].country.dataStatus).toBe('evidence_required');
+    expect(result.matches).toHaveLength(1);
+    expect(result.matches[0].pathway.id).toBe('gb-work');
+    expect(result.matches[0].country.dataStatus).toBe('evidence_required');
   });
 
   test('does not rank arbitrary pathways when the user selects Any and no structured fit signal exists', () => {
@@ -78,7 +78,8 @@ describe('canonical route engine', () => {
       [{ id: 'gb-work', countryId: 'GB', type: 'work', status: 'publishable', evidenceIds: ['evidence-work'], sourceUrl: 'https://example.gov/work' }],
       5
     );
-    expect(result).toHaveLength(0);
+    expect(result.matches).toHaveLength(0);
+    expect(result.missingInput).toBe(true);
   });
 
   test.each([undefined, null, '', 'not-a-number', -1, 0])('blocks a known positive minimum-funds route when budget is missing or invalid (%s)', budget => {
@@ -116,9 +117,9 @@ describe('canonical route engine', () => {
 
 describe('route recommendation safety regressions',()=>{
 const work={id:'gb-work',countryId:'GB',type:'work',status:'publishable',evidenceIds:['evidence-work'],sourceUrl:'https://example.gov/work'};
-test('absence of structured requirements is not proof of eligibility',()=>{const r=recommend({goal:'work'},[{id:'GB',dataStatus:'evidence_required'}],[{...work}],5);expect(r).toHaveLength(1);expect(r[0].pathway.requirements).toBeUndefined();expect(r[0].country.dataStatus).toBe('evidence_required');});
-test('missing country reference is not recommended',()=>{expect(recommend({goal:'work'},[],[{...work}],5)).toHaveLength(0);});
-test('research-required routes are never recommended',()=>{expect(recommend({goal:'work'},[{id:'GB',dataStatus:'publishable'}],[{...work,status:'research_required'}],5)).toHaveLength(0);});
+test('absence of structured requirements is not proof of eligibility',()=>{const r=recommend({goal:'work'},[{id:'GB',dataStatus:'evidence_required'}],[{...work}],5);expect(r.matches).toHaveLength(1);expect(r.matches[0].pathway.requirements).toBeUndefined();expect(r.matches[0].country.dataStatus).toBe('evidence_required');});
+test('missing country reference is not recommended',()=>{expect(recommend({goal:'work'},[],[{...work}],5).matches).toHaveLength(0);});
+test('research-required routes are never recommended',()=>{expect(recommend({goal:'work'},[{id:'GB',dataStatus:'publishable'}],[{...work,status:'research_required'}],5).matches).toHaveLength(0);});
 test('unknown thresholds are not defaulted to zero or reported compatible',()=>{const r=scorePathway({...work,minFunds:undefined,minExperienceYears:undefined,minMonthlyIncome:undefined},{id:'GB',dataStatus:'evidence_required'},{goal:'work'});expect(r.eligible).toBe(true);expect(r.score).toBe(35);expect(r.reasons).not.toContain('budget appears compatible');expect(r.reasons).not.toContain('experience requirement appears compatible');expect(r.reasons).not.toContain('income requirement appears compatible');});
 });
 
@@ -155,7 +156,7 @@ describe('route threshold and no-match boundaries', () => {
 
   test('returns no recommendation when no positive structured fit signal matches', () => {
     const result = recommend({ goal: 'business' }, [country], [{ ...evidencedStudy }], 5);
-    expect(result).toHaveLength(0);
+    expect(result.matches).toHaveLength(0);
   });
 
   test('respects the caller-supplied recommendation limit', () => {
@@ -169,7 +170,7 @@ describe('route threshold and no-match boundaries', () => {
       ],
       2
     );
-    expect(result).toHaveLength(2);
+    expect(result.matches).toHaveLength(2);
   });
 });
 

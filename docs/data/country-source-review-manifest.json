@@ -241,8 +241,8 @@
       "registryRetrievedAt": "2026-10-18",
       "review": {
         "status": "reviewed_relevant_human_signoff_pending",
-        "checkedAt": "2026-10-18",
-        "reviewer": "AI-assisted public-source audit; human sign-off recorded",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
         "method": "Direct navigation to Luxembourg Guichet.lu immigration portal verified",
         "observedTitle": "Immigration - Citizens - Guichet.lu - Administrative Guide - Luxembourg",
         "observedUrl": "https://guichet.public.lu/en/citoyens/immigration.html",
@@ -426,7 +426,7 @@
     {
       "countryId": "MT",
       "countryName": "Malta",
-      "authority": "Identità Malta",
+      "authority": "Identit\u00e0 Malta",
       "registeredUrl": "https://identita.gov.mt/",
       "registryRetrievedAt": "2026-09-05",
       "review": {
@@ -434,7 +434,7 @@
         "checkedAt": "2026-10-11",
         "reviewer": "AI-assisted public-source audit; human sign-off required",
         "method": "Official alternative/indexed page inspected; direct registered URL not always retrievable",
-        "observedTitle": "Working & Residing in Malta - Identità",
+        "observedTitle": "Working & Residing in Malta - Identit\u00e0",
         "observedUrl": "https://identita.gov.mt/working-residing-in-malta/",
         "evidenceUrl": "https://identita.gov.mt/working-residing-in-malta/",
         "outcome": "Official page states the Expatriates Unit handles residence documents and migration policy.",
@@ -450,8 +450,8 @@
       "registryRetrievedAt": "2026-09-05",
       "review": {
         "status": "reviewed_relevant_human_signoff_pending",
-        "checkedAt": "2026-10-18",
-        "reviewer": "AI-assisted public-source audit; human sign-off recorded",
+        "checkedAt": "2026-10-11",
+        "reviewer": "AI-assisted public-source audit; human sign-off required",
         "method": "National MFA authority confirmed as primary country-level anchor; territorial missions (e.g. Embassy of Russia in Nigeria) handle applicant-market consular checklists and are cited in pathway evidence",
         "observedTitle": "The Ministry of Foreign Affairs of the Russian Federation",
         "observedUrl": "https://mid.ru/en/",
