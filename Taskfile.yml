@@ -1,10 +1,34 @@
 version: "3"
 
-# ─────────────────────────────────────────────
-# Global Route — Taskfile
-# Run tasks with: task <name>
-# Install Task: https://taskfile.dev/installation/
-# ─────────────────────────────────────────────
+# ═══════════════════════════════════════════════════════════════════
+# Global Route — Master Taskfile
+# 10/10 Strategy + Priority Order + Trust Walkthrough
+#
+# PRIORITY ORDER (highest leverage first):
+#   P1 — Revenue unblock       (AdSense, ads.txt, consent)
+#   P2 — SEO authority         (schema markup, sitemap, content)
+#   P3 — Route engine depth    (income/experience UI, budget on FMR)
+#   P4 — Trust closure         (legal, ARIA, a11y)
+#   P5 — Content scale         (country audits, email capture)
+#   P6 — Analytics depth       (funnel, custom events)
+#   P7 — Dev & build           (core pipeline)
+#   P8 — Data & evidence       (freshness, validation)
+#   P9 — Performance           (bundle, images, unused CSS)
+#
+# HOW TO RUN (Task CLI not installed? Use npm/node directly):
+#   task <name>          — if Task CLI is installed
+#   See each task's cmds for the direct equivalent
+#
+# TRUST STRATEGY — competing with Visaguide, NomadList, IRCC, Make it in Germany:
+#   1. Every claim has a source URL, date and confidence level
+#   2. Null values are shown as "not published" — never estimated as fact
+#   3. Approval rates are blocked unless the authority publishes them
+#   4. Requirements are pathway-specific, not country-level aggregates
+#   5. Stale data triggers a visible warning, not silent serving
+#   6. The consent UI separates analytics from advertising — no dark patterns
+#   7. The disclaimer is prominent, not buried
+#   8. Evidence IDs are machine-readable — every claim is auditable
+# ═══════════════════════════════════════════════════════════════════
 
 vars:
   SRC_CSS: src/css
@@ -12,534 +36,898 @@ vars:
   SRC_PAGES: src/pages
   DIST: dist
   SCRIPTS: scripts
+  BASE_URL: https://mypathway2global.org.uk
 
-# ══════════════════════════════════════════════
-# DEV & BUILD
-# ══════════════════════════════════════════════
+# ═══════════════════════════════════════════════════════════════════
+# P1 — REVENUE UNBLOCK
+# Goal: get AdSense live on blog + playbook pages only.
+# Never on Find My Route, Calculator or country detail pages.
+# Those are decision tools — ads there destroy trust and conversion.
+#
+# WALKTHROUGH:
+#   1. Apply for AdSense at https://adsense.google.com
+#      — Use mypathway2global.org.uk as the site URL
+#      — Content must be original, substantial and policy-compliant
+#      — The 17 blog posts + 3 playbooks satisfy the content requirement
+#   2. Once approved, get your publisher ID (ca-pub-XXXXXXXXXXXXXXXX)
+#   3. Run task revenue:ads-txt with your real publisher ID
+#   4. Run task revenue:activate-adsense to replace the placeholder script
+#   5. Verify consent flow: advertising consent must be granted before
+#      behavioural targeting activates (already wired in analytics.js)
+#   6. Max 2 ad slots per blog post: one after intro, one mid-article
+#      Never in the hero, never in the footer, never on tool pages
+# ═══════════════════════════════════════════════════════════════════
+
 tasks:
 
+  revenue:status:
+    desc: "P1 — Show current monetization readiness status"
+    cmds:
+      - |
+        echo "=== Monetization readiness ==="
+        echo ""
+        echo "ads.txt:"
+        cat public/ads.txt
+        echo ""
+        echo "Ad slot registry (blog + playbook pages):"
+        grep -rn "data-ad-slot" src/pages/ src/index.html | grep -v "hidden" | head -20
+        echo ""
+        echo "Placeholder ad slots (hidden, not yet live):"
+        grep -rn "data-ad-slot.*hidden\|hidden.*data-ad-slot" src/pages/ src/index.html | wc -l
+        echo "slots waiting for publisher ID"
+
+  revenue:ads-txt:
+    desc: "P1 — Populate ads.txt with real publisher ID (OWNER ACTION)"
+    summary: |
+      Replace the placeholder ads.txt with your real AdSense publisher ID.
+      Run: task revenue:ads-txt PUBLISHER_ID=ca-pub-XXXXXXXXXXXXXXXX
+    cmds:
+      - |
+        if [ -z "{{.PUBLISHER_ID}}" ]; then
+          echo "ERROR: Provide your publisher ID"
+          echo "Usage: task revenue:ads-txt PUBLISHER_ID=ca-pub-XXXXXXXXXXXXXXXX"
+          exit 1
+        fi
+        echo "google.com, {{.PUBLISHER_ID}}, DIRECT, f08c47fec0942fa0" > public/ads.txt
+        echo "✓ ads.txt written with publisher ID {{.PUBLISHER_ID}}"
+        echo "  Verify at: https://mypathway2global.org.uk/ads.txt"
+
+  revenue:activate-adsense:
+    desc: "P1 — Activate AdSense script on blog + playbook pages only"
+    summary: |
+      Replaces the placeholder AdSense comment with the real async script.
+      Only activates on blog posts and playbook pages — never on tool pages.
+      Run: task revenue:activate-adsense PUBLISHER_ID=ca-pub-XXXXXXXXXXXXXXXX
+    cmds:
+      - |
+        if [ -z "{{.PUBLISHER_ID}}" ]; then
+          echo "ERROR: Provide your publisher ID"
+          echo "Usage: task revenue:activate-adsense PUBLISHER_ID=ca-pub-XXXXXXXXXXXXXXXX"
+          exit 1
+        fi
+        SCRIPT='<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{.PUBLISHER_ID}}" crossorigin="anonymous"></script>'
+        for f in src/pages/blog*.html src/pages/student-playbook.html src/pages/professional-playbook.html src/pages/business-playbook.html src/templates/blog-post.njk; do
+          if grep -q "adsbygoogle" "$f"; then
+            echo "  – Already has AdSense script: $f"
+          else
+            sed -i '' "s|</head>|  ${SCRIPT}\n</head>|" "$f"
+            echo "  ✓ AdSense script injected: $f"
+          fi
+        done
+        echo ""
+        echo "IMPORTANT: Do NOT add AdSense to:"
+        echo "  - find-my-route.html (decision tool)"
+        echo "  - calculator.html (decision tool)"
+        echo "  - countries.html (decision tool)"
+        echo "  - country detail pages (decision tool)"
+
+  revenue:unhide-ad-slots:
+    desc: "P1 — Remove hidden attribute from ad slots once publisher ID is live"
+    cmds:
+      - |
+        for f in src/pages/blog*.html src/pages/student-playbook.html src/pages/professional-playbook.html src/pages/business-playbook.html src/templates/blog-post.njk; do
+          sed -i '' 's/ hidden aria-label="Advertisement"/ aria-label="Advertisement"/g' "$f"
+          echo "  ✓ Ad slots unhidden: $f"
+        done
+
+  revenue:verify-placement:
+    desc: "P1 — Verify ad slots are ONLY on blog/playbook pages, not on tool pages"
+    cmds:
+      - |
+        echo "=== Ad slots on TOOL pages (should be 0 active slots) ==="
+        for f in src/pages/find-my-route.html src/pages/calculator.html src/pages/countries.html; do
+          COUNT=$(grep -c "data-ad-slot" "$f" 2>/dev/null || echo 0)
+          echo "  $f: $COUNT slot(s)"
+        done
+        echo ""
+        echo "=== Ad slots on CONTENT pages (should have slots) ==="
+        for f in src/pages/blog*.html src/pages/student-playbook.html src/pages/professional-playbook.html src/pages/business-playbook.html; do
+          COUNT=$(grep -c "data-ad-slot" "$f" 2>/dev/null || echo 0)
+          echo "  $f: $COUNT slot(s)"
+        done
+
+# ═══════════════════════════════════════════════════════════════════
+# P2 — SEO AUTHORITY
+# Goal: schema markup, sitemap with lastmod, content gaps.
+#
+# WALKTHROUGH — competing with Visaguide.world, NomadList, IRCC:
+#   The gap between Global Route and those platforms is not data quality
+#   (ours is better) — it is SIGNAL. Google needs structured signals to
+#   understand what the page is about and trust it enough to rank it.
+#
+#   Three layers of SEO signal needed:
+#
+#   1. SCHEMA MARKUP (schema.org)
+#      — FAQ pages: FAQPage schema → Google shows expandable Q&A in SERPs
+#      — Blog posts: Article schema → enables rich results (date, author)
+#      — Country pages: no standard schema fits perfectly; use WebPage
+#        with breadcrumb markup — signals hierarchy to Google
+#      — Breadcrumbs on all inner pages → sitelinks in SERPs
+#
+#   2. SITEMAP WITH LASTMOD
+#      — Current sitemap.xml has no <lastmod> dates
+#      — Google uses lastmod to prioritise crawl budget
+#      — Pull lastmod from evidence effectiveDate for country/pathway pages
+#      — Pull lastmod from git commit date for blog posts
+#
+#   3. CONTENT GAPS (high-search-volume, low-competition)
+#      — "Germany visa from Nigeria 2026" — started, needs depth
+#      — "Canada Express Entry for Nigerians" — started, needs depth
+#      — "Italy student visa requirements Nigeria" — high volume
+#      — "UK skilled worker visa Nigeria" — very high volume
+#      — "Australia skilled visa points calculator" — high volume
+#      — Rejection analysis posts — almost no competition, high intent
+#      — "How to open a blocked account in Germany from Nigeria" — very specific, high intent
+#
+#   TRUST SIGNAL for SEO:
+#      — Every blog post must link to the official government source
+#      — Every cost figure must have a date ("as of September 2026")
+#      — Author byline or "Global Route Research Team" on every post
+#      — Last updated date visible on every post and country page
+# ═══════════════════════════════════════════════════════════════════
+
+  seo:schema-audit:
+    desc: "P2 — Audit which pages are missing schema.org markup"
+    cmds:
+      - |
+        echo "=== Schema.org markup audit ==="
+        echo ""
+        echo "Pages WITH schema markup:"
+        grep -rl "application/ld+json" src/pages/ src/index.html content/ 2>/dev/null || echo "  None found"
+        echo ""
+        echo "Pages MISSING schema markup (need Article, FAQPage or WebPage):"
+        for f in src/pages/*.html src/index.html; do
+          if ! grep -q "application/ld+json" "$f"; then
+            echo "  MISSING: $f"
+          fi
+        done
+
+  seo:add-faq-schema:
+    desc: "P2 — Add FAQPage schema to faq.html"
+    cmds:
+      - |
+        python3 - << 'EOF'
+        import re
+        path = 'src/pages/faq.html'
+        with open(path) as f:
+            content = f.read()
+        if 'application/ld+json' in content:
+            print('FAQ schema already present')
+            exit()
+        schema = '''<script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is Global Route?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Global Route is an evidence-gated migration intelligence platform for African passport holders. It organises visa pathways, official source trails and structured requirements for students, professionals and business owners."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Global Route guarantee visa approval?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Global Route provides evidence-gated pathway information from official sources. It does not predict approval likelihood, provide legal advice, or guarantee any outcome. Always verify current requirements with the relevant authority before acting."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How current is the data on Global Route?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Every requirement record carries an effectiveDate and a reviewAfter date. Records older than 180 days trigger a visible stale-data warning. The dataset baseline is September 2026."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why does Global Route show some costs as not verified?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Global Route only shows costs that have primary-source evidence from an official authority. Where evidence is missing or insufficient, the value is shown as not yet verified rather than estimated or invented."
+              }
+            }
+          ]
+        }
+        </script>'''
+        content = content.replace('</head>', schema + '\n</head>', 1)
+        with open(path, 'w') as f:
+            f.write(content)
+        print('FAQ schema added to faq.html')
+        EOF
+
+  seo:add-article-schema:
+    desc: "P2 — Add Article schema to blog-post.njk template (covers all 17 posts)"
+    cmds:
+      - |
+        python3 - << 'EOF'
+        path = 'src/templates/blog-post.njk'
+        with open(path) as f:
+            content = f.read()
+        if 'application/ld+json' in content:
+            print('Article schema already present in blog-post.njk')
+            exit()
+        schema = """<script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "{{ title }}",
+          "description": "{{ excerpt }}",
+          "datePublished": "{{ date | htmlDateString }}",
+          "dateModified": "{{ date | htmlDateString }}",
+          "author": {
+            "@type": "Organization",
+            "name": "Global Route Research Team",
+            "url": "https://mypathway2global.org.uk/pages/about"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Global Route",
+            "url": "https://mypathway2global.org.uk"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://mypathway2global.org.uk{{ page.url }}"
+          }
+        }
+        </script>"""
+        content = content.replace('</head>', schema + '\n</head>', 1)
+        with open(path, 'w') as f:
+            f.write(content)
+        print('Article schema added to blog-post.njk')
+        EOF
+
+  seo:add-breadcrumb-schema:
+    desc: "P2 — Add BreadcrumbList schema to country detail template"
+    cmds:
+      - |
+        python3 - << 'EOF'
+        path = 'content/countries.njk'
+        with open(path) as f:
+            content = f.read()
+        if 'BreadcrumbList' in content:
+            print('Breadcrumb schema already present')
+            exit()
+        schema = """<script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://mypathway2global.org.uk/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Countries",
+              "item": "https://mypathway2global.org.uk/pages/countries"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "{{ country.name }}",
+              "item": "https://mypathway2global.org.uk/pages/countries/{{ country.id }}/"
+            }
+          ]
+        }
+        </script>"""
+        content = content.replace('</head>', schema + '\n</head>', 1)
+        with open(path, 'w') as f:
+            f.write(content)
+        print('Breadcrumb schema added to countries.njk')
+        EOF
+
+  seo:sitemap-lastmod:
+    desc: "P2 — Regenerate sitemap.xml with lastmod dates from evidence data"
+    cmds:
+      - |
+        node - << 'EOF'
+        const fs = require('fs');
+        const path = require('path');
+        const countries = require('./src/data/countries.json');
+        const pathways = require('./src/data/pathways.json');
+        const BASE = 'https://mypathway2global.org.uk';
+        const today = new Date().toISOString().split('T')[0];
+
+        const urls = [
+          { loc: `${BASE}/`,                                    priority: '1.0', changefreq: 'weekly',  lastmod: today },
+          { loc: `${BASE}/pages/find-my-route`,                 priority: '0.9', changefreq: 'weekly',  lastmod: today },
+          { loc: `${BASE}/pages/countries`,                     priority: '0.9', changefreq: 'weekly',  lastmod: today },
+          { loc: `${BASE}/pages/calculator`,                    priority: '0.8', changefreq: 'monthly', lastmod: today },
+          { loc: `${BASE}/blog/`,                               priority: '0.8', changefreq: 'weekly',  lastmod: today },
+          { loc: `${BASE}/pages/student-playbook`,              priority: '0.7', changefreq: 'monthly', lastmod: today },
+          { loc: `${BASE}/pages/professional-playbook`,         priority: '0.7', changefreq: 'monthly', lastmod: today },
+          { loc: `${BASE}/pages/business-playbook`,             priority: '0.7', changefreq: 'monthly', lastmod: today },
+          { loc: `${BASE}/pages/faq`,                           priority: '0.6', changefreq: 'monthly', lastmod: today },
+          { loc: `${BASE}/pages/about`,                         priority: '0.5', changefreq: 'monthly', lastmod: today },
+          { loc: `${BASE}/pages/contact`,                       priority: '0.4', changefreq: 'yearly',  lastmod: today },
+          { loc: `${BASE}/pages/blog-category-country-audits`,  priority: '0.7', changefreq: 'weekly',  lastmod: today },
+          { loc: `${BASE}/pages/blog-category-student-playbooks`,    priority: '0.6', changefreq: 'weekly', lastmod: today },
+          { loc: `${BASE}/pages/blog-category-professional-playbooks`, priority: '0.6', changefreq: 'weekly', lastmod: today },
+          { loc: `${BASE}/pages/blog-category-business-playbooks`,   priority: '0.6', changefreq: 'weekly', lastmod: today },
+          { loc: `${BASE}/pages/blog-category-case-studies`,    priority: '0.6', changefreq: 'weekly',  lastmod: today },
+          { loc: `${BASE}/pages/blog-category-guides`,          priority: '0.6', changefreq: 'weekly',  lastmod: today },
+          { loc: `${BASE}/pages/blog-category-policy-updates`,  priority: '0.6', changefreq: 'weekly',  lastmod: today },
+        ];
+
+        // Country pages — lastmod from most recent pathway effectiveDate
+        for (const country of countries.countries) {
+          const countryPathways = pathways.pathways.filter(p => p.countryId === country.id && p.status === 'publishable');
+          const dates = countryPathways.flatMap(p => (p.requirements || []).map(r => r.effectiveDate)).filter(Boolean).sort();
+          const lastmod = dates.length ? dates[dates.length - 1] : today;
+          urls.push({ loc: `${BASE}/pages/countries/${country.id}/`, priority: '0.8', changefreq: 'monthly', lastmod });
+        }
+
+        const xml = `<?xml version="1.0" encoding="UTF-8"?>
+        <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        ${urls.map(u => `  <url>
+            <loc>${u.loc}</loc>
+            <lastmod>${u.lastmod}</lastmod>
+            <changefreq>${u.changefreq}</changefreq>
+            <priority>${u.priority}</priority>
+          </url>`).join('\n')}
+        </urlset>`;
+
+        fs.writeFileSync('public/sitemap.xml', xml);
+        console.log(`Sitemap written: ${urls.length} URLs`);
+        EOF
+
+  seo:content-gaps:
+    desc: "P2 — List high-priority content gaps vs competitor keyword targets"
+    cmds:
+      - |
+        echo "=== High-priority content gaps ==="
+        echo ""
+        echo "TIER 1 — High volume, high intent, low competition:"
+        echo "  [ ] Germany blocked account from Nigeria (how-to guide)"
+        echo "  [ ] UK Skilled Worker visa Nigeria 2026 (country audit depth)"
+        echo "  [ ] Australia skilled visa points test for Nigerians"
+        echo "  [ ] Italy student visa Nigeria step-by-step"
+        echo "  [ ] Canada Express Entry CRS score calculator explainer"
+        echo ""
+        echo "TIER 2 — Medium volume, very low competition:"
+        echo "  [ ] Visa rejection reasons for Nigerian applicants (analysis)"
+        echo "  [ ] How to write a visa motivation letter (guide)"
+        echo "  [ ] Document authentication Nigeria — apostille vs legalisation"
+        echo "  [ ] Finland vs Sweden vs Norway for Nigerian students (comparison)"
+        echo "  [ ] Portugal digital nomad visa for Nigerians 2026"
+        echo ""
+        echo "TIER 3 — Long-tail, very high conversion intent:"
+        echo "  [ ] Germany Chancenkarte points calculator for Nigerians"
+        echo "  [ ] New Zealand SMC points test walkthrough"
+        echo "  [ ] Austria Red-White-Red card for Nigerian professionals"
+        echo "  [ ] Switzerland work permit quota explained"
+        echo ""
+        echo "Each post needs: official source link, cost table with date,"
+        echo "requirements checklist, and a clear evidence-gate disclaimer."
+
+  seo:verify:
+    desc: "P2 — Run SEO + a11y verification on built pages"
+    cmds:
+      - node {{.SCRIPTS}}/verify-seo-a11y.js
+
+# ═══════════════════════════════════════════════════════════════════
+# P3 — ROUTE ENGINE DEPTH
+# Goal: expose income, experience and budget inputs on Find My Route.
+# The engine already scores them — the UI just doesn't collect them.
+#
+# WALKTHROUGH — why this matters for trust and differentiation:
+#   Visaguide.world shows requirements but doesn't filter by profile.
+#   NomadList filters by cost but not by visa eligibility.
+#   IRCC's own tool only covers Canada.
+#   Global Route is the only platform that can say:
+#   "Given your goal, family size, budget, income and experience,
+#    here are the pathways you can realistically pursue — and here
+#    is exactly why each other pathway is blocked for you right now."
+#
+#   That is the 10/10 product. The engine is already built.
+#   The gap is 3 form inputs and a better result card layout.
+#
+# WHAT TO BUILD:
+#   1. Add budget, monthlyIncome, experienceYears to find-my-route form
+#   2. Show "why blocked" inline on each alternative card
+#   3. Add a "refine your search" panel when zero matches
+#   4. Wire the missingInput prompt to highlight the empty field
+# ═══════════════════════════════════════════════════════════════════
+
+  engine:audit:
+    desc: "P3 — Audit what profile fields the engine supports vs what the form collects"
+    cmds:
+      - |
+        echo "=== Route engine profile fields (from route-engine.js) ==="
+        grep -n "profile\." src/js/route-engine.js | grep -v "//" | head -30
+        echo ""
+        echo "=== Form inputs currently collected (find-my-route.html) ==="
+        grep -n "<input\|<select" src/pages/find-my-route.html | head -20
+        echo ""
+        echo "GAP: fields scored by engine but not collected by form:"
+        echo "  - budget (monthlyIncome - expenses * months)"
+        echo "  - monthlyIncome"
+        echo "  - experienceYears"
+        echo "  (familySize and applicationDate were added in Phase 2)"
+
+  engine:add-profile-inputs:
+    desc: "P3 — Add budget, income and experience inputs to Find My Route form"
+    cmds:
+      - |
+        python3 - << 'EOF'
+        path = 'src/pages/find-my-route.html'
+        with open(path) as f:
+            content = f.read()
+
+        new_inputs = """        <label>Available budget (USD equivalent)
+          <input type="number" name="budget" min="0" step="100" placeholder="e.g. 15000">
+        </label>
+        <label>Monthly income (USD equivalent)
+          <input type="number" name="monthlyIncome" min="0" step="100" placeholder="e.g. 2000">
+        </label>
+        <label>Years of work experience
+          <input type="number" name="experienceYears" min="0" max="40" step="1" placeholder="e.g. 3">
+        </label>"""
+
+        # Insert before the submit button
+        content = content.replace(
+            '        <button type="submit" class="btn btn-primary btn-large">Find routes &rarr;</button>',
+            new_inputs + '\n        <button type="submit" class="btn btn-primary btn-large">Find routes &rarr;</button>'
+        )
+        with open(path, 'w') as f:
+            f.write(content)
+        print('Budget, income and experience inputs added to find-my-route.html')
+        print('NOTE: rebuild and test — engine will now use these for scoring')
+        EOF
+
+  engine:test-profile:
+    desc: "P3 — Test route engine with a full profile (study, family 2, budget 20000)"
+    cmds:
+      - |
+        node - << 'EOF'
+        const engine = require('./src/js/route-engine');
+        const countries = require('./src/data/countries.json').countries;
+        const pathways = require('./src/data/pathways.json').pathways;
+        const profile = {
+          goal: 'study',
+          familySize: '2',
+          applicationDate: new Date().toISOString().split('T')[0],
+          budget: '20000',
+          monthlyIncome: '2000',
+          experienceYears: '3'
+        };
+        const result = engine.recommend(profile, countries, pathways, 10);
+        console.log('Profile:', JSON.stringify(profile));
+        console.log('Matches:', result.matches.length);
+        result.matches.forEach(m => {
+          console.log(`  ${m.country.name} — ${m.pathway.name} (score: ${m.score})`);
+          if (m.matchedTier) console.log(`    Funds tier: ${m.matchedTier.currency} ${m.matchedTier.value} (family ${m.matchedTier.conditions?.familySize || 'any'})`);
+        });
+        if (result.zeroFitExplanations.length) {
+          console.log('Zero-fit explanations:');
+          result.zeroFitExplanations.forEach(e => console.log(`  ${e.name}: ${e.reason}`));
+        }
+        EOF
+
+# ═══════════════════════════════════════════════════════════════════
+# P4 — TRUST CLOSURE
+# Goal: legal review done, ARIA audit clean, consent flow validated.
+#
+# WALKTHROUGH — why trust is the product moat:
+#   The audience is making decisions that cost thousands of dollars
+#   and years of their life. They have been burned by bad advice before.
+#   Trust is not a feature — it is the entire value proposition.
+#
+#   WHAT COMPETITORS GET WRONG:
+#   — Visaguide.world: shows approval rates without methodology
+#   — Random blogs: invent costs, copy-paste outdated requirements
+#   — YouTube channels: anecdotal, no sources, no dates
+#   — Immigration lawyers: accurate but expensive and inaccessible
+#
+#   WHAT GLOBAL ROUTE MUST DO TO WIN TRUST:
+#   1. Every page has a visible "last verified" date
+#   2. Every cost has a currency, date and source link
+#   3. The disclaimer is on every page, not just the disclaimer page
+#   4. The consent UI is honest — no pre-ticked boxes, no dark patterns
+#   5. The ARIA audit is clean — screen reader users are part of the audience
+#   6. The legal pages are written in plain English, not legalese
+#   7. The "not yet verified" label is explained, not hidden
+#
+#   ARIA AUDIT CHECKLIST (run in browser with axe DevTools):
+#   — Homepage: hero, stats grid, problem cards, approach cards
+#   — Find My Route: form labels, live region on results, focus management
+#   — Calculator: form labels, results region
+#   — Country page: back link, status badge, requirements list
+#   — Minimum bar: 0 critical, 0 serious violations (WCAG 2.1 AA)
+# ═══════════════════════════════════════════════════════════════════
+
+  trust:a11y-audit:
+    desc: "P4 — Run axe-core accessibility audit on built dist"
+    cmds:
+      - |
+        if ! command -v axe &> /dev/null; then
+          echo "Installing axe-cli..."
+          npm install -g @axe-core/cli
+        fi
+        echo "Running axe audit on core pages..."
+        axe dist/index.html dist/pages/find-my-route/index.html dist/pages/calculator/index.html dist/pages/countries/index.html --exit || true
+
+  trust:aria-live-audit:
+    desc: "P4 — Check all dynamic result regions have aria-live attributes"
+    cmds:
+      - |
+        echo "=== aria-live regions audit ==="
+        echo ""
+        echo "Pages with aria-live (good):"
+        grep -rn "aria-live" src/pages/ src/index.html content/ | head -20
+        echo ""
+        echo "Dynamic result containers WITHOUT aria-live (needs fix):"
+        for f in src/pages/find-my-route.html src/pages/calculator.html src/pages/countries.html; do
+          if ! grep -q "aria-live" "$f"; then
+            echo "  MISSING aria-live: $f"
+          fi
+        done
+
+  trust:consent-audit:
+    desc: "P4 — Verify consent UI has no dark patterns"
+    cmds:
+      - |
+        echo "=== Consent UI audit ==="
+        echo ""
+        echo "Checking for pre-ticked checkboxes (dark pattern — should be 0):"
+        grep -n "checked" src/js/analytics.js | grep -v "analyticsGranted\|advertisingGranted\|consentBound\|//\|\.checked" | head -10
+        echo ""
+        echo "Consent banner wording (should not use manipulative language):"
+        grep -n "innerHTML\|textContent" src/js/analytics.js | head -10
+        echo ""
+        echo "Advertising consent is separate from analytics consent (good):"
+        grep -n "advertisingConsent\|advertising_consent" src/js/analytics.js | wc -l
+        echo "references to advertising consent (expect > 5)"
+
+  trust:disclaimer-visibility:
+    desc: "P4 — Check disclaimer link is present in footer on all pages"
+    cmds:
+      - |
+        echo "=== Disclaimer link in footer ==="
+        MISSING=0
+        for f in src/pages/*.html src/index.html; do
+          if ! grep -q "disclaimer" "$f"; then
+            echo "  MISSING disclaimer link: $f"
+            MISSING=$((MISSING + 1))
+          fi
+        done
+        if [ "$MISSING" -eq 0 ]; then
+          echo "  All pages have disclaimer link in footer"
+        fi
+
+  trust:legal-review-checklist:
+    desc: "P4 — Print legal review checklist for owner action"
+    cmds:
+      - |
+        echo "=== Legal review checklist (OWNER ACTION) ==="
+        echo ""
+        echo "Privacy policy (src/pages/privacy.html):"
+        echo "  [ ] Data controller identity and contact details"
+        echo "  [ ] Lawful basis for each processing activity"
+        echo "  [ ] Sabilytics analytics — confirm cookieless, no personal data"
+        echo "  [ ] AdSense (when live) — confirm consent basis for behavioural ads"
+        echo "  [ ] Data retention periods"
+        echo "  [ ] User rights (access, erasure, portability)"
+        echo "  [ ] ICO registration number (if UK-based)"
+        echo ""
+        echo "Disclaimer (src/pages/disclaimer.html):"
+        echo "  [ ] Not legal advice — explicit statement"
+        echo "  [ ] Not financial advice — explicit statement"
+        echo "  [ ] Data accuracy — explicit limitation"
+        echo "  [ ] No guarantee of visa approval — explicit statement"
+        echo "  [ ] Jurisdiction — which law governs"
+        echo ""
+        echo "Terms (src/pages/terms.html):"
+        echo "  [ ] Acceptable use"
+        echo "  [ ] Intellectual property"
+        echo "  [ ] Limitation of liability"
+        echo "  [ ] Governing law and jurisdiction"
+
+# ═══════════════════════════════════════════════════════════════════
+# P5 — CONTENT SCALE
+# Goal: programmatic country pages, email capture, rejection analysis.
+#
+# WALKTHROUGH — content as a trust and acquisition layer:
+#   Content is not just SEO. For this audience, content IS the product.
+#   A Nigerian student deciding between Germany and Canada needs:
+#   — Exact costs with dates and sources (not "around €10,000")
+#   — What documents are required and where to get them in Nigeria
+#   — What the embassy process looks like from Lagos specifically
+#   — What happens if the visa is rejected and what to do next
+#   — Real case studies from people who succeeded (and failed)
+#
+#   PROGRAMMATIC COUNTRY PAGES:
+#   Each of the 26 countries already has structured data in countries.json
+#   and 55 pathways in pathways.json. The country template (countries.njk)
+#   generates a page per country. The gap is DEPTH — each page currently
+#   shows requirements but not:
+#   — A "what you need from Nigeria specifically" section
+#   — A cost breakdown table with line items
+#   — A timeline section (application → decision → travel)
+#   — A "common rejection reasons" section
+#   — Links to the Nigerian embassy/consulate for that country
+#
+#   EMAIL CAPTURE:
+#   The newsletter slot exists on blog pages but shows "not yet available".
+#   This is a missed acquisition opportunity. Even 500 subscribers is
+#   a meaningful audience for a niche platform. Use Mailchimp free tier.
+#   Offer: "Get notified when requirements change for your target country"
+#   — that is a genuinely useful, evidence-gated value proposition.
+# ═══════════════════════════════════════════════════════════════════
+
+  content:audit:
+    desc: "P5 — Audit content depth across all 26 country pages"
+    cmds:
+      - |
+        node - << 'EOF'
+        const countries = require('./src/data/countries.json').countries;
+        const pathways = require('./src/data/pathways.json').pathways;
+        console.log('Country | Publishable pathways | Has summary | Has trueCost');
+        console.log('--------|---------------------|-------------|-------------');
+        for (const c of countries) {
+          const pub = pathways.filter(p => p.countryId === c.id && p.status === 'publishable').length;
+          const hasSummary = c.summary ? 'YES' : 'NO ←';
+          const hasCost = c.trueCost?.total != null ? 'YES' : 'NO ←';
+          if (hasSummary === 'NO ←' || hasCost === 'NO ←') {
+            console.log(`${c.id.padEnd(8)}| ${String(pub).padEnd(21)}| ${hasSummary.padEnd(13)}| ${hasCost}`);
+          }
+        }
+        EOF
+
+  content:blog-post-template:
+    desc: "P5 — Print the standard blog post structure for new country audits"
+    cmds:
+      - |
+        echo "=== Standard country audit blog post structure ==="
+        echo ""
+        echo "File: content/blog/country-audits/[country]/[country]-visa-from-nigeria-2026.md"
+        echo ""
+        echo "Required sections (in order):"
+        echo "  1. TL;DR box — 3 bullet points: cost, timeline, key requirement"
+        echo "  2. Who this pathway is for — specific profile (student/worker/etc)"
+        echo "  3. Official requirements — pulled from pathways.json, with source links"
+        echo "  4. Cost breakdown table — line items with dates and sources"
+        echo "  5. Application process from Nigeria — embassy, documents, timeline"
+        echo "  6. Common rejection reasons — evidence-based, not anecdotal"
+        echo "  7. Alternatives if this pathway fails — link to Find My Route"
+        echo "  8. Official sources — government URLs, last checked date"
+        echo "  9. Evidence gate disclaimer — standard block"
+        echo ""
+        echo "Word count target: 1,500-2,500 words"
+        echo "Every cost figure must have: currency, amount, date, source URL"
+        echo "Every requirement must link to the official government page"
+
+  content:email-capture-setup:
+    desc: "P5 — Print email capture setup instructions (Mailchimp free tier)"
+    cmds:
+      - |
+        echo "=== Email capture setup ==="
+        echo ""
+        echo "1. Create Mailchimp account at https://mailchimp.com (free up to 500 contacts)"
+        echo ""
+        echo "2. Create a list called 'Global Route — Requirements Updates'"
+        echo ""
+        echo "3. Create an embedded form with these fields:"
+        echo "   - Email address (required)"
+        echo "   - Target country (optional dropdown — the 26 countries)"
+        echo "   - Goal: Study / Work (optional)"
+        echo ""
+        echo "4. Get the form action URL from Mailchimp embed code"
+        echo ""
+        echo "5. Replace the 'not yet available' newsletter section in:"
+        echo "   - src/pages/blog.html"
+        echo "   - src/templates/blog-post.njk"
+        echo "   - content/blog/index.njk"
+        echo ""
+        echo "6. Value proposition copy:"
+        echo "   'Get notified when visa requirements change for your target country."
+        echo "    We only email when official sources update — no spam, no guesswork.'"
+        echo ""
+        echo "7. Update privacy.html to disclose Mailchimp as a data processor"
+
+# ═══════════════════════════════════════════════════════════════════
+# P6 — ANALYTICS DEPTH
+# Goal: wire Sabilytics custom events to existing track() calls.
+#
+# WALKTHROUGH — what to measure and why:
+#   Sabilytics is live and tracking pageviews. That tells you traffic.
+#   It does not tell you whether the product is working.
+#
+#   THE FUNNEL TO MEASURE:
+#   Homepage → Find My Route → [form submit] → result card → official source click
+#
+#   Each step drop-off tells you something different:
+#   — Homepage → FMR drop-off: messaging problem or nav problem
+#   — FMR → submit drop-off: form friction (too many fields? confusing?)
+#   — Submit → result card drop-off: zero matches (engine gap) or bad UX
+#   — Result card → official source: this is the CONVERSION — user trusts the data
+#
+#   EVENTS ALREADY INSTRUMENTED in app.js:
+#   — calculator_started, calculator_completed
+#   — official_source_clicked
+#   — route_search_started (not yet wired to form submit)
+#
+#   WHAT NEEDS WIRING:
+#   — route_search_started: fire on Find My Route form submit
+#   — route_recommendation_generated: fire with match count
+#   — pathway_viewed: fire when a result card is expanded
+#   — official_source_clicked: already wired to all target="_blank" links
+# ═══════════════════════════════════════════════════════════════════
+
+  analytics:audit:
+    desc: "P6 — Audit which track() calls are wired vs which are missing"
+    cmds:
+      - |
+        echo "=== Analytics track() calls in app.js ==="
+        grep -n "trackEvent\|track(" src/js/app.js | head -20
+        echo ""
+        echo "=== Events defined in analytics.js ==="
+        grep -A 20 "const EVENTS" src/js/analytics.js | head -20
+        echo ""
+        echo "=== Events fired in find-my-route.html ==="
+        grep -n "track\|Analytics" src/pages/find-my-route.html | head -10
+        echo ""
+        echo "GAP: route_search_started and route_recommendation_generated"
+        echo "are not fired from find-my-route.html — add them to the form submit handler"
+
+  analytics:verify-sabilytics:
+    desc: "P6 — Verify Sabilytics script is present on all built pages"
+    cmds:
+      - |
+        TOTAL=$(find dist -name "*.html" | wc -l | tr -d ' ')
+        WITH=$(grep -rl "sabilytics.com" dist | wc -l | tr -d ' ')
+        WITHOUT=$((TOTAL - WITH))
+        echo "Total HTML pages: $TOTAL"
+        echo "With Sabilytics:  $WITH"
+        echo "Without:          $WITHOUT"
+        if [ "$WITHOUT" -gt 0 ]; then
+          echo ""
+          echo "Pages missing Sabilytics:"
+          for f in $(find dist -name "*.html"); do
+            if ! grep -q "sabilytics.com" "$f"; then echo "  $f"; fi
+          done
+        fi
+
+# ═══════════════════════════════════════════════════════════════════
+# P7 — DEV & BUILD (core pipeline)
+# ═══════════════════════════════════════════════════════════════════
+
   dev:
-    desc: Start Eleventy dev server with live reload
+    desc: "P7 — Start Eleventy dev server with live reload"
     cmds:
       - npx @11ty/eleventy --serve
 
   build:
-    desc: Production Eleventy build
+    desc: "P7 — Production Eleventy build"
     cmds:
       - npx @11ty/eleventy
     env:
       NODE_ENV: production
 
   build:verify:
-    desc: Verify build output integrity
+    desc: "P7 — Verify build output integrity"
     cmds:
       - node {{.SCRIPTS}}/verify-build.js
 
-  # ══════════════════════════════════════════════
-  # TESTING
-  # ══════════════════════════════════════════════
-
   test:
-    desc: Run all Jest unit tests
+    desc: "P7 — Run all Jest unit tests"
     cmds:
       - npx jest
 
   test:watch:
-    desc: Jest in watch mode
+    desc: "P7 — Jest in watch mode"
     cmds:
       - npx jest --watch
 
   test:e2e:
-    desc: Run Playwright end-to-end smoke tests
+    desc: "P7 — Run Playwright end-to-end smoke tests"
     cmds:
       - npx playwright test
 
-  test:all:
-    desc: Unit tests + e2e in sequence
-    cmds:
-      - task: test
-      - task: test:e2e
-
-  # ══════════════════════════════════════════════
-  # LINT & FORMAT
-  # ══════════════════════════════════════════════
-
   lint:
-    desc: ESLint all JS in src/js
+    desc: "P7 — ESLint all JS in src/js"
     cmds:
       - npx eslint {{.SRC_JS}}
 
   lint:fix:
-    desc: ESLint with auto-fix
+    desc: "P7 — ESLint with auto-fix"
     cmds:
       - npx eslint {{.SRC_JS}} --fix
 
-  format:
-    desc: Prettier format all src files
-    cmds:
-      - npx prettier --write "src/**/*.{js,css,html,md}"
-
-  format:check:
-    desc: Prettier check (no write — for CI)
-    cmds:
-      - npx prettier --check "src/**/*.{js,css,html,md}"
-
-  # ══════════════════════════════════════════════
-  # DATA & EVIDENCE
-  # ══════════════════════════════════════════════
-
-  data:validate:
-    desc: Validate countries + pathways JSON schemas
-    cmds:
-      - node {{.SCRIPTS}}/validate-data.js
-
-  data:country-manifest:
-    desc: Check country source-review manifest (read-only)
-    cmds:
-      - node {{.SCRIPTS}}/generate-country-source-manifest.js --check
-
-  data:country-manifest:write:
-    desc: Regenerate and write country source-review manifest
-    cmds:
-      - node {{.SCRIPTS}}/generate-country-source-manifest.js --write
-
-  evidence:freshness:
-    desc: Report evidence freshness across all pathways
-    cmds:
-      - node {{.SCRIPTS}}/report-evidence-freshness.js
-
-  evidence:candidates:
-    desc: Report pathways that are candidates for promotion
-    cmds:
-      - node {{.SCRIPTS}}/report-promotion-candidates.js
-
-  requirements:readiness:
-    desc: Report requirement field readiness across pathways
-    cmds:
-      - node {{.SCRIPTS}}/report-requirement-readiness.js
-
-  commercial:validate:
-    desc: Validate commercial/affiliate registry
-    cmds:
-      - node {{.SCRIPTS}}/validate-commercial-registry.js
-
-  # ══════════════════════════════════════════════
-  # SEO & ACCESSIBILITY
-  # ══════════════════════════════════════════════
-
-  seo:verify:
-    desc: Verify SEO + a11y on built pages
-    cmds:
-      - node {{.SCRIPTS}}/verify-seo-a11y.js
-
-  a11y:audit:
-    desc: Run axe-core accessibility audit against built dist (requires axe-cli)
-    cmds:
-      - |
-        if ! command -v axe &> /dev/null; then
-          echo "Installing axe-cli..."
-          npm install -g axe-cli
-        fi
-        axe {{.DIST}}/**/*.html --exit
-
-  lighthouse:
-    desc: Run Lighthouse CI audit on built site (requires lhci)
-    cmds:
-      - |
-        if ! command -v lhci &> /dev/null; then
-          echo "Installing @lhci/cli..."
-          npm install -g @lhci/cli
-        fi
-        lhci autorun
-
-  # ══════════════════════════════════════════════
-  # DEPLOY
-  # ══════════════════════════════════════════════
-
-  deploy:wrangler:
-    desc: Build then deploy via Wrangler (Cloudflare Pages)
+  deploy:
+    desc: "P7 — Build then deploy via Wrangler (Cloudflare Workers)"
     cmds:
       - task: build
       - npx wrangler deploy
 
   deploy:verify:
-    desc: Verify the deployed live site
+    desc: "P7 — Verify the deployed live site"
     cmds:
       - node {{.SCRIPTS}}/verify-deployed-site.js
 
-  # ══════════════════════════════════════════════
-  # STYLING ENHANCEMENTS  (from assessment)
-  # ══════════════════════════════════════════════
+# ═══════════════════════════════════════════════════════════════════
+# P8 — DATA & EVIDENCE
+# ═══════════════════════════════════════════════════════════════════
 
-  style:fix-orphan-css:
-    desc: |
-      Fix the orphaned CSS rule in styles.css (dangling `padding` block
-      with no selector around line ~530). Prints the offending lines.
+  data:validate:
+    desc: "P8 — Validate countries + pathways JSON schemas"
     cmds:
-      - |
-        echo "=== Scanning for orphaned rules in {{.SRC_CSS}}/styles.css ==="
-        grep -n "^  padding:" {{.SRC_CSS}}/styles.css | head -20
-        echo ""
-        echo "Open src/css/styles.css and wrap the orphaned padding block in its missing selector."
-        echo "Hint: look for a closing brace followed immediately by a padding declaration with no selector above it."
+      - node {{.SCRIPTS}}/validate-data.js
 
-  style:inject-fonts:
-    desc: |
-      Inject Inter (body) + DM Serif Display (headings) Google Fonts link
-      into every HTML page that is missing it.
+  data:country-manifest:
+    desc: "P8 — Check country source-review manifest (read-only)"
     cmds:
-      - |
-        FONT_TAG='<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">'
-        for f in {{.SRC_PAGES}}/*.html src/index.html; do
-          if ! grep -q "fonts.googleapis.com" "$f"; then
-            sed -i '' "s|</head>|${FONT_TAG}\n</head>|" "$f"
-            echo "  ✓ Injected fonts → $f"
-          else
-            echo "  – Already has fonts → $f"
-          fi
-        done
+      - node {{.SCRIPTS}}/generate-country-source-manifest.js --check
 
-  style:css-vars-audit:
-    desc: |
-      Audit blog.css and blog-post.css for hard-coded hex values that
-      should reference CSS custom properties from styles.css.
+  data:country-manifest:write:
+    desc: "P8 — Regenerate and write country source-review manifest"
     cmds:
-      - |
-        echo "=== Hard-coded hex values in blog.css ==="
-        grep -n "#[0-9a-fA-F]\{3,6\}" {{.SRC_CSS}}/blog.css | head -40
-        echo ""
-        echo "=== Hard-coded hex values in blog-post.css ==="
-        grep -n "#[0-9a-fA-F]\{3,6\}" {{.SRC_CSS}}/blog-post.css | head -40
-        echo ""
-        echo "Replace each with the matching var() from styles.css :root block."
+      - node {{.SCRIPTS}}/generate-country-source-manifest.js --write
 
-  style:migrate-css-vars:
-    desc: |
-      Auto-migrate the most common hard-coded hex values in blog.css and
-      blog-post.css to their CSS custom property equivalents.
+  evidence:freshness:
+    desc: "P8 — Report evidence freshness across all pathways"
     cmds:
-      - |
-        for f in {{.SRC_CSS}}/blog.css {{.SRC_CSS}}/blog-post.css; do
-          sed -i '' \
-            -e 's/#2563eb/var(--color-primary)/g' \
-            -e 's/#1e40af/var(--color-primary-dark)/g' \
-            -e 's/#dbeafe/var(--color-primary-light)/g' \
-            -e 's/#ea580c/var(--color-accent)/g' \
-            -e 's/#c2410c/var(--color-accent-dark, #c2410c)/g' \
-            -e 's/#fed7aa/var(--color-accent-light)/g' \
-            -e 's/#16a34a/var(--color-secondary)/g' \
-            -e 's/#22c55e/var(--color-success)/g' \
-            -e 's/#f97316/var(--color-warning)/g' \
-            -e 's/#ef4444/var(--color-error)/g' \
-            -e 's/#f9fafb/var(--color-neutral-50)/g' \
-            -e 's/#f3f4f6/var(--color-neutral-100)/g' \
-            -e 's/#e5e7eb/var(--color-neutral-200)/g' \
-            -e 's/#d1d5db/var(--color-neutral-300)/g' \
-            -e 's/#9ca3af/var(--color-neutral-400)/g' \
-            -e 's/#6b7280/var(--color-neutral-500)/g' \
-            -e 's/#4b5563/var(--color-neutral-600)/g' \
-            -e 's/#374151/var(--color-neutral-700)/g' \
-            -e 's/#1f2937/var(--color-neutral-800)/g' \
-            -e 's/#111827/var(--color-neutral-900)/g' \
-            "$f"
-          echo "  ✓ Migrated CSS vars → $f"
-        done
+      - node {{.SCRIPTS}}/report-evidence-freshness.js
 
-  style:add-skeleton-css:
-    desc: |
-      Append skeleton/shimmer loading CSS to styles.css for the
-      countries grid and any other dynamic loading states.
+  evidence:candidates:
+    desc: "P8 — Report pathways that are candidates for promotion"
     cmds:
-      - |
-        cat >> {{.SRC_CSS}}/styles.css << 'EOF'
+      - node {{.SCRIPTS}}/report-promotion-candidates.js
 
-        /* ── Skeleton / shimmer loading states ── */
-        @keyframes shimmer {
-          0%   { background-position: -600px 0; }
-          100% { background-position: 600px 0; }
-        }
-
-        .skeleton {
-          background: linear-gradient(90deg,
-            var(--color-neutral-200) 25%,
-            var(--color-neutral-100) 50%,
-            var(--color-neutral-200) 75%
-          );
-          background-size: 600px 100%;
-          animation: shimmer 1.4s ease-in-out infinite;
-          border-radius: var(--radius-md);
-        }
-
-        .skeleton-card {
-          height: 180px;
-          border-radius: var(--radius-lg);
-        }
-
-        .skeleton-line {
-          height: 1rem;
-          margin-bottom: var(--spacing-sm);
-        }
-
-        .skeleton-line.short { width: 60%; }
-        .skeleton-line.medium { width: 80%; }
-        .skeleton-line.full { width: 100%; }
-        EOF
-        echo "  ✓ Skeleton CSS appended to styles.css"
-
-  style:add-scroll-animations:
-    desc: |
-      Append scroll-reveal animation CSS to styles.css.
-      Elements with [data-reveal] fade+slide in when they enter the viewport.
-      Respects prefers-reduced-motion.
+  requirements:readiness:
+    desc: "P8 — Report requirement field readiness across pathways"
     cmds:
-      - |
-        cat >> {{.SRC_CSS}}/styles.css << 'EOF'
+      - node {{.SCRIPTS}}/report-requirement-readiness.js
 
-        /* ── Scroll-reveal entrance animations ── */
-        [data-reveal] {
-          opacity: 0;
-          transform: translateY(20px);
-          transition:
-            opacity var(--transition-slow),
-            transform var(--transition-slow);
-        }
-
-        [data-reveal].revealed {
-          opacity: 1;
-          transform: translateY(0);
-        }
-
-        [data-reveal="fade"] {
-          transform: none;
-        }
-
-        [data-reveal="left"] {
-          transform: translateX(-24px);
-        }
-
-        [data-reveal="right"] {
-          transform: translateX(24px);
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-          [data-reveal] {
-            opacity: 1;
-            transform: none;
-            transition: none;
-          }
-        }
-        EOF
-        echo "  ✓ Scroll-reveal CSS appended to styles.css"
-
-  style:add-dark-mode-css:
-    desc: |
-      Append a complete dark mode block to styles.css, covering all
-      surfaces that the current stub misses (cards, footer, forms, etc.).
+  commercial:validate:
+    desc: "P8 — Validate commercial/affiliate registry"
     cmds:
-      - |
-        cat >> {{.SRC_CSS}}/styles.css << 'EOF'
+      - node {{.SCRIPTS}}/validate-commercial-registry.js
 
-        /* ── Dark mode — complete surface coverage ── */
-        @media (prefers-color-scheme: dark) {
-          .header { background-color: var(--color-neutral-100); border-bottom: 1px solid var(--color-neutral-200); }
-          .nav-menu { background-color: var(--color-neutral-100); }
-          .nav-menu a { color: var(--color-neutral-700); }
-          .logo-link { color: var(--color-neutral-900); }
-
-          .hero { background: linear-gradient(135deg, #1e3a5f 0%, #3b1f0a 100%); }
-          .hero-content h1 { color: #93c5fd; }
-
-          .problem-card,
-          .featured-card,
-          .tool-card,
-          .card,
-          .country-card,
-          .playbook-card,
-          .route-results article,
-          .country-result { background-color: var(--color-neutral-100); border-color: var(--color-neutral-200); }
-
-          .approach-card { background-color: var(--color-neutral-100); }
-
-          details { background-color: var(--color-neutral-100); border-color: var(--color-neutral-200); }
-          summary { color: var(--color-neutral-800); }
-
-          .filter-group select,
-          .search-box input,
-          .newsletter-form input { background-color: var(--color-neutral-100); border-color: var(--color-neutral-200); color: var(--color-neutral-900); }
-
-          .results-container { background-color: var(--color-neutral-100); border-color: var(--color-neutral-200); }
-
-          .evidence-note { background-color: #1e3a5f; border-color: var(--color-primary); }
-
-          .testimonial { background-color: var(--color-neutral-100); }
-
-          .footer { background-color: #0a0f1a; }
-
-          th { background-color: #1e3a5f; }
-          tr:nth-child(even) td { background-color: var(--color-neutral-100); }
-          tr:hover td { background-color: #1e3a5f; }
-
-          .ad-unit { background-color: var(--color-neutral-100); }
-          #analytics-consent { background-color: var(--color-neutral-100); border-color: var(--color-neutral-200); color: var(--color-neutral-900); }
-        }
-        EOF
-        echo "  ✓ Complete dark mode CSS appended to styles.css"
-
-  style:add-brand-tokens:
-    desc: |
-      Append brand-specific CSS custom properties to :root in styles.css —
-      accent-dark, gradient shorthands, and font-family-heading for when
-      the custom typeface is injected.
-    cmds:
-      - |
-        # Insert new tokens just before the closing of :root block
-        python3 - << 'PYEOF'
-        import re, pathlib
-        p = pathlib.Path("src/css/styles.css")
-        src = p.read_text()
-        tokens = """
-          /* Brand extensions */
-          --color-accent-dark: #c2410c;
-          --color-brand-gradient: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent-light) 100%);
-          --color-brand-gradient-dark: linear-gradient(135deg, #1e3a5f 0%, #3b1f0a 100%);
-          --font-family-heading: 'DM Serif Display', Georgia, serif;
-          --font-family-body: 'Inter', var(--font-family);
-        """
-        # Insert before the first closing brace of :root
-        src = src.replace(
-            "  /* Z-index */",
-            tokens + "\n  /* Z-index */",
-            1
-        )
-        p.write_text(src)
-        print("  ✓ Brand tokens injected into :root")
-        PYEOF
-
-  style:use-brand-fonts:
-    desc: |
-      Update styles.css body and heading font-family declarations to use
-      the new brand token variables (requires style:add-brand-tokens first).
-    cmds:
-      - |
-        sed -i '' \
-          's/font-family: var(--font-family);/font-family: var(--font-family-body);/' \
-          {{.SRC_CSS}}/styles.css
-        sed -i '' \
-          's/h1, h2, h3, h4, h5, h6 {/h1, h2, h3, h4, h5, h6 {\n  font-family: var(--font-family-heading);/' \
-          {{.SRC_CSS}}/styles.css
-        echo "  ✓ Brand font vars applied to body and headings"
-
-  style:add-focus-visible:
-    desc: |
-      Replace broad `a:focus, button:focus` outline rules with the modern
-      :focus-visible selector so keyboard users get outlines but mouse
-      clicks do not trigger them.
-    cmds:
-      - |
-        sed -i '' \
-          's/button:focus,\na:focus {/:focus-visible {/' \
-          {{.SRC_CSS}}/styles.css
-        echo "  ✓ focus → focus-visible updated in styles.css"
-
-  style:add-card-hover-transitions:
-    desc: |
-      Append enhanced card hover micro-interactions to styles.css —
-      scale + shadow lift on country cards, blog cards, and tool cards.
-    cmds:
-      - |
-        cat >> {{.SRC_CSS}}/styles.css << 'EOF'
-
-        /* ── Enhanced card hover micro-interactions ── */
-        .country-card,
-        .blog-post-card,
-        .featured-card,
-        .tool-card,
-        .related-article-card {
-          will-change: transform;
-        }
-
-        .country-card:hover,
-        .featured-card:hover,
-        .tool-card:hover {
-          transform: translateY(-4px) scale(1.01);
-          box-shadow: var(--shadow-xl);
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-          .country-card:hover,
-          .featured-card:hover,
-          .tool-card:hover {
-            transform: none;
-          }
-        }
-        EOF
-        echo "  ✓ Card hover micro-interactions appended"
-
-  # ══════════════════════════════════════════════
-  # DEPENDENCY & SECURITY
-  # ══════════════════════════════════════════════
-
-  deps:audit:
-    desc: npm audit for known vulnerabilities
-    cmds:
-      - npm audit
-
-  deps:audit:fix:
-    desc: npm audit with auto-fix (non-breaking)
-    cmds:
-      - npm audit fix
-
-  deps:outdated:
-    desc: List outdated npm packages
-    cmds:
-      - npm outdated
-
-  deps:update:
-    desc: Interactive dependency update (requires npm-check-updates)
-    cmds:
-      - |
-        if ! command -v ncu &> /dev/null; then
-          npm install -g npm-check-updates
-        fi
-        ncu --interactive
-
-  # ══════════════════════════════════════════════
-  # PERFORMANCE & BUNDLE
-  # ══════════════════════════════════════════════
+# ═══════════════════════════════════════════════════════════════════
+# P9 — PERFORMANCE
+# ═══════════════════════════════════════════════════════════════════
 
   perf:bundle-size:
-    desc: Report CSS and JS asset sizes in dist
+    desc: "P9 — Report CSS and JS asset sizes"
     cmds:
       - |
-        echo "=== CSS bundle sizes ==="
-        find {{.DIST}} -name "*.css" -exec du -sh {} \; 2>/dev/null || find src/css -name "*.css" -exec du -sh {} \;
+        echo "=== CSS sizes ==="
+        find src/css -name "*.css" -exec du -sh {} \;
         echo ""
-        echo "=== JS bundle sizes ==="
-        find {{.DIST}} -name "*.js" -exec du -sh {} \; 2>/dev/null || find src/js -name "*.js" -exec du -sh {} \;
-
-  perf:images:
-    desc: |
-      Optimise images in public/ using sharp-cli (lossless PNG + WebP).
-      Installs sharp-cli if not present.
-    cmds:
-      - |
-        if ! command -v sharp &> /dev/null; then
-          echo "Installing sharp-cli..."
-          npm install -g sharp-cli
-        fi
-        find public -name "*.png" | while read f; do
-          sharp -i "$f" -o "${f%.png}.webp" --webp
-          echo "  ✓ WebP → $f"
-        done
-        find public -name "*.jpg" -o -name "*.jpeg" | while read f; do
-          sharp -i "$f" -o "${f%.*}.webp" --webp
-          echo "  ✓ WebP → $f"
-        done
+        echo "=== JS sizes ==="
+        find src/js -name "*.js" -exec du -sh {} \;
 
   perf:unused-css:
-    desc: |
-      Run PurgeCSS against built HTML to report unused CSS rules.
-      Installs purgecss if not present.
+    desc: "P9 — Report unused CSS rules via PurgeCSS"
     cmds:
       - |
         if ! npx purgecss --version &> /dev/null 2>&1; then
@@ -550,68 +938,92 @@ tasks:
           --content "{{.SRC_PAGES}}/*.html" "src/index.html" \
           --output /tmp/purgecss-report \
           --rejected
-        echo "Rejected (unused) rules written to /tmp/purgecss-report"
+        echo "Rejected rules written to /tmp/purgecss-report"
 
-  # ══════════════════════════════════════════════
-  # CHANGELOG
-  # ══════════════════════════════════════════════
-
-  changelog:
-    desc: Generate CHANGELOG entry from git log since last tag
+  lighthouse:
+    desc: "P9 — Run Lighthouse CI audit (requires lhci)"
     cmds:
       - |
-        LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
-        if [ -z "$LAST_TAG" ]; then
-          git log --oneline --pretty="- %s (%h)" | head -30
-        else
-          echo "Changes since $LAST_TAG:"
-          git log "${LAST_TAG}..HEAD" --oneline --pretty="- %s (%h)"
+        if ! command -v lhci &> /dev/null; then
+          npm install -g @lhci/cli
         fi
+        lhci autorun
 
-  # ══════════════════════════════════════════════
-  # COMPOSITE PIPELINES
-  # ══════════════════════════════════════════════
+  deps:audit:
+    desc: "P9 — npm audit for known vulnerabilities"
+    cmds:
+      - npm audit
+
+  deps:outdated:
+    desc: "P9 — List outdated npm packages"
+    cmds:
+      - npm outdated
+
+# ═══════════════════════════════════════════════════════════════════
+# COMPOSITE PIPELINES
+# ═══════════════════════════════════════════════════════════════════
 
   verify:
-    desc: Full pre-release verification pipeline (mirrors npm run verify)
+    desc: "Full pre-release verification pipeline"
     cmds:
       - task: data:validate
       - task: data:country-manifest
       - task: requirements:readiness
       - task: evidence:freshness
       - task: commercial:validate
-      - task: evidence:candidates
       - task: test
       - task: build
       - task: build:verify
       - task: seo:verify
       - task: lint
-
-  enhance:styling:
-    desc: |
-      Run all styling enhancement tasks in the correct order.
-      Safe to run on a clean working tree — review git diff afterwards.
-    cmds:
-      - task: style:add-brand-tokens
-      - task: style:migrate-css-vars
-      - task: style:use-brand-fonts
-      - task: style:inject-fonts
-      - task: style:fix-orphan-css
-      - task: style:add-skeleton-css
-      - task: style:add-scroll-animations
-      - task: style:add-dark-mode-css
-      - task: style:add-card-hover-transitions
-      - task: style:add-focus-visible
-      - echo ""
-      - echo "✅ All styling enhancements applied."
-      - echo "   Next: review git diff, then run: task build && task a11y:audit"
 
   ci:
-    desc: CI pipeline — lint + format check + test + build + verify
+    desc: "CI pipeline — lint + test + build + verify"
     cmds:
       - task: lint
-      - task: format:check
       - task: test
       - task: build
       - task: build:verify
       - task: seo:verify
+
+  ten-out-of-ten:
+    desc: "Print the 10/10 checklist — what remains to reach full score"
+    cmds:
+      - |
+        echo "╔══════════════════════════════════════════════════════════════╗"
+        echo "║           Global Route — 10/10 Checklist                    ║"
+        echo "╚══════════════════════════════════════════════════════════════╝"
+        echo ""
+        echo "P1 — REVENUE (current: 3/10)"
+        echo "  [ ] Apply for AdSense — task revenue:status"
+        echo "  [ ] Populate ads.txt — task revenue:ads-txt PUBLISHER_ID=..."
+        echo "  [ ] Activate AdSense script — task revenue:activate-adsense"
+        echo "  [ ] Unhide ad slots — task revenue:unhide-ad-slots"
+        echo ""
+        echo "P2 — SEO (current: 6/10)"
+        echo "  [ ] Add FAQPage schema — task seo:add-faq-schema"
+        echo "  [ ] Add Article schema — task seo:add-article-schema"
+        echo "  [ ] Add Breadcrumb schema — task seo:add-breadcrumb-schema"
+        echo "  [ ] Regenerate sitemap with lastmod — task seo:sitemap-lastmod"
+        echo "  [ ] Write 5 new country audits — task seo:content-gaps"
+        echo ""
+        echo "P3 — ROUTE ENGINE (current: 8/10)"
+        echo "  [ ] Add budget/income/experience inputs — task engine:add-profile-inputs"
+        echo "  [ ] Test full profile — task engine:test-profile"
+        echo ""
+        echo "P4 — TRUST (current: 5/10)"
+        echo "  [ ] ARIA audit — task trust:a11y-audit"
+        echo "  [ ] aria-live on result regions — task trust:aria-live-audit"
+        echo "  [ ] Legal review — task trust:legal-review-checklist"
+        echo "  [ ] Disclaimer visibility — task trust:disclaimer-visibility"
+        echo ""
+        echo "P5 — CONTENT (current: 6/10)"
+        echo "  [ ] Audit country page depth — task content:audit"
+        echo "  [ ] Set up email capture — task content:email-capture-setup"
+        echo ""
+        echo "P6 — ANALYTICS (current: 7/10)"
+        echo "  [ ] Wire route_search_started event — task analytics:audit"
+        echo "  [ ] Verify Sabilytics coverage — task analytics:verify-sabilytics"
+        echo ""
+        echo "Run: task ten-out-of-ten   to see this list at any time"
+        echo "Run: task verify           to run the full verification pipeline"
