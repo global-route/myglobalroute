@@ -66,6 +66,55 @@ const GlobalRoute = (() => {
     const budgetFilter = document.querySelector('#budget-filter');
     const searchInput = document.querySelector('input[type="search"]');
 
+    // Compare state
+    const compareSet = new Set();
+    const compareBar = document.querySelector('#compare-bar');
+    const compareCount = document.querySelector('#compare-count');
+    const compareBtn = document.querySelector('#compare-btn');
+    const comparePanel = document.querySelector('#compare-panel');
+
+    const updateCompareBar = () => {
+      if (!compareBar) return;
+      compareBar.hidden = compareSet.size === 0;
+      if (compareCount) compareCount.textContent = compareSet.size;
+      if (compareBtn) compareBtn.disabled = compareSet.size < 2;
+    };
+
+    const renderComparePanel = () => {
+      if (!comparePanel) return;
+      const selected = appState.countries.filter(c => compareSet.has(c.id));
+      if (!selected.length) { comparePanel.hidden = true; return; }
+      comparePanel.hidden = false;
+      const cols = selected.map(c => {
+        const cost = c.trueCost?.total != null
+          ? `${escapeHtml(c.trueCost.currency)} ${escapeHtml(String(c.trueCost.total))}`
+          : '<span style="color:var(--color-neutral-400)">Not yet verified</span>';
+        const rate = c.africanRate != null
+          ? escapeHtml(c.africanRate)
+          : '<span style="color:var(--color-neutral-400)">Not published</span>';
+        const statusColour = c.dataStatus === 'publishable' ? 'var(--color-secondary)' : 'var(--color-warning)';
+        return `<div class="compare-col">
+          <div class="compare-col-header">
+            <span style="font-size:2rem;" aria-hidden="true">${escapeHtml(c.flag)}</span>
+            <strong><a href="/pages/countries/${encodeURIComponent(c.id)}/">${escapeHtml(c.name)}</a></strong>
+            <span style="font-size:0.65rem;font-weight:700;text-transform:uppercase;color:${statusColour};">${escapeHtml(c.dataStatus || 'unknown')}</span>
+          </div>
+          <dl class="compare-dl">
+            <dt>African rate</dt><dd>${rate}</dd>
+            <dt>Planning cost</dt><dd>${cost}</dd>
+            <dt>Sweet spot</dt><dd>${escapeHtml(c.sweetSpot || c.sweetSpots?.join(', ') || '—')}</dd>
+          </dl>
+        </div>`;
+      }).join('');
+      comparePanel.innerHTML = `<div class="compare-panel-inner"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--spacing-lg);"><h2 style="margin:0;">Side-by-side comparison</h2><button id="compare-close" class="btn btn-secondary" style="padding:0.4rem 1rem;font-size:0.8rem;">Clear &times;</button></div><div class="compare-grid">${cols}</div><p class="evidence-note" style="margin-top:var(--spacing-lg);">Costs and rates shown only where primary-source evidence exists. Null values are intentionally unknown, not zero.</p></div>`;
+      document.querySelector('#compare-close')?.addEventListener('click', () => {
+        compareSet.clear();
+        updateCompareBar();
+        comparePanel.hidden = true;
+        grid.querySelectorAll('input[type="checkbox"]').forEach(cb => { cb.checked = false; });
+      });
+    };
+
     const render = () => {
       const query = String(searchInput?.value || '').trim().toLowerCase();
       const group = String(groupFilter?.value || '');
@@ -88,6 +137,7 @@ const GlobalRoute = (() => {
             ? escapeHtml(country.africanRate)
             : '<span style="color:var(--color-neutral-400)">Not published</span>';
           const statusColour = country.dataStatus === 'publishable' ? 'var(--color-secondary)' : 'var(--color-warning)';
+          const isChecked = compareSet.has(country.id);
           return `
           <article class="country-card" id="${escapeHtml(country.id)}">
             <div class="country-card-header">
@@ -100,8 +150,26 @@ const GlobalRoute = (() => {
               <dt style="color:var(--color-neutral-500);font-weight:600;">African rate</dt><dd style="margin:0;">${rate}</dd>
               <dt style="color:var(--color-neutral-500);font-weight:600;">Planning cost</dt><dd style="margin:0;">${cost}</dd>
             </dl>
+            <label class="compare-checkbox-label" style="display:flex;align-items:center;gap:0.4rem;margin-top:0.75rem;font-size:0.75rem;font-weight:600;color:var(--color-neutral-500);cursor:pointer;">
+              <input type="checkbox" data-country-id="${escapeHtml(country.id)}" ${isChecked ? 'checked' : ''} style="accent-color:var(--color-primary);width:1rem;height:1rem;">
+              Compare
+            </label>
           </article>`;
         }).join('') : '<p style="grid-column:1/-1;color:var(--color-neutral-500);">No countries match the selected filters.</p>';
+
+        // Wire compare checkboxes
+        grid.querySelectorAll('input[type="checkbox"][data-country-id]').forEach(cb => {
+          cb.addEventListener('change', () => {
+            const id = cb.dataset.countryId;
+            if (cb.checked) {
+              if (compareSet.size >= 3) { cb.checked = false; return; } // max 3
+              compareSet.add(id);
+            } else {
+              compareSet.delete(id);
+            }
+            updateCompareBar();
+          });
+        });
       }
 
       if (tableBody) {
@@ -119,6 +187,14 @@ const GlobalRoute = (() => {
 
     [groupFilter, budgetFilter, searchInput].filter(Boolean).forEach(element => element.addEventListener('input', render));
     [groupFilter, budgetFilter].filter(Boolean).forEach(element => element.addEventListener('change', render));
+
+    if (compareBtn) {
+      compareBtn.addEventListener('click', () => {
+        renderComparePanel();
+        comparePanel?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+
     render();
   };
 

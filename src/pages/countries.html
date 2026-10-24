@@ -46,6 +46,16 @@
           <div class="filter-group"><label for="budget-filter">Verified cost ceiling (USD):</label><select id="budget-filter"><option value="">Any Budget</option><option value="5000">Under $5,000</option><option value="10000">$5,000 - $10,000</option><option value="15000">$10,000 - $15,000</option><option value="99999">$15,000+</option></select></div>
         </div>
         <div class="countries-grid" id="countries-grid"><div class="loading">Loading country intelligence...</div></div>
+
+        <!-- Compare bar -->
+        <div id="compare-bar" hidden style="position:sticky;bottom:1.5rem;z-index:100;display:flex;align-items:center;gap:1rem;background:var(--color-primary);color:white;padding:0.85rem 1.5rem;border-radius:999px;box-shadow:0 4px 20px rgba(37,99,235,0.35);margin:var(--spacing-lg) auto;max-width:480px;">
+          <span style="font-weight:600;font-size:0.9rem;"><span id="compare-count">0</span> selected</span>
+          <button id="compare-btn" class="btn" disabled style="background:white;color:var(--color-primary);font-weight:700;padding:0.4rem 1.2rem;font-size:0.85rem;border-radius:999px;margin-left:auto;">Compare &rarr;</button>
+        </div>
+
+        <!-- Compare panel -->
+        <div id="compare-panel" hidden style="margin:var(--spacing-2xl) 0;"></div>
+
         <div class="comparison-table"><h2>Evidence Status Comparison</h2><p>“Not published / not verified” means Global Route does not currently have sufficient evidence to present the value as a fact.</p><table><thead><tr><th>Country</th><th>Official Rate</th><th>African Rate</th><th>Planning Cost</th><th>Sweet Spot</th></tr></thead><tbody id="countries-table-body"></tbody></table></div>
       </div>
     </section>

@@ -67,6 +67,20 @@
             <option value="any">Choose a goal</option><option value="study">Study</option><option value="work">Work</option><option value="business" disabled>Business (not yet covered)</option>
           </select>
         </label>
+        <label>Family size
+          <select name="familySize">
+            <option value="1">1 (just me)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7+</option>
+          </select>
+        </label>
+        <label>Planned application date
+          <input type="date" name="applicationDate" value="" placeholder="YYYY-MM-DD">
+        </label>
         <button type="submit" class="btn btn-primary btn-large">Find routes &rarr;</button>
       </form>
       <section id="route-results" aria-live="polite" class="featured" style="margin-top:2rem">
@@ -107,10 +121,19 @@
       return '<p class="evidence-note stale-warning">⚠ Some requirements on this pathway may be outdated. Verify against the official source before acting.</p>';
     }
 
+    function renderMatchedTier(tier) {
+      if (!tier) return '';
+      const label = tier.field ? tier.field.replace(/_/g, ' ') : 'funds';
+      const val = tier.currency ? `${tier.currency} ${tier.value}` : tier.value;
+      const cond = tier.conditions?.familySize ? ` (family size ${tier.conditions.familySize})` : '';
+      return `<p class="evidence-note" style="margin:0.5rem 0;">Applicable ${esc(label)}: <strong>${esc(String(val))}</strong>${esc(cond)}</p>`;
+    }
+
     function renderCard(match) {
       return `<article>
         <h3>${esc(match.country.name)} — ${esc(match.pathway.name)}</h3>
         ${match.stale ? renderStaleWarning() : ''}
+        ${match.matchedTier ? renderMatchedTier(match.matchedTier) : ''}
         ${renderRequirements(match.pathway.requirements)}
         <a href="${esc(match.pathway.sourceUrl)}" rel="noopener noreferrer">Review official source</a>
       </article>`;
@@ -130,13 +153,18 @@
       try {
         const [countries, pathways] = await Promise.all([loadJson('/data/countries.json'), loadJson('/data/pathways.json')]);
         const profile = Object.fromEntries(new FormData(form).entries());
-        const { matches, alternatives, missingInput } = window.GlobalRoute.RouteEngine.recommend(profile, countries.countries, pathways.pathways, 5);
+        const { matches, alternatives, missingInput, zeroFitExplanations } = window.GlobalRoute.RouteEngine.recommend(profile, countries.countries, pathways.pathways, 5);
         if (missingInput) {
           results.innerHTML = '<h2>Select a goal to continue</h2><p>Choose Study or Work above. Business pathways are not yet covered. Budget, income and experience filters are not yet available as structured route fields.</p>';
           return;
         }
         if (!matches.length) {
-          results.innerHTML = '<h2>No pathway matches</h2><p>No publishable pathways passed the evidence gate for your current inputs.</p>' + renderAlternatives(alternatives);
+          const explanationHtml = zeroFitExplanations.length
+            ? '<details style="margin-top:1rem;"><summary style="cursor:pointer;font-weight:600;">Why each pathway was excluded (' + zeroFitExplanations.length + ')</summary><ul style="margin-top:0.75rem;">' +
+              zeroFitExplanations.map(e => `<li><strong>${esc(e.name)}</strong>: <span class="evidence-note" style="display:inline;background:none;border:none;padding:0;">${esc(e.reason)}</span></li>`).join('') +
+              '</ul></details>'
+            : '';
+          results.innerHTML = '<h2>No pathway matches</h2><p>No publishable pathways passed the evidence gate for your current inputs.</p>' + explanationHtml + renderAlternatives(alternatives);
           return;
         }
         results.innerHTML = '<h2>Pathways matching your goal</h2><p class="evidence-note">Goal matches only — not eligibility assessments. Confirm current requirements at the official source before acting.</p>' + matches.map(renderCard).join('') + renderAlternatives(alternatives);
