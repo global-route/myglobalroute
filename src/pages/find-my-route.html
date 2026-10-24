@@ -8,6 +8,7 @@
   <title>Find My Route | Global Route</title>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/enhancements.css">
   <link rel="canonical" href="https://mypathway2global.org.uk/pages/find-my-route">
   <meta property="og:url" content="https://mypathway2global.org.uk/pages/find-my-route">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,9 +34,15 @@
     </div>
   </header>
   <main id="main" class="main">
-    <section class="container" aria-labelledby="route-title">
-      <h1 id="route-title">Find My Route</h1>
-      <section class="problem-grid" style="margin-bottom: 2rem;">
+    <div class="page-header">
+      <div class="container">
+        <span class="page-header-badge">&#x1F9ED; Route Finder</span>
+        <h1>Find My Route</h1>
+        <p class="page-header-subtitle">Filter 55 evidence-gated pathways by goal. Official requirements only — no invented approval rates.</p>
+      </div>
+    </div>
+    <section class="container" aria-labelledby="route-title" style="padding-top: var(--spacing-2xl); padding-bottom: var(--spacing-3xl);">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--spacing-lg); margin-bottom:var(--spacing-xl);">
         <div class="problem-card">
           <h3>What this tool does</h3>
           <ul>
@@ -48,20 +55,19 @@
           <h3>What this tool does not do</h3>
           <ul>
             <li>Assess your personal eligibility</li>
-            <li>Rank by budget, income or experience (not yet structured as evidence fields)</li>
+            <li>Rank by budget, income or experience</li>
             <li>Predict approval likelihood</li>
             <li>Cover business pathways (not yet in scope)</li>
           </ul>
         </div>
-      </section>
-      <p>This page filters evidence-gated pathways by goal; it is not an eligibility decision or approval prediction. Budget, income and experience are not yet structured as comparable, evidence-backed route fields, so they are not collected or used for ranking.</p>
+      </div>
       <form id="route-form">
-        <label>Goal
+        <label>Your goal
           <select name="goal">
             <option value="any">Choose a goal</option><option value="study">Study</option><option value="work">Work</option><option value="business" disabled>Business (not yet covered)</option>
           </select>
         </label>
-        <button type="submit" class="btn btn-primary">Find routes</button>
+        <button type="submit" class="btn btn-primary btn-large">Find routes &rarr;</button>
       </form>
       <section id="route-results" aria-live="polite" class="featured" style="margin-top:2rem">
         <h2>Evidence-gated pathway matches</h2>
@@ -72,7 +78,7 @@
   <footer id="footer" class="footer">
     <div class="footer-content">
       <div class="footer-section"><h4>Global Route</h4><p>Evidence-gated global mobility intelligence.</p></div>
-      <div class="footer-section"><h4>Explore</h4><ul><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-my-route.html">Find My Route</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Research</a></li></ul></div>
+      <div class="footer-section"><h4>Explore</h4><ul><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-my-route.html" class="nav-cta">Find My Route &rarr;</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Research</a></li></ul></div>
       <div class="footer-section"><h4>Guides</h4><ul><li><a href="/pages/student-playbook.html">Student</a></li><li><a href="/pages/professional-playbook.html">Professional</a></li><li><a href="/pages/business-playbook.html">Business</a></li></ul></div>
       <div class="footer-section"><h4>Trust</h4><ul><li><a href="/pages/privacy.html">Privacy</a></li><li><a href="/pages/disclaimer.html">Disclaimer</a></li><li><a href="/pages/terms.html">Terms</a></li><li><a href="/pages/contact.html">Contact</a></li></ul></div>
     </div>
