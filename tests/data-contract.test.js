@@ -2,9 +2,9 @@ const countries = require('../src/data/countries.json');
 const pathways = require('../src/data/pathways.json');
 
 describe('migration data contract', () => {
-  test('contains the complete 26-country registry', () => {
-    expect(countries.countries).toHaveLength(26);
-    expect(new Set(countries.countries.map(c => c.id)).size).toBe(26);
+  test('contains the complete 27-country registry', () => {
+    expect(countries.countries).toHaveLength(27);
+    expect(new Set(countries.countries.map(c => c.id)).size).toBe(27);
   });
 
   test('does not publish unsupported approval, cost or timeline claims', () => {

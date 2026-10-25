@@ -4,29 +4,35 @@
   <script async src="https://www.sabilytics.com/script.js" data-site="atsngkb78nmt" data-domain="org.uk"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Global Route 26-country directory: evidence-gated migration pathways, official source trails and clearly labelled data status.">
-  <title>26-Country Directory | Global Route</title>
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/css/responsive.css">
-  <link rel="stylesheet" href="/css/enhancements.css">
+  <meta name="description" content="MyPathway2Global 27-country directory: evidence-gated migration pathways, official source trails and clearly labelled data status.">
+  <title>27-Country Directory | MyPathway2Global</title>
+  <link rel="stylesheet" href="/css/styles.css?v=3">
+  <link rel="stylesheet" href="/css/responsive.css?v=3">
+  <link rel="stylesheet" href="/css/enhancements.css?v=3">
   <link rel="canonical" href="https://mypathway2global.org.uk/pages/countries">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mypathway2global.org.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "Countries" }
+    ]
+  }
+  </script>
   <meta property="og:url" content="https://mypathway2global.org.uk/pages/countries">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body data-page-type="countries">
   <a href="#main" class="skip-link">Skip to main content</a>
   <header id="header" class="header">
     <div class="header-container">
-      <div class="logo"><a href="/" class="logo-link"><span class="logo-icon" aria-hidden="true">🌍</span><span class="logo-text">Global Route</span></a></div>
+      <div class="logo"><a href="/" class="logo-link"><span class="logo-text">MyPathway2Global</span></a></div>
       <nav class="navigation" aria-label="Primary">
         <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-        <ul class="nav-menu">
-          <li><a href="/">Home</a></li><li><a href="/pages/countries.html">Countries</a></li>
-          <li><a href="/pages/find-my-route.html" class="nav-cta">Find My Route &rarr;</a></li><li><a href="/pages/calculator.html">Calculator</a></li>
-          <li><a href="/blog/">Research</a></li><li><a href="/pages/about.html">About</a></li>
-        </ul>
+        <ul class="nav-menu"><li><a href="/">Home</a></li><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Blog</a></li><li><a href="/pages/about.html">About</a></li><li><a href="/pages/find-mypathway.html" class="nav-cta">Find MyPathway</a></li></ul>
       </nav>
     </div>
   </header>
@@ -34,7 +40,7 @@
   <main id="main" class="main">
     <div class="page-header">
       <div class="container">
-        <span class="page-header-badge">&#x1F30D; 26 Countries</span>
+        <span class="page-header-badge">27 Countries</span>
         <h1>Country Directory</h1>
         <p class="page-header-subtitle">Evidence-gated country intelligence. Unsupported approval rates, costs and timelines are shown as unavailable — not estimated as fact.</p>
       </div>
@@ -49,20 +55,21 @@
         <div class="countries-grid" id="countries-grid"><div class="loading">Loading country intelligence...</div></div>
 
         <!-- Compare bar -->
-        <div id="compare-bar" hidden style="position:sticky;bottom:1.5rem;z-index:100;display:flex;align-items:center;gap:1rem;background:var(--color-primary);color:white;padding:0.85rem 1.5rem;border-radius:999px;box-shadow:0 4px 20px rgba(37,99,235,0.35);margin:var(--spacing-lg) auto;max-width:480px;">
+        <div id="compare-bar" hidden style="position:sticky;bottom:1.5rem;z-index:100;display:flex;align-items:center;gap:1rem;background:var(--color-primary);color:white;padding:0.85rem 1.5rem;border-radius:2px;box-shadow:0 4px 20px rgba(37,99,235,0.35);margin:var(--spacing-lg) auto;max-width:480px;">
           <span style="font-weight:600;font-size:0.9rem;"><span id="compare-count">0</span> selected</span>
-          <button id="compare-btn" class="btn" disabled style="background:white;color:var(--color-primary);font-weight:700;padding:0.4rem 1.2rem;font-size:0.85rem;border-radius:999px;margin-left:auto;">Compare &rarr;</button>
+          <button id="compare-btn" class="btn" disabled style="background:white;color:var(--color-primary);font-weight:700;padding:0.4rem 1.2rem;font-size:0.85rem;border-radius:2px;margin-left:auto;">Compare &rarr;</button>
         </div>
 
         <!-- Compare panel -->
         <div id="compare-panel" hidden style="margin:var(--spacing-2xl) 0;"></div>
 
-        <div class="comparison-table"><h2>Evidence Status Comparison</h2><p>“Not published / not verified” means Global Route does not currently have sufficient evidence to present the value as a fact.</p><table><thead><tr><th>Country</th><th>Official Rate</th><th>African Rate</th><th>Planning Cost</th><th>Sweet Spot</th></tr></thead><tbody id="countries-table-body"></tbody></table></div>
+        <div class="comparison-table"><h2>Evidence Status Comparison</h2><p>“Not published / not verified” means MyPathway2Global does not currently have sufficient evidence to present the value as a fact.</p><table><thead><tr><th>Country</th><th>Official Rate</th><th>African Rate</th><th>Planning Cost</th><th>Sweet Spot</th></tr></thead><tbody id="countries-table-body"></tbody></table></div>
       </div>
     </section>
-    <section class="cta-final"><div class="container"><h2>Ready to test a route?</h2><p>Use the route finder for evidence-gated recommendations, or verify a country’s official source trail before acting.</p><div class="cta-buttons"><a href="/pages/find-my-route.html" class="btn btn-primary btn-large">Find My Route</a><a href="/pages/disclaimer.html" class="btn btn-secondary btn-large">Read Disclaimer</a></div></div></section>
+    <section class="cta-final"><div class="container"><h2>Ready to test a route?</h2><p>Use the route finder for evidence-gated recommendations, or verify a country’s official source trail before acting.</p><div class="cta-buttons"><a href="/pages/find-mypathway.html" class="btn btn-primary btn-large">Find MyPathway</a><a href="/pages/disclaimer.html" class="btn btn-secondary btn-large">Read Disclaimer</a></div></div></section>
   </main>
-  <footer id="footer" class="footer"><div class="footer-content"><div class="footer-section"><h4>Global Route</h4><p>Evidence-gated global mobility intelligence.</p></div><div class="footer-section"><h4>Explore</h4><ul><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-my-route.html" >Find My Route</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Research</a></li></ul></div><div class="footer-section"><h4>Guides</h4><ul><li><a href="/pages/student-playbook.html">Student</a></li><li><a href="/pages/professional-playbook.html">Professional</a></li><li><a href="/pages/business-playbook.html">Business</a></li></ul></div><div class="footer-section"><h4>Trust</h4><ul><li><a href="/pages/privacy.html">Privacy</a></li><li><a href="/pages/disclaimer.html">Disclaimer</a></li><li><a href="/pages/terms.html">Terms</a></li><li><a href="/pages/contact.html">Contact</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 Global Route. All rights reserved.</p></div></footer>
+  <div class="disclaimer-bar"><p>General information only — not legal or immigration advice. Always verify current requirements with the relevant authority before paying fees or submitting an application. <a href="/pages/disclaimer.html">Full disclaimer →</a></p></div>
+  <footer id="footer" class="footer"><div class="footer-content"><div class="footer-section"><h4>MyPathway2Global</h4><p>Evidence-gated global mobility intelligence.</p><p style="font-size:0.78rem;opacity:0.7;margin-top:0.5rem;">Independent platform. Not affiliated with any government.</p></div><div class="footer-section"><h4>Explore</h4><ul><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-mypathway.html" >Find MyPathway</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Blog</a></li></ul></div><div class="footer-section"><h4>Guides</h4><ul><li><a href="/pages/student-playbook.html">Student</a></li><li><a href="/pages/professional-playbook.html">Professional</a></li><li><a href="/pages/business-playbook.html">Business</a></li></ul></div><div class="footer-section"><h4>Trust</h4><ul><li><a href="/pages/privacy.html">Privacy</a></li><li><a href="/pages/disclaimer.html">Disclaimer</a></li><li><a href="/pages/terms.html">Terms</a></li><li><a href="/pages/contact.html">Contact</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 MyPathway2Global. All rights reserved.</p></div></footer>
   <script src="/js/monetization.js"></script>
   <script src="/js/analytics.js"></script>
   <script src="/js/app.js"></script>

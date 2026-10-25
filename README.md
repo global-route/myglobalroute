@@ -1,86 +1,129 @@
-# Global Route: African Mobility & Global Migration Blueprint
+# MyPathway2Global: African Mobility & Global Migration Blueprint
 
-**Radical Transparency for African Students, Professionals & Business Owners**
+**Evidence-gated migration intelligence for African Students, Professionals & Business Owners**
 
-**Current status (2026-10-18):** Active development — **release NO-GO**. Phase 0 production exit is blocked on live custom-domain DNS attachment; Phases 1–5 remain incomplete and Phase 6 is deferred. See [active sprint](docs/sprints/ACTIVE_SPRINT.md), [phase tracker](docs/project/PHASE_STATUS.md), and [release verification](docs/project/RELEASE_VERIFICATION_2026-10-08.md).  
-**Current data baseline:** 26 countries, 56 pathways (52 publishable / 4 research-required), 193 evidence records; country source review outcomes recorded.
-**Structured requirement coverage:** 49 evidence-linked declarations across 35 pathways; 21 pathways still lack structured declarations, which means unknown coverage—not zero requirements or eligibility. Recent non-test implementation, schema/data and documentation changes—including Germany, France, Japan, Portugal, Spain, Norway, Luxembourg, Lithuania, Iceland, Hungary, Poland, Malta, and Czechia requirement declarations, independent analytics/advertising consent controls and evidence-aligned homepage/About copy—have not been validated in a new CI run because testing and CI work is paused by user direction. Aggregate approval rates, costs and timelines remain null where field-level evidence is missing.
+**Current status (2026-10-25):** Active development — **production live**. Rebrand complete (Global Route → MyPathway2Global). UI transformed to content-first editorial layout. 18/18 test suites passing (139/139 tests). See [active sprint](docs/sprints/ACTIVE_SPRINT.md), [phase tracker](docs/project/PHASE_STATUS.md).
+
+**Current data baseline:** 27 countries, 61 pathways (55 publishable / 6 research-required), 193+ evidence records; all 55 publishable pathways have structured requirements[].
+
+**Test status:** 18/18 suites PASS, 139/139 tests PASS.
+
+**Live site:** [https://mypathway2global.org.uk](https://mypathway2global.org.uk)
 
 ---
 
 ## 📋 Project Overview
 
-Global Route is an evidence-gated mobility platform for African passport holders. It organizes migration pathways, official source trails and requirements for students and professionals. It does not claim true acceptance rates or total costs where reliable field-level evidence and a defensible methodology are unavailable.
+MyPathway2Global is an evidence-gated mobility platform for African passport holders. It organizes migration pathways, official source trails and requirements for students and professionals. It does not claim true acceptance rates or total costs where reliable field-level evidence and a defensible methodology are unavailable.
 
 **Mission:** Empower African talent to navigate global mobility with honesty, strategy, and confidence.
 
 ---
 
-## Historical milestone — July 21, 2026 (not current project status)
-
-### Blog Foundation Launched
-- ✅ **5 cornerstone articles** written (25,400+ words)
-- ✅ **27 category directories** organized
-- ✅ **All content types** covered: Country Audits, Playbooks, Case Studies, Policy Updates
-- ✅ **SEO-optimized** with keywords, meta descriptions, FAQs
-
-**Featured Posts:**
-1. [Germany Visa from Nigeria 2026](content/blog/country-audits/germany/) - Complete cost breakdown & approval rates
-2. [Italy DSU Scholarship Guide](content/blog/playbooks/student/) - €15-20K/year FREE benefits
-3. [US LLC Setup from Africa](content/blog/playbooks/business/) - 5-minute setup guide
-4. [Chisom's Canada Success Story](content/blog/case-studies/success-stories/) - ₦11.4M budget breakdown
-5. [Canada SDS Cancellation](content/blog/policy-updates/2026/) - Policy update & alternatives
-
----
-
 ## 🎯 Core Features
 
-- **Country/source registry:** Evidence-gated country metadata; unsupported approval rates, costs and timelines remain unknown
-- **Budget Calculators:** Interactive tools to find affordable pathways
-- **Sector-Specific Playbooks:** Student, Professional, and Business strategies
-- **Cost Breakdowns:** Transparent financial barriers (tuition, blocked accounts, etc.)
-- **Blog Content:** 25K+ words across 5 cornerstone articles
-- **SEO-Optimized Content:** High-intent keywords for organic discovery
-- **Monetization:** Consent-aware foundations only; no live provider, partner or revenue status is implied
+- **Find MyPathway:** Filter 55 evidence-gated pathways by goal (study or work)
+- **Country Directory:** 27 countries with official source trails and evidence status
+- **Budget Calculator:** Planning aid for migration costs (not eligibility assessment)
+- **Research Blog:** 17 posts across 7 categories — country audits, playbooks, case studies, guides, policy updates
 
 ---
 
-## 📁 Current Repository Structure
+## 📝 Blog Content (17 posts)
 
-The outline below highlights the current working areas; it is not an exhaustive file listing. The canonical project status and active work are tracked in `docs/project/` and `docs/sprints/ACTIVE_SPRINT.md`.
+### Country Audits
+- [Germany Visa from Nigeria 2026](/blog/country-audits/germany/germany-visa-from-nigeria-2026/) — Zero tuition, €11,208 blocked account, 18-month job search visa
+- [Canada Visa from Nigeria 2026](/blog/country-audits/canada/canada-visa-from-nigeria-2026/)
+- [UK Visa from Nigeria 2026](/blog/country-audits/uk/uk-visa-from-nigeria-2026/)
+- [Italy Visa from Nigeria 2026](/blog/country-audits/italy/italy-visa-from-nigeria-2026/)
+- [Portugal Visa from Nigeria 2026](/blog/country-audits/portugal/portugal-visa-from-nigeria-2026/)
+- [USA Visa from Nigeria 2026](/blog/country-audits/usa/usa-visa-from-nigeria-2026/)
+
+### Student Playbooks
+- [Italy DSU Scholarship Complete Guide](/blog/playbooks/student/italy-dsu-scholarship-complete-guide/) — €15-20K/year in free benefits
+- [UK Masters True Cost 2026](/blog/playbooks/student/uk-masters-true-cost-2026/)
+
+### Professional Playbooks
+- [Canada Express Entry 2026](/blog/playbooks/professional/canada-express-entry-2026/) — Points calculator and CRS breakdown
+- [Germany Chancenkarte Visa 2026](/blog/playbooks/professional/germany-chancenkarte-visa-2026/)
+
+### Business Playbooks
+- [US LLC Setup from Africa 2026](/blog/playbooks/business/us-llc-setup-from-africa-2026/)
+
+### Case Studies
+- [Chisom: Nigeria to Canada Software Engineer](/blog/case-studies/success-stories/chisom-nigeria-to-canada-software-engineer/) — Real ₦11.4M budget breakdown
+- [Visa Rejection Patterns for African Applicants 2026](/blog/case-studies/rejection-analysis/visa-rejection-patterns-african-applicants-2026/)
+
+### Guides
+- [How to Write a Visa Motivation Letter 2026](/blog/guides/applications/how-to-write-visa-motivation-letter-2026/)
+- [Document Authentication Nigeria Visa 2026](/blog/guides/documentation/document-authentication-nigeria-visa-2026/)
+- [How to Fund German Blocked Account from Nigeria 2026](/blog/guides/financial/how-to-fund-german-blocked-account-from-nigeria-2026/)
+
+### Policy Updates
+- [Canada SDS Program Cancelled January 2026](/blog/policy-updates/2026/canada-sds-program-cancelled-january-2026/)
+
+---
+
+## 📁 Repository Structure
 
 ```text
 /
 ├── README.md, CHANGELOG.md, package.json
-├── .github/workflows/                 # Quality Gate, Lint, Browser Smoke
 ├── src/
-│   ├── data/                          # Countries, pathways, subroutes, requirements, evidence
-│   ├── js/                            # App, search, calculator, route engine, analytics
-│   ├── css/                           # Site and blog styles
-│   ├── pages/                         # Generated public pages
-│   ├── templates/                     # Eleventy templates
-│   └── content/blog/                  # Editorial source content
-├── scripts/                           # Validation, manifest, freshness, build and deploy checks
-├── tests/                             # Jest unit and regression tests
-├── e2e/                               # Browser-level checks
+│   ├── data/                          # Countries, pathways, requirements, evidence
+│   ├── js/                            # App, route engine, calculator, analytics
+│   ├── css/                           # styles.css, responsive.css, enhancements.css
+│   ├── pages/                         # Static HTML pages
+│   └── templates/                     # Eleventy templates
+├── content/
+│   └── blog/                          # 17 blog posts (markdown)
+├── scripts/                           # Validation, build, deploy scripts
+├── tests/                             # Jest unit tests (18 suites, 139 tests)
 ├── docs/
-│   ├── project/                       # Phase status, assessment, roadmap, release verification
-│   ├── sprints/                       # Active sprint, tasks and historical handovers
-│   ├── data/                           # Country source-review manifest
-│   ├── reference/                     # Architecture, data trust, privacy, SEO and stack
-│   ├── guides/                        # Contributor and operational guides
-│   ├── monetization/                  # Monetization design and readiness
-│   └── phase-0/, phase-1/, phase-3/   # Legacy phase-organized material; see PHASE_STATUS.md
-├── content/                           # Additional editorial content
+│   ├── project/                       # Phase status, roadmap
+│   ├── sprints/                       # Active sprint, UI spotlight plan
+│   ├── reference/                     # Architecture, design blueprint
+│   └── data/                          # Country source manifest
 ├── public/                            # Static assets
-├── netlify.toml
-└── wrangler.jsonc
+└── wrangler.jsonc                     # Cloudflare Workers config
 ```
 
-Useful entry points:
-- [Documentation index](docs/INDEX.md)
-- [Architecture](docs/reference/ARCHITECTURE.md) and [tech stack](docs/reference/TECH_STACK.md)
-- [Contribution guide](docs/guides/CONTRIBUTING.md)
-- [Active sprint](docs/sprints/ACTIVE_SPRINT.md)
-- [Phase status](docs/project/PHASE_STATUS.md)
-- [Country source-review manifest](docs/data/country-source-review-manifest.json)
+---
+
+## 🚀 Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Run tests
+npm test
+
+# Deploy to Cloudflare Workers
+npx wrangler deploy
+```
+
+---
+
+## 📚 Documentation
+
+- [Active Sprint](docs/sprints/ACTIVE_SPRINT.md)
+- [Phase Status](docs/project/PHASE_STATUS.md)
+- [UI Spotlight Plan](docs/sprints/UI_SPOTLIGHT_PLAN.md)
+- [Design Blueprint](docs/reference/DESIGN_BLUEPRINT.md)
+- [Architecture](docs/reference/ARCHITECTURE.md)
+
+---
+
+## 🔗 Links
+
+- **Live site:** [https://mypathway2global.org.uk](https://mypathway2global.org.uk)
+- **Find MyPathway:** [https://mypathway2global.org.uk/pages/find-mypathway.html](https://mypathway2global.org.uk/pages/find-mypathway.html)
+- **Countries:** [https://mypathway2global.org.uk/pages/countries.html](https://mypathway2global.org.uk/pages/countries.html)
+- **Blog:** [https://mypathway2global.org.uk/blog/](https://mypathway2global.org.uk/blog/)

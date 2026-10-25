@@ -32,9 +32,9 @@ describe('primary-source evidence registry', () => {
     for (const pathway of pathways.pathways) if (pathway.status !== 'publishable') expect(pathway.status).toBe('research_required');
   });
 
-  test('the canonical registry now includes NZ SMC and Austria exact-route child routes (59 pathways total)', () => {
-    expect(countries.countries).toHaveLength(26);
-    expect(pathways.pathways).toHaveLength(59);
+  test('the canonical registry now includes NZ SMC and Austria exact-route child routes (61 pathways total)', () => {
+    expect(countries.countries).toHaveLength(27);
+    expect(pathways.pathways).toHaveLength(61);
     const counts = new Map();
     for (const pathway of pathways.pathways) counts.set(pathway.countryId, (counts.get(pathway.countryId) || 0) + 1);
     expect(counts.get('NZ')).toBe(5);

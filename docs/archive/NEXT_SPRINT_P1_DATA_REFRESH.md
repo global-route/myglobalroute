@@ -1,3 +1,5 @@
+> **ARCHIVED 2026-10-18 (session 2).** P1-S1 manifest is complete; 25/26 anchors reviewed. Human sign-off and Russia jurisdiction confirmation remain open owner-side actions tracked in `docs/sprints/ACTIVE_SPRINT.md`. This file is a historical checklist only.
+
 # Next Sprint — P1-S1 Country Source Refresh & Dataset Reconciliation
 
 **Status:** IN PROGRESS — manifest complete, 26 outcomes recorded, 25 relevant official pages/alternatives inspected; human sign-off and Russia jurisdiction confirmation remain.

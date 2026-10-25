@@ -3,20 +3,16 @@
 
 /* ===== TABLET (768px and up) ===== */
 @media (min-width: 768px) {
-  h1 {
-    font-size: var(--font-size-3xl);
-  }
-
-  h2 {
-    font-size: var(--font-size-2xl);
-  }
+  h1 { font-size: 2.9rem; }
+  h2 { font-size: 2.05rem; }
 
   .container {
     padding: 0 var(--spacing-lg);
   }
 
   .header-container {
-    padding: var(--spacing-lg) var(--spacing-md);
+    padding: 0 var(--spacing-md);
+    min-height: 70px;
   }
 
   /* Navigation: Show horizontal menu */
@@ -120,13 +116,8 @@
 
 /* ===== DESKTOP (1024px and up) ===== */
 @media (min-width: 1024px) {
-  h1 {
-    font-size: var(--font-size-4xl);
-  }
-
-  h2 {
-    font-size: var(--font-size-3xl);
-  }
+  h1 { font-size: 2.9rem; }
+  h2 { font-size: 2.05rem; }
 
   /* Hero */
   .hero {
@@ -390,29 +381,7 @@
   }
 }
 
-/* ===== DARK MODE (if implemented) ===== */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-neutral-50: #0f172a;
-    --color-neutral-100: #1e293b;
-    --color-neutral-200: #334155;
-    --color-neutral-700: #cbd5e1;
-    --color-neutral-800: #e2e8f0;
-    --color-neutral-900: #f1f5f9;
-  }
 
-  body {
-    background-color: var(--color-neutral-50);
-    color: var(--color-neutral-800);
-  }
-
-  .header,
-  .problem-card,
-  .featured-card,
-  .tool-card {
-    background-color: var(--color-neutral-100);
-  }
-}
 
 /* ===== PRINT ===== */
 @media print {
@@ -544,7 +513,7 @@
 
   /* Countries grid */
   .countries-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
 
   /* Tables */
@@ -555,6 +524,22 @@
 
 /* ===== DESKTOP (1024px and up) ===== */
 @media (min-width: 1024px) {
+
+  /* Section padding bump */
+  .problem,
+  .approach,
+  .featured,
+  .tools,
+  .newsletter,
+  .testimonials,
+  .cta-final {
+    padding: 5rem var(--spacing-lg);
+  }
+
+  /* FMR submit button — full width on mobile handled below, desktop reset */
+  #route-form button[type="submit"] {
+    width: auto;
+  }
 
   /* Playbook */
   .playbook-cards {
@@ -586,7 +571,7 @@
 
   /* Countries grid */
   .countries-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
 
   /* Filter controls */
@@ -631,6 +616,19 @@
   .table-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
+
+  .comparison-table::after,
+  .table-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.5rem;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.9));
+    pointer-events: none;
   }
 
   table {
@@ -650,5 +648,10 @@
   /* Route results */
   .route-results article {
     padding: var(--spacing-md);
+  }
+
+  /* FMR submit button full-width on mobile */
+  #route-form button[type="submit"] {
+    width: 100%;
   }
 }

@@ -70,10 +70,10 @@ const pathways = await checkRegistry('/data/pathways.json', sourcePathways, 'pat
 
 const requiredRoutes = [
   ['/', 'text/html', 'Global Route - African Global Mobility Intelligence'],
-  ['/pages/find-my-route.html', 'text/html', 'Find My Route'],
-  ['/pages/countries.html', 'text/html', 'Countries'],
-  ['/pages/calculator.html', 'text/html', 'Budget Calculator'],
-  ['/pages/blog.html', 'text/html', 'Blog'],
+  ['/pages/find-my-route', 'text/html', 'Find My Route'],
+  ['/pages/countries', 'text/html', 'Countries'],
+  ['/pages/calculator', 'text/html', 'Budget Calculator'],
+  ['/pages/blog', 'text/html', 'Blog'],
   ['/js/app.js', 'javascript'],
   ['/js/analytics.js', 'javascript'],
   ['/js/route-engine.js', 'javascript'],

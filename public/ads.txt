@@ -1,0 +1,12 @@
+# ads.txt — Global Route
+#
+# DO NOT populate this file until:
+#   1. A Google AdSense account has been approved for this domain.
+#   2. The authoritative production hostname is confirmed (P0-S5).
+#   3. The real publisher ID has been obtained from the AdSense dashboard.
+#
+# Correct format when ready:
+#   google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+#
+# Populating this file with a placeholder or incorrect publisher ID
+# before AdSense approval will cause policy violations.

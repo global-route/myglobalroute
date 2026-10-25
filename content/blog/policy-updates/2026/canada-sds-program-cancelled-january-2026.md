@@ -3,7 +3,7 @@ layout: blog-post.njk
 title: "Canada SDS Program Cancelled: What Now for Nigerian Students?"
 date: 2026-01-10
 updated: 2026-07-21
-author: "Global Route Editorial"
+author: "MyPathway2Global Editorial"
 category: "Policy Updates"
 country: "Canada"
 keywords: "Canada SDS cancelled, student visa Canada 2026, alternatives to SDS"

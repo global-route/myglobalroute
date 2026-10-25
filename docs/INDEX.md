@@ -5,6 +5,22 @@
 ---
 
 ## Start here
+the domain is a .org we will build this website like an org, 
+get the layout of these pages 
+
+scrape https://schengenvisainfo.com/ to get page structure and layouts for relative page
+
+
+https://visaguide.world/us-visa/
+eck the images for type of styling
+ tell me the style in those and a vision to trasnform all pages
+
+
+
+use the crawl or scrape tool to scrap those websites for use to get structure and layout
+
+
+
 
 | Doc | What it is |
 |---|---|

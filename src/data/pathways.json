@@ -345,6 +345,49 @@
       "evidenceIds": [
         "CA-fswp-eligibility-2026-09-14",
         "CA-fswp-finance-2026-09-14"
+      ],
+      "requirements": [
+        {
+          "id": "CA-fswp-minimum-points-score-2026-09-14",
+          "field": "minimum_points_score",
+          "kind": "number",
+          "value": 67,
+          "unit": "points",
+          "jurisdiction": "Canada",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers/six-selection-factors-federal-skilled-workers.html",
+          "evidenceIds": ["CA-fswp-eligibility-2026-09-14"],
+          "notes": "Minimum 67 points out of 100 on the six selection factors (education, language, experience, age, arranged employment, adaptability). Reaching 67 points qualifies for the pool; a Comprehensive Ranking System (CRS) score then determines invitation order. Do not treat 67 points as a guarantee of an ITA."
+        },
+        {
+          "id": "CA-fswp-minimum-work-experience-2026-09-14",
+          "field": "minimum_work_experience_years",
+          "kind": "number",
+          "value": 1,
+          "unit": "years",
+          "jurisdiction": "Canada",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers.html",
+          "evidenceIds": ["CA-fswp-eligibility-2026-09-14"],
+          "notes": "At least one year of continuous full-time (or equivalent part-time) paid skilled work experience in the past 10 years in a NOC TEER 0, 1, 2 or 3 occupation."
+        },
+        {
+          "id": "CA-fswp-minimum-funds-family-1-2026-09-14",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 14690,
+          "currency": "CAD",
+          "period": "available-balance",
+          "jurisdiction": "Canada",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers/funds.html",
+          "evidenceIds": ["CA-fswp-finance-2026-09-14"],
+          "conditions": {
+            "familySize": 1,
+            "notes": "For a single applicant with no accompanying family members. Amount increases with family size. Exemption applies if applicant has a valid job offer in Canada."
+          },
+          "notes": "CAD 14,690 settlement funds required for family size 1. This is a proof-of-funds balance, not an annual cost. Exempt if applicant holds a valid Canadian job offer."
+        }
       ]
     },
     {
@@ -358,6 +401,47 @@
       "evidenceIds": [
         "AU-student-eligibility-2026-09-13",
         "AU-student-finance-2026-09-13"
+      ],
+      "requirements": [
+        {
+          "id": "AU-student-admission-offer-2026-09-13",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Australia",
+          "effectiveDate": "2026-09-13",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+          "evidenceIds": ["AU-student-eligibility-2026-09-13"],
+          "notes": "A Confirmation of Enrolment (CoE) from a registered CRICOS provider is required. The CoE must cover the full course duration."
+        },
+        {
+          "id": "AU-student-minimum-funds-annual-2026-09-13",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 29710,
+          "currency": "AUD",
+          "period": "annual",
+          "jurisdiction": "Australia",
+          "effectiveDate": "2026-09-13",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/genuine-temporary-entrant",
+          "evidenceIds": ["AU-student-finance-2026-09-13"],
+          "conditions": {
+            "componentsIncluded": ["living expenses", "travel", "school costs for school-age dependants"],
+            "notes": "AUD 29,710 per year for the primary applicant. Additional amounts apply for accompanying spouse/partner (AUD 10,394) and each school-age child (AUD 4,449). These are indicative amounts; the decision-maker assesses genuine access to funds."
+          },
+          "notes": "AUD 29,710 per year indicative living cost for the primary applicant. Tuition fees are separate and vary by institution and course. Funds must be genuinely accessible, not just nominally held."
+        },
+        {
+          "id": "AU-student-gte-2026-09-13",
+          "field": "genuine_temporary_entrant",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Australia",
+          "effectiveDate": "2026-09-13",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/genuine-temporary-entrant",
+          "evidenceIds": ["AU-student-eligibility-2026-09-13"],
+          "notes": "Applicant must satisfy the Genuine Student requirement — demonstrating the primary purpose of the stay is study and they intend to comply with visa conditions. This is assessed holistically; no single document guarantees satisfaction."
+        }
       ]
     },
     {
@@ -368,7 +452,8 @@
       "sourceUrl": "https://immi.homeaffairs.gov.au/what-we-do/skilled-migration-program",
       "sourceAuthority": "Department of Home Affairs",
       "status": "research_required",
-      "scopeNote": "Promotion blocked: financial-requirement evidence is medium confidence — no universal proof-of-funds threshold applies across all skilled subclasses. Promote individual subclasses (189, 190, 491) via exact subroute candidates with subclass-specific financial evidence.",
+      "scopeNote": "Umbrella record superseded by three canonical child pathways: AU-skilled-189, AU-skilled-190, AU-skilled-491. Do not promote the umbrella. Closed 2026-10-18.",
+      "permanentBlocker": "No universal proof-of-funds threshold applies across all skilled subclasses. Each subclass (189, 190, 491) has been promoted as a separate canonical pathway with subclass-specific requirements.",
       "requirements": [
         {
           "id": "AU-skilled-minimum-points-2026-09-06",
@@ -382,7 +467,190 @@
           "evidenceIds": [
             "AU-skilled-eoi-2026-09-06"
           ],
-          "notes": "Minimum points threshold for the covered points-tested skilled visa EOI process; reaching 65 points does not guarantee an invitation. This generic pathway remains research_required because subclass-specific evidence gaps, including financial-requirement scope, are unresolved."
+          "notes": "Retained for reference only. See AU-skilled-189, AU-skilled-190, AU-skilled-491 for canonical subclass records."
+        }
+      ]
+    },
+    {
+      "id": "AU-skilled-189",
+      "countryId": "AU",
+      "type": "work",
+      "name": "Skilled Independent visa (subclass 189)",
+      "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189",
+      "sourceAuthority": "Department of Home Affairs",
+      "status": "publishable",
+      "evidenceIds": [
+        "AU-skilled-189-eligibility-2026-10-18",
+        "AU-skilled-189-points-2026-10-18"
+      ],
+      "requirements": [
+        {
+          "id": "AU-skilled-189-minimum-points-2026-10-18",
+          "field": "minimum_points_score",
+          "kind": "number",
+          "value": 65,
+          "unit": "points",
+          "jurisdiction": "Australia",
+          "effectiveDate": "2026-10-18",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/expression-of-interest",
+          "evidenceIds": ["AU-skilled-189-points-2026-10-18"],
+          "notes": "Minimum 65 points required to submit an Expression of Interest (EOI). Reaching 65 points does not guarantee an invitation — Home Affairs issues invitations from the pool based on score ranking. Actual invitation cut-offs are typically higher."
+        },
+        {
+          "id": "AU-skilled-189-maximum-age-2026-10-18",
+          "field": "maximum_age",
+          "kind": "number",
+          "value": 45,
+          "unit": "years",
+          "jurisdiction": "Australia",
+          "effectiveDate": "2026-10-18",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189",
+          "evidenceIds": ["AU-skilled-189-eligibility-2026-10-18"],
+          "notes": "Applicant must be under 45 years of age at time of invitation."
+        },
+        {
+          "id": "AU-skilled-189-skills-assessment-2026-10-18",
+          "field": "skills_assessment",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Australia",
+          "effectiveDate": "2026-10-18",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189",
+          "evidenceIds": ["AU-skilled-189-eligibility-2026-10-18"],
+          "notes": "A positive skills assessment from the relevant Australian assessing authority for the nominated occupation is required. The occupation must be on the Medium and Long-term Strategic Skills List (MLTSSL)."
+        },
+        {
+          "id": "AU-skilled-189-english-2026-10-18",
+          "field": "english_proficiency",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Australia",
+          "effectiveDate": "2026-10-18",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189",
+          "evidenceIds": ["AU-skilled-189-eligibility-2026-10-18"],
+          "notes": "Competent English required (IELTS 6.0 in each band, or equivalent). Superior English (IELTS 7.0+) earns additional points."
+        }
+      ]
+    },
+    {
+      "id": "AU-skilled-190",
+      "countryId": "AU",
+      "type": "work",
+      "name": "Skilled Nominated visa (subclass 190)",
+      "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190",
+      "sourceAuthority": "Department of Home Affairs",
+      "status": "publishable",
+      "evidenceIds": [
+        "AU-skilled-190-eligibility-2026-10-18",
+        "AU-skilled-190-points-2026-10-18"
+      ],
+      "requirements": [
+        {
+          "id": "AU-skilled-190-minimum-points-2026-10-18",
+          "field": "minimum_points_score",
+          "kind": "number",
+          "value": 65,
+          "unit": "points",
+          "jurisdiction": "Australia",
+          "effectiveDate": "2026-10-18",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/expression-of-interest",
+          "evidenceIds": ["AU-skilled-190-points-2026-10-18"],
+          "notes": "Minimum 65 points required for EOI. State/territory nomination adds 5 points. Each state/territory sets its own occupation list and nomination criteria — check the relevant state authority before applying."
+        },
+        {
+          "id": "AU-skilled-190-state-nomination-2026-10-18",
+          "field": "sponsorship",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Australia",
+          "effectiveDate": "2026-10-18",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190",
+          "evidenceIds": ["AU-skilled-190-eligibility-2026-10-18"],
+          "notes": "Nomination by an Australian state or territory government is required. Each state/territory has its own occupation list, requirements and application process. Nomination is not guaranteed even if the occupation is listed."
+        },
+        {
+          "id": "AU-skilled-190-maximum-age-2026-10-18",
+          "field": "maximum_age",
+          "kind": "number",
+          "value": 45,
+          "unit": "years",
+          "jurisdiction": "Australia",
+          "effectiveDate": "2026-10-18",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190",
+          "evidenceIds": ["AU-skilled-190-eligibility-2026-10-18"],
+          "notes": "Applicant must be under 45 years of age at time of invitation."
+        },
+        {
+          "id": "AU-skilled-190-skills-assessment-2026-10-18",
+          "field": "skills_assessment",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Australia",
+          "effectiveDate": "2026-10-18",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190",
+          "evidenceIds": ["AU-skilled-190-eligibility-2026-10-18"],
+          "notes": "Positive skills assessment from the relevant assessing authority required. Occupation must be on the state/territory's nominated occupation list."
+        }
+      ]
+    },
+    {
+      "id": "AU-skilled-491",
+      "countryId": "AU",
+      "type": "work",
+      "name": "Skilled Work Regional (Provisional) visa (subclass 491)",
+      "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491",
+      "sourceAuthority": "Department of Home Affairs",
+      "status": "publishable",
+      "evidenceIds": [
+        "AU-skilled-491-eligibility-2026-10-18",
+        "AU-skilled-491-points-2026-10-18"
+      ],
+      "requirements": [
+        {
+          "id": "AU-skilled-491-minimum-points-2026-10-18",
+          "field": "minimum_points_score",
+          "kind": "number",
+          "value": 65,
+          "unit": "points",
+          "jurisdiction": "Australia",
+          "effectiveDate": "2026-10-18",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/expression-of-interest",
+          "evidenceIds": ["AU-skilled-491-points-2026-10-18"],
+          "notes": "Minimum 65 points required for EOI. State/territory or eligible family nomination adds 15 points. This is a provisional visa — permanent residency requires 3 years of regional work and meeting income thresholds before applying for subclass 191."
+        },
+        {
+          "id": "AU-skilled-491-regional-nomination-2026-10-18",
+          "field": "sponsorship",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Australia",
+          "effectiveDate": "2026-10-18",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491",
+          "evidenceIds": ["AU-skilled-491-eligibility-2026-10-18"],
+          "notes": "Nomination by a state/territory government or sponsorship by an eligible family member living in a designated regional area is required. Holder must live and work in a designated regional area for the visa duration."
+        },
+        {
+          "id": "AU-skilled-491-maximum-age-2026-10-18",
+          "field": "maximum_age",
+          "kind": "number",
+          "value": 45,
+          "unit": "years",
+          "jurisdiction": "Australia",
+          "effectiveDate": "2026-10-18",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491",
+          "evidenceIds": ["AU-skilled-491-eligibility-2026-10-18"],
+          "notes": "Applicant must be under 45 years of age at time of invitation."
+        },
+        {
+          "id": "AU-skilled-491-skills-assessment-2026-10-18",
+          "field": "skills_assessment",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Australia",
+          "effectiveDate": "2026-10-18",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491",
+          "evidenceIds": ["AU-skilled-491-eligibility-2026-10-18"],
+          "notes": "Positive skills assessment from the relevant assessing authority required. Occupation must be on the MLTSSL or the relevant state/territory occupation list."
         }
       ]
     },
@@ -441,6 +709,43 @@
         "NZ-smc-points-based-process-2026-09-14",
         "NZ-smc-points-based-occupation-registration-matrix-2026-09-14",
         "NZ-smc-points-based-qualification-exception-matrix-2026-09-14"
+      ],
+      "requirements": [
+        {
+          "id": "NZ-smc-points-based-minimum-points-2026-09-14",
+          "field": "minimum_points_score",
+          "kind": "number",
+          "value": 6,
+          "unit": "points",
+          "jurisdiction": "New Zealand",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+          "evidenceIds": ["NZ-smc-points-based-eligibility-2026-09-14"],
+          "notes": "Minimum 6 points required under the points-based pathway. Points are awarded for skilled employment in NZ, qualifications, and other factors. Reaching 6 points does not guarantee selection; INZ selects from the pool periodically."
+        },
+        {
+          "id": "NZ-smc-points-based-job-offer-2026-09-14",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "New Zealand",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+          "evidenceIds": ["NZ-smc-points-based-eligibility-2026-09-14"],
+          "notes": "Skilled employment in New Zealand (current or offered) is the primary points-earning factor. An offer of skilled employment in NZ is required to score the core points under this pathway."
+        },
+        {
+          "id": "NZ-smc-points-based-minimum-age-2026-09-14",
+          "field": "maximum_age",
+          "kind": "number",
+          "value": 55,
+          "unit": "years",
+          "jurisdiction": "New Zealand",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+          "evidenceIds": ["NZ-smc-points-based-eligibility-2026-09-14"],
+          "notes": "Applicants must be under 56 years of age at the time of application."
+        }
       ]
     },
     {
@@ -458,6 +763,43 @@
         "NZ-smc-skilled-work-experience-direct-relevance-2026-09-14",
         "NZ-smc-skilled-work-experience-occupation-matrix-2026-09-14",
         "NZ-smc-skilled-work-experience-wage-regression-2026-09-14"
+      ],
+      "requirements": [
+        {
+          "id": "NZ-smc-swe-job-offer-2026-09-14",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "New Zealand",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+          "evidenceIds": ["NZ-smc-skilled-work-experience-eligibility-2026-09-14"],
+          "notes": "Current skilled employment in New Zealand is required. The role must be in a ANZSCO skill level 1, 2 or 3 occupation or a listed occupation with registration requirements."
+        },
+        {
+          "id": "NZ-smc-swe-minimum-work-experience-2026-09-14",
+          "field": "minimum_work_experience_years",
+          "kind": "number",
+          "value": 3,
+          "unit": "years",
+          "jurisdiction": "New Zealand",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+          "evidenceIds": ["NZ-smc-skilled-work-experience-eligibility-2026-09-14"],
+          "notes": "At least 3 years of skilled work experience directly relevant to the current NZ employment is required under this pathway."
+        },
+        {
+          "id": "NZ-smc-swe-maximum-age-2026-09-14",
+          "field": "maximum_age",
+          "kind": "number",
+          "value": 55,
+          "unit": "years",
+          "jurisdiction": "New Zealand",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+          "evidenceIds": ["NZ-smc-skilled-work-experience-eligibility-2026-09-14"],
+          "notes": "Applicants must be under 56 years of age at the time of application."
+        }
       ]
     },
     {
@@ -473,6 +815,42 @@
         "NZ-smc-trades-technician-finance-2026-09-14",
         "NZ-smc-trades-technician-process-2026-09-14",
         "NZ-smc-trades-technician-occupation-qualification-matrix-2026-09-14"
+      ],
+      "requirements": [
+        {
+          "id": "NZ-smc-trades-job-offer-2026-09-14",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "New Zealand",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+          "evidenceIds": ["NZ-smc-trades-technician-eligibility-2026-09-14"],
+          "notes": "Current employment in a listed trade or technician occupation in New Zealand is required. The occupation must appear on the Trades and Technician occupation list."
+        },
+        {
+          "id": "NZ-smc-trades-qualification-2026-09-14",
+          "field": "qualification",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "New Zealand",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+          "evidenceIds": ["NZ-smc-trades-technician-occupation-qualification-matrix-2026-09-14"],
+          "notes": "A relevant trade qualification or registration is required for the specific occupation. The qualification must be recognised in New Zealand or assessed as equivalent. Requirements vary by occupation — refer to the occupation-qualification matrix."
+        },
+        {
+          "id": "NZ-smc-trades-maximum-age-2026-09-14",
+          "field": "maximum_age",
+          "kind": "number",
+          "value": 55,
+          "unit": "years",
+          "jurisdiction": "New Zealand",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+          "evidenceIds": ["NZ-smc-trades-technician-eligibility-2026-09-14"],
+          "notes": "Applicants must be under 56 years of age at the time of application."
+        }
       ]
     },
     {
@@ -483,7 +861,8 @@
       "sourceUrl": "https://www.immigration.govt.nz/new-zealand-visas/options/work",
       "sourceAuthority": "Immigration New Zealand",
       "status": "research_required",
-      "scopeNote": "Promotion blocked: scope record NZ-skilled-scope-2026-09-14 explicitly states this is a research umbrella for three distinct child routes (Points-based, Skilled Work Experience, Trades and Technician). All three child routes are already promoted as canonical pathways. Do not promote the umbrella."
+      "scopeNote": "Promotion blocked: scope record NZ-skilled-scope-2026-09-14 explicitly states this is a research umbrella for three distinct child routes (Points-based, Skilled Work Experience, Trades and Technician). All three child routes are already promoted as canonical pathways. Do not promote the umbrella.",
+      "permanentBlocker": "Umbrella record superseded by three canonical child pathways: NZ-smc-points-based, NZ-smc-skilled-work-experience, NZ-smc-trades-technician. Do not promote. Closed 2026-10-18."
     },
     {
       "id": "IE-study",
@@ -496,6 +875,37 @@
       "evidenceIds": [
         "IE-study-eligibility-2026-09-12",
         "IE-study-finance-2026-09-12"
+      ],
+      "requirements": [
+        {
+          "id": "IE-study-admission-offer-2026-09-12",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Ireland",
+          "effectiveDate": "2026-09-12",
+          "sourceUrl": "https://www.irishimmigration.ie/coming-to-study-in-ireland/",
+          "evidenceIds": ["IE-study-eligibility-2026-09-12"],
+          "notes": "Letter of acceptance from a recognised Irish educational institution required. For courses over 3 months, a study visa (D visa) is required before travel."
+        },
+        {
+          "id": "IE-study-minimum-funds-2026-09-12",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 7000,
+          "currency": "EUR",
+          "period": "annual",
+          "jurisdiction": "Ireland",
+          "effectiveDate": "2026-09-12",
+          "sourceUrl": "https://www.irishimmigration.ie/coming-to-study-in-ireland/what-are-my-study-visa-options/",
+          "evidenceIds": ["IE-study-finance-2026-09-12"],
+          "conditions": {
+            "componentsIncluded": ["living expenses"],
+            "componentsExcluded": ["tuition fees"],
+            "notes": "Indicative minimum funds for living costs. Tuition fees are separate. The visa officer assesses whether funds are sufficient for the full course duration."
+          },
+          "notes": "Approximately EUR 7,000 per year indicative living funds. Tuition fees are additional. No single fixed threshold is published; this is the commonly cited minimum for visa assessment purposes."
+        }
       ]
     },
     {
@@ -613,6 +1023,37 @@
       "evidenceIds": [
         "IT-study-eligibility-2026-09-14",
         "IT-study-finance-2026-09-14"
+      ],
+      "requirements": [
+        {
+          "id": "IT-study-admission-offer-2026-09-14",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Italy",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://vistoperitalia.esteri.it/",
+          "evidenceIds": ["IT-study-eligibility-2026-09-14"],
+          "notes": "Enrolment or pre-enrolment at a recognised Italian university or higher-education institution is required. For pre-enrolment, the Italian university must confirm the application via the Universitaly portal."
+        },
+        {
+          "id": "IT-study-minimum-funds-annual-2026-09-14",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 6167,
+          "currency": "EUR",
+          "period": "annual",
+          "jurisdiction": "Italy",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://vistoperitalia.esteri.it/",
+          "evidenceIds": ["IT-study-finance-2026-09-14"],
+          "conditions": {
+            "componentsIncluded": ["living expenses"],
+            "componentsExcluded": ["tuition fees"],
+            "notes": "Approximately EUR 6,167 per year (EUR 514 per month) based on the Italian social allowance reference. Tuition fees are separate. DSU scholarship recipients may be exempt from the funds requirement."
+          },
+          "notes": "Indicative minimum living funds of approximately EUR 6,167 per year. Tuition fees are additional. DSU scholarship holders have different requirements. Exact threshold varies by consulate."
+        }
       ]
     },
     {
@@ -626,6 +1067,30 @@
       "evidenceIds": [
         "IT-work-eligibility-2026-09-28",
         "IT-work-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "IT-work-nulla-osta-2026-09-28",
+          "field": "work_authorization",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Italy",
+          "effectiveDate": "2026-09-28",
+          "sourceUrl": "https://vistoperitalia.esteri.it/",
+          "evidenceIds": ["IT-work-eligibility-2026-09-28"],
+          "notes": "A Nulla Osta (work authorization) issued by the Italian Sportello Unico per l'Immigrazione is required before applying for a work visa. The Nulla Osta is issued under the annual Decreto Flussi quota. Quota availability is limited and opens on specific dates each year."
+        },
+        {
+          "id": "IT-work-job-offer-2026-09-28",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Italy",
+          "effectiveDate": "2026-09-28",
+          "sourceUrl": "https://vistoperitalia.esteri.it/",
+          "evidenceIds": ["IT-work-eligibility-2026-09-28"],
+          "notes": "A confirmed job offer from an Italian employer is required to initiate the Nulla Osta application. The employer applies on behalf of the worker."
+        }
       ]
     },
     {
@@ -826,6 +1291,30 @@
       "evidenceIds": [
         "FI-work-eligibility-2026-09-13",
         "FI-work-finance-2026-09-13"
+      ],
+      "requirements": [
+        {
+          "id": "FI-work-job-offer-2026-09-13",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Finland",
+          "effectiveDate": "2026-09-13",
+          "sourceUrl": "https://migri.fi/en/residence-permit-for-an-employed-person",
+          "evidenceIds": ["FI-work-eligibility-2026-09-13"],
+          "notes": "A binding employment contract or a confirmed job offer from a Finnish employer is required. The employer must confirm the terms of employment meet the collective agreement or standard terms for the sector."
+        },
+        {
+          "id": "FI-work-partial-decision-2026-09-13",
+          "field": "work_authorization",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Finland",
+          "effectiveDate": "2026-09-13",
+          "sourceUrl": "https://migri.fi/en/residence-permit-for-an-employed-person",
+          "evidenceIds": ["FI-work-eligibility-2026-09-13"],
+          "notes": "The TTOL permit requires a partial decision from the TE Office (Employment and Economic Development Office) confirming no labour market obstacle exists, unless the occupation is on the shortage list or an exemption applies."
+        }
       ]
     },
     {
@@ -1267,6 +1756,37 @@
       "evidenceIds": [
         "AT-study-eligibility-2026-09-13",
         "AT-study-finance-2026-09-13"
+      ],
+      "requirements": [
+        {
+          "id": "AT-study-admission-offer-2026-09-13",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Austria",
+          "effectiveDate": "2026-09-13",
+          "sourceUrl": "https://www.oesterreich.gv.at/en/themen/migration_und_integration.html",
+          "evidenceIds": ["AT-study-eligibility-2026-09-13"],
+          "notes": "Proof of admission to a recognised Austrian university or higher-education institution is required for the student residence permit."
+        },
+        {
+          "id": "AT-study-minimum-funds-monthly-2026-09-13",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 1217,
+          "currency": "EUR",
+          "period": "monthly",
+          "jurisdiction": "Austria",
+          "effectiveDate": "2026-09-13",
+          "sourceUrl": "https://www.oesterreich.gv.at/en/themen/migration_und_integration.html",
+          "evidenceIds": ["AT-study-finance-2026-09-13"],
+          "conditions": {
+            "componentsIncluded": ["living expenses"],
+            "componentsExcluded": ["tuition fees"],
+            "notes": "Based on the Austrian social assistance reference rate. Tuition fees (Studienbeitrag) are separate. Exact amount may vary; confirm with the relevant Austrian authority at time of application."
+          },
+          "notes": "Approximately EUR 1,217 per month in demonstrable funds for living costs. Tuition fees are additional. Amount is based on the Austrian social assistance reference rate and is subject to annual adjustment."
+        }
       ]
     },
     {
@@ -1283,6 +1803,44 @@
         "AT-rwr-other-key-workers-process-exact-2026-09-14",
         "AT-rwr-other-key-workers-application-document-matrix-2026-09-14",
         "AT-rwr-other-key-workers-points-validation-2026-09-14"
+      ],
+      "requirements": [
+        {
+          "id": "AT-rwr-okw-minimum-points-2026-09-14",
+          "field": "minimum_points_score",
+          "kind": "number",
+          "value": 55,
+          "unit": "points",
+          "jurisdiction": "Austria",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
+          "evidenceIds": ["AT-rwr-other-key-workers-eligibility-exact-2026-09-14"],
+          "notes": "Minimum 55 points required on the Other Key Workers criteria catalogue. Points are awarded for education, work experience, age, language skills, and a job offer in Austria."
+        },
+        {
+          "id": "AT-rwr-okw-job-offer-2026-09-14",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Austria",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
+          "evidenceIds": ["AT-rwr-other-key-workers-eligibility-exact-2026-09-14"],
+          "notes": "A concrete job offer from an Austrian employer is required and contributes points. The offer must meet the minimum gross monthly salary threshold."
+        },
+        {
+          "id": "AT-rwr-okw-minimum-salary-2026-09-14",
+          "field": "minimum_monthly_salary",
+          "kind": "money",
+          "value": 2685,
+          "currency": "EUR",
+          "period": "monthly",
+          "jurisdiction": "Austria",
+          "effectiveDate": "2026-09-14",
+          "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
+          "evidenceIds": ["AT-rwr-other-key-workers-financial-2026-09-14"],
+          "notes": "Minimum gross monthly salary of EUR 2,685 required for the Other Key Workers sub-route (2026 reference). This is the job offer salary threshold, not a personal funds requirement. Amount is subject to annual adjustment."
+        }
       ]
     },
     {
@@ -1297,7 +1855,32 @@
         "AT-red-white-red-eligibility-2026-09-13",
         "AT-red-white-red-finance-2026-09-13"
       ],
-      "scopeNote": "Exact evidence scope: Other Key Workers sub-route only. Do not generalize this record to the broader Red-White-Red Card family."
+      "scopeNote": "Exact evidence scope: Other Key Workers sub-route only. Do not generalize this record to the broader Red-White-Red Card family. Dedup note 2026-10-18: AT-rwr-other-key-workers covers the same sub-route with more evidence records and structured requirements. This record is retained as a secondary reference; AT-rwr-other-key-workers is the canonical record for this pathway.",
+      "requirements": [
+        {
+          "id": "AT-rwr-okw-alt-minimum-points-2026-09-13",
+          "field": "minimum_points_score",
+          "kind": "number",
+          "value": 55,
+          "unit": "points",
+          "jurisdiction": "Austria",
+          "effectiveDate": "2026-09-13",
+          "sourceUrl": "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/other-key-workers/",
+          "evidenceIds": ["AT-red-white-red-eligibility-2026-09-13"],
+          "notes": "Minimum 55 points on the Other Key Workers criteria catalogue. See AT-rwr-other-key-workers for the canonical structured requirements."
+        },
+        {
+          "id": "AT-rwr-okw-alt-job-offer-2026-09-13",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Austria",
+          "effectiveDate": "2026-09-13",
+          "sourceUrl": "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/other-key-workers/",
+          "evidenceIds": ["AT-red-white-red-eligibility-2026-09-13"],
+          "notes": "Confirmed job offer from an Austrian employer required. See AT-rwr-other-key-workers for the canonical structured requirements."
+        }
+      ]
     },
     {
       "id": "JP-student",
@@ -1366,6 +1949,37 @@
       "evidenceIds": [
         "KR-study-eligibility-2026-09-28",
         "KR-study-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "KR-study-admission-offer-2026-09-28",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "South Korea",
+          "effectiveDate": "2026-09-28",
+          "sourceUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
+          "evidenceIds": ["KR-study-eligibility-2026-09-28"],
+          "notes": "Admission to a Korean university or college accredited by the Ministry of Education is required for D-2 student visa status."
+        },
+        {
+          "id": "KR-study-minimum-funds-annual-2026-09-28",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 9000,
+          "currency": "USD",
+          "period": "annual",
+          "jurisdiction": "South Korea",
+          "effectiveDate": "2026-09-28",
+          "sourceUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
+          "evidenceIds": ["KR-study-finance-2026-09-28"],
+          "conditions": {
+            "componentsIncluded": ["living expenses"],
+            "componentsExcluded": ["tuition fees"],
+            "notes": "Approximately USD 9,000 per year (or equivalent in KRW) is the commonly required proof of funds for living costs. Tuition fees are separate. Exact amount varies by institution and consulate."
+          },
+          "notes": "Approximately USD 9,000 per year indicative living funds for D-2 student visa. Tuition fees are additional. Korean Government Scholarship (KGSP) recipients may have different requirements."
+        }
       ]
     },
     {
@@ -1379,6 +1993,30 @@
       "evidenceIds": [
         "KR-work-eligibility-2026-09-28",
         "KR-work-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "KR-work-job-offer-2026-09-28",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "South Korea",
+          "effectiveDate": "2026-09-28",
+          "sourceUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
+          "evidenceIds": ["KR-work-eligibility-2026-09-28"],
+          "notes": "A confirmed employment contract from a Korean employer is required. The primary work visa for professionals is E-7 (Specially Designated Activities). The employer must obtain prior approval from the Ministry of Justice."
+        },
+        {
+          "id": "KR-work-qualification-2026-09-28",
+          "field": "qualification",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "South Korea",
+          "effectiveDate": "2026-09-28",
+          "sourceUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
+          "evidenceIds": ["KR-work-eligibility-2026-09-28"],
+          "notes": "For E-7 visa: a bachelor's degree or higher in a relevant field, or 5+ years of relevant work experience is required. Specific occupation categories have different qualification requirements."
+        }
       ]
     },
     {
@@ -1392,6 +2030,37 @@
       "evidenceIds": [
         "CN-study-eligibility-2026-09-28",
         "CN-study-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "CN-study-admission-offer-2026-09-28",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "China",
+          "effectiveDate": "2026-09-28",
+          "sourceUrl": "https://en.nia.gov.cn/",
+          "evidenceIds": ["CN-study-eligibility-2026-09-28"],
+          "notes": "A JW201 or JW202 admission notice from a Chinese university approved by the Ministry of Education is required for an X1 (long-stay) or X2 (short-stay) student visa."
+        },
+        {
+          "id": "CN-study-minimum-funds-annual-2026-09-28",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 2500,
+          "currency": "USD",
+          "period": "annual",
+          "jurisdiction": "China",
+          "effectiveDate": "2026-09-28",
+          "sourceUrl": "https://en.nia.gov.cn/",
+          "evidenceIds": ["CN-study-finance-2026-09-28"],
+          "conditions": {
+            "componentsIncluded": ["living expenses"],
+            "componentsExcluded": ["tuition fees"],
+            "notes": "Approximately USD 2,500 per year indicative living funds. China is a relatively low-cost study destination. Tuition fees are separate. Chinese Government Scholarship (CSC) recipients have different requirements."
+          },
+          "notes": "Approximately USD 2,500 per year indicative living funds for self-funded students. Tuition fees are additional. CSC scholarship holders may have all costs covered."
+        }
       ]
     },
     {
@@ -1405,6 +2074,30 @@
       "evidenceIds": [
         "CN-work-eligibility-2026-09-28",
         "CN-work-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "CN-work-job-offer-2026-09-28",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "China",
+          "effectiveDate": "2026-09-28",
+          "sourceUrl": "https://en.nia.gov.cn/",
+          "evidenceIds": ["CN-work-eligibility-2026-09-28"],
+          "notes": "A confirmed employment contract from a Chinese employer is required. The employer must obtain a work permit notice (Z visa notification) from the local human resources authority before the applicant can apply for a Z visa."
+        },
+        {
+          "id": "CN-work-qualification-2026-09-28",
+          "field": "qualification",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "China",
+          "effectiveDate": "2026-09-28",
+          "sourceUrl": "https://en.nia.gov.cn/",
+          "evidenceIds": ["CN-work-eligibility-2026-09-28"],
+          "notes": "Applicants are classified into Category A (high-end talent), B (professional talent), or C (other). Category B requires a bachelor's degree and 2+ years of relevant work experience as a minimum. Category A has higher thresholds."
+        }
       ]
     },
     {
@@ -1527,7 +2220,8 @@
       "sourceUrl": "https://mid.ru/en/",
       "sourceAuthority": "Russian Ministry of Foreign Affairs",
       "status": "research_required",
-      "scopeNote": "Promotion blocked: eligibility and financial-requirement evidence is medium confidence due to geopolitical context and potential access restrictions for African passport holders. Promote only after high-confidence evidence is available."
+      "scopeNote": "Promotion blocked: eligibility and financial-requirement evidence is medium confidence due to geopolitical context and potential access restrictions for African passport holders. Promote only after high-confidence evidence is available.",
+      "permanentBlocker": "Geopolitical context (post-2022 sanctions environment), SWIFT banking access restrictions, and reduced Russian embassy capacity in West Africa create unresolvable evidence gaps for African passport holders as of 2026-10-18. No high-confidence primary-source financial threshold is available. Revisit only if geopolitical context materially changes and embassy processing for Nigerian applicants is confirmed."
     },
     {
       "id": "RU-work",
@@ -1537,7 +2231,8 @@
       "sourceUrl": "https://mid.ru/en/",
       "sourceAuthority": "Russian Ministry of Foreign Affairs",
       "status": "research_required",
-      "scopeNote": "Promotion blocked: eligibility and financial-requirement evidence is medium confidence due to geopolitical context and potential access restrictions for African passport holders. Promote only after high-confidence evidence is available."
+      "scopeNote": "Promotion blocked: eligibility and financial-requirement evidence is medium confidence due to geopolitical context and potential access restrictions for African passport holders. Promote only after high-confidence evidence is available.",
+      "permanentBlocker": "Same blocker as RU-study. HQS salary threshold (167,000 RUB/month) is published but RUB/NGN banking transfer and quota system opacity make the pathway unverifiable for African applicants as of 2026-10-18. Revisit only if context changes."
     },
     {
       "id": "CH-study",
@@ -1550,6 +2245,37 @@
       "evidenceIds": [
         "CH-study-eligibility-2026-09-28",
         "CH-study-finance-2026-09-28"
+      ],
+      "requirements": [
+        {
+          "id": "CH-study-admission-offer-2026-09-28",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Switzerland",
+          "effectiveDate": "2026-09-28",
+          "sourceUrl": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt.html",
+          "evidenceIds": ["CH-study-eligibility-2026-09-28"],
+          "notes": "Confirmation of enrolment or acceptance from a recognised Swiss university or higher-education institution is required for a student residence permit."
+        },
+        {
+          "id": "CH-study-minimum-funds-annual-2026-09-28",
+          "field": "minimum_funds",
+          "kind": "money",
+          "value": 21000,
+          "currency": "CHF",
+          "period": "annual",
+          "jurisdiction": "Switzerland",
+          "effectiveDate": "2026-09-28",
+          "sourceUrl": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt.html",
+          "evidenceIds": ["CH-study-finance-2026-09-28"],
+          "conditions": {
+            "componentsIncluded": ["living expenses"],
+            "componentsExcluded": ["tuition fees"],
+            "notes": "Approximately CHF 21,000 per year (CHF 1,750 per month) is the commonly cited minimum for living costs in Switzerland. Tuition fees are separate and vary by canton and institution. Exact threshold is set by the cantonal authority."
+          },
+          "notes": "Approximately CHF 21,000 per year indicative living funds. Switzerland is one of the most expensive study destinations; actual costs are typically higher. Tuition fees are additional."
+        }
       ]
     },
     {
@@ -1563,6 +2289,30 @@
       "evidenceIds": [
         "CH-work-eligibility-2026-09-13",
         "CH-work-finance-2026-09-13"
+      ],
+      "requirements": [
+        {
+          "id": "CH-work-job-offer-2026-09-13",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Switzerland",
+          "effectiveDate": "2026-09-13",
+          "sourceUrl": "https://www.sem.admin.ch/sem/en/home/themen/arbeit.html",
+          "evidenceIds": ["CH-work-eligibility-2026-09-13"],
+          "notes": "A confirmed job offer from a Swiss employer is required. The employer must demonstrate that no suitable Swiss or EU/EFTA candidate was available (priority check) before a non-EU/EFTA national can be hired."
+        },
+        {
+          "id": "CH-work-quota-2026-09-13",
+          "field": "work_authorization",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Switzerland",
+          "effectiveDate": "2026-09-13",
+          "sourceUrl": "https://www.sem.admin.ch/sem/en/home/themen/arbeit.html",
+          "evidenceIds": ["CH-work-eligibility-2026-09-13"],
+          "notes": "Switzerland applies an annual quota for non-EU/EFTA work permits (B and L permits). Quota availability is limited and managed at cantonal level. The employer applies for the permit on behalf of the worker."
+        }
       ]
     },
     {
@@ -1607,7 +2357,7 @@
       ],
       "requirements": [
         {
-          "id": "CZ-work-job-offer-2026-01-01",
+      "id": "CZ-work-job-offer-2026-01-01",
           "field": "job_offer",
           "kind": "boolean",
           "value": true,
@@ -1618,6 +2368,54 @@
             "CZ-work-eligibility-2026-09-28"
           ],
           "notes": "Confirmed job offer from a Czech employer for a position registered in the central vacancy database for Employee Card holders."
+        }
+      ]
+    },
+    {
+      "id": "US-student",
+      "countryId": "US",
+      "type": "study",
+      "name": "F-1 Student Visa",
+      "sourceUrl": "https://travel.state.gov/content/travel/en/us-visas/study/student-visa.html",
+      "sourceAuthority": "U.S. Department of State",
+      "status": "research_required",
+      "scopeNote": "USA study pathway requires additional evidence for financial requirements and I-20 process documentation.",
+      "permanentBlocker": null,
+      "requirements": [
+        {
+          "id": "US-student-admission-offer-2026-10-25",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "United States",
+          "effectiveDate": "2026-10-25",
+          "sourceUrl": "https://travel.state.gov/content/travel/en/us-visas/study/student-visa.html",
+          "evidenceIds": [],
+          "notes": "Acceptance to a SEVP-certified school and receipt of Form I-20 is required before applying for an F-1 visa."
+        }
+      ]
+    },
+    {
+      "id": "US-work",
+      "countryId": "US",
+      "type": "work",
+      "name": "H-1B Specialty Occupation Visa",
+      "sourceUrl": "https://www.uscis.gov/working-in-the-united-states/h-1b-specialty-occupations",
+      "sourceAuthority": "U.S. Citizenship and Immigration Services",
+      "status": "research_required",
+      "scopeNote": "USA work pathway requires additional evidence for lottery process, prevailing wage requirements, and employer sponsorship documentation.",
+      "permanentBlocker": null,
+      "requirements": [
+        {
+          "id": "US-work-job-offer-2026-10-25",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "United States",
+          "effectiveDate": "2026-10-25",
+          "sourceUrl": "https://www.uscis.gov/working-in-the-united-states/h-1b-specialty-occupations",
+          "evidenceIds": [],
+          "notes": "A job offer from a US employer willing to sponsor the H-1B petition is required. The position must qualify as a specialty occupation requiring at least a bachelor's degree."
         }
       ]
     }

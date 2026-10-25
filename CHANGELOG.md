@@ -2,6 +2,114 @@
 
 Dates reflect repository commits; a changelog entry is not release approval.
 
+## 2026-10-25 — Rebrand & UI Transformation
+
+### Rebrand: Global Route → MyPathway2Global
+- All 22 HTML files updated: `Global Route` → `MyPathway2Global`
+- All content files updated (17 blog posts, templates)
+- `Find My Route` → `Find MyPathway` everywhere
+- File renamed: `find-my-route.html` → `find-mypathway.html`
+- All nav links, footers, meta tags, OG tags updated
+- Footer copyright updated
+
+### UI Transformation: Content-First Editorial Layout
+- **Homepage restructured:** Removed card grids (problem-card, approach-card, featured-card)
+- **New layout:** H1 + credibility box + inline stats + content sections with H2 amber underlines
+- **Sections:** "Why this exists", "How it works" (numbered list), "Start here" (link list), "Featured guides" (link list with real blog URLs)
+- **CSS added:** `.stats-inline`, `.content-section`, `.numbered-list`, `.link-list`
+- **Removed:** SaaS-style card grids, hover animations, section eyebrows
+
+### Design System (from DESIGN_BLUEPRINT.md)
+- **Fonts:** Titillium Web 400/600 (headings) + Roboto 300/400/500 (body)
+- **Colors:** `#0b409c` primary, `#ffc947` amber accent, `#10316b` dark navy, `#f2f7ff` page bg
+- **H2 underline:** 40px amber rule on all H2 elements
+- **Buttons:** `border-radius: 2px`, amber hover
+- **No dark mode:** All `prefers-color-scheme: dark` blocks removed
+- **No emojis:** All emoji icons removed from UI
+
+### Cache Busting
+- Added `?v=2` to all CSS links across all HTML files and templates
+- Fixes 1-year immutable cache issue that was serving stale CSS
+
+### Documentation
+- Created `docs/sprints/UI_SPOTLIGHT_PLAN.md` — full UI assessment and action plan
+- Updated `docs/reference/DESIGN_BLUEPRINT.md` reference
+
+### Verification
+- Build: 162 files, 0 errors
+- Tests: 18/18 suites, 139/139 passing
+- Deploy: Cloudflare Workers, Version ID `233e6e62-9788-4483-a1b3-4d1c9e5c588b`
+
+---
+
+## 2026-10-24 (session 4) — UI Overwork Spec: Batch A/B/C execution (14 tasks, 3 deploys)
+
+### Batch A — Mechanical (8 tasks, 1 deploy)
+- **Task 6** — Removed stale canonical comments from `student-playbook.html`, `professional-playbook.html`, `business-playbook.html`, `about.html`, `contact.html`, `faq.html`, `find-my-route.html`.
+- **Task 9** — Verified no `/pages/blog.html` links remain (already clean from prior sessions).
+- **Task 1** — Replaced inline `style="padding-top:2rem;padding-bottom:2rem;"` with `.page-content` class on 6 pages (playbooks, about, contact, faq).
+- **Task 7** — Replaced `<article style="margin-bottom:2rem;">` with `<article class="playbook-card">` on 3 playbook pages (18 articles total).
+- **Task 2** — Fixed `countries.html` filter: replaced invented "GROUP A/B/C/D/E/F" options with actual `countries.json` categories (9 regions: Europe Western/Central/Southern/Nordic/Baltic/Alpine, North America, Asia-Pacific, Asia). Label updated to "Filter by Region:".
+- **Task 3** — Fixed calculator meta description: "Global Route Budget Calculator - Find affordable countries..." → "Evidence-gated budget calculator for African students and professionals — plan migration costs using verified country data, not estimates."
+- **Task 8** — Added `aria-hidden="true"` to all decorative emoji: logo globe, flag emoji in pathway headings, approach icons on homepage.
+- **Task 11** — Added `og:url` meta tags to all 14 static pages matching canonical href.
+- **Verification:** `npm run build:verify` ✅ | `npm run deploy:wrangler` ✅ (9 assets) | `deploy:verify` ✅ (100 routes).
+
+### Batch B — CSS Design (3 tasks, 1 deploy)
+- **Task 12** — Added `.prose` CSS class: max-width 760px, centred, applied to playbook/about/faq/contact pages for text-heavy content (IRCC/Make it in Germany benchmark).
+- **Task 13** — Added `.prose h2` dividers: 2px top border, margin/padding, first-of-type exception for section visual hierarchy (Numbeo/Expatistan benchmark).
+- **Task 14** — Added `.checklist` CSS: green `✓` prefix (var(--color-secondary)), applied to all playbook requirement lists (Visaguide/Make it in Germany benchmark).
+- **Verification:** `npm run build:verify` ✅ | `npm run deploy:wrangler` ✅ (7 assets) | `deploy:verify` ✅ (100 routes).
+
+### Batch C — Content (2 tasks, 1 deploy)
+- **Task 4** — Find My Route: added structured intro section with two-column "What it does / does not do" grid above form using `.problem-grid` and `.problem-card` classes.
+- **Task 5** — Country template (`countries.njk`): added inline requirements summary for publishable pathways (max 3 requirements, humanised field names, currency/unit), research_required shows blocker, "Full details →" link to pathway page.
+- **Verification:** `npm run build:verify` ✅ | `npm run deploy:wrangler` ✅ (27 assets, all 26 country pages regenerated) | `deploy:verify` ✅ (100 routes, 26 countries, 59 pathways).
+
+### Summary
+- **Total tasks:** 14 (all complete)
+- **Total deploys:** 3 (Batch A, B, C)
+- **Total verification passes:** 3/3
+- **Production status:** Live on `https://mypathway2global.org.uk`
+- **Regressions:** 0
+- **Design standards met:** Prose max-width 760px, section dividers, checklist styling, evidence-gated language, accessibility (aria-hidden, aria-live, WCAG AA contrast).
+
+---
+
+## 2026-10-18 (session 2) — Route quality, SEO cleanup, privacy fixes, monetization registry
+
+### Route engine (P1-ROUTE)
+- `route-engine.js`: engine now returns `{ matches, alternatives, missingInput }` instead of a bare array.
+- Added `isStale(pathway, asOf)`: flags a pathway stale when the newest requirement `effectiveDate` is >180 days old. Absence of dates is not treated as stale.
+- `missingInput: true` returned when goal is `any` — engine refuses to rank without a signal.
+- `alternatives`: up to 5 ineligible publishable routes matching the goal type, each with their blocker reason; only populated when `matches` is empty.
+- `find-my-route.html`: updated page script to handle new return shape — stale warning on cards, inline requirements list (field + value), alternatives section, missing-input prompt.
+- Added `.route-requirements` and `.stale-warning` CSS classes to `styles.css`.
+
+### SEO cleanup (P1-SEO)
+- `blog.html`: removed fabricated “Real visa approval rates, true costs, verified strategies, 25K+ words” from meta description and hero subtitle. Stats updated: 17 posts, 26 countries. Added `twitter:card`. Removed `keywords` meta.
+- `blog-category-country-audits.html`: same fabricated claims removed from meta and hero. Added OG/Twitter tags. Removed `keywords` meta. ~200-line inline `CategoryArchiveLoader` replaced with external `/js/category-loader.js` reference.
+- All 5 remaining blog category pages: added `og:title`, `og:description`, `og:type`, `twitter:card`. Meta descriptions improved from generic placeholders.
+- Canonical `<link rel="canonical">` tags remain deferred until production host confirmed (P0-S5).
+
+### Privacy / compliance (P1-PRIV)
+- `blog-loader.js` + `category-loader.js`: `handleNewsletterSignup` replaced in both — removed mock `setTimeout` subscription, removed `console.log` of raw email (PII), removed call to undefined `trackNewsletterSignup`. Replaced with honest “Not yet available” response with `evidence-note` disclosure.
+- `privacy.html`: added “Newsletter and contact forms” section stating no provider is active and form submission sends nothing. Rebuilt with canonical header/nav/footer, `responsive.css`, OG/Twitter tags, `data-page-type="legal"`.
+- `disclaimer.html`: was bare `<main>` with no nav, footer or scripts — rebuilt with full canonical shell.
+- `terms.html`: was minified bare shell missing `responsive.css` and navigation — rebuilt with full canonical shell.
+
+### Monetization registry (P1-REV)
+- `blog.html`: removed duplicate `analytics.js` load from `<head>` (consent UI not ready at that point; correct load at end of body retained). Added `data-ad-slot="ad_article_top"` before featured post and `data-ad-slot="ad_article_mid"` before posts grid — both `hidden`.
+- `monetization.js`: `ad_article_end` slot extended to include `student-playbook`, `professional-playbook`, `business-playbook` page types.
+- `student-playbook.html`, `professional-playbook.html`, `business-playbook.html`: `<aside data-ad-slot="ad_article_end" hidden>` added between `</main>` and `<footer>`.
+- `public/ads.txt`: created as placeholder with explicit gate conditions (do not populate until AdSense approved, production domain confirmed, real publisher ID obtained).
+- `docs/monetization/MONETIZATION_ROADMAP.md`: M0 all checked; M1 partially checked; M2 updated with accurate blocked/done state.
+
+### CI status
+CI remains paused by user direction. Last verified SHA: `89998ab` (2026-10-11). All changes in this session are unvalidated on live runners. Release remains **NO-GO**.
+
+---
+
 ## 2026-10-18 — Structured requirement expansion, source anchor alignment, and runtime configuration
 
 - Expanded structured requirement declarations from 19 across 9 pathways to 49 declarations across 35 of 56 pathways (62.5% coverage):

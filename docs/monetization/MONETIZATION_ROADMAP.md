@@ -4,21 +4,21 @@
 
 ## Phase M0 — Architecture and governance
 ### P0
-- [ ] Establish monetization documentation.
-- [ ] Define MRR and total-revenue accounting.
-- [ ] Define ad placement map.
-- [ ] Define commercial/trust firewall.
-- [ ] Define revenue event taxonomy.
-- [ ] Define partner qualification standards.
+- [x] Establish monetization documentation.
+- [x] Define MRR and total-revenue accounting.
+- [x] Define ad placement map.
+- [x] Define commercial/trust firewall.
+- [x] Define revenue event taxonomy.
+- [x] Define partner qualification standards.
 
-**Exit criteria:** Revenue terminology and commercial rules are unambiguous.
+**Exit criteria:** Revenue terminology and commercial rules are unambiguous. ✅ Complete.
 
 ## Phase M1 — Measurement foundation
 ### P0
-- [ ] Implement analytics event taxonomy.
-- [ ] Track route intent.
-- [ ] Track calculator engagement.
-- [ ] Track pathway/source interactions.
+- [x] Implement analytics event taxonomy.
+- [x] Track route intent.
+- [x] Track calculator engagement.
+- [x] Track pathway/source interactions.
 - [ ] Build revenue dashboard specification.
 - [ ] Define monthly revenue reconciliation.
 
@@ -26,15 +26,15 @@
 
 ## Phase M2 — AdSense readiness
 ### P0
-- [ ] Confirm authoritative production domain.
-- [ ] Confirm privacy/consent implementation.
-- [ ] Establish Google AdSense account.
-- [ ] Verify site eligibility.
-- [ ] Obtain real publisher ID.
+- [ ] Confirm authoritative production domain. *(blocked: P0-S5 DNS)*
+- [x] Confirm privacy/consent implementation.
+- [ ] Establish Google AdSense account. *(owner action)*
+- [ ] Verify site eligibility. *(owner action)*
+- [ ] Obtain real publisher ID. *(owner action)*
 - [ ] Configure approved ad formats.
-- [ ] Create ads.txt from actual publisher details.
-- [ ] Implement page-level ad exclusions.
-- [ ] Run performance/accessibility checks.
+- [x] Create ads.txt placeholder (`public/ads.txt` — must not be populated until publisher ID obtained).
+- [x] Implement page-level ad exclusions.
+- [ ] Run performance/accessibility checks. *(requires live browser)*
 - [ ] Launch controlled ad experiment.
 
 **Exit criteria:** AdSense operates without degrading core product workflows.

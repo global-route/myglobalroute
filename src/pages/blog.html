@@ -4,21 +4,31 @@
   <script async src="https://www.sabilytics.com/script.js" data-site="atsngkb78nmt" data-domain="org.uk"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog | Global Route</title>
+  <title>Blog | MyPathway2Global</title>
   <meta name="description" content="Evidence-gated migration guides for African students and professionals: country audits, visa requirements, cost breakdowns and official source trails.">
-  <meta property="og:title" content="Global Route Blog">
+  <meta property="og:title" content="MyPathway2Global Blog">
   <meta property="og:description" content="Evidence-gated migration guides for African students and professionals — official sources, honest costs, no fabricated approval rates.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css?v=3">
   <link rel="stylesheet" href="/css/blog.css">
-  <link rel="stylesheet" href="/css/enhancements.css">
+  <link rel="stylesheet" href="/css/enhancements.css?v=3">
   <!-- Fuse.js for full-text search -->
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
   <link rel="canonical" href="https://mypathway2global.org.uk/pages/blog">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mypathway2global.org.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog" }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <meta property="og:url" content="https://mypathway2global.org.uk/pages/blog">
 </head>
 <body data-page-type="blog">
@@ -29,8 +39,8 @@
     <div class="header-container">
       <div class="logo">
         <a href="/" class="logo-link">
-          <span class="logo-icon">🌍</span>
-          <span>Global Route</span>
+          
+          <span>MyPathway2Global</span>
         </a>
       </div>
       <nav class="navigation" aria-label="Primary">
@@ -39,53 +49,23 @@
           <span></span>
           <span></span>
         </button>
-        <ul class="nav-menu">
-          <li><a href="/">Home</a></li>
-          <li><a href="/pages/countries.html">Countries</a></li>
-          <li><a href="/pages/find-my-route.html" class="nav-cta">Find My Route &rarr;</a></li>
-          <li><a href="/pages/calculator.html">Calculator</a></li>
-          <li><a href="/blog/" class="active">Research</a></li>
-          <li><a href="/pages/about.html">About</a></li>
-        </ul>
+        <ul class="nav-menu"><li><a href="/">Home</a></li><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Blog</a></li><li><a href="/pages/about.html">About</a></li><li><a href="/pages/find-mypathway.html" class="nav-cta">Find MyPathway</a></li></ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="blog-hero">
+  <!-- Page Header -->
+  <div class="page-header">
     <div class="container">
-      <h1>Global Route Blog</h1>
-      <p class="blog-hero-subtitle">Evidence-gated migration guides — official sources, honest costs, no fabricated approval rates</p>
-      
-      <!-- Search Bar -->
-      <div class="blog-search-container">
-        <input 
-          type="text" 
-          id="blog-search-input" 
-          class="blog-search-input" 
-          placeholder="Search articles (e.g. 'Germany visa', 'study abroad budget')..."
-          aria-label="Search blog articles"
-        >
-        <button class="blog-search-btn" aria-label="Search">🔍</button>
-      </div>
-
-      <!-- Featured Stats -->
-      <div class="blog-stats">
-        <div class="blog-stat">
-          <span class="blog-stat-number">17</span>
-          <span class="blog-stat-label">Posts</span>
-        </div>
-        <div class="blog-stat">
-          <span class="blog-stat-number">26</span>
-          <span class="blog-stat-label">Countries</span>
-        </div>
-        <div class="blog-stat">
-          <span class="blog-stat-number">7</span>
-          <span class="blog-stat-label">Categories</span>
-        </div>
+      <span class="page-header-badge">Blog</span>
+      <h1>MyPathway2Global Blog</h1>
+      <p class="page-header-subtitle">Evidence-gated migration guides — official sources, honest costs, no fabricated approval rates</p>
+      <div class="blog-search-container" style="margin-top:var(--spacing-lg);">
+        <input type="text" id="blog-search-input" class="blog-search-input" placeholder="Search articles (e.g. 'Germany visa', 'study abroad budget')..." aria-label="Search blog articles">
+        <button class="blog-search-btn" aria-label="Search">Search</button>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- Main Content -->
   <main id="main" class="blog-main">
@@ -97,13 +77,13 @@
           <h3>Filter by Category</h3>
           <ul class="category-list">
             <li><a href="#" class="category-filter active" data-category="all">All Posts</a></li>
-            <li><a href="#" class="category-filter" data-category="country-audits">🌍 Country Audits</a></li>
-            <li><a href="#" class="category-filter" data-category="student-playbooks">🎓 Student Playbooks</a></li>
-            <li><a href="#" class="category-filter" data-category="professional-playbooks">💼 Professional Playbooks</a></li>
-            <li><a href="#" class="category-filter" data-category="business-playbooks">📊 Business Playbooks</a></li>
-            <li><a href="#" class="category-filter" data-category="case-studies">📖 Case Studies</a></li>
-            <li><a href="#" class="category-filter" data-category="policy-updates">📰 Policy Updates</a></li>
-            <li><a href="#" class="category-filter" data-category="guides">📚 Guides</a></li>
+            <li><a href="#" class="category-filter" data-category="country-audits">Country Audits</a></li>
+            <li><a href="#" class="category-filter" data-category="student-playbooks">Student Playbooks</a></li>
+            <li><a href="#" class="category-filter" data-category="professional-playbooks">Professional Playbooks</a></li>
+            <li><a href="#" class="category-filter" data-category="business-playbooks">Business Playbooks</a></li>
+            <li><a href="#" class="category-filter" data-category="case-studies">Case Studies</a></li>
+            <li><a href="#" class="category-filter" data-category="policy-updates">Policy Updates</a></li>
+            <li><a href="#" class="category-filter" data-category="guides">Guides</a></li>
           </ul>
         </div>
 
@@ -111,7 +91,7 @@
         <div class="blog-newsletter-cta">
           <h3>Get Updates</h3>
           <p>Weekly real migration strategies + policy changes</p>
-          <form class="newsletter-form" id="blog-newsletter-form">
+          <form class="newsletter-form" id="blog-newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Coming soon'; this.querySelector('input').disabled=true;">
             <input 
               type="email" 
               placeholder="Your email" 
@@ -150,14 +130,15 @@
   <!-- Ad Unit -->
   <aside class="ad-unit" id="ad-unit-1" data-ad-slot="ad_article_end" hidden aria-label="Advertisement"></aside>
 
+  <div class="disclaimer-bar"><p>General information only — not legal or immigration advice. Always verify current requirements with the relevant authority before paying fees or submitting an application. <a href="/pages/disclaimer.html">Full disclaimer →</a></p></div>
   <footer id="footer" class="footer">
     <div class="footer-content">
-      <div class="footer-section"><h4>Global Route</h4><p>Evidence-gated global mobility intelligence.</p></div>
-      <div class="footer-section"><h4>Explore</h4><ul><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-my-route.html" >Find My Route</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Research</a></li></ul></div>
+      <div class="footer-section"><h4>MyPathway2Global</h4><p>Evidence-gated global mobility intelligence.</p><p style="font-size:0.78rem;opacity:0.7;margin-top:0.5rem;">Independent platform. Not affiliated with any government.</p></div>
+      <div class="footer-section"><h4>Explore</h4><ul><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-mypathway.html" >Find MyPathway</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Blog</a></li></ul></div>
       <div class="footer-section"><h4>Guides</h4><ul><li><a href="/pages/student-playbook.html">Student</a></li><li><a href="/pages/professional-playbook.html">Professional</a></li><li><a href="/pages/business-playbook.html">Business</a></li></ul></div>
       <div class="footer-section"><h4>Trust</h4><ul><li><a href="/pages/privacy.html">Privacy</a></li><li><a href="/pages/disclaimer.html">Disclaimer</a></li><li><a href="/pages/terms.html">Terms</a></li><li><a href="/pages/contact.html">Contact</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><p>&copy; 2026 Global Route. All rights reserved.</p></div>
+    <div class="footer-bottom"><p>&copy; 2026 MyPathway2Global. All rights reserved.</p></div>
   </footer>
 
   <script src="/js/monetization.js"></script>

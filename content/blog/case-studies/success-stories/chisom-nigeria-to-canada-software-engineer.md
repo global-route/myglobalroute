@@ -3,7 +3,7 @@ layout: blog-post.njk
 title: "How Chisom Got a Canadian Work Permit in 6 Months (Nigeria → Canada)"
 date: 2026-01-22
 updated: 2026-07-21
-author: "Global Route Editorial"
+author: "MyPathway2Global Editorial"
 category: "Case Studies"
 country: "Canada"
 keywords: "Nigeria to Canada visa, software engineer Canada, Express Entry success story"

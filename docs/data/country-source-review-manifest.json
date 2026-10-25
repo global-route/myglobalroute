@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "registryPath": "src/data/countries.json",
   "registryDatasetAsOf": "2026-09-05",
-  "countryCount": 26,
+  "countryCount": 27,
   "policy": "Tracks country-level source-anchor review only; does not verify pathway-specific eligibility, funds, costs, approval rates or timelines. Tool errors are not evidence a source is down. Human sign-off is required before freshness metadata advances.",
   "countries": [
     {
@@ -496,6 +496,25 @@
         "evidenceUrl": "https://ipc.gov.cz/en/",
         "outcome": "Old Ministry URL redirects to archive; current official Ministry of Interior portal found and registry anchor updated.",
         "nextReviewDue": "2026-11-10"
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "US",
+      "countryName": "United States",
+      "authority": "U.S. Citizenship and Immigration Services",
+      "registeredUrl": "https://www.uscis.gov/",
+      "registryRetrievedAt": "2026-10-25",
+      "review": {
+        "status": "pending",
+        "checkedAt": null,
+        "reviewer": null,
+        "method": null,
+        "observedTitle": null,
+        "observedUrl": null,
+        "evidenceUrl": null,
+        "outcome": "Not reviewed yet.",
+        "nextReviewDue": null
       },
       "pathwayClaimsVerified": false
     }

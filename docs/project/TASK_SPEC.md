@@ -24,7 +24,7 @@ This is the immediate task because the live deployment is blocked by a Cloudflar
 
 ### P0-S5-3 · Run production smoke
 **What:** `PRODUCTION_URL=https://vrenum.app node scripts/verify-deployed-site.js`  
-**Accept:** Script exits 0 — all country routes (26), pathway routes (52 publishable), data endpoints and static assets return 200 with correct content-type
+**Accept:** Script exits 0 — all country routes (26), pathway routes (55 publishable), data endpoints and static assets return 200 with correct content-type
 
 ### P0-S5-4 · Audit live security headers
 **What:** `curl -sI https://vrenum.app/` — check for CSP, X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy  
@@ -39,8 +39,34 @@ This is the immediate task because the live deployment is blocked by a Cloudflar
 **Accept:** `main.protected=true` confirmed via GitHub API or dashboard screenshot
 
 ### P0-S5-7 · Write P0 exit record and close Phase 0
-**What:** Create `docs/project/RELEASE_VERIFICATION_2026-10-15.md` with all gate results. Update ACTIVE_SPRINT, PHASE_STATUS, EXECUTION_ROADMAP to mark P0 complete.  
+**What:** Create `docs/project/RELEASE_VERIFICATION_<date>.md` with all gate results. Update ACTIVE_SPRINT, PHASE_STATUS, EXECUTION_ROADMAP to mark P0 complete.  
 **Accept:** All 7 P0-S5 tasks have evidence. Phase 0 marked complete in PHASE_STATUS.
+
+---
+
+## PRE-SPRINT REQUIRED TASKS
+
+All pre-sprint required tasks are complete. See `CHANGELOG.md` 2026-10-18 entries for detail.
+
+### Research-required pathway resolution
+- **REQ-DATA-1:** Close NZ-skilled umbrella — add `permanentBlocker` field (trivial)
+- **REQ-DATA-2:** Close RU-study + RU-work — add `permanentBlocker` with dated geopolitical rationale
+- **REQ-DATA-3:** AU-skilled — research subclasses 189/190/491, create 3 pathway records or formal blockers
+
+### Publishable pathways with zero requirements (18 pathways, 4 batches)
+- **REQ-DATA-4–6:** Batch A — CA-federal-skilled-worker, AU-student, IE-study
+- **REQ-DATA-7:** Batch B — NZ-smc-points-based, NZ-smc-skilled-work-experience, NZ-smc-trades-technician
+- **REQ-DATA-8:** Batch C — IT-study, IT-work, FI-work, AT-study, AT-rwr-other-key-workers, CH-study, CH-work
+- **REQ-DATA-9:** Batch D — KR-study, KR-work, CN-study, CN-work
+- **REQ-DATA-10:** Dedup AT-red-white-red vs AT-rwr-other-key-workers
+
+### Blog fact corrections (urgent — before any public traffic)
+- **REQ-BLOG-1:** Germany post — remove unsupported "62-68% African reality" approval rate claim
+- **REQ-BLOG-2:** Canada Express Entry post — remove unsupported "78-85% Nigerian reality" approval rate claim
+
+### Empty blog directories (13 empty, 10 priority tasks)
+- **REQ-BLOG-3–7:** Country audits — Canada, Italy, Portugal, UK, USA
+- **REQ-BLOG-8–10:** Rejection analysis (1 post), application guide (1 post), financial guide (1 post)
 
 ---
 
@@ -61,46 +87,27 @@ This is the immediate task because the live deployment is blocked by a Cloudflar
 **What:** For each of AU-skilled, NZ-skilled, RU-study, RU-work — either find high-confidence primary-source evidence that closes the gap, or write a formal exception record explaining why the pathway stays research_required indefinitely.  
 **Accept:** Each pathway has either been promoted (with evidence) or has a `permanentBlocker` field with a dated rationale. No pathway stays research_required by default.
 
-### P1-REQ-1 · Structured requirements — DE pathways (DE-study, DE-opportunity-card) [COMPLETE]
-**What:** Add evidence-backed requirement declarations for both DE pathways. Minimum fields: eligibility, financial-requirement, language-requirement (if applicable).  
-**Source:** DAAD, Make it in Germany, German missions  
-**Status:** Complete. Encoded `admission_offer`, `minimum_funds` (€1,091/month), and `minimum_points_score` (6 points) with evidence IDs and criteria.
+### P1-REQ-1 through P1-REQ-6 · Structured requirements — all pathways [COMPLETE]
+55/55 publishable pathways have requirements[]. 4 research_required all have permanentBlocker. 3 AU subclass pathways added (189/190/491). Total: 59 pathways.
 
-### P1-REQ-2 · Structured requirements — FR pathways (FR-study, FR-talent) [COMPLETE]
-**What:** Add declarations for both FR pathways.  
-**Source:** Campus France, French Ministry of Interior  
-**Status:** Complete. Encoded `admission_offer`, `minimum_funds` (€877.50/month), `job_offer`, and `minimum_annual_salary` (€59,373/year) with evidence IDs.
+### P1-ROUTE-1/2/3 · Route engine quality [COMPLETE]
+Engine returns `{ matches, alternatives, missingInput }`. Staleness detection (180-day threshold on requirement `effectiveDate`). Alternatives: up to 5 ineligible goal-type routes with blocker. Missing-input: honest prompt, no false matches. Inline requirements on result cards. Stale warning on cards where `stale: true`.
 
-### P1-REQ-3 · Structured requirements — JP pathways (JP-student, JP-engineer) [COMPLETE]
-**What:** Add declarations for both JP pathways.  
-**Source:** JASSO, METI, Japanese Embassy  
-**Status:** Complete. Encoded `admission_offer` and `job_offer` with matching official evidence records.
+---
 
-### P1-REQ-4 · Structured requirements — PT pathways (PT-study, PT-digital-nomad) [COMPLETE]
-**What:** Add declarations for both PT pathways.  
-**Source:** SEF/AIMA, Portuguese consulates  
-**Status:** Complete. Encoded `admission_offer` and `job_offer` declarations with evidence links.
+## UI/UX & DESIGN — Page completion and visual consistency
 
-### P1-REQ-5 · Structured requirements — ES pathways (ES-study, ES-digital-nomad) [COMPLETE]
-**What:** Add declarations for both ES pathways.  
-**Source:** Spanish Ministry of Foreign Affairs, Exteriores  
-**Status:** Complete. Encoded `admission_offer` and `job_offer` declarations with evidence links.
+### UI-0 · Foundation — canonical nav + fix broken pages [COMPLETE]
+All 5 broken/corrupt pages fixed. Nav standardised across all 14 static pages.
 
-### P1-REQ-6 · Structured requirements — remaining unstructured pathways [ACTIVE]
-**What:** Expand structured declarations to all remaining pathways without declarations. Batch by region: Nordics (NO, IS), Baltics (LT), Central Europe (CZ, PL, HU, MT), Asia (KR, CN), Oceania (AU-student, NZ-student), Americas (CA, GB remaining).  
-**Status:** Partially completed. Added declarations for NO (`NO-study`, `NO-work`), IS (`IS-study`, `IS-work`), LT (`LT-study`, `LT-work`), CZ (`CZ-study`, `CZ-work`), PL (`PL-study`, `PL-work`), HU (`HU-study`, `HU-work`), MT (`MT-study`, `MT-work`), and LU (`LU-study`, `LU-work`). Overall coverage stands at 49 declarations across 35 pathways (21 pathways remaining).
+### UI-1 · Page completion — content [COMPLETE]
+All 14 static pages have complete evidence-gated content. Student and professional playbooks rebuilt.
 
-### P1-ROUTE-1 · Stale/mismatched evidence behavior
-**What:** Route engine must surface a warning when a matched pathway has evidence older than its `reviewAfter` date. Add tests for: evidence overdue → recommendation includes staleness flag; evidence missing → route suppressed or flagged.  
-**Accept:** Tests cover overdue and missing evidence cases. Route engine does not silently serve stale data.
+### UI-2 · Visual design — CSS completion [COMPLETE]
+All page-specific layout classes added. Responsive breakpoints at 480px/768px/1024px for all new classes.
 
-### P1-ROUTE-2 · Alternatives and exemptions
-**What:** When a user doesn't meet a threshold (e.g. funds), the route engine should surface alternative pathways or note exemptions where evidence supports them.  
-**Accept:** At least 3 test cases: user below funds threshold → alternative route suggested; user meets exemption condition → exemption surfaced; no alternative exists → explicit no-match with reason.
-
-### P1-ROUTE-3 · Missing-input handling
-**What:** Route engine must handle incomplete user profiles gracefully — missing budget, missing qualification level, missing work experience.  
-**Accept:** Tests cover each missing-input case. Engine returns a safe partial result or explicit prompt, never a false match.
+### UI-3 · Accessibility + pre-launch [HEADING HIERARCHY VERIFIED; LIVE CHECKS OPEN]
+h1→h2→h3 correct on all rebuilt pages. ARIA audit, colour contrast (WCAG AA) and keyboard navigation require a live browser session.
 
 ---
 

@@ -307,40 +307,23 @@ class BlogLoader {
   }
 
   // Handle newsletter signup
-  async handleNewsletterSignup(e) {
+  // No live provider is configured. The form is present for future use only.
+  handleNewsletterSignup(e) {
     e.preventDefault();
     const form = e.target;
-    const email = form.querySelector('input[type="email"]').value;
     const button = form.querySelector('button');
-
     button.disabled = true;
-    button.textContent = 'Subscribing...';
-
-    try {
-      // Track analytics
-      if (typeof trackNewsletterSignup !== 'undefined') {
-        trackNewsletterSignup(email);
-      }
-
-      // Mock API call (replace with actual Mailchimp/service)
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      button.textContent = '✅ Subscribed!';
-      button.style.backgroundColor = '#22c55e';
-      
-      setTimeout(() => {
-        form.reset();
-        button.disabled = false;
-        button.textContent = 'Subscribe';
-        button.style.backgroundColor = '';
-      }, 2000);
-
-      console.log(`📧 Newsletter signup: ${email}`);
-    } catch (error) {
-      console.error('Newsletter signup error:', error);
-      button.textContent = 'Error - Try again';
+    button.textContent = 'Not yet available';
+    const note = document.createElement('p');
+    note.className = 'evidence-note';
+    note.textContent = 'Newsletter sign-up is not yet active. No data has been submitted.';
+    form.after(note);
+    setTimeout(() => {
       button.disabled = false;
-    }
+      button.textContent = 'Subscribe';
+      note.remove();
+      form.reset();
+    }, 4000);
   }
 
   // Calculate read time (words / 200 = minutes)

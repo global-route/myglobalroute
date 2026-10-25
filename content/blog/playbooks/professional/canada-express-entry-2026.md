@@ -3,28 +3,29 @@ layout: blog-post.njk
 title: "Canada Express Entry: The Complete 2026 Guide for Nigerians"
 date: 2026-08-18
 updated: 2026-08-18
-author: "Global Route Editorial"
+author: "MyPathway2Global Editorial"
 category: "Professional Playbooks"
 country: "Canada"
 keywords: "Canada Express Entry, Express Entry from Nigeria, CRS score, ITA, Canadian immigration, work permit"
 featured: true
 image: "/public/blog/images/canada-express-entry-2026.jpg"
 readTime: "16 min"
-excerpt: "Official approval rate 92%, Nigerian reality 78-85%. Here's exactly how Express Entry works, what CRS score you need, and how to guarantee an Invitation to Apply."
+excerpt: "Canada Express Entry is an invitation-based system for skilled workers — here's exactly how CRS scores work, what cut-offs look like, and how to maximise your chances of an ITA."
 ---
 
 # Canada Express Entry: The Complete 2026 Guide for Nigerians
 
 ## Quick Summary
 
-- **Official approval rate:** 92% (global average for Express Entry)
-- **Nigerian reality:** 78-85% for qualified candidates
+- **System type:** Invitation-based — you enter a pool, Canada draws from it
 - **Processing time:** 6 months (from ITA to PR visa)
-- **CRS score needed:** 480-520 (2026 draw cut-offs)
-- **True cost:** CAD 2,500-3,500 (₦1.3M-₦1.9M)
-- **Sweet spot:** Post-secondary education + 2+ years work experience + English/French = ITA within 6 months
+- **CRS score cut-offs:** 480–520 range in recent 2026 draws (varies by draw type)
+- **True cost:** CAD 2,500–3,500 (₦1.3M–₦1.9M)
+- **Sweet spot:** Post-secondary education + 2+ years work experience + strong English/French = competitive CRS score
 
-**Bottom line:** Express Entry is Canada's **fastest pathway to permanent residency**. If you have education and work experience, you can get PR in under 1 year from your first application.
+**Bottom line:** Express Entry is Canada's **fastest pathway to permanent residency**. The key metric is your CRS score relative to draw cut-offs — not an approval rate. If you receive an ITA and submit a complete application, processing is straightforward.
+
+**lastFactChecked:** 2026-10-18
 
 ---
 

@@ -3,7 +3,7 @@ layout: blog-post.njk
 title: "UK Masters True Cost 2026: What They Don't Tell You About Studying in Britain"
 date: 2026-08-18
 updated: 2026-08-18
-author: "Global Route Editorial"
+author: "MyPathway2Global Editorial"
 category: "Student Playbooks"
 country: "United Kingdom"
 keywords: "UK Masters cost, study in UK from Nigeria, UK tuition fees, living costs London, UK student visa"

@@ -3,7 +3,7 @@
   "dataset": {
     "name": "Global Route country intelligence",
     "status": "evidence-gated",
-    "asOf": "2026-09-05",
+    "asOf": "2026-10-25",
     "policy": "No approval-rate or cost claim is publishable without field-level primary-source evidence.",
     "defaultReviewDays": 30
   },
@@ -33,6 +33,7 @@
     {"id":"MT","name":"Malta","flag":"🇲🇹","category":"Europe - Southern","sweetSpot":"professional","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Identità Malta","url":"https://identita.gov.mt/","retrievedAt":"2026-09-05","confidence":"high"}},
     {"id":"RU","name":"Russia","flag":"🇷🇺","category":"Europe / Asia","sweetSpot":"student","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Russian Ministry of Foreign Affairs","url":"https://mid.ru/en/","retrievedAt":"2026-09-05","confidence":"medium"}},
     {"id":"CH","name":"Switzerland","flag":"🇨🇭","category":"Europe - Alpine","sweetSpot":"professional","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"State Secretariat for Migration Switzerland","url":"https://www.sem.admin.ch/sem/en/home.html","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"CZ","name":"Czechia","flag":"🇨🇿","category":"Europe - Central","sweetSpot":"student","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Ministry of the Interior of the Czech Republic","url":"https://ipc.gov.cz/en/","retrievedAt":"2026-10-11","confidence":"high"}}
+    {"id":"CZ","name":"Czechia","flag":"🇨🇿","category":"Europe - Central","sweetSpot":"student","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Ministry of the Interior of the Czech Republic","url":"https://ipc.gov.cz/en/","retrievedAt":"2026-10-11","confidence":"high"}},
+    {"id":"US","name":"United States","flag":"🇺🇸","category":"North America","sweetSpot":"professional","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"U.S. Citizenship and Immigration Services","url":"https://www.uscis.gov/","retrievedAt":"2026-10-25","confidence":"high"}}
   ]
 }

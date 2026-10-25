@@ -12,7 +12,7 @@
   },
   "routes": [
     {
-      "pattern": "vrenum.app",
+      "pattern": "mypathway2global.org.uk",
       "custom_domain": true
     }
   ]

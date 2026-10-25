@@ -4,136 +4,184 @@
 <html lang="en">
 <head>
   <script async src="https://www.sabilytics.com/script.js" data-site="atsngkb78nmt" data-domain="org.uk"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} | Global Route</title>
-    <meta name="description" content="{{ excerpt or content | excerpt }}">
-    <meta name="keywords" content="{{ keywords }}">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="{{ title }}">
-    <meta property="og:description" content="{{ excerpt or content | excerpt }}">
-    <meta property="og:image" content="{{ image }}">
-    <meta property="og:type" content="article">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ title }}">
-    <meta name="twitter:description" content="{{ excerpt or content | excerpt }}">
-    <meta name="twitter:image" content="{{ image }}">
-    <link rel="canonical" href="https://mypathway2global.org.uk{{ page.url }}">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "{{ title }}",
-      "description": "{{ excerpt }}",
-      "datePublished": "{{ date }}",
-      "dateModified": "{{ date }}",
-      "author": {
-        "@type": "Organization",
-        "name": "Global Route Research Team",
-        "url": "https://mypathway2global.org.uk/pages/about"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Global Route",
-        "url": "https://mypathway2global.org.uk"
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://mypathway2global.org.uk{{ page.url }}"
-      }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | MyPathway2Global</title>
+  <meta name="description" content="{{ excerpt or content | excerpt }}">
+  <meta name="keywords" content="{{ keywords }}">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ excerpt or content | excerpt }}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mypathway2global.org.uk{{ page.url }}">
+  <meta property="og:site_name" content="MyPathway2Global">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ excerpt or content | excerpt }}">
+  
+  <link rel="canonical" href="https://mypathway2global.org.uk{{ page.url }}">
+  
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ title }}",
+    "description": "{{ excerpt }}",
+    "datePublished": "{{ date }}",
+    "dateModified": "{{ updated or date }}",
+    "author": {
+      "@type": "Organization",
+      "name": "MyPathway2Global"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "MyPathway2Global",
+      "url": "https://mypathway2global.org.uk"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mypathway2global.org.uk{{ page.url }}"
     }
-    </script>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/blog-post.css">
+  }
+  </script>
+  
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mypathway2global.org.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mypathway2global.org.uk/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "{{ title }}" }
+    ]
+  }
+  </script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css?v=3">
+  <link rel="stylesheet" href="/css/enhancements.css?v=3">
+  <link rel="stylesheet" href="/css/blog-post.css?v=3">
 </head>
-<body>
-    <header class="site-header">
-        <nav class="container">
-            <a href="/" class="logo">Global Route</a>
-            <ul class="nav-menu">
-                <li><a href="/pages/countries.html">Countries</a></li>
-                <li><a href="/pages/blog.html" class="active">Blog</a></li>
-                <li><a href="/pages/calculator.html">Calculator</a></li>
-                <li><a href="/pages/about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
+<body data-page-type="blog-post">
+  <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="/" class="logo-link"><span class="logo-text">MyPathway2Global</span></a>
+      </div>
+      <nav class="navigation" aria-label="Primary">
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/countries.html">Countries</a></li>
+          <li><a href="/pages/calculator.html">Calculator</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/pages/about.html">About</a></li>
+          <li><a href="/pages/find-mypathway.html" class="nav-cta">Find MyPathway</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main class="blog-post-page">
-        <article class="blog-post container">
-            <header class="post-header">
-                <span class="category-badge">{{ category }}</span>
-                <h1>{{ title }}</h1>
-                <div class="post-meta">
-                    <span class="author">{{ author or "Global Route Editorial" }}</span>
-                    <span class="separator">•</span>
-                    <time datetime="{{ date }}">{{ date | readableDate }}</time>
-                    <span class="separator">•</span>
-                    <span class="read-time">{{ content | readingTime }} min read</span>
-                </div>
-                {% if updated %}
-                <div class="updated-badge">
-                    Updated: {{ updated | readableDate }}
-                </div>
-                {% endif %}
-            </header>
+  <!-- Article -->
+  <main id="main">
+    <article class="article">
+      
+      <!-- Article Header -->
+      <header class="article-header">
+        <p class="article-meta">
+          <a href="/blog/">{{ category }}</a>
+          <span class="meta-sep">/</span>
+          <time datetime="{{ date }}">{{ date | readableDate }}</time>
+          <span class="meta-sep">/</span>
+          <span>{{ readTime or (content | readingTime) }} min read</span>
+        </p>
+        <h1>{{ title }}</h1>
+        {% if excerpt %}
+        <p class="article-lead">{{ excerpt }}</p>
+        {% endif %}
+      </header>
 
-            {% if image %}
-            <div class="featured-image">
-                <img src="{{ image }}" alt="{{ title }}">
-            </div>
-            {% endif %}
+      <!-- Article Body -->
+      <div class="article-body" id="article-content">
+        {{ content | safe }}
+      </div>
 
-            <div class="post-content">
-                {{ content | safe }}
-            </div>
-
-            <footer class="post-footer">
-                <div class="share-buttons">
-                    <h4>Share this article:</h4>
-                    <a href="https://twitter.com/intent/tweet?text={{ title }}&url={{ page.url }}" target="_blank" class="btn-share twitter">Twitter</a>
-                    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url }}" target="_blank" class="btn-share linkedin">LinkedIn</a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url }}" target="_blank" class="btn-share facebook">Facebook</a>
-                </div>
-
-                <div class="newsletter-cta">
-                    <h3>Get more migration insights</h3>
-                    <p>Join 1,000+ readers getting honest visa strategies weekly.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email address" required>
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
-                    </form>
-                </div>
-            </footer>
-        </article>
-
-        <aside class="sidebar">
-            <div class="sidebar-widget">
-                <h4>Categories</h4>
-                <ul class="category-list">
-                    <li><a href="/blog/category/country-audits.html">Country Audits</a></li>
-                    <li><a href="/blog/category/student-playbooks.html">Student Playbooks</a></li>
-                    <li><a href="/blog/category/professional-playbooks.html">Professional Playbooks</a></li>
-                    <li><a href="/blog/category/business-playbooks.html">Business Playbooks</a></li>
-                    <li><a href="/blog/category/case-studies.html">Case Studies</a></li>
-                    <li><a href="/blog/category/policy-updates.html">Policy Updates</a></li>
-                </ul>
-            </div>
-        </aside>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 Global Route. Radical transparency for African global mobility.</p>
-            <ul class="footer-links">
-                <li><a href="/pages/about.html">About</a></li>
-                <li><a href="/pages/contact.html">Contact</a></li>
-                <li><a href="/pages/blog.html">Blog</a></li>
-            </ul>
+      <!-- Article Footer -->
+      <footer class="article-end">
+        {% if updated %}
+        <p class="article-updated">Last updated {{ updated | readableDate }}</p>
+        {% else %}
+        <p class="article-updated">Published {{ date | readableDate }}</p>
+        {% endif %}
+        <p class="article-feedback">Found an error or have a tip? <a href="/pages/contact.html">Let us know</a></p>
+        
+        <div class="article-share">
+          <span>Share:</span>
+          <a href="https://twitter.com/intent/tweet?text={{ title | urlencode }}&url=https://mypathway2global.org.uk{{ page.url }}" target="_blank" rel="noopener">Twitter</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://mypathway2global.org.uk{{ page.url }}" target="_blank" rel="noopener">LinkedIn</a>
         </div>
-    </footer>
+      </footer>
+
+    </article>
+  </main>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer-bar">
+    <p>General information only — not legal or immigration advice. Always verify current requirements with the relevant authority before paying fees or submitting an application. <a href="/pages/disclaimer.html">Full disclaimer →</a></p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>MyPathway2Global</h4>
+        <p>Evidence-gated global mobility intelligence.</p>
+        <p style="font-size:0.78rem;opacity:0.7;margin-top:0.5rem;">Independent platform. Not affiliated with any government.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/pages/countries.html">Countries</a></li>
+          <li><a href="/pages/find-mypathway.html">Find MyPathway</a></li>
+          <li><a href="/pages/calculator.html">Calculator</a></li>
+          <li><a href="/blog/">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Guides</h4>
+        <ul>
+          <li><a href="/pages/student-playbook.html">Student</a></li>
+          <li><a href="/pages/professional-playbook.html">Professional</a></li>
+          <li><a href="/pages/business-playbook.html">Business</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Trust</h4>
+        <ul>
+          <li><a href="/pages/privacy.html">Privacy</a></li>
+          <li><a href="/pages/disclaimer.html">Disclaimer</a></li>
+          <li><a href="/pages/terms.html">Terms</a></li>
+          <li><a href="/pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 MyPathway2Global. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
 </body>
 </html>

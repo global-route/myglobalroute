@@ -1,7 +1,7 @@
 # Global Route — Master Phase & Sprint Delivery Plan
 
 **Status:** Active delivery map  
-**Baseline:** 14 September 2026 | **Reconciled:** 11 October 2026 | **Last fully verified same-SHA CI checkpoint:** `fc3c06a0a6078df4473d2f09015391cff09eef3f`  
+**Baseline:** 14 September 2026 | **Reconciled:** 2026-10-18 (session 2) | **Last fully verified same-SHA CI checkpoint:** `fc3c06a0a6078df4473d2f09015391cff09eef3f`  
 **Scope:** Current Phase 0 through final Phase 6 / Scale exit
 
 This is the master delivery sequence for the remaining lifecycle. It preserves the original product blueprint while converting every phase into explicit delivery sprints with dependencies and exit gates.
@@ -35,7 +35,7 @@ The plan can gain additional sprints if a phase discovers material work that can
 
 **Current phase.** Goal: establish a trustworthy, reproducible and deployable production baseline.
 
-**Execution checkpoint (2026-10-11):** P0-S3 and source-tree P0-S4 are verified; P0-S5 is externally blocked. The next executable sprint is P1-S1 country source review, with all 26 anchors currently unchecked. See `docs/sprints/ACTIVE_SPRINT.md` and `docs/sprints/NEXT_SPRINT_P1_DATA_REFRESH.md`. Do not advance to phase exit based on CI alone.
+**Execution checkpoint (2026-10-11):** P0-S3 and source-tree P0-S4 are verified; P0-S5 is externally blocked. P1-S1 manifest is complete; 25/26 anchors reviewed; human sign-off and Russia jurisdiction confirmation remain open. See `docs/sprints/ACTIVE_SPRINT.md`. Do not advance to phase exit based on CI alone.
 
 ### Sprint P0-S1 — Exact Pathway Closure — COMPLETE WITH BLOCKED CANDIDATES DOCUMENTED
 - AU-189 financial/material verification
@@ -356,18 +356,5 @@ The plan can gain additional sprints if a phase discovers material work that can
 The current sprint is P0-S5 — Deployment Verification & Phase 0 Exit, active and externally blocked. P0-S1 through P0-S4 are completed/verified only within their documented scope; Phase 0 remains open until P0-S5 exits. No phase advances merely because later work has been planned.
 
 
-## Current status reconciliation — 2026-10-11
+> Verification history and CI checkpoint records are in `CHANGELOG.md`. Use `PHASE_STATUS.md` for current phase status.
 
-Current head 1284684c18a7fa311cd62c52875b38d62a354a0b: Quality Gate PASS (17 suites / 113 tests), Lint PASS, Browser Smoke PASS. P0-S1 documentation/validation objective is complete with four promoted routes and two explicitly blocked exact candidates (Australia subclass 189 and Italy Flussi); those blocked routes are not publishable. P0-S2 audit is complete at current count (4 research-required canonical pathways); source maintenance continues. P0-S3 and source-tree P0-S4 verified. P0-S5 and Phase 0 remain open. Next independent sprint: NEXT_SPRINT_P1_DATA_REFRESH.md.
-
-
-## Current verified delivery checkpoint — 2026-10-11
-
-- Last fully verified same-SHA CI checkpoint: `fc3c06a0a6078df4473d2f09015391cff09eef3f`; implementation baseline: `e7ccd592b703d62867267ddb5573b73a2d2bc0ea`.
-- Quality Gate PASS: https://github.com/global-route/myglobalroute/actions/runs/38119296014 (17 suites / 113 tests; 0 dependency vulnerabilities; data validation, build integrity and SEO/A11y checks passed).
-- Lint PASS: https://github.com/global-route/myglobalroute/actions/runs/38119295995; Browser Smoke PASS: https://github.com/global-route/myglobalroute/actions/runs/38119295980.
-- P0-S1: promotion decisions closed for the current candidate set; two explicit candidates remain blocked. Do not infer all future exact subroute work is complete.
-- P0-S2: evidence-gap audit complete; evidence maintenance remains ongoing.
-- P0-S3 and source-tree P0-S4: verified. P0-S5 and Phase 0 exit remain blocked.
-- P1-S1 is the next executable data sprint. All 26 country anchors remain unchecked in its source-review checklist; country metadata `asOf=2026-09-05` remains unchanged.
-- Phase 1 and Phase 2 remain open; later phases remain partial/deferred as recorded in `docs/project/PHASE_STATUS.md`.

@@ -3,7 +3,7 @@ layout: blog-post.njk
 title: "Germany Chancenkarte Visa 2026: The Easiest Path to German PR for African Professionals"
 date: 2026-08-18
 updated: 2026-08-18
-author: "Global Route Editorial"
+author: "MyPathway2Global Editorial"
 category: "Professional Playbooks"
 country: "Germany"
 keywords: "Germany Chancenkarte, Opportunity Card Germany, German work visa, Germany professional visa, Green Card Germany"

@@ -9,7 +9,7 @@
   const AD_SLOTS = Object.freeze({
     ad_article_top: { pageTypes: ['blog', 'guide'], level: 'high' },
     ad_article_mid: { pageTypes: ['blog', 'guide'], level: 'high' },
-    ad_article_end: { pageTypes: ['blog', 'guide'], level: 'high' },
+    ad_article_end: { pageTypes: ['blog', 'guide', 'student-playbook', 'professional-playbook', 'business-playbook'], level: 'high' },
     ad_country_mid: { pageTypes: ['country'], level: 'medium' },
     ad_pathway_after_core: { pageTypes: ['pathway'], level: 'low' },
     ad_calculator_result: { pageTypes: ['calculator'], level: 'low' },

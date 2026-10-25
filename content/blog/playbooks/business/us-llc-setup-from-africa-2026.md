@@ -3,7 +3,7 @@ layout: blog-post.njk
 title: "How to Form a US LLC from Nigeria in 5 Minutes (2026 Guide)"
 date: 2026-01-20
 updated: 2026-07-21
-author: "Global Route Editorial"
+author: "MyPathway2Global Editorial"
 category: "Business Playbooks"
 country: "USA"
 keywords: "US LLC from Nigeria, form US company Africa, Stripe Atlas Nigeria"

@@ -161,24 +161,17 @@ class CategoryArchiveLoader {
     const form = e.target;
     const button = form.querySelector('button');
     button.disabled = true;
-    button.textContent = 'Subscribing...';
-
-    try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      button.textContent = '✅ Subscribed!';
-      button.style.backgroundColor = '#22c55e';
-      
-      setTimeout(() => {
-        form.reset();
-        button.disabled = false;
-        button.textContent = 'Subscribe';
-        button.style.backgroundColor = '';
-      }, 2000);
-    } catch (error) {
-      console.error('Newsletter signup error:', error);
-      button.textContent = 'Error - Try again';
+    button.textContent = 'Not yet available';
+    const note = document.createElement('p');
+    note.className = 'evidence-note';
+    note.textContent = 'Newsletter sign-up is not yet active. No data has been submitted.';
+    form.after(note);
+    setTimeout(() => {
       button.disabled = false;
-    }
+      button.textContent = 'Subscribe';
+      note.remove();
+      form.reset();
+    }, 4000);
   }
 
   showError(message) {

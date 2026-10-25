@@ -65,3 +65,6 @@ coverage/
 .venv/
 venv/
 .DS_Store
+log.md
+test-results/
+playwright-report/

@@ -33,6 +33,17 @@ const GlobalRoute = (() => {
     const data = await response.json();
     if (!Array.isArray(data.countries)) throw new Error('Invalid countries data: countries must be an array');
     appState.countries = data.countries;
+    // CTY-8: pre-compute pathway counts per country
+    try {
+      const pw = await fetch('/data/pathways.json', { headers: { Accept: 'application/json' } });
+      if (pw.ok) {
+        const pwData = await pw.json();
+        appState.pathwayCounts = {};
+        (pwData.pathways || []).forEach(p => {
+          appState.pathwayCounts[p.countryId] = (appState.pathwayCounts[p.countryId] || 0) + 1;
+        });
+      }
+    } catch (_) { appState.pathwayCounts = {}; }
     return data;
   };
 
@@ -40,8 +51,33 @@ const GlobalRoute = (() => {
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     if (!navToggle || !navMenu) return;
-    navToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
-    navMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navMenu.classList.remove('active')));
+
+    // NAV-7: backdrop element
+    const backdrop = document.createElement('div');
+    backdrop.className = 'nav-backdrop';
+    document.body.appendChild(backdrop);
+
+    const openNav = () => {
+      navMenu.classList.add('active');
+      navToggle.classList.add('active');
+      backdrop.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      navToggle.setAttribute('aria-expanded', 'true');
+    };
+
+    const closeNav = () => {
+      navMenu.classList.remove('active');
+      navToggle.classList.remove('active');
+      backdrop.classList.remove('active');
+      document.body.style.overflow = '';
+      navToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.addEventListener('click', () => navMenu.classList.contains('active') ? closeNav() : openNav());
+    backdrop.addEventListener('click', closeNav);
+    navMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNav));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
     // Active state: match current path to nav links
     const path = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
     navMenu.querySelectorAll('a').forEach(link => {
@@ -65,6 +101,41 @@ const GlobalRoute = (() => {
     const groupFilter = document.querySelector('#group-filter');
     const budgetFilter = document.querySelector('#budget-filter');
     const searchInput = document.querySelector('input[type="search"]');
+
+    // CTY-7: Pill filter tabs — render from select options, sync both ways
+    if (groupFilter) {
+      const pillContainer = document.createElement('div');
+      pillContainer.className = 'region-pills';
+      const allPill = document.createElement('button');
+      allPill.type = 'button';
+      allPill.className = 'region-pill active';
+      allPill.textContent = 'All Regions';
+      allPill.dataset.value = '';
+      pillContainer.appendChild(allPill);
+      Array.from(groupFilter.options).slice(1).forEach(opt => {
+        const pill = document.createElement('button');
+        pill.type = 'button';
+        pill.className = 'region-pill';
+        pill.textContent = opt.text;
+        pill.dataset.value = opt.value;
+        pillContainer.appendChild(pill);
+      });
+      groupFilter.closest('.filter-group')?.classList.add('region-filter-group');
+      groupFilter.closest('.filter-controls')?.insertAdjacentElement('afterbegin', pillContainer);
+      pillContainer.addEventListener('click', e => {
+        const pill = e.target.closest('.region-pill');
+        if (!pill) return;
+        pillContainer.querySelectorAll('.region-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        groupFilter.value = pill.dataset.value;
+        render();
+      });
+      groupFilter.addEventListener('change', () => {
+        pillContainer.querySelectorAll('.region-pill').forEach(p => {
+          p.classList.toggle('active', p.dataset.value === groupFilter.value);
+        });
+      });
+    }
 
     // Compare state
     const compareSet = new Set();
@@ -138,13 +209,22 @@ const GlobalRoute = (() => {
             : '<span style="color:var(--color-neutral-400)">Not published</span>';
           const statusColour = country.dataStatus === 'publishable' ? 'var(--color-secondary)' : 'var(--color-warning)';
           const isChecked = compareSet.has(country.id);
+          // CTY-8: pathway count badge
+          const pathwayCount = appState.pathwayCounts?.[country.id] || 0;
+          const pathwayBadge = pathwayCount
+            ? `<span class="badge-pathway-count">${pathwayCount} pathway${pathwayCount !== 1 ? 's' : ''}</span>`
+            : '';
+          // CTY-9: status badge
+          const statusBadge = country.dataStatus === 'publishable'
+            ? '<span class="badge-status-verified">✓ Verified</span>'
+            : '<span class="badge-status-pending">Research required</span>';
           return `
           <article class="country-card" id="${escapeHtml(country.id)}">
             <div class="country-card-header">
               <span style="font-size:1.75rem;line-height:1;" aria-hidden="true">${escapeHtml(country.flag)}</span>
               <h3 style="margin-bottom:0;"><a href="/pages/countries/${encodeURIComponent(country.id)}/">${escapeHtml(country.name)}</a></h3>
-              <span style="margin-left:auto;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:${statusColour};">${escapeHtml(country.dataStatus || 'unknown')}</span>
             </div>
+            <div class="country-card-badges">${pathwayBadge}${statusBadge}</div>
             <p style="font-size:0.875rem;color:var(--color-neutral-600);margin:0.5rem 0 0.75rem;">${escapeHtml(country.summary || 'Country pathway intelligence is being verified.')}</p>
             <dl style="display:grid;grid-template-columns:auto 1fr;gap:0.2rem 0.75rem;font-size:0.8rem;margin:0;">
               <dt style="color:var(--color-neutral-500);font-weight:600;">African rate</dt><dd style="margin:0;">${rate}</dd>
@@ -194,6 +274,9 @@ const GlobalRoute = (() => {
         comparePanel?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     }
+
+    // MX-2: skeleton shimmer before first data render
+    if (grid) grid.innerHTML = Array(6).fill('<div class="skeleton skeleton-card"></div>').join('');
 
     render();
   };
@@ -276,3 +359,28 @@ const GlobalRoute = (() => {
 
 if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => GlobalRoute.init());
 else GlobalRoute.init();
+
+// MX-1: Scroll-reveal observer
+(function () {
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('revealed'));
+    return;
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+  // Re-observe any dynamically added elements
+  new MutationObserver(mutations => {
+    mutations.forEach(m => m.addedNodes.forEach(node => {
+      if (node.nodeType !== 1) return;
+      if (node.hasAttribute?.('data-reveal')) observer.observe(node);
+      node.querySelectorAll?.('[data-reveal]').forEach(el => observer.observe(el));
+    }));
+  }).observe(document.body, { childList: true, subtree: true });
+}());
