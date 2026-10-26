@@ -56,7 +56,7 @@ It's a **regional scholarship program** run by Italian local governments to ensu
 - ✅ Transport pass (some regions)
 
 **What makes it special?**  
-It's **means-tested**, not merit-based. If your family income is low, you qualify—even with average grades.
+It's **means-tested**, not merit-based. If your family income is low, you qualify-even with average grades.
 
 ---
 
@@ -88,7 +88,7 @@ Your family must earn **below the ISEE threshold**:
 | Master's Year 1 | Bachelor's degree (2.5+/4.0) | N/A |
 | Master's Year 2 | Pass 70% of credits | 25-40 CFU |
 
-**Key insight:** You don't need a **high GPA**—just need to **pass most courses**. This is achievable for serious students.
+**Key insight:** You don't need a **high GPA**-just need to **pass most courses**. This is achievable for serious students.
 
 ---
 
@@ -382,13 +382,13 @@ DSU is **partially competitive**. You're ranked based on:
 - Wanted to study Computer Science
 
 **DSU experience:**
-"I applied to Bologna in March 2024, got admission in June. Applied for DSU in August with my family income docs. In October, I saw my name on the ranking list—I got it!
+"I applied to Bologna in March 2024, got admission in June. Applied for DSU in August with my family income docs. In October, I saw my name on the ranking list-I got it!
 
-I moved to Bologna in September 2025. The university gave me a dorm room (I share with an Italian girl). Every day, I eat breakfast, lunch, and dinner free at the canteen. The food is good—pasta, rice, vegetables, meat.
+I moved to Bologna in September 2025. The university gave me a dorm room (I share with an Italian girl). Every day, I eat breakfast, lunch, and dinner free at the canteen. The food is good-pasta, rice, vegetables, meat.
 
 And they pay me €550/month! I save €300/month and send it home to help my family. I've saved €3,600 so far.
 
-I'm now in my 2nd year. I passed all my exams (got B's and C's, not straight A's). I'm learning Italian—taking free classes at the university. By next year, I'll speak fluent Italian.
+I'm now in my 2nd year. I passed all my exams (got B's and C's, not straight A's). I'm learning Italian-taking free classes at the university. By next year, I'll speak fluent Italian.
 
 **Total I've spent:** Maybe €2,000 for flights and personal stuff. Everything else is free.
 
@@ -404,16 +404,16 @@ I'm now in my 2nd year. I passed all my exams (got B's and C's, not straight A's
 - Father civil servant, mother trader
 
 **DSU experience:**
-"I found out about DSU from a Reddit post in 2023. I thought it was too good to be true. I applied to University of Pisa—got in. Applied for DSU with my dad's salary slip and my mom's sworn affidavit (she's a trader, no official income).
+"I found out about DSU from a Reddit post in 2023. I thought it was too good to be true. I applied to University of Pisa-got in. Applied for DSU with my dad's salary slip and my mom's sworn affidavit (she's a trader, no official income).
 
 In October 2024, I got the scholarship. They gave me:
 - Free accommodation (nice dorm, my own room!)
 - Free meals (I eat 3 times daily for free)
 - €450/month cash
 
-I use the money for my phone, clothes, and I save. I've been here 2 years now—graduating in 2027. After graduation, I can work in Italy (they give you 1 year to find a job).
+I use the money for my phone, clothes, and I save. I've been here 2 years now-graduating in 2027. After graduation, I can work in Italy (they give you 1 year to find a job).
 
-**Best part:** I'm learning Italian. I can now speak conversational Italian—helps me make friends and get part-time jobs (I work weekends at a cafe, earn extra €400/month).
+**Best part:** I'm learning Italian. I can now speak conversational Italian-helps me make friends and get part-time jobs (I work weekends at a cafe, earn extra €400/month).
 
 **Advice:** Don't sleep on Italy. Everyone talks about Germany and Canada. Italy is the hidden gem."
 
@@ -423,7 +423,7 @@ I use the money for my phone, clothes, and I save. I've been here 2 years now—
 
 ### Pros ✅
 
-1. **Covers EVERYTHING:** Tuition, housing, food, cash—no gaps
+1. **Covers EVERYTHING:** Tuition, housing, food, cash-no gaps
 2. **Low barrier:** Need low income, not high grades
 3. **Cash stipend:** You get paid while studying
 4. **No upfront cost:** Unlike Germany (blocked account), Italy has no huge upfront requirement
@@ -519,6 +519,16 @@ I use the money for my phone, clothes, and I save. I've been here 2 years now—
 
 ---
 
+## Watch: What the DSU Scholarship Actually Covers in Italy
+
+<div class="video-embed">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/1Pi8ePezFMU" title="Italy DSU Scholarship Real Breakdown" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+*Real breakdown of DSU benefits - tuition, accommodation, meals and stipend*
+
+---
+
 ## Resources
 
 ### Official Sources
@@ -541,7 +551,7 @@ I use the money for my phone, clothes, and I save. I've been here 2 years now—
 
 ## Final Thoughts
 
-Italy DSU is the **closest thing to a "free university" for African students**—IF you qualify.
+Italy DSU is the **closest thing to a "free university" for African students**-IF you qualify.
 
 **The numbers:**
 - UK: £50,000+ over 2 years

@@ -25,7 +25,7 @@ excerpt: "Access Stripe, Mercury Bank, and global payments without relocating. H
 - **Maintenance:** $50-$800/year (varies by state)
 - **Who needs this:** Freelancers, digital marketers, SaaS founders, remote workers
 
-**Bottom line:** A US LLC gives Nigerian entrepreneurs access to global payment systems and business opportunities—without needing a visa or stepping foot in America.
+**Bottom line:** A US LLC gives Nigerian entrepreneurs access to global payment systems and business opportunities-without needing a visa or stepping foot in America.
 
 ---
 
@@ -526,6 +526,16 @@ Even if you owe $0 tax, you must file **Form 5472** annually.
 - Customer trust increased (US company)
 
 **Revenue:** Grew from $2K/month → $12K/month in 9 months
+
+---
+
+## Watch: How to Open a US LLC as a Non-Resident
+
+<div class="video-embed">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/HI-NjzZHGIQ" title="US LLC Formation for Non-Residents" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+*Step-by-step guide to forming a US LLC as a foreign national - state selection, EIN and banking*
 
 ---
 

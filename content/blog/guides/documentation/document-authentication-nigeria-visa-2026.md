@@ -32,7 +32,7 @@ Document authentication is one of the most common causes of visa delays and reje
 
 ### What it is
 
-An apostille is a certificate attached to a document that verifies the authenticity of the signature or seal of the Nigerian official who signed or stamped it. It does not verify the content of the document — only that the signature/seal is genuine.
+An apostille is a certificate attached to a document that verifies the authenticity of the signature or seal of the Nigerian official who signed or stamped it. It does not verify the content of the document - only that the signature/seal is genuine.
 
 Nigeria is a member of the Hague Apostille Convention. This means Nigerian documents with an apostille are accepted in all other Hague Convention member countries without further legalisation.
 
@@ -51,7 +51,7 @@ The Federal Ministry of Foreign Affairs (MFA) in Abuja issues apostilles for Nig
 **Process:**
 1. Obtain the original document (or a certified true copy from the issuing authority)
 2. Take it to the MFA Abuja (or a state office where available)
-3. Pay the apostille fee (confirm current fee at the MFA — fees change periodically)
+3. Pay the apostille fee (confirm current fee at the MFA - fees change periodically)
 4. Collect the apostilled document (same day or next day in most cases)
 
 **MFA contact:** Ministry of Foreign Affairs, Maputo Street, Wuse Zone 3, Abuja.
@@ -75,16 +75,16 @@ A sworn translation is a translation of a document into another language, certif
 - **Germany:** All non-German documents submitted with a visa application must be accompanied by a certified German translation. The translator must be recognised by a German court (vereidigter Übersetzer).
 - **France:** Documents in languages other than French must be translated by a translator certified by a French court of appeal.
 - **Italy:** Documents must be translated into Italian and legalised at the Italian embassy.
-- **Austria, Spain, Portugal:** Similar requirements — certified translation into the target language.
+- **Austria, Spain, Portugal:** Similar requirements - certified translation into the target language.
 
 ### How to get a sworn translation for Germany
 
 You need a translator who is certified (vereidigt) by a German court. There are two options:
 
-**Option A — Use a certified translator in Nigeria**
+**Option A - Use a certified translator in Nigeria**
 Some translators in Lagos and Abuja are certified by German courts. Search for "vereidigter Übersetzer Nigeria" or contact the German embassy in Lagos for a list of recognised translators.
 
-**Option B — Use a certified translator in Germany**
+**Option B - Use a certified translator in Germany**
 If you have a contact in Germany, they can arrange the translation there. This is sometimes faster and cheaper.
 
 **What to send:** A clear scan or photocopy of the original document. The translator works from the copy and certifies that the translation is accurate.
@@ -97,7 +97,7 @@ For Germany, the standard process is:
 1. Get the apostille on the original document first
 2. Then get the sworn translation of the apostilled document
 
-Some embassies accept the translation of the original without an apostille on the original — check the specific requirements of the German embassy in Lagos before proceeding.
+Some embassies accept the translation of the original without an apostille on the original - check the specific requirements of the German embassy in Lagos before proceeding.
 
 ---
 
@@ -123,24 +123,24 @@ Nigerian applicants applying for:
 
 ### How to get it
 
-**Step 1 — Register online**
+**Step 1 - Register online**
 Register at the APS Nigeria portal (operated by the German embassy Lagos): [https://www.aps-nigeria.de/](https://www.aps-nigeria.de/)
 
-**Step 2 — Prepare documents**
+**Step 2 - Prepare documents**
 - Original certificates and transcripts
 - Certified true copies
 - Passport
 - Application form
 
-**Step 3 — Attend the APS interview**
+**Step 3 - Attend the APS interview**
 You will be invited for an interview at the German embassy in Lagos or Abuja. The interview assesses your academic background and verifies your documents.
 
-**Step 4 — Receive APS certificate**
+**Step 4 - Receive APS certificate**
 If successful, you receive the APS certificate. This is submitted with your student visa application.
 
 **Timeline:** Allow 6–8 weeks from registration to receiving the certificate. Do not book your embassy visa appointment until you have the APS certificate.
 
-**Fee:** Confirm current fee at aps-nigeria.de — fees are updated periodically.
+**Fee:** Confirm current fee at aps-nigeria.de - fees are updated periodically.
 
 ### What happens if APS is not satisfied
 
@@ -155,31 +155,41 @@ If the APS has concerns about your documents, they will inform you. You can prov
 | Germany (study) | Yes | Yes (German) | Yes (Nigerian applicants) |
 | Germany (Chancenkarte) | Yes | Yes (German) | Not required (work visa) |
 | UK | Yes (for some documents) | Not required (English) | No |
-| Canada | Not required (IRCC accepts originals + certified copies) | Not required (English/French) | No — WES assessment instead |
+| Canada | Not required (IRCC accepts originals + certified copies) | Not required (English/French) | No - WES assessment instead |
 | France | Yes | Yes (French) | No |
 | Italy | Yes | Yes (Italian) | No |
 | Portugal | Yes | Yes (Portuguese) | No |
 | Ireland | Yes (for some documents) | Not required (English) | No |
-| Australia | Not required (originals + certified copies) | Not required (English) | No — NATTI assessment for some |
+| Australia | Not required (originals + certified copies) | Not required (English) | No - NATTI assessment for some |
 
 ---
 
 ## Common mistakes
 
-1. **Getting the translation before the apostille** — for Germany, the apostille should be on the original first
-2. **Using an uncertified translator** — a translation by a non-sworn translator is not accepted
-3. **Submitting photocopies without certification** — most embassies require certified true copies, not plain photocopies
-4. **Leaving APS too late** — 6–8 weeks minimum; start before you apply to universities
-5. **Not checking the embassy's current checklist** — requirements change; always download the current checklist from the embassy website
+1. **Getting the translation before the apostille** - for Germany, the apostille should be on the original first
+2. **Using an uncertified translator** - a translation by a non-sworn translator is not accepted
+3. **Submitting photocopies without certification** - most embassies require certified true copies, not plain photocopies
+4. **Leaving APS too late** - 6–8 weeks minimum; start before you apply to universities
+5. **Not checking the embassy's current checklist** - requirements change; always download the current checklist from the embassy website
+
+---
+
+## Watch: Apostille or Translation First? The Correct Order
+
+<div class="video-embed">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/OSRlhtyUGsI" title="Apostille and Document Authentication Order" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+*Clarifies the correct sequence - apostille before sworn translation - and why the order matters*
 
 ---
 
 ## Official sources
 
-- [German embassy Lagos — APS](https://lagos.diplo.de/ng-en/visa-service/aps)
+- [German embassy Lagos - APS](https://lagos.diplo.de/ng-en/visa-service/aps)
 - [APS Nigeria portal](https://www.aps-nigeria.de/)
-- [Nigerian MFA — Apostille](https://www.mfa.gov.ng/)
-- [Hague Conference — Apostille members](https://www.hcch.net/en/instruments/conventions/status-table/?cid=41)
+- [Nigerian MFA - Apostille](https://www.mfa.gov.ng/)
+- [Hague Conference - Apostille members](https://www.hcch.net/en/instruments/conventions/status-table/?cid=41)
 
 ---
 

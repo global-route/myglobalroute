@@ -9,7 +9,7 @@ country: "France"
 keywords: "France visa from Nigeria, French student visa, Talent Passport France, long-stay visa France, Campus France"
 featured: false
 readTime: "10 min"
-excerpt: "France offers a long-stay study visa and the Talent Passport for high-earning professionals. Here is what the official requirements say — and what is not published."
+excerpt: "France offers a long-stay study visa and the Talent Passport for high-earning professionals. Here is what the official requirements say - and what is not published."
 ---
 
 # France Visa from Nigeria: The 2026 Reality Check
@@ -33,13 +33,13 @@ Two publishable pathways in the MyPathway2Global registry:
 
 ## Long-stay study visa (visa de long séjour étudiant)
 
-**Official source:** [france-visas.gouv.fr — Student](https://france-visas.gouv.fr/en/web/france-visas/student)
+**Official source:** [france-visas.gouv.fr - Student](https://france-visas.gouv.fr/en/web/france-visas/student)
 
 ### Core requirements
 
 **Admission offer:** A letter of acceptance from a recognised French educational institution is required. For courses over 3 months, a long-stay visa (D visa) is required before travel.
 
-**Campus France procedure:** Nigerian applicants must complete the Campus France pre-application procedure before submitting a visa application. This is a mandatory step — the visa application cannot proceed without it.
+**Campus France procedure:** Nigerian applicants must complete the Campus France pre-application procedure before submitting a visa application. This is a mandatory step - the visa application cannot proceed without it.
 
 **Minimum funds (from 1 August 2026):**
 
@@ -55,13 +55,13 @@ Campus France manages the pre-application process for Nigerian students. The pro
 
 **Campus France Nigeria:** [nigeria.campusfrance.org](https://nigeria.campusfrance.org)
 
-Allow additional lead time for the Campus France step — it runs before the consulate appointment, not in parallel.
+Allow additional lead time for the Campus France step - it runs before the consulate appointment, not in parallel.
 
 ---
 
 ## Talent Passport (Passeport Talent)
 
-**Official source:** [france-visas.gouv.fr — Talent Passport](https://france-visas.gouv.fr/en/web/france-visas/talent-passport)
+**Official source:** [france-visas.gouv.fr - Talent Passport](https://france-visas.gouv.fr/en/web/france-visas/talent-passport)
 
 The Talent Passport covers several sub-categories including the EU Blue Card, highly qualified employees, researchers, and company founders. The most commonly applicable sub-category for Nigerian professionals is the highly qualified employee route.
 
@@ -86,7 +86,7 @@ Source: france-visas.gouv.fr, effective 2025-08-21. The EU Blue Card sub-categor
 
 ## Key planning considerations
 
-**Campus France is mandatory for students:** This adds time to the process. Start the Campus France procedure well before your intended application date — do not treat it as a parallel step.
+**Campus France is mandatory for students:** This adds time to the process. Start the Campus France procedure well before your intended application date - do not treat it as a parallel step.
 
 **EUR/NGN exchange rate:** The monthly funds threshold (EUR 877.50) and the Talent Passport salary threshold (EUR 59,373/year) are significant. Confirm current NGN equivalents with your bank.
 
@@ -102,9 +102,19 @@ Visitor visas, working holiday arrangements, and other Talent Passport sub-categ
 
 ---
 
+## Watch: Campus France Complete Guide - Funds and Student Visa
+
+<div class="video-embed">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/cL-WBL9VPpM" title="Campus France Guide and France Student Visa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+*Covers the mandatory Campus France procedure, funds requirement and long-stay visa process*
+
+---
+
 ## Official sources
 
-- [France-Visas — all visa types](https://france-visas.gouv.fr/en/web/france-visas)
+- [France-Visas - all visa types](https://france-visas.gouv.fr/en/web/france-visas)
 - [Campus France Nigeria](https://nigeria.campusfrance.org)
 - [Talent Passport](https://france-visas.gouv.fr/en/web/france-visas/talent-passport)
 - [French Embassy Nigeria](https://ng.ambafrance.org)
@@ -115,5 +125,5 @@ Visitor visas, working holiday arrangements, and other Talent Passport sub-categ
 **Found an error or have an update?** [Report corrections →](/pages/contact.html)
 
 **Related:**
-- [Find MyPathway — filter France pathways](/pages/find-mypathway.html)
+- [Find MyPathway - filter France pathways](/pages/find-mypathway.html)
 - [Budget Calculator](/pages/calculator.html)

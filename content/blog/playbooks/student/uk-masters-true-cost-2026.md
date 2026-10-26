@@ -391,7 +391,7 @@ If renting private flat (accommodation bills not included):
 
 **Best universities:** University of Manchester (Tier 2 - excellent), Manchester Metropolitan (Tier 3 - budget option)
 
-**Nigerian student strategy:** Good balance—manageable costs + decent wages
+**Nigerian student strategy:** Good balance-manageable costs + decent wages
 
 ---
 
@@ -899,6 +899,16 @@ As a Nigerian international student, you must:
 - Cost is significant hardship for family
 
 **Financial break-even:** 3-5 years post-graduation (UK salary premium + experience pays back investment)
+
+---
+
+## Watch: UK Student Visa - Don't Apply Until You Watch This
+
+<div class="video-embed">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/4Wb_229Bib4" title="UK Student Visa Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+*Covers maintenance funds, IHS surcharge, CAS and the real costs most guides skip*
 
 ---
 

@@ -10,20 +10,20 @@ keywords: "Canada Express Entry, Express Entry from Nigeria, CRS score, ITA, Can
 featured: true
 image: "/public/blog/images/canada-express-entry-2026.jpg"
 readTime: "16 min"
-excerpt: "Canada Express Entry is an invitation-based system for skilled workers — here's exactly how CRS scores work, what cut-offs look like, and how to maximise your chances of an ITA."
+excerpt: "Canada Express Entry is an invitation-based system for skilled workers - here's exactly how CRS scores work, what cut-offs look like, and how to maximise your chances of an ITA."
 ---
 
 # Canada Express Entry: The Complete 2026 Guide for Nigerians
 
 ## Quick Summary
 
-- **System type:** Invitation-based — you enter a pool, Canada draws from it
+- **System type:** Invitation-based - you enter a pool, Canada draws from it
 - **Processing time:** 6 months (from ITA to PR visa)
 - **CRS score cut-offs:** 480–520 range in recent 2026 draws (varies by draw type)
 - **True cost:** CAD 2,500–3,500 (₦1.3M–₦1.9M)
 - **Sweet spot:** Post-secondary education + 2+ years work experience + strong English/French = competitive CRS score
 
-**Bottom line:** Express Entry is Canada's **fastest pathway to permanent residency**. The key metric is your CRS score relative to draw cut-offs — not an approval rate. If you receive an ITA and submit a complete application, processing is straightforward.
+**Bottom line:** Express Entry is Canada's **fastest pathway to permanent residency**. The key metric is your CRS score relative to draw cut-offs - not an approval rate. If you receive an ITA and submit a complete application, processing is straightforward.
 
 **lastFactChecked:** 2026-10-18
 
@@ -907,6 +907,16 @@ Most people get PR without a job offer, then find a job after landing in Canada.
 - You must have CAD $40,000+ income/assets (to support parents)
 - Parents must pass medical/security checks
 - Takes 12-18 months (slower than Express Entry)
+
+---
+
+## Watch: Express Entry to Canada PR - Detailed Cost and Process
+
+<div class="video-embed">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/tYOqTs4vZxQ" title="Canada Express Entry PR Process and Cost" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+*Real breakdown of the full Express Entry process, costs and timeline from someone who went through it*
 
 ---
 

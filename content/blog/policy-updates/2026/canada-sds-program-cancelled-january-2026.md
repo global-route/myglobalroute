@@ -24,7 +24,7 @@ excerpt: "The Student Direct Stream is gone. Here's what replaces it and your ne
 - **New reality:** All students now apply through regular study permit (slower, stricter)
 - **Processing time:** 20 weeks (vs. 20 days under SDS)
 
-**Bottom line:** The golden pathway is closed. Canadian student visas just got harder—but not impossible.
+**Bottom line:** The golden pathway is closed. Canadian student visas just got harder-but not impossible.
 
 ---
 
@@ -368,6 +368,16 @@ Apply for a **1-year postgraduate certificate** (cheaper than degree):
 
 ---
 
+## Watch: Canada Ends SDS - New Study Permit Rules Explained
+
+<div class="video-embed">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/k0ATaQo4b9c" title="Canada SDS Cancelled - New Study Permit Rules" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+*Covers what changed when SDS was cancelled and what the new study permit process requires*
+
+---
+
 ## Final Thoughts
 
 **The SDS era is over.** Canada just raised the bar for international students.
@@ -385,7 +395,7 @@ Apply for a **1-year postgraduate certificate** (cheaper than degree):
 4. Show strong ties to Nigeria
 5. Consider less competitive provinces
 
-**Don't give up.** Nigerian students are still getting approved—just need better preparation now.
+**Don't give up.** Nigerian students are still getting approved-just need better preparation now.
 
 ---
 

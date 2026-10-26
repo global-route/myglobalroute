@@ -56,7 +56,7 @@ excerpt: "Germany's new Opportunity Card (Chancenkarte) launched Jan 2024. No jo
 - Skilled trades
 - Construction
 
-**Solution:** January 1, 2024, Germany introduced the **Chancenkarte (Opportunity Card)** — a points-based work visa similar to Canada's Express Entry or Australia's skilled migration program.
+**Solution:** January 1, 2024, Germany introduced the **Chancenkarte (Opportunity Card)** - a points-based work visa similar to Canada's Express Entry or Australia's skilled migration program.
 
 ### How Chancenkarte Works (Simple Version)
 
@@ -738,6 +738,16 @@ No need to be in Germany before applying.
 - **Express Entry if:** You have strong profile (education, experience, language), can wait 6 months
 
 **Ideal:** Apply to both simultaneously. See which approves first.
+
+---
+
+## Watch: Germany Chancenkarte - The Truth About the Opportunity Card
+
+<div class="video-embed">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ifsDFMvyRwA" title="Germany Chancenkarte Opportunity Card" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+*Honest breakdown of the points system, job search reality and what the card actually gives you*
 
 ---
 

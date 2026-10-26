@@ -10,7 +10,7 @@ keywords: "Nigeria to Canada visa, software engineer Canada, Express Entry succe
 featured: true
 image: "/public/blog/images/chisom-canada-success.jpg"
 readTime: "10 min"
-excerpt: "From Lagos to Toronto in 6 months. Here's exactly how Chisom did it—budget, timeline, and lessons learned."
+excerpt: "From Lagos to Toronto in 6 months. Here's exactly how Chisom did it-budget, timeline, and lessons learned."
 ---
 
 # How Chisom Got a Canadian Work Permit in 6 Months
@@ -25,7 +25,7 @@ excerpt: "From Lagos to Toronto in 6 months. Here's exactly how Chisom did it—
 - **Pathway:** Express Entry (Federal Skilled Worker)
 - **Current status:** Working in Toronto, CAD 85,000/year salary
 
-**Key insight:** Chisom had **average credentials** (not top-tier university, not FAANG company)—but strategic planning and proper documentation got him approved.
+**Key insight:** Chisom had **average credentials** (not top-tier university, not FAANG company)-but strategic planning and proper documentation got him approved.
 
 ---
 
@@ -254,7 +254,7 @@ Chisom submitted Ontario application:
 Within **hours** of Ontario nomination, Chisom received ITA from IRCC:
 > "You are invited to apply for permanent residence. You have 60 days to submit."
 
-**This is it—guaranteed PR** (if documents are correct).
+**This is it-guaranteed PR** (if documents are correct).
 
 ---
 
@@ -374,7 +374,7 @@ Here's exactly what Chisom spent:
 
 ### What He'd Do Differently
 
-1. **Start saving earlier:** Needed ₦11.4M—took 18 months to save
+1. **Start saving earlier:** Needed ₦11.4M-took 18 months to save
 2. **Network before landing:** Should've connected with Nigerian tech community in Toronto earlier
 3. **Get job offer before leaving:** Landed in Canada with no job (risky, but worked out)
 4. **Research housing:** Toronto rent shocked him (CAD 2,200/month for 1-bedroom)
@@ -385,13 +385,13 @@ Here's exactly what Chisom spent:
 
 **From Chisom:**
 
-> "If I can do it, you can too. I'm not from a rich family—my dad is a teacher, my mom is a nurse. I saved ₦100K/month for 18 months while working in Lagos.
+> "If I can do it, you can too. I'm not from a rich family-my dad is a teacher, my mom is a nurse. I saved ₦100K/month for 18 months while working in Lagos.
 >
 > The key is **strategic planning**. Don't just apply blindly. Calculate your CRS score. Identify your gaps. Boost your points.
 >
 > For software engineers, **Ontario PNP is the hack**. Federal draws are competitive (490+ points). Ontario invites you at 350+.
 >
-> Also, **employment letters matter more than you think**. Mine were rejected once because they were generic. I rewrote them to match NOC duties exactly—approved next time.
+> Also, **employment letters matter more than you think**. Mine were rejected once because they were generic. I rewrote them to match NOC duties exactly-approved next time.
 >
 > Don't give up. I had doubts. My friends said I was wasting money. But I'm here now, earning 10x my Lagos salary. It's worth it."
 
@@ -410,6 +410,16 @@ Here's exactly what Chisom spent:
 **What he misses:** Jollof rice, Lagos traffic (just kidding), family gatherings
 
 **No regrets.**
+
+---
+
+## Watch: How to Apply for Canada PR from Nigeria - Step by Step
+
+<div class="video-embed">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/I01MsQWCK58" title="Canada PR from Nigeria - Step by Step" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+*Real walkthrough of the Express Entry process from Nigeria - documents, timeline and costs*
 
 ---
 
