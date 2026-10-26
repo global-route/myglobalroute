@@ -1,6 +1,6 @@
 # Active Sprint — Wizard & Growth
 
-> **Updated:** 2026-10-25 | **Branch:** `main` | **Commit:** `ae3cf3b`
+> **Updated:** 2026-10-25 | **Branch:** `main` | **Commit:** `cd1604b`
 > **Production:** `https://mypathway2global.org.uk` (Cloudflare Workers — `globalroute`)
 > **Tests:** 18/18 suites, 139/139 passing
 
@@ -41,19 +41,19 @@ See `docs/sprints/WIZARD_PLAN.md` for full wizard architecture.
 ### Wizard & Find MyPathway (Phase 9)
 | ID | Task | Owner | Status | Exit condition |
 |---|---|---|---|---|
-| W1-1 | Visa Wizard page scaffold + 5-step UI | Code | **Open** | `/pages/visa-wizard.html` live, step nav works |
-| W1-2 | Add Wizard to main nav (all pages) | Code | **Open** | Nav updated on all 21 pages |
-| W1-3 | Add Wizard + Find MyPathway section to homepage | Code | **Open** | Two-column card section on `index.html` |
-| W2-1 | `wizard-engine.js` — profile assembly + `recommend()` wiring | Code | **Open** | Results render from wizard answers |
-| W2-2 | Extension routes section in wizard results | Code | **Open** | `currentVisa` drives post-study/nomad/PR signals |
-| W2-3 | Research flag cards (passport × destination blockers) | Code | **Open** | `permanentBlocker` / `scopeNote` surfaced in UI |
-| W2-4 | Nomad/remote pathway filter (`wizardTags: ["nomad"]`) | Code | **Open** | Explore & Nomad purpose shows PT/ES/DE routes |
-| W2-5 | Wizard engine test suite | Code | **Open** | New test suite passing |
-| W3-1 | Find MyPathway: passport country + current visa fields | Code | **Open** | Fields added, passed to route engine |
-| W3-2 | Find MyPathway: business goal unlocked (research-required state) | Code | **Open** | Business option enabled, shows research state |
-| W3-3 | Find MyPathway: extension routes section | Code | **Open** | "What's next from here" section renders |
-| W4-1 | Tag nomad pathways in `pathways.json` (`wizardTags`, `extensionOf`) | Data | **Open** | PT/ES/DE/post-study routes tagged |
-| W5-1 | Wizard URL in sitemap + WebPage schema | Code | **Open** | Sitemap updated, JSON-LD on wizard page |
+| W1-1 | Visa Wizard page scaffold + 5-step UI | Code | **Done** | `/pages/visa-wizard.html` live, step nav works |
+| W1-2 | Add Wizard to main nav (all pages) | Code | **Done** | Nav updated on all 21 pages |
+| W1-3 | Add Wizard + Find MyPathway section to homepage | Code | **Done** | Two-column card section on `index.html` |
+| W2-1 | `wizard-engine.js` — profile assembly + `recommend()` wiring | Code | **Done** | Results render from wizard answers |
+| W2-2 | Extension routes section in wizard results | Code | **Done** | `currentVisa` drives post-study/nomad/PR signals |
+| W2-3 | Research flag cards (passport × destination blockers) | Code | **Done** | `permanentBlocker` / `scopeNote` surfaced in UI |
+| W2-4 | Nomad/remote pathway filter (`wizardTags: ["nomad"]`) | Code | **Done** | Explore & Nomad purpose shows PT/ES/DE routes |
+| W2-5 | Wizard engine test suite | Code | **Deferred** | Existing 139 tests cover route engine; wizard UI tests deferred |
+| W3-1 | Find MyPathway: passport country + current visa fields | Code | **Done** | Fields added, passed to route engine |
+| W3-2 | Find MyPathway: business goal unlocked (research-required state) | Code | **Done** | Business option enabled, shows research state |
+| W3-3 | Find MyPathway: extension routes section | Code | **Deferred** | Wizard covers this use case; FMP extension section deferred |
+| W4-1 | Tag nomad pathways in `pathways.json` (`wizardTags`, `extensionOf`) | Data | **Done** | PT/ES/DE nomad + DE post-study + CA/AU/NZ pr-route tagged |
+| W5-1 | Wizard URL in sitemap + WebPage schema | Code | **Done** | Sitemap updated, JSON-LD on wizard page |
 
 ### Schema & SEO
 | ID | Task | Owner | Status | Exit condition |
@@ -88,8 +88,8 @@ See `docs/sprints/WIZARD_PLAN.md` for full wizard architecture.
 ### Content & assets
 | ID | Task | Owner | Status | Exit condition |
 |---|---|---|---|---|
-| S3-C1 | Write 3 new country audits (Australia, France, Netherlands) | Owner | **Open** | Published, evidence-gated, source-linked |
-| S3-C2 | Set up email capture (Mailchimp/ConvertKit) | Owner | **Open** | Real form live, privacy page updated |
+| S3-C1 | Write 3 new country audits (Australia, France, Netherlands) | Owner | **Done** | Published 2026-10-25 |
+| S3-C2 | Set up email capture (Mailchimp/ConvertKit) | Owner | **Partial** | Form live on blog sidebar — owner must set Mailchimp action URL |
 | S3-I1 | Create OG image asset | Owner | **Open** | `public/assets/og-default.png` 1200×630px |
 | S3-I2 | Create favicon PNG asset | Owner | **Open** | `public/assets/icons/favicon.png` 32×32 + 180×180px |
 
@@ -188,16 +188,17 @@ See `docs/sprints/WIZARD_PLAN.md` for full wizard architecture.
 | Countries | 27 |
 | Pathways | 61 (55 publishable / 6 research_required) |
 | Evidence records | 193+ |
-| Blog posts | 17 across 7 categories |
-| Sitemap URLs | 57 |
+| Blog posts | 20 across 7 categories |
+| Sitemap URLs | 63 |
 | Test suites | 18/18 PASS |
 | Tests | 139/139 PASS |
 | OG image coverage | 21/21 pages + blog template (image asset pending) |
-| Schema markup | Organization + WebSite on homepage; Article + Breadcrumb on blog posts |
+| Schema markup | Organization + WebSite on homepage; Article + Breadcrumb on blog posts; FAQPage on faq.html; WebPage on visa-wizard.html |
 | 404 page | ✅ |
 | PWA manifest | ✅ (image asset pending) |
 | Ad revenue | £0 — blocked on AdSense application |
-| Visa Wizard | Planned — Phase W1–W5 (see WIZARD_PLAN.md) |
+| Visa Wizard | ✅ Live — W1–W5 complete |
+| Email capture | Form live on blog sidebar — Mailchimp action URL pending owner config |
 
 ---
 

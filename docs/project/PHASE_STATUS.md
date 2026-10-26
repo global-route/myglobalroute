@@ -2,7 +2,7 @@
 
 > **Updated:** 2026-10-25 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 18/18 suites, 139/139 passing
-> **Commit:** `756196f`
+> **Commit:** `cd1604b`
 
 ---
 
@@ -19,7 +19,7 @@
 | 6 — UI/UX transformation | **Complete** | — |
 | 7 — Rebrand | **Complete** | — |
 | 8 — Production readiness | **Complete** | Two image assets (owner action) |
-| 9 — Scale & Wizard | **In planning** | W1–W5 phases (see WIZARD_PLAN.md) |
+| 9 — Scale & Wizard | **Complete** | W2-5 wizard test suite (deferred); W3-3 FMP extension routes (deferred) |
 
 ---
 
@@ -180,11 +180,11 @@ See `docs/sprints/WIZARD_PLAN.md` for full architecture.
 ### Phases
 | Phase | Scope | Status |
 |---|---|---|
-| W1 | Wizard UI scaffold + nav + homepage section | Open |
-| W2 | Wizard engine + results + extension routes + test suite | Open |
-| W3 | Find MyPathway upgrades (passport, current visa, business) | Open |
-| W4 | Data: `wizardTags` + `extensionOf` on pathways.json | Open |
-| W5 | Sitemap + WebPage schema + cross-links | Open |
+| W1 | Wizard UI scaffold + nav + homepage section | **Done** |
+| W2 | Wizard engine + results + extension routes + test suite | **Done** (test suite deferred) |
+| W3 | Find MyPathway upgrades (passport, current visa, business) | **Done** (extension routes section deferred) |
+| W4 | Data: `wizardTags` + `extensionOf` on pathways.json | **Done** |
+| W5 | Sitemap + WebPage schema + cross-links | **Done** |
 
 ---
 
