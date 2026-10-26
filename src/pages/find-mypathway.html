@@ -32,7 +32,7 @@
       <div class="container">
         <span class="page-header-badge">Route Finder</span>
         <h1>Find MyPathway</h1>
-        <p class="page-header-subtitle">Filter 55 evidence-gated pathways by goal. Official requirements only — no invented approval rates.</p>
+        <p class="page-header-subtitle">Filter 55 evidence-gated pathways by goal and passport country. Official requirements only — no invented approval rates.</p>
       </div>
     </div>
     <section class="container" aria-labelledby="route-title" style="padding-top: var(--spacing-2xl); padding-bottom: var(--spacing-3xl);">
@@ -40,7 +40,7 @@
         <div class="problem-card">
           <h3>What this tool does</h3>
           <ul>
-            <li>Filters 55 publishable pathways by goal (study or work)</li>
+            <li>Filters 55 publishable pathways by goal (study or work) and passport country</li>
             <li>Scores by budget, income and experience where declared</li>
             <li>Shows official requirements from government portals</li>
             <li>Surfaces nearby routes with documented blockers shown</li>
@@ -51,15 +51,82 @@
           <ul>
             <li>Assess your personal eligibility</li>
             <li>Predict approval likelihood</li>
-            <li>Cover business pathways (not yet in scope)</li>
             <li>Replace advice from a registered immigration adviser</li>
           </ul>
         </div>
       </div>
       <form id="route-form">
+        <label>Passport country
+          <select name="passportCountry">
+            <option value="">Select your passport country</option>
+            <option value="DZ">Algeria</option>
+            <option value="AO">Angola</option>
+            <option value="BJ">Benin</option>
+            <option value="BW">Botswana</option>
+            <option value="BF">Burkina Faso</option>
+            <option value="BI">Burundi</option>
+            <option value="CV">Cabo Verde</option>
+            <option value="CM">Cameroon</option>
+            <option value="CF">Central African Republic</option>
+            <option value="TD">Chad</option>
+            <option value="KM">Comoros</option>
+            <option value="CG">Congo (Republic)</option>
+            <option value="CD">Congo (DRC)</option>
+            <option value="CI">Côte d'Ivoire</option>
+            <option value="DJ">Djibouti</option>
+            <option value="EG">Egypt</option>
+            <option value="GQ">Equatorial Guinea</option>
+            <option value="ER">Eritrea</option>
+            <option value="SZ">Eswatini</option>
+            <option value="ET">Ethiopia</option>
+            <option value="GA">Gabon</option>
+            <option value="GM">Gambia</option>
+            <option value="GH">Ghana</option>
+            <option value="GN">Guinea</option>
+            <option value="GW">Guinea-Bissau</option>
+            <option value="KE">Kenya</option>
+            <option value="LS">Lesotho</option>
+            <option value="LR">Liberia</option>
+            <option value="LY">Libya</option>
+            <option value="MG">Madagascar</option>
+            <option value="MW">Malawi</option>
+            <option value="ML">Mali</option>
+            <option value="MR">Mauritania</option>
+            <option value="MU">Mauritius</option>
+            <option value="MA">Morocco</option>
+            <option value="MZ">Mozambique</option>
+            <option value="NA">Namibia</option>
+            <option value="NE">Niger</option>
+            <option value="NG">Nigeria</option>
+            <option value="RW">Rwanda</option>
+            <option value="ST">São Tomé and Príncipe</option>
+            <option value="SN">Senegal</option>
+            <option value="SC">Seychelles</option>
+            <option value="SL">Sierra Leone</option>
+            <option value="SO">Somalia</option>
+            <option value="ZA">South Africa</option>
+            <option value="SS">South Sudan</option>
+            <option value="SD">Sudan</option>
+            <option value="TZ">Tanzania</option>
+            <option value="TG">Togo</option>
+            <option value="TN">Tunisia</option>
+            <option value="UG">Uganda</option>
+            <option value="ZM">Zambia</option>
+            <option value="ZW">Zimbabwe</option>
+          </select>
+        </label>
         <label>Your goal
           <select name="goal">
-            <option value="any">Choose a goal</option><option value="study">Study</option><option value="work">Work</option><option value="business" disabled>Business (not yet covered)</option>
+            <option value="any">Choose a goal</option><option value="study">Study</option><option value="work">Work</option><option value="business">Business</option>
+          </select>
+        </label>
+        <label>Current visa status
+          <select name="currentVisa">
+            <option value="none">None / applying from home country</option>
+            <option value="tourist">Tourist / visitor visa</option>
+            <option value="student">Student visa / permit</option>
+            <option value="work">Work visa / permit</option>
+            <option value="residence">Residence permit</option>
           </select>
         </label>
         <label>Family size
@@ -164,12 +231,23 @@
         const [countries, pathways] = await Promise.all([loadJson('/data/countries.json'), loadJson('/data/pathways.json')]);
         const profile = Object.fromEntries(new FormData(form).entries());
         window.GlobalRoute?.Analytics?.track('route_search_started', { page_type: 'find-mypathway' });
+
+        // Business goal — research-required state
+        if (profile.goal === 'business') {
+          results.innerHTML = `<div class="wizard-blocker-card">
+            <strong>Business pathways — research in progress</strong>
+            <p>Structured business immigration pathways (investor visas, entrepreneur routes, intra-company transfers) require additional evidence verification before they can be recommended. They are not yet in the evidence gate.</p>
+            <p style="margin-top:0.75rem;">In the meantime, the <a href="/pages/visa-wizard.html">Visa Wizard</a> can surface work pathways that may be relevant to business owners operating remotely.</p>
+          </div>`;
+          return;
+        }
+
         const { matches, alternatives, missingInput, zeroFitExplanations } = window.GlobalRoute.RouteEngine.recommend(profile, countries.countries, pathways.pathways, 5);
         if (!missingInput) {
           window.GlobalRoute?.Analytics?.track('route_recommendation_generated', { page_type: 'find-mypathway' });
         }
         if (missingInput) {
-          results.innerHTML = '<h2>Select a goal to continue</h2><p>Choose Study or Work above. Business pathways are not yet covered.</p>';
+          results.innerHTML = '<h2>Select a goal to continue</h2><p>Choose Study or Work above.</p>';
           return;
         }
         if (!matches.length) {
