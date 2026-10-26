@@ -1,6 +1,6 @@
 # Active Sprint — Wizard & Growth
 
-> **Updated:** 2026-10-25 | **Branch:** `main` | **Commit:** `cd1604b`
+> **Updated:** 2026-10-26 | **Branch:** `main` | **Commit:** `88f0289`
 > **Production:** `https://mypathway2global.org.uk` (Cloudflare Workers — `globalroute`)
 > **Tests:** 18/18 suites, 139/139 passing
 
@@ -72,10 +72,10 @@ See `docs/sprints/WIZARD_PLAN.md` for full wizard architecture.
 ### Revenue
 | ID | Task | Owner | Status | Exit condition |
 |---|---|---|---|---|
-| S3-R1 | Apply for AdSense | Owner | **Open** | Publisher ID received |
-| S3-R2 | Populate `public/ads.txt` | Owner | **Open** | Real publisher ID in ads.txt |
-| S3-R3 | Activate AdSense script on blog/playbook pages | Code | **Blocked on S3-R1** | Script live, consent-gated |
-| S3-R4 | Unhide ad slots | Code | **Blocked on S3-R3** | Slots visible, labeled "Advertisement" |
+| S3-R1 | Apply for AdSense | Owner | **Done** | Publisher ID `ca-pub-8077583188666813` received |
+| S3-R2 | Populate `public/ads.txt` | Owner | **Done** | Live and verified at `/ads.txt` |
+| S3-R3 | Activate AdSense script on blog/playbook pages | Code | **Done** | Static tag in `<head>` + consent-gated loader on 6 pages |
+| S3-R4 | Unhide ad slots | Code | **Done** | Slots active; Google policy review pending (1-14 days) |
 
 ### Trust & compliance
 | ID | Task | Owner | Status | Exit condition |
@@ -89,7 +89,10 @@ See `docs/sprints/WIZARD_PLAN.md` for full wizard architecture.
 | ID | Task | Owner | Status | Exit condition |
 |---|---|---|---|---|
 | S3-C1 | Write 3 new country audits (Australia, France, Netherlands) | Owner | **Done** | Published 2026-10-25 |
-| S3-C2 | Set up email capture (Mailchimp/ConvertKit) | Owner | **Partial** | Form live on blog sidebar — owner must set Mailchimp action URL |
+| S3-C2 | Set up email capture (Mailchimp/ConvertKit) | Owner | **Partial** | Form live on blog sidebar - owner must set Mailchimp action URL |
+| S3-C3 | Replace em dashes in all blog posts | Code | **Done** | 0 em dashes remaining across 21 posts |
+| S3-C4 | Add YouTube embeds to all blog posts | Code | **Done** | 1 verified embed per post, all 21 posts |
+| S3-C5 | Passport tiers guide post | Code | **Done** | Published 2026-10-26 — `/blog/guides/mobility/passport-tiers-explained-2026/` |
 | S3-I1 | Create OG image asset | Owner | **Open** | `public/assets/og-default.png` 1200×630px |
 | S3-I2 | Create favicon PNG asset | Owner | **Open** | `public/assets/icons/favicon.png` 32×32 + 180×180px |
 
@@ -188,17 +191,18 @@ See `docs/sprints/WIZARD_PLAN.md` for full wizard architecture.
 | Countries | 27 |
 | Pathways | 61 (55 publishable / 6 research_required) |
 | Evidence records | 193+ |
-| Blog posts | 20 across 7 categories |
-| Sitemap URLs | 63 |
+| Blog posts | 21 across 7 categories |
+| Sitemap URLs | 64 |
 | Test suites | 18/18 PASS |
 | Tests | 139/139 PASS |
 | OG image coverage | 21/21 pages + blog template (image asset pending) |
 | Schema markup | Organization + WebSite on homepage; Article + Breadcrumb on blog posts; FAQPage on faq.html; WebPage on visa-wizard.html |
 | 404 page | ✅ |
 | PWA manifest | ✅ (image asset pending) |
-| Ad revenue | £0 — blocked on AdSense application |
-| Visa Wizard | ✅ Live — W1–W5 complete |
-| Email capture | Form live on blog sidebar — Mailchimp action URL pending owner config |
+| Ad revenue | £0 - AdSense site ownership verified; Google policy review pending |
+| Visa Wizard | ✅ Live - W1-W5 complete |
+| Email capture | Form live on blog sidebar - Mailchimp action URL pending owner config |
+| YouTube embeds | ✅ 1 per post, all 21 posts |
 
 ---
 

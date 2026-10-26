@@ -1,8 +1,8 @@
 # Phase Status — MyPathway2Global
 
-> **Updated:** 2026-10-25 | **Release:** GO — production live
+> **Updated:** 2026-10-26 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 18/18 suites, 139/139 passing
-> **Commit:** `cd1604b`
+> **Commit:** `88f0289`
 
 ---
 
@@ -15,11 +15,11 @@
 | 2 — Canonical product core | **Complete** | — |
 | 3 — Content & acquisition | **Complete** | Editorial freshness ongoing |
 | 4 — Trust/compliance/accessibility | **Code complete** | Legal review, live ARIA audit, consent validation |
-| 5 — Growth/monetization | **Infrastructure complete** | AdSense publisher ID, live placement |
+| 5 — Growth/monetization | **Complete** | Google policy review pending (1-14 days) |
 | 6 — UI/UX transformation | **Complete** | — |
 | 7 — Rebrand | **Complete** | — |
 | 8 — Production readiness | **Complete** | Two image assets (owner action) |
-| 9 — Scale & Wizard | **Complete** | W2-5 wizard test suite (deferred); W3-3 FMP extension routes (deferred) |
+| 9 — Scale & Wizard | **Complete** | W2-5 wizard test suite (deferred); W3-3 FMP extension routes (deferred); S3-S1/S3-S3 schema open |
 
 ---
 
@@ -118,19 +118,21 @@ All 23 production readiness tasks complete. See `docs/sprints/PRODUCTION_READINE
 
 ## Phase 3 — Content & acquisition ✅
 
-- 17 blog posts across 7 categories:
-  - 6 Country Audits (Germany, Canada, UK, Italy, Portugal, USA)
+- 21 blog posts across 7 categories:
+  - 9 Country Audits (Germany, Canada, UK, Italy, Portugal, USA, Australia, France, Netherlands)
   - 2 Student Playbooks (Italy DSU, UK Masters)
   - 2 Professional Playbooks (Canada Express Entry, Germany Chancenkarte)
   - 1 Business Playbook (US LLC Setup)
   - 2 Case Studies (Chisom success story, Rejection patterns)
-  - 3 Guides (Motivation letter, Document auth, Blocked account funding)
+  - 4 Guides (Motivation letter, Document auth, Blocked account funding, Passport tiers)
   - 1 Policy Update (Canada SDS cancellation)
+- All em dashes replaced with hyphens across all posts (AI-signal reduction)
+- 1 YouTube embed per post, all 21 posts (verified video IDs)
 - All fabricated approval rate claims removed
 - OG/Twitter tags on all pages
 - Canonical tags on all generated HTML files
 - Sabilytics analytics on all pages
-- All 17 blog posts in sitemap.xml
+- All 21 blog posts in sitemap.xml (64 URLs total)
 
 ---
 
@@ -150,17 +152,17 @@ All 23 production readiness tasks complete. See `docs/sprints/PRODUCTION_READINE
 
 ---
 
-## Phase 5 — Growth/monetization ✅ infrastructure / ⏳ owner
+## Phase 5 — Growth/monetization ✅ Complete
 
 - Ad slot registry complete
-- Slot markup on blog.html and all 3 playbook pages (all `hidden`)
-- `public/ads.txt` placeholder created
+- Slot markup on blog.html and all 3 playbook pages
+- `public/ads.txt` live: `google.com, pub-8077583188666813, DIRECT, f08c47fec0942fa0`
+- Static AdSense `<script>` tag in `<head>` on all 6 ad pages (crawler-visible)
+- Consent-gated `admob-loader.js` adapter on all 6 ad pages
+- Site ownership verified in AdSense dashboard
 - Sabilytics live on all pages
 
-**Open (owner → then code):**
-- Apply for AdSense
-- Populate ads.txt with publisher ID
-- Activate script + unhide slots
+**Pending (external):** Google policy review — 1-14 days. No code action required.
 
 ---
 
