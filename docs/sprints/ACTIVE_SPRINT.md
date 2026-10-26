@@ -1,6 +1,6 @@
-# Active Sprint — Growth & Polish
+# Active Sprint — Wizard & Growth
 
-> **Updated:** 2026-10-25 | **Branch:** `main` | **Commit:** `756196f`
+> **Updated:** 2026-10-25 | **Branch:** `main` | **Commit:** `ae3cf3b`
 > **Production:** `https://mypathway2global.org.uk` (Cloudflare Workers — `globalroute`)
 > **Tests:** 18/18 suites, 139/139 passing
 
@@ -9,7 +9,8 @@
 ## Sprint goal
 
 All production readiness tasks complete. Platform is clean, SEO-ready, and trust-consistent.
-Next focus: schema depth, route engine inputs, analytics wiring, and revenue activation.
+Next focus: Visa Wizard (new tool), Find MyPathway upgrades, schema depth, analytics wiring, and revenue activation.
+See `docs/sprints/WIZARD_PLAN.md` for full wizard architecture.
 
 ---
 
@@ -37,22 +38,56 @@ Next focus: schema depth, route engine inputs, analytics wiring, and revenue act
 
 ## Active task board
 
+### Wizard & Find MyPathway (Phase 9)
+| ID | Task | Owner | Status | Exit condition |
+|---|---|---|---|---|
+| W1-1 | Visa Wizard page scaffold + 5-step UI | Code | **Open** | `/pages/visa-wizard.html` live, step nav works |
+| W1-2 | Add Wizard to main nav (all pages) | Code | **Open** | Nav updated on all 21 pages |
+| W1-3 | Add Wizard + Find MyPathway section to homepage | Code | **Open** | Two-column card section on `index.html` |
+| W2-1 | `wizard-engine.js` — profile assembly + `recommend()` wiring | Code | **Open** | Results render from wizard answers |
+| W2-2 | Extension routes section in wizard results | Code | **Open** | `currentVisa` drives post-study/nomad/PR signals |
+| W2-3 | Research flag cards (passport × destination blockers) | Code | **Open** | `permanentBlocker` / `scopeNote` surfaced in UI |
+| W2-4 | Nomad/remote pathway filter (`wizardTags: ["nomad"]`) | Code | **Open** | Explore & Nomad purpose shows PT/ES/DE routes |
+| W2-5 | Wizard engine test suite | Code | **Open** | New test suite passing |
+| W3-1 | Find MyPathway: passport country + current visa fields | Code | **Open** | Fields added, passed to route engine |
+| W3-2 | Find MyPathway: business goal unlocked (research-required state) | Code | **Open** | Business option enabled, shows research state |
+| W3-3 | Find MyPathway: extension routes section | Code | **Open** | "What's next from here" section renders |
+| W4-1 | Tag nomad pathways in `pathways.json` (`wizardTags`, `extensionOf`) | Data | **Open** | PT/ES/DE/post-study routes tagged |
+| W5-1 | Wizard URL in sitemap + WebPage schema | Code | **Open** | Sitemap updated, JSON-LD on wizard page |
+
+### Schema & SEO
 | ID | Task | Owner | Status | Exit condition |
 |---|---|---|---|---|
 | S3-S1 | Add FAQPage schema to `faq.html` | Code | **Open** | JSON-LD added, Google Rich Results Test passes |
 | S3-S2 | Add Article schema to `blog-post.njk` | Code | **Done** | Article + Breadcrumb schema already in template |
 | S3-S3 | Add BreadcrumbList schema to `countries.njk` | Code | **Open** | JSON-LD added to Eleventy template |
 | S3-S4 | Sitemap with lastmod | Code | **Done** | All 57 URLs in sitemap.xml with lastmod dates |
-| S3-E1 | Add budget/income/experience inputs to Find MyPathway | Code | **Open** | Profile inputs wired to route engine |
+
+### Route engine & analytics
+| ID | Task | Owner | Status | Exit condition |
+|---|---|---|---|---|
+| S3-E1 | Add budget/income/experience inputs to Find MyPathway | Code | **Done** | Already wired in current form |
 | S3-A1 | Wire `route_search_started` analytics event | Code | **Open** | 2 `track()` calls added, verified in Sabilytics |
+
+### Revenue
+| ID | Task | Owner | Status | Exit condition |
+|---|---|---|---|---|
 | S3-R1 | Apply for AdSense | Owner | **Open** | Publisher ID received |
 | S3-R2 | Populate `public/ads.txt` | Owner | **Open** | Real publisher ID in ads.txt |
 | S3-R3 | Activate AdSense script on blog/playbook pages | Code | **Blocked on S3-R1** | Script live, consent-gated |
 | S3-R4 | Unhide ad slots | Code | **Blocked on S3-R3** | Slots visible, labeled "Advertisement" |
+
+### Trust & compliance
+| ID | Task | Owner | Status | Exit condition |
+|---|---|---|---|---|
 | S3-T1 | ARIA audit — 4 core pages | Owner | **Open** | 0 critical/serious axe violations |
 | S3-T2 | Legal review — privacy/disclaimer/terms | Owner | **Open** | Solicitor sign-off |
 | S3-T3 | Country source sign-off (27 entries) | Owner | **Open** | `humanSignOff: true` on all 27 manifest entries |
 | S3-T4 | Update `dataset.asOf` | Owner | **Blocked on S3-T3** | After manifest sign-off |
+
+### Content & assets
+| ID | Task | Owner | Status | Exit condition |
+|---|---|---|---|---|
 | S3-C1 | Write 3 new country audits (Australia, France, Netherlands) | Owner | **Open** | Published, evidence-gated, source-linked |
 | S3-C2 | Set up email capture (Mailchimp/ConvertKit) | Owner | **Open** | Real form live, privacy page updated |
 | S3-I1 | Create OG image asset | Owner | **Open** | `public/assets/og-default.png` 1200×630px |
@@ -133,13 +168,16 @@ Next focus: schema depth, route engine inputs, analytics wiring, and revenue act
 
 ## Priority order
 
-1. **S3-I1 + S3-I2** — image assets (owner, unblocks OG cards and favicon)
-2. **S3-S1 + S3-S3** — schema depth (30 min code, compounds in search)
-3. **S3-E1** — route engine profile inputs (product differentiation)
-4. **S3-A1** — analytics wiring (funnel visibility)
-5. **S3-R1 → S3-R4** — revenue (owner action first, then code)
-6. **S3-T1 → S3-T4** — trust closure (owner actions)
-7. **S3-C1 → S3-C2** — content scale (owner actions)
+1. **W1-1 → W1-3** — Wizard scaffold + nav + homepage section (product)
+2. **W2-1 → W2-5** — Wizard engine + results (product)
+3. **W3-1 → W3-3** — Find MyPathway upgrades (product)
+4. **W4-1** — Data tagging for nomad/extension routes
+5. **S3-I1 + S3-I2** — image assets (owner, unblocks OG cards and favicon)
+6. **S3-S1 + S3-S3** — schema depth (30 min code, compounds in search)
+7. **S3-A1** — analytics wiring (funnel visibility)
+8. **S3-R1 → S3-R4** — revenue (owner action first, then code)
+9. **S3-T1 → S3-T4** — trust closure (owner actions)
+10. **S3-C1 → S3-C2** — content scale (owner actions)
 
 ---
 
@@ -159,6 +197,7 @@ Next focus: schema depth, route engine inputs, analytics wiring, and revenue act
 | 404 page | ✅ |
 | PWA manifest | ✅ (image asset pending) |
 | Ad revenue | £0 — blocked on AdSense application |
+| Visa Wizard | Planned — Phase W1–W5 (see WIZARD_PLAN.md) |
 
 ---
 

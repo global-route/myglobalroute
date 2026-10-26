@@ -19,7 +19,7 @@
 | 6 — UI/UX transformation | **Complete** | — |
 | 7 — Rebrand | **Complete** | — |
 | 8 — Production readiness | **Complete** | Two image assets (owner action) |
-| 9 — Scale | **Not started** | Gated on Phases 0–5 |
+| 9 — Scale & Wizard | **In planning** | W1–W5 phases (see WIZARD_PLAN.md) |
 
 ---
 
@@ -164,9 +164,27 @@ All 23 production readiness tasks complete. See `docs/sprints/PRODUCTION_READINE
 
 ---
 
-## Phase 9 — Scale 🔒 not started
+## Phase 9 — Scale & Wizard 🔄 in planning
 
-Gated on: production integrity proven, data trust signed off, privacy reviewed, monetization live.
+See `docs/sprints/WIZARD_PLAN.md` for full architecture.
+
+### Confirmed scope
+- **Visa Wizard** — new `/pages/visa-wizard.html`, guided 5-step tool for tourists/nomads/undecided
+- **Find MyPathway upgrades** — passport country field, current visa field, business goal unlocked, extension routes
+- **Nav integration** — Wizard added to main nav on all pages
+- **Homepage section** — two-column card: Find MyPathway (career/study) vs Visa Wizard (tourist/nomad)
+- **Data tagging** — `wizardTags` + `extensionOf` on key pathways (additive, no breaking change)
+- **54 African countries** in passport dropdown, research opportunity flags per country
+- **Nomad/remote routes** — "Explore & Nomad" purpose maps to countries with published evidence-gated nomad routes (PT, ES, DE)
+
+### Phases
+| Phase | Scope | Status |
+|---|---|---|
+| W1 | Wizard UI scaffold + nav + homepage section | Open |
+| W2 | Wizard engine + results + extension routes + test suite | Open |
+| W3 | Find MyPathway upgrades (passport, current visa, business) | Open |
+| W4 | Data: `wizardTags` + `extensionOf` on pathways.json | Open |
+| W5 | Sitemap + WebPage schema + cross-links | Open |
 
 ---
 
