@@ -2,5 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /data/
 
-# Sitemap is intentionally omitted until the authoritative production origin is verified.
-# Do not publish a sitemap containing an unverified or unrelated hostname.
+Sitemap: https://mypathway2global.org.uk/sitemap.xml

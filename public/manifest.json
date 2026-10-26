@@ -1,0 +1,21 @@
+{
+  "name": "MyPathway2Global",
+  "short_name": "MP2G",
+  "description": "Evidence-gated migration intelligence for African talent.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f2f7ff",
+  "theme_color": "#10316b",
+  "icons": [
+    {
+      "src": "/assets/icons/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/favicon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

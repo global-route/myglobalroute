@@ -328,6 +328,8 @@ const GlobalRoute = (() => {
         <a href="/pages/countries/${encodeURIComponent(country.id)}/" style="font-size:0.875rem;font-weight:600;">View country evidence &rarr;</a>
       </article>
     `).join('');
+    const dataNote = document.querySelector('#calculator-data-note');
+    if (dataNote) dataNote.style.display = countries.every(c => c.trueCost?.total == null) ? 'block' : 'none';
     container.style.display = 'block';
   };
 

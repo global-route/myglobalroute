@@ -144,8 +144,8 @@ Rebrand complete. UI transformed to content-first editorial layout. Focus now on
 
 | Metric | Value |
 |---|---|
-| Countries | 26 |
-| Pathways | 59 (55 publishable / 4 research_required) |
+| Countries | 27 |
+| Pathways | 61 (55 publishable / 6 research_required) |
 | Evidence records | 193+ |
 | Blog posts | 17 across 7 categories |
 | Test suites | 18/18 PASS |
@@ -153,7 +153,7 @@ Rebrand complete. UI transformed to content-first editorial layout. Focus now on
 | Build | 162 files, 0 errors |
 | Rebrand | ✅ Complete (Global Route → MyPathway2Global) |
 | UI transformation | ✅ Complete (content-first editorial) |
-| Schema markup | None yet — S3-S1/S2/S3 open |
+| Schema markup | Organization + WebSite on homepage; Article + Breadcrumb on blog posts |
 | Ad revenue | £0 — blocked on AdSense application |
 
 ---
