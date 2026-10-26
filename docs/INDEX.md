@@ -1,33 +1,18 @@
-# Global Route — Documentation Index
+# MyPathway2Global — Documentation Index
 
-> **Updated:** 2026-10-24 | **Production:** `https://mypathway2global.org.uk` | **SHA:** `e43fcad`
+> **Updated:** 2026-10-25 | **Production:** `https://mypathway2global.org.uk`
+> **Tests:** 18/18 suites, 139/139 passing | **Commit:** `756196f`
 
 ---
 
 ## Start here
-the domain is a .org we will build this website like an org, 
-get the layout of these pages 
-
-scrape https://schengenvisainfo.com/ to get page structure and layouts for relative page
-
-
-https://visaguide.world/us-visa/
-eck the images for type of styling
- tell me the style in those and a vision to trasnform all pages
-
-
-
-use the crawl or scrape tool to scrap those websites for use to get structure and layout
-
-
-
 
 | Doc | What it is |
 |---|---|
 | [Active Sprint](sprints/ACTIVE_SPRINT.md) | Current task board, priority order, owner actions |
-| [Sprint 3 Task Spec](sprints/SPRINT_3_GROWTH.md) | Detailed walkthrough for every Sprint 3 task |
-| [Phase Status](project/PHASE_STATUS.md) | Phase 0–6 completion state, open gates |
-| [10/10 Taskfile](../Taskfile.yml) | All 50 tasks — run `task ten-out-of-ten` for the checklist |
+| [Phase Status](project/PHASE_STATUS.md) | Phase 0–9 completion state, open gates |
+| [Production Readiness Tasks](sprints/PRODUCTION_READINESS_TASKS.md) | All 23 tasks — 23/23 complete |
+| [Implementation Walkthrough](sprints/IMPLEMENTATION_WALKTHROUGH.md) | Audit findings, exact changes, best practices |
 
 ---
 
@@ -36,10 +21,12 @@ use the crawl or scrape tool to scrap those websites for use to get structure an
 | Doc | What it is |
 |---|---|
 | [Architecture](reference/ARCHITECTURE.md) | System overview, tech stack, data schema |
+| [Design Blueprint](reference/DESIGN_BLUEPRINT.md) | Authoritative CSS/design reference (schengenvisainfo.com crawl) |
 | [Data Trust Standard](reference/DATA_TRUST_STANDARD.md) | Evidence model, metric classes, approval-rate policy |
 | [Evidence Schema](reference/EVIDENCE_SCHEMA.md) | Evidence record fields and validation rules |
+| [Blog Post Blueprint](reference/BLOG_POST_BLUEPRINT.md) | Template and standards for new blog posts |
 | [SEO Architecture](reference/SEO_ARCHITECTURE.md) | Canonical tags, OG/Twitter, schema markup strategy |
-| [Tech Stack](reference/TECH_STACK.md) | Eleventy, Cloudflare Workers, Jest, Playwright |
+| [Tech Stack](reference/TECH_STACK.md) | Eleventy, Cloudflare Workers, Jest |
 | [Deployment](reference/DEPLOYMENT.md) | Wrangler deploy, verify, rollback |
 | [Privacy & Security](reference/PRIVACY_SECURITY_COMPLIANCE.md) | CSP, consent, GDPR/PECR notes |
 
@@ -49,7 +36,7 @@ use the crawl or scrape tool to scrap those websites for use to get structure an
 
 | Doc | What it is |
 |---|---|
-| [Country Source Manifest](data/country-source-review-manifest.json) | 26-country source review status — needs human sign-off |
+| [Country Source Manifest](data/country-source-review-manifest.json) | 27-country source review status — needs human sign-off |
 
 ---
 
@@ -76,21 +63,39 @@ use the crawl or scrape tool to scrap those websites for use to get structure an
 
 | Doc | What it is |
 |---|---|
-| [Sprint 3 — Growth](sprints/SPRINT_3_GROWTH.md) | Current sprint |
-| [UI Overwork Spec](sprints/UI_OVERWORK_SPEC.md) | All 14 UI tasks — complete |
+| [Enhancement Tasks](sprints/ENHANCEMENT_TASKS.md) | 12 enhancement tasks — 12/12 complete |
+| [UI Spotlight Plan](sprints/UI_SPOTLIGHT_PLAN.md) | UI assessment and action plan |
 | [Master Delivery Plan](sprints/MASTER_DELIVERY_PLAN.md) | Full project delivery timeline |
+| [Archive](archive/) | Superseded sprint and task documents |
 
 ---
 
-## Key numbers (2026-10-24)
+## Key numbers (2026-10-25)
 
 | Metric | Value |
 |---|---|
-| Countries | 26 |
-| Pathways | 59 (55 publishable / 4 research_required) |
+| Countries | 27 |
+| Pathways | 61 (55 publishable / 6 research_required) |
 | Evidence records | 193+ |
-| Blog posts | 17 |
+| Blog posts | 17 across 7 categories |
+| Sitemap URLs | 57 (pages + country pages + blog posts) |
 | Test suites | 18/18 PASS |
 | Tests | 139/139 PASS |
-| Generated HTML files | 183 |
+| OG image coverage | 21/21 static pages + blog template |
+| Schema markup | Organization + WebSite on homepage; Article + Breadcrumb on blog posts |
+| 404 page | ✅ |
+| PWA manifest | ✅ (image asset pending) |
 | Ad revenue | £0 — blocked on AdSense application |
+
+---
+
+## Owner actions outstanding
+
+| Action | Blocks |
+|---|---|
+| Create `public/assets/og-default.png` (1200×630px) | Social sharing cards |
+| Create `public/assets/icons/favicon.png` (32×32 + 180×180px) | Favicon fallback, PWA install |
+| Human sign-off on 27 country source anchors | `dataset.asOf` update |
+| Apply for AdSense | Revenue activation |
+| Legal review of privacy/disclaimer/terms | Phase 4 close |
+| Live ARIA audit (4 core pages) | Phase 0 close |

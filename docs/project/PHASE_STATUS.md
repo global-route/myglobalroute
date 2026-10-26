@@ -1,7 +1,8 @@
 # Phase Status — MyPathway2Global
 
-> **Reconciled:** 2026-10-25 | **Release:** GO — production live
-> **Production:** `https://mypathway2global.org.uk` | **Tests:** 18/18 suites, 139/139 passing | **Build:** 162 files, 0 errors
+> **Updated:** 2026-10-25 | **Release:** GO — production live
+> **Production:** `https://mypathway2global.org.uk` | **Tests:** 18/18 suites, 139/139 passing
+> **Commit:** `756196f`
 
 ---
 
@@ -10,14 +11,43 @@
 | Phase | Status | Open gates |
 |---|---|---|
 | 0 — Production integrity | **Complete** | Live-browser ARIA audit (owner) |
-| 1 — Migration intelligence | **Code complete** | Human source sign-off (26 countries), `dataset.asOf` update |
+| 1 — Migration intelligence | **Code complete** | Human source sign-off (27 countries), `dataset.asOf` update |
 | 2 — Canonical product core | **Complete** | — |
 | 3 — Content & acquisition | **Complete** | Editorial freshness ongoing |
 | 4 — Trust/compliance/accessibility | **Code complete** | Legal review, live ARIA audit, consent validation |
 | 5 — Growth/monetization | **Infrastructure complete** | AdSense publisher ID, live placement |
 | 6 — UI/UX transformation | **Complete** | — |
 | 7 — Rebrand | **Complete** | — |
-| 8 — Scale | **Not started** | Gated on Phases 0–5 |
+| 8 — Production readiness | **Complete** | Two image assets (owner action) |
+| 9 — Scale | **Not started** | Gated on Phases 0–5 |
+
+---
+
+## Phase 8 — Production Readiness ✅ (2026-10-25)
+
+All 23 production readiness tasks complete. See `docs/sprints/PRODUCTION_READINESS_TASKS.md`.
+
+### Completed
+- 27-country registry — tests, manifest, all UI copy updated
+- USA pathways added (US-student F-1, US-work H-1B) — 61 total pathways
+- `og:image`, `twitter:image`, `twitter:site` on all 21 pages + blog template
+- Favicon PNG fallback + `apple-touch-icon` + PWA manifest link on all pages
+- Organization + WebSite JSON-LD on homepage
+- `author` meta on blog post template
+- `sitemap.xml` — stale URL fixed, USA added, all 17 blog posts added
+- `robots.txt` — `Sitemap:` directive added
+- `public/manifest.json` created
+- `src/pages/404.html` created
+- Calculator null-cost explanatory state wired
+- Fake newsletter form replaced with honest callout
+- Contact page: unverified social block removed
+- `about-section` → `prose` consolidated across disclaimer/terms/privacy
+- Business playbook: related articles section added
+- Student playbook: emoji removed from badge
+
+### Owner actions remaining
+- `public/assets/og-default.png` — 1200×630px, navy `#10316b` bg, white wordmark
+- `public/assets/icons/favicon.png` — 32×32px + 180×180px export from existing SVG
 
 ---
 
@@ -26,10 +56,7 @@
 - **Global Route → MyPathway2Global** across all files
 - **Find My Route → Find MyPathway** everywhere
 - File renamed: `find-my-route.html` → `find-mypathway.html`
-- All 22 HTML files updated
-- All 17 blog posts updated
-- All templates updated
-- Meta tags, OG tags, footers, nav links all updated
+- All 22 HTML files, 17 blog posts, all templates updated
 
 ---
 
@@ -43,43 +70,37 @@
 - **No dark mode:** All `prefers-color-scheme: dark` removed
 - **No emojis:** All emoji icons removed
 
-### Homepage
-- Content-first editorial layout (no card grids)
-- H1 + credibility box + inline stats
-- Sections: "Why this exists", "How it works", "Start here", "Featured guides"
-- Link lists with real blog post URLs
-
-### Inner Pages
-- White page headers (no dark gradients)
-- Amber H2 underlines
-- Clean typography
+### Pages
+- White page headers (no dark gradients) on all pages
+- Content-first editorial layout on homepage
+- `.prose` class on all text-heavy pages (max-width 760px)
+- `.checklist` class on all requirement lists
 
 ---
 
 ## Phase 0 — Production integrity ✅
 
 - Cloudflare Workers deployment live and verified
-- 100 routes, 26 countries, 59 pathways, registries match source
+- 27 countries, 61 pathways, registries match source
 - 18/18 test suites, 139/139 tests passing
-- Build integrity, SEO/A11Y (162 files), lint all passing
-- CSP headers in `public/_headers` and `netlify.toml` (kept identical)
+- CSP headers in `public/_headers`
 
-**Open:** live-browser ARIA audit on 4 core pages (requires browser — owner action)
+**Open:** live-browser ARIA audit on 4 core pages (owner action)
 
 ---
 
 ## Phase 1 — Migration intelligence ✅ code / ⏳ owner
 
-- 26-country registry, 59 pathways (55 publishable / 4 research_required)
+- 27-country registry, 61 pathways (55 publishable / 6 research_required)
 - 55/55 publishable pathways have `requirements[]`
-- 4 research_required all have `permanentBlocker`
-- 193+ evidence records across primary-source-verified.json + 28 addenda
+- 6 research_required all have `permanentBlocker` or `scopeNote`
+- 193+ evidence records across primary-source-verified.json + addenda
 - Route engine: `{ matches, alternatives, missingInput, zeroFitExplanations }`
 - 180-day staleness detection on requirement `effectiveDate`
-- Country source manifest generated for all 26 countries
+- Country source manifest generated for all 27 countries
 
 **Open (owner):**
-- Set `humanSignOff: true` on all 26 manifest entries → `docs/data/country-source-review-manifest.json`
+- Set `humanSignOff: true` on all 27 manifest entries → `docs/data/country-source-review-manifest.json`
 - Update `dataset.asOf` after sign-off
 
 ---
@@ -107,18 +128,20 @@
   - 1 Policy Update (Canada SDS cancellation)
 - All fabricated approval rate claims removed
 - OG/Twitter tags on all pages
-- Canonical tags on all 162 generated HTML files
+- Canonical tags on all generated HTML files
 - Sabilytics analytics on all pages
+- All 17 blog posts in sitemap.xml
 
 ---
 
 ## Phase 4 — Trust/compliance/accessibility ✅ code / ⏳ owner
 
 - Privacy/terms/disclaimer rebuilt with canonical nav/footer
-- Newsletter mock replaced with honest "not yet available"
+- Newsletter fake form replaced with honest callout
 - PII console log removed
 - Heading hierarchy verified h1→h2→h3 on all pages
-- Consent UI: analytics and advertising consent separated, no dark patterns
+- Consent UI: analytics and advertising consent separated
+- `about-section` → `prose` consolidated
 
 **Open (owner):**
 - Legal review of privacy/disclaimer/terms
@@ -130,7 +153,7 @@
 ## Phase 5 — Growth/monetization ✅ infrastructure / ⏳ owner
 
 - Ad slot registry complete
-- Slot markup on blog.html and all 3 playbook pages
+- Slot markup on blog.html and all 3 playbook pages (all `hidden`)
 - `public/ads.txt` placeholder created
 - Sabilytics live on all pages
 
@@ -141,7 +164,7 @@
 
 ---
 
-## Phase 8 — Scale 🔒 not started
+## Phase 9 — Scale 🔒 not started
 
 Gated on: production integrity proven, data trust signed off, privacy reviewed, monetization live.
 

@@ -2,7 +2,7 @@
 
 **Evidence-gated migration intelligence for African Students, Professionals & Business Owners**
 
-**Current status (2026-10-25):** Active development — **production live**. Rebrand complete (Global Route → MyPathway2Global). UI transformed to content-first editorial layout. 18/18 test suites passing (139/139 tests). See [active sprint](docs/sprints/ACTIVE_SPRINT.md), [phase tracker](docs/project/PHASE_STATUS.md).
+**Current status (2026-10-25):** Active development — **production live**. All 23 production readiness tasks complete. 18/18 test suites passing (139/139 tests). See [active sprint](docs/sprints/ACTIVE_SPRINT.md), [phase tracker](docs/project/PHASE_STATUS.md).
 
 **Current data baseline:** 27 countries, 61 pathways (55 publishable / 6 research-required), 193+ evidence records; all 55 publishable pathways have structured requirements[].
 
@@ -73,18 +73,20 @@ MyPathway2Global is an evidence-gated mobility platform for African passport hol
 │   ├── data/                          # Countries, pathways, requirements, evidence
 │   ├── js/                            # App, route engine, calculator, analytics
 │   ├── css/                           # styles.css, responsive.css, enhancements.css
-│   ├── pages/                         # Static HTML pages
+│   ├── pages/                         # Static HTML pages (incl. 404.html)
 │   └── templates/                     # Eleventy templates
 ├── content/
 │   └── blog/                          # 17 blog posts (markdown)
 ├── scripts/                           # Validation, build, deploy scripts
 ├── tests/                             # Jest unit tests (18 suites, 139 tests)
 ├── docs/
-│   ├── project/                       # Phase status, roadmap
-│   ├── sprints/                       # Active sprint, UI spotlight plan
-│   ├── reference/                     # Architecture, design blueprint
-│   └── data/                          # Country source manifest
-├── public/                            # Static assets
+│   ├── project/                       # Phase status, roadmap, task spec
+│   ├── sprints/                       # Active sprint, walkthrough, task files
+│   ├── reference/                     # Architecture, design blueprint, SEO
+│   ├── monetization/                  # Revenue roadmap, ad placement
+│   ├── data/                          # Country source manifest
+│   └── archive/                       # Superseded sprint documents
+├── public/                            # Static assets (sitemap, robots, manifest)
 └── wrangler.jsonc                     # Cloudflare Workers config
 ```
 
@@ -115,7 +117,8 @@ npx wrangler deploy
 
 - [Active Sprint](docs/sprints/ACTIVE_SPRINT.md)
 - [Phase Status](docs/project/PHASE_STATUS.md)
-- [UI Spotlight Plan](docs/sprints/UI_SPOTLIGHT_PLAN.md)
+- [Implementation Walkthrough](docs/sprints/IMPLEMENTATION_WALKTHROUGH.md)
+- [Production Readiness Tasks](docs/sprints/PRODUCTION_READINESS_TASKS.md)
 - [Design Blueprint](docs/reference/DESIGN_BLUEPRINT.md)
 - [Architecture](docs/reference/ARCHITECTURE.md)
 

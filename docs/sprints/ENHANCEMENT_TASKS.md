@@ -90,10 +90,10 @@
 
 ---
 
-## Task 12: Calculator Data Note (LOW) ⏳ DEFERRED
+## Task 12: Calculator Data Note (LOW) ✅ COMPLETE
 **Issue:** Calculator results empty due to null trueCost
-**Status:** Deferred — requires data population effort
-**Note:** Calculator already shows explanatory text when no results
+**Fix:** Added `.ns_callout` explanatory note inside results container; JS wired to show when all trueCost values are null
+**Files:** `src/pages/calculator.html`, `src/js/app.js`
 
 ---
 
@@ -112,9 +112,9 @@
 | 9. Data date | LOW | ✅ Complete |
 | 10. Mobile nav | LOW | ✅ Verified |
 | 11. Playbook links | LOW | ✅ Complete |
-| 12. Calculator note | LOW | ⏳ Deferred |
+| 12. Calculator note | LOW | ✅ Complete |
 
-**Result:** 11/12 tasks complete, 1 deferred (requires data work)
+**Result:** 12/12 tasks complete
 
 ---
 

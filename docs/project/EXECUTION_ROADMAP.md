@@ -1,10 +1,10 @@
 # Global Route — Master Execution Roadmap
 
-**Version:** 2.4.0  
-**Status:** Active execution  
-**Reconciled:** 2026-10-18 (session 2)
+**Version:** 2.5.0
+**Status:** Active execution
+**Reconciled:** 2026-10-25
 
-> Last verified implementation/data checkpoint: `89998ab5410aceb6dede8e997dae0b836d3b4d92` (2026-10-11). Testing and CI are paused by user direction; all changes since that SHA are unvalidated on live runners. Use `ACTIVE_SPRINT.md` and `PHASE_STATUS.md` for current status.
+> Last verified implementation/data checkpoint: `756196f` (2026-10-25). Tests: 18/18 suites, 139/139 passing.
 
 > The original Global Route vision is preserved. Execution priority is corrected from the repository's actual state: production integrity and trustworthy migration intelligence precede content and growth scaling.
 
@@ -56,8 +56,8 @@ The remaining P0 work is decomposed in `docs/sprints/P0_DELIVERY_PLAN.md` and tr
 - [x] Separate publishability from evidence coverage and expose evidence trails in pathway pages.
 - [x] Distinguish required evidence from unsupported estimates; approval rates/costs/timelines remain null where not evidenced.
 - [x] Establish material-field requirements by pathway type.
-- [x] Add 26-country evidence-gated registry without fabricating missing data.
-- [x] Maintain 59 canonical pathway records across 26 countries.
+- [x] Add 27-country evidence-gated registry without fabricating missing data.
+- [x] Maintain 61 canonical pathway records across 27 countries.
 - [x] Add dated field-level primary-source evidence across registry and addenda.
 - [x] Establish exact legal subroute candidate architecture outside the canonical 52.
 - [x] Complete material-field evidence audit for remaining pathways.
@@ -65,7 +65,7 @@ The remaining P0 work is decomposed in `docs/sprints/P0_DELIVERY_PLAN.md` and tr
 - [x] Expand evidence batches until the highest-value pathways can safely become publishable.
 - [ ] Establish production freshness/review automation beyond local validation.
 
-**Current registry checkpoint (2026-10-18 session 2):** 26 countries / 59 canonical pathways; 55 publishable and 4 research_required. All 55 publishable pathways have structured requirements[]. 4 research_required all have permanentBlocker. 3 AU subclass pathways added (189/190/491). Route engine returns `{ matches, alternatives, missingInput }` with 180-day staleness detection.
+**Current registry checkpoint (2026-10-25):** 27 countries / 61 canonical pathways; 55 publishable and 6 research_required. All 55 publishable pathways have structured requirements[]. 6 research_required all have permanentBlocker or scopeNote.
 
 ## Phase 2 — Canonical Product Core (P0)
 
@@ -125,8 +125,8 @@ The remaining P0 work is decomposed in `docs/sprints/P0_DELIVERY_PLAN.md` and tr
 
 | Gate | State | Rule |
 |---|---|---|
-| 26-country registry | Complete | Evidence-gated; no fabricated claims |
-| 59 pathways | Complete | 55 publishable; 4 research-required; all 55 have requirements[] |
+| 27-country registry | Complete | Evidence-gated; no fabricated claims |
+| 61 pathways | Complete | 55 publishable; 6 research-required; all 55 have requirements[] |
 | Field-level evidence | Active | Expanding through exact-route batches |
 | Exact subroute architecture | Complete | Candidates remain outside canonical 52 until promotion |
 | Route engine | Complete | Hard publishability/evidence gate |

@@ -1,15 +1,15 @@
 # Active Sprint — Growth & Polish
 
-> **Updated:** 2026-10-25 | **Branch:** `main` | **Release:** GO — production live
+> **Updated:** 2026-10-25 | **Branch:** `main` | **Commit:** `756196f`
 > **Production:** `https://mypathway2global.org.uk` (Cloudflare Workers — `globalroute`)
-> **Tests:** 18/18 suites, 139/139 passing | **CI:** paused by user direction
+> **Tests:** 18/18 suites, 139/139 passing
 
 ---
 
 ## Sprint goal
 
-Move from a complete, verified product to a competitive, revenue-generating platform.
-Rebrand complete. UI transformed to content-first editorial layout. Focus now on schema, engine depth, revenue and trust closure.
+All production readiness tasks complete. Platform is clean, SEO-ready, and trust-consistent.
+Next focus: schema depth, route engine inputs, analytics wiring, and revenue activation.
 
 ---
 
@@ -17,21 +17,21 @@ Rebrand complete. UI transformed to content-first editorial layout. Focus now on
 
 | Task | Status |
 |---|---|
-| Rebrand: Global Route → MyPathway2Global | ✅ Complete |
-| Rebrand: Find My Route → Find MyPathway | ✅ Complete |
-| File rename: find-my-route.html → find-mypathway.html | ✅ Complete |
-| Homepage: content-first editorial layout | ✅ Complete |
-| CSS: `.stats-inline`, `.content-section`, `.numbered-list`, `.link-list` | ✅ Complete |
-| Cache busting: `?v=2` on all CSS links | ✅ Complete |
-| Dark mode removal: all `prefers-color-scheme` blocks | ✅ Complete |
-| Emoji removal: all UI emoji icons | ✅ Complete |
-| Hero removal: all dark gradient heroes → white page headers | ✅ Complete |
-| Docs: UI_SPOTLIGHT_PLAN.md created | ✅ Complete |
-| Docs: README, CHANGELOG, PHASE_STATUS updated | ✅ Complete |
-| Blog: BLOG_POST_BLUEPRINT.md created | ✅ Complete |
-| Blog: blog-post.html template rewritten (clean editorial) | ✅ Complete |
-| Blog: blog-post.css rewritten (no gradients, white header) | ✅ Complete |
-| Blog: blog-post.js created (TOC, progress, share) | ✅ Complete |
+| Production readiness: all 23 tasks | ✅ Complete |
+| 27-country registry + USA pathways (61 total) | ✅ Complete |
+| og:image + twitter:image on all 21 pages + blog template | ✅ Complete |
+| Favicon PNG fallback + apple-touch-icon + manifest link on all pages | ✅ Complete |
+| Organization + WebSite JSON-LD on homepage | ✅ Complete |
+| sitemap.xml — stale URL fixed, USA added, 17 blog posts added | ✅ Complete |
+| robots.txt — Sitemap: directive added | ✅ Complete |
+| public/manifest.json created | ✅ Complete |
+| src/pages/404.html created | ✅ Complete |
+| Calculator null-cost explanatory state | ✅ Complete |
+| Fake newsletter form → honest callout | ✅ Complete |
+| Contact page: unverified social block removed | ✅ Complete |
+| about-section → prose consolidated (3 pages) | ✅ Complete |
+| Implementation walkthrough doc created | ✅ Complete |
+| CHANGELOG, PHASE_STATUS, INDEX, ACTIVE_SPRINT updated | ✅ Complete |
 
 ---
 
@@ -39,30 +39,32 @@ Rebrand complete. UI transformed to content-first editorial layout. Focus now on
 
 | ID | Task | Owner | Status | Exit condition |
 |---|---|---|---|---|
-| S3-S1 | Add FAQPage schema to `faq.html` | Code | **Open** | `task seo:add-faq-schema` + build + deploy |
-| S3-S2 | Add Article schema to `blog-post.njk` | Code | **Open** | `task seo:add-article-schema` + build + deploy |
-| S3-S3 | Add BreadcrumbList schema to `countries.njk` | Code | **Open** | `task seo:add-breadcrumb-schema` + build + deploy |
-| S3-S4 | Regenerate sitemap with `lastmod` dates | Code | **Open** | `task seo:sitemap-lastmod` + deploy |
-| S3-E1 | Add budget/income/experience inputs to Find MyPathway | Code | **Open** | `task engine:add-profile-inputs` + test + deploy |
-| S3-A1 | Wire `route_search_started` analytics event | Code | **Open** | `task analytics:audit` → add 2 `track()` calls |
+| S3-S1 | Add FAQPage schema to `faq.html` | Code | **Open** | JSON-LD added, Google Rich Results Test passes |
+| S3-S2 | Add Article schema to `blog-post.njk` | Code | **Done** | Article + Breadcrumb schema already in template |
+| S3-S3 | Add BreadcrumbList schema to `countries.njk` | Code | **Open** | JSON-LD added to Eleventy template |
+| S3-S4 | Sitemap with lastmod | Code | **Done** | All 57 URLs in sitemap.xml with lastmod dates |
+| S3-E1 | Add budget/income/experience inputs to Find MyPathway | Code | **Open** | Profile inputs wired to route engine |
+| S3-A1 | Wire `route_search_started` analytics event | Code | **Open** | 2 `track()` calls added, verified in Sabilytics |
 | S3-R1 | Apply for AdSense | Owner | **Open** | Publisher ID received |
-| S3-R2 | Populate `public/ads.txt` | Owner | **Open** | `task revenue:ads-txt PUBLISHER_ID=...` |
-| S3-R3 | Activate AdSense script on blog/playbook pages | Code | **Blocked on S3-R1** | `task revenue:activate-adsense` |
-| S3-R4 | Unhide ad slots | Code | **Blocked on S3-R3** | `task revenue:unhide-ad-slots` |
+| S3-R2 | Populate `public/ads.txt` | Owner | **Open** | Real publisher ID in ads.txt |
+| S3-R3 | Activate AdSense script on blog/playbook pages | Code | **Blocked on S3-R1** | Script live, consent-gated |
+| S3-R4 | Unhide ad slots | Code | **Blocked on S3-R3** | Slots visible, labeled "Advertisement" |
 | S3-T1 | ARIA audit — 4 core pages | Owner | **Open** | 0 critical/serious axe violations |
 | S3-T2 | Legal review — privacy/disclaimer/terms | Owner | **Open** | Solicitor sign-off |
-| S3-T3 | Country source sign-off (26 entries) | Owner | **Open** | `humanSignOff: true` on all 26 manifest entries |
+| S3-T3 | Country source sign-off (27 entries) | Owner | **Open** | `humanSignOff: true` on all 27 manifest entries |
 | S3-T4 | Update `dataset.asOf` | Owner | **Blocked on S3-T3** | After manifest sign-off |
-| S3-C1 | Write 3 new country audits (UK, Australia, Italy depth) | Owner | **Open** | Published, evidence-gated, source-linked |
-| S3-C2 | Set up email capture (Mailchimp) | Owner | **Open** | `task content:email-capture-setup` |
+| S3-C1 | Write 3 new country audits (Australia, France, Netherlands) | Owner | **Open** | Published, evidence-gated, source-linked |
+| S3-C2 | Set up email capture (Mailchimp/ConvertKit) | Owner | **Open** | Real form live, privacy page updated |
+| S3-I1 | Create OG image asset | Owner | **Open** | `public/assets/og-default.png` 1200×630px |
+| S3-I2 | Create favicon PNG asset | Owner | **Open** | `public/assets/icons/favicon.png` 32×32 + 180×180px |
 
 ---
 
-## Content backlog (Task 8)
+## Content backlog
 
 ### Missing country audits (high priority)
 | Country | Traffic potential | Status |
-|---------|------------------|--------|
+|---|---|---|
 | Australia | High | Not started |
 | France | High | Not started |
 | Netherlands | Medium | Not started |
@@ -131,12 +133,13 @@ Rebrand complete. UI transformed to content-first editorial layout. Focus now on
 
 ## Priority order
 
-1. **S3-S1 → S3-S4** — schema + sitemap (1–2 hrs, compounds immediately in search)
-2. **S3-E1** — route engine profile inputs (1 hr, product differentiation)
-3. **S3-A1** — analytics wiring (30 min, funnel visibility)
-4. **S3-R1 → S3-R4** — revenue (owner action first, then code)
-5. **S3-T1 → S3-T4** — trust closure (owner actions)
-6. **S3-C1 → S3-C2** — content scale (owner actions)
+1. **S3-I1 + S3-I2** — image assets (owner, unblocks OG cards and favicon)
+2. **S3-S1 + S3-S3** — schema depth (30 min code, compounds in search)
+3. **S3-E1** — route engine profile inputs (product differentiation)
+4. **S3-A1** — analytics wiring (funnel visibility)
+5. **S3-R1 → S3-R4** — revenue (owner action first, then code)
+6. **S3-T1 → S3-T4** — trust closure (owner actions)
+7. **S3-C1 → S3-C2** — content scale (owner actions)
 
 ---
 
@@ -148,12 +151,13 @@ Rebrand complete. UI transformed to content-first editorial layout. Focus now on
 | Pathways | 61 (55 publishable / 6 research_required) |
 | Evidence records | 193+ |
 | Blog posts | 17 across 7 categories |
+| Sitemap URLs | 57 |
 | Test suites | 18/18 PASS |
 | Tests | 139/139 PASS |
-| Build | 162 files, 0 errors |
-| Rebrand | ✅ Complete (Global Route → MyPathway2Global) |
-| UI transformation | ✅ Complete (content-first editorial) |
+| OG image coverage | 21/21 pages + blog template (image asset pending) |
 | Schema markup | Organization + WebSite on homepage; Article + Breadcrumb on blog posts |
+| 404 page | ✅ |
+| PWA manifest | ✅ (image asset pending) |
 | Ad revenue | £0 — blocked on AdSense application |
 
 ---
@@ -171,7 +175,9 @@ node scripts/verify-build.js         # build integrity check
 
 ## Owner actions (no code blocked)
 
-- **AdSense:** apply at https://adsense.google.com — use `mypathway2global.org.uk`
-- **Country sign-off:** open `docs/data/country-source-review-manifest.json`, set `humanSignOff: true` on all 26 entries
-- **Legal review:** see `task trust:legal-review-checklist`
+- **OG image:** Create `public/assets/og-default.png` — 1200×630px, navy `#10316b` bg, white "MyPathway2Global" wordmark
+- **Favicon PNG:** Export `public/assets/icons/favicon.png` from existing SVG — 32×32px + 180×180px
+- **AdSense:** Apply at https://adsense.google.com — use `mypathway2global.org.uk`
+- **Country sign-off:** Open `docs/data/country-source-review-manifest.json`, set `humanSignOff: true` on all 27 entries
+- **Legal review:** Privacy, disclaimer, terms pages
 - **ARIA audit:** Chrome DevTools → axe extension on homepage, Find MyPathway, Calculator, any country page
