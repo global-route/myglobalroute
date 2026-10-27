@@ -19,7 +19,7 @@
 | 6 — UI/UX transformation | **Complete** | — |
 | 7 — Rebrand | **Complete** | — |
 | 8 — Production readiness | **Complete** | Two image assets (owner action) |
-| 9 — Scale & Wizard | **Complete** | W2-5 wizard test suite (deferred); W3-3 FMP extension routes (deferred); S3-S1/S3-S3 schema open |
+| 9 — Scale & Wizard | **Complete** | W2-5 wizard test suite (deferred); W3-3 FMP extension routes (deferred) |
 
 ---
 

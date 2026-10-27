@@ -58,16 +58,16 @@ See `docs/sprints/WIZARD_PLAN.md` for full wizard architecture.
 ### Schema & SEO
 | ID | Task | Owner | Status | Exit condition |
 |---|---|---|---|---|
-| S3-S1 | Add FAQPage schema to `faq.html` | Code | **Open** | JSON-LD added, Google Rich Results Test passes |
+| S3-S1 | Add FAQPage schema to `faq.html` | Code | **Done** | FAQPage JSON-LD present with 5 Q&A entries |
 | S3-S2 | Add Article schema to `blog-post.njk` | Code | **Done** | Article + Breadcrumb schema already in template |
-| S3-S3 | Add BreadcrumbList schema to `countries.njk` | Code | **Open** | JSON-LD added to Eleventy template |
-| S3-S4 | Sitemap with lastmod | Code | **Done** | All 57 URLs in sitemap.xml with lastmod dates |
+| S3-S3 | Add BreadcrumbList schema to `countries.njk` | Code | **Done** | BreadcrumbList JSON-LD in `countries.html` `<head>` |
+| S3-S4 | Sitemap with lastmod | Code | **Done** | All 64 URLs in sitemap.xml with lastmod dates |
 
 ### Route engine & analytics
 | ID | Task | Owner | Status | Exit condition |
 |---|---|---|---|---|
 | S3-E1 | Add budget/income/experience inputs to Find MyPathway | Code | **Done** | Already wired in current form |
-| S3-A1 | Wire `route_search_started` analytics event | Code | **Open** | 2 `track()` calls added, verified in Sabilytics |
+| S3-A1 | Wire `route_search_started` analytics event | Code | **Done** | Fires on form submit in `find-mypathway.html` line 235; `route_recommendation_generated` also wired |
 
 ### Revenue
 | ID | Task | Owner | Status | Exit condition |
