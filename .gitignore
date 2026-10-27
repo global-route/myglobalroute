@@ -68,3 +68,23 @@ venv/
 log.md
 test-results/
 playwright-report/
+
+# Private/local-only planning (never commit these files)
+# Note: ignored paths are for local copies; already-tracked files must be removed
+# from the Git index before these rules can keep them out of the repository.
+internal/
+.internal/
+docs/internal/
+docs/internal\ doc\ \&\ files/
+docs/internal doc & files/
+docs/private/
+docs/confidential/
+docs/strategy/private/
+*.private.md
+*.confidential.md
+
+# Local owner planning and finance exports
+OWNER_ACTIONS.local.md
+FINANCIAL_MODEL.local.md
+TEAM_ROLES.local.md
+TIMELINE.local.md
