@@ -1,101 +1,95 @@
 # MyPathway2Global — Documentation Index
 
-> **Updated:** 2026-10-25 | **Production:** `https://mypathway2global.org.uk`
-> **Tests:** 18/18 suites, 139/139 passing | **Commit:** `756196f`
-
----
+> **Updated:** 2026-10-27  
+> **Purpose:** Canonical map for public project documentation. Keep one current source of truth per topic; dated or superseded execution notes belong in `archive/`.
 
 ## Start here
 
-| Doc | What it is |
+| Need | Canonical document |
 |---|---|
-| [Active Sprint](sprints/ACTIVE_SPRINT.md) | Current task board, priority order, owner actions |
-| [Phase Status](project/PHASE_STATUS.md) | Phase 0–9 completion state, open gates |
-| [Production Readiness Tasks](sprints/PRODUCTION_READINESS_TASKS.md) | All 23 tasks — 23/23 complete |
-| [Implementation Walkthrough](sprints/IMPLEMENTATION_WALKTHROUGH.md) | Audit findings, exact changes, best practices |
+| Current sprint, priorities and blockers | [Active Sprint](sprints/ACTIVE_SPRINT.md) |
+| Owner-side actions and external dependencies | [Owner Actions](sprints/OWNER_ACTIONS.md) |
+| Phase status and exit gates | [Phase Status](project/PHASE_STATUS.md) |
+| Overall delivery plan | [Execution Roadmap](project/EXECUTION_ROADMAP.md) |
+| Release evidence / deployment state | [Release Verification](project/RELEASE_VERIFICATION_2026-10-08.md) |
+| UI redesign findings and Figma handoff | [UI/UX Audit & Classic Design Roadmap](product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md) |
+| Documentation structure and ownership | [Documentation Map](README.md) |
 
----
+## Project planning
 
-## Reference
+- [Phase Status](project/PHASE_STATUS.md) — phase completion and open gates.
+- [Execution Roadmap](project/EXECUTION_ROADMAP.md) — overall sequence and dependencies.
+- [Task Specification](project/TASK_SPEC.md) — task-level requirements.
+- [Active Sprint](sprints/ACTIVE_SPRINT.md) — current source of truth for sprint execution.
+- [Master Delivery Plan](sprints/MASTER_DELIVERY_PLAN.md) — longer-horizon plan.
+- [P0 Delivery Plan](sprints/P0_DELIVERY_PLAN.md) — release-critical work and acceptance conditions.
+- [Production Readiness Tasks](sprints/PRODUCTION_READINESS_TASKS.md) — production readiness checklist.
+- [Enhancement Tasks](sprints/ENHANCEMENT_TASKS.md) — product improvements.
+- [Owner Actions](sprints/OWNER_ACTIONS.md) — owner-managed actions and dependencies.
+- [Archive](archive/) — historical/superseded planning and execution records; not current status.
 
-| Doc | What it is |
-|---|---|
-| [Architecture](reference/ARCHITECTURE.md) | System overview, tech stack, data schema |
-| [Design Blueprint](reference/DESIGN_BLUEPRINT.md) | Authoritative CSS/design reference (schengenvisainfo.com crawl) |
-| [Data Trust Standard](reference/DATA_TRUST_STANDARD.md) | Evidence model, metric classes, approval-rate policy |
-| [Evidence Schema](reference/EVIDENCE_SCHEMA.md) | Evidence record fields and validation rules |
-| [Blog Post Blueprint](reference/BLOG_POST_BLUEPRINT.md) | Template and standards for new blog posts |
-| [SEO Architecture](reference/SEO_ARCHITECTURE.md) | Canonical tags, OG/Twitter, schema markup strategy |
-| [Tech Stack](reference/TECH_STACK.md) | Eleventy, Cloudflare Workers, Jest |
-| [Deployment](reference/DEPLOYMENT.md) | Wrangler deploy, verify, rollback |
-| [Privacy & Security](reference/PRIVACY_SECURITY_COMPLIANCE.md) | CSP, consent, GDPR/PECR notes |
+## Product and design
 
----
+- [UI/UX Audit & Classic Design Roadmap](product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md) — screenshot findings, classic UI principles, Figma workflow and proposed UI sprints.
+- [UI Optimisation Sprint](sprints/UI_OPTIMISATION_SPRINT.md)
+- [UI Overwork Specification](sprints/UI_OVERWORK_SPEC.md)
+- [UI Transformation](sprints/UI_UX_TRANSFORM.md)
+- [UI Spotlight Plan](sprints/UI_SPOTLIGHT_PLAN.md)
+- [Wizard Plan](sprints/WIZARD_PLAN.md)
 
-## Data
+## Technical reference
 
-| Doc | What it is |
-|---|---|
-| [Country Source Manifest](data/country-source-review-manifest.json) | 27-country source review status — needs human sign-off |
+- [Architecture](reference/ARCHITECTURE.md)
+- [Technology Stack](reference/TECH_STACK.md)
+- [Dependencies](reference/DEPENDENCIES.md)
+- [Deployment](reference/DEPLOYMENT.md)
+- [Design Blueprint](reference/DESIGN_BLUEPRINT.md)
+- [Data Trust Standard](reference/DATA_TRUST_STANDARD.md)
+- [Evidence Schema](reference/EVIDENCE_SCHEMA.md)
+- [Privacy and Security](reference/PRIVACY_SECURITY_COMPLIANCE.md)
+- [SEO Architecture](reference/SEO_ARCHITECTURE.md)
+- [Pages Required](reference/PAGES_REQUIRED.md)
+- [Blueprint to Execution](reference/BLUEPRINT_TO_EXECUTION.md)
+- [Original Project Blueprint](reference/Global%20Route%20Blueprint.md) — retained as a historical vision/reference; current evidence and trust standards take precedence where older claims conflict.
 
----
+## Data and evidence
 
-## Monetization
+- [Country Source Review Manifest](data/country-source-review-manifest.json) — country-source review status and sign-off tracking.
+- [Evidence Schema](reference/EVIDENCE_SCHEMA.md)
+- [Data Trust Standard](reference/DATA_TRUST_STANDARD.md)
 
-| Doc | What it is |
-|---|---|
-| [Monetization Roadmap](monetization/MONETIZATION_ROADMAP.md) | M0 complete, M1 partial, M2 blocked on publisher ID |
-| [Ad Placement Map](monetization/AD_PLACEMENT_MAP.md) | Which slots go on which pages |
-| [AdSense Strategy](monetization/ADSENSE_STRATEGY.md) | Application checklist, placement rules, revenue model |
+## Monetization and revenue
 
----
+- [Monetization Roadmap](monetization/MONETIZATION_ROADMAP.md)
+- [Monetization Registry](monetization/MONETIZATION_REGISTRY.md) — runtime inventory and commercial firewall.
+- [Revenue Architecture](monetization/REVENUE_ARCHITECTURE.md)
+- [AdSense Strategy](monetization/ADSENSE_STRATEGY.md)
+- [Ad Placement Map](monetization/AD_PLACEMENT_MAP.md)
+- [Affiliate Strategy](monetization/AFFILIATE_STRATEGY.md)
+- [Partner Revenue](monetization/PARTNER_REVENUE.md)
+- [Measurement Implementation](monetization/MEASUREMENT_IMPLEMENTATION.md)
+- [Revenue Metrics](monetization/REVENUE_METRICS.md)
+- [MRR Model](monetization/MRR_MODEL.md)
 
-## Guides
+> Monetization strategy and implementation documentation is public repository documentation. Do not store credentials, publisher secrets, private contracts, bank details or confidential forecasts in these files.
 
-| Doc | What it is |
-|---|---|
-| [Contributing](guides/CONTRIBUTING.md) | How to add countries, pathways, evidence records |
-| [Quick Start](guides/QUICK_START.md) | Dev setup in 5 minutes |
+## Guides and content
 
----
+- [Quick Start](guides/QUICK_START.md)
+- [Contributing](guides/CONTRIBUTING.md)
+- [Content Strategy](guides/CONTENT_STRATEGY.md)
+- [Blueprint Implementation](guides/BLUEPRINT_IMPLEMENTATION.md)
+- [AdMob Integration Guide](guides/ADMOB_INTEGRATION.md) — historical/general guide; verify against current AdSense and monetization registry before following.
+- [Blog Structure](phase-3/BLOG_STRUCTURE.md)
+- [Blog Posts Guide](phase-3/BLOG_POSTS_GUIDE.md)
+- [Privacy Data Inventory](phase-4/PRIVACY_DATA_INVENTORY.md)
 
-## Sprint history
+## Historical material
 
-| Doc | What it is |
-|---|---|
-| [Enhancement Tasks](sprints/ENHANCEMENT_TASKS.md) | 12 enhancement tasks — 12/12 complete |
-| [UI Spotlight Plan](sprints/UI_SPOTLIGHT_PLAN.md) | UI assessment and action plan |
-| [Master Delivery Plan](sprints/MASTER_DELIVERY_PLAN.md) | Full project delivery timeline |
-| [Archive](archive/) | Superseded sprint and task documents |
+Use `docs/archive/` for dated handovers, old task plans, checkpoint reports and superseded assessments. Do not treat archived metrics, test counts, hosting claims or checkboxes as current without checking the active sprint, phase tracker and latest release evidence.
 
----
+## Confidential/local-only documents
 
-## Key numbers (2026-10-25)
+Private operational plans, individual role details, internal timelines and financial forecasts are not stored in this public repository. Keep local copies under ignored paths such as `docs/internal/`, `docs/private/` or `internal/`. See the root `.gitignore`.
 
-| Metric | Value |
-|---|---|
-| Countries | 27 |
-| Pathways | 61 (55 publishable / 6 research_required) |
-| Evidence records | 193+ |
-| Blog posts | 17 across 7 categories |
-| Sitemap URLs | 57 (pages + country pages + blog posts) |
-| Test suites | 18/18 PASS |
-| Tests | 139/139 PASS |
-| OG image coverage | 21/21 static pages + blog template |
-| Schema markup | Organization + WebSite on homepage; Article + Breadcrumb on blog posts |
-| 404 page | ✅ |
-| PWA manifest | ✅ (image asset pending) |
-| Ad revenue | £0 — blocked on AdSense application |
-
----
-
-## Owner actions outstanding
-
-| Action | Blocks |
-|---|---|
-| Create `public/assets/og-default.png` (1200×630px) | Social sharing cards |
-| Create `public/assets/icons/favicon.png` (32×32 + 180×180px) | Favicon fallback, PWA install |
-| Human sign-off on 27 country source anchors | `dataset.asOf` update |
-| Apply for AdSense | Revenue activation |
-| Legal review of privacy/disclaimer/terms | Phase 4 close |
-| Live ARIA audit (4 core pages) | Phase 0 close |
+**Important:** Git ignore rules do not hide files that are already tracked. Never put credentials or sensitive commercial details in a committed document; if a secret was committed, rotate it and remove it from repository history as appropriate.
