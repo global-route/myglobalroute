@@ -11,22 +11,62 @@ permalink: "/blog/index.html"
   <meta name="description" content="MyPathway2Global research, country audits, student playbooks, professional playbooks, business playbooks and policy updates.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <title>Research & Migration Guides | MyPathway2Global</title>
+  <link rel="stylesheet" href="/css/styles.css?v=3">
+  <link rel="stylesheet" href="/css/responsive.css?v=3">
+  <link rel="stylesheet" href="/css/enhancements.css?v=3">
   <link rel="canonical" href="https://mypathway2global.org.uk/blog/">
-  <link rel="stylesheet" href="/css/styles.css?v=2">
-  <link rel="stylesheet" href="/css/responsive.css?v=2">
+  <meta property="og:title" content="Research & Migration Guides | MyPathway2Global">
+  <meta property="og:description" content="Country audits, student playbooks, professional playbooks and policy updates for African passport holders.">
+  <meta property="og:url" content="https://mypathway2global.org.uk/blog/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://mypathway2global.org.uk/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://mypathway2global.org.uk/assets/og-default.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/icons/favicon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#10316b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8077583188666813" crossorigin="anonymous"></script>
 </head>
-<body>
+<body data-page-type="blog">
   <a href="#main" class="skip-link">Skip to main content</a>
-  <header class="header"><div class="header-container"><div class="logo"><a href="/" class="logo-link"><span class="logo-icon">🌍</span><span class="logo-text">MyPathway2Global</span></a></div><nav class="navigation" aria-label="Primary"><ul class="nav-menu"><li><a href="/">Home</a></li><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-mypathway.html">Find MyPathway</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Research</a></li></ul></nav></div></header>
+  <header id="header" class="header"><div class="header-container"><div class="logo"><a href="/" class="logo-link"><span class="logo-text">MyPathway2Global</span></a></div><nav class="navigation" aria-label="Primary"><button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button><ul class="nav-menu"><li><a href="/">Home</a></li><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-mypathway.html">Find MyPathway</a></li><li><a href="/pages/visa-wizard.html" class="nav-cta">Visa Wizard</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Blog</a></li><li><a href="/pages/about.html">About</a></li></ul></nav></div></header>
+
   <main id="main" class="main">
-    <section class="hero"><div class="hero-content"><p><a href="/">← MyPathway2Global</a></p><h1>Research & Migration Guides</h1><p class="hero-subtitle">Educational content is an acquisition layer; pathway facts remain governed by the evidence registry and official sources.</p></div></section>
-    <section class="container" style="padding:3rem 1rem"><div class="featured-grid">
-      {% for post in collections.blog | reverse %}
-      <article class="featured-card"><p>{{ post.date | readableDate }}</p><h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2><p>{{ post.data.description or post.data.excerpt or 'Migration research and practical guidance from MyPathway2Global.' }}</p><a class="btn-link" href="{{ post.url }}">Read article →</a></article>
-      {% endfor %}
-    </div></section>
-    <section class="cta-final"><div class="container"><h2>Need a route, not just an article?</h2><p>Use the evidence-gated route finder for pathway-level recommendations.</p><a href="/pages/find-mypathway.html" class="btn btn-primary btn-large">Find MyPathway</a></div></section>
+    <div class="page-header">
+      <div class="container">
+        <span class="page-header-badge">21 Posts</span>
+        <h1>Research & Migration Guides</h1>
+        <p class="page-header-subtitle">Country audits, playbooks, case studies and policy updates. All claims sourced from official authorities.</p>
+      </div>
+    </div>
+
+    <section class="container" style="padding:3rem 1rem">
+      <div class="featured-grid">
+        {% for post in collections.blog | reverse %}
+        <article class="featured-card">
+          <p style="font-size:0.8rem;color:var(--color-neutral-500);margin-bottom:0.5rem;">{{ post.date | readableDate }}</p>
+          <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+          <p>{{ post.data.description or post.data.excerpt or 'Migration research and practical guidance from MyPathway2Global.' }}</p>
+          <a class="btn-link" href="{{ post.url }}">Read article &rarr;</a>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="cta-final"><div class="container"><h2>Need a route, not just an article?</h2><p>Use the evidence-gated route finder for pathway-level recommendations.</p><div class="cta-buttons"><a href="/pages/find-mypathway.html" class="btn btn-primary btn-large">Find MyPathway</a><a href="/pages/visa-wizard.html" class="btn btn-secondary btn-large">Visa Wizard</a></div></div></section>
   </main>
-  <footer class="footer"><div class="footer-bottom"><p>&copy; 2026 MyPathway2Global. Evidence-gated migration intelligence.</p></div></footer>
+
+  <div class="disclaimer-bar"><p>General information only - not legal or immigration advice. Always verify current requirements with the relevant authority before paying fees or submitting an application. <a href="/pages/disclaimer.html">Full disclaimer &rarr;</a></p></div>
+  <footer id="footer" class="footer"><div class="footer-content"><div class="footer-section"><h4>MyPathway2Global</h4><p>Evidence-gated global mobility intelligence.</p><p style="font-size:0.78rem;opacity:0.7;margin-top:0.5rem;">Independent platform. Not affiliated with any government.</p></div><div class="footer-section"><h4>Explore</h4><ul><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-mypathway.html">Find MyPathway</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Blog</a></li></ul></div><div class="footer-section"><h4>Guides</h4><ul><li><a href="/pages/student-playbook.html">Student</a></li><li><a href="/pages/professional-playbook.html">Professional</a></li><li><a href="/pages/business-playbook.html">Business</a></li></ul></div><div class="footer-section"><h4>Trust</h4><ul><li><a href="/pages/privacy.html">Privacy</a></li><li><a href="/pages/disclaimer.html">Disclaimer</a></li><li><a href="/pages/terms.html">Terms</a></li><li><a href="/pages/contact.html">Contact</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 MyPathway2Global. All rights reserved.</p></div></footer>
+
+  <script src="/js/monetization.js"></script>
+  <script src="/js/analytics.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/admob-loader.js"></script>
 </body>
 </html>
