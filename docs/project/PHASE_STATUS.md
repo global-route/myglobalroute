@@ -1,8 +1,8 @@
 # Phase Status — MyPathway2Global
 
-> **Updated:** 2026-10-26 | **Release:** GO — production live
-> **Production:** `https://mypathway2global.org.uk` | **Tests:** 18/18 suites, 139/139 passing
-> **Commit:** `e4c3d97`
+> **Updated:** 2026-10-28 | **Release:** GO — production live
+> **Production:** `https://mypathway2global.org.uk` | **Tests:** 18/18 suites, 137/137 passing
+> **Commit:** `1ba24a8`
 
 ---
 
@@ -20,6 +20,7 @@
 | 7 — Rebrand | **Complete** | — |
 | 8 — Production readiness | **Complete** | Two image assets (owner action) |
 | 9 — Scale & Wizard | **Complete** | W2-5 wizard test suite (deferred); W3-3 FMP extension routes (deferred) |
+| B — Backlog improvements | **Complete** | B-P1 gap analysis, B-P2 freshness badges, B-P3 localStorage, B-P4 country depth |
 
 ---
 

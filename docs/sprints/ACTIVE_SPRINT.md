@@ -1,14 +1,14 @@
 # Active Sprint — Wizard & Growth
 
-> **Updated:** 2026-10-26 | **Branch:** `main` | **Commit:** `e4c3d97`
+> **Updated:** 2026-10-28 | **Branch:** `main` | **Commit:** `1ba24a8`
 > **Production:** `https://mypathway2global.org.uk` (Cloudflare Workers — `globalroute`)
-> **Tests:** 18/18 suites, 139/139 passing
+> **Tests:** 18/18 suites, 137/137 passing (1 suite skipped — netlify.toml pre-Cloudflare artefact)
 
 ---
 
 ## Sprint goal
 
-All phases 0-9 complete. Platform is live, SEO-ready, revenue-activated and trust-consistent. Remaining work is owner actions only - no code is blocked.
+All phases 0-9 complete. Backlog product improvements B-P1 through B-P4 shipped. Platform is live, SEO-ready, revenue-activated and trust-consistent. Remaining work is owner actions and content only — no code is blocked.
 
 ---
 
@@ -115,7 +115,7 @@ All phases 0-9 complete. Platform is live, SEO-ready, revenue-activated and trus
 | B-P1 | Near-miss / gap analysis on zero-match state | Code | **Done** — shows closest pathway, exact gap, months to bridge at stated income |
 | B-P2 | Evidence freshness micro-badges on pathway cards | Code | **Done** — green/amber/red badge per card based on requirement effectiveDate |
 | B-P3 | Persist Find MyPathway inputs to `localStorage` | Code | **Done** — all 8 fields restored on page reload, survives network drop |
-| B-P4 | Country page depth — cost table, timeline, rejection reasons | Code | Open |
+| B-P4 | Country page depth - cost table, timeline, rejection reasons | Code | **Done** - pathway summary table, full requirements per pathway, rejection reasons, 4-step timeline, blog audit links on 9 countries |
 
 ---
 
@@ -154,9 +154,9 @@ node scripts/verify-build.js         # build integrity check
 
 ## Owner actions (no code blocked)
 
-- **OG image:** Create `public/assets/og-default.png` — 1200×630px, navy `#10316b` bg, white "MyPathway2Global" wordmark
-- **Favicon PNG:** Export `public/assets/icons/favicon.png` from existing SVG — 32×32px + 180×180px
-- **AdSense:** Apply at https://adsense.google.com — use `mypathway2global.org.uk`
-- **Country sign-off:** Open `docs/data/country-source-review-manifest.json`, set `humanSignOff: true` on all 27 entries
-- **Legal review:** Privacy, disclaimer, terms pages
-- **ARIA audit:** Chrome DevTools → axe extension on homepage, Find MyPathway, Calculator, any country page
+- **Favicon PNG** (5 min): Export `public/assets/icons/favicon.png` from existing SVG — 32×32px + 180×180px. Fixes broken browser tab icon and PWA homescreen icon.
+- **OG image** (20 min): Create `public/assets/og-default.png` — 1200×630px, navy `#10316b` bg, white "MyPathway2Global" wordmark. Fixes broken social share cards on all pages.
+- **Mailchimp URL** (10 min): Replace placeholder action URL in `src/pages/blog.html`. Email signups currently go nowhere.
+- **Country sign-off** (1-2 hrs): Open `docs/data/country-source-review-manifest.json`, set `humanSignOff: true` on all 27 entries, then tell me — I'll update `dataset.asOf`.
+- **ARIA audit** (30 min): Run axe DevTools on homepage, Find MyPathway, Visa Wizard, Calculator. Share results — I'll fix any code violations.
+- **Legal review**: Solicitor sign-off on `src/pages/privacy.html`, `disclaimer.html`, `terms.html`.

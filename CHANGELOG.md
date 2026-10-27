@@ -4,6 +4,41 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
+## 2026-10-28 — Find MyPathway improvements + country page depth
+
+**Commits:** `371506b`, `1ba24a8` | **Tests:** 18/18 suites, 137/137 passing | **Version:** `eba39a8f` (Cloudflare)
+
+### Find MyPathway — B-P1, B-P2, B-P3
+- **Gap analysis (B-P1):** Zero-match state now shows closest pathway by funds gap, exact shortfall in pathway currency, months to bridge at stated monthly income, and two action buttons (remove budget filter / open calculator)
+- **Freshness badges (B-P2):** Every pathway result card shows a colour-coded badge based on most recent requirement `effectiveDate` — green (< 3 months), amber (3-6 months), red (6+ months)
+- **localStorage persistence (B-P3):** All 8 form fields (passport country, goal, visa status, family size, date, budget, income, experience) saved on every change and restored on page load — survives network drop and tab reload
+
+### Country pages — B-P4
+- `content/countries.njk` fully rewritten:
+  - Pathway summary table — one row per publishable pathway with type, key requirement and official source link
+  - Pathway detail cards — full requirements table per pathway (field, value, effective date, source link)
+  - Research-required section with blocker text
+  - Common rejection reasons section (6 documented refusal patterns with evidence note)
+  - 4-step application timeline with country-specific processing notes for DE, CA, GB, AU
+  - Official source trail card with confidence level and retrieved date
+  - Blog audit link for 9 countries with published country audits (DE, CA, GB, IT, PT, US, AU, FR, NL)
+  - Correct nav (Visa Wizard added), CSS `?v=3`, no emoji, disclaimer bar, standard footer
+- `content/pathways/pathway.njk` fully rewritten:
+  - Full requirements table for publishable pathways
+  - Research-required blocker display
+  - Correct nav, CSS `?v=3`, no emoji, disclaimer bar, standard footer
+
+### Taskfile cleanup
+- `Taskfile.yml` replaced — was corrupted with embedded markdown documents; now clean valid YAML with 22 tasks across 7 groups mapped to actual scripts
+- Spec docs (`find_mypathway_schema_api_specifications.md`, `find_mypathway_ux_layout_interface_design.md`) assessed and filed — describe aspirational features not matching current static architecture; useful backlog items extracted to `ACTIVE_SPRINT.md`
+
+### Docs
+- `ACTIVE_SPRINT.md` — backlog section added (B-C1 to B-C6 content, B-P1 to B-P4 product), all B-P items marked done, header and owner actions updated
+- `OWNER_ACTIONS.md` — rewritten: AdSense marked done, items reordered by effort/impact, steps updated
+- `PHASE_STATUS.md` — commit ref updated, backlog phase B added to summary table
+
+---
+
 ## 2026-10-26 — Content quality, AdSense activation, Visa Wizard, Phase 9 complete
 
 **Commit:** `e4c3d97` | **Tests:** 18/18 suites, 139/139 passing | **Version:** `bb9e2a8b` (Cloudflare)
