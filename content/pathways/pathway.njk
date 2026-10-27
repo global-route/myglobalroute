@@ -9,29 +9,120 @@ permalink: "/pages/pathways/{{ pathway.id }}/index.html"
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script async src="https://www.sabilytics.com/script.js" data-site="atsngkb78nmt" data-domain="org.uk"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{ pathway.name }} migration pathway for {{ pathway.countryId }}: evidence status, official source and verified claims from MyPathway2Global.">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <title>{{ pathway.name }} — {{ pathway.countryId }} | MyPathway2Global</title>
-  <link rel="stylesheet" href="/css/styles.css?v=2">
-  <link rel="stylesheet" href="/css/responsive.css?v=2">
+  <meta name="description" content="{{ pathway.name }} pathway: official requirements, evidence status and source trail from MyPathway2Global.">
+  <meta name="robots" content="index,follow">
+  <title>{{ pathway.name }} | MyPathway2Global</title>
+  <link rel="stylesheet" href="/css/styles.css?v=3">
+  <link rel="stylesheet" href="/css/responsive.css?v=3">
+  <link rel="stylesheet" href="/css/enhancements.css?v=3">
   <link rel="canonical" href="https://mypathway2global.org.uk/pages/pathways/{{ pathway.id }}/">
+  <meta property="og:image" content="https://mypathway2global.org.uk/assets/og-default.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
+<body data-page-type="countries">
   <a href="#main" class="skip-link">Skip to main content</a>
-  <header id="header" class="header"><div class="header-container"><div class="logo"><a href="/" class="logo-link"><span class="logo-icon">🌍</span><span class="logo-text">MyPathway2Global</span></a></div><nav class="navigation" aria-label="Primary"><button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button><ul class="nav-menu"><li><a href="/">Home</a></li><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-mypathway.html">Find MyPathway</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Research</a></li><li><a href="/pages/about.html">About</a></li></ul></nav></div></header>
+  <header id="header" class="header">
+    <div class="header-container">
+      <div class="logo"><a href="/" class="logo-link"><span class="logo-text">MyPathway2Global</span></a></div>
+      <nav class="navigation" aria-label="Primary">
+        <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+        <ul class="nav-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/countries.html">Countries</a></li>
+          <li><a href="/pages/find-mypathway.html">Find MyPathway</a></li>
+          <li><a href="/pages/visa-wizard.html" class="nav-cta">Visa Wizard</a></li>
+          <li><a href="/pages/calculator.html">Calculator</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/pages/about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <main id="main" class="main">
-    <section class="hero"><div class="hero-content"><p><a href="/pages/countries/{{ pathway.countryId }}/">← {{ pathway.countryId }} country intelligence</a></p><h1>{{ pathway.name }}</h1><p class="hero-subtitle">{{ pathway.type | capitalize }} pathway · {{ pathway.countryId }}</p><p><strong>Publication status:</strong> {{ pathway.status }}</p></div></section>
-    <section class="container" style="padding:3rem 1rem">
-      <h2>Evidence-backed claims</h2>
-      {% set pathwayEvidence = migrationEvidence.records | selectattr('pathwayId', 'equalto', pathway.id) | list %}
-      {% if pathwayEvidence | length %}
-      <div class="comparison-table"><table><thead><tr><th>Field</th><th>Claim</th><th>Authority</th><th>Effective</th><th>Reviewed</th></tr></thead><tbody>{% for record in pathwayEvidence %}<tr><td>{{ record.field }}</td><td>{{ record.claim }}</td><td>{{ record.sourceAuthority }}</td><td>{{ record.effectiveDate }}</td><td>{{ record.retrievedAt }}</td></tr>{% endfor %}</tbody></table></div>
-      {% else %}<p>No field-level primary-source evidence is currently registered for this pathway.</p>{% endif %}
-      <div class="featured-grid" style="margin-top:2rem"><article class="featured-card"><h3>Official source</h3><p>Use the authority's current page for the final application requirements.</p><a class="btn-link" href="{{ pathway.sourceUrl }}" target="_blank" rel="noopener noreferrer">Open official source →</a></article><article class="featured-card"><h3>Trust rule</h3><p>A pathway remains out of recommendations until its material claims have complete primary-source evidence.</p><a class="btn-link" href="/pages/disclaimer.html">Read disclaimer →</a></article></div>
+    <div class="page-header">
+      <div class="container">
+        <p style="margin-bottom:0.5rem;"><a href="/pages/countries/{{ pathway.countryId }}/" style="color:rgba(255,255,255,0.65);font-size:0.875rem;">&larr; {{ pathway.countryId }} country page</a></p>
+        <span class="page-header-badge">{{ pathway.type | title }} pathway</span>
+        <h1>{{ pathway.name }}</h1>
+        <p class="page-header-subtitle">Status: <strong style="color:#fed7aa;">{{ pathway.status }}</strong></p>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <div class="container">
+
+        {% if pathway.status == "publishable" %}
+
+          {% if pathway.requirements | length %}
+          <h2>Verified requirements</h2>
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr><th>Field</th><th>Value</th><th>Effective date</th><th>Source</th></tr>
+              </thead>
+              <tbody>
+                {% for req in pathway.requirements %}
+                <tr>
+                  <td>{{ req.field | replace("_", " ") | title }}</td>
+                  <td>
+                    {% if req.kind == "boolean" %}Required
+                    {% elif req.currency %}{{ req.currency }} {{ req.value }}{% if req.period %} / {{ req.period }}{% endif %}
+                    {% elif req.unit %}{{ req.value }} {{ req.unit }}
+                    {% else %}{{ req.value }}
+                    {% endif %}
+                    {% if req.conditions and req.conditions.familySize %}<br><small>Family size {{ req.conditions.familySize }}</small>{% endif %}
+                    {% if req.notes %}<br><small style="color:var(--color-neutral-500);">{{ req.notes | truncate(120) }}</small>{% endif %}
+                  </td>
+                  <td>{{ req.effectiveDate }}</td>
+                  <td><a href="{{ req.sourceUrl }}" target="_blank" rel="noopener noreferrer">Official</a></td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          {% endif %}
+
+          <div class="card">
+            <h2>Official source</h2>
+            <p><strong>Authority:</strong> {{ pathway.sourceAuthority }}</p>
+            <p style="margin-bottom:0;"><a href="{{ pathway.sourceUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">Open official source &rarr;</a></p>
+          </div>
+
+        {% elif pathway.status == "research_required" %}
+          <div class="evidence-note">
+            <strong>This pathway is not currently recommended.</strong><br>
+            {% if pathway.permanentBlocker %}{{ pathway.permanentBlocker }}{% else %}Evidence verification is in progress.{% endif %}
+            {% if pathway.scopeNote %}<br><br>{{ pathway.scopeNote }}{% endif %}
+          </div>
+          <p><a href="{{ pathway.sourceUrl }}" target="_blank" rel="noopener noreferrer">View official source &rarr;</a></p>
+        {% endif %}
+
+        <div class="cta-buttons" style="margin-top:var(--spacing-2xl);">
+          <a href="/pages/countries/{{ pathway.countryId }}/" class="btn btn-primary">Back to {{ pathway.countryId }}</a>
+          <a href="/pages/find-mypathway.html" class="btn btn-secondary">Find MyPathway</a>
+        </div>
+
+      </div>
     </section>
   </main>
-  <footer id="footer" class="footer"><div class="footer-content"><div class="footer-section"><h4>MyPathway2Global</h4><p>Evidence-gated global mobility intelligence.</p></div><div class="footer-section"><h4>Explore</h4><ul><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-mypathway.html">Find MyPathway</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Research</a></li></ul></div><div class="footer-section"><h4>Guides</h4><ul><li><a href="/pages/student-playbook.html">Student</a></li><li><a href="/pages/professional-playbook.html">Professional</a></li><li><a href="/pages/business-playbook.html">Business</a></li></ul></div><div class="footer-section"><h4>Trust</h4><ul><li><a href="/pages/privacy.html">Privacy</a></li><li><a href="/pages/disclaimer.html">Disclaimer</a></li><li><a href="/pages/terms.html">Terms</a></li><li><a href="/pages/contact.html">Contact</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 MyPathway2Global. All rights reserved.</p></div></footer>
+
+  <div class="disclaimer-bar"><p>General information only - not legal or immigration advice. Always verify current requirements with the relevant authority before paying fees or submitting an application. <a href="/pages/disclaimer.html">Full disclaimer &rarr;</a></p></div>
+
+  <footer id="footer" class="footer">
+    <div class="footer-content">
+      <div class="footer-section"><h4>MyPathway2Global</h4><p>Evidence-gated global mobility intelligence.</p><p style="font-size:0.78rem;opacity:0.7;margin-top:0.5rem;">Independent platform. Not affiliated with any government.</p></div>
+      <div class="footer-section"><h4>Explore</h4><ul><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-mypathway.html">Find MyPathway</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Blog</a></li></ul></div>
+      <div class="footer-section"><h4>Guides</h4><ul><li><a href="/pages/student-playbook.html">Student</a></li><li><a href="/pages/professional-playbook.html">Professional</a></li><li><a href="/pages/business-playbook.html">Business</a></li></ul></div>
+      <div class="footer-section"><h4>Trust</h4><ul><li><a href="/pages/privacy.html">Privacy</a></li><li><a href="/pages/disclaimer.html">Disclaimer</a></li><li><a href="/pages/terms.html">Terms</a></li><li><a href="/pages/contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 MyPathway2Global. All rights reserved.</p></div>
+  </footer>
   <script src="/js/monetization.js"></script>
   <script src="/js/analytics.js"></script>
   <script src="/js/app.js"></script>

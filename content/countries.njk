@@ -11,34 +11,48 @@ permalink: "pages/countries/{{ country.id }}/index.html"
   <script async src="https://www.sabilytics.com/script.js" data-site="atsngkb78nmt" data-domain="org.uk"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{ country.name }} migration intelligence: pathway status, official sources and evidence coverage from MyPathway2Global.">
-  <title>{{ country.name }} Migration Intelligence | MyPathway2Global</title>
-  <link rel="stylesheet" href="/css/styles.css?v=2">
-  <link rel="stylesheet" href="/css/responsive.css?v=2">
-  <link rel="stylesheet" href="/css/enhancements.css?v=2">
+  <meta name="description" content="{{ country.name }} visa pathways for African applicants: official requirements, costs and evidence status from MyPathway2Global.">
+  <meta name="robots" content="index,follow">
+  <title>{{ country.name }} Visa Pathways | MyPathway2Global</title>
+  <link rel="stylesheet" href="/css/styles.css?v=3">
+  <link rel="stylesheet" href="/css/responsive.css?v=3">
+  <link rel="stylesheet" href="/css/enhancements.css?v=3">
   <link rel="canonical" href="https://mypathway2global.org.uk/pages/countries/{{ country.id }}/">
+  <meta property="og:title" content="{{ country.name }} Visa Pathways | MyPathway2Global">
+  <meta property="og:description" content="Evidence-gated {{ country.name }} migration pathways for African passport holders.">
+  <meta property="og:url" content="https://mypathway2global.org.uk/pages/countries/{{ country.id }}/">
+  <meta property="og:image" content="https://mypathway2global.org.uk/assets/og-default.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mypathway2global.org.uk/" },
-      { "@type": "ListItem", "position": 2, "name": "Countries", "item": "https://mypathway2global.org.uk/pages/countries" },
+      { "@type": "ListItem", "position": 2, "name": "Countries", "item": "https://mypathway2global.org.uk/pages/countries.html" },
       { "@type": "ListItem", "position": 3, "name": "{{ country.name }}", "item": "https://mypathway2global.org.uk/pages/countries/{{ country.id }}/" }
     ]
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
+<body data-page-type="countries">
   <a href="#main" class="skip-link">Skip to main content</a>
   <header id="header" class="header">
     <div class="header-container">
-      <div class="logo"><a href="/" class="logo-link"><span class="logo-icon">🌍</span><span class="logo-text">MyPathway2Global</span></a></div>
+      <div class="logo"><a href="/" class="logo-link"><span class="logo-text">MyPathway2Global</span></a></div>
       <nav class="navigation" aria-label="Primary">
         <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-        <ul class="nav-menu"><li><a href="/">Home</a></li><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-mypathway.html" class="nav-cta">Find MyPathway &rarr;</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Research</a></li><li><a href="/pages/about.html">About</a></li></ul>
+        <ul class="nav-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/countries.html">Countries</a></li>
+          <li><a href="/pages/find-mypathway.html">Find MyPathway</a></li>
+          <li><a href="/pages/visa-wizard.html" class="nav-cta">Visa Wizard</a></li>
+          <li><a href="/pages/calculator.html">Calculator</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/pages/about.html">About</a></li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -46,54 +60,197 @@ permalink: "pages/countries/{{ country.id }}/index.html"
   <main id="main" class="main">
     <div class="page-header">
       <div class="container">
-        <p style="margin-bottom:0.75rem;"><a href="/pages/countries.html" style="color:rgba(255,255,255,0.65);font-size:0.875rem;">&larr; 26-country directory</a></p>
-        <h1>{{ country.flag }} {{ country.name }}</h1>
-        <p class="page-header-subtitle">Evidence-gated migration intelligence &mdash; data status: <strong style="color:#fed7aa;">{{ country.dataStatus }}</strong></p>
+        <p style="margin-bottom:0.5rem;"><a href="/pages/countries.html" style="color:rgba(255,255,255,0.65);font-size:0.875rem;">&larr; All countries</a></p>
+        <span class="page-header-badge">{{ country.category }}</span>
+        <h1>{{ country.name }}</h1>
+        <p class="page-header-subtitle">Evidence-gated migration pathways for African passport holders</p>
       </div>
     </div>
-    <section class="content-section"><div class="container">
-      <div class="card"><h2>Country evidence status</h2>
-        <p>{{ country.summary or 'Country intelligence is being verified against primary sources.' }}</p>
-        <p><strong>Approval rates:</strong> {% if country.africanRate %}{{ country.africanRate }}{% else %}Not published / not verified{% endif %}</p>
-        <p><strong>Planning cost:</strong> {% if country.trueCost %}{{ country.trueCost.currency }} {{ country.trueCost.total }}{% else %}Not yet verified{% endif %}</p>
-        <p><strong>Timeline:</strong> {% if country.timeline %}{{ country.timeline }}{% else %}Not yet verified{% endif %}</p>
-      </div>
 
-      <div class="card"><h2>Pathways</h2>
-        {% set countryPathways = pathways.pathways | selectattr("countryId", "equalto", country.id) | list %}
-        {% for pathway in countryPathways %}
-          <article class="evidence-item">
-            <h3><a href="/pathways/{{ pathway.id }}/">{{ pathway.name }}</a></h3>
-            <p>{{ pathway.type | title }} · <strong>{{ pathway.status }}</strong></p>
-            {% if pathway.status == "publishable" and pathway.requirements %}
-              <ul class="route-requirements">
-                {% for req in pathway.requirements | slice(0, 3) %}
-                  <li>{{ req.field | replace('_', ' ') | title }}: {% if req.currency %}{{ req.currency }} {% endif %}{{ req.value }}</li>
+    <section class="content-section">
+      <div class="container">
+
+        {# ── PATHWAY SUMMARY TABLE ── #}
+        {# ── PATHWAY SUMMARY TABLE ── #}
+        {% set hasPublishable = false %}
+        {% for p in pathways.pathways %}{% if p.countryId == country.id and p.status == "publishable" %}{% set hasPublishable = true %}{% endif %}{% endfor %}
+
+        {% if hasPublishable %}
+        <h2>Available pathways</h2>
+        <div class="comparison-table">
+          <table>
+            <thead><tr><th>Pathway</th><th>Type</th><th>Key requirement</th><th>Official source</th></tr></thead>
+            <tbody>
+              {% for pathway in pathways.pathways %}
+              {% if pathway.countryId == country.id and pathway.status == "publishable" %}
+              {% set fundsReq = null %}
+              {% set jobReq = null %}
+              {% set offerReq = null %}
+              {% for req in pathway.requirements %}
+                {% if req.field == "minimum_funds" and fundsReq == null %}{% set fundsReq = req %}{% endif %}
+                {% if req.field == "job_offer" and jobReq == null %}{% set jobReq = req %}{% endif %}
+                {% if req.field == "admission_offer" and offerReq == null %}{% set offerReq = req %}{% endif %}
+              {% endfor %}
+              <tr>
+                <td><strong>{{ pathway.name }}</strong></td>
+                <td>{{ pathway.type | title }}</td>
+                <td>
+                  {% if fundsReq %}{{ fundsReq.currency }} {{ fundsReq.value }} {{ fundsReq.period }}
+                  {% elif jobReq %}Job offer required
+                  {% elif offerReq %}Admission offer required
+                  {% else %}See official source{% endif %}
+                </td>
+                <td><a href="{{ pathway.sourceUrl }}" target="_blank" rel="noopener noreferrer">{{ pathway.sourceAuthority }}</a></td>
+              </tr>
+              {% endif %}
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        {% endif %}
+
+        {# ── PATHWAY DETAIL CARDS ── #}
+        {% for pathway in pathways.pathways %}
+        {% if pathway.countryId == country.id and pathway.status == "publishable" %}
+        <div class="country-pathway-card" id="pathway-{{ pathway.id }}">
+          <div class="country-pathway-header">
+            <h3>{{ pathway.name }}</h3>
+            <span class="pathway-type-badge pathway-type-{{ pathway.type }}">{{ pathway.type | title }}</span>
+          </div>
+          {% if pathway.requirements and pathway.requirements.length %}
+          <h4>Requirements</h4>
+          <div class="comparison-table">
+            <table>
+              <thead><tr><th>Field</th><th>Value</th><th>Effective</th><th>Source</th></tr></thead>
+              <tbody>
+                {% for req in pathway.requirements %}
+                <tr>
+                  <td>{{ req.field | replace("_", " ") | title }}</td>
+                  <td>
+                    {% if req.kind == "boolean" %}Required
+                    {% elif req.currency %}{{ req.currency }} {{ req.value }}{% if req.period %} / {{ req.period }}{% endif %}
+                    {% elif req.unit %}{{ req.value }} {{ req.unit }}
+                    {% else %}{{ req.value }}{% endif %}
+                    {% if req.conditions and req.conditions.familySize %}<br><small>Family size {{ req.conditions.familySize }}</small>{% endif %}
+                  </td>
+                  <td>{{ req.effectiveDate }}</td>
+                  <td><a href="{{ req.sourceUrl }}" target="_blank" rel="noopener noreferrer">Official</a></td>
+                </tr>
                 {% endfor %}
-              </ul>
-              <p><a href="/pathways/{{ pathway.id }}/">Full details →</a></p>
-            {% elif pathway.status == "research_required" %}
-              <p class="evidence-note">{{ pathway.permanentBlocker }}</p>
-            {% else %}
-              <p><a href="/pathways/{{ pathway.id }}/">View pathway →</a></p>
-            {% endif %}
-            <p><a href="{{ pathway.sourceUrl }}" target="_blank" rel="noopener noreferrer">Official source →</a></p>
-          </article>
-        {% else %}
-          <p>No pathway records are currently registered for this country.</p>
+              </tbody>
+            </table>
+          </div>
+          {% endif %}
+          {% if pathway.scopeNote %}<p class="evidence-note" style="margin-top:0.5rem;">{{ pathway.scopeNote }}</p>{% endif %}
+          <p style="margin-top:0.75rem;margin-bottom:0;"><a href="{{ pathway.sourceUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">Review official source &rarr;</a></p>
+        </div>
+        {% endif %}
         {% endfor %}
-      </div>
 
-      <div class="card"><h2>Country source trail</h2>
-        {% if country.source %}<p><strong>Primary authority:</strong> {{ country.source.authority }}</p><p><a href="{{ country.source.url }}" target="_blank" rel="noopener noreferrer">Open country source →</a></p>{% else %}<p>Country-level source metadata is being completed.</p>{% endif %}
-        <p>This page deliberately distinguishes unavailable evidence from estimates. Verify the official authority before making an application or financial commitment.</p>
-      </div>
+        {# ── RESEARCH REQUIRED ── #}
+        {% set hasResearch = false %}
+        {% for p in pathways.pathways %}{% if p.countryId == country.id and p.status == "research_required" %}{% set hasResearch = true %}{% endif %}{% endfor %}
+        {% if hasResearch %}
+        <h2>Pathways under review</h2>
+        <p style="color:var(--color-neutral-500);margin-bottom:var(--spacing-lg);">These pathways exist but cannot be recommended until evidence gaps are resolved.</p>
+        {% for pathway in pathways.pathways %}
+        {% if pathway.countryId == country.id and pathway.status == "research_required" %}
+        <div class="evidence-note" style="margin-bottom:var(--spacing-md);">
+          <strong>{{ pathway.name }}</strong> &mdash; {{ pathway.type | title }}<br>
+          {% if pathway.permanentBlocker %}{{ pathway.permanentBlocker }}{% else %}Evidence verification in progress.{% endif %}
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
 
-      <div class="cta-buttons"><a href="/pages/find-mypathway.html" class="btn btn-primary">Find MyPathway</a><a href="/pages/disclaimer.html" class="btn btn-secondary">Read Disclaimer</a></div>
-    </div></section>
-    <aside class="container" data-ad-slot="ad_country_mid" hidden aria-label="Advertisement"></aside>
-</main>
-  <footer id="footer" class="footer"><div class="footer-content"><div class="footer-section"><h4>MyPathway2Global</h4><p>Evidence-gated global mobility intelligence.</p></div><div class="footer-section"><h4>Explore</h4><ul><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-mypathway.html">Find MyPathway</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Research</a></li></ul></div><div class="footer-section"><h4>Guides</h4><ul><li><a href="/pages/student-playbook.html">Student</a></li><li><a href="/pages/professional-playbook.html">Professional</a></li><li><a href="/pages/business-playbook.html">Business</a></li></ul></div><div class="footer-section"><h4>Trust</h4><ul><li><a href="/pages/privacy.html">Privacy</a></li><li><a href="/pages/disclaimer.html">Disclaimer</a></li><li><a href="/pages/terms.html">Terms</a></li><li><a href="/pages/contact.html">Contact</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 MyPathway2Global. All rights reserved.</p></div></footer>
+        {# ── COMMON REJECTION REASONS ── #}
+        <h2>Common rejection reasons</h2>
+        <p>These are the documented reasons African applicants are most frequently refused at {{ country.name }} embassies, based on published refusal guidance and case analysis.</p>
+        <ul class="checklist rejection-list">
+          <li>Insufficient proof of funds - bank statements not meeting the required threshold or covering less than the required period</li>
+          <li>Weak ties to home country - inability to demonstrate compelling reasons to return after the visa period</li>
+          <li>Incomplete documentation - missing certified translations, apostilles or supporting letters</li>
+          <li>Purpose of visit not clearly established - vague or inconsistent statements about study or work plans</li>
+          <li>Sponsor documentation gaps - where a sponsor is involved, incomplete financial evidence or relationship proof</li>
+          <li>Previous visa refusals not disclosed - failure to declare prior refusals from any country</li>
+        </ul>
+        <p class="evidence-note">Rejection reasons are drawn from published embassy guidance and publicly documented refusal patterns. They are not country-specific statistics - no authority publishes granular refusal reason data by nationality.</p>
+
+        {# ── TIMELINE ── #}
+        <h2>Typical application timeline</h2>
+        <div class="timeline-steps">
+          <div class="timeline-step">
+            <span class="timeline-step-num">1</span>
+            <div>
+              <strong>Prepare documents</strong>
+              <p>Gather all required documents: financial statements, admission or job offer letter, passport, photos. Allow 2-4 weeks for certified translations and apostilles if required.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-step-num">2</span>
+            <div>
+              <strong>Book embassy appointment</strong>
+              <p>Appointment availability at {{ country.name }} embassies in West Africa varies. Book as early as possible - slots can be 4-8 weeks out in peak periods.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-step-num">3</span>
+            <div>
+              <strong>Submit application</strong>
+              <p>Attend the appointment, submit biometrics if required, pay the visa fee. Keep all receipts and submission confirmation.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-step-num">4</span>
+            <div>
+              <strong>Decision</strong>
+              <p>Processing times vary by pathway and embassy workload. {% if country.id == "DE" %}German student visas typically take 6-12 weeks from submission.{% elif country.id == "CA" %}Canadian study permits typically take 8-16 weeks online.{% elif country.id == "GB" %}UK visas are typically decided within 3 weeks.{% elif country.id == "AU" %}Australian student visas are typically decided within 4-6 weeks.{% else %}Check the official source for current processing time estimates.{% endif %}</p>
+            </div>
+          </div>
+        </div>
+
+        {# ── SOURCE TRAIL ── #}
+        <h2>Official source trail</h2>
+        <div class="card" style="margin-bottom:var(--spacing-lg);">
+          <p><strong>Primary authority:</strong> {{ country.source.authority }}</p>
+          <p><strong>Source retrieved:</strong> {{ country.source.retrievedAt }}</p>
+          <p><strong>Confidence:</strong> {{ country.source.confidence | title }}</p>
+          <p style="margin-bottom:0;"><a href="{{ country.source.url }}" target="_blank" rel="noopener noreferrer">Open official immigration portal &rarr;</a></p>
+        </div>
+        <p class="evidence-note">This page shows only claims with primary-source evidence. Where data is marked "not yet verified", no reliable official figure was available at the time of last review. Never rely on this page alone - verify current requirements at the official source before paying fees or submitting an application.</p>
+
+        {# ── BLOG LINK ── #}
+        {% if country.id == "DE" %}<div class="card" style="background:var(--color-primary-light);border:none;"><p style="margin-bottom:0.5rem;"><strong>Read the full country audit</strong></p><p style="margin-bottom:0.75rem;">Germany Visa from Nigeria 2026 - zero tuition, blocked account, 18-month job search visa.</p><a href="/blog/country-audits/germany/germany-visa-from-nigeria-2026/" class="btn btn-primary btn-small">Read audit &rarr;</a></div>
+        {% elif country.id == "CA" %}<div class="card" style="background:var(--color-primary-light);border:none;"><p style="margin-bottom:0.5rem;"><strong>Read the full country audit</strong></p><p style="margin-bottom:0.75rem;">Canada Visa from Nigeria 2026 - Express Entry, study permit, SDS cancellation.</p><a href="/blog/country-audits/canada/canada-visa-from-nigeria-2026/" class="btn btn-primary btn-small">Read audit &rarr;</a></div>
+        {% elif country.id == "GB" %}<div class="card" style="background:var(--color-primary-light);border:none;"><p style="margin-bottom:0.5rem;"><strong>Read the full country audit</strong></p><p style="margin-bottom:0.75rem;">UK Visa from Nigeria 2026 - Skilled Worker, Student visa, true costs.</p><a href="/blog/country-audits/uk/uk-visa-from-nigeria-2026/" class="btn btn-primary btn-small">Read audit &rarr;</a></div>
+        {% elif country.id == "IT" %}<div class="card" style="background:var(--color-primary-light);border:none;"><p style="margin-bottom:0.5rem;"><strong>Read the full country audit</strong></p><p style="margin-bottom:0.75rem;">Italy Visa from Nigeria 2026 - DSU scholarship, study visa, Decreto Flussi.</p><a href="/blog/country-audits/italy/italy-visa-from-nigeria-2026/" class="btn btn-primary btn-small">Read audit &rarr;</a></div>
+        {% elif country.id == "PT" %}<div class="card" style="background:var(--color-primary-light);border:none;"><p style="margin-bottom:0.5rem;"><strong>Read the full country audit</strong></p><p style="margin-bottom:0.75rem;">Portugal Visa from Nigeria 2026 - digital nomad, study, D7 passive income.</p><a href="/blog/country-audits/portugal/portugal-visa-from-nigeria-2026/" class="btn btn-primary btn-small">Read audit &rarr;</a></div>
+        {% elif country.id == "US" %}<div class="card" style="background:var(--color-primary-light);border:none;"><p style="margin-bottom:0.5rem;"><strong>Read the full country audit</strong></p><p style="margin-bottom:0.75rem;">USA Visa from Nigeria 2026 - F-1 student, H-1B, B1/B2 tourist.</p><a href="/blog/country-audits/usa/usa-visa-from-nigeria-2026/" class="btn btn-primary btn-small">Read audit &rarr;</a></div>
+        {% elif country.id == "AU" %}<div class="card" style="background:var(--color-primary-light);border:none;"><p style="margin-bottom:0.5rem;"><strong>Read the full country audit</strong></p><p style="margin-bottom:0.75rem;">Australia Visa from Nigeria 2026 - subclass 500, 189, 190, 491.</p><a href="/blog/country-audits/australia/australia-visa-from-nigeria-2026/" class="btn btn-primary btn-small">Read audit &rarr;</a></div>
+        {% elif country.id == "FR" %}<div class="card" style="background:var(--color-primary-light);border:none;"><p style="margin-bottom:0.5rem;"><strong>Read the full country audit</strong></p><p style="margin-bottom:0.75rem;">France Visa from Nigeria 2026 - long-stay study visa, Talent Passport.</p><a href="/blog/country-audits/france/france-visa-from-nigeria-2026/" class="btn btn-primary btn-small">Read audit &rarr;</a></div>
+        {% elif country.id == "NL" %}<div class="card" style="background:var(--color-primary-light);border:none;"><p style="margin-bottom:0.5rem;"><strong>Read the full country audit</strong></p><p style="margin-bottom:0.75rem;">Netherlands Visa from Nigeria 2026 - IND student permit, Highly Skilled Migrant.</p><a href="/blog/country-audits/netherlands/netherlands-visa-from-nigeria-2026/" class="btn btn-primary btn-small">Read audit &rarr;</a></div>
+        {% endif %}
+
+        <div class="cta-buttons" style="margin-top:var(--spacing-2xl);">
+          <a href="/pages/find-mypathway.html" class="btn btn-primary">Find MyPathway</a>
+          <a href="/pages/visa-wizard.html" class="btn btn-secondary">Try Visa Wizard</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div class="disclaimer-bar"><p>General information only - not legal or immigration advice. Always verify current requirements with the relevant authority before paying fees or submitting an application. <a href="/pages/disclaimer.html">Full disclaimer &rarr;</a></p></div>
+
+  <footer id="footer" class="footer">
+    <div class="footer-content">
+      <div class="footer-section"><h4>MyPathway2Global</h4><p>Evidence-gated global mobility intelligence.</p><p style="font-size:0.78rem;opacity:0.7;margin-top:0.5rem;">Independent platform. Not affiliated with any government.</p></div>
+      <div class="footer-section"><h4>Explore</h4><ul><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-mypathway.html">Find MyPathway</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Blog</a></li></ul></div>
+      <div class="footer-section"><h4>Guides</h4><ul><li><a href="/pages/student-playbook.html">Student</a></li><li><a href="/pages/professional-playbook.html">Professional</a></li><li><a href="/pages/business-playbook.html">Business</a></li></ul></div>
+      <div class="footer-section"><h4>Trust</h4><ul><li><a href="/pages/privacy.html">Privacy</a></li><li><a href="/pages/disclaimer.html">Disclaimer</a></li><li><a href="/pages/terms.html">Terms</a></li><li><a href="/pages/contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 MyPathway2Global. All rights reserved.</p></div>
+  </footer>
   <script src="/js/monetization.js"></script>
   <script src="/js/analytics.js"></script>
   <script src="/js/app.js"></script>
