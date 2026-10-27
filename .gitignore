@@ -92,3 +92,29 @@ TIMELINE.local.md
 # Local-only documentation; keep project docs out of the public repository
 docs/
 doc/
+
+# Local-only documentation and planning
+docs/
+doc/
+documentation/
+blueprint/
+blueprints/
+monetization/
+planning/
+plans/
+strategy/
+
+# Environment configuration and sensitive local files
+.env
+.env.*
+!.env.example
+!.env.sample
+env/
+environment/
+environments/
+secrets/
+credentials/
+*.private
+*.private.*
+*.confidential
+*.confidential.*
