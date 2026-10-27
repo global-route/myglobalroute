@@ -91,6 +91,7 @@ All phases 0-9 complete. Platform is live, SEO-ready, revenue-activated and trus
 | S3-C3 | Replace em dashes in all blog posts | Code | **Done** | 0 em dashes remaining across 21 posts |
 | S3-C4 | Add YouTube embeds to all blog posts | Code | **Done** | 1 verified embed per post, all 21 posts |
 | S3-C5 | Passport tiers guide post | Code | **Done** | Published 2026-10-26 — `/blog/guides/mobility/passport-tiers-explained-2026/` |
+| S3-C6 | Fix blog index page | Code | **Done** | Globe emoji removed, `?v=3` CSS, full nav + Visa Wizard, standard footer, disclaimer bar, AdSense tag — commit `0cb1e00` |
 | S3-I1 | Create OG image asset | Owner | **Open** | `public/assets/og-default.png` 1200×630px |
 | S3-I2 | Create favicon PNG asset | Owner | **Open** | `public/assets/icons/favicon.png` 32×32 + 180×180px |
 

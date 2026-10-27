@@ -56,6 +56,30 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
+## 2026-10-27 — Blog index rebuild, doc cleanup, README update
+
+**Commit:** `0cb1e00` | **Tests:** 18/18 suites, 139/139 passing | **Version:** `27a313c7` (Cloudflare)
+
+### Blog index fix
+- `content/blog/index.njk` fully rewritten - was a stale pre-rebrand file
+- Globe emoji (`🌍`) removed from logo - now matches all other pages (text only)
+- CSS updated from `?v=2` to `?v=3`
+- Full nav added including Visa Wizard link
+- Standard 4-column footer added (was stripped-down single line)
+- Disclaimer bar added
+- AdSense static tag + `admob-loader.js` added
+- OG/Twitter meta tags added
+- Page header badge showing post count added
+
+### Docs
+- `README.md` updated to 21 posts, Visa Wizard in features and links, 4 new country audits listed
+- `CHANGELOG.md` 2026-10-26 entry added covering all work from that session
+- `ACTIVE_SPRINT.md` commit ref fixed, stale content backlog/blog inventory/priority list removed
+- `PHASE_STATUS.md` commit ref updated to `e4c3d97`
+- `MASTER_DELIVERY_PLAN.md`, `P0_DELIVERY_PLAN.md`, `SPRINT_3_GROWTH.md`, `UI_OPTIMISATION_SPRINT.md`, `UI_OVERWORK_SPEC.md`, `UI_SPOTLIGHT_PLAN.md`, `UI_UX_TRANSFORM.md` moved to `docs/archive/`
+
+---
+
 ## 2026-10-27 — Documentation structure and internal-file separation
 
 ### Documentation organization

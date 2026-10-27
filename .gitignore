@@ -89,15 +89,11 @@ FINANCIAL_MODEL.local.md
 TEAM_ROLES.local.md
 TIMELINE.local.md
 
-# Local-only documentation; keep project docs out of the public repository
-docs/
-doc/
-
-# Local-only documentation and planning
-docs/
-doc/
-documentation/
-blueprint/
+# Local-only private subdirectories only
+docs/internal/
+docs/private/
+docs/confidential/
+docs/strategy/private/
 blueprints/
 monetization/
 planning/
