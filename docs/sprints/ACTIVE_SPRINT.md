@@ -1,6 +1,6 @@
 # Active Sprint — Wizard & Growth
 
-> **Updated:** 2026-10-26 | **Branch:** `main` | **Commit:** `88f0289`
+> **Updated:** 2026-10-26 | **Branch:** `main` | **Commit:** `e4c3d97`
 > **Production:** `https://mypathway2global.org.uk` (Cloudflare Workers — `globalroute`)
 > **Tests:** 18/18 suites, 139/139 passing
 
@@ -8,9 +8,7 @@
 
 ## Sprint goal
 
-All production readiness tasks complete. Platform is clean, SEO-ready, and trust-consistent.
-Next focus: Visa Wizard (new tool), Find MyPathway upgrades, schema depth, analytics wiring, and revenue activation.
-See `docs/sprints/WIZARD_PLAN.md` for full wizard architecture.
+All phases 0-9 complete. Platform is live, SEO-ready, revenue-activated and trust-consistent. Remaining work is owner actions only - no code is blocked.
 
 ---
 
@@ -95,92 +93,6 @@ See `docs/sprints/WIZARD_PLAN.md` for full wizard architecture.
 | S3-C5 | Passport tiers guide post | Code | **Done** | Published 2026-10-26 — `/blog/guides/mobility/passport-tiers-explained-2026/` |
 | S3-I1 | Create OG image asset | Owner | **Open** | `public/assets/og-default.png` 1200×630px |
 | S3-I2 | Create favicon PNG asset | Owner | **Open** | `public/assets/icons/favicon.png` 32×32 + 180×180px |
-
----
-
-## Content backlog
-
-### Missing country audits (high priority)
-| Country | Traffic potential | Status |
-|---|---|---|
-| Australia | High | Not started |
-| France | High | Not started |
-| Netherlands | Medium | Not started |
-| Ireland | Medium | Not started |
-| New Zealand | Medium | Not started |
-
-### Missing case studies
-- More success stories from different countries
-- Rejection analysis for specific pathways
-
-### Missing guides
-- IELTS preparation guide
-- Document authentication by country
-- Scholarship application timelines
-
----
-
-## Blog content inventory (17 posts)
-
-### Country Audits (6)
-| Post | URL |
-|---|---|
-| Germany Visa from Nigeria 2026 | `/blog/country-audits/germany/germany-visa-from-nigeria-2026/` |
-| Canada Visa from Nigeria 2026 | `/blog/country-audits/canada/canada-visa-from-nigeria-2026/` |
-| UK Visa from Nigeria 2026 | `/blog/country-audits/uk/uk-visa-from-nigeria-2026/` |
-| Italy Visa from Nigeria 2026 | `/blog/country-audits/italy/italy-visa-from-nigeria-2026/` |
-| Portugal Visa from Nigeria 2026 | `/blog/country-audits/portugal/portugal-visa-from-nigeria-2026/` |
-| USA Visa from Nigeria 2026 | `/blog/country-audits/usa/usa-visa-from-nigeria-2026/` |
-
-### Student Playbooks (2)
-| Post | URL |
-|---|---|
-| Italy DSU Scholarship Complete Guide | `/blog/playbooks/student/italy-dsu-scholarship-complete-guide/` |
-| UK Masters True Cost 2026 | `/blog/playbooks/student/uk-masters-true-cost-2026/` |
-
-### Professional Playbooks (2)
-| Post | URL |
-|---|---|
-| Canada Express Entry 2026 | `/blog/playbooks/professional/canada-express-entry-2026/` |
-| Germany Chancenkarte Visa 2026 | `/blog/playbooks/professional/germany-chancenkarte-visa-2026/` |
-
-### Business Playbooks (1)
-| Post | URL |
-|---|---|
-| US LLC Setup from Africa 2026 | `/blog/playbooks/business/us-llc-setup-from-africa-2026/` |
-
-### Case Studies (2)
-| Post | URL |
-|---|---|
-| Chisom: Nigeria to Canada Software Engineer | `/blog/case-studies/success-stories/chisom-nigeria-to-canada-software-engineer/` |
-| Visa Rejection Patterns African Applicants 2026 | `/blog/case-studies/rejection-analysis/visa-rejection-patterns-african-applicants-2026/` |
-
-### Guides (3)
-| Post | URL |
-|---|---|
-| How to Write Visa Motivation Letter 2026 | `/blog/guides/applications/how-to-write-visa-motivation-letter-2026/` |
-| Document Authentication Nigeria Visa 2026 | `/blog/guides/documentation/document-authentication-nigeria-visa-2026/` |
-| How to Fund German Blocked Account from Nigeria 2026 | `/blog/guides/financial/how-to-fund-german-blocked-account-from-nigeria-2026/` |
-
-### Policy Updates (1)
-| Post | URL |
-|---|---|
-| Canada SDS Program Cancelled January 2026 | `/blog/policy-updates/2026/canada-sds-program-cancelled-january-2026/` |
-
----
-
-## Priority order
-
-1. **W1-1 → W1-3** — Wizard scaffold + nav + homepage section (product)
-2. **W2-1 → W2-5** — Wizard engine + results (product)
-3. **W3-1 → W3-3** — Find MyPathway upgrades (product)
-4. **W4-1** — Data tagging for nomad/extension routes
-5. **S3-I1 + S3-I2** — image assets (owner, unblocks OG cards and favicon)
-6. **S3-S1 + S3-S3** — schema depth (30 min code, compounds in search)
-7. **S3-A1** — analytics wiring (funnel visibility)
-8. **S3-R1 → S3-R4** — revenue (owner action first, then code)
-9. **S3-T1 → S3-T4** — trust closure (owner actions)
-10. **S3-C1 → S3-C2** — content scale (owner actions)
 
 ---
 

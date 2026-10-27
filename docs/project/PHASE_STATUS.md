@@ -2,7 +2,7 @@
 
 > **Updated:** 2026-10-26 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 18/18 suites, 139/139 passing
-> **Commit:** `88f0289`
+> **Commit:** `e4c3d97`
 
 ---
 

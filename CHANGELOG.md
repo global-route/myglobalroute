@@ -4,6 +4,58 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
+## 2026-10-26 — Content quality, AdSense activation, Visa Wizard, Phase 9 complete
+
+**Commit:** `e4c3d97` | **Tests:** 18/18 suites, 139/139 passing | **Version:** `bb9e2a8b` (Cloudflare)
+
+### AdSense activation
+- Static `<script async src="...adsbygoogle.js?client=ca-pub-8077583188666813">` added to `<head>` on all 6 ad pages (homepage, blog, student/professional/business playbooks, calculator) - required for Google crawler verification
+- `public/ads.txt` populated: `google.com, pub-8077583188666813, DIRECT, f08c47fec0942fa0` - confirmed live
+- `src/js/admob-loader.js` rewritten as clean consent-gated AdSense adapter plugging into `monetization.js` via `setAdProvider()` + `mountSlots()`
+- Site ownership verified in AdSense dashboard; Google policy review pending
+
+### Visa Wizard (Phase 9 - W1 through W5)
+- `/pages/visa-wizard.html` - 5-step guided tool live
+- `src/js/wizard-engine.js` - profile assembly, `recommend()` wiring, extension routes, research flag cards, nomad filter
+- Wizard added to main nav on all 21 pages
+- Two-column Find MyPathway / Visa Wizard section added to homepage
+- `wizardTags` added to 10 pathways: `["nomad"]` on PT/ES/DE, `["post-study"]` on DE, `["pr-route"]` on CA/AU×3/NZ×3
+- Wizard URL added to sitemap, WebPage schema on wizard page
+
+### Find MyPathway upgrades
+- Passport country select (54 African countries) added
+- Current visa select added
+- Business goal unlocked with research-required blocker card
+
+### Content - 4 new blog posts
+- Australia Visa from Nigeria 2026 - subclass 500, 189, 190, 491
+- France Visa from Nigeria 2026 - long-stay study visa, Talent Passport
+- Netherlands Visa from Nigeria 2026 - IND student permit, Highly Skilled Migrant
+- Passport Tiers Explained 2026 - golden passports defined, CBI programmes, UAE Golden Visa, African passport tiers
+
+### Content quality
+- All em dashes (`—`) replaced with hyphens across all 21 blog posts
+- 1 verified YouTube embed added per post across all 21 posts
+- `src/data/blog-posts.json` fixed - was registering 8 of 20 posts; all 21 now registered
+
+### Email capture
+- Email signup form added to blog sidebar (Mailchimp placeholder action URL - owner must replace)
+- `src/pages/privacy.html` updated to reflect email form
+- Email capture CSS added to `src/css/enhancements.css`
+
+### SEO
+- Sitemap updated to 64 URLs including Visa Wizard and all new blog posts
+- `route_search_started` and `route_recommendation_generated` analytics events confirmed wired
+- FAQPage, BreadcrumbList, Article, WebPage schema all confirmed live
+
+### Docs
+- `docs/sprints/OWNER_ACTIONS.md` created - 7 owner actions with exact steps
+- `ACTIVE_SPRINT.md`, `PHASE_STATUS.md` updated to reflect Phase 9 complete
+- `MASTER_DELIVERY_PLAN.md`, `P0_DELIVERY_PLAN.md`, `SPRINT_3_GROWTH.md`, UI sprint docs moved to archive
+- `README.md` updated to 21 posts, Visa Wizard added to features and links
+
+---
+
 ## 2026-10-27 — Documentation structure and internal-file separation
 
 ### Documentation organization
