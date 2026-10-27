@@ -4,6 +4,29 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
+## 2026-10-27 — Documentation structure and internal-file separation
+
+### Documentation organization
+- Added `docs/README.md` as the folder-ownership and file-placement guide.
+- Rebuilt `docs/INDEX.md` around canonical planning, sprint, product, technical, data, and monetization references.
+- Replaced the stale `docs/reference/INDEX.md` and refreshed `docs/reference/README.md` to remove legacy architecture claims and clarify historical blueprint precedence.
+- Moved the historical root-level reorganization report into `docs/archive/DOCUMENTATION_REORGANIZATION_SUMMARY_2026-08-18.md`.
+- Kept `docs/sprints/OWNER_ACTIONS.md` as the canonical owner-action checklist; removed the duplicate root checklist.
+- Removed the empty root `log.md`.
+
+### Local-only internal documents
+- Added explicit ignore rules for local-only internal/private planning folders and private document suffixes.
+- Removed financial model, team-role plan and project timeline from the current public repository tree.
+- Removed the duplicate blueprint under the incorrectly named `docs/internal doc & files/` path; retained the canonical historical blueprint under `docs/reference/`.
+- Important: Git ignore does not hide already-tracked files. The current tree no longer contains these internal documents, but historical versions may remain accessible in prior commits; perform history cleanup separately if those old versions must be made inaccessible.
+
+### Verification
+- Inspected the recursive repository tree after changes.
+- Confirmed no current tracked paths remain under `docs/internal/`, `docs/private/`, `docs/confidential/`, or `internal/`.
+- No tests or CI workflows were run for this documentation-only change.
+
+---
+
 ## 2026-10-25 — Production Readiness: all 23 tasks complete + best practices
 
 **Commit:** `756196f` | **Tests:** 18/18 suites, 139/139 passing
