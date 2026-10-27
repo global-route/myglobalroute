@@ -88,3 +88,7 @@ OWNER_ACTIONS.local.md
 FINANCIAL_MODEL.local.md
 TEAM_ROLES.local.md
 TIMELINE.local.md
+
+# Local-only documentation; keep project docs out of the public repository
+docs/
+doc/
