@@ -97,6 +97,28 @@ All phases 0-9 complete. Platform is live, SEO-ready, revenue-activated and trus
 
 ---
 
+## Backlog (next sprint candidates)
+
+### Content scale
+| ID | Task | Owner | Notes |
+|---|---|---|---|
+| B-C1 | UK Skilled Worker visa country audit | Owner | High search volume from Nigeria |
+| B-C2 | Italy student visa step-by-step guide | Owner | High volume, low competition |
+| B-C3 | How to write a visa motivation letter | Owner | Tier 2 — medium volume, very low competition |
+| B-C4 | Document authentication Nigeria — apostille vs legalisation | Owner | Tier 2 |
+| B-C5 | Germany Chancenkarte points explainer | Owner | Tier 3 long-tail, high conversion intent |
+| B-C6 | Portugal digital nomad visa for Nigerians 2026 | Owner | Tier 2 |
+
+### Product improvements
+| ID | Task | Owner | Notes |
+|---|---|---|---|
+| B-P1 | Near-miss / gap analysis on zero-match state | Code | **Done** — shows closest pathway, exact gap, months to bridge at stated income |
+| B-P2 | Evidence freshness micro-badges on pathway cards | Code | **Done** — green/amber/red badge per card based on requirement effectiveDate |
+| B-P3 | Persist Find MyPathway inputs to `localStorage` | Code | **Done** — all 8 fields restored on page reload, survives network drop |
+| B-P4 | Country page depth — cost table, timeline, rejection reasons | Code | Open |
+
+---
+
 ## Production snapshot
 
 | Metric | Value |

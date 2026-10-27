@@ -191,8 +191,20 @@
       return `<ul class="route-requirements">${items}</ul>`;
     }
 
+    function freshnessLabel(pathway) {
+      const reqs = Array.isArray(pathway.requirements) ? pathway.requirements : [];
+      const dates = reqs.map(r => r.effectiveDate).filter(Boolean).map(d => new Date(d));
+      if (!dates.length) return { cls: 'badge-partial', text: 'Source verified' };
+      const newest = new Date(Math.max(...dates));
+      const monthsAgo = (Date.now() - newest) / (1000 * 60 * 60 * 24 * 30);
+      const label = newest.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+      if (monthsAgo < 3)  return { cls: 'badge-verified', text: `Verified ${label}` };
+      if (monthsAgo < 6)  return { cls: 'badge-partial',  text: `Audited ${label}` };
+      return { cls: 'badge-stale', text: `Last checked ${label}` };
+    }
+
     function renderStaleWarning() {
-      return '<p class="evidence-note stale-warning">⚠ Some requirements on this pathway may be outdated. Verify against the official source before acting.</p>';
+      return '<p class="evidence-note stale-warning">Some requirements on this pathway may be outdated. Verify against the official source before acting.</p>';
     }
 
     function renderMatchedTier(tier) {
@@ -204,8 +216,12 @@
     }
 
     function renderCard(match) {
+      const badge = freshnessLabel(match.pathway);
       return `<article>
-        <h3>${esc(match.country.name)} — ${esc(match.pathway.name)}</h3>
+        <div class="pathway-card-header">
+          <h3>${esc(match.country.name)} — ${esc(match.pathway.name)}</h3>
+          <span class="freshness-badge ${esc(badge.cls)}">${esc(badge.text)}</span>
+        </div>
         ${match.stale ? renderStaleWarning() : ''}
         ${match.matchedTier ? renderMatchedTier(match.matchedTier) : ''}
         ${renderRequirements(match.pathway.requirements)}
@@ -220,6 +236,21 @@
       ).join('');
       return `<section aria-labelledby="alt-heading"><h2 id="alt-heading">Nearby routes — current blockers</h2><p>These pathways match your goal but did not pass the current evidence gate. The blocker is shown for each.</p><ul>${items}</ul></section>`;
     }
+
+    // B-P3: persist + restore form inputs via localStorage
+    const STORAGE_KEY = 'mp2g_fmp_inputs';
+    const persistFields = ['passportCountry','goal','currentVisa','familySize','applicationDate','budget','monthlyIncome','experienceYears'];
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+      if (saved) persistFields.forEach(k => { const el = form.elements[k]; if (el && saved[k] != null) el.value = saved[k]; });
+    } catch(e) {}
+    form.addEventListener('change', () => {
+      try {
+        const vals = {};
+        persistFields.forEach(k => { const el = form.elements[k]; if (el) vals[k] = el.value; });
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(vals));
+      } catch(e) {}
+    });
 
     const submitBtn = form.querySelector('button[type="submit"]');
 
@@ -253,12 +284,41 @@
           return;
         }
         if (!matches.length) {
+          // Near-miss gap analysis — find the closest pathway by funds gap
+          let gapHtml = '';
+          const budget = Number(profile.budget);
+          if (budget > 0 && pathways.pathways) {
+            const goalPathways = pathways.pathways.filter(p => p.status === 'publishable' && p.type === profile.goal);
+            let closest = null, closestGap = Infinity;
+            for (const p of goalPathways) {
+              const tier = (p.requirements || []).find(r => r.field === 'minimum_funds' && r.kind === 'money');
+              if (!tier) continue;
+              const gap = tier.value - budget;
+              if (gap > 0 && gap < closestGap) { closestGap = gap; closest = { pathway: p, tier }; }
+            }
+            if (closest) {
+              const monthlyIncome = Number(profile.monthlyIncome) || 0;
+              const months = monthlyIncome > 0 ? Math.ceil(closestGap / monthlyIncome) : null;
+              const timelineText = months ? ` At your stated income, you could bridge this in <strong>${months} month${months === 1 ? '' : 's'}</strong>.` : '';
+              const country = countries.countries.find(c => c.id === closest.pathway.countryId);
+              const countryName = country ? country.name : closest.pathway.countryId;
+              gapHtml = `<div class="gap-analysis">
+                <p class="gap-analysis-heading">Closest pathway to your budget</p>
+                <p><strong>${esc(countryName)} — ${esc(closest.pathway.name)}</strong></p>
+                <p>Requires <strong>${esc(closest.tier.currency)} ${esc(String(closest.tier.value))}</strong>. You are <strong>${esc(closest.tier.currency)} ${esc(String(Math.round(closestGap)))}</strong> short.${timelineText}</p>
+                <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:0.75rem;">
+                  <button type="button" class="btn btn-secondary btn-small" onclick="document.querySelector('[name=budget]').value='';form.dispatchEvent(new Event('submit'))">Remove budget filter</button>
+                  <a href="/pages/calculator.html" class="btn btn-secondary btn-small">Open budget calculator</a>
+                </div>
+              </div>`;
+            }
+          }
           const explanationHtml = zeroFitExplanations.length
             ? '<details style="margin-top:1rem;"><summary style="cursor:pointer;font-weight:600;">Why each pathway was excluded (' + zeroFitExplanations.length + ')</summary><ul style="margin-top:0.75rem;">' +
               zeroFitExplanations.map(e => `<li><strong>${esc(e.name)}</strong>: <span class="evidence-note" style="display:inline;background:none;border:none;padding:0;">${esc(e.reason)}</span></li>`).join('') +
               '</ul></details>'
             : '';
-          results.innerHTML = '<div style="text-align:center;padding:3rem 1rem;"><h2 style="margin-bottom:0.5rem;">No pathway matches</h2><p style="color:var(--color-neutral-500);max-width:420px;margin:0 auto 1.5rem;">No publishable pathways passed the evidence gate for your inputs. Try broadening your goal or adjusting your budget.</p><div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;"><button type="button" class="btn btn-secondary" onclick="document.querySelector(\"[name=goal]\").value=\"any\";document.querySelector(\"[name=budget]\").value=\"\";form.dispatchEvent(new Event(\"submit\"))">Reset filters</button><a href="/pages/countries.html" class="btn btn-primary">Browse countries</a></div></div>' + explanationHtml + renderAlternatives(alternatives);
+          results.innerHTML = '<div style="text-align:center;padding:3rem 1rem;"><h2 style="margin-bottom:0.5rem;">No pathway matches</h2><p style="color:var(--color-neutral-500);max-width:420px;margin:0 auto 1.5rem;">No publishable pathways passed the evidence gate for your inputs. Try broadening your goal or adjusting your budget.</p><div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;"><button type="button" class="btn btn-secondary" onclick="document.querySelector(\"[name=goal]\").value=\"any\";document.querySelector(\"[name=budget]\").value=\"\";form.dispatchEvent(new Event(\"submit\"))">Reset filters</button><a href="/pages/countries.html" class="btn btn-primary">Browse countries</a></div></div>' + gapHtml + explanationHtml + renderAlternatives(alternatives);
           return;
         }
         results.innerHTML = '<h2>Pathways matching your goal</h2><p class="evidence-note">Goal matches only — not eligibility assessments. Confirm current requirements at the official source before acting.</p>' + matches.map(renderCard).join('') + renderAlternatives(alternatives);
