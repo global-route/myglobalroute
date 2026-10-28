@@ -37,6 +37,29 @@
   <main id="main" class="main">
     <div class="page-header"><div class="container"><h1>The Professional Playbook</h1><p class="page-header-subtitle">Evidence-gated work visa pathways for African professionals — requirements, salary thresholds and official sources.</p></div></div>
 
+    <section class="container" style="padding:1.5rem 1rem 0;">
+      <div class="blog-filters" role="group" aria-label="Filter by pathway type" style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+        <span style="font-size:0.8rem;font-weight:600;color:var(--color-neutral-500);align-self:center;">Type:</span>
+        <button class="filter-pill active" data-pp-type="">All</button>
+        <button class="filter-pill" data-pp-type="employer">Employer-sponsored</button>
+        <button class="filter-pill" data-pp-type="points">Points-based / Job search</button>
+        <button class="filter-pill" data-pp-type="nomad">Remote / Nomad</button>
+      </div>
+      <div class="blog-filters" role="group" aria-label="Filter by country" style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1rem;">
+        <span style="font-size:0.8rem;font-weight:600;color:var(--color-neutral-500);align-self:center;">Country:</span>
+        <button class="filter-pill active" data-pp-country="">All</button>
+        <button class="filter-pill" data-pp-country="gb">UK</button>
+        <button class="filter-pill" data-pp-country="ie">Ireland</button>
+        <button class="filter-pill" data-pp-country="fr">France</button>
+        <button class="filter-pill" data-pp-country="se">Sweden</button>
+        <button class="filter-pill" data-pp-country="no">Norway</button>
+        <button class="filter-pill" data-pp-country="de">Germany</button>
+        <button class="filter-pill" data-pp-country="at">Austria</button>
+        <button class="filter-pill" data-pp-country="ca">Canada</button>
+      </div>
+      <p id="pp-count" style="font-size:0.8rem;color:var(--color-neutral-500);margin-bottom:0;"></p>
+    </section>
+
     <section class="prose">
       <p><strong>Evidence note:</strong> All salary thresholds and requirements on this page are sourced from official government portals with effective dates. Requirements change — always confirm current thresholds with the official authority before applying. This page is a planning guide, not a legal or eligibility decision.</p>
     </section>
@@ -44,8 +67,8 @@
     <section class="prose">
       <h2>Employer-sponsored pathways</h2>
 
-      <article class="playbook-card">
-        <h3><span aria-hidden="true">🇬🇧</span> UK — Skilled Worker visa</h3>
+      <article class="playbook-card" data-pp-type="employer" data-pp-country="gb">
+        <h3>UK — Skilled Worker visa</h3>
         <p>The UK Skilled Worker visa requires a confirmed job offer from an approved sponsor employer.</p>
         <ul class="checklist">
           <li><strong>Job offer required:</strong> Yes — from a UK employer with a valid sponsor licence, with a Certificate of Sponsorship</li>
@@ -57,8 +80,8 @@
         <a href="/pages/countries.html" class="btn btn-secondary">View UK pathway →</a>
       </article>
 
-      <article class="playbook-card">
-        <h3><span aria-hidden="true">🇮🇪</span> Ireland — Critical Skills Employment Permit</h3>
+      <article class="playbook-card" data-pp-type="employer" data-pp-country="ie">
+        <h3>Ireland — Critical Skills Employment Permit</h3>
         <p>Ireland's Critical Skills permit targets professionals in shortage occupations.</p>
         <ul class="checklist">
           <li><strong>Job offer required:</strong> Yes — from an Irish employer for an eligible occupation</li>
@@ -69,8 +92,8 @@
         <a href="/pages/countries.html" class="btn btn-secondary">View Ireland pathway →</a>
       </article>
 
-      <article class="playbook-card">
-        <h3><span aria-hidden="true">🇫🇷</span> France — Talent Passport</h3>
+      <article class="playbook-card" data-pp-type="employer" data-pp-country="fr">
+        <h3>France — Talent Passport</h3>
         <p>France's Talent Passport covers several professional categories including EU Blue Card holders and company employees.</p>
         <ul class="checklist">
           <li><strong>Job offer required:</strong> Yes — for the EU Blue Card subcategory</li>
@@ -81,8 +104,8 @@
         <a href="/pages/countries.html" class="btn btn-secondary">View France pathway →</a>
       </article>
 
-      <article class="playbook-card">
-        <h3><span aria-hidden="true">🇸🇪</span> Sweden — Standard work permit</h3>
+      <article class="playbook-card" data-pp-type="employer" data-pp-country="se">
+        <h3>Sweden — Standard work permit</h3>
         <p>Sweden's work permit requires a job offer meeting the collective agreement salary threshold.</p>
         <ul class="checklist">
           <li><strong>Job offer required:</strong> Yes — from a Swedish employer</li>
@@ -92,8 +115,8 @@
         <a href="/pages/countries.html" class="btn btn-secondary">View Sweden pathway →</a>
       </article>
 
-      <article class="playbook-card">
-        <h3><span aria-hidden="true">🇳🇴</span> Norway — Skilled worker permit</h3>
+      <article class="playbook-card" data-pp-type="employer" data-pp-country="no">
+        <h3>Norway — Skilled worker permit</h3>
         <p>Norway requires a concrete full-time job offer from a Norwegian employer.</p>
         <ul class="checklist">
           <li><strong>Job offer required:</strong> Yes — full-time (or at least 80%) from a Norwegian employer requiring skilled qualifications — <a href="https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/" rel="noopener noreferrer">source: UDI</a></li>
@@ -106,8 +129,8 @@
     <section class="prose">
       <h2>Points-based and job-search pathways</h2>
 
-      <article class="playbook-card">
-        <h3><span aria-hidden="true">🇩🇪</span> Germany — Opportunity Card (Chancenkarte)</h3>
+      <article class="playbook-card" data-pp-type="points" data-pp-country="de">
+        <h3>Germany — Opportunity Card (Chancenkarte)</h3>
         <p>Germany's Opportunity Card allows qualified professionals to enter Germany to search for work without a prior job offer.</p>
         <ul class="checklist">
           <li><strong>Minimum points:</strong> 6 points on the criteria catalogue (qualification, language, experience, age, connection to Germany) — <a href="https://www.make-it-in-germany.com/en/visa-residence/types/opportunity-card" rel="noopener noreferrer">source: Make it in Germany</a></li>
@@ -119,8 +142,8 @@
         <a href="/pages/countries.html" class="btn btn-secondary">View Germany pathway →</a>
       </article>
 
-      <article class="playbook-card">
-        <h3><span aria-hidden="true">🇦🇹</span> Austria — Red-White-Red Card (Other Key Workers)</h3>
+      <article class="playbook-card" data-pp-type="points" data-pp-country="at">
+        <h3>Austria — Red-White-Red Card (Other Key Workers)</h3>
         <p>Austria's points-based Red-White-Red Card allows qualified professionals to work in Austria.</p>
         <ul class="checklist">
           <li><strong>Minimum points:</strong> 55 points on the Other Key Workers criteria catalogue (education, experience, age, language, job offer) — <a href="https://www.migration.gv.at/index.php?id=1051" rel="noopener noreferrer">source: migration.gv.at</a></li>
@@ -131,8 +154,8 @@
         <a href="/pages/countries.html" class="btn btn-secondary">View Austria pathway →</a>
       </article>
 
-      <article class="playbook-card">
-        <h3><span aria-hidden="true">🇨🇦</span> Canada — Federal Skilled Worker Program (Express Entry)</h3>
+      <article class="playbook-card" data-pp-type="points" data-pp-country="ca">
+        <h3>Canada — Federal Skilled Worker Program (Express Entry)</h3>
         <p>Canada's Express Entry system is an invitation-based pathway to permanent residency for skilled workers.</p>
         <ul class="checklist">
           <li><strong>Minimum selection factor points:</strong> 67 out of 100 (education, language, experience, age, arranged employment, adaptability) — <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers.html" rel="noopener noreferrer">source: IRCC</a></li>
@@ -199,5 +222,39 @@
   <script src="/js/admob-loader.js"></script>
   <script src="/js/analytics.js"></script>
   <script src="/js/app.js"></script>
-</body>
+  <script>
+    (function () {
+      const cards = Array.from(document.querySelectorAll('.playbook-card[data-pp-type]'));
+      const countEl = document.getElementById('pp-count');
+      let activeType = '', activeCountry = '';
+      function update() {
+        let n = 0;
+        cards.forEach(c => {
+          const mt = !activeType || c.dataset.ppType === activeType;
+          const mc = !activeCountry || c.dataset.ppCountry === activeCountry;
+          const show = mt && mc;
+          c.style.display = show ? '' : 'none';
+          if (show) n++;
+        });
+        if (countEl) countEl.textContent = n + ' pathway' + (n !== 1 ? 's' : '') + ' shown';
+      }
+      document.querySelectorAll('[data-pp-type]').forEach(btn => {
+        if (btn.tagName !== 'BUTTON') return;
+        btn.addEventListener('click', () => {
+          activeType = btn.dataset.ppType;
+          document.querySelectorAll('[data-pp-type]').forEach(b => b.tagName === 'BUTTON' && b.classList.toggle('active', b.dataset.ppType === activeType));
+          update();
+        });
+      });
+      document.querySelectorAll('[data-pp-country]').forEach(btn => {
+        if (btn.tagName !== 'BUTTON') return;
+        btn.addEventListener('click', () => {
+          activeCountry = btn.dataset.ppCountry;
+          document.querySelectorAll('[data-pp-country]').forEach(b => b.tagName === 'BUTTON' && b.classList.toggle('active', b.dataset.ppCountry === activeCountry));
+          update();
+        });
+      });
+      update();
+    })();
+  </script>
 </html>

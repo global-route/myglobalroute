@@ -31,6 +31,16 @@ permalink: "/blog/index.html"
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8077583188666813" crossorigin="anonymous"></script>
+  <style>
+    .blog-filters { display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; margin-bottom:1.5rem; }
+    .blog-filters label { font-size:0.8rem; font-weight:600; color:var(--color-neutral-500); margin-right:0.25rem; }
+    .filter-pill { background:#f0f4ff; border:1px solid #c7d4f0; color:var(--color-primary); border-radius:2px; padding:0.3rem 0.85rem; font-size:0.8rem; font-weight:600; cursor:pointer; transition:background 0.15s,color 0.15s; }
+    .filter-pill:hover, .filter-pill.active { background:var(--color-primary); color:#fff; border-color:var(--color-primary); }
+    .blog-search { padding:0.4rem 0.75rem; border:1px solid #ddd; border-radius:2px; font-size:0.85rem; width:200px; }
+    .blog-count { font-size:0.8rem; color:var(--color-neutral-500); margin-bottom:1rem; }
+    .post-hidden { display:none !important; }
+    .no-results { grid-column:1/-1; color:var(--color-neutral-500); padding:2rem 0; }
+  </style>
 </head>
 <body data-page-type="blog">
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -39,23 +49,79 @@ permalink: "/blog/index.html"
   <main id="main" class="main">
     <div class="page-header">
       <div class="container">
-        <span class="page-header-badge">21 Posts</span>
+        <span class="page-header-badge">31 Posts</span>
         <h1>Research & Migration Guides</h1>
         <p class="page-header-subtitle">Country audits, playbooks, case studies and policy updates. All claims sourced from official authorities.</p>
       </div>
     </div>
 
-    <section class="container" style="padding:3rem 1rem">
-      <div class="featured-grid">
+    <section class="container" style="padding:2rem 1rem 3rem">
+
+      <div class="blog-filters" role="group" aria-label="Filter posts">
+        <label>Category:</label>
+        <button class="filter-pill active" data-filter="category" data-value="">All</button>
+        <button class="filter-pill" data-filter="category" data-value="Country Audits">Country Audits</button>
+        <button class="filter-pill" data-filter="category" data-value="Student Playbooks">Student</button>
+        <button class="filter-pill" data-filter="category" data-value="Professional Playbooks">Professional</button>
+        <button class="filter-pill" data-filter="category" data-value="Business Playbooks">Business</button>
+        <button class="filter-pill" data-filter="category" data-value="Guides">Guides</button>
+        <button class="filter-pill" data-filter="category" data-value="Case Studies">Case Studies</button>
+        <button class="filter-pill" data-filter="category" data-value="Policy Updates">Policy Updates</button>
+      </div>
+
+      <div class="blog-filters" role="group" aria-label="Filter by goal">
+        <label>Goal:</label>
+        <button class="filter-pill active" data-filter="goal" data-value="">All goals</button>
+        <button class="filter-pill" data-filter="goal" data-value="study">Study</button>
+        <button class="filter-pill" data-filter="goal" data-value="work">Work / Professional</button>
+        <button class="filter-pill" data-filter="goal" data-value="business">Business / Nomad</button>
+      </div>
+
+      <div class="blog-filters" style="margin-bottom:0.5rem;">
+        <label for="blog-country-filter">Country:</label>
+        <select id="blog-country-filter" style="padding:0.35rem 0.6rem;border:1px solid #ddd;border-radius:2px;font-size:0.85rem;">
+          <option value="">All countries</option>
+          <option value="Germany">Germany</option>
+          <option value="Canada">Canada</option>
+          <option value="United Kingdom">United Kingdom</option>
+          <option value="Italy">Italy</option>
+          <option value="Portugal">Portugal</option>
+          <option value="USA">USA</option>
+          <option value="Australia">Australia</option>
+          <option value="France">France</option>
+          <option value="Netherlands">Netherlands</option>
+          <option value="Ireland">Ireland</option>
+          <option value="Spain">Spain</option>
+          <option value="Austria">Austria</option>
+          <option value="New Zealand">New Zealand</option>
+          <option value="Japan">Japan</option>
+          <option value="South Korea">South Korea</option>
+        </select>
+        <input type="search" id="blog-search" class="blog-search" placeholder="Search posts..." aria-label="Search posts" style="margin-left:0.5rem;">
+      </div>
+
+      <p class="blog-count" id="blog-count" aria-live="polite"></p>
+
+      <div class="featured-grid" id="blog-grid">
         {% for post in collections.blog | reverse %}
-        <article class="featured-card">
-          <p style="font-size:0.8rem;color:var(--color-neutral-500);margin-bottom:0.5rem;">{{ post.date | readableDate }}</p>
-          <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-          <p>{{ post.data.description or post.data.excerpt or 'Migration research and practical guidance from MyPathway2Global.' }}</p>
+        <article class="featured-card"
+          data-category="{{ post.data.category }}"
+          data-country="{{ post.data.country or '' }}"
+          data-goal="{% if post.data.category == 'Student Playbooks' or (post.data.category == 'Country Audits' and post.data.title and 'student' in post.data.title | lower) %}study{% elif post.data.category == 'Professional Playbooks' %}work{% elif post.data.category == 'Business Playbooks' %}business{% elif post.data.category == 'Guides' %}{% if 'study' in post.data.title | lower or 'student' in post.data.title | lower %}study{% elif 'nomad' in post.data.title | lower or 'llc' in post.data.title | lower %}business{% else %}{% endif %}{% else %}{% endif %}"
+          data-title="{{ post.data.title | lower }}">
+          <div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.5rem;flex-wrap:wrap;">
+            <span style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--color-primary);background:#f0f4ff;padding:2px 7px;border-radius:2px;">{{ post.data.category }}</span>
+            {% if post.data.country %}<span style="font-size:0.72rem;color:var(--color-neutral-500);">{{ post.data.country }}</span>{% endif %}
+            <span style="font-size:0.72rem;color:var(--color-neutral-400);margin-left:auto;">{{ post.data.readTime or '8 min' }}</span>
+          </div>
+          <h2 style="font-size:1rem;margin-bottom:0.4rem;"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+          <p style="font-size:0.875rem;color:var(--color-neutral-600);margin-bottom:0.75rem;">{{ post.data.excerpt or 'Migration research and practical guidance from MyPathway2Global.' }}</p>
           <a class="btn-link" href="{{ post.url }}">Read article &rarr;</a>
         </article>
         {% endfor %}
       </div>
+
+      <p class="no-results" id="blog-no-results" hidden>No posts match the selected filters. <button class="filter-pill" id="blog-reset" style="margin-left:0.5rem;">Clear filters</button></p>
     </section>
 
     <section class="cta-final"><div class="container"><h2>Need a route, not just an article?</h2><p>Use the evidence-gated route finder for pathway-level recommendations.</p><div class="cta-buttons"><a href="/pages/find-mypathway.html" class="btn btn-primary btn-large">Find MyPathway</a><a href="/pages/visa-wizard.html" class="btn btn-secondary btn-large">Visa Wizard</a></div></div></section>
@@ -68,5 +134,57 @@ permalink: "/blog/index.html"
   <script src="/js/analytics.js"></script>
   <script src="/js/app.js"></script>
   <script src="/js/admob-loader.js"></script>
+  <script>
+    (function () {
+      const grid = document.getElementById('blog-grid');
+      const cards = Array.from(grid.querySelectorAll('.featured-card'));
+      const countEl = document.getElementById('blog-count');
+      const noResults = document.getElementById('blog-no-results');
+      const countrySelect = document.getElementById('blog-country-filter');
+      const searchInput = document.getElementById('blog-search');
+
+      let active = { category: '', goal: '' };
+
+      function update() {
+        const country = countrySelect.value;
+        const query = searchInput.value.trim().toLowerCase();
+        let visible = 0;
+        cards.forEach(card => {
+          const matchCat = !active.category || card.dataset.category === active.category;
+          const matchGoal = !active.goal || card.dataset.goal === active.goal;
+          const matchCountry = !country || card.dataset.country === country;
+          const matchSearch = !query || card.dataset.title.includes(query);
+          const show = matchCat && matchGoal && matchCountry && matchSearch;
+          card.classList.toggle('post-hidden', !show);
+          if (show) visible++;
+        });
+        countEl.textContent = visible + ' post' + (visible !== 1 ? 's' : '');
+        noResults.hidden = visible > 0;
+      }
+
+      document.querySelectorAll('.filter-pill[data-filter]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const f = btn.dataset.filter;
+          active[f] = btn.dataset.value;
+          document.querySelectorAll(`.filter-pill[data-filter="${f}"]`).forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          update();
+        });
+      });
+
+      countrySelect.addEventListener('change', update);
+      searchInput.addEventListener('input', update);
+
+      document.getElementById('blog-reset')?.addEventListener('click', () => {
+        active = { category: '', goal: '' };
+        document.querySelectorAll('.filter-pill[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.value === ''));
+        countrySelect.value = '';
+        searchInput.value = '';
+        update();
+      });
+
+      update();
+    })();
+  </script>
 </body>
 </html>

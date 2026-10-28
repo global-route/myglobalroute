@@ -1078,3 +1078,21 @@ th {
   font-size: 0.875rem;
   border-radius: 0 2px 2px 0;
 }
+
+/* ── FILTER PILLS (playbooks + blog) ── */
+.filter-pill {
+  background: #f0f4ff;
+  border: 1px solid #c7d4f0;
+  color: var(--color-primary);
+  border-radius: 2px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.filter-pill:hover, .filter-pill.active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}

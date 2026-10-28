@@ -43,15 +43,36 @@
       </div>
     </div>
 
+    <section class="container" style="padding:1.5rem 1rem 0;">
+      <div class="blog-filters" role="group" aria-label="Filter by country" style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+        <span style="font-size:0.8rem;font-weight:600;color:var(--color-neutral-500);align-self:center;">Country:</span>
+        <button class="filter-pill active" data-sp-country="">All</button>
+        <button class="filter-pill" data-sp-country="de">Germany</button>
+        <button class="filter-pill" data-sp-country="it">Italy</button>
+        <button class="filter-pill" data-sp-country="hu">Hungary</button>
+        <button class="filter-pill" data-sp-country="ca">Canada</button>
+        <button class="filter-pill" data-sp-country="jp">Japan</button>
+        <button class="filter-pill" data-sp-country="kr">South Korea</button>
+      </div>
+      <div class="blog-filters" role="group" aria-label="Filter by budget" style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1rem;">
+        <span style="font-size:0.8rem;font-weight:600;color:var(--color-neutral-500);align-self:center;">Budget:</span>
+        <button class="filter-pill active" data-sp-budget="">Any budget</button>
+        <button class="filter-pill" data-sp-budget="low">Under $5,000 (scholarship routes)</button>
+        <button class="filter-pill" data-sp-budget="mid">$5,000-$15,000</button>
+        <button class="filter-pill" data-sp-budget="high">$15,000+</button>
+      </div>
+      <p id="sp-count" style="font-size:0.8rem;color:var(--color-neutral-500);margin-bottom:0;"></p>
+    </section>
+
     <section class="prose">
       <p><strong>Evidence note:</strong> All requirements and cost figures on this page are sourced from official government portals. Approval rates are not published by most authorities and are not shown here. This page is a planning guide — not a legal or eligibility decision.</p>
     </section>
 
-    <section class="prose">
+    <section class="prose" id="sp-cards-section">
       <h2>No-tuition and low-cost sweet spots</h2>
 
-      <article class="playbook-card">
-        <h3><span aria-hidden="true">🇩🇪</span> Germany — Study visa</h3>
+      <article class="playbook-card" data-sp-country="de" data-sp-budget="mid">
+        <h3>Germany — Study visa</h3>
         <p>Public universities in Germany charge no tuition for most programmes. The main financial barrier is the blocked account.</p>
         <ul class="checklist">
           <li><strong>Blocked account required:</strong> €11,208 (living funds proof — <a href="https://www.auswaertiges-amt.de/en/visa-service" rel="noopener noreferrer">source: Federal Foreign Office</a>)</li>
@@ -63,8 +84,8 @@
         <a href="/pages/countries.html" class="btn btn-secondary">View Germany pathway →</a>
       </article>
 
-      <article class="playbook-card">
-        <h3><span aria-hidden="true">🇮🇹</span> Italy — Higher-education study visa + DSU scholarship</h3>
+      <article class="playbook-card" data-sp-country="it" data-sp-budget="low">
+        <h3>Italy — Higher-education study visa + DSU scholarship</h3>
         <p>Italy's DSU (Diritto allo Studio Universitario) scholarship covers tuition, accommodation and a living stipend for eligible low-income students.</p>
         <ul class="checklist">
           <li><strong>Admission offer required:</strong> Yes — from a recognised Italian university via Universitaly portal</li>
@@ -75,8 +96,8 @@
         <a href="/pages/countries.html" class="btn btn-secondary">View Italy pathway →</a>
       </article>
 
-      <article class="playbook-card">
-        <h3><span aria-hidden="true">🇭🇺</span> Hungary — Stipendium Hungaricum scholarship</h3>
+      <article class="playbook-card" data-sp-country="hu" data-sp-budget="low">
+        <h3>Hungary — Stipendium Hungaricum scholarship</h3>
         <p>Hungary's government scholarship programme covers tuition, accommodation and a monthly stipend for African students.</p>
         <ul class="checklist">
           <li><strong>Admission offer required:</strong> Yes — from a recognised Hungarian university</li>
@@ -87,8 +108,8 @@
         <a href="/pages/countries.html" class="btn btn-secondary">View Hungary pathway →</a>
       </article>
 
-      <article class="playbook-card">
-        <h3><span aria-hidden="true">🇨🇦</span> Canada — Study permit</h3>
+      <article class="playbook-card" data-sp-country="ca" data-sp-budget="high">
+        <h3>Canada — Study permit</h3>
         <p>Canada requires a study permit for courses longer than 6 months. Living funds are required in addition to tuition.</p>
         <ul class="checklist">
           <li><strong>Admission offer required:</strong> Yes — from a Designated Learning Institution (DLI)</li>
@@ -99,8 +120,8 @@
         <a href="/pages/countries.html" class="btn btn-secondary">View Canada pathway →</a>
       </article>
 
-      <article class="playbook-card">
-        <h3><span aria-hidden="true">🇯🇵</span> Japan — Student status of residence</h3>
+      <article class="playbook-card" data-sp-country="jp" data-sp-budget="low">
+        <h3>Japan — Student status of residence</h3>
         <p>Japan has a large number of English-taught programmes and government scholarships (MEXT) for international students.</p>
         <ul class="checklist">
           <li><strong>Admission offer required:</strong> Yes — from a qualifying Japanese educational institution</li>
@@ -111,8 +132,8 @@
         <a href="/pages/countries.html" class="btn btn-secondary">View Japan pathway →</a>
       </article>
 
-      <article class="playbook-card">
-        <h3><span aria-hidden="true">🇰🇷</span> South Korea — D-2 student visa</h3>
+      <article class="playbook-card" data-sp-country="kr" data-sp-budget="low">
+        <h3>South Korea — D-2 student visa</h3>
         <p>South Korea offers government scholarships (KGSP) and has a growing number of English-taught programmes.</p>
         <ul class="checklist">
           <li><strong>Admission offer required:</strong> Yes — from a Korean university accredited by the Ministry of Education</li>
@@ -191,5 +212,40 @@
   <script src="/js/admob-loader.js"></script>
   <script src="/js/analytics.js"></script>
   <script src="/js/app.js"></script>
+  <script>
+    (function () {
+      const cards = Array.from(document.querySelectorAll('.playbook-card[data-sp-country]'));
+      const countEl = document.getElementById('sp-count');
+      let activeCountry = '', activeBudget = '';
+      function update() {
+        let n = 0;
+        cards.forEach(c => {
+          const mc = !activeCountry || c.dataset.spCountry === activeCountry;
+          const mb = !activeBudget || c.dataset.spBudget === activeBudget;
+          const show = mc && mb;
+          c.style.display = show ? '' : 'none';
+          if (show) n++;
+        });
+        if (countEl) countEl.textContent = n + ' pathway' + (n !== 1 ? 's' : '') + ' shown';
+      }
+      document.querySelectorAll('[data-sp-country]').forEach(btn => {
+        if (btn.tagName !== 'BUTTON') return;
+        btn.addEventListener('click', () => {
+          activeCountry = btn.dataset.spCountry;
+          document.querySelectorAll('[data-sp-country]').forEach(b => b.tagName === 'BUTTON' && b.classList.toggle('active', b.dataset.spCountry === activeCountry));
+          update();
+        });
+      });
+      document.querySelectorAll('[data-sp-budget]').forEach(btn => {
+        if (btn.tagName !== 'BUTTON') return;
+        btn.addEventListener('click', () => {
+          activeBudget = btn.dataset.spBudget;
+          document.querySelectorAll('[data-sp-budget]').forEach(b => b.tagName === 'BUTTON' && b.classList.toggle('active', b.dataset.spBudget === activeBudget));
+          update();
+        });
+      });
+      update();
+    })();
+  </script>
 </body>
 </html>
