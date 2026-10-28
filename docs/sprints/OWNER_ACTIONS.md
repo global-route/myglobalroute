@@ -9,11 +9,12 @@
 | # | Item | Effort | Blocks |
 |---|---|---|---|
 | 1 | Favicon PNG | 5 min | Browser tab icon, PWA homescreen icon |
-| 2 | OG image | 20 min | Social share cards on all 21 pages |
+| 2 | OG image | 20 min | Social share cards on all pages |
 | 3 | Mailchimp action URL | 10 min | Email capture going live |
 | 4 | ARIA audit | 30 min | Accessibility gate |
 | 5 | Country source sign-off | 1-2 hrs | `dataset.asOf` update |
 | 6 | Legal review | Solicitor | Trust gate |
+| 7 | Quarterly audit routine | ✅ Done | GitHub Actions workflow live — `.github/workflows/stale-pathways.yml` |
 | — | AdSense | **Done** | Publisher ID `ca-pub-8077583188666813` live, slots active, policy review pending |
 
 ---
@@ -99,3 +100,9 @@ The three legal pages document current product intent. They are not a substitute
   - `src/pages/disclaimer.html`
   - `src/pages/terms.html`
 - Note any required changes and share them — I'll update the pages
+
+---
+
+## 7. Quarterly audit routine — done
+
+GitHub Actions workflow created at `.github/workflows/stale-pathways.yml`. Runs every Monday at 09:00 UTC. Opens a GitHub Issue listing stale entries when any pathway requirement `effectiveDate` is older than 90 days. No further owner action required.

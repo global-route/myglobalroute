@@ -1024,6 +1024,31 @@ th {
   .tools-split-grid { grid-template-columns: 1fr; }
 }
 
+/* ── AUDIT BADGE (CP-1-U1) ── */
+.badge-audit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 2px;
+  margin-bottom: var(--spacing-md);
+  letter-spacing: 0.02em;
+}
+
+.badge-audit-verified {
+  background: #e6f4ea;
+  color: #1a7340;
+  border: 1px solid #a8d5b5;
+}
+
+.badge-audit-stale {
+  background: #fff3e0;
+  color: #b45309;
+  border: 1px solid #fcd34d;
+}
+
 /* ── EMAIL CAPTURE ── */
 .email-capture-form { display: flex; flex-direction: column; margin-top: var(--spacing-sm); }
 
@@ -1042,4 +1067,14 @@ th {
   outline: none;
   border-color: var(--color-primary);
   background-color: white;
+}
+
+/* ── NEXT ACTION BLOCK (N-P3) ── */
+.next-action-block {
+  background: #f0f4ff;
+  border-left: 3px solid var(--color-primary, #0b409c);
+  padding: 0.6rem 0.9rem;
+  margin: 0.75rem 0;
+  font-size: 0.875rem;
+  border-radius: 0 2px 2px 0;
 }

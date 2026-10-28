@@ -1,9 +1,9 @@
 ---
 layout: blog-post.njk
 title: "Document Authentication for Nigerian Visa Applicants: Apostille, Sworn Translation and APS Guide 2026"
-date: 2026-10-18
-updated: 2026-10-18
-lastFactChecked: 2026-10-18
+date: 2026-10-28
+updated: 2026-10-28
+lastFactChecked: 2026-10-28
 author: "MyPathway2Global Editorial"
 category: "Guides"
 keywords: "apostille Nigeria, sworn translation visa Nigeria, APS certificate Germany Nigeria, document authentication visa Africa"
@@ -55,6 +55,23 @@ The Federal Ministry of Foreign Affairs (MFA) in Abuja issues apostilles for Nig
 4. Collect the apostilled document (same day or next day in most cases)
 
 **MFA contact:** Ministry of Foreign Affairs, Maputo Street, Wuse Zone 3, Abuja.
+
+### MOFA online verification portal
+
+The Federal Ministry of Foreign Affairs has introduced an online verification portal that allows embassies and institutions to verify the authenticity of apostilles issued by the MFA without contacting the MFA directly.
+
+**Portal:** [https://www.mfa.gov.ng/](https://www.mfa.gov.ng/) - navigate to the apostille verification section.
+
+**How it works:**
+- Each apostille issued by the MFA carries a unique reference number
+- The receiving embassy or institution can enter this number on the portal to confirm the apostille is genuine
+- This reduces processing delays caused by manual verification requests
+
+**Practical implication for applicants:** When submitting apostilled documents, include the MFA reference number in your cover letter so the embassy can verify online without delay. Not all embassies use the portal yet - check with the specific embassy whether they require the reference number.
+
+**Turnaround time:** Same-day or next-day for in-person applications at MFA Abuja. Online verification by the receiving embassy is instant once the apostille is in the system.
+
+**Fee:** Confirm the current fee directly with the MFA - fees are updated periodically and are not published on the portal.
 
 **Important:** The apostille certifies the signature of the Nigerian official. If your document was issued by a private institution (e.g. a private university), the institution's signature must first be notarised by a Nigerian notary public before the MFA can apostille it.
 

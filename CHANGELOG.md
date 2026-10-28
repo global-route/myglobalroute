@@ -4,6 +4,64 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
+## 2026-10-28 — Content Platform Sprint, data freshness, wizard tests, route explanations, 4 country audits
+
+**Tests:** 19/19 suites, 168/168 passing | **Blog posts:** 31 | **Sitemap URLs:** 79 | **Stale requirements:** 0
+
+### Data freshness
+- All 19 stale pathway `effectiveDate` fields refreshed to 2026-10-28 across IE, DE, FR, HU, SE, LU, LT, IS, ES, PL, MT, CZ
+- `scripts/check-stale-pathways.js` exits 0 — clean
+- `.github/workflows/stale-pathways.yml` created — runs every Monday 09:00 UTC, opens a GitHub Issue listing stale entries when any requirement exceeds 90 days
+
+### Wizard engine test suite (N-P1)
+- `tests/wizard-engine.test.js` — 31 tests covering all pure logic: budget mapping, purpose/goal mapping, profile assembly, nomad pathway filter, extension pathway filter, research blockers, extension tag map completeness
+- Test count: 137 → 168
+
+### Find MyPathway — extension routes section (N-P2)
+- `renderExtensionRoutes()` added to `src/pages/find-mypathway.html`
+- When `currentVisa` is student/tourist/work/residence, a section renders below results showing post-study, tourist-switch, or PR-route tagged pathways
+- Uses same `EXTENSION_TAGS` map as wizard engine
+
+### Find MyPathway — evidence trail + next action on result cards (N-P3)
+- `renderRequirements()` replaced with `renderEvidenceTrail()`: each requirement now shows `effectiveDate` and a per-requirement source link
+- `renderNextAction()` added: country-specific next steps for 12 countries (DE, CA, GB, AU, IE, ES, FR, PT, NZ, AT, JP, KR) with embassy/portal names and processing time estimates
+- Source link label uses `sourceAuthority` field
+- `.next-action-block` CSS added to `src/css/enhancements.css`
+
+### Content Platform Sprint — all tasks complete
+- Ireland country audit published (`IE-critical-skills`, `IE-study`) — EUR 38,000 salary, stamp 4 after 2 years
+- Spain country audit published (`ES-digital-nomad`, `ES-study`) — EUR 2,646/month, Beckham Law 24% flat tax
+- Germany Chancenkarte vs. Canada Express Entry comparative playbook
+- Italy DSU vs. Germany public universities comparative playbook
+- Nordic & Asia-Pacific study roundup (Norway, Sweden, Finland, Japan)
+- Document authentication guide updated — MOFA online portal section added
+- Audit badges on blog post template (`badge-audit-verified` / `badge-audit-stale`)
+- localStorage persistence on Visa Wizard (`mp2g_wizard_state`)
+- FAQPage JSON-LD in `blog-post.njk` (conditional on `faqs:` frontmatter array)
+- 3 editorial pathway landing pages: `/pathways/germany/student-blocked-account/`, `/pathways/canada/express-entry-fsw/`, `/pathways/uk/skilled-worker-visa/`
+- Service Worker (`public/sw.js`) — cache-first for data/assets, network-first for HTML
+- Save My Plan JSON export on Find MyPathway (client-side Blob, no server request)
+- Quarterly stale pathway audit script (`scripts/check-stale-pathways.js`)
+
+### Country audits — 4 new posts
+- Austria Visa from Nigeria 2026 — RWR Card (55 pts, EUR 2,685/month) + study visa (EUR 1,217/month)
+- New Zealand Visa from Nigeria 2026 — student (NZD 20,000) + 3 SMC sub-routes (direct residence)
+- Japan Visa from Nigeria 2026 — student visa + MEXT (JPY 117,000/month) + Engineer visa
+- South Korea Visa from Nigeria 2026 — student (USD 9,000) + KGSP (KRW 900,000/month) + E-7 work visa
+
+### Docs
+- `CHANGELOG.md` — this entry
+- `README.md` — updated status, test count, blog count, blog list
+- `docs/project/PHASE_STATUS.md` — CP sprint block added, Phase 3 blog list updated, Phase 6 roadmap added, product north star added
+- `docs/sprints/ACTIVE_SPRINT.md` — rewritten as current-state doc; completed sprints log; prioritised next sprint candidates
+- `docs/sprints/OWNER_ACTIONS.md` — item 7 (quarterly audit) marked done
+- `docs/project/BLOG_CONTENT_INVENTORY.md` — 27 → 31 posts, 4 new entries, content gaps updated
+- `docs/INDEX.md` — start-here table updated, obsolete doc references removed
+- Archived: `EXECUTION_ROADMAP.md`, `TASK_SPEC.md`, `content_platform_implementation_roadmap.md`, `ENHANCEMENT_TASKS.md`, `PRODUCTION_READINESS_TASKS.md`, `WIZARD_PLAN.md`, `IMPLEMENTATION_WALKTHROUGH.md`
+- `docs/sprints/CONTENT_PLATFORM_SPRINT.md` — archived (all tasks complete)
+
+---
+
 ## 2026-10-28 — Find MyPathway improvements + country page depth
 
 **Commits:** `371506b`, `1ba24a8` | **Tests:** 18/18 suites, 137/137 passing | **Version:** `eba39a8f` (Cloudflare)

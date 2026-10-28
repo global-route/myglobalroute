@@ -1,6 +1,6 @@
 # MyPathway2Global — Documentation Index
 
-> **Updated:** 2026-10-27  
+> **Updated:** 2026-10-28  
 > **Purpose:** Canonical map for public project documentation. Keep one current source of truth per topic; dated or superseded execution notes belong in `archive/`.
 
 ## Start here
@@ -9,33 +9,26 @@
 |---|---|
 | Current sprint, priorities and blockers | [Active Sprint](sprints/ACTIVE_SPRINT.md) |
 | Owner-side actions and external dependencies | [Owner Actions](sprints/OWNER_ACTIONS.md) |
-| Phase status and exit gates | [Phase Status](project/PHASE_STATUS.md) |
-| Overall delivery plan | [Execution Roadmap](project/EXECUTION_ROADMAP.md) |
+| Phase status, open gates, Phase 6 roadmap | [Phase Status](project/PHASE_STATUS.md) |
+| Blog post inventory and content gaps | [Blog Content Inventory](project/BLOG_CONTENT_INVENTORY.md) |
 | Release evidence / deployment state | [Release Verification](project/RELEASE_VERIFICATION_2026-10-08.md) |
-| UI redesign findings and Figma handoff | [UI/UX Audit & Classic Design Roadmap](product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md) |
+| UI redesign findings | [UI/UX Audit & Classic Design Roadmap](product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md) |
 | Documentation structure and ownership | [Documentation Map](README.md) |
 
 ## Project planning
 
-- [Phase Status](project/PHASE_STATUS.md) — phase completion and open gates.
-- [Execution Roadmap](project/EXECUTION_ROADMAP.md) — overall sequence and dependencies.
-- [Task Specification](project/TASK_SPEC.md) — task-level requirements.
-- [Active Sprint](sprints/ACTIVE_SPRINT.md) — current source of truth for sprint execution.
-- [Master Delivery Plan](sprints/MASTER_DELIVERY_PLAN.md) — longer-horizon plan.
-- [P0 Delivery Plan](sprints/P0_DELIVERY_PLAN.md) — release-critical work and acceptance conditions.
-- [Production Readiness Tasks](sprints/PRODUCTION_READINESS_TASKS.md) — production readiness checklist.
-- [Enhancement Tasks](sprints/ENHANCEMENT_TASKS.md) — product improvements.
-- [Owner Actions](sprints/OWNER_ACTIONS.md) — owner-managed actions and dependencies.
-- [Archive](archive/) — historical/superseded planning and execution records; not current status.
+- [Phase Status](project/PHASE_STATUS.md) — phase completion, open gates, Phase 6 roadmap, product north star. **Canonical source of truth.**
+- [Active Sprint](sprints/ACTIVE_SPRINT.md) — current owner actions and prioritised next sprint candidates.
+- [Content Platform Sprint](sprints/CONTENT_PLATFORM_SPRINT.md) — CP sprint full task spec (complete 2026-10-28).
+- [Owner Actions](sprints/OWNER_ACTIONS.md) — owner-managed actions with step-by-step instructions.
+- [Blog Content Inventory](project/BLOG_CONTENT_INVENTORY.md) — all 27 posts, pathway coverage map, content gaps.
+- [Archive](archive/) — historical/superseded planning and execution records. Not current status.
 
 ## Product and design
 
-- [UI/UX Audit & Classic Design Roadmap](product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md) — screenshot findings, classic UI principles, Figma workflow and proposed UI sprints.
-- [UI Optimisation Sprint](sprints/UI_OPTIMISATION_SPRINT.md)
-- [UI Overwork Specification](sprints/UI_OVERWORK_SPEC.md)
-- [UI Transformation](sprints/UI_UX_TRANSFORM.md)
-- [UI Spotlight Plan](sprints/UI_SPOTLIGHT_PLAN.md)
-- [Wizard Plan](sprints/WIZARD_PLAN.md)
+- [UI/UX Audit & Classic Design Roadmap](product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md) — screenshot findings, classic UI principles, Figma workflow.
+
+> Archived: `WIZARD_PLAN.md`, `IMPLEMENTATION_WALKTHROUGH.md`, `ENHANCEMENT_TASKS.md`, `PRODUCTION_READINESS_TASKS.md`, UI sprint docs — all tasks complete, moved to `archive/`.
 
 ## Technical reference
 

@@ -38,7 +38,7 @@
     "headline": "{{ title }}",
     "description": "{{ excerpt }}",
     "datePublished": "{{ date }}",
-    "dateModified": "{{ updated or date }}",
+    "dateModified": "{{ lastFactChecked or updated or date }}",
     "author": {
       "@type": "Organization",
       "name": "MyPathway2Global"
@@ -55,6 +55,25 @@
   }
   </script>
   
+  {% if faqs and faqs.length %}
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {% for faq in faqs %}
+      {
+        "@type": "Question",
+        "name": {{ faq.q | dump | safe }},
+        "acceptedAnswer": { "@type": "Answer", "text": {{ faq.a | dump | safe }} }
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
+  }
+  </script>
+  {% endif %}
+
   <!-- Breadcrumb Schema -->
   <script type="application/ld+json">
   {
@@ -113,6 +132,9 @@
           <span class="meta-sep">/</span>
           <span>{{ readTime or (content | readingTime) }} min read</span>
         </p>
+        {% if lastFactChecked %}
+        <span class="badge-audit badge-audit-verified">Official Source Verified &middot; Audited: {{ lastFactChecked | readableDate }}</span>
+        {% endif %}
         <h1>{{ title }}</h1>
         {% if excerpt %}
         <p class="article-lead">{{ excerpt }}</p>

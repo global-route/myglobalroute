@@ -5,9 +5,20 @@
   if (document.body?.dataset?.pageType !== 'visa-wizard') return;
 
   // ── State ──────────────────────────────────────────────────────────────────
+  const WIZARD_STORAGE_KEY = 'mp2g_wizard_state';
+
+  function loadWizardState() {
+    try { return JSON.parse(localStorage.getItem(WIZARD_STORAGE_KEY) || 'null'); } catch (e) { return null; }
+  }
+
+  function saveWizardState() {
+    try { localStorage.setItem(WIZARD_STORAGE_KEY, JSON.stringify({ step: state.step, answers: state.answers })); } catch (e) {}
+  }
+
+  const saved = loadWizardState();
   const state = {
-    step: 1,
-    answers: { passportCountry: '', destinationCountry: '', purpose: '', currentVisa: 'none', budgetRange: '' }
+    step: saved?.step || 1,
+    answers: Object.assign({ passportCountry: '', destinationCountry: '', purpose: '', currentVisa: 'none', budgetRange: '' }, saved?.answers || {})
   };
 
   const TOTAL_STEPS = 5;
@@ -290,11 +301,13 @@
       if (!validateStep(stepEl)) return;
       // Sync select values to state before advancing
       stepEl.querySelectorAll('select').forEach(sel => { state.answers[sel.name] = sel.value; });
+      saveWizardState();
       showStep(state.step + 1);
     });
 
     // Back button
     stepEl.querySelector('.wizard-back')?.addEventListener('click', () => {
+      saveWizardState();
       showStep(state.step - 1);
     });
   }
@@ -303,6 +316,7 @@
   document.getElementById('wizard-submit')?.addEventListener('click', () => {
     // Sync final step selects
     document.querySelectorAll('#step-5 select').forEach(sel => { state.answers[sel.name] = sel.value; });
+    saveWizardState();
     showResults();
   });
 
@@ -310,6 +324,8 @@
   document.addEventListener('click', e => {
     if (e.target.closest('.wizard-restart')) {
       state.answers = { passportCountry: '', destinationCountry: '', purpose: '', currentVisa: 'none', budgetRange: '' };
+      state.step = 1;
+      try { localStorage.removeItem(WIZARD_STORAGE_KEY); } catch (e) {}
       // Reset UI
       document.querySelectorAll('.wizard-purpose-btn, .wizard-budget-btn').forEach(b => b.classList.remove('selected'));
       document.querySelectorAll('.wizard-step select').forEach(sel => { sel.value = sel.options[0]?.value || ''; });
@@ -324,7 +340,8 @@
   // Wire all steps
   document.querySelectorAll('.wizard-step').forEach(wireStep);
 
-  // Init
-  showStep(1);
+  // Init — restore from saved state or start at step 1
+  const initStep = saved?.step && saved.step >= 1 && saved.step <= TOTAL_STEPS ? saved.step : 1;
+  showStep(initStep);
 
 })();

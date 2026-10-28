@@ -160,6 +160,9 @@
         <h2>Evidence-gated pathway matches</h2>
         <p>Select Study or Work to view pathways whose exact-route records have passed the current evidence gate. Unverified pathways will not be recommended.</p>
       </section>
+      <div id="export-bar" hidden style="margin-top:var(--spacing-lg);">
+        <button type="button" id="export-json-btn" class="btn btn-secondary" style="font-size:0.85rem;">Save my plan (JSON)</button>
+      </div>
     </section>
   </main>
   <div class="disclaimer-bar"><p>General information only — not legal or immigration advice. Always verify current requirements with the relevant authority before paying fees or submitting an application. <a href="/pages/disclaimer.html">Full disclaimer →</a></p></div>
@@ -176,6 +179,11 @@
   <script src="/js/analytics.js"></script>
   <script src="/js/route-engine.js"></script>
   <script>
+    // CP-4-T1: Service Worker registration
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    }
+
     const form = document.getElementById('route-form');
     const results = document.getElementById('route-results');
     const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -215,6 +223,39 @@
       return `<p class="tier-pill">Applicable ${esc(label)}: ${esc(String(val))}${esc(cond)}</p>`;
     }
 
+    function renderEvidenceTrail(pathway) {
+      const reqs = Array.isArray(pathway.requirements) ? pathway.requirements : [];
+      if (!reqs.length) return '';
+      const rows = reqs.map(r => {
+        const label = r.field ? r.field.replace(/_/g, ' ') : 'requirement';
+        const val = r.kind === 'boolean' ? 'required' : (r.currency ? `${r.currency} ${r.value}` : r.value);
+        const date = r.effectiveDate ? `<span style="color:var(--color-neutral-400);font-size:0.75rem;"> (verified ${esc(r.effectiveDate)})</span>` : '';
+        const src = r.sourceUrl ? ` <a href="${esc(r.sourceUrl)}" rel="noopener noreferrer" style="font-size:0.75rem;">source</a>` : '';
+        return `<li><strong>${esc(label)}:</strong> ${esc(String(val))}${date}${src}</li>`;
+      }).join('');
+      return `<ul class="route-requirements">${rows}</ul>`;
+    }
+
+    function renderNextAction(pathway, country) {
+      const actions = {
+        'DE': { study: 'Apply via the German embassy in your country. Book an appointment at vfs-germany.com. Processing: 6-12 weeks.', work: 'Submit via the German embassy. Use the Make it in Germany portal to check eligibility first.' },
+        'CA': { work: 'Create an Express Entry profile at ircc.canada.ca. Invitations to apply are issued in draws — check current CRS cutoffs.' },
+        'GB': { work: 'Your employer must assign a Certificate of Sponsorship (CoS) before you apply at gov.uk/skilled-worker-visa.', study: 'Your institution issues a CAS number. Apply online at gov.uk/student-visa.' },
+        'AU': { study: 'Apply online via immi.homeaffairs.gov.au after receiving your CoE from your institution.', work: 'Submit an Expression of Interest via SkillSelect at immi.homeaffairs.gov.au.' },
+        'IE': { work: 'Your employer applies for the permit at enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/.', study: 'Apply at inis.gov.ie after receiving your offer letter.' },
+        'ES': { work: 'Apply at the Spanish consulate in your country. Processing: 20 working days after submission.', study: 'Apply at the Spanish consulate. Bring admission letter, financial proof, health insurance.' },
+        'FR': { work: 'Your employer files with the DREETS. You then apply at the French consulate in your country.', study: 'Apply via Campus France in your country, then at the French consulate.' },
+        'PT': { work: 'Apply at the Portuguese consulate. AIMA processes residence permits after entry.', study: 'Apply at the Portuguese consulate with your admission letter.' },
+        'NZ': { work: 'Submit an Expression of Interest via Skilled Migrant Category at immigration.govt.nz.', study: 'Apply online at immigration.govt.nz/visas/fee-paying-student-visa.' },
+        'AT': { work: 'Apply at the Austrian embassy in your country. Processing: 8-12 weeks.', study: 'Apply at the Austrian embassy with your admission letter and proof of funds.' },
+        'JP': { work: 'Your employer files a Certificate of Eligibility with the Immigration Services Agency. You then apply at the Japanese embassy.', study: 'Your institution files a Certificate of Eligibility. Apply at the Japanese embassy in your country.' },
+        'KR': { work: 'Your employer files with the Korean Immigration Service. Apply at the Korean embassy.', study: 'Apply at the Korean embassy with your admission letter and USD 9,000 in funds.' },
+      };
+      const countryActions = actions[country.id];
+      const action = countryActions?.[pathway.type] || `Apply at the ${esc(country.name)} embassy or consulate in your country. Verify current processing times at the official source.`;
+      return `<div class="next-action-block"><strong>Next step:</strong> ${action}</div>`;
+    }
+
     function renderCard(match) {
       const badge = freshnessLabel(match.pathway);
       return `<article>
@@ -224,8 +265,9 @@
         </div>
         ${match.stale ? renderStaleWarning() : ''}
         ${match.matchedTier ? renderMatchedTier(match.matchedTier) : ''}
-        ${renderRequirements(match.pathway.requirements)}
-        <a href="${esc(match.pathway.sourceUrl)}" rel="noopener noreferrer">Review official source</a>
+        ${renderEvidenceTrail(match.pathway)}
+        ${renderNextAction(match.pathway, match.country)}
+        <a href="${esc(match.pathway.sourceUrl)}" rel="noopener noreferrer">Review official source — ${esc(match.pathway.sourceAuthority || match.country.name)}</a>
       </article>`;
     }
 
@@ -321,13 +363,72 @@
           results.innerHTML = '<div style="text-align:center;padding:3rem 1rem;"><h2 style="margin-bottom:0.5rem;">No pathway matches</h2><p style="color:var(--color-neutral-500);max-width:420px;margin:0 auto 1.5rem;">No publishable pathways passed the evidence gate for your inputs. Try broadening your goal or adjusting your budget.</p><div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;"><button type="button" class="btn btn-secondary" onclick="document.querySelector(\"[name=goal]\").value=\"any\";document.querySelector(\"[name=budget]\").value=\"\";form.dispatchEvent(new Event(\"submit\"))">Reset filters</button><a href="/pages/countries.html" class="btn btn-primary">Browse countries</a></div></div>' + gapHtml + explanationHtml + renderAlternatives(alternatives);
           return;
         }
-        results.innerHTML = '<h2>Pathways matching your goal</h2><p class="evidence-note">Goal matches only — not eligibility assessments. Confirm current requirements at the official source before acting.</p>' + matches.map(renderCard).join('') + renderAlternatives(alternatives);
+        results.innerHTML = '<h2>Pathways matching your goal</h2><p class="evidence-note">Goal matches only — not eligibility assessments. Confirm current requirements at the official source before acting.</p>' + matches.map(renderCard).join('') + renderAlternatives(alternatives) + renderExtensionRoutes(profile, pathways.pathways, countries.countries);
+        // Show export button when results exist
+        document.getElementById('export-bar').hidden = false;
+        // Store current results for export
+        window._mp2gExportData = { profile: Object.fromEntries(new FormData(form).entries()), matches, alternatives };
       } catch (error) {
         results.innerHTML = `<h2>Route engine unavailable</h2><p>${esc(error.message)}</p>`;
+        document.getElementById('export-bar').hidden = true;
       } finally {
         submitBtn.disabled = false;
         submitBtn.textContent = 'Find routes →';
       }
+    });
+
+    // N-P2: Extension routes section
+    function renderExtensionRoutes(profile, pathways, countries) {
+      const EXTENSION_TAGS = { student: 'post-study', tourist: 'tourist-switch', work: 'pr-route', residence: 'pr-route' };
+      const tag = EXTENSION_TAGS[profile.currentVisa];
+      if (!tag) return '';
+      const countryMap = new Map(countries.map(c => [c.id, c]));
+      const ext = pathways.filter(p =>
+        Array.isArray(p.wizardTags) && p.wizardTags.includes(tag) && p.status === 'publishable'
+      );
+      if (!ext.length) return '';
+      const label = profile.currentVisa === 'student' ? 'Post-study routes from your current visa'
+        : profile.currentVisa === 'tourist' ? 'Possible in-country transitions'
+        : 'Onward residence and PR routes';
+      const items = ext.map(p => {
+        const c = countryMap.get(p.countryId);
+        if (!c) return '';
+        return `<li><a href="${esc(p.sourceUrl)}" rel="noopener noreferrer"><strong>${esc(c.name)} — ${esc(p.name)}</strong></a></li>`;
+      }).filter(Boolean).join('');
+      if (!items) return '';
+      return `<section class="wizard-extension-section" style="margin-top:var(--spacing-2xl);" aria-labelledby="ext-routes-heading">
+        <h2 id="ext-routes-heading">${esc(label)}</h2>
+        <p class="evidence-note">Possible next steps based on your current visa status. In-country switching rules vary — verify with the official authority before acting.</p>
+        <ul class="link-list">${items}</ul>
+      </section>`;
+    }
+
+    // CP-4-U1: Save My Plan export
+    document.getElementById('export-json-btn')?.addEventListener('click', () => {
+      const data = window._mp2gExportData;
+      if (!data) return;
+      const payload = {
+        exportedAt: new Date().toISOString(),
+        profile: data.profile,
+        matches: (data.matches || []).map(m => ({
+          id: m.pathway.id,
+          name: m.pathway.name,
+          country: m.country.name,
+          sourceUrl: m.pathway.sourceUrl,
+          requirements: (m.pathway.requirements || []).map(r => ({
+            field: r.field,
+            value: r.currency ? `${r.currency} ${r.value}` : r.value,
+            effectiveDate: r.effectiveDate
+          }))
+        })),
+        nearMiss: data.nearMiss || null
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `mypathway-plan-${new Date().toISOString().slice(0,10)}.json`;
+      a.click();
+      URL.revokeObjectURL(a.href);
     });
   </script>
 </body>

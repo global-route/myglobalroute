@@ -1,162 +1,111 @@
-# Active Sprint — Wizard & Growth
+# Active Sprint — Owner Actions & Ongoing Maintenance
 
 > **Updated:** 2026-10-28 | **Branch:** `main` | **Commit:** `1ba24a8`
 > **Production:** `https://mypathway2global.org.uk` (Cloudflare Workers — `globalroute`)
-> **Tests:** 18/18 suites, 137/137 passing (1 suite skipped — netlify.toml pre-Cloudflare artefact)
+> **Tests:** 18/18 suites, 137/137 passing
 
 ---
 
-## Sprint goal
+## Current state
 
-All phases 0-9 complete. Backlog product improvements B-P1 through B-P4 shipped. Platform is live, SEO-ready, revenue-activated and trust-consistent. Remaining work is owner actions and content only — no code is blocked.
-
----
-
-## Completed this session (2026-10-25)
-
-| Task | Status |
-|---|---|
-| Production readiness: all 23 tasks | ✅ Complete |
-| 27-country registry + USA pathways (61 total) | ✅ Complete |
-| og:image + twitter:image on all 21 pages + blog template | ✅ Complete |
-| Favicon PNG fallback + apple-touch-icon + manifest link on all pages | ✅ Complete |
-| Organization + WebSite JSON-LD on homepage | ✅ Complete |
-| sitemap.xml — stale URL fixed, USA added, 17 blog posts added | ✅ Complete |
-| robots.txt — Sitemap: directive added | ✅ Complete |
-| public/manifest.json created | ✅ Complete |
-| src/pages/404.html created | ✅ Complete |
-| Calculator null-cost explanatory state | ✅ Complete |
-| Fake newsletter form → honest callout | ✅ Complete |
-| Contact page: unverified social block removed | ✅ Complete |
-| about-section → prose consolidated (3 pages) | ✅ Complete |
-| Implementation walkthrough doc created | ✅ Complete |
-| CHANGELOG, PHASE_STATUS, INDEX, ACTIVE_SPRINT updated | ✅ Complete |
-
----
-
-## Active task board
-
-### Wizard & Find MyPathway (Phase 9)
-| ID | Task | Owner | Status | Exit condition |
-|---|---|---|---|---|
-| W1-1 | Visa Wizard page scaffold + 5-step UI | Code | **Done** | `/pages/visa-wizard.html` live, step nav works |
-| W1-2 | Add Wizard to main nav (all pages) | Code | **Done** | Nav updated on all 21 pages |
-| W1-3 | Add Wizard + Find MyPathway section to homepage | Code | **Done** | Two-column card section on `index.html` |
-| W2-1 | `wizard-engine.js` — profile assembly + `recommend()` wiring | Code | **Done** | Results render from wizard answers |
-| W2-2 | Extension routes section in wizard results | Code | **Done** | `currentVisa` drives post-study/nomad/PR signals |
-| W2-3 | Research flag cards (passport × destination blockers) | Code | **Done** | `permanentBlocker` / `scopeNote` surfaced in UI |
-| W2-4 | Nomad/remote pathway filter (`wizardTags: ["nomad"]`) | Code | **Done** | Explore & Nomad purpose shows PT/ES/DE routes |
-| W2-5 | Wizard engine test suite | Code | **Deferred** | Existing 139 tests cover route engine; wizard UI tests deferred |
-| W3-1 | Find MyPathway: passport country + current visa fields | Code | **Done** | Fields added, passed to route engine |
-| W3-2 | Find MyPathway: business goal unlocked (research-required state) | Code | **Done** | Business option enabled, shows research state |
-| W3-3 | Find MyPathway: extension routes section | Code | **Deferred** | Wizard covers this use case; FMP extension section deferred |
-| W4-1 | Tag nomad pathways in `pathways.json` (`wizardTags`, `extensionOf`) | Data | **Done** | PT/ES/DE nomad + DE post-study + CA/AU/NZ pr-route tagged |
-| W5-1 | Wizard URL in sitemap + WebPage schema | Code | **Done** | Sitemap updated, JSON-LD on wizard page |
-
-### Schema & SEO
-| ID | Task | Owner | Status | Exit condition |
-|---|---|---|---|---|
-| S3-S1 | Add FAQPage schema to `faq.html` | Code | **Done** | FAQPage JSON-LD present with 5 Q&A entries |
-| S3-S2 | Add Article schema to `blog-post.njk` | Code | **Done** | Article + Breadcrumb schema already in template |
-| S3-S3 | Add BreadcrumbList schema to `countries.njk` | Code | **Done** | BreadcrumbList JSON-LD in `countries.html` `<head>` |
-| S3-S4 | Sitemap with lastmod | Code | **Done** | All 64 URLs in sitemap.xml with lastmod dates |
-
-### Route engine & analytics
-| ID | Task | Owner | Status | Exit condition |
-|---|---|---|---|---|
-| S3-E1 | Add budget/income/experience inputs to Find MyPathway | Code | **Done** | Already wired in current form |
-| S3-A1 | Wire `route_search_started` analytics event | Code | **Done** | Fires on form submit in `find-mypathway.html` line 235; `route_recommendation_generated` also wired |
-
-### Revenue
-| ID | Task | Owner | Status | Exit condition |
-|---|---|---|---|---|
-| S3-R1 | Apply for AdSense | Owner | **Done** | Publisher ID `ca-pub-8077583188666813` received |
-| S3-R2 | Populate `public/ads.txt` | Owner | **Done** | Live and verified at `/ads.txt` |
-| S3-R3 | Activate AdSense script on blog/playbook pages | Code | **Done** | Static tag in `<head>` + consent-gated loader on 6 pages |
-| S3-R4 | Unhide ad slots | Code | **Done** | Slots active; Google policy review pending (1-14 days) |
-
-### Trust & compliance
-| ID | Task | Owner | Status | Exit condition |
-|---|---|---|---|---|
-| S3-T1 | ARIA audit — 4 core pages | Owner | **Open** | 0 critical/serious axe violations |
-| S3-T2 | Legal review — privacy/disclaimer/terms | Owner | **Open** | Solicitor sign-off |
-| S3-T3 | Country source sign-off (27 entries) | Owner | **Open** | `humanSignOff: true` on all 27 manifest entries |
-| S3-T4 | Update `dataset.asOf` | Owner | **Blocked on S3-T3** | After manifest sign-off |
-
-### Content & assets
-| ID | Task | Owner | Status | Exit condition |
-|---|---|---|---|---|
-| S3-C1 | Write 3 new country audits (Australia, France, Netherlands) | Owner | **Done** | Published 2026-10-25 |
-| S3-C2 | Set up email capture (Mailchimp/ConvertKit) | Owner | **Partial** | Form live on blog sidebar - owner must set Mailchimp action URL |
-| S3-C3 | Replace em dashes in all blog posts | Code | **Done** | 0 em dashes remaining across 21 posts |
-| S3-C4 | Add YouTube embeds to all blog posts | Code | **Done** | 1 verified embed per post, all 21 posts |
-| S3-C5 | Passport tiers guide post | Code | **Done** | Published 2026-10-26 — `/blog/guides/mobility/passport-tiers-explained-2026/` |
-| S3-C6 | Fix blog index page | Code | **Done** | Globe emoji removed, `?v=3` CSS, full nav + Visa Wizard, standard footer, disclaimer bar, AdSense tag — commit `0cb1e00` |
-| S3-I1 | Create OG image asset | Owner | **Open** | `public/assets/og-default.png` 1200×630px |
-| S3-I2 | Create favicon PNG asset | Owner | **Open** | `public/assets/icons/favicon.png` 32×32 + 180×180px |
-
----
-
-## Backlog (next sprint candidates)
-
-### Content scale
-| ID | Task | Owner | Notes |
-|---|---|---|---|
-| B-C1 | UK Skilled Worker visa country audit | Owner | High search volume from Nigeria |
-| B-C2 | Italy student visa step-by-step guide | Owner | High volume, low competition |
-| B-C3 | How to write a visa motivation letter | Owner | Tier 2 — medium volume, very low competition |
-| B-C4 | Document authentication Nigeria — apostille vs legalisation | Owner | Tier 2 |
-| B-C5 | Germany Chancenkarte points explainer | Owner | Tier 3 long-tail, high conversion intent |
-| B-C6 | Portugal digital nomad visa for Nigerians 2026 | Owner | Tier 2 |
-
-### Product improvements
-| ID | Task | Owner | Notes |
-|---|---|---|---|
-| B-P1 | Near-miss / gap analysis on zero-match state | Code | **Done** — shows closest pathway, exact gap, months to bridge at stated income |
-| B-P2 | Evidence freshness micro-badges on pathway cards | Code | **Done** — green/amber/red badge per card based on requirement effectiveDate |
-| B-P3 | Persist Find MyPathway inputs to `localStorage` | Code | **Done** — all 8 fields restored on page reload, survives network drop |
-| B-P4 | Country page depth - cost table, timeline, rejection reasons | Code | **Done** - pathway summary table, full requirements per pathway, rejection reasons, 4-step timeline, blog audit links on 9 countries |
-
----
-
-## Production snapshot
+All code phases complete (0-9, B, CP). No code tasks are blocked. Remaining work is owner actions and ongoing content maintenance only.
 
 | Metric | Value |
 |---|---|
 | Countries | 27 |
 | Pathways | 61 (55 publishable / 6 research_required) |
 | Evidence records | 193+ |
-| Blog posts | 21 across 7 categories |
-| Sitemap URLs | 64 |
+| Blog posts | 31 across 7 categories |
+| Sitemap URLs | 76+ |
 | Test suites | 18/18 PASS |
-| Tests | 139/139 PASS |
-| OG image coverage | 21/21 pages + blog template (image asset pending) |
-| Schema markup | Organization + WebSite on homepage; Article + Breadcrumb on blog posts; FAQPage on faq.html; WebPage on visa-wizard.html |
-| 404 page | ✅ |
-| PWA manifest | ✅ (image asset pending) |
-| Ad revenue | £0 - AdSense site ownership verified; Google policy review pending |
-| Visa Wizard | ✅ Live - W1-W5 complete |
-| Email capture | Form live on blog sidebar - Mailchimp action URL pending owner config |
-| YouTube embeds | ✅ 1 per post, all 21 posts |
+| Tests | 168/168 PASS |
+| Service Worker | Live (`public/sw.js`) |
+| Save My Plan export | Live (client-side JSON, Find MyPathway) |
+| Stale pathway audit | Script live (`scripts/check-stale-pathways.js`) — 0 stale after 2026-10-28 refresh |
+| OG image coverage | All pages + blog template (image asset pending) |
+| Schema markup | Organization + WebSite on homepage; Article + Breadcrumb + FAQPage on blog posts; WebPage on visa-wizard.html |
+| Ad revenue | £0 — AdSense site ownership verified; Google policy review pending |
+| Email capture | Form live on blog sidebar — Mailchimp action URL pending owner config |
+
+---
+
+## Owner actions (nothing here is blocked on code)
+
+| # | Item | Effort | Blocks |
+|---|---|---|---|
+| 1 | Favicon PNG | 5 min | Browser tab icon, PWA homescreen icon |
+| 2 | OG image | 20 min | Social share cards on all pages |
+| 3 | Mailchimp action URL | 10 min | Email capture going live |
+| 4 | ARIA audit | 30 min | Accessibility gate |
+| 5 | Country source sign-off (27 entries) | 1-2 hrs | `dataset.asOf` update |
+| 6 | Legal review | Solicitor | Trust gate |
+| 7 | Quarterly audit routine | 1 hr | Choose GitHub Actions workflow or manual calendar |
+| — | AdSense | **Done** | Publisher ID `ca-pub-8077583188666813` live, policy review pending |
+
+See `docs/sprints/OWNER_ACTIONS.md` for full instructions on each item.
+
+---
+
+## Completed sprints (see CHANGELOG.md for full deliveries)
+
+| Sprint | Date | Tasks | Reference |
+|---|---|---|---|
+| Content Platform Sprint | 2026-10-28 | 14 tasks — Ireland/Spain audits, comparative playbooks, audit badges, localStorage, FAQPage schema, 3 landing pages, SW, export, stale script | `CHANGELOG.md` 2026-10-28 entry |
+| Data freshness + wizard tests | 2026-10-28 | 19 stale fields refreshed, 31 wizard tests, GitHub Actions stale workflow | `CHANGELOG.md` 2026-10-28 entry |
+| N-P2/P3 + 4 country audits | 2026-10-28 | FMP extension routes, evidence trail + next action on cards, Austria/NZ/Japan/South Korea audits | `CHANGELOG.md` 2026-10-28 entry |
+| Production Readiness | 2026-10-25 | 23 tasks | `CHANGELOG.md` 2026-10-25 entry |
+| Enhancement Sprint | 2026-10-25 | 12 tasks | `CHANGELOG.md` 2026-10-25 entry |
+| Wizard & Find MyPathway | 2026-10-25 | W1-W5 all phases | `CHANGELOG.md` 2026-10-26 entry |
+
+---
+
+## Next sprint candidates
+
+### Priority 1 — Data freshness (immediate)
+| ID | Task | Owner | Notes |
+|---|---|---|---|
+| N-D1 | ~~Remediate 19 stale pathway requirements~~ | ✅ Done | All 19 `effectiveDate` fields refreshed to 2026-10-28 across IE, DE, FR, HU, SE, LU, LT, IS, ES, PL, MT, CZ |
+| N-D2 | Country source sign-off (27 entries) | Owner | Open `docs/data/country-source-review-manifest.json`, set `humanSignOff: true` on all 27, then `dataset.asOf` can be updated |
+
+### Priority 2 — Trust & compliance (owner-gated)
+| ID | Task | Owner | Notes |
+|---|---|---|---|
+| N-T1 | ARIA audit — 4 core pages | Owner | Run axe DevTools on homepage, Find MyPathway, Visa Wizard, Calculator; share results for code fixes |
+| N-T2 | Legal review — privacy/disclaimer/terms | Owner | Solicitor sign-off required |
+| N-T3 | Consent UI validation in real browser | Owner | Confirm analytics/advertising toggles, ad slots hidden when consent off |
+| N-T4 | Live CSP audit | Owner | Compare `public/_headers` CSP against actual scripts per page; remove unused allowlist entries |
+| N-T5 | Quarterly audit routine | ✅ Done | GitHub Actions workflow live (`.github/workflows/stale-pathways.yml`) — runs every Monday, opens issue on stale findings |
+
+### Priority 3 — Content expansion
+| ID | Task | Owner | Notes |
+|---|---|---|---|
+| N-C1 | ~~Austria country audit~~ | ✅ Done | Published 2026-10-28 — RWR Card (55 pts, EUR 2,685/month) + study visa (EUR 1,217/month) |
+| N-C2 | ~~New Zealand country audit~~ | ✅ Done | Published 2026-10-28 — 4 pathways: student (NZD 20,000) + 3 SMC sub-routes |
+| N-C3 | ~~Japan country audit~~ | ✅ Done | Published 2026-10-28 — student visa + MEXT (JPY 117,000/month) + Engineer visa |
+| N-C4 | ~~South Korea country audit~~ | ✅ Done | Published 2026-10-28 — student visa (USD 9,000) + KGSP + E-7 work visa |
+
+### Priority 4 — Product improvements (code)
+| ID | Task | Owner | Notes |
+|---|---|---|---|
+| N-P1 | ~~Wizard engine test suite~~ | ✅ Done | 31 tests in `tests/wizard-engine.test.js` |
+| N-P2 | ~~Find MyPathway extension routes section~~ | ✅ Done | Renders post-study/PR/tourist-switch routes below results when `currentVisa` is set |
+| N-P3 | ~~Route explanations — evidence + next action~~ | ✅ Done | Each result card now shows per-requirement `effectiveDate` + source link + country-specific next step |
+
+### Priority 5 — Revenue & growth
+| ID | Task | Owner | Notes |
+|---|---|---|---|
+| N-R1 | AdSense revenue reconciliation baseline | Owner | After first 30 days live: record impressions, clicks, RPM, total revenue |
+| N-R2 | Mailchimp action URL | Owner | Replace placeholder in `src/pages/blog.html` — email signups currently go nowhere |
+| N-R3 | Affiliate infrastructure | Owner | Requires legal review before any lead flow activates |
 
 ---
 
 ## Useful commands
 
 ```bash
-npm run build                        # build to dist/
-npx wrangler deploy                  # deploy to Cloudflare Workers
-npm test                             # 18/18 suites
-node scripts/verify-build.js         # build integrity check
+npm run build                              # build to dist/
+npx wrangler deploy                        # deploy to Cloudflare Workers
+npm test                                   # 18/18 suites
+node scripts/verify-build.js               # build integrity check
+node scripts/check-stale-pathways.js       # flag pathway requirements >90 days old
 ```
-
----
-
-## Owner actions (no code blocked)
-
-- **Favicon PNG** (5 min): Export `public/assets/icons/favicon.png` from existing SVG — 32×32px + 180×180px. Fixes broken browser tab icon and PWA homescreen icon.
-- **OG image** (20 min): Create `public/assets/og-default.png` — 1200×630px, navy `#10316b` bg, white "MyPathway2Global" wordmark. Fixes broken social share cards on all pages.
-- **Mailchimp URL** (10 min): Replace placeholder action URL in `src/pages/blog.html`. Email signups currently go nowhere.
-- **Country sign-off** (1-2 hrs): Open `docs/data/country-source-review-manifest.json`, set `humanSignOff: true` on all 27 entries, then tell me — I'll update `dataset.asOf`.
-- **ARIA audit** (30 min): Run axe DevTools on homepage, Find MyPathway, Visa Wizard, Calculator. Share results — I'll fix any code violations.
-- **Legal review**: Solicitor sign-off on `src/pages/privacy.html`, `disclaimer.html`, `terms.html`.

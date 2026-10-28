@@ -307,5 +307,10 @@
   <script src="/js/route-engine.js"></script>
   <script src="/js/wizard-engine.js"></script>
   <script src="/js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    }
+  </script>
 </body>
 </html>

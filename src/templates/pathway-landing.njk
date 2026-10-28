@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.sabilytics.com/script.js" data-site="atsngkb78nmt" data-domain="org.uk"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | MyPathway2Global</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="https://mypathway2global.org.uk{{ page.url }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mypathway2global.org.uk{{ page.url }}">
+  <meta property="og:image" content="https://mypathway2global.org.uk/assets/og-default.png">
+  <meta property="og:site_name" content="MyPathway2Global">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://mypathway2global.org.uk/assets/og-default.png">
+
+  <!-- WebPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "{{ title }}",
+    "description": "{{ description }}",
+    "url": "https://mypathway2global.org.uk{{ page.url }}",
+    "publisher": { "@type": "Organization", "name": "MyPathway2Global", "url": "https://mypathway2global.org.uk" }
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mypathway2global.org.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "Pathways", "item": "https://mypathway2global.org.uk/pages/find-mypathway.html" },
+      { "@type": "ListItem", "position": 3, "name": "{{ countryName }}", "item": "https://mypathway2global.org.uk/pages/countries/{{ countryId }}/" },
+      { "@type": "ListItem", "position": 4, "name": "{{ pathwayName }}" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css?v=3">
+  <link rel="stylesheet" href="/css/enhancements.css?v=3">
+</head>
+<body data-page-type="pathway-landing">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="header">
+    <div class="header-container">
+      <div class="logo"><a href="/" class="logo-link"><span class="logo-text">MyPathway2Global</span></a></div>
+      <nav class="navigation" aria-label="Primary">
+        <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+        <ul class="nav-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/countries.html">Countries</a></li>
+          <li><a href="/pages/find-mypathway.html">Find MyPathway</a></li>
+          <li><a href="/pages/visa-wizard.html" class="nav-cta">Visa Wizard</a></li>
+          <li><a href="/pages/calculator.html">Calculator</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/pages/about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-header">
+      <div class="container">
+        <span class="page-header-badge">{{ countryName }} &middot; {{ pathwayType | capitalize }}</span>
+        <h1>{{ pathwayName }}</h1>
+        <p class="page-header-subtitle">{{ description }}</p>
+      </div>
+    </div>
+
+    <div class="container" style="padding-top:var(--spacing-2xl);padding-bottom:var(--spacing-3xl);max-width:860px;">
+
+      <!-- Key facts -->
+      <section aria-labelledby="key-facts-heading" style="margin-bottom:var(--spacing-2xl);">
+        <h2 id="key-facts-heading">Key Requirements</h2>
+        <div class="evidence-note" style="margin-bottom:var(--spacing-lg);">
+          Requirements sourced from official government portals. Verify current thresholds before applying — figures are subject to change.
+        </div>
+        {{ content | safe }}
+      </section>
+
+      <!-- CTA strip -->
+      <div style="display:flex;gap:var(--spacing-md);flex-wrap:wrap;margin-bottom:var(--spacing-2xl);">
+        <a href="/pages/find-mypathway.html?goal={{ pathwayType }}" class="btn btn-primary">Filter pathways by goal &rarr;</a>
+        <a href="/pages/countries/{{ countryId }}/" class="btn btn-secondary">{{ countryName }} country page &rarr;</a>
+        {% if auditPostUrl %}
+        <a href="{{ auditPostUrl }}" class="btn btn-secondary">Read the full country audit &rarr;</a>
+        {% endif %}
+      </div>
+
+      <!-- Official source -->
+      {% if officialSourceUrl %}
+      <div class="evidence-note">
+        <strong>Official source:</strong> <a href="{{ officialSourceUrl }}" target="_blank" rel="noopener noreferrer">{{ officialSourceAuthority }}</a> &mdash; always verify requirements directly before submitting an application.
+      </div>
+      {% endif %}
+
+    </div>
+  </main>
+
+  <div class="disclaimer-bar">
+    <p>General information only &mdash; not legal or immigration advice. Always verify current requirements with the relevant authority before paying fees or submitting an application. <a href="/pages/disclaimer.html">Full disclaimer &rarr;</a></p>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section"><h4>MyPathway2Global</h4><p>Evidence-gated global mobility intelligence.</p></div>
+      <div class="footer-section"><h4>Explore</h4><ul><li><a href="/pages/countries.html">Countries</a></li><li><a href="/pages/find-mypathway.html">Find MyPathway</a></li><li><a href="/pages/calculator.html">Calculator</a></li><li><a href="/blog/">Blog</a></li></ul></div>
+      <div class="footer-section"><h4>Trust</h4><ul><li><a href="/pages/privacy.html">Privacy</a></li><li><a href="/pages/disclaimer.html">Disclaimer</a></li><li><a href="/pages/terms.html">Terms</a></li><li><a href="/pages/contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 MyPathway2Global. All rights reserved.</p></div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
