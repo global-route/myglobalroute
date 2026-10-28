@@ -28,7 +28,7 @@ const today = new Date(`${validationDate}T00:00:00Z`);
 if (!isIsoDate(validationDate)) errors.push(`VALIDATION_AS_OF must be a real ISO date (YYYY-MM-DD); received ${validationDate}`);
 
 const countryIds = new Set();
-if (!Array.isArray(countries) || countries.length !== 26) errors.push(`countries must contain exactly 26 records; found ${countries?.length ?? 0}`);
+if (!Array.isArray(countries) || countries.length !== 27) errors.push(`countries must contain exactly 27 records; found ${countries?.length ?? 0}`);
 for (const [index, country] of (countries || []).entries()) {
   for (const field of ['id', 'name', 'category', 'sweetSpot', 'dataStatus', 'source']) if (!country[field]) errors.push(`countries[${index}] ${field} is required`);
   if (countryIds.has(country.id)) errors.push(`duplicate country id: ${country.id}`);

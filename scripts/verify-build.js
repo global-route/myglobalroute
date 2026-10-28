@@ -39,11 +39,11 @@ const pathways = read('data/pathways.json');
 const evidence = read('data/evidence/primary-source-verified.json');
 const routeFinder = read('pages/find-my-route.html');
 
-if (index && !index.includes('<title>Global Route')) errors.push('generated homepage is missing the expected title');
+if (index && !index.includes('<title>MyPathway2Global')) errors.push('generated homepage is missing the expected title');
 if (countries) {
   try {
     const payload = JSON.parse(countries);
-    if (!Array.isArray(payload.countries) || payload.countries.length !== 26) errors.push(`generated countries.json must contain exactly 26 countries; found ${payload.countries?.length ?? 0}`);
+    if (!Array.isArray(payload.countries) || payload.countries.length !== 27) errors.push(`generated countries.json must contain exactly 27 countries; found ${payload.countries?.length ?? 0}`);
   } catch (error) { errors.push(`generated countries.json is invalid JSON: ${error.message}`); }
 }
 if (pathways) {
@@ -74,7 +74,7 @@ if (countries && pathways) {
       const html = read(`pages/countries/${country.id}/index.html`);
       if (!html) continue;
       if (!html.includes('<title>') || !html.includes('<meta name="description"')) errors.push(`country detail page ${country.id} is missing basic SEO metadata`);
-      if (!html.includes('Open country source')) errors.push(`country detail page ${country.id} is missing its source-trail link`);
+      if (!html.includes('Review official source') && !html.includes('Open official immigration portal')) errors.push(`country detail page ${country.id} is missing its source-trail link`);
     }
     for (const pathway of pathwayPayload.pathways) {
       const html = read(`pathways/${pathway.id}/index.html`);

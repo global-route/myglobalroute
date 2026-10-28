@@ -49,7 +49,7 @@
           "kind": "money",
           "value": 1270,
           "currency": "GBP",
-          "period": "available-balance",
+          "period": "total",
           "jurisdiction": "United Kingdom",
           "effectiveDate": "2026-09-06",
           "sourceUrl": "https://www.gov.uk/skilled-worker-visa/how-much-it-costs",
@@ -357,8 +357,8 @@
           "value": 67,
           "unit": "points",
           "jurisdiction": "Canada",
-          "effectiveDate": "2026-09-14",
-          "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers/six-selection-factors-federal-skilled-workers.html",
+          "effectiveDate": "2026-06-22",
+          "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers.html",
           "evidenceIds": [
             "CA-fswp-eligibility-2026-09-14"
           ],
@@ -366,12 +366,12 @@
         },
         {
           "id": "CA-fswp-minimum-work-experience-2026-09-14",
-          "field": "minimum_work_experience_years",
+          "field": "minimum_experience_years",
           "kind": "number",
           "value": 1,
           "unit": "years",
           "jurisdiction": "Canada",
-          "effectiveDate": "2026-09-14",
+          "effectiveDate": "2026-06-22",
           "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers.html",
           "evidenceIds": [
             "CA-fswp-eligibility-2026-09-14"
@@ -384,10 +384,10 @@
           "kind": "money",
           "value": 14690,
           "currency": "CAD",
-          "period": "available-balance",
+          "period": "total",
           "jurisdiction": "Canada",
           "effectiveDate": "2026-09-14",
-          "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers/funds.html",
+          "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/proof-funds.html",
           "evidenceIds": [
             "CA-fswp-finance-2026-09-14"
           ],
@@ -434,7 +434,7 @@
           "period": "annual",
           "jurisdiction": "Australia",
           "effectiveDate": "2026-09-13",
-          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/genuine-temporary-entrant",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
           "evidenceIds": [
             "AU-student-finance-2026-09-13"
           ],
@@ -447,19 +447,6 @@
             "notes": "AUD 29,710 per year for the primary applicant. Additional amounts apply for accompanying spouse/partner (AUD 10,394) and each school-age child (AUD 4,449). These are indicative amounts; the decision-maker assesses genuine access to funds."
           },
           "notes": "AUD 29,710 per year indicative living cost for the primary applicant. Tuition fees are separate and vary by institution and course. Funds must be genuinely accessible, not just nominally held."
-        },
-        {
-          "id": "AU-student-gte-2026-09-13",
-          "field": "genuine_temporary_entrant",
-          "kind": "boolean",
-          "value": true,
-          "jurisdiction": "Australia",
-          "effectiveDate": "2026-09-13",
-          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/genuine-temporary-entrant",
-          "evidenceIds": [
-            "AU-student-eligibility-2026-09-13"
-          ],
-          "notes": "Applicant must satisfy the Genuine Student requirement — demonstrating the primary purpose of the stay is study and they intend to comply with visa conditions. This is assessed holistically; no single document guarantees satisfaction."
         }
       ]
     },
@@ -503,7 +490,8 @@
       "status": "publishable",
       "evidenceIds": [
         "AU-skilled-189-eligibility-2026-10-18",
-        "AU-skilled-189-points-2026-10-18"
+        "AU-skilled-189-points-2026-10-18",
+        "AU-skilled-189-finance-2026-10-18"
       ],
       "requirements": [
         {
@@ -514,51 +502,11 @@
           "unit": "points",
           "jurisdiction": "Australia",
           "effectiveDate": "2026-10-18",
-          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/expression-of-interest",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189",
           "evidenceIds": [
             "AU-skilled-189-points-2026-10-18"
           ],
           "notes": "Minimum 65 points required to submit an Expression of Interest (EOI). Reaching 65 points does not guarantee an invitation — Home Affairs issues invitations from the pool based on score ranking. Actual invitation cut-offs are typically higher."
-        },
-        {
-          "id": "AU-skilled-189-maximum-age-2026-10-18",
-          "field": "maximum_age",
-          "kind": "number",
-          "value": 45,
-          "unit": "years",
-          "jurisdiction": "Australia",
-          "effectiveDate": "2026-10-18",
-          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189",
-          "evidenceIds": [
-            "AU-skilled-189-eligibility-2026-10-18"
-          ],
-          "notes": "Applicant must be under 45 years of age at time of invitation."
-        },
-        {
-          "id": "AU-skilled-189-skills-assessment-2026-10-18",
-          "field": "skills_assessment",
-          "kind": "boolean",
-          "value": true,
-          "jurisdiction": "Australia",
-          "effectiveDate": "2026-10-18",
-          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189",
-          "evidenceIds": [
-            "AU-skilled-189-eligibility-2026-10-18"
-          ],
-          "notes": "A positive skills assessment from the relevant Australian assessing authority for the nominated occupation is required. The occupation must be on the Medium and Long-term Strategic Skills List (MLTSSL)."
-        },
-        {
-          "id": "AU-skilled-189-english-2026-10-18",
-          "field": "english_proficiency",
-          "kind": "boolean",
-          "value": true,
-          "jurisdiction": "Australia",
-          "effectiveDate": "2026-10-18",
-          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189",
-          "evidenceIds": [
-            "AU-skilled-189-eligibility-2026-10-18"
-          ],
-          "notes": "Competent English required (IELTS 6.0 in each band, or equivalent). Superior English (IELTS 7.0+) earns additional points."
         }
       ]
     },
@@ -575,7 +523,8 @@
       "status": "publishable",
       "evidenceIds": [
         "AU-skilled-190-eligibility-2026-10-18",
-        "AU-skilled-190-points-2026-10-18"
+        "AU-skilled-190-points-2026-10-18",
+        "AU-skilled-190-finance-2026-10-18"
       ],
       "requirements": [
         {
@@ -586,7 +535,7 @@
           "unit": "points",
           "jurisdiction": "Australia",
           "effectiveDate": "2026-10-18",
-          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/expression-of-interest",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190",
           "evidenceIds": [
             "AU-skilled-190-points-2026-10-18"
           ],
@@ -604,33 +553,6 @@
             "AU-skilled-190-eligibility-2026-10-18"
           ],
           "notes": "Nomination by an Australian state or territory government is required. Each state/territory has its own occupation list, requirements and application process. Nomination is not guaranteed even if the occupation is listed."
-        },
-        {
-          "id": "AU-skilled-190-maximum-age-2026-10-18",
-          "field": "maximum_age",
-          "kind": "number",
-          "value": 45,
-          "unit": "years",
-          "jurisdiction": "Australia",
-          "effectiveDate": "2026-10-18",
-          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190",
-          "evidenceIds": [
-            "AU-skilled-190-eligibility-2026-10-18"
-          ],
-          "notes": "Applicant must be under 45 years of age at time of invitation."
-        },
-        {
-          "id": "AU-skilled-190-skills-assessment-2026-10-18",
-          "field": "skills_assessment",
-          "kind": "boolean",
-          "value": true,
-          "jurisdiction": "Australia",
-          "effectiveDate": "2026-10-18",
-          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190",
-          "evidenceIds": [
-            "AU-skilled-190-eligibility-2026-10-18"
-          ],
-          "notes": "Positive skills assessment from the relevant assessing authority required. Occupation must be on the state/territory's nominated occupation list."
         }
       ]
     },
@@ -647,7 +569,8 @@
       "status": "publishable",
       "evidenceIds": [
         "AU-skilled-491-eligibility-2026-10-18",
-        "AU-skilled-491-points-2026-10-18"
+        "AU-skilled-491-points-2026-10-18",
+        "AU-skilled-491-finance-2026-10-18"
       ],
       "requirements": [
         {
@@ -658,7 +581,7 @@
           "unit": "points",
           "jurisdiction": "Australia",
           "effectiveDate": "2026-10-18",
-          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/expression-of-interest",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491",
           "evidenceIds": [
             "AU-skilled-491-points-2026-10-18"
           ],
@@ -676,33 +599,6 @@
             "AU-skilled-491-eligibility-2026-10-18"
           ],
           "notes": "Nomination by a state/territory government or sponsorship by an eligible family member living in a designated regional area is required. Holder must live and work in a designated regional area for the visa duration."
-        },
-        {
-          "id": "AU-skilled-491-maximum-age-2026-10-18",
-          "field": "maximum_age",
-          "kind": "number",
-          "value": 45,
-          "unit": "years",
-          "jurisdiction": "Australia",
-          "effectiveDate": "2026-10-18",
-          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491",
-          "evidenceIds": [
-            "AU-skilled-491-eligibility-2026-10-18"
-          ],
-          "notes": "Applicant must be under 45 years of age at time of invitation."
-        },
-        {
-          "id": "AU-skilled-491-skills-assessment-2026-10-18",
-          "field": "skills_assessment",
-          "kind": "boolean",
-          "value": true,
-          "jurisdiction": "Australia",
-          "effectiveDate": "2026-10-18",
-          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491",
-          "evidenceIds": [
-            "AU-skilled-491-eligibility-2026-10-18"
-          ],
-          "notes": "Positive skills assessment from the relevant assessing authority required. Occupation must be on the MLTSSL or the relevant state/territory occupation list."
         }
       ]
     },
@@ -773,7 +669,7 @@
           "value": 6,
           "unit": "points",
           "jurisdiction": "New Zealand",
-          "effectiveDate": "2026-09-14",
+          "effectiveDate": "2026-08-24",
           "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
           "evidenceIds": [
             "NZ-smc-points-based-eligibility-2026-09-14"
@@ -786,26 +682,12 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "New Zealand",
-          "effectiveDate": "2026-09-14",
+          "effectiveDate": "2026-08-24",
           "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
           "evidenceIds": [
             "NZ-smc-points-based-eligibility-2026-09-14"
           ],
           "notes": "Skilled employment in New Zealand (current or offered) is the primary points-earning factor. An offer of skilled employment in NZ is required to score the core points under this pathway."
-        },
-        {
-          "id": "NZ-smc-points-based-minimum-age-2026-09-14",
-          "field": "maximum_age",
-          "kind": "number",
-          "value": 55,
-          "unit": "years",
-          "jurisdiction": "New Zealand",
-          "effectiveDate": "2026-09-14",
-          "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
-          "evidenceIds": [
-            "NZ-smc-points-based-eligibility-2026-09-14"
-          ],
-          "notes": "Applicants must be under 56 years of age at the time of application."
         }
       ]
     },
@@ -835,8 +717,8 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "New Zealand",
-          "effectiveDate": "2026-09-14",
-          "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+          "effectiveDate": "2026-08-24",
+          "sourceUrl": "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/skilled-residence-pathways-in-new-zealand/skilled-migrant-category-pathway-to-residence/",
           "evidenceIds": [
             "NZ-smc-skilled-work-experience-eligibility-2026-09-14"
           ],
@@ -844,31 +726,17 @@
         },
         {
           "id": "NZ-smc-swe-minimum-work-experience-2026-09-14",
-          "field": "minimum_work_experience_years",
+          "field": "minimum_experience_years",
           "kind": "number",
           "value": 3,
           "unit": "years",
           "jurisdiction": "New Zealand",
-          "effectiveDate": "2026-09-14",
-          "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+          "effectiveDate": "2026-08-24",
+          "sourceUrl": "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/skilled-residence-pathways-in-new-zealand/skilled-migrant-category-pathway-to-residence/",
           "evidenceIds": [
             "NZ-smc-skilled-work-experience-eligibility-2026-09-14"
           ],
           "notes": "At least 3 years of skilled work experience directly relevant to the current NZ employment is required under this pathway."
-        },
-        {
-          "id": "NZ-smc-swe-maximum-age-2026-09-14",
-          "field": "maximum_age",
-          "kind": "number",
-          "value": 55,
-          "unit": "years",
-          "jurisdiction": "New Zealand",
-          "effectiveDate": "2026-09-14",
-          "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
-          "evidenceIds": [
-            "NZ-smc-skilled-work-experience-eligibility-2026-09-14"
-          ],
-          "notes": "Applicants must be under 56 years of age at the time of application."
         }
       ]
     },
@@ -896,8 +764,8 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "New Zealand",
-          "effectiveDate": "2026-09-14",
-          "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+          "effectiveDate": "2026-08-24",
+          "sourceUrl": "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/skilled-residence-pathways-in-new-zealand/skilled-migrant-category-pathway-to-residence/",
           "evidenceIds": [
             "NZ-smc-trades-technician-eligibility-2026-09-14"
           ],
@@ -906,29 +774,15 @@
         {
           "id": "NZ-smc-trades-qualification-2026-09-14",
           "field": "qualification",
-          "kind": "boolean",
-          "value": true,
+          "kind": "text",
+          "value": "Relevant trade qualification or registration recognised in New Zealand, as specified in the occupation-qualification matrix for the nominated trade or technician occupation.",
           "jurisdiction": "New Zealand",
-          "effectiveDate": "2026-09-14",
-          "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
-          "evidenceIds": [
-            "NZ-smc-trades-technician-occupation-qualification-matrix-2026-09-14"
-          ],
-          "notes": "A relevant trade qualification or registration is required for the specific occupation. The qualification must be recognised in New Zealand or assessed as equivalent. Requirements vary by occupation — refer to the occupation-qualification matrix."
-        },
-        {
-          "id": "NZ-smc-trades-maximum-age-2026-09-14",
-          "field": "maximum_age",
-          "kind": "number",
-          "value": 55,
-          "unit": "years",
-          "jurisdiction": "New Zealand",
-          "effectiveDate": "2026-09-14",
-          "sourceUrl": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+          "effectiveDate": "2026-08-24",
+          "sourceUrl": "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/skilled-residence-pathways-in-new-zealand/skilled-migrant-category-pathway-to-residence/",
           "evidenceIds": [
             "NZ-smc-trades-technician-eligibility-2026-09-14"
           ],
-          "notes": "Applicants must be under 56 years of age at the time of application."
+          "notes": "A relevant trade qualification or registration is required for the specific occupation. The qualification must be recognised in New Zealand or assessed as equivalent. Requirements vary by occupation — refer to the occupation-qualification matrix."
         }
       ]
     },
@@ -963,7 +817,7 @@
           "value": true,
           "jurisdiction": "Ireland",
           "effectiveDate": "2026-09-12",
-          "sourceUrl": "https://www.irishimmigration.ie/coming-to-study-in-ireland/",
+          "sourceUrl": "https://www.irishimmigration.ie/coming-to-study-in-ireland/frequently-asked-questions-for-students/",
           "evidenceIds": [
             "IE-study-eligibility-2026-09-12"
           ],
@@ -977,8 +831,8 @@
           "currency": "EUR",
           "period": "annual",
           "jurisdiction": "Ireland",
-          "effectiveDate": "2026-09-12",
-          "sourceUrl": "https://www.irishimmigration.ie/coming-to-study-in-ireland/what-are-my-study-visa-options/",
+          "effectiveDate": "2025-06-30",
+          "sourceUrl": "https://www.irishimmigration.ie/coming-to-study-in-ireland/what-are-my-study-options/a-fee-paying-private-primary-or-secondary-school/information-on-student-finances/",
           "evidenceIds": [
             "IE-study-finance-2026-09-12"
           ],
@@ -1041,7 +895,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Germany",
-          "effectiveDate": "2026-10-28",
+          "effectiveDate": "2025-10-30",
           "sourceUrl": "https://www.auswaertiges-amt.de/en/visa-service/buergerservice/faq/606850-606850",
           "evidenceIds": [
             "DE-study-eligibility-2026-09-12"
@@ -1123,7 +977,7 @@
           "value": true,
           "jurisdiction": "Italy",
           "effectiveDate": "2026-09-14",
-          "sourceUrl": "https://vistoperitalia.esteri.it/",
+          "sourceUrl": "https://ambnicosia.esteri.it/en/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/study/",
           "evidenceIds": [
             "IT-study-eligibility-2026-09-14"
           ],
@@ -1138,7 +992,7 @@
           "period": "annual",
           "jurisdiction": "Italy",
           "effectiveDate": "2026-09-14",
-          "sourceUrl": "https://vistoperitalia.esteri.it/",
+          "sourceUrl": "https://ambbogota.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/visti-requisiti/visas-de-estudio/visa-de-estudio-para-la-inscripcion-en-una-universidad-operante-en-italia/",
           "evidenceIds": [
             "IT-study-finance-2026-09-14"
           ],
@@ -1169,25 +1023,12 @@
       ],
       "requirements": [
         {
-          "id": "IT-work-nulla-osta-2026-09-28",
-          "field": "work_authorization",
-          "kind": "boolean",
-          "value": true,
-          "jurisdiction": "Italy",
-          "effectiveDate": "2026-09-28",
-          "sourceUrl": "https://vistoperitalia.esteri.it/",
-          "evidenceIds": [
-            "IT-work-eligibility-2026-09-28"
-          ],
-          "notes": "A Nulla Osta (work authorization) issued by the Italian Sportello Unico per l'Immigrazione is required before applying for a work visa. The Nulla Osta is issued under the annual Decreto Flussi quota. Quota availability is limited and opens on specific dates each year."
-        },
-        {
           "id": "IT-work-job-offer-2026-09-28",
           "field": "job_offer",
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Italy",
-          "effectiveDate": "2026-09-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://vistoperitalia.esteri.it/",
           "evidenceIds": [
             "IT-work-eligibility-2026-09-28"
@@ -1278,7 +1119,7 @@
           "currency": "EUR",
           "period": "annual",
           "jurisdiction": "France",
-          "effectiveDate": "2026-10-28",
+          "effectiveDate": "2025-08-21",
           "sourceUrl": "https://www.france-visas.gouv.fr/en/web/france-visas/talents-internationaux-et-attractivite-economique",
           "evidenceIds": [
             "FR-talent-finance-2026-09-12"
@@ -1306,7 +1147,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Hungary",
-          "effectiveDate": "2026-10-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://oif.gov.hu/factsheets/residence-permit-for-the-purpose-of-studies",
           "evidenceIds": [
             "HU-study-eligibility-2026-09-28"
@@ -1334,7 +1175,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Hungary",
-          "effectiveDate": "2026-10-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://oif.gov.hu/factsheets/residence-permit-for-the-purpose-of-employment",
           "evidenceIds": [
             "HU-work-eligibility-2026-09-28"
@@ -1408,19 +1249,6 @@
             "FI-work-eligibility-2026-09-13"
           ],
           "notes": "A binding employment contract or a confirmed job offer from a Finnish employer is required. The employer must confirm the terms of employment meet the collective agreement or standard terms for the sector."
-        },
-        {
-          "id": "FI-work-partial-decision-2026-09-13",
-          "field": "work_authorization",
-          "kind": "boolean",
-          "value": true,
-          "jurisdiction": "Finland",
-          "effectiveDate": "2026-09-13",
-          "sourceUrl": "https://migri.fi/en/residence-permit-for-an-employed-person",
-          "evidenceIds": [
-            "FI-work-eligibility-2026-09-13"
-          ],
-          "notes": "The TTOL permit requires a partial decision from the TE Office (Employment and Economic Development Office) confirming no labour market obstacle exists, unless the occupation is on the shortage list or an exemption applies."
         }
       ]
     },
@@ -1446,7 +1274,7 @@
           "currency": "SEK",
           "period": "monthly",
           "jurisdiction": "Sweden",
-          "effectiveDate": "2026-10-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.migrationsverket.se/en/you-want-to-apply/study/higher-education.html",
           "evidenceIds": [
             "SE-study-finance-2026-09-07"
@@ -1486,7 +1314,7 @@
           "currency": "SEK",
           "period": "monthly",
           "jurisdiction": "Sweden",
-          "effectiveDate": "2026-10-28",
+          "effectiveDate": "2026-06-16",
           "sourceUrl": "https://www.migrationsverket.se/en/word-explanations/salary-requirements-for-a-work-permit.html",
           "evidenceIds": [
             "SE-work-salary-2026-09-07"
@@ -1619,7 +1447,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Luxembourg",
-          "effectiveDate": "2026-10-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://guichet.public.lu/en/citoyens/immigration/plus-3-mois/ressortissant-tiers/etudiant.html",
           "evidenceIds": [
             "LU-study-eligibility-2026-09-28"
@@ -1647,7 +1475,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Lithuania",
-          "effectiveDate": "2026-10-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://migracija.lrv.lt/en/services-for-foreigners/temporary-residence-permit/for-studies/",
           "evidenceIds": [
             "LT-study-eligibility-2026-09-28"
@@ -1675,7 +1503,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Lithuania",
-          "effectiveDate": "2026-10-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://migracija.lrv.lt/en/services-for-foreigners/temporary-residence-permit/for-work/",
           "evidenceIds": [
             "LT-work-eligibility-2026-09-28"
@@ -1703,7 +1531,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Iceland",
-          "effectiveDate": "2026-10-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://island.is/en/o/directorate-of-immigration",
           "evidenceIds": [
             "IS-study-eligibility-2026-09-28"
@@ -1731,7 +1559,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Iceland",
-          "effectiveDate": "2026-10-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://island.is/en/o/directorate-of-immigration",
           "evidenceIds": [
             "IS-work-eligibility-2026-09-28"
@@ -1818,7 +1646,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Spain",
-          "effectiveDate": "2026-10-28",
+          "effectiveDate": "2025-11-01",
           "sourceUrl": "https://inclusion.gob.es/en/web/migraciones/w/estancia-por-estudios",
           "evidenceIds": [
             "ES-study-eligibility-2026-09-12"
@@ -1878,7 +1706,7 @@
           "value": true,
           "jurisdiction": "Austria",
           "effectiveDate": "2026-09-13",
-          "sourceUrl": "https://www.oesterreich.gv.at/en/themen/migration_und_integration.html",
+          "sourceUrl": "https://www.migration.gv.at/en/types-of-immigration/temporary-residence/",
           "evidenceIds": [
             "AT-study-eligibility-2026-09-13"
           ],
@@ -1892,8 +1720,8 @@
           "currency": "EUR",
           "period": "monthly",
           "jurisdiction": "Austria",
-          "effectiveDate": "2026-09-13",
-          "sourceUrl": "https://www.oesterreich.gv.at/en/themen/migration_und_integration.html",
+          "effectiveDate": "2026-01-01",
+          "sourceUrl": "https://www.migration.gv.at/en/types-of-immigration/temporary-residence/",
           "evidenceIds": [
             "AT-study-finance-2026-09-13"
           ],
@@ -1933,7 +1761,7 @@
           "value": 55,
           "unit": "points",
           "jurisdiction": "Austria",
-          "effectiveDate": "2026-09-14",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
           "evidenceIds": [
             "AT-rwr-other-key-workers-eligibility-exact-2026-09-14"
@@ -1946,7 +1774,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Austria",
-          "effectiveDate": "2026-09-14",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
           "evidenceIds": [
             "AT-rwr-other-key-workers-eligibility-exact-2026-09-14"
@@ -1961,7 +1789,7 @@
           "currency": "EUR",
           "period": "monthly",
           "jurisdiction": "Austria",
-          "effectiveDate": "2026-09-14",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
           "evidenceIds": [
             "AT-rwr-other-key-workers-financial-2026-09-14"
@@ -2088,7 +1916,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "South Korea",
-          "effectiveDate": "2026-09-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
           "evidenceIds": [
             "KR-study-eligibility-2026-09-28"
@@ -2103,7 +1931,7 @@
           "currency": "USD",
           "period": "annual",
           "jurisdiction": "South Korea",
-          "effectiveDate": "2026-09-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
           "evidenceIds": [
             "KR-study-finance-2026-09-28"
@@ -2140,7 +1968,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "South Korea",
-          "effectiveDate": "2026-09-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
           "evidenceIds": [
             "KR-work-eligibility-2026-09-28"
@@ -2150,10 +1978,10 @@
         {
           "id": "KR-work-qualification-2026-09-28",
           "field": "qualification",
-          "kind": "boolean",
-          "value": true,
+          "kind": "text",
+          "value": "Bachelor's degree or higher in a relevant field, or 5+ years of relevant work experience, as required for the E-7 Specially Designated Activities visa category.",
           "jurisdiction": "South Korea",
-          "effectiveDate": "2026-09-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
           "evidenceIds": [
             "KR-work-eligibility-2026-09-28"
@@ -2181,7 +2009,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "China",
-          "effectiveDate": "2026-09-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://en.nia.gov.cn/",
           "evidenceIds": [
             "CN-study-eligibility-2026-09-28"
@@ -2196,7 +2024,7 @@
           "currency": "USD",
           "period": "annual",
           "jurisdiction": "China",
-          "effectiveDate": "2026-09-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://en.nia.gov.cn/",
           "evidenceIds": [
             "CN-study-finance-2026-09-28"
@@ -2233,7 +2061,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "China",
-          "effectiveDate": "2026-09-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://en.nia.gov.cn/",
           "evidenceIds": [
             "CN-work-eligibility-2026-09-28"
@@ -2243,10 +2071,10 @@
         {
           "id": "CN-work-qualification-2026-09-28",
           "field": "qualification",
-          "kind": "boolean",
-          "value": true,
+          "kind": "text",
+          "value": "Category B: bachelor's degree and 2+ years of relevant work experience. Category A (high-end talent) has higher thresholds. Category C applies to other permitted occupations.",
           "jurisdiction": "China",
-          "effectiveDate": "2026-09-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://en.nia.gov.cn/",
           "evidenceIds": [
             "CN-work-eligibility-2026-09-28"
@@ -2274,7 +2102,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Poland",
-          "effectiveDate": "2026-10-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.gov.pl/web/udsc-en/study",
           "evidenceIds": [
             "PL-study-eligibility-2026-09-28"
@@ -2302,7 +2130,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Poland",
-          "effectiveDate": "2026-10-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.gov.pl/web/udsc-en/work",
           "evidenceIds": [
             "PL-work-eligibility-2026-09-28"
@@ -2330,7 +2158,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Malta",
-          "effectiveDate": "2026-10-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://identita.gov.mt/residence-permits/",
           "evidenceIds": [
             "MT-study-eligibility-2026-09-28"
@@ -2358,7 +2186,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Malta",
-          "effectiveDate": "2026-10-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://identita.gov.mt/single-permit/",
           "evidenceIds": [
             "MT-work-eligibility-2026-09-28"
@@ -2408,8 +2236,8 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Switzerland",
-          "effectiveDate": "2026-09-28",
-          "sourceUrl": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt.html",
+          "effectiveDate": "2026-01-01",
+          "sourceUrl": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/nicht-eu_efta/aufenthaltsbewilligung-studium.html",
           "evidenceIds": [
             "CH-study-eligibility-2026-09-28"
           ],
@@ -2423,8 +2251,8 @@
           "currency": "CHF",
           "period": "annual",
           "jurisdiction": "Switzerland",
-          "effectiveDate": "2026-09-28",
-          "sourceUrl": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt.html",
+          "effectiveDate": "2026-01-01",
+          "sourceUrl": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/nicht-eu_efta/aufenthaltsbewilligung-studium.html",
           "evidenceIds": [
             "CH-study-finance-2026-09-28"
           ],
@@ -2461,24 +2289,11 @@
           "value": true,
           "jurisdiction": "Switzerland",
           "effectiveDate": "2026-09-13",
-          "sourceUrl": "https://www.sem.admin.ch/sem/en/home/themen/arbeit.html",
+          "sourceUrl": "https://www.sem.admin.ch/sem/en/home/themen/arbeit/nicht-eu_efta_angehoerige.html",
           "evidenceIds": [
             "CH-work-eligibility-2026-09-13"
           ],
           "notes": "A confirmed job offer from a Swiss employer is required. The employer must demonstrate that no suitable Swiss or EU/EFTA candidate was available (priority check) before a non-EU/EFTA national can be hired."
-        },
-        {
-          "id": "CH-work-quota-2026-09-13",
-          "field": "work_authorization",
-          "kind": "boolean",
-          "value": true,
-          "jurisdiction": "Switzerland",
-          "effectiveDate": "2026-09-13",
-          "sourceUrl": "https://www.sem.admin.ch/sem/en/home/themen/arbeit.html",
-          "evidenceIds": [
-            "CH-work-eligibility-2026-09-13"
-          ],
-          "notes": "Switzerland applies an annual quota for non-EU/EFTA work permits (B and L permits). Quota availability is limited and managed at cantonal level. The employer applies for the permit on behalf of the worker."
         }
       ]
     },
@@ -2501,7 +2316,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Czechia",
-          "effectiveDate": "2026-10-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://mv.gov.cz/mvcren/article/third-country-nationals.aspx",
           "evidenceIds": [
             "CZ-study-eligibility-2026-09-28"
@@ -2529,7 +2344,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Czechia",
-          "effectiveDate": "2026-10-28",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://mv.gov.cz/mvcren/article/employee-card.aspx",
           "evidenceIds": [
             "CZ-work-eligibility-2026-09-28"
@@ -2547,20 +2362,7 @@
       "sourceAuthority": "U.S. Department of State",
       "status": "research_required",
       "scopeNote": "USA study pathway requires additional evidence for financial requirements and I-20 process documentation.",
-      "permanentBlocker": null,
-      "requirements": [
-        {
-          "id": "US-student-admission-offer-2026-10-25",
-          "field": "admission_offer",
-          "kind": "boolean",
-          "value": true,
-          "jurisdiction": "United States",
-          "effectiveDate": "2026-10-25",
-          "sourceUrl": "https://travel.state.gov/content/travel/en/us-visas/study/student-visa.html",
-          "evidenceIds": [],
-          "notes": "Acceptance to a SEVP-certified school and receipt of Form I-20 is required before applying for an F-1 visa."
-        }
-      ]
+      "permanentBlocker": null
     },
     {
       "id": "US-work",
@@ -2571,20 +2373,7 @@
       "sourceAuthority": "U.S. Citizenship and Immigration Services",
       "status": "research_required",
       "scopeNote": "USA work pathway requires additional evidence for lottery process, prevailing wage requirements, and employer sponsorship documentation.",
-      "permanentBlocker": null,
-      "requirements": [
-        {
-          "id": "US-work-job-offer-2026-10-25",
-          "field": "job_offer",
-          "kind": "boolean",
-          "value": true,
-          "jurisdiction": "United States",
-          "effectiveDate": "2026-10-25",
-          "sourceUrl": "https://www.uscis.gov/working-in-the-united-states/h-1b-specialty-occupations",
-          "evidenceIds": [],
-          "notes": "A job offer from a US employer willing to sponsor the H-1B petition is required. The position must qualify as a specialty occupation requiring at least a bachelor's degree."
-        }
-      ]
+      "permanentBlocker": null
     }
   ]
 }

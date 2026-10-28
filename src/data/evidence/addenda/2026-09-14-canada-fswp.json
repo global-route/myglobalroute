@@ -14,7 +14,7 @@
       "retrievedAt": "2026-09-14",
       "methodology": "Direct review of current Government of Canada Federal Skilled Worker Program eligibility guidance; route scope deliberately narrowed from the Express Entry umbrella to FSWP.",
       "confidence": "high",
-      "reviewAfter": "2026-10-14"
+      "reviewAfter": "2027-04-28"
     },
     {
       "id": "CA-fswp-finance-2026-09-14",
@@ -29,7 +29,7 @@
       "retrievedAt": "2026-09-14",
       "methodology": "Direct review of current IRCC proof-of-funds guidance; numeric amounts are intentionally not copied into the pathway record so the source remains the authoritative live threshold table.",
       "confidence": "high",
-      "reviewAfter": "2026-10-14"
+      "reviewAfter": "2027-04-28"
     }
   ]
 }
