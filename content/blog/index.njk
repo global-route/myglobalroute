@@ -22,9 +22,9 @@ permalink: "/blog/index.html"
   <meta property="og:image" content="https://mypathway2global.org.uk/assets/og-default.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://mypathway2global.org.uk/assets/og-default.png">
-  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
-  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
-  <link rel="apple-touch-icon" href="/assets/icons/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#10316b">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -151,7 +151,7 @@ permalink: "/blog/index.html"
         let visible = 0;
         cards.forEach(card => {
           const matchCat = !active.category || card.dataset.category === active.category;
-          const matchGoal = !active.goal || card.dataset.goal === active.goal;
+          const matchGoal = !active.goal || !card.dataset.goal || card.dataset.goal === active.goal;
           const matchCountry = !country || card.dataset.country === country;
           const matchSearch = !query || card.dataset.title.includes(query);
           const show = matchCat && matchGoal && matchCountry && matchSearch;

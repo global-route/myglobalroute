@@ -6,7 +6,7 @@ updated: 2026-10-18
 lastFactChecked: 2026-10-18
 author: "MyPathway2Global Editorial"
 category: "Country Audits"
-country: "United States"
+country: "USA"
 keywords: "USA visa from Nigeria, F-1 student visa Nigeria, US work visa Africa, study in USA"
 featured: true
 readTime: "11 min"
