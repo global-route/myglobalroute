@@ -100,7 +100,10 @@ permalink: "/blog/index.html"
         <input type="search" id="blog-search" class="blog-search" placeholder="Search posts..." aria-label="Search posts" style="margin-left:0.5rem;">
       </div>
 
-      <p class="blog-count" id="blog-count" aria-live="polite"></p>
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+        <p class="blog-count" id="blog-count" aria-live="polite" style="margin:0;"></p>
+        <button id="blog-reset" class="filter-pill" hidden style="background:#fff;border-color:#c7d4f0;color:var(--color-neutral-500);font-weight:500;">✕ Clear</button>
+      </div>
 
       <div class="featured-grid" id="blog-grid">
         {% for post in collections.blog | reverse %}
@@ -121,7 +124,7 @@ permalink: "/blog/index.html"
         {% endfor %}
       </div>
 
-      <p class="no-results" id="blog-no-results" hidden>No posts match the selected filters. <button class="filter-pill" id="blog-reset" style="margin-left:0.5rem;">Clear filters</button></p>
+      <p class="no-results" id="blog-no-results" hidden>No posts match the selected filters.</p>
     </section>
 
     <section class="cta-final"><div class="container"><h2>Need a route, not just an article?</h2><p>Use the evidence-gated route finder for pathway-level recommendations.</p><div class="cta-buttons"><a href="/pages/find-mypathway.html" class="btn btn-primary btn-large">Find MyPathway</a><a href="/pages/visa-wizard.html" class="btn btn-secondary btn-large">Visa Wizard</a></div></div></section>
@@ -145,6 +148,12 @@ permalink: "/blog/index.html"
 
       let active = { category: '', goal: '' };
 
+      const resetBtn = document.getElementById('blog-reset');
+
+      function isFiltered() {
+        return active.category || active.goal || countrySelect.value || searchInput.value.trim();
+      }
+
       function update() {
         const country = countrySelect.value;
         const query = searchInput.value.trim().toLowerCase();
@@ -160,6 +169,7 @@ permalink: "/blog/index.html"
         });
         countEl.textContent = visible + ' post' + (visible !== 1 ? 's' : '');
         noResults.hidden = visible > 0;
+        resetBtn.hidden = !isFiltered();
       }
 
       document.querySelectorAll('.filter-pill[data-filter]').forEach(btn => {
@@ -175,7 +185,7 @@ permalink: "/blog/index.html"
       countrySelect.addEventListener('change', update);
       searchInput.addEventListener('input', update);
 
-      document.getElementById('blog-reset')?.addEventListener('click', () => {
+      resetBtn.addEventListener('click', () => {
         active = { category: '', goal: '' };
         document.querySelectorAll('.filter-pill[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.value === ''));
         countrySelect.value = '';
