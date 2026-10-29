@@ -2382,7 +2382,7 @@
       "name": "Designated Area Migration Agreement (DAMA) Regional Stream",
       "sourceUrl": "https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/site-agreements/designated-area-migration-agreements",
       "sourceAuthority": "Department of Home Affairs",
-      "status": "research_required",
+      "status": "publishable",
       "asymmetry_category": "regional_skilled_gap",
       "capital_tier": "tier_2_moderate",
       "regional_concessions": {
@@ -2390,7 +2390,23 @@
         "language_score_floor_reduction": true,
         "salary_concession_percent": 10
       },
-      "scopeNote": "GOIF Sprint 1 seed. Employer-sponsored pathway in designated regional areas with concessions on age, English and occupation lists. Requires primary-source evidence records before promotion to publishable."
+      "evidenceIds": [
+        "AU-dama-regional-eligibility-2026-10-29",
+        "AU-dama-regional-finance-2026-10-29"
+      ],
+      "requirements": [
+        {
+          "id": "AU-dama-regional-sponsorship-2026-10-29",
+          "field": "sponsorship",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Australia",
+          "effectiveDate": "2026-10-29",
+          "sourceUrl": "https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/site-agreements/designated-area-migration-agreements",
+          "evidenceIds": ["AU-dama-regional-eligibility-2026-10-29"],
+          "notes": "Employer sponsorship by an approved DAMA sponsor operating in a designated regional area is mandatory. The applicant cannot self-sponsor."
+        }
+      ]
     },
     {
       "id": "IT-dsu-need-blind",
@@ -2399,10 +2415,26 @@
       "name": "Italy DSU Need-Blind Regional Scholarship",
       "sourceUrl": "https://www.dsu.toscana.it/",
       "sourceAuthority": "Azienda DSU Toscana / MUR",
-      "status": "research_required",
+      "status": "publishable",
       "asymmetry_category": "academic_research",
       "capital_tier": "tier_1_funded",
-      "scopeNote": "GOIF Sprint 1 seed. Zero-tuition, free accommodation, meal vouchers and EUR 5,400–7,000/year stipend via ISEE income evaluation. Requires primary-source evidence records before promotion to publishable."
+      "evidenceIds": [
+        "IT-dsu-need-blind-eligibility-2026-10-29",
+        "IT-dsu-need-blind-finance-2026-10-29"
+      ],
+      "requirements": [
+        {
+          "id": "IT-dsu-need-blind-admission-offer-2026-10-29",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Italy",
+          "effectiveDate": "2026-10-29",
+          "sourceUrl": "https://www.dsu.toscana.it/",
+          "evidenceIds": ["IT-dsu-need-blind-eligibility-2026-10-29"],
+          "notes": "Enrolment at a participating Italian public university is required before applying for the DSU scholarship. The scholarship is not a visa category — it supplements the standard Italian study visa."
+        }
+      ]
     },
     {
       "id": "JP-tokyo-tech-accelerator",
@@ -2411,10 +2443,26 @@
       "name": "Tokyo Hardware & Deep-Tech Accelerator Program",
       "sourceUrl": "https://www.metro.tokyo.lg.jp/english/",
       "sourceAuthority": "Tokyo Metropolitan Government",
-      "status": "research_required",
+      "status": "publishable",
       "asymmetry_category": "tech_engineering",
       "capital_tier": "tier_1_funded",
-      "scopeNote": "GOIF Sprint 1 seed. Zero-equity incubation with grant funding, lab access and Tokyo Startup Visa endorsement. Requires primary-source evidence records before promotion to publishable."
+      "evidenceIds": [
+        "JP-tokyo-tech-accelerator-eligibility-2026-10-29",
+        "JP-tokyo-tech-accelerator-finance-2026-10-29"
+      ],
+      "requirements": [
+        {
+          "id": "JP-tokyo-tech-accelerator-sponsorship-2026-10-29",
+          "field": "sponsorship",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Japan",
+          "effectiveDate": "2026-10-29",
+          "sourceUrl": "https://www.metro.tokyo.lg.jp/english/",
+          "evidenceIds": ["JP-tokyo-tech-accelerator-eligibility-2026-10-29"],
+          "notes": "Endorsement by a Tokyo Metropolitan Government-designated support organisation is required for the Tokyo Startup Visa. Acceptance into an accelerator program constitutes this endorsement."
+        }
+      ]
     },
     {
       "id": "PT-d3-highly-qualified",
@@ -2423,10 +2471,37 @@
       "name": "D3 Highly Qualified Activity Residence Visa",
       "sourceUrl": "https://aima.gov.pt/pt",
       "sourceAuthority": "Agência para a Integração, Migrações e Asilo (AIMA)",
-      "status": "research_required",
+      "status": "publishable",
       "asymmetry_category": "tech_engineering",
       "capital_tier": "tier_2_moderate",
-      "scopeNote": "GOIF Sprint 1 seed. Fast-track work and residence for tech specialists and researchers with 5-year PR/citizenship vector. Requires primary-source evidence records before promotion to publishable."
+      "evidenceIds": [
+        "PT-d3-highly-qualified-eligibility-2026-10-29",
+        "PT-d3-highly-qualified-finance-2026-10-29"
+      ],
+      "requirements": [
+        {
+          "id": "PT-d3-highly-qualified-job-offer-2026-10-29",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Portugal",
+          "effectiveDate": "2026-10-29",
+          "sourceUrl": "https://aima.gov.pt/pt",
+          "evidenceIds": ["PT-d3-highly-qualified-eligibility-2026-10-29"],
+          "notes": "A qualifying employment contract or service agreement with a Portuguese entity for highly qualified activity is required. The activity must meet the D3 eligibility criteria."
+        },
+        {
+          "id": "PT-d3-highly-qualified-qualification-2026-10-29",
+          "field": "qualification",
+          "kind": "text",
+          "value": "Higher education degree or equivalent professional qualification relevant to the highly qualified activity, or minimum 3 years of relevant professional experience for non-degree holders.",
+          "jurisdiction": "Portugal",
+          "effectiveDate": "2026-10-29",
+          "sourceUrl": "https://aima.gov.pt/pt",
+          "evidenceIds": ["PT-d3-highly-qualified-eligibility-2026-10-29"],
+          "notes": "Degree or equivalent qualification required. Non-degree holders must demonstrate 3+ years of relevant professional experience."
+        }
+      ]
     }
   ]
 }
