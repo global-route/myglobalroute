@@ -296,6 +296,8 @@
   gap: 0.75rem;
   margin-bottom: var(--spacing-xl);
   box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 #route-form label {
@@ -307,9 +309,9 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--color-neutral-600);
-  flex: 1 1 160px;
+  flex: 1 1 130px;
   min-width: 0;
-  max-width: 100%;
+  max-width: calc(33% - 0.75rem);
 }
 
 #route-form button[type="submit"] {
