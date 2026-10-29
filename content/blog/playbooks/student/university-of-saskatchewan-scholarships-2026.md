@@ -21,7 +21,7 @@ faqs:
     a: "Yes. USask graduates are eligible for a Post-Graduation Work Permit (PGWP) for up to 3 years. Saskatchewan also has the Saskatchewan Immigrant Nominee Program (SINP) which has streams for international graduates and skilled workers. The SINP is one of the more accessible provincial nominee programs for African graduates."
 ---
 
-The University of Saskatchewan (USask) in Saskatoon is a research-intensive Canadian university with automatic scholarship consideration for international students. It is not a low-cost option — international tuition is CAD 39,000-59,000/year. But it has two things that make it strategically interesting for African applicants: automatic scholarship consideration and a clear post-graduation pathway to Canadian permanent residence through the Saskatchewan PNP.
+The University of Saskatchewan (USask) in Saskatoon is a research-intensive Canadian university with automatic scholarship consideration for international students. It is not a low-cost option - international tuition is CAD 39,000-59,000/year. But it has two things that make it strategically interesting for African applicants: automatic scholarship consideration and a clear post-graduation pathway to Canadian permanent residence through the Saskatchewan PNP.
 
 
 <!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
@@ -43,17 +43,17 @@ USask does not require a separate scholarship application for its main entrance 
 - Number awarded: 1 per year
 - Basis: Academic achievement
 - Deadline: Apply for admission by February 15
-- Who qualifies: International students — automatic consideration upon admission
+- Who qualifies: International students - automatic consideration upon admission
 
 **International Baccalaureate (IB) Excellence Award**
 - Value: CAD 20,000 (one-time)
 - Number awarded: 1 per year
 - Basis: IB Diploma Programme completion
-- Who qualifies: International IB students — automatic consideration
+- Who qualifies: International IB students - automatic consideration
 
 ## Competitive renewable scholarships (require separate application)
 
-**Best and Brightest — President's Scholarship**
+**Best and Brightest - President's Scholarship**
 - Value: CAD 40,000 (CAD 10,000/year over 4 years)
 - Basis: Academics, leadership, community contributions
 - Application deadline: December 1
@@ -88,17 +88,17 @@ The scholarships above are real but they do not make USask affordable for most s
 
 **What this means:** USask is not a scholarship-first destination for African students. The automatic awards reduce costs marginally. The competitive renewable scholarships (President's, Chancellor's) are meaningful but highly competitive.
 
-## Why USask is strategically interesting anyway — the Saskatchewan PNP
+## Why USask is strategically interesting anyway - the Saskatchewan PNP
 
 The reason USask appears in African student planning discussions is not primarily the scholarships. It is the post-graduation pathway.
 
 **Post-Graduation Work Permit (PGWP):** After graduating from USask (a Designated Learning Institution), you are eligible for a PGWP for up to 3 years. This allows you to work anywhere in Canada.
 
-**Saskatchewan Immigrant Nominee Program (SINP):** Saskatchewan has one of Canada's more accessible provincial nominee programs. The International Skilled Worker — Saskatchewan Express Entry stream nominates candidates from the federal Express Entry pool who have a connection to Saskatchewan (including USask graduates). Provincial nomination adds 600 CRS points to your Express Entry profile — effectively guaranteeing an Invitation to Apply for permanent residence.
+**Saskatchewan Immigrant Nominee Program (SINP):** Saskatchewan has one of Canada's more accessible provincial nominee programs. The International Skilled Worker - Saskatchewan Express Entry stream nominates candidates from the federal Express Entry pool who have a connection to Saskatchewan (including USask graduates). Provincial nomination adds 600 CRS points to your Express Entry profile - effectively guaranteeing an Invitation to Apply for permanent residence.
 
 **The pathway:** Study at USask → PGWP → work in Saskatchewan → SINP nomination → Express Entry ITA → permanent residence.
 
-This is a 4-6 year pathway to Canadian PR that is more accessible than the general Express Entry pool for many African applicants, particularly those in engineering, healthcare, agriculture and business — all programmes available at USask.
+This is a 4-6 year pathway to Canadian PR that is more accessible than the general Express Entry pool for many African applicants, particularly those in engineering, healthcare, agriculture and business - all programmes available at USask.
 
 ## Who USask suits
 
@@ -114,4 +114,4 @@ USask is not the right choice if:
 
 ## Evidence note
 
-Tuition figures and scholarship values sourced from `https://admissions.usask.ca/money/tuition.php` and `https://admissions.usask.ca/money/scholarships.php`, retrieved October 2026. Tuition rates are subject to annual increase. SINP stream details from `https://www.saskatchewan.ca/residents/moving-to-saskatchewan/immigrate-to-saskatchewan` — verify current stream requirements before applying.
+Tuition figures and scholarship values sourced from `https://admissions.usask.ca/money/tuition.php` and `https://admissions.usask.ca/money/scholarships.php`, retrieved October 2026. Tuition rates are subject to annual increase. SINP stream details from `https://www.saskatchewan.ca/residents/moving-to-saskatchewan/immigrate-to-saskatchewan` - verify current stream requirements before applying.

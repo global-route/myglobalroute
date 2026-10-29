@@ -9,11 +9,11 @@ category: "Guides"
 goal: ""
 readTime: "12 min"
 featured: false
-excerpt: "Paraguay taxes only income sourced within Paraguay. Foreign income is not taxed. The SUACE system allows company formation in 24-72 hours. Three residency routes exist — standard temporary, SUACE investor fast-track, and a direct investment route. Here is what is confirmed and what requires practitioner verification."
+excerpt: "Paraguay taxes only income sourced within Paraguay. Foreign income is not taxed. The SUACE system allows company formation in 24-72 hours. Three residency routes exist - standard temporary, SUACE investor fast-track, and a direct investment route. Here is what is confirmed and what requires practitioner verification."
 keywords: "paraguay residency nomad 2026, paraguay territorial tax africa, paraguay SUACE company nigeria, paraguay permanent residency africa"
 faqs:
   - q: "Does Paraguay tax foreign income?"
-    a: "No. Paraguay operates a territorial tax system. Only income sourced within Paraguay is subject to Paraguayan income tax. Foreign-sourced income — salary from a foreign employer, freelance income from foreign clients, dividends from foreign companies — is not taxed in Paraguay. The personal income tax rate on Paraguay-sourced income is 10% flat."
+    a: "No. Paraguay operates a territorial tax system. Only income sourced within Paraguay is subject to Paraguayan income tax. Foreign-sourced income - salary from a foreign employer, freelance income from foreign clients, dividends from foreign companies - is not taxed in Paraguay. The personal income tax rate on Paraguay-sourced income is 10% flat."
   - q: "What is SUACE in Paraguay?"
     a: "SUACE (Sistema Unificado de Apertura y Cierre de Empresas) is Paraguay's fast-track company registration system operated by the Ministry of Industry and Commerce (MIC). It allows company formation in 24-72 hours through an online portal. A SUACE company can be used as the basis for an investor residency application."
   - q: "How long does it take to get Paraguayan citizenship?"
@@ -40,7 +40,7 @@ This post covers what is confirmed from primary sources and what requires verifi
 
 ## The three residency routes
 
-### Route 1 — Standard temporary residency (no fixed investment)
+### Route 1 - Standard temporary residency (no fixed investment)
 
 The standard route does not require a minimum investment or bank deposit. You apply for temporary residency at the Dirección General de Migraciones, hold it for 2 years, then upgrade to permanent residency. After 3 years of permanent residency, you are eligible for citizenship.
 
@@ -48,25 +48,25 @@ The standard route does not require a minimum investment or bank deposit. You ap
 
 **What you need:** Valid passport, birth certificate (apostilled), criminal record certificate (apostilled), proof of financial means, medical certificate.
 
-**The $5,000 deposit:** The widely-cited $5,000 USD bank deposit (solvencia económica) was a requirement under the old framework. Multiple practitioners report this fixed deposit has been removed or replaced with flexible financial solvency documentation. This change has not been independently verified from migraciones.gov.py — confirm with a local lawyer.
+**The $5,000 deposit:** The widely-cited $5,000 USD bank deposit (solvencia económica) was a requirement under the old framework. Multiple practitioners report this fixed deposit has been removed or replaced with flexible financial solvency documentation. This change has not been independently verified from migraciones.gov.py - confirm with a local lawyer.
 
 **Cost:** Government fees approximately USD 200-400. Legal fees USD 500-2,000 for a reputable local lawyer.
 
-### Route 2 — SUACE investor fast-track (widely reported, verify before acting)
+### Route 2 - SUACE investor fast-track (widely reported, verify before acting)
 
-Registering a company through SUACE with a declared nominal capital above a threshold is widely reported to qualify for direct permanent residency — bypassing the 2-year temporary stage.
+Registering a company through SUACE with a declared nominal capital above a threshold is widely reported to qualify for direct permanent residency - bypassing the 2-year temporary stage.
 
 **Widely cited threshold:** USD 70,000 nominal capital declared in the company's articles of incorporation.
 
-**Important distinction:** This is reported as nominal capital — the stated capital of the business — not a bank deposit. It does not need to be deposited in a Paraguayan bank account upfront. However, this distinction is critical and must be confirmed with a local lawyer before relying on it.
+**Important distinction:** This is reported as nominal capital - the stated capital of the business - not a bank deposit. It does not need to be deposited in a Paraguayan bank account upfront. However, this distinction is critical and must be confirmed with a local lawyer before relying on it.
 
 **Total timeline to citizenship if confirmed:** Approximately 3 years (direct permanent residency + 3-year clock).
 
 > This route is widely cited by Paraguay immigration practitioners but the USD 70,000 threshold and the nominal vs deposited capital distinction have not been independently verified from the MIC or Migraciones. Do not act on these figures without practitioner confirmation.
 
-### Route 3 — Direct investment route (widely reported, verify before acting)
+### Route 3 - Direct investment route (widely reported, verify before acting)
 
-A direct investment into Paraguayan assets — real estate, tourism projects, or the stock exchange — is widely reported to qualify for direct permanent residency.
+A direct investment into Paraguayan assets - real estate, tourism projects, or the stock exchange - is widely reported to qualify for direct permanent residency.
 
 **Widely cited thresholds:**
 - Real estate or tourism: USD 150,000
@@ -74,7 +74,7 @@ A direct investment into Paraguayan assets — real estate, tourism projects, or
 
 > These thresholds are consistent across multiple practitioner sources but have not been independently verified from official Paraguayan government documentation. Verify before acting.
 
-## SUACE — what it actually is
+## SUACE - what it actually is
 
 SUACE is a real, government-operated system. The portal at `http://formalizacion.suace.gov.py/formalizacion_suace/` is live and operated by the MIC. It allows formation of a Sociedad Anónima (SA) or Sociedad de Responsabilidad Limitada (SRL) in 24-72 hours.
 
@@ -83,7 +83,7 @@ A SUACE company must have:
 - At least one local legal representative (representante legal)
 - Annual tax filings with the SET
 
-The company formation itself is straightforward. The residency link — whether and at what capital threshold a SUACE company qualifies for fast-track permanent residency — is the part that requires practitioner verification.
+The company formation itself is straightforward. The residency link - whether and at what capital threshold a SUACE company qualifies for fast-track permanent residency - is the part that requires practitioner verification.
 
 ## Tax considerations for SUACE companies
 
@@ -106,7 +106,7 @@ Paraguay is worth researching if you are:
 - Comfortable with South America as a base and willing to spend time in Asunción
 
 Paraguay is not the right choice if you:
-- Need EU/Schengen access without a visa (the Paraguayan passport gives this, but you need citizenship first — 3-5 years)
+- Need EU/Schengen access without a visa (the Paraguayan passport gives this, but you need citizenship first - 3-5 years)
 - Cannot spend meaningful time in Paraguay (citizenship requires physical presence)
 - Need a strong English-speaking environment (Spanish is the primary language)
 
@@ -118,4 +118,4 @@ Paraguay is not the right choice if you:
 
 ## Evidence note
 
-The territorial tax system is confirmed from the SET at `https://www.set.gov.py/`. The SUACE system is confirmed from the MIC at `https://www.mic.gov.py/`. Investment thresholds for Routes 2 and 3 reflect widely-cited practitioner guidance and have not been independently verified from primary government sources. All figures are subject to change. This post is general information only — not legal or immigration advice.
+The territorial tax system is confirmed from the SET at `https://www.set.gov.py/`. The SUACE system is confirmed from the MIC at `https://www.mic.gov.py/`. Investment thresholds for Routes 2 and 3 reflect widely-cited practitioner guidance and have not been independently verified from primary government sources. All figures are subject to change. This post is general information only - not legal or immigration advice.

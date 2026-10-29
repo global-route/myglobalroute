@@ -26,8 +26,8 @@ faqs:
 
 - **System type:** Invitation-based - you enter a pool, Canada draws from it
 - **Processing time:** 6 months (from ITA to PR visa)
-- **CRS score cut-offs:** 480–520 range in recent 2026 draws (varies by draw type)
-- **True cost:** CAD 2,500–3,500 (₦1.3M–₦1.9M)
+- **CRS score cut-offs:** 480-520 range in recent 2026 draws (varies by draw type)
+- **True cost:** CAD 2,500-3,500 (₦1.3M-₦1.9M)
 - **Sweet spot:** Post-secondary education + 2+ years work experience + strong English/French = competitive CRS score
 
 **Bottom line:** Express Entry is Canada's **fastest pathway to permanent residency**. The key metric is your CRS score relative to draw cut-offs - not an approval rate. If you receive an ITA and submit a complete application, processing is straightforward.
@@ -309,8 +309,8 @@ IRCC publishes draw results monthly. Your CRS score must **meet or exceed the cu
 
 **Strategy to push above 495:**
 - Improve English to CLB 9 (+17 points) = 445 → **Still not enough**
-- Get Provincial Nominee (automatic 600+) = ✅ **ITA guaranteed**
-- Get valid job offer (+200 points) = 628 → **ITA guaranteed**
+- Get Provincial Nominee (automatic 600+) = ✅ **ITA highly likely**
+- Get valid job offer (+200 points) = 628 → **ITA highly likely**
 
 ---
 
@@ -807,7 +807,7 @@ Based on 2025 IRCC data, the **top 5 reasons** Nigerian Express Entry applicatio
 - Have approved LMIA (Labor Market Impact Assessment)
 
 **With 200-point boost:**
-- 400 CRS + 200 job offer = **600 points** (guaranteed ITA)
+- 400 CRS + 200 job offer = **600 points** (ITA highly likely in next draw)
 
 ---
 

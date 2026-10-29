@@ -74,7 +74,7 @@ The UK Student visa is for international students aged 16 and over studying at a
 
 ### Tuition fees
 
-UK university tuition for international students is typically £15,000–£35,000/year depending on institution and programme. This is separate from the maintenance funds requirement.
+UK university tuition for international students is typically £15,000-£35,000/year depending on institution and programme. This is separate from the maintenance funds requirement.
 
 ### Post-study work rights
 

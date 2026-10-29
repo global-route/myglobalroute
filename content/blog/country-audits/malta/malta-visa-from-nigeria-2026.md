@@ -30,7 +30,7 @@ Malta is an English-speaking EU island nation in the Mediterranean. It has two p
 
 **Tuition fees:** The University of Malta charges approximately EUR 4,000-8,000/year for non-EU students depending on the programme. Living costs in Malta are approximately EUR 700-900/month.
 
-**English language:** Malta is English-speaking — no Maltese language requirement for most programmes.
+**English language:** Malta is English-speaking - no Maltese language requirement for most programmes.
 
 **Processing time:** 1-2 months.
 

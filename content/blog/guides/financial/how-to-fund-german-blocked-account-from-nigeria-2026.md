@@ -35,7 +35,7 @@ A blocked account (Sperrkonto) is a special bank account that holds your living 
 
 The account is "blocked" in the sense that you can only withdraw a fixed monthly amount (€934) after you arrive in Germany. You cannot withdraw the full amount at once.
 
-The blocked account is **not** tuition. It is living funds proof only. Tuition at German public universities is €0 for most programmes (a semester admin fee of ~€150–€350 applies separately).
+The blocked account is **not** tuition. It is living funds proof only. Tuition at German public universities is €0 for most programmes (a semester admin fee of ~€150-€350 applies separately).
 
 ---
 
@@ -70,8 +70,8 @@ Wise (formerly TransferWise) offers the closest to mid-market exchange rate with
 4. Enter the Fintiba or Expatrio account details as the recipient
 5. Fund the Wise transfer from your Nigerian bank account via bank transfer or debit card
 
-**Typical fee:** 1–2% of the transfer amount  
-**Transfer time:** 1–3 business days  
+**Typical fee:** 1-2% of the transfer amount  
+**Transfer time:** 1-3 business days  
 **Exchange rate:** Mid-market rate with a small transparent markup
 
 **Important:** Check whether Wise supports direct NGN → EUR transfers at the time you apply - availability varies. If not, transfer NGN → USD first, then USD → EUR in a second transfer.
@@ -83,16 +83,16 @@ If you have a domiciliary (foreign currency) account at a Nigerian bank (GTBank,
 1. Convert NGN to USD at your bank
 2. Transfer USD from your DOM account to Fintiba or Expatrio (they accept USD and convert to EUR)
 
-**Typical fee:** Bank conversion spread (1–3%) + international wire fee (~$25–$50)  
-**Transfer time:** 3–5 business days  
+**Typical fee:** Bank conversion spread (1-3%) + international wire fee (~$25-$50)  
+**Transfer time:** 3-5 business days  
 **Note:** Nigerian banks apply CBN-regulated exchange rates which may differ from the open market rate
 
 ### Option 3 - Western Union / MoneyGram
 
 Available but typically more expensive than Wise for large transfers.
 
-**Typical fee:** 2–4% plus exchange rate margin  
-**Transfer time:** 1–2 business days  
+**Typical fee:** 2-4% plus exchange rate margin  
+**Transfer time:** 1-2 business days  
 **Note:** Check the maximum transfer limit - large amounts may require multiple transfers or additional verification
 
 ---
@@ -103,7 +103,7 @@ Available but typically more expensive than Wise for large transfers.
 2. **Verify identity** - upload your Nigerian passport
 3. **Receive your Fintiba IBAN** - this is the account number you will transfer to
 4. **Transfer €11,208** (or USD equivalent) from Nigeria using Wise or your DOM account
-5. **Fintiba confirms receipt** - typically within 1–3 business days of the transfer arriving
+5. **Fintiba confirms receipt** - typically within 1-3 business days of the transfer arriving
 6. **Download your Finanzierungsnachweis** - the confirmation certificate you submit to the German embassy
 
 The Finanzierungsnachweis is what the embassy actually checks. It confirms the account is funded and the funds are blocked.
@@ -114,15 +114,15 @@ The Finanzierungsnachweis is what the embassy actually checks. It confirms the a
 
 | Step | Time required |
 |---|---|
-| Open Fintiba/Expatrio account | 1–2 days |
-| Identity verification | 1–3 days |
-| Transfer from Nigeria (Wise) | 1–3 business days |
-| Transfer from Nigeria (DOM account) | 3–5 business days |
-| Fintiba/Expatrio confirms receipt | 1–2 days after transfer arrives |
+| Open Fintiba/Expatrio account | 1-2 days |
+| Identity verification | 1-3 days |
+| Transfer from Nigeria (Wise) | 1-3 business days |
+| Transfer from Nigeria (DOM account) | 3-5 business days |
+| Fintiba/Expatrio confirms receipt | 1-2 days after transfer arrives |
 | Download Finanzierungsnachweis | Immediate after confirmation |
-| **Total minimum** | **5–10 business days** |
+| **Total minimum** | **5-10 business days** |
 
-Allow 2–3 weeks to be safe. Do not book your embassy appointment until you have the Finanzierungsnachweis in hand.
+Allow 2-3 weeks to be safe. Do not book your embassy appointment until you have the Finanzierungsnachweis in hand.
 
 ---
 
@@ -133,7 +133,7 @@ The €11,208 requirement is fixed in EUR. If the NGN/EUR rate moves against you
 **Practical approach:**
 - Monitor the rate weekly using Wise's rate tracker
 - Transfer when the rate is favourable - do not wait for a "perfect" rate that may never come
-- Budget a 5–10% buffer above the current naira equivalent to absorb rate movement
+- Budget a 5-10% buffer above the current naira equivalent to absorb rate movement
 
 ---
 

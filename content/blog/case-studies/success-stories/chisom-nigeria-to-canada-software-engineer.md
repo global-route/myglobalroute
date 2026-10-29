@@ -106,8 +106,8 @@ Chisom needed more points. Options:
 - Chisom doesn't speak French
 - Would take 6-12 months to learn
 
-**Option 4: Get provincial nomination (+600 points guaranteed ITA)**
-- **Best option** (instant approval)
+**Option 4: Get provincial nomination (+600 points - near-certain ITA)**
+- **Best option** (provincial nomination adds 600 CRS points, making an ITA highly likely in the next draw)
 
 ---
 

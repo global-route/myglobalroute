@@ -25,7 +25,7 @@ faqs:
 ## Quick Summary
 
 - **Study visa minimum funds:** Approximately €6,167/year living costs (self-funded)
-- **DSU scholarship:** Covers tuition, housing and stipend (~€6,000–€7,000/year) for eligible low-income students
+- **DSU scholarship:** Covers tuition, housing and stipend (~€6,000-€7,000/year) for eligible low-income students
 - **Work visa:** Requires Nulla Osta under the annual Decreto Flussi quota - quota opens on specific dates
 - **Official source:** [Italian Ministry of Foreign Affairs - Visto per Italia](https://vistoperitalia.esteri.it/)
 
@@ -39,7 +39,7 @@ faqs:
 
 - **Admission offer:** Enrolment or pre-enrolment at a recognised Italian university via the [Universitaly portal](https://www.universitaly.it/)
 - **Minimum living funds (self-funded):** Approximately €6,167/year (€514/month) - based on the Italian social allowance reference. Exact threshold varies by consulate. - [source: vistoperitalia.esteri.it](https://vistoperitalia.esteri.it/)
-- **Tuition:** Varies by university and income bracket - public universities typically €0–€3,000/year for low-income students; higher for others
+- **Tuition:** Varies by university and income bracket - public universities typically €0-€3,000/year for low-income students; higher for others
 - **Health insurance:** Required for the duration of stay
 
 ### The Universitaly pre-enrolment process
@@ -50,7 +50,7 @@ For Nigerian applicants, the standard route is:
 3. You take the pre-enrolment confirmation to the Italian embassy in Lagos or Abuja
 4. Apply for the study visa with the confirmed pre-enrolment
 
-Pre-enrolment windows typically open in January–March for the following academic year. Apply early - places are limited.
+Pre-enrolment windows typically open in January-March for the following academic year. Apply early - places are limited.
 
 ---
 
@@ -62,7 +62,7 @@ The DSU scholarship is Italy's means-tested student support system. For internat
 
 - Tuition fees: Waived or significantly reduced
 - University accommodation: Free dormitory place (where available)
-- Living stipend: Approximately €6,000–€7,000/year (varies by university and region)
+- Living stipend: Approximately €6,000-€7,000/year (varies by university and region)
 - Meal vouchers: Free or subsidised meals at university canteens
 
 ### Eligibility

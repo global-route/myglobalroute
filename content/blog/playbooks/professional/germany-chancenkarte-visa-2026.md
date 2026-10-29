@@ -180,7 +180,7 @@ Younger applicants score higher:
 - Age 38: 4 points
 - **TOTAL: 59 points** ✅✅ (EXCELLENT)
 
-**Status:** Nearly guaranteed approval. Can apply immediately.
+**Status:** Strong profile - meets the points threshold. Can apply immediately.
 
 ---
 

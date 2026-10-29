@@ -26,7 +26,7 @@ The African Continental Free Trade Area (AfCFTA) came into force in 2021. It is 
 <!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 Four countries have emerged as the leading answers: Rwanda, Mauritius, Ghana and Kenya. Each offers a different combination of regulatory ease, tax efficiency, financial infrastructure and market access.
 
-## Rwanda — the regulatory efficiency hub
+## Rwanda - the regulatory efficiency hub
 
 Rwanda has transformed its business environment over the past two decades. It consistently ranks first in Africa on regulatory ease metrics.
 
@@ -42,7 +42,7 @@ Rwanda has transformed its business environment over the past two decades. It co
 
 Primary source: `https://www.rdb.rw/`
 
-## Mauritius — the financial and holding company hub
+## Mauritius - the financial and holding company hub
 
 Mauritius has a 40-year track record as Africa's premier financial centre. It is the preferred jurisdiction for holding companies investing into Africa.
 
@@ -54,11 +54,11 @@ Mauritius has a 40-year track record as Africa's premier financial centre. It is
 
 **Residency:** The Occupation Permit for investors requires a minimum investment of USD 50,000 and a minimum annual turnover of USD 100,000 from year 2. The Premium Visa (covered separately) is for remote workers rather than investors.
 
-**Practical note:** Mauritius is an island. Physical presence requirements for GBL companies mean you need a registered agent and at least one resident director. Substance requirements have increased since 2019 — pure shell structures are no longer viable.
+**Practical note:** Mauritius is an island. Physical presence requirements for GBL companies mean you need a registered agent and at least one resident director. Substance requirements have increased since 2019 - pure shell structures are no longer viable.
 
 Primary source: `https://www.edbmauritius.org/`
 
-## Ghana — the West Africa gateway
+## Ghana - the West Africa gateway
 
 Ghana is the most stable democracy in West Africa and the natural gateway for businesses targeting the ECOWAS region (350 million people).
 
@@ -74,7 +74,7 @@ Ghana is the most stable democracy in West Africa and the natural gateway for bu
 
 Primary source: `https://www.gipc.gov.gh/`
 
-## Kenya — the East Africa tech and services hub
+## Kenya - the East Africa tech and services hub
 
 Kenya is East Africa's largest economy and the regional hub for technology, financial services and professional services.
 
@@ -86,7 +86,7 @@ Kenya is East Africa's largest economy and the regional hub for technology, fina
 
 **Residency:** The Kenya Investment Certificate from the Kenya Investment Authority (KenInvest) provides a basis for residence permits for investors. Minimum investment thresholds apply.
 
-**Digital Nomad Visa:** Kenya has been developing a Digital Nomad Visa as of 2026 — check current status with the Department of Immigration.
+**Digital Nomad Visa:** Kenya has been developing a Digital Nomad Visa as of 2026 - check current status with the Department of Immigration.
 
 Primary source: `https://www.kenyainvestment.go.ke/`
 

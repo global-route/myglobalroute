@@ -40,7 +40,7 @@ Primary source: `https://en.nia.gov.cn/`
 
 **Qualification requirements:**
 - **Category B (professional talent):** Bachelor's degree and at least 2 years of relevant work experience
-- **Category A (high-end talent):** Higher thresholds — senior professionals, researchers, executives
+- **Category A (high-end talent):** Higher thresholds - senior professionals, researchers, executives
 - **Category C:** Other permitted occupations
 
 **Process:** The employer must obtain a work permit notice (Z visa notification) from the local human resources authority before you apply for the Z visa at the Chinese Embassy in Abuja.

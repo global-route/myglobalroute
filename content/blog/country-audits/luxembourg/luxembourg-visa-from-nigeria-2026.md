@@ -32,7 +32,7 @@ Luxembourg is a small, wealthy country at the heart of the EU with a highly inte
 
 **Processing time:** 2-3 months.
 
-**Work rights:** Students may work part-time alongside their studies — check current rules with the immigration authority.
+**Work rights:** Students may work part-time alongside their studies - check current rules with the immigration authority.
 
 Primary source: `https://guichet.public.lu/en/citoyens/immigration/plus-3-mois/ressortissant-tiers/etudiant.html`
 
@@ -40,7 +40,7 @@ Primary source: `https://guichet.public.lu/en/citoyens/immigration/plus-3-mois/r
 
 **Requirements:** Job offer from a Luxembourg employer. The employer must complete an ADEM vacancy declaration (declaring the vacancy to the national employment agency) unless an exemption applies. The job must meet the minimum wage requirements for the sector.
 
-**Minimum wage:** Luxembourg has one of the highest minimum wages in the EU — EUR 2,570.93/month gross (2026 figure). Most skilled positions pay significantly above this.
+**Minimum wage:** Luxembourg has one of the highest minimum wages in the EU - EUR 2,570.93/month gross (2026 figure). Most skilled positions pay significantly above this.
 
 **Processing time:** 2-3 months.
 

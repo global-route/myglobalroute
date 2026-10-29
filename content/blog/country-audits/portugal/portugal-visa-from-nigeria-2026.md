@@ -92,7 +92,7 @@ The D7 income threshold is not published as a fixed figure by AIMA. The €820/m
 
 ## Key considerations for Nigerian applicants
 
-- **AIMA processing backlogs:** Portugal's immigration authority has faced multi-month delays for residence permit appointments. Factor 6–12 months into your post-arrival timeline.
+- **AIMA processing backlogs:** Portugal's immigration authority has faced multi-month delays for residence permit appointments. Factor 6-12 months into your post-arrival timeline.
 - **NHR tax regime:** Portugal's Non-Habitual Resident tax regime offers tax advantages for new residents - consult a Portuguese tax adviser.
 - **Language:** Portuguese is required for citizenship but not for the initial visa or residence permit.
 

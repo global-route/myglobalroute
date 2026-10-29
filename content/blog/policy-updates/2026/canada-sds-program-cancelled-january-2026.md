@@ -64,7 +64,7 @@ A fast-track student visa program for citizens of 14 countries (including Nigeri
 
 **Benefits:**
 - ⚡ **20-day processing** (vs. 12-20 weeks regular stream)
-- ✅ Higher approval rates (75-80% for Nigerians vs. 60-65% regular)
+- ✅ More predictable processing (clear, structured requirements)
 - ✅ Simpler documentation
 
 **Why it was popular:**
@@ -121,7 +121,7 @@ A fast-track student visa program for citizens of 14 countries (including Nigeri
 | **GIC requirement** | CAD 20,635 (₦11.15M) | **Not required** (but still recommended) |
 | **Financial proof** | GIC + 1st year tuition | **More proof needed** (bank statements, sponsor letters) |
 | **Language test** | IELTS 6.0+ mandatory | **Not mandatory** (but recommended) |
-| **Approval rate (Nigerians)** | 75-80% | **60-65%** |
+| **Approval rate (Nigerians)** | Not published by IRCC | **Not published by IRCC** |
 | **Documentation** | Simpler | **More detailed** (study plan, ties to Nigeria) |
 
 ---
@@ -355,11 +355,9 @@ Apply for a **1-year postgraduate certificate** (cheaper than degree):
 
 ---
 
-### Q: What's the approval rate now?
+### Q: Does the SDS cancellation affect my chances?
 
-**A:** Nigeria: **60-65%** (down from 75-80% under SDS).
-
-**Why lower?** More documentation scrutiny, more refusals for weak study plans or insufficient financial proof.
+**A:** IRCC does not publish approval rates by nationality. Processing times are longer under the standard stream. A strong study plan and clear financial documentation remain the most important factors.
 
 ---
 

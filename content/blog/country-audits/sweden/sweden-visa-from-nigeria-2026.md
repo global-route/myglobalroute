@@ -26,7 +26,7 @@ Sweden has two publishable pathways for Nigerian applicants: a study residence p
 <!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 ## Study permit
 
-**Minimum funds:** SEK 10,656/month (2026 figure). The authority notes this may be reduced where free food or housing is provided. Tuition fees are additional — non-EU students pay SEK 80,000 to SEK 140,000 per year at most institutions.
+**Minimum funds:** SEK 10,656/month (2026 figure). The authority notes this may be reduced where free food or housing is provided. Tuition fees are additional - non-EU students pay SEK 80,000 to SEK 140,000 per year at most institutions.
 
 **Requirements:** Admission to a Swedish higher education institution, proof of funds, valid passport.
 
@@ -40,7 +40,7 @@ Primary source: `https://www.migrationsverket.se/en/you-want-to-apply/study/high
 
 ## Work permit
 
-**Salary threshold:** SEK 34,470/month gross from 1 June 2026 (90% of the median salary of SEK 38,300). This is the job offer salary threshold — the employer must offer at least this amount. Exemptions and transitional rules apply.
+**Salary threshold:** SEK 34,470/month gross from 1 June 2026 (90% of the median salary of SEK 38,300). This is the job offer salary threshold - the employer must offer at least this amount. Exemptions and transitional rules apply.
 
 **Requirements:** Job offer from a Swedish employer meeting the salary threshold. The employer advertises the vacancy in Sweden and the EU/EEA for at least 10 days before sponsoring a non-EU national.
 

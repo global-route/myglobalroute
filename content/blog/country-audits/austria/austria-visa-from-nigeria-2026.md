@@ -33,7 +33,7 @@ Austria offers two evidence-gated pathways for Nigerian applicants: the Red-Whit
 
 ---
 
-## Pathway 1 — Red-White-Red Card (Other Key Workers)
+## Pathway 1 - Red-White-Red Card (Other Key Workers)
 
 **Registry ID:** `AT-rwr-other-key-workers` | **Status:** Publishable
 
@@ -53,7 +53,7 @@ Minimum score: **55 points out of 100**
 
 A job offer is mandatory regardless of total score.
 
-**Source:** [migration.gv.at](https://www.migration.gv.at/index.php?id=1051) — verified 2026-09-14
+**Source:** [migration.gv.at](https://www.migration.gv.at/index.php?id=1051) - verified 2026-09-14
 
 ### Salary requirement
 
@@ -63,7 +63,7 @@ Minimum gross monthly salary: **EUR 2,685** (2026). Set by the Austrian Federal 
 
 1. Secure a job offer from an Austrian employer (employer must complete a labour market test).
 2. Calculate your points score at migration.gv.at.
-3. Apply at the Austrian Embassy in Abuja. Book an appointment — waiting times 4-8 weeks.
+3. Apply at the Austrian Embassy in Abuja. Book an appointment - waiting times 4-8 weeks.
 4. Submit: application form, passport, certified degree certificates, employment contract, proof of accommodation.
 5. Processing: 8-12 weeks.
 
@@ -76,7 +76,7 @@ Minimum gross monthly salary: **EUR 2,685** (2026). Set by the Austrian Federal 
 
 ---
 
-## Pathway 2 — Study Residence Permit
+## Pathway 2 - Study Residence Permit
 
 **Registry ID:** `AT-study` | **Status:** Publishable
 
@@ -90,7 +90,7 @@ Non-EU students pay approximately EUR 726/semester (EUR 1,452/year) at most Aust
 | Minimum monthly funds | EUR 1,217 | oesterreich.gv.at | 2026-09-13 |
 | Health insurance | Required | Austrian embassy | 2026-09-13 |
 
-**Source:** [oesterreich.gv.at](https://www.oesterreich.gv.at/en/themen/migration_und_integration.html) — verified 2026-09-13
+**Source:** [oesterreich.gv.at](https://www.oesterreich.gv.at/en/themen/migration_und_integration.html) - verified 2026-09-13
 
 ### Costs
 

@@ -42,7 +42,7 @@ If your letter does not answer all four, it is incomplete.
 
 ## Structure
 
-**Length:** 1–2 pages (400–800 words). Longer is not better.
+**Length:** 1-2 pages (400-800 words). Longer is not better.
 
 **Format:** Plain prose, no bullet points. Formal but not stiff. First person.
 

@@ -92,7 +92,7 @@ Spain requires a student visa for any course longer than 90 days at a recognised
 
 ### Tuition fees
 
-Spain has both public and private universities. Public university tuition for international (non-EU) students typically ranges from €1,500–€3,500/year for undergraduate programmes - significantly lower than the UK or Ireland. Private universities charge more.
+Spain has both public and private universities. Public university tuition for international (non-EU) students typically ranges from €1,500-€3,500/year for undergraduate programmes - significantly lower than the UK or Ireland. Private universities charge more.
 
 ---
 
@@ -111,10 +111,10 @@ Spain has both public and private universities. Public university tuition for in
 |---|---|
 | Digital nomad visa application fee | ~€80 |
 | Study visa application fee | ~€80 |
-| Health insurance (annual) | €500–€1,500 |
-| Criminal record apostille | ~₦15,000–₦25,000 |
-| Flight (Lagos to Madrid) | ~€500–€800 |
-| Living costs (monthly, indicative) | €800–€1,200 |
+| Health insurance (annual) | €500-€1,500 |
+| Criminal record apostille | ~₦15,000-₦25,000 |
+| Flight (Lagos to Madrid) | ~€500-€800 |
+| Living costs (monthly, indicative) | €800-€1,200 |
 
 ---
 

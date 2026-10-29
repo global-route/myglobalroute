@@ -28,7 +28,7 @@ Iceland is a Nordic island nation with a small population and documented labour 
 
 **Requirements:** Acceptance at a recognised Icelandic educational institution, valid passport, proof of sufficient financial means, health insurance.
 
-**Tuition fees:** The University of Iceland charges approximately ISK 75,000 per semester (approximately EUR 500) for most programmes — low by international standards. Other institutions vary.
+**Tuition fees:** The University of Iceland charges approximately ISK 75,000 per semester (approximately EUR 500) for most programmes - low by international standards. Other institutions vary.
 
 **Cost of living:** Iceland is expensive. Budget approximately EUR 1,500-2,000/month in Reykjavik for accommodation, food and transport.
 

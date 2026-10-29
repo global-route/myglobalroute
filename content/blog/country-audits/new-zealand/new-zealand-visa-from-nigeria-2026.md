@@ -37,7 +37,7 @@ New Zealand offers evidence-gated pathways through the student visa and three Sk
 
 ---
 
-## Pathway 1 — Accredited Employer Work Visa (AEWV)
+## Pathway 1 - Accredited Employer Work Visa (AEWV)
 
 The AEWV is New Zealand's primary employer-sponsored work visa. It replaced the Essential Skills visa in July 2022 and is the most accessible work route for Nigerian professionals with a job offer.
 
@@ -47,7 +47,7 @@ The AEWV is New Zealand's primary employer-sponsored work visa. It replaced the 
 2. **Job check.** The employer applies for a job check confirming the role is genuine, pays at least the NZ median wage, and has been advertised to NZ residents first (unless an exemption applies).
 3. **Worker visa application.** After the job check is approved, you apply for the AEWV.
 
-**Wage requirement:** The role must pay at least the NZ median wage. The NZ median wage is approximately NZD 29.66/hour as of 2026. The NZ minimum wage from 1 April 2026 is NZD 23.95/hour — the AEWV threshold is higher. Roles on the Green List (shortage occupations) may be exempt from the median wage requirement.
+**Wage requirement:** The role must pay at least the NZ median wage. The NZ median wage is approximately NZD 29.66/hour as of 2026. The NZ minimum wage from 1 April 2026 is NZD 23.95/hour - the AEWV threshold is higher. Roles on the Green List (shortage occupations) may be exempt from the median wage requirement.
 
 **Visa duration:** Up to 3 years, renewable. Some roles qualify for up to 5 years.
 
@@ -57,7 +57,7 @@ Primary source: `https://www.immigration.govt.nz/new-zealand-visas/visas/visa/ac
 
 ---
 
-## Pathway 2 — Student Visa (Fee-Paying)
+## Pathway 2 - Student Visa (Fee-Paying)
 
 **Registry ID:** `NZ-student` | **Status:** Publishable
 
@@ -69,7 +69,7 @@ Primary source: `https://www.immigration.govt.nz/new-zealand-visas/visas/visa/ac
 | Minimum funds | NZD 20,000/year | immigration.govt.nz | 2026-09-13 |
 | Health insurance | Required | Immigration NZ | 2026-09-13 |
 
-**Source:** [immigration.govt.nz/visas/fee-paying-student-visa](https://www.immigration.govt.nz/visas/fee-paying-student-visa/) — verified 2026-09-13
+**Source:** [immigration.govt.nz/visas/fee-paying-student-visa](https://www.immigration.govt.nz/visas/fee-paying-student-visa/) - verified 2026-09-13
 
 ### Costs
 
@@ -86,13 +86,13 @@ After a degree of 2+ years, you may be eligible for a Post-Study Work Visa (1-3 
 
 ---
 
-## Pathway 3 — SMC: Points-Based
+## Pathway 3 - SMC: Points-Based
 
 **Registry ID:** `NZ-smc-points-based` | **Status:** Publishable
 
 Direct residence visa for skilled workers with a job offer in New Zealand.
 
-### Points system — minimum 6 points
+### Points system - minimum 6 points
 
 | Factor | Points |
 |---|---|
@@ -103,7 +103,7 @@ Direct residence visa for skilled workers with a job offer in New Zealand.
 | Age 20-39 | 1 |
 | Partner with skilled employment or qualification | 1 |
 
-**Source:** [immigration.govt.nz/visas/skilled-migrant-category-resident-visa](https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/) — verified 2026-09-14
+**Source:** [immigration.govt.nz/visas/skilled-migrant-category-resident-visa](https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/) - verified 2026-09-14
 
 ### Application process
 
@@ -114,7 +114,7 @@ Direct residence visa for skilled workers with a job offer in New Zealand.
 
 ---
 
-## Pathway 4 — SMC: Skilled Work Experience
+## Pathway 4 - SMC: Skilled Work Experience
 
 **Registry ID:** `NZ-smc-skilled-work-experience` | **Status:** Publishable
 
@@ -127,7 +127,7 @@ For workers with 3+ years experience in a skilled role (ANZSCO skill level 1, 2,
 
 ---
 
-## Pathway 5 — SMC: Trades and Technician
+## Pathway 5 - SMC: Trades and Technician
 
 **Registry ID:** `NZ-smc-trades-technician` | **Status:** Publishable
 

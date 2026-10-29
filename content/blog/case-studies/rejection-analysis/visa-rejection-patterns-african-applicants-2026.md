@@ -41,7 +41,7 @@ This is the most common documented refusal reason across Germany, UK, Canada, Ir
 
 **What to do:**
 - Use a blocked account provider (Germany: Fintiba, Expatrio) - the confirmation certificate is the cleanest possible financial evidence
-- For countries without blocked accounts, show 3–6 months of consistent bank statements that match your income
+- For countries without blocked accounts, show 3-6 months of consistent bank statements that match your income
 - If funds come from a sponsor (parent, employer), provide a sponsor letter AND the sponsor's bank statements AND evidence of the sponsor's income source
 - Never submit statements showing funds that were transferred in specifically for the application and will be withdrawn after
 
@@ -84,7 +84,7 @@ This is entirely within your control and is one of the most avoidable refusal re
 
 **What to do:**
 - Download the official document checklist from the embassy or consulate website - not a third-party site
-- For Germany: get your APS certificate early - it takes 6–8 weeks and is required before the visa application
+- For Germany: get your APS certificate early - it takes 6-8 weeks and is required before the visa application
 - For sworn translations: use a certified translator recognised by the target country's embassy
 - For authentication: check whether the country requires apostille (Hague Convention) or embassy legalisation - Nigeria is a Hague Convention member for apostille
 - Check your passport expiry date before starting any application
@@ -123,7 +123,7 @@ This is entirely within your control and is one of the most avoidable refusal re
 **What to do:**
 - Always disclose previous refusals when the application form asks - failure to disclose is treated as misrepresentation and is a separate ground for refusal
 - If you have a previous overstay, get legal advice before applying again - the impact varies by country and the length of the overstay
-- Never submit false documents - a fraud finding can result in a 5–10 year ban from Schengen countries and permanent records in other jurisdictions
+- Never submit false documents - a fraud finding can result in a 5-10 year ban from Schengen countries and permanent records in other jurisdictions
 
 ---
 

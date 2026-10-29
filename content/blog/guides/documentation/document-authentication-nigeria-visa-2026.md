@@ -113,7 +113,7 @@ If you have a contact in Germany, they can arrange the translation there. This i
 
 **What to send:** A clear scan or photocopy of the original document. The translator works from the copy and certifies that the translation is accurate.
 
-**Cost:** Typically €30–€80 per page depending on the document type and translator.
+**Cost:** Typically €30-€80 per page depending on the document type and translator.
 
 ### Important: Translation + apostille order
 
@@ -162,7 +162,7 @@ You will be invited for an interview at the German embassy in Lagos or Abuja. Th
 **Step 4 - Receive APS certificate**
 If successful, you receive the APS certificate. This is submitted with your student visa application.
 
-**Timeline:** Allow 6–8 weeks from registration to receiving the certificate. Do not book your embassy visa appointment until you have the APS certificate.
+**Timeline:** Allow 6-8 weeks from registration to receiving the certificate. Do not book your embassy visa appointment until you have the APS certificate.
 
 **Fee:** Confirm current fee at aps-nigeria.de - fees are updated periodically.
 
@@ -193,7 +193,7 @@ If the APS has concerns about your documents, they will inform you. You can prov
 1. **Getting the translation before the apostille** - for Germany, the apostille should be on the original first
 2. **Using an uncertified translator** - a translation by a non-sworn translator is not accepted
 3. **Submitting photocopies without certification** - most embassies require certified true copies, not plain photocopies
-4. **Leaving APS too late** - 6–8 weeks minimum; start before you apply to universities
+4. **Leaving APS too late** - 6-8 weeks minimum; start before you apply to universities
 5. **Not checking the embassy's current checklist** - requirements change; always download the current checklist from the embassy website
 
 ---

@@ -25,9 +25,9 @@ faqs:
 ## Quick Summary
 
 - **Study permit minimum funds (family size 1):** CAD 23,448/year living costs (outside Quebec, from 2026-09-01)
-- **Express Entry minimum selection points:** 67/100; CRS cut-offs in the 480–520 range in recent 2026 draws
+- **Express Entry minimum selection points:** 67/100; CRS cut-offs in the 480-520 range in recent 2026 draws
 - **Settlement funds (FSW, family size 1):** CAD 14,690
-- **Processing time:** Study permit 4–12 weeks online; Express Entry PR 6 months from ITA
+- **Processing time:** Study permit 4-12 weeks online; Express Entry PR 6 months from ITA
 - **Official source:** [IRCC - Government of Canada](https://www.canada.ca/en/services/immigration-citizenship.html)
 
 **Evidence note:** Approval rates by nationality are not published by IRCC. This guide covers documented requirements only.
@@ -42,7 +42,7 @@ Canada requires a study permit for any course longer than 6 months at a Designat
 
 - **Admission offer:** Acceptance letter from a DLI
 - **Minimum living funds (outside Quebec, family size 1, from 2026-09-01):** CAD 23,448/year - [source: IRCC financial support](https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html)
-- **Tuition fees:** Separate - typically CAD 15,000–30,000/year for international students at Canadian universities
+- **Tuition fees:** Separate - typically CAD 15,000-30,000/year for international students at Canadian universities
 - **Genuine student requirement:** You must demonstrate the primary purpose of your stay is study
 
 ### Living funds by family size (outside Quebec, from 2026-09-01)
@@ -79,7 +79,7 @@ Express Entry is Canada's invitation-based system for skilled workers seeking pe
 
 ### How the CRS works
 
-After meeting the 67-point threshold, you enter the Express Entry pool. IRCC conducts draws and issues Invitations to Apply (ITAs) to the highest-scoring candidates. Recent 2026 draw cut-offs have been in the 480–520 CRS range. Your CRS score is calculated from age, education, language, work experience, and adaptability factors.
+After meeting the 67-point threshold, you enter the Express Entry pool. IRCC conducts draws and issues Invitations to Apply (ITAs) to the highest-scoring candidates. Recent 2026 draw cut-offs have been in the 480-520 CRS range. Your CRS score is calculated from age, education, language, work experience, and adaptability factors.
 
 ---
 

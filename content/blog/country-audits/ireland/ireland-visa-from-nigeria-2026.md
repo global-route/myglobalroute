@@ -75,7 +75,7 @@ Ireland requires a study visa (D visa) for any course longer than 3 months at a 
 
 - **Acceptance letter:** From a recognised Irish higher-education institution
 - **Living funds:** Approximately €7,000/year (indicative - no single fixed threshold is published; the visa officer assesses whether funds are sufficient for the full course duration)
-- **Tuition fees:** Separate - typically €9,000–€25,000/year for international students at Irish universities
+- **Tuition fees:** Separate - typically €9,000-€25,000/year for international students at Irish universities
 - **Health insurance:** Required
 - **Official source:** [Immigration Service Delivery - Study](https://www.irishimmigration.ie/coming-to-study-in-ireland/)
 
@@ -109,8 +109,8 @@ These are documented process barriers - not approval rate statistics:
 | Study visa application fee | €60 |
 | Critical Skills Employment Permit fee (employer pays) | €1,000 (employer) / €500 (employee share in some cases) |
 | Living funds (study, indicative) | ~€7,000/year |
-| Health insurance | ~€500–€1,000/year |
-| Flight (Lagos to Dublin) | ~€600–€900 |
+| Health insurance | ~€500-€1,000/year |
+| Flight (Lagos to Dublin) | ~€600-€900 |
 
 ---
 

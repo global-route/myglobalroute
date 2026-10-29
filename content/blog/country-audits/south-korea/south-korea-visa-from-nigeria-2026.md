@@ -33,7 +33,7 @@ South Korea offers two evidence-gated pathways for Nigerian applicants: the stud
 
 ---
 
-## Pathway 1 — Student Visa (D-2)
+## Pathway 1 - Student Visa (D-2)
 
 **Registry ID:** `KR-study` | **Status:** Publishable
 
@@ -45,7 +45,7 @@ South Korea offers two evidence-gated pathways for Nigerian applicants: the stud
 | Minimum funds | USD 9,000 | immigration.go.kr | 2026-09-28 |
 | Health insurance | Required | Korean embassy | 2026-09-28 |
 
-**Source:** [immigration.go.kr](https://www.immigration.go.kr/immigration_eng/index.do) — verified 2026-09-28
+**Source:** [immigration.go.kr](https://www.immigration.go.kr/immigration_eng/index.do) - verified 2026-09-28
 
 ### Costs (self-funded)
 
@@ -81,7 +81,7 @@ The Korean Government Scholarship Program (KGSP) is South Korea's government-fun
 
 ---
 
-## Pathway 2 — Work Visa (E-7: Specially Designated Activities)
+## Pathway 2 - Work Visa (E-7: Specially Designated Activities)
 
 **Registry ID:** `KR-work` | **Status:** Publishable
 
@@ -94,7 +94,7 @@ The E-7 visa covers professionals in fields designated by the Korean government,
 | Job offer | Required | immigration.go.kr | 2026-09-28 |
 | Relevant qualification | Required | immigration.go.kr | 2026-09-28 |
 
-**Source:** [immigration.go.kr](https://www.immigration.go.kr/immigration_eng/index.do) — verified 2026-09-28
+**Source:** [immigration.go.kr](https://www.immigration.go.kr/immigration_eng/index.do) - verified 2026-09-28
 
 ### Application process from Nigeria
 

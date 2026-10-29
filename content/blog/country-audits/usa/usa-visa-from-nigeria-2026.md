@@ -41,7 +41,7 @@ The F-1 visa is the primary route for international students at US universities 
 
 - **I-20 form:** Issued by a SEVP-certified school confirming your admission and programme details - required before applying for the F-1 visa
 - **Proof of funds:** You must demonstrate sufficient funds to cover your full cost of attendance (tuition + living expenses) for the first year, and evidence of continued funding for subsequent years. The required amount is set by each institution in the I-20 - there is no single federal minimum.
-- **Typical cost of attendance:** USD 30,000–80,000/year at US universities (tuition + room + board + fees) - varies enormously by institution and location
+- **Typical cost of attendance:** USD 30,000-80,000/year at US universities (tuition + room + board + fees) - varies enormously by institution and location
 - **Non-immigrant intent:** You must demonstrate ties to Nigeria and intent to return after completing your studies
 - **SEVIS fee:** USD 350 paid before the visa interview
 
@@ -52,7 +52,7 @@ US universities offer merit and need-based scholarships for international studen
 - **MasterCard Foundation Scholars Program** - at select US universities
 - **Individual university scholarships** - vary by institution
 
-Apply for scholarships before or alongside your university application - deadlines are typically 12–18 months before the programme start.
+Apply for scholarships before or alongside your university application - deadlines are typically 12-18 months before the programme start.
 
 ### Post-study work rights
 

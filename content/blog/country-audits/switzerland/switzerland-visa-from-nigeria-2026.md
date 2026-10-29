@@ -20,13 +20,13 @@ faqs:
     a: "The cantonal migration authority (Migrationsamt) of the canton where your university is located issues the permit. Requirements are set federally by the State Secretariat for Migration (SEM) but administered at cantonal level."
 ---
 
-Switzerland has two publishable pathways for Nigerian applicants: a study residence permit and a work permit. Both are subject to strict controls — Switzerland applies a priority check for work permits and a quota system that limits non-EU admissions.
+Switzerland has two publishable pathways for Nigerian applicants: a study residence permit and a work permit. Both are subject to strict controls - Switzerland applies a priority check for work permits and a quota system that limits non-EU admissions.
 
 
 <!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 ## Study permit
 
-**Minimum funds:** Approximately CHF 21,000/year (CHF 1,750/month) for living costs. This is the commonly cited minimum — actual costs in Swiss cities are typically higher. Tuition fees are additional and vary by canton and institution (typically CHF 500 to CHF 3,000 per semester at public universities).
+**Minimum funds:** Approximately CHF 21,000/year (CHF 1,750/month) for living costs. This is the commonly cited minimum - actual costs in Swiss cities are typically higher. Tuition fees are additional and vary by canton and institution (typically CHF 500 to CHF 3,000 per semester at public universities).
 
 **Requirements:** Confirmation of enrolment or acceptance from a recognised Swiss university or higher education institution, proof of funds, valid passport.
 
@@ -40,7 +40,7 @@ Primary source: `https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/nicht-eu
 
 ## Work permit
 
-**Priority check:** The employer must demonstrate that no suitable Swiss or EU/EFTA candidate was available for the position before sponsoring a non-EU national. This is a genuine barrier — Swiss employers must advertise the vacancy and document the search.
+**Priority check:** The employer must demonstrate that no suitable Swiss or EU/EFTA candidate was available for the position before sponsoring a non-EU national. This is a genuine barrier - Swiss employers must advertise the vacancy and document the search.
 
 **Quota system:** Switzerland limits the number of non-EU work permits issued each year. Quotas are set by the federal government and allocated to cantons.
 

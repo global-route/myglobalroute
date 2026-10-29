@@ -20,7 +20,7 @@ faqs:
     a: "The most reliable routes are international wire transfers through established banks, or fintech platforms like Wise, Remitly or Grey. For large investment amounts (above USD 10,000), you should document the source of funds carefully for both the sending and receiving country's compliance requirements."
 ---
 
-The African diaspora sends approximately USD 100 billion home each year in remittances. A smaller but growing number of diaspora members are making a different kind of transfer — moving themselves, or at least their business operations, back to Africa.
+The African diaspora sends approximately USD 100 billion home each year in remittances. A smaller but growing number of diaspora members are making a different kind of transfer - moving themselves, or at least their business operations, back to Africa.
 
 
 <!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
@@ -28,13 +28,13 @@ This is not a single decision. It is a spectrum: from maintaining a UK or US bus
 
 ## The spectrum of repatriation
 
-**Level 1 — Extended visits with remote work.** You keep your existing job or business in the UK, US or Europe. You spend 1-3 months per year in Nigeria, Ghana or another African country. You work remotely during that time. No structural changes required — just a reliable internet connection and awareness of your visa status in the African country.
+**Level 1 - Extended visits with remote work.** You keep your existing job or business in the UK, US or Europe. You spend 1-3 months per year in Nigeria, Ghana or another African country. You work remotely during that time. No structural changes required - just a reliable internet connection and awareness of your visa status in the African country.
 
-**Level 2 — Dual base.** You split your time roughly equally between your diaspora country and your African home country. You may restructure your business to operate from both locations. Tax residency becomes a consideration — you need advice on where you are tax resident and what obligations that creates.
+**Level 2 - Dual base.** You split your time roughly equally between your diaspora country and your African home country. You may restructure your business to operate from both locations. Tax residency becomes a consideration - you need advice on where you are tax resident and what obligations that creates.
 
-**Level 3 — African base with international clients.** You relocate your primary residence to Africa. You continue to serve international clients remotely. Your income is sourced outside Africa. This is the remote worker model — the Mauritius Premium Visa, Cape Verde Remote Work Visa and Namibia Digital Nomad Visa are designed for this.
+**Level 3 - African base with international clients.** You relocate your primary residence to Africa. You continue to serve international clients remotely. Your income is sourced outside Africa. This is the remote worker model - the Mauritius Premium Visa, Cape Verde Remote Work Visa and Namibia Digital Nomad Visa are designed for this.
 
-**Level 4 — Full repatriation with African business.** You relocate to Africa and establish or join an African business. You are employed by or own an African company. This requires the most structural planning — business registration, tax registration, employment authorisation if applicable.
+**Level 4 - Full repatriation with African business.** You relocate to Africa and establish or join an African business. You are employed by or own an African company. This requires the most structural planning - business registration, tax registration, employment authorisation if applicable.
 
 ## Practical steps for Level 1 and 2
 
@@ -44,7 +44,7 @@ This is not a single decision. It is a spectrum: from maintaining a UK or US bus
 
 **Nigeria dual citizenship.** Nigeria does not formally recognise dual citizenship, but Nigerian-born individuals who have naturalised elsewhere can apply for a Nigerian passport and travel on it. The practical effect is that most Nigerian diaspora members can enter and reside in Nigeria on their Nigerian passport regardless of their other citizenship.
 
-**Tax residency.** If you spend more than 183 days per year in an African country, you may become tax resident there. This does not necessarily mean you owe tax — it depends on the tax treaty between your diaspora country and your African home country, and the source of your income. Get advice before you cross the 183-day threshold.
+**Tax residency.** If you spend more than 183 days per year in an African country, you may become tax resident there. This does not necessarily mean you owe tax - it depends on the tax treaty between your diaspora country and your African home country, and the source of your income. Get advice before you cross the 183-day threshold.
 
 ## Setting up a business during a visit
 
@@ -58,7 +58,7 @@ This is not a single decision. It is a spectrum: from maintaining a UK or US bus
 
 ## Property acquisition
 
-**Nigeria:** Foreigners and diaspora members can acquire property in Nigeria. The key document is the Certificate of Occupancy (C of O), which is the primary evidence of land ownership. Engage a Nigerian solicitor for any property transaction — title verification is essential.
+**Nigeria:** Foreigners and diaspora members can acquire property in Nigeria. The key document is the Certificate of Occupancy (C of O), which is the primary evidence of land ownership. Engage a Nigerian solicitor for any property transaction - title verification is essential.
 
 **Ghana:** Foreigners can lease land in Ghana for up to 50 years (renewable). Ghanaian citizens can hold freehold. The Land Title Registry handles registration. Engage a Ghanaian solicitor.
 

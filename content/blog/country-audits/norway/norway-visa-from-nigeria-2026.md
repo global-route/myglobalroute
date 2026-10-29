@@ -26,7 +26,7 @@ Norway is one of the most accessible high-income countries for Nigerian students
 <!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 ## Study permit
 
-**Zero tuition:** Norwegian public universities charge no tuition fees for non-EU/EEA students. This is a legal requirement, not a scholarship — it applies to all students at all public institutions.
+**Zero tuition:** Norwegian public universities charge no tuition fees for non-EU/EEA students. This is a legal requirement, not a scholarship - it applies to all students at all public institutions.
 
 **Minimum funds:** NOK 170,368 per academic year (NOK 15,488/month) for living expenses. For one-semester studies, the requirement is NOK 15,488 per month of study. These are 2026 figures from the Norwegian Directorate of Immigration (UDI).
 

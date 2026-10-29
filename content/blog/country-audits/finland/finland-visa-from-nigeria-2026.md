@@ -26,7 +26,7 @@ Finland has two publishable pathways for Nigerian applicants: a study residence 
 <!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 ## Study permit
 
-**Minimum funds:** EUR 800/month. For studies of at least one year, EUR 9,600 must be available at the time of application. Tuition fees are additional — non-EU students pay EUR 6,000 to EUR 18,000 per year depending on institution and programme.
+**Minimum funds:** EUR 800/month. For studies of at least one year, EUR 9,600 must be available at the time of application. Tuition fees are additional - non-EU students pay EUR 6,000 to EUR 18,000 per year depending on institution and programme.
 
 **Requirements:** Admission letter from a Finnish higher education institution, proof of funds, valid passport, health insurance where not covered by the institution.
 
@@ -40,7 +40,7 @@ Primary source: `https://migri.fi/residence-permit-application-for-studies`
 
 ## Work permit (TTOL)
 
-**Requirements:** Binding employment contract from a Finnish employer. The employer must confirm terms meet the collective agreement for the sector. No minimum salary threshold is published as a universal figure — the collective agreement for your sector determines the applicable minimum.
+**Requirements:** Binding employment contract from a Finnish employer. The employer must confirm terms meet the collective agreement for the sector. No minimum salary threshold is published as a universal figure - the collective agreement for your sector determines the applicable minimum.
 
 **Processing time:** 2-4 months. The employer submits part of the application.
 

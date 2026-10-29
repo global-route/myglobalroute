@@ -33,7 +33,7 @@ Japan offers two evidence-gated pathways for Nigerian applicants: the student vi
 
 ---
 
-## Pathway 1 — Student Visa
+## Pathway 1 - Student Visa
 
 **Registry ID:** `JP-student` | **Status:** Publishable
 
@@ -45,7 +45,7 @@ Japan offers two evidence-gated pathways for Nigerian applicants: the student vi
 | Certificate of Eligibility | Required (filed by institution) | moj.go.jp | 2026-09-07 |
 | Proof of funds | Sufficient for tuition + living | Japanese embassy | 2026-09-07 |
 
-**Source:** [moj.go.jp/isa/applications/guide/kanri_qa.html](https://www.moj.go.jp/isa/applications/guide/kanri_qa.html) — verified 2026-09-07
+**Source:** [moj.go.jp/isa/applications/guide/kanri_qa.html](https://www.moj.go.jp/isa/applications/guide/kanri_qa.html) - verified 2026-09-07
 
 ### Costs (self-funded)
 
@@ -82,7 +82,7 @@ The MEXT scholarship is Japan's government-funded scholarship for international 
 
 ---
 
-## Pathway 2 — Engineer / Specialist in Humanities / International Services
+## Pathway 2 - Engineer / Specialist in Humanities / International Services
 
 **Registry ID:** `JP-engineer` | **Status:** Publishable
 
@@ -96,7 +96,7 @@ Japan's primary work visa for skilled professionals in technology, engineering, 
 | Relevant degree or 10 years experience | Required | moj.go.jp | 2026-09-07 |
 | Certificate of Eligibility | Required (filed by employer) | moj.go.jp | 2026-09-07 |
 
-**Source:** [moj.go.jp/isa/applications/resources/nyukan_nyukan69.html](https://www.moj.go.jp/isa/applications/resources/nyukan_nyukan69.html?hl=en&lang=tk) — verified 2026-09-07
+**Source:** [moj.go.jp/isa/applications/resources/nyukan_nyukan69.html](https://www.moj.go.jp/isa/applications/resources/nyukan_nyukan69.html?hl=en&lang=tk) - verified 2026-09-07
 
 ### Application process from Nigeria
 

@@ -118,7 +118,7 @@ A provisional visa. Permanent residency requires 3 years of regional work and me
 
 ## Key planning considerations
 
-**Skills assessment lead time:** Most assessing authorities take 8–16 weeks. This must be completed before submitting an EOI.
+**Skills assessment lead time:** Most assessing authorities take 8-16 weeks. This must be completed before submitting an EOI.
 
 **English test:** IELTS, PTE Academic, TOEFL iBT and Cambridge C1 Advanced are accepted. Higher scores earn more points - IELTS 8.0 in each band earns the maximum English points allocation.
 

@@ -26,7 +26,7 @@ faqs:
 
 - **Zero tuition** at public universities
 - **Blocked account required:** €11,208 (living funds proof)
-- **Processing time:** 8–14 weeks (Lagos/Abuja embassy, 2026 data)
+- **Processing time:** 8-14 weeks (Lagos/Abuja embassy, 2026 data)
 - **Post-study:** 18-month job search visa after graduation
 - **Sweet spot:** No-tuition public universities with 18-month job search visa
 
@@ -49,7 +49,7 @@ faqs:
 
 ## The Official Story
 
-According to the German Federal Foreign Office, Germany issued **over 250,000 student visas in 2025**, with an **85% approval rate globally**. The German Academic Exchange Service (DAAD) markets Germany as a destination with:
+Germany is one of the most popular study destinations for African students. The German Academic Exchange Service (DAAD) highlights Germany as a destination with:
 
 - ✅ **Zero tuition fees** at public universities
 - ✅ **High-quality education** (world-ranked institutions)
