@@ -1096,3 +1096,16 @@ th {
   color: #fff;
   border-color: var(--color-primary);
 }
+
+/* GOIF: Tier 1 Funded badge */
+.funded-badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: #dcfce7;
+  color: #15803d;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}

@@ -65,4 +65,33 @@ describe('migration data contract', () => {
       expect(pathway.sourceUrl).toMatch(/^https:\/\//);
     }
   });
+
+  const ASYMMETRY_CATEGORIES = ['tech_engineering', 'academic_research', 'regional_skilled_gap', 'remote_freelance'];
+  const CAPITAL_TIERS = ['tier_1_funded', 'tier_2_moderate', 'tier_3_standard'];
+
+  test('asymmetry_category values are within the allowed enum when present', () => {
+    for (const pathway of pathways.pathways) {
+      if (pathway.asymmetry_category !== undefined) {
+        expect(ASYMMETRY_CATEGORIES).toContain(pathway.asymmetry_category);
+      }
+    }
+  });
+
+  test('capital_tier values are within the allowed enum when present', () => {
+    for (const pathway of pathways.pathways) {
+      if (pathway.capital_tier !== undefined) {
+        expect(CAPITAL_TIERS).toContain(pathway.capital_tier);
+      }
+    }
+  });
+
+  test('GOIF seed pathways are present with correct metadata', () => {
+    const goifIds = ['AU-dama-regional', 'IT-dsu-need-blind', 'JP-tokyo-tech-accelerator', 'PT-d3-highly-qualified'];
+    for (const id of goifIds) {
+      const p = pathways.pathways.find(pw => pw.id === id);
+      expect(p).toBeDefined();
+      expect(ASYMMETRY_CATEGORIES).toContain(p.asymmetry_category);
+      expect(CAPITAL_TIERS).toContain(p.capital_tier);
+    }
+  });
 });

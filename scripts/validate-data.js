@@ -41,6 +41,9 @@ for (const [index, country] of (countries || []).entries()) {
   if (!/^https:\/\//.test(country.source.url)) errors.push(`countries[${index}] source url must be HTTPS`);
 }
 
+const ASYMMETRY_CATEGORIES = new Set(['tech_engineering', 'academic_research', 'regional_skilled_gap', 'remote_freelance']);
+const CAPITAL_TIERS = new Set(['tier_1_funded', 'tier_2_moderate', 'tier_3_standard']);
+
 const pathwayIds = new Set();
 for (const [index, pathway] of (pathways || []).entries()) {
   for (const field of ['id', 'countryId', 'type', 'name', 'sourceUrl', 'sourceAuthority', 'status']) if (!pathway[field]) errors.push(`pathways[${index}] ${field} is required`);
@@ -51,6 +54,8 @@ for (const [index, pathway] of (pathways || []).entries()) {
   if (pathway.evidenceIds !== undefined && !Array.isArray(pathway.evidenceIds)) errors.push(`pathways[${index}] evidenceIds must be an array when present`);
   if (pathway.status === 'publishable' && (!Array.isArray(pathway.evidenceIds) || pathway.evidenceIds.length === 0)) errors.push(`publishable pathway ${pathway.id} requires evidenceIds`);
   if (!requirementsPayload.types?.[pathway.type]) warnings.push(`no material-field profile defined for pathway type ${pathway.type}`);
+  if (pathway.asymmetry_category !== undefined && !ASYMMETRY_CATEGORIES.has(pathway.asymmetry_category)) errors.push(`pathways[${index}] ${pathway.id} asymmetry_category must be one of: ${[...ASYMMETRY_CATEGORIES].join(', ')}`);
+  if (pathway.capital_tier !== undefined && !CAPITAL_TIERS.has(pathway.capital_tier)) errors.push(`pathways[${index}] ${pathway.id} capital_tier must be one of: ${[...CAPITAL_TIERS].join(', ')}`);
 }
 
 const subrouteIds = new Set();

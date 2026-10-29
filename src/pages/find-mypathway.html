@@ -144,6 +144,16 @@
         <label>Planned application date
           <input type="date" name="applicationDate" value="" placeholder="YYYY-MM-DD">
         </label>
+        <label>Route type
+          <select name="asymmetry">
+            <option value="">All routes</option>
+            <option value="tier_1_funded">Funded / stipend-backed</option>
+            <option value="tier_2_moderate">Moderate capital (&lt;$8k)</option>
+            <option value="regional_skilled_gap">Regional skilled gap</option>
+            <option value="tech_engineering">Tech &amp; engineering</option>
+            <option value="academic_research">Academic &amp; research</option>
+          </select>
+        </label>
         <label>Available budget (USD equivalent)
           <input type="number" name="budget" min="0" step="100" placeholder="e.g. 15000">
         </label>
@@ -258,10 +268,13 @@
 
     function renderCard(match) {
       const badge = freshnessLabel(match.pathway);
+      const fundedBadge = match.pathway.capital_tier === 'tier_1_funded'
+        ? '<span class="funded-badge">&#10022; Funded</span>'
+        : '';
       return `<article>
         <div class="pathway-card-header">
           <h3>${esc(match.country.name)} — ${esc(match.pathway.name)}</h3>
-          <span class="freshness-badge ${esc(badge.cls)}">${esc(badge.text)}</span>
+          <span class="freshness-badge ${esc(badge.cls)}">${esc(badge.text)}</span>${fundedBadge}
         </div>
         ${match.stale ? renderStaleWarning() : ''}
         ${match.matchedTier ? renderMatchedTier(match.matchedTier) : ''}
@@ -281,7 +294,7 @@
 
     // B-P3: persist + restore form inputs via localStorage
     const STORAGE_KEY = 'mp2g_fmp_inputs';
-    const persistFields = ['passportCountry','goal','currentVisa','familySize','applicationDate','budget','monthlyIncome','experienceYears'];
+    const persistFields = ['passportCountry','goal','currentVisa','familySize','applicationDate','budget','monthlyIncome','experienceYears','asymmetry'];
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
       if (saved) persistFields.forEach(k => { const el = form.elements[k]; if (el && saved[k] != null) el.value = saved[k]; });
@@ -317,7 +330,14 @@
           return;
         }
 
-        const { matches, alternatives, missingInput, zeroFitExplanations } = window.GlobalRoute.RouteEngine.recommend(profile, countries.countries, pathways.pathways, 5);
+        // GOIF: filter by asymmetry_category or capital_tier before passing to engine
+        const asymmetry = profile.asymmetry || '';
+        const filteredPathways = asymmetry
+          ? pathways.pathways.filter(p =>
+              p.capital_tier === asymmetry || p.asymmetry_category === asymmetry
+            )
+          : pathways.pathways;
+        const { matches, alternatives, missingInput, zeroFitExplanations } = window.GlobalRoute.RouteEngine.recommend(profile, countries.countries, filteredPathways, 5);
         if (!missingInput) {
           window.GlobalRoute?.Analytics?.track('route_recommendation_generated', { page_type: 'find-mypathway' });
         }
@@ -363,7 +383,8 @@
           results.innerHTML = '<div style="text-align:center;padding:3rem 1rem;"><h2 style="margin-bottom:0.5rem;">No pathway matches</h2><p style="color:var(--color-neutral-500);max-width:420px;margin:0 auto 1.5rem;">No publishable pathways passed the evidence gate for your inputs. Try broadening your goal or adjusting your budget.</p><div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;"><button type="button" class="btn btn-secondary" onclick="document.querySelector(\"[name=goal]\").value=\"any\";document.querySelector(\"[name=budget]\").value=\"\";form.dispatchEvent(new Event(\"submit\"))">Reset filters</button><a href="/pages/countries.html" class="btn btn-primary">Browse countries</a></div></div>' + gapHtml + explanationHtml + renderAlternatives(alternatives);
           return;
         }
-        results.innerHTML = '<h2>Pathways matching your goal</h2><p class="evidence-note">Goal matches only — not eligibility assessments. Confirm current requirements at the official source before acting.</p>' + matches.map(renderCard).join('') + renderAlternatives(alternatives) + renderExtensionRoutes(profile, pathways.pathways, countries.countries);
+        const asymmetryNote = asymmetry ? '<p class="evidence-note">Showing filtered routes only — not eligibility assessments. Confirm current requirements at the official source before acting.</p>' : '<p class="evidence-note">Goal matches only — not eligibility assessments. Confirm current requirements at the official source before acting.</p>';
+        results.innerHTML = '<h2>Pathways matching your goal</h2>' + asymmetryNote + matches.map(renderCard).join('') + renderAlternatives(alternatives) + renderExtensionRoutes(profile, pathways.pathways, countries.countries);
         // Show export button when results exist
         document.getElementById('export-bar').hidden = false;
         // Store current results for export

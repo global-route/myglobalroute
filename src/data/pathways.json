@@ -2374,6 +2374,59 @@
       "status": "research_required",
       "scopeNote": "USA work pathway requires additional evidence for lottery process, prevailing wage requirements, and employer sponsorship documentation.",
       "permanentBlocker": null
+    },
+    {
+      "id": "AU-dama-regional",
+      "countryId": "AU",
+      "type": "work",
+      "name": "Designated Area Migration Agreement (DAMA) Regional Stream",
+      "sourceUrl": "https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/site-agreements/designated-area-migration-agreements",
+      "sourceAuthority": "Department of Home Affairs",
+      "status": "research_required",
+      "asymmetry_category": "regional_skilled_gap",
+      "capital_tier": "tier_2_moderate",
+      "regional_concessions": {
+        "age_limit_extension": 55,
+        "language_score_floor_reduction": true,
+        "salary_concession_percent": 10
+      },
+      "scopeNote": "GOIF Sprint 1 seed. Employer-sponsored pathway in designated regional areas with concessions on age, English and occupation lists. Requires primary-source evidence records before promotion to publishable."
+    },
+    {
+      "id": "IT-dsu-need-blind",
+      "countryId": "IT",
+      "type": "study",
+      "name": "Italy DSU Need-Blind Regional Scholarship",
+      "sourceUrl": "https://www.dsu.toscana.it/",
+      "sourceAuthority": "Azienda DSU Toscana / MUR",
+      "status": "research_required",
+      "asymmetry_category": "academic_research",
+      "capital_tier": "tier_1_funded",
+      "scopeNote": "GOIF Sprint 1 seed. Zero-tuition, free accommodation, meal vouchers and EUR 5,400–7,000/year stipend via ISEE income evaluation. Requires primary-source evidence records before promotion to publishable."
+    },
+    {
+      "id": "JP-tokyo-tech-accelerator",
+      "countryId": "JP",
+      "type": "work",
+      "name": "Tokyo Hardware & Deep-Tech Accelerator Program",
+      "sourceUrl": "https://www.metro.tokyo.lg.jp/english/",
+      "sourceAuthority": "Tokyo Metropolitan Government",
+      "status": "research_required",
+      "asymmetry_category": "tech_engineering",
+      "capital_tier": "tier_1_funded",
+      "scopeNote": "GOIF Sprint 1 seed. Zero-equity incubation with grant funding, lab access and Tokyo Startup Visa endorsement. Requires primary-source evidence records before promotion to publishable."
+    },
+    {
+      "id": "PT-d3-highly-qualified",
+      "countryId": "PT",
+      "type": "work",
+      "name": "D3 Highly Qualified Activity Residence Visa",
+      "sourceUrl": "https://aima.gov.pt/pt",
+      "sourceAuthority": "Agência para a Integração, Migrações e Asilo (AIMA)",
+      "status": "research_required",
+      "asymmetry_category": "tech_engineering",
+      "capital_tier": "tier_2_moderate",
+      "scopeNote": "GOIF Sprint 1 seed. Fast-track work and residence for tech specialists and researchers with 5-year PR/citizenship vector. Requires primary-source evidence records before promotion to publishable."
     }
   ]
 }

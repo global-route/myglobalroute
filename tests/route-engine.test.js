@@ -174,6 +174,38 @@ describe('route threshold and no-match boundaries', () => {
   });
 });
 
+describe('GOIF asymmetry filter', () => {
+  const country = { id: 'AU', dataStatus: 'publishable' };
+  const funded = { id: 'au-funded', countryId: 'AU', type: 'work', status: 'publishable', evidenceIds: ['ev-1'], sourceUrl: 'https://example.gov/au', capital_tier: 'tier_1_funded', asymmetry_category: 'regional_skilled_gap' };
+  const standard = { id: 'au-standard', countryId: 'AU', type: 'work', status: 'publishable', evidenceIds: ['ev-2'], sourceUrl: 'https://example.gov/au2' };
+
+  test('tier_1_funded filter returns only funded pathways', () => {
+    const filtered = [funded, standard].filter(p => p.capital_tier === 'tier_1_funded' || p.asymmetry_category === 'tier_1_funded');
+    const result = recommend({ goal: 'work' }, [country], filtered, 5);
+    expect(result.matches.map(m => m.pathway.id)).toContain('au-funded');
+    expect(result.matches.map(m => m.pathway.id)).not.toContain('au-standard');
+  });
+
+  test('regional_skilled_gap filter returns only matching pathways', () => {
+    const filtered = [funded, standard].filter(p => p.capital_tier === 'regional_skilled_gap' || p.asymmetry_category === 'regional_skilled_gap');
+    const result = recommend({ goal: 'work' }, [country], filtered, 5);
+    expect(result.matches.map(m => m.pathway.id)).toContain('au-funded');
+    expect(result.matches.map(m => m.pathway.id)).not.toContain('au-standard');
+  });
+
+  test('pathway without GOIF fields is excluded when asymmetry filter is active', () => {
+    const filtered = [standard].filter(p => p.capital_tier === 'tier_1_funded' || p.asymmetry_category === 'tier_1_funded');
+    const result = recommend({ goal: 'work' }, [country], filtered, 5);
+    expect(result.matches).toHaveLength(0);
+  });
+
+  test('pathway without GOIF fields still scores normally when no filter is active', () => {
+    const result = recommend({ goal: 'work' }, [country], [standard], 5);
+    expect(result.matches).toHaveLength(1);
+    expect(result.matches[0].pathway.id).toBe('au-standard');
+  });
+});
+
 describe('income and experience requirement boundaries', () => {
   const country = { id: 'GB', dataStatus: 'evidence_required' };
   const evidencedWork = {
