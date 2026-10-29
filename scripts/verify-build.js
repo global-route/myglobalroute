@@ -8,7 +8,7 @@ const requiredFiles = [
   'data/countries.json',
   'data/pathways.json',
   'data/evidence/primary-source-verified.json',
-  'pages/find-my-route.html',
+  'pages/find-mypathway.html',
   'pages/countries.html',
   'pages/calculator.html',
   'robots.txt',
@@ -37,13 +37,13 @@ const index = read('index.html');
 const countries = read('data/countries.json');
 const pathways = read('data/pathways.json');
 const evidence = read('data/evidence/primary-source-verified.json');
-const routeFinder = read('pages/find-my-route.html');
+const routeFinder = read('pages/find-mypathway.html');
 
 if (index && !index.includes('<title>MyPathway2Global')) errors.push('generated homepage is missing the expected title');
 if (countries) {
   try {
     const payload = JSON.parse(countries);
-    if (!Array.isArray(payload.countries) || payload.countries.length !== 27) errors.push(`generated countries.json must contain exactly 27 countries; found ${payload.countries?.length ?? 0}`);
+    if (!Array.isArray(payload.countries) || payload.countries.length !== 30) errors.push(`generated countries.json must contain exactly 30 countries; found ${payload.countries?.length ?? 0}`);
   } catch (error) { errors.push(`generated countries.json is invalid JSON: ${error.message}`); }
 }
 if (pathways) {

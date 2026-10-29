@@ -357,7 +357,7 @@
           "value": 67,
           "unit": "points",
           "jurisdiction": "Canada",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-06-22",
           "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers.html",
           "evidenceIds": [
             "CA-fswp-eligibility-2026-09-14"
@@ -371,7 +371,7 @@
           "value": 1,
           "unit": "years",
           "jurisdiction": "Canada",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-06-22",
           "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers.html",
           "evidenceIds": [
             "CA-fswp-eligibility-2026-09-14"
@@ -831,7 +831,7 @@
           "currency": "EUR",
           "period": "annual",
           "jurisdiction": "Ireland",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2025-06-30",
           "sourceUrl": "https://www.irishimmigration.ie/coming-to-study-in-ireland/what-are-my-study-options/a-fee-paying-private-primary-or-secondary-school/information-on-student-finances/",
           "evidenceIds": [
             "IE-study-finance-2026-09-12"
@@ -898,7 +898,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Germany",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2025-10-30",
           "sourceUrl": "https://www.auswaertiges-amt.de/en/visa-service/buergerservice/faq/606850-606850",
           "evidenceIds": [
             "DE-study-eligibility-2026-09-12"
@@ -1031,7 +1031,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Italy",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://vistoperitalia.esteri.it/",
           "evidenceIds": [
             "IT-work-eligibility-2026-09-28"
@@ -1125,7 +1125,7 @@
           "currency": "EUR",
           "period": "annual",
           "jurisdiction": "France",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2025-08-21",
           "sourceUrl": "https://www.france-visas.gouv.fr/en/web/france-visas/talents-internationaux-et-attractivite-economique",
           "evidenceIds": [
             "FR-talent-finance-2026-09-12"
@@ -1153,7 +1153,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Hungary",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://oif.gov.hu/factsheets/residence-permit-for-the-purpose-of-studies",
           "evidenceIds": [
             "HU-study-eligibility-2026-09-28"
@@ -1181,7 +1181,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Hungary",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://oif.gov.hu/factsheets/residence-permit-for-the-purpose-of-employment",
           "evidenceIds": [
             "HU-work-eligibility-2026-09-28"
@@ -1280,7 +1280,7 @@
           "currency": "SEK",
           "period": "monthly",
           "jurisdiction": "Sweden",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.migrationsverket.se/en/you-want-to-apply/study/higher-education.html",
           "evidenceIds": [
             "SE-study-finance-2026-09-07"
@@ -1320,7 +1320,7 @@
           "currency": "SEK",
           "period": "monthly",
           "jurisdiction": "Sweden",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-06-16",
           "sourceUrl": "https://www.migrationsverket.se/en/word-explanations/salary-requirements-for-a-work-permit.html",
           "evidenceIds": [
             "SE-work-salary-2026-09-07"
@@ -1453,7 +1453,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Luxembourg",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://guichet.public.lu/en/citoyens/immigration/plus-3-mois/ressortissant-tiers/etudiant.html",
           "evidenceIds": [
             "LU-study-eligibility-2026-09-28"
@@ -1481,7 +1481,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Lithuania",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://migracija.lrv.lt/en/services-for-foreigners/temporary-residence-permit/for-studies/",
           "evidenceIds": [
             "LT-study-eligibility-2026-09-28"
@@ -1509,7 +1509,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Lithuania",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://migracija.lrv.lt/en/services-for-foreigners/temporary-residence-permit/for-work/",
           "evidenceIds": [
             "LT-work-eligibility-2026-09-28"
@@ -1537,7 +1537,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Iceland",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://island.is/en/o/directorate-of-immigration",
           "evidenceIds": [
             "IS-study-eligibility-2026-09-28"
@@ -1565,7 +1565,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Iceland",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://island.is/en/o/directorate-of-immigration",
           "evidenceIds": [
             "IS-work-eligibility-2026-09-28"
@@ -1652,7 +1652,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Spain",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2025-11-01",
           "sourceUrl": "https://inclusion.gob.es/en/web/migraciones/w/estancia-por-estudios",
           "evidenceIds": [
             "ES-study-eligibility-2026-09-12"
@@ -1726,7 +1726,7 @@
           "currency": "EUR",
           "period": "monthly",
           "jurisdiction": "Austria",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.migration.gv.at/en/types-of-immigration/temporary-residence/",
           "evidenceIds": [
             "AT-study-finance-2026-09-13"
@@ -1767,7 +1767,7 @@
           "value": 55,
           "unit": "points",
           "jurisdiction": "Austria",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
           "evidenceIds": [
             "AT-rwr-other-key-workers-eligibility-exact-2026-09-14"
@@ -1780,7 +1780,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Austria",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
           "evidenceIds": [
             "AT-rwr-other-key-workers-eligibility-exact-2026-09-14"
@@ -1795,7 +1795,7 @@
           "currency": "EUR",
           "period": "monthly",
           "jurisdiction": "Austria",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
           "evidenceIds": [
             "AT-rwr-other-key-workers-financial-2026-09-14"
@@ -1922,7 +1922,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "South Korea",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
           "evidenceIds": [
             "KR-study-eligibility-2026-09-28"
@@ -1937,7 +1937,7 @@
           "currency": "USD",
           "period": "annual",
           "jurisdiction": "South Korea",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
           "evidenceIds": [
             "KR-study-finance-2026-09-28"
@@ -1974,7 +1974,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "South Korea",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
           "evidenceIds": [
             "KR-work-eligibility-2026-09-28"
@@ -1987,7 +1987,7 @@
           "kind": "text",
           "value": "Bachelor's degree or higher in a relevant field, or 5+ years of relevant work experience, as required for the E-7 Specially Designated Activities visa category.",
           "jurisdiction": "South Korea",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
           "evidenceIds": [
             "KR-work-eligibility-2026-09-28"
@@ -2015,7 +2015,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "China",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://en.nia.gov.cn/",
           "evidenceIds": [
             "CN-study-eligibility-2026-09-28"
@@ -2030,7 +2030,7 @@
           "currency": "USD",
           "period": "annual",
           "jurisdiction": "China",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://en.nia.gov.cn/",
           "evidenceIds": [
             "CN-study-finance-2026-09-28"
@@ -2067,7 +2067,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "China",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://en.nia.gov.cn/",
           "evidenceIds": [
             "CN-work-eligibility-2026-09-28"
@@ -2080,7 +2080,7 @@
           "kind": "text",
           "value": "Category B: bachelor's degree and 2+ years of relevant work experience. Category A (high-end talent) has higher thresholds. Category C applies to other permitted occupations.",
           "jurisdiction": "China",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://en.nia.gov.cn/",
           "evidenceIds": [
             "CN-work-eligibility-2026-09-28"
@@ -2108,7 +2108,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Poland",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.gov.pl/web/udsc-en/study",
           "evidenceIds": [
             "PL-study-eligibility-2026-09-28"
@@ -2136,7 +2136,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Poland",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.gov.pl/web/udsc-en/work",
           "evidenceIds": [
             "PL-work-eligibility-2026-09-28"
@@ -2164,7 +2164,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Malta",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://identita.gov.mt/residence-permits/",
           "evidenceIds": [
             "MT-study-eligibility-2026-09-28"
@@ -2192,7 +2192,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Malta",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://identita.gov.mt/single-permit/",
           "evidenceIds": [
             "MT-work-eligibility-2026-09-28"
@@ -2242,7 +2242,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Switzerland",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/nicht-eu_efta/aufenthaltsbewilligung-studium.html",
           "evidenceIds": [
             "CH-study-eligibility-2026-09-28"
@@ -2257,7 +2257,7 @@
           "currency": "CHF",
           "period": "annual",
           "jurisdiction": "Switzerland",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/nicht-eu_efta/aufenthaltsbewilligung-studium.html",
           "evidenceIds": [
             "CH-study-finance-2026-09-28"
@@ -2322,7 +2322,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Czechia",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://mv.gov.cz/mvcren/article/third-country-nationals.aspx",
           "evidenceIds": [
             "CZ-study-eligibility-2026-09-28"
@@ -2350,7 +2350,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Czechia",
-          "effectiveDate": "2026-10-29",
+          "effectiveDate": "2026-01-01",
           "sourceUrl": "https://mv.gov.cz/mvcren/article/employee-card.aspx",
           "evidenceIds": [
             "CZ-work-eligibility-2026-09-28"
