@@ -307,7 +307,7 @@
   letter-spacing: 0.06em;
   color: var(--color-neutral-600);
   flex: 1;
-  min-width: 180px;
+  min-width: 150px;
 }
 
 /* Filter controls */
@@ -527,7 +527,7 @@ th {
 
 /* ── RESPONSIVE ── */
 @media (min-width: 768px) {
-  #route-form { flex-wrap: nowrap; }
+  #route-form label { min-width: 140px; }
 }
 
 @media (max-width: 480px) {
