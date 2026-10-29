@@ -291,13 +291,12 @@
   padding: var(--spacing-xl) var(--spacing-2xl);
   box-shadow: var(--shadow-sm);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  align-items: flex-end;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: end;
   gap: var(--spacing-md);
   margin-bottom: var(--spacing-xl);
-  max-width: 100%;
+  width: 100%;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 #route-form label {
@@ -310,6 +309,7 @@
   letter-spacing: 0.06em;
   color: var(--color-neutral-600);
   min-width: 0;
+  width: 100%;
 }
 
 #route-form button[type="submit"] {
@@ -534,7 +534,11 @@ th {
 
 /* ── RESPONSIVE ── */
 @media (min-width: 768px) {
-  #route-form { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+  #route-form { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  #route-form { grid-template-columns: repeat(5, 1fr); }
 }
 
 @media (max-width: 480px) {
