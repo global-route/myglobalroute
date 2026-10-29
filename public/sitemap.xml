@@ -504,4 +504,28 @@
 
     <url><loc>https://mypathway2global.org.uk/pages/pathways-funded-study.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
     <url><loc>https://mypathway2global.org.uk/pages/pathways-regional-skilled.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url>
+    <loc>https://mypathway2global.org.uk/blog/playbooks/professional/mauritius-premium-visa-2026/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mypathway2global.org.uk/blog/playbooks/professional/cape-verde-remote-work-visa-2026/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mypathway2global.org.uk/blog/playbooks/professional/namibia-digital-nomad-visa-2026/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mypathway2global.org.uk/blog/guides/mobility/african-digital-nomad-hubs-2026/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

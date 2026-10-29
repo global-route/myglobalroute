@@ -8,32 +8,545 @@
     "defaultReviewDays": 30
   },
   "countries": [
-    {"id":"GB","name":"United Kingdom","flag":"🇬🇧","category":"Europe - Western","sweetSpot":"professional","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"UK Visas and Immigration","url":"https://www.gov.uk/browse/visas-immigration","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"CA","name":"Canada","flag":"🇨🇦","category":"North America","sweetSpot":"student","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Government of Canada","url":"https://www.canada.ca/en/services/immigration-citizenship.html","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"AU","name":"Australia","flag":"🇦🇺","category":"Asia-Pacific","sweetSpot":"student","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Department of Home Affairs","url":"https://immi.homeaffairs.gov.au/","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"NZ","name":"New Zealand","flag":"🇳🇿","category":"Asia-Pacific","sweetSpot":"professional","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Immigration New Zealand","url":"https://www.immigration.govt.nz/","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"IE","name":"Ireland","flag":"🇮🇪","category":"Europe - Western","sweetSpot":"professional","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Immigration Service Delivery","url":"https://www.irishimmigration.ie/","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"DE","name":"Germany","flag":"🇩🇪","category":"Europe - Central","sweetSpot":"professional","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Federal Foreign Office","url":"https://www.auswaertiges-amt.de/en/visa-service","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"IT","name":"Italy","flag":"🇮🇹","category":"Europe - Southern","sweetSpot":"student","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Italian Ministry of Foreign Affairs","url":"https://vistoperitalia.esteri.it/","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"FR","name":"France","flag":"🇫🇷","category":"Europe - Western","sweetSpot":"student","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"France-Visas","url":"https://france-visas.gouv.fr/","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"HU","name":"Hungary","flag":"🇭🇺","category":"Europe - Central","sweetSpot":"student","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"National Directorate-General for Aliens Policing","url":"https://oif.gov.hu/","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"FI","name":"Finland","flag":"🇫🇮","category":"Europe - Nordic","sweetSpot":"student","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Finnish Immigration Service","url":"https://migri.fi/en/home","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"SE","name":"Sweden","flag":"🇸🇪","category":"Europe - Nordic","sweetSpot":"professional","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Swedish Migration Agency","url":"https://www.migrationsverket.se/","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"NO","name":"Norway","flag":"🇳🇴","category":"Europe - Nordic","sweetSpot":"professional","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Norwegian Directorate of Immigration","url":"https://www.udi.no/en/","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"LU","name":"Luxembourg","flag":"🇱🇺","category":"Europe - Western","sweetSpot":"professional","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Guichet.lu","url":"https://guichet.public.lu/en/citoyens/immigration.html","retrievedAt":"2026-10-18","confidence":"high"}},
-    {"id":"LT","name":"Lithuania","flag":"🇱🇹","category":"Europe - Baltic","sweetSpot":"student","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Migration Department of Lithuania","url":"https://migracija.lrv.lt/en/","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"IS","name":"Iceland","flag":"🇮🇸","category":"Europe - Nordic","sweetSpot":"professional","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Directorate of Immigration Iceland","url":"https://island.is/en/o/directorate-of-immigration","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"PT","name":"Portugal","flag":"🇵🇹","category":"Europe - Southern","sweetSpot":"professional","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"AIMA / Portuguese Government","url":"https://aima.gov.pt/","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"ES","name":"Spain","flag":"🇪🇸","category":"Europe - Southern","sweetSpot":"professional","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Spanish Ministry of Inclusion, Social Security and Migration","url":"https://www.inclusion.gob.es/","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"AT","name":"Austria","flag":"🇦🇹","category":"Europe - Central","sweetSpot":"professional","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Austrian Government","url":"https://www.oesterreich.gv.at/en/themen/menschen_aus_anderen_staaten","retrievedAt":"2026-10-11","confidence":"high"}},
-    {"id":"JP","name":"Japan","flag":"🇯🇵","category":"Asia","sweetSpot":"professional","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Immigration Services Agency of Japan","url":"https://www.moj.go.jp/isa/","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"KR","name":"South Korea","flag":"🇰🇷","category":"Asia","sweetSpot":"student","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Korea Immigration Service","url":"https://www.immigration.go.kr/immigration_eng/index.do","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"CN","name":"China","flag":"🇨🇳","category":"Asia","sweetSpot":"student","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"National Immigration Administration of China","url":"https://en.nia.gov.cn/","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"PL","name":"Poland","flag":"🇵🇱","category":"Europe - Central","sweetSpot":"student","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Office for Foreigners Poland","url":"https://www.gov.pl/web/udsc-en","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"MT","name":"Malta","flag":"🇲🇹","category":"Europe - Southern","sweetSpot":"professional","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Identità Malta","url":"https://identita.gov.mt/","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"RU","name":"Russia","flag":"🇷🇺","category":"Europe / Asia","sweetSpot":"student","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Russian Ministry of Foreign Affairs","url":"https://mid.ru/en/","retrievedAt":"2026-09-05","confidence":"medium"}},
-    {"id":"CH","name":"Switzerland","flag":"🇨🇭","category":"Europe - Alpine","sweetSpot":"professional","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"State Secretariat for Migration Switzerland","url":"https://www.sem.admin.ch/sem/en/home.html","retrievedAt":"2026-09-05","confidence":"high"}},
-    {"id":"CZ","name":"Czechia","flag":"🇨🇿","category":"Europe - Central","sweetSpot":"student","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"Ministry of the Interior of the Czech Republic","url":"https://ipc.gov.cz/en/","retrievedAt":"2026-10-11","confidence":"high"}},
-    {"id":"US","name":"United States","flag":"🇺🇸","category":"North America","sweetSpot":"professional","officialRate":null,"africanRate":null,"trueCost":null,"timeline":null,"dataStatus":"evidence_required","source":{"authority":"U.S. Citizenship and Immigration Services","url":"https://www.uscis.gov/","retrievedAt":"2026-10-25","confidence":"high"}}
+    {
+      "id": "GB",
+      "name": "United Kingdom",
+      "flag": "🇬🇧",
+      "category": "Europe - Western",
+      "sweetSpot": "professional",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "UK Visas and Immigration",
+        "url": "https://www.gov.uk/browse/visas-immigration",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "CA",
+      "name": "Canada",
+      "flag": "🇨🇦",
+      "category": "North America",
+      "sweetSpot": "student",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Government of Canada",
+        "url": "https://www.canada.ca/en/services/immigration-citizenship.html",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "AU",
+      "name": "Australia",
+      "flag": "🇦🇺",
+      "category": "Asia-Pacific",
+      "sweetSpot": "student",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Department of Home Affairs",
+        "url": "https://immi.homeaffairs.gov.au/",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "NZ",
+      "name": "New Zealand",
+      "flag": "🇳🇿",
+      "category": "Asia-Pacific",
+      "sweetSpot": "professional",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Immigration New Zealand",
+        "url": "https://www.immigration.govt.nz/",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "IE",
+      "name": "Ireland",
+      "flag": "🇮🇪",
+      "category": "Europe - Western",
+      "sweetSpot": "professional",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Immigration Service Delivery",
+        "url": "https://www.irishimmigration.ie/",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "DE",
+      "name": "Germany",
+      "flag": "🇩🇪",
+      "category": "Europe - Central",
+      "sweetSpot": "professional",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Federal Foreign Office",
+        "url": "https://www.auswaertiges-amt.de/en/visa-service",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "IT",
+      "name": "Italy",
+      "flag": "🇮🇹",
+      "category": "Europe - Southern",
+      "sweetSpot": "student",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Italian Ministry of Foreign Affairs",
+        "url": "https://vistoperitalia.esteri.it/",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "FR",
+      "name": "France",
+      "flag": "🇫🇷",
+      "category": "Europe - Western",
+      "sweetSpot": "student",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "France-Visas",
+        "url": "https://france-visas.gouv.fr/",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "HU",
+      "name": "Hungary",
+      "flag": "🇭🇺",
+      "category": "Europe - Central",
+      "sweetSpot": "student",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "National Directorate-General for Aliens Policing",
+        "url": "https://oif.gov.hu/",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "FI",
+      "name": "Finland",
+      "flag": "🇫🇮",
+      "category": "Europe - Nordic",
+      "sweetSpot": "student",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Finnish Immigration Service",
+        "url": "https://migri.fi/en/home",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "SE",
+      "name": "Sweden",
+      "flag": "🇸🇪",
+      "category": "Europe - Nordic",
+      "sweetSpot": "professional",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Swedish Migration Agency",
+        "url": "https://www.migrationsverket.se/",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "NO",
+      "name": "Norway",
+      "flag": "🇳🇴",
+      "category": "Europe - Nordic",
+      "sweetSpot": "professional",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Norwegian Directorate of Immigration",
+        "url": "https://www.udi.no/en/",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "LU",
+      "name": "Luxembourg",
+      "flag": "🇱🇺",
+      "category": "Europe - Western",
+      "sweetSpot": "professional",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Guichet.lu",
+        "url": "https://guichet.public.lu/en/citoyens/immigration.html",
+        "retrievedAt": "2026-10-18",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "LT",
+      "name": "Lithuania",
+      "flag": "🇱🇹",
+      "category": "Europe - Baltic",
+      "sweetSpot": "student",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Migration Department of Lithuania",
+        "url": "https://migracija.lrv.lt/en/",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "IS",
+      "name": "Iceland",
+      "flag": "🇮🇸",
+      "category": "Europe - Nordic",
+      "sweetSpot": "professional",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Directorate of Immigration Iceland",
+        "url": "https://island.is/en/o/directorate-of-immigration",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "PT",
+      "name": "Portugal",
+      "flag": "🇵🇹",
+      "category": "Europe - Southern",
+      "sweetSpot": "professional",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "AIMA / Portuguese Government",
+        "url": "https://aima.gov.pt/",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "ES",
+      "name": "Spain",
+      "flag": "🇪🇸",
+      "category": "Europe - Southern",
+      "sweetSpot": "professional",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Spanish Ministry of Inclusion, Social Security and Migration",
+        "url": "https://www.inclusion.gob.es/",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "AT",
+      "name": "Austria",
+      "flag": "🇦🇹",
+      "category": "Europe - Central",
+      "sweetSpot": "professional",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Austrian Government",
+        "url": "https://www.oesterreich.gv.at/en/themen/menschen_aus_anderen_staaten",
+        "retrievedAt": "2026-10-11",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "JP",
+      "name": "Japan",
+      "flag": "🇯🇵",
+      "category": "Asia",
+      "sweetSpot": "professional",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Immigration Services Agency of Japan",
+        "url": "https://www.moj.go.jp/isa/",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "KR",
+      "name": "South Korea",
+      "flag": "🇰🇷",
+      "category": "Asia",
+      "sweetSpot": "student",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Korea Immigration Service",
+        "url": "https://www.immigration.go.kr/immigration_eng/index.do",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "CN",
+      "name": "China",
+      "flag": "🇨🇳",
+      "category": "Asia",
+      "sweetSpot": "student",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "National Immigration Administration of China",
+        "url": "https://en.nia.gov.cn/",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "PL",
+      "name": "Poland",
+      "flag": "🇵🇱",
+      "category": "Europe - Central",
+      "sweetSpot": "student",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Office for Foreigners Poland",
+        "url": "https://www.gov.pl/web/udsc-en",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "MT",
+      "name": "Malta",
+      "flag": "🇲🇹",
+      "category": "Europe - Southern",
+      "sweetSpot": "professional",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Identità Malta",
+        "url": "https://identita.gov.mt/",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "RU",
+      "name": "Russia",
+      "flag": "🇷🇺",
+      "category": "Europe / Asia",
+      "sweetSpot": "student",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Russian Ministry of Foreign Affairs",
+        "url": "https://mid.ru/en/",
+        "retrievedAt": "2026-09-05",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "CH",
+      "name": "Switzerland",
+      "flag": "🇨🇭",
+      "category": "Europe - Alpine",
+      "sweetSpot": "professional",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "State Secretariat for Migration Switzerland",
+        "url": "https://www.sem.admin.ch/sem/en/home.html",
+        "retrievedAt": "2026-09-05",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "CZ",
+      "name": "Czechia",
+      "flag": "🇨🇿",
+      "category": "Europe - Central",
+      "sweetSpot": "student",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Ministry of the Interior of the Czech Republic",
+        "url": "https://ipc.gov.cz/en/",
+        "retrievedAt": "2026-10-11",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "US",
+      "name": "United States",
+      "flag": "🇺🇸",
+      "category": "North America",
+      "sweetSpot": "professional",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "U.S. Citizenship and Immigration Services",
+        "url": "https://www.uscis.gov/",
+        "retrievedAt": "2026-10-25",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "MU",
+      "name": "Mauritius",
+      "flag": "🇲🇺",
+      "category": "Africa - Indian Ocean",
+      "sweetSpot": "nomad",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Economic Development Board Mauritius",
+        "url": "https://www.edbmauritius.org/",
+        "retrievedAt": "2026-10-29",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "CV",
+      "name": "Cape Verde",
+      "flag": "🇨🇻",
+      "category": "Africa - Atlantic",
+      "sweetSpot": "nomad",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Cape Verde Immigration Service",
+        "url": "https://www.sefcv.gov.cv/",
+        "retrievedAt": "2026-10-29",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "NA",
+      "name": "Namibia",
+      "flag": "🇳🇦",
+      "category": "Africa - Southern",
+      "sweetSpot": "nomad",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Ministry of Home Affairs, Immigration, Safety and Security",
+        "url": "https://mhaiss.gov.na/",
+        "retrievedAt": "2026-10-29",
+        "confidence": "medium"
+      }
+    }
   ]
 }

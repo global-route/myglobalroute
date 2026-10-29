@@ -2,9 +2,9 @@ const countries = require('../src/data/countries.json');
 const pathways = require('../src/data/pathways.json');
 
 describe('migration data contract', () => {
-  test('contains the complete 27-country registry', () => {
-    expect(countries.countries).toHaveLength(27);
-    expect(new Set(countries.countries.map(c => c.id)).size).toBe(27);
+  test('contains the complete 30-country registry', () => {
+    expect(countries.countries).toHaveLength(30);
+    expect(new Set(countries.countries.map(c => c.id)).size).toBe(30);
   });
 
   test('does not publish unsupported approval, cost or timeline claims', () => {
@@ -86,7 +86,7 @@ describe('migration data contract', () => {
   });
 
   test('GOIF seed pathways are present with correct metadata', () => {
-    const goifIds = ['AU-dama-regional', 'IT-dsu-need-blind', 'JP-tokyo-tech-accelerator', 'PT-d3-highly-qualified'];
+    const goifIds = ['AU-dama-regional', 'IT-dsu-need-blind', 'JP-tokyo-tech-accelerator', 'PT-d3-highly-qualified', 'MU-premium-visa', 'CV-remote-work-visa', 'NA-digital-nomad-visa'];
     for (const id of goifIds) {
       const p = pathways.pathways.find(pw => pw.id === id);
       expect(p).toBeDefined();

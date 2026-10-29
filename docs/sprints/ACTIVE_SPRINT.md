@@ -1,6 +1,6 @@
 # Active Sprint — Owner Actions & Ongoing Maintenance
 
-> **Updated:** 2026-10-29 | **Branch:** `main` | **Commit:** `d5ce2b0`
+> **Updated:** 2026-10-29 | **Branch:** `main` | **Commit:** `e871731`
 > **Production:** `https://mypathway2global.org.uk` (Cloudflare Workers — `globalroute`)
 > **Tests:** 19/19 suites, 180/180 passing
 
@@ -8,28 +8,25 @@
 
 ## Current state
 
-All code phases complete (0-9, B, CP, GOIF). No code tasks are blocked. Remaining work is owner actions and ongoing content maintenance only.
+All code phases complete (0-9, B, CP, GOIF, Vertical B). No code tasks are blocked.
 
 | Metric | Value |
 |---|---|
-| Countries | 27 |
-| Pathways | 65 (59 publishable / 6 research_required) |
-| Evidence records | 193+ |
-| Blog posts | 35 across 7 categories |
-| Sitemap URLs | 80+ |
+| Countries | 30 (27 Europe/Americas/Asia + 3 African nomad hubs) |
+| Pathways | 68 (62 publishable / 6 research_required) |
+| Evidence records | 208+ |
+| Blog posts | 38 across 7 categories |
+| Sitemap URLs | 92+ |
 | Test suites | 19/19 PASS |
 | Tests | 180/180 PASS |
+| GOIF schema | 7 pathways with asymmetry_category + capital_tier |
+| remote_freelance | MU Premium Visa, CV Remote Work, NA Digital Nomad |
+| Region filter | 10 regions in Find MyPathway |
+| PR vector filter | 10 pathways tagged pr-route |
+| ⌘K search | Modal search across countries, pathways, posts — all pages |
 | Service Worker | Live (`public/sw.js`) |
-| Save My Plan export | Live (client-side JSON, Find MyPathway) |
-| Stale pathway audit | 0 stale — 37 fields refreshed 2026-10-29 |
-| GOIF schema | 4 seed pathways with asymmetry_category + capital_tier + regional_concessions |
-| GOIF gap card | Tier badge + concessions + playbook CTA live in Find MyPathway |
-| GOIF pSEO pages | pathways-funded-study.html + pathways-regional-skilled.html live |
-| localStorage cache | goif_pathways_v1 (24h TTL) in Find MyPathway + both pSEO pages |
-| OG image coverage | All pages + blog template (image asset pending owner) |
-| Schema markup | Organization + WebSite on homepage; Article + Breadcrumb + FAQPage on blog posts; WebPage on visa-wizard.html |
-| Ad revenue | £0 — AdSense site ownership verified; Google policy review pending |
-| Email capture | Form live on blog sidebar — Mailchimp action URL pending owner config |
+| localStorage cache | goif_pathways_v1 (24h TTL) |
+| Ad revenue | £0 — AdSense policy review pending |
 
 ---
 

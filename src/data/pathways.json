@@ -506,7 +506,7 @@
           "evidenceIds": [
             "AU-skilled-189-points-2026-10-18"
           ],
-          "notes": "Minimum 65 points required to submit an Expression of Interest (EOI). Reaching 65 points does not guarantee an invitation \u2014 Home Affairs issues invitations from the pool based on score ranking. Actual invitation cut-offs are typically higher."
+          "notes": "Minimum 65 points required to submit an Expression of Interest (EOI). Reaching 65 points does not guarantee an invitation — Home Affairs issues invitations from the pool based on score ranking. Actual invitation cut-offs are typically higher."
         }
       ]
     },
@@ -539,7 +539,7 @@
           "evidenceIds": [
             "AU-skilled-190-points-2026-10-18"
           ],
-          "notes": "Minimum 65 points required for EOI. State/territory nomination adds 5 points. Each state/territory sets its own occupation list and nomination criteria \u2014 check the relevant state authority before applying."
+          "notes": "Minimum 65 points required for EOI. State/territory nomination adds 5 points. Each state/territory sets its own occupation list and nomination criteria — check the relevant state authority before applying."
         },
         {
           "id": "AU-skilled-190-state-nomination-2026-10-18",
@@ -585,7 +585,7 @@
           "evidenceIds": [
             "AU-skilled-491-points-2026-10-18"
           ],
-          "notes": "Minimum 65 points required for EOI. State/territory or eligible family nomination adds 15 points. This is a provisional visa \u2014 permanent residency requires 3 years of regional work and meeting income thresholds before applying for subclass 191."
+          "notes": "Minimum 65 points required for EOI. State/territory or eligible family nomination adds 15 points. This is a provisional visa — permanent residency requires 3 years of regional work and meeting income thresholds before applying for subclass 191."
         },
         {
           "id": "AU-skilled-491-regional-nomination-2026-10-18",
@@ -647,7 +647,7 @@
       "id": "NZ-smc-points-based",
       "countryId": "NZ",
       "type": "work",
-      "name": "Skilled Migrant Category \u2014 Points-based pathway",
+      "name": "Skilled Migrant Category — Points-based pathway",
       "wizardTags": [
         "pr-route"
       ],
@@ -695,7 +695,7 @@
       "id": "NZ-smc-skilled-work-experience",
       "countryId": "NZ",
       "type": "work",
-      "name": "Skilled Migrant Category \u2014 Skilled Work Experience pathway",
+      "name": "Skilled Migrant Category — Skilled Work Experience pathway",
       "wizardTags": [
         "pr-route"
       ],
@@ -744,7 +744,7 @@
       "id": "NZ-smc-trades-technician",
       "countryId": "NZ",
       "type": "work",
-      "name": "Skilled Migrant Category \u2014 Trades and Technician pathway",
+      "name": "Skilled Migrant Category — Trades and Technician pathway",
       "wizardTags": [
         "pr-route"
       ],
@@ -782,7 +782,7 @@
           "evidenceIds": [
             "NZ-smc-trades-technician-eligibility-2026-09-14"
           ],
-          "notes": "A relevant trade qualification or registration is required for the specific occupation. The qualification must be recognised in New Zealand or assessed as equivalent. Requirements vary by occupation \u2014 refer to the occupation-qualification matrix."
+          "notes": "A relevant trade qualification or registration is required for the specific occupation. The qualification must be recognised in New Zealand or assessed as equivalent. Requirements vary by occupation — refer to the occupation-qualification matrix."
         }
       ]
     },
@@ -854,7 +854,9 @@
       "countryId": "IE",
       "type": "work",
       "name": "Critical Skills Employment Permit",
-      "wizardTags": ["pr-route"],
+      "wizardTags": [
+        "pr-route"
+      ],
       "sourceUrl": "https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/permit-types/critical-skills-employment-permit/",
       "sourceAuthority": "Government of Ireland",
       "status": "publishable",
@@ -938,9 +940,9 @@
             "componentsIncluded": [
               "living expenses"
             ],
-            "notes": "Minimum \u20ac1,091 net per month for the duration of the job-search stay via blocked account or declaration of commitment; qualifying part-time employment can be counted."
+            "notes": "Minimum €1,091 net per month for the duration of the job-search stay via blocked account or declaration of commitment; qualifying part-time employment can be counted."
           },
-          "notes": "\u20ac1,091 net per month via blocked account or formal declaration of commitment for the Opportunity Card job-search period."
+          "notes": "€1,091 net per month via blocked account or formal declaration of commitment for the Opportunity Card job-search period."
         },
         {
           "id": "DE-opportunity-card-minimum-points-score-2026-09-12",
@@ -1081,9 +1083,9 @@
             "componentsIncluded": [
               "living expenses"
             ],
-            "notes": "Proof of resources corresponding to at least \u20ac877.50 per month for long-stay study applications submitted from 1 August 2026."
+            "notes": "Proof of resources corresponding to at least €877.50 per month for long-stay study applications submitted from 1 August 2026."
           },
-          "notes": "\u20ac877.50 per month for long-stay study visa applications submitted from 1 August 2026."
+          "notes": "€877.50 per month for long-stay study visa applications submitted from 1 August 2026."
         }
       ]
     },
@@ -1092,7 +1094,9 @@
       "countryId": "FR",
       "type": "work",
       "name": "Talent Passport",
-      "wizardTags": ["pr-route"],
+      "wizardTags": [
+        "pr-route"
+      ],
       "sourceUrl": "https://france-visas.gouv.fr/en/web/france-visas/talent-passport",
       "sourceAuthority": "France-Visas",
       "status": "publishable",
@@ -1126,7 +1130,7 @@
           "evidenceIds": [
             "FR-talent-finance-2026-09-12"
           ],
-          "notes": "\u20ac59,373 gross reference annual salary effective 21 August 2025; EU Blue Card subcategory requires at least 1.5 times the gross reference salary."
+          "notes": "€59,373 gross reference annual salary effective 21 August 2025; EU Blue Card subcategory requires at least 1.5 times the gross reference salary."
         }
       ]
     },
@@ -1329,7 +1333,7 @@
       "id": "NO-study",
       "countryId": "NO",
       "type": "study",
-      "name": "Study permit \u2013 university/university college",
+      "name": "Study permit – university/university college",
       "sourceUrl": "https://www.udi.no/en/want-to-apply/studies/studietillatelse/",
       "sourceAuthority": "Norwegian Directorate of Immigration",
       "status": "publishable",
@@ -1692,7 +1696,7 @@
       "id": "AT-study",
       "countryId": "AT",
       "type": "study",
-      "name": "Residence permit \u2013 student",
+      "name": "Residence permit – student",
       "sourceUrl": "https://www.oesterreich.gv.at/en/themen/migration_und_integration.html",
       "sourceAuthority": "Austrian Government",
       "status": "publishable",
@@ -1744,7 +1748,7 @@
       "id": "AT-rwr-other-key-workers",
       "countryId": "AT",
       "type": "work",
-      "name": "Red-White-Red Card \u2014 Other Key Workers",
+      "name": "Red-White-Red Card — Other Key Workers",
       "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
       "sourceAuthority": "Austrian Federal Government migration portal",
       "status": "publishable",
@@ -1804,7 +1808,7 @@
       "id": "AT-red-white-red",
       "countryId": "AT",
       "type": "work",
-      "name": "Other Key Workers \u2014 Red-White-Red Card",
+      "name": "Other Key Workers — Red-White-Red Card",
       "sourceUrl": "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/other-key-workers/",
       "sourceAuthority": "Austrian Government",
       "status": "publishable",
@@ -1867,7 +1871,7 @@
           "evidenceIds": [
             "JP-student-status-2026-09-07"
           ],
-          "notes": "Admission to a qualifying educational institution in Japan is required for Student (\u7559\u5b66) status of residence."
+          "notes": "Admission to a qualifying educational institution in Japan is required for Student (留学) status of residence."
         }
       ]
     },
@@ -2147,7 +2151,7 @@
       "type": "study",
       "name": "Study residence",
       "sourceUrl": "https://identita.gov.mt/",
-      "sourceAuthority": "Identit\u00e0 Malta",
+      "sourceAuthority": "Identità Malta",
       "status": "publishable",
       "evidenceIds": [
         "MT-study-eligibility-2026-09-28",
@@ -2175,7 +2179,7 @@
       "type": "work",
       "name": "Single Permit",
       "sourceUrl": "https://identita.gov.mt/",
-      "sourceAuthority": "Identit\u00e0 Malta",
+      "sourceAuthority": "Identità Malta",
       "status": "publishable",
       "evidenceIds": [
         "MT-work-eligibility-2026-09-28",
@@ -2438,7 +2442,7 @@
           "evidenceIds": [
             "IT-dsu-need-blind-eligibility-2026-10-29"
           ],
-          "notes": "Enrolment at a participating Italian public university is required before applying for the DSU scholarship. The scholarship is not a visa category \u2014 it supplements the standard Italian study visa."
+          "notes": "Enrolment at a participating Italian public university is required before applying for the DSU scholarship. The scholarship is not a visa category — it supplements the standard Italian study visa."
         }
       ]
     },
@@ -2477,9 +2481,11 @@
       "countryId": "PT",
       "type": "work",
       "name": "D3 Highly Qualified Activity Residence Visa",
-      "wizardTags": ["pr-route"],
+      "wizardTags": [
+        "pr-route"
+      ],
       "sourceUrl": "https://aima.gov.pt/pt",
-      "sourceAuthority": "Ag\u00eancia para a Integra\u00e7\u00e3o, Migra\u00e7\u00f5es e Asilo (AIMA)",
+      "sourceAuthority": "Agência para a Integração, Migrações e Asilo (AIMA)",
       "status": "publishable",
       "asymmetry_category": "tech_engineering",
       "capital_tier": "tier_2_moderate",
@@ -2513,6 +2519,105 @@
             "PT-d3-highly-qualified-eligibility-2026-10-29"
           ],
           "notes": "Degree or equivalent qualification required. Non-degree holders must demonstrate 3+ years of relevant professional experience."
+        }
+      ]
+    },
+    {
+      "id": "MU-premium-visa",
+      "countryId": "MU",
+      "type": "work",
+      "name": "Premium Visa (Remote Work)",
+      "wizardTags": [
+        "nomad"
+      ],
+      "sourceUrl": "https://www.edbmauritius.org/",
+      "sourceAuthority": "Economic Development Board Mauritius",
+      "status": "publishable",
+      "asymmetry_category": "remote_freelance",
+      "capital_tier": "tier_2_moderate",
+      "evidenceIds": [
+        "MU-premium-visa-eligibility-2026-10-29",
+        "MU-premium-visa-finance-2026-10-29"
+      ],
+      "requirements": [
+        {
+          "id": "MU-premium-visa-job-offer-2026-10-29",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Mauritius",
+          "effectiveDate": "2026-10-29",
+          "sourceUrl": "https://www.edbmauritius.org/",
+          "evidenceIds": [
+            "MU-premium-visa-eligibility-2026-10-29"
+          ],
+          "notes": "Proof of remote employment or self-employment with income sourced outside Mauritius is required. Holders may not work for a Mauritius-based employer."
+        }
+      ]
+    },
+    {
+      "id": "CV-remote-work-visa",
+      "countryId": "CV",
+      "type": "work",
+      "name": "Remote Work Visa",
+      "wizardTags": [
+        "nomad"
+      ],
+      "sourceUrl": "https://www.sefcv.gov.cv/",
+      "sourceAuthority": "Cape Verde Immigration Service",
+      "status": "publishable",
+      "asymmetry_category": "remote_freelance",
+      "capital_tier": "tier_2_moderate",
+      "evidenceIds": [
+        "CV-remote-work-visa-eligibility-2026-10-29",
+        "CV-remote-work-visa-finance-2026-10-29"
+      ],
+      "requirements": [
+        {
+          "id": "CV-remote-work-visa-job-offer-2026-10-29",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Cape Verde",
+          "effectiveDate": "2026-10-29",
+          "sourceUrl": "https://www.sefcv.gov.cv/",
+          "evidenceIds": [
+            "CV-remote-work-visa-eligibility-2026-10-29"
+          ],
+          "notes": "Proof of remote employment or freelance income sourced outside Cape Verde is required. Holders may not work for a Cape Verde-based employer."
+        }
+      ]
+    },
+    {
+      "id": "NA-digital-nomad-visa",
+      "countryId": "NA",
+      "type": "work",
+      "name": "Digital Nomad Visa",
+      "wizardTags": [
+        "nomad"
+      ],
+      "sourceUrl": "https://mhaiss.gov.na/",
+      "sourceAuthority": "Ministry of Home Affairs, Immigration, Safety and Security",
+      "status": "publishable",
+      "asymmetry_category": "remote_freelance",
+      "capital_tier": "tier_2_moderate",
+      "evidenceIds": [
+        "NA-digital-nomad-visa-eligibility-2026-10-29",
+        "NA-digital-nomad-visa-finance-2026-10-29"
+      ],
+      "requirements": [
+        {
+          "id": "NA-digital-nomad-visa-job-offer-2026-10-29",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Namibia",
+          "effectiveDate": "2026-10-29",
+          "sourceUrl": "https://mhaiss.gov.na/",
+          "evidenceIds": [
+            "NA-digital-nomad-visa-eligibility-2026-10-29"
+          ],
+          "notes": "Proof of remote employment or freelance income sourced outside Namibia is required. Holders may not work for a Namibia-based employer."
         }
       ]
     }
