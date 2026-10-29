@@ -22,6 +22,8 @@ faqs:
 
 The narrative around African mobility has historically focused on leaving Africa - European study visas, North American skilled worker routes, Australian points tests. But a parallel story is emerging: African countries competing to attract remote workers, digital entrepreneurs and mobile professionals who want to stay on the continent while earning internationally.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 Three countries have moved furthest in this direction with formal visa routes: Mauritius, Cape Verde and Namibia. This guide covers what each offers, who each suits, and how to choose between them.
 
 ## Why intra-African remote work mobility matters

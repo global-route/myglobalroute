@@ -23,6 +23,8 @@ faqs:
 
 Cape Verde is an archipelago of ten islands in the Atlantic Ocean, 570 kilometres off the coast of Senegal. It is politically stable, Portuguese-speaking, and has been actively positioning itself as a destination for remote workers and digital nomads since 2021.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 For African remote workers, Cape Verde offers something unusual - a low-cost, Atlantic-facing base with a Euro-pegged currency, reliable connectivity on the main islands, and a straightforward remote work visa.
 
 ## What the Remote Work Visa is

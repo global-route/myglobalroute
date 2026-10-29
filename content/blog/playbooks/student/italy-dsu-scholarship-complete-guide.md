@@ -11,6 +11,13 @@ featured: true
 image: "/public/blog/images/italy-dsu-scholarship.jpg"
 readTime: "16 min"
 excerpt: "Free tuition + free meals + free housing + €5,400/year cash. This changes everything for budget students."
+faqs:
+  - q: "What is the DSU scholarship and who can apply?"
+    a: "The DSU (Diritto allo Studio Universitario) is Italy's regional student welfare system providing financial support to students at Italian public universities. Non-EU students including Nigerians can apply. Eligibility is based on your ISEE household income assessment, not your nationality or grades."
+  - q: "What does the DSU scholarship cover?"
+    a: "Zero tuition fees, free on-campus accommodation where available, free meal vouchers at university canteens, and a cash grant of EUR 5,400 to EUR 7,000 per academic year depending on your ISEE score and the regional DSU authority."
+  - q: "When should I apply for the DSU scholarship?"
+    a: "The bando (call for applications) is published in July-August each year for the following academic year. Apply as early as possible - accommodation places are limited and allocated by ISEE score ranking."
 ---
 
 # Italy DSU Scholarship: The Hidden Hack for African Students

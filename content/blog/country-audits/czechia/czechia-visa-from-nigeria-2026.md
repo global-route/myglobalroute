@@ -22,6 +22,8 @@ faqs:
 
 Czechia is an EU member state with affordable living costs and a growing international student community. It has two publishable pathways for Nigerian applicants: a long-term study residence permit and an Employee Card work permit.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 ## Long-term study residence permit
 
 **Requirements:** Acceptance letter from an accredited Czech higher education institution, valid passport, proof of sufficient financial means, health insurance.

@@ -11,6 +11,13 @@ keywords: "UK visa from Nigeria, UK skilled worker visa Africa, UK student visa 
 featured: true
 readTime: "11 min"
 excerpt: "The UK Skilled Worker visa requires a confirmed job offer from an approved sponsor. The Student visa requires a CAS from a licensed sponsor. Here's what each pathway actually requires, sourced from UKVI."
+faqs:
+  - q: "What is the minimum salary for the UK Skilled Worker visa?"
+    a: "GBP 41,700 per year is the baseline threshold from April 2024. However, the applicable occupation going rate may be higher. Some shortage occupation roles and transitional rules can apply - do not use GBP 41,700 as a standalone eligibility decision."
+  - q: "How much maintenance funds do I need for a UK student visa?"
+    a: "GBP 1,270 held for 28 consecutive days before applying. This is a maintenance balance, not an annual cost. Your sponsor university may certify maintenance on your behalf, which removes the personal funds requirement."
+  - q: "What is a CAS for the UK student visa?"
+    a: "A Confirmation of Acceptance for Studies (CAS) is a reference number issued by your UK university after you accept an unconditional offer. You cannot apply for a UK student visa without a CAS."
 ---
 
 # UK Visa from Nigeria: Skilled Worker and Student Visa Guide 2026

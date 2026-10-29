@@ -11,6 +11,13 @@ keywords: "Portugal visa Nigeria, Portugal digital nomad visa Africa, Portugal D
 featured: true
 readTime: "10 min"
 excerpt: "Portugal offers a study residence visa, a remote work route (D8) and a passive income route (D7). Here's what each pathway requires, sourced from AIMA."
+faqs:
+  - q: "What is AIMA in Portugal?"
+    a: "AIMA (Agencia para a Integracao, Migracoes e Asilo) is Portugal's immigration authority, replacing the former SEF in 2023. All residence permit applications are processed by AIMA."
+  - q: "What is the Portugal Digital Nomad visa income requirement?"
+    a: "Proof of remote employment or service relationship with an entity or clients outside Portugal. No single fixed income threshold is published - AIMA assesses whether your income is sufficient to support yourself in Portugal."
+  - q: "Does Portugal D3 lead to citizenship?"
+    a: "Yes. After 5 years of legal residence in Portugal on a D3 or other qualifying permit, you can apply for Portuguese citizenship, which gives you an EU passport and freedom of movement across all 27 EU member states."
 ---
 
 # Portugal Visa from Nigeria: Study, Digital Nomad and D7 Guide 2026

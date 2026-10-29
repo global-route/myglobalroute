@@ -23,6 +23,8 @@ faqs:
 
 The Italy DSU scholarship is one of the most underused opportunities in African student migration. It is not a merit scholarship - you do not need top grades or a competitive application. It is a needs-based welfare system that provides zero tuition, free housing, free meals and a cash stipend to students whose household income falls below a threshold. For African applicants from lower-income households, the threshold is often achievable.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 This playbook covers how the ISEE calculation works for international students, what the benefit package covers, how to apply, and how it interacts with the Italian study visa.
 
 For a full walkthrough of the DSU application process and university selection, see our [Italy DSU Scholarship Complete Guide](/blog/playbooks/student/italy-dsu-scholarship-complete-guide/).

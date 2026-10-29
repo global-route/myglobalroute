@@ -10,6 +10,13 @@ keywords: "visa rejection Nigeria, why visa application rejected Africa, visa re
 featured: true
 readTime: "9 min"
 excerpt: "Most visa rejections fall into five documented patterns - all fixable. Here's what the official refusal categories mean and what to do about each one."
+faqs:
+  - q: "What is the most common reason African visa applications are rejected?"
+    a: "Insufficient proof of ties to the home country is the most frequently cited reason. Officers must be satisfied you will return home after your visit or study period. Strong ties include employment, property ownership, family dependants, and financial commitments in your home country."
+  - q: "Can I reapply after a visa rejection?"
+    a: "Yes. A rejection is not permanent. You can reapply once you have addressed the documented reason for refusal. Always request the refusal letter and read the stated reason carefully before reapplying."
+  - q: "Does a previous visa rejection affect future applications?"
+    a: "Yes. Most visa applications ask whether you have previously been refused a visa. You must answer honestly. A previous refusal is not automatically disqualifying but it requires explanation and evidence that the circumstances have changed."
 ---
 
 # Why African Visa Applications Get Rejected: The 5 Documented Patterns

@@ -22,6 +22,8 @@ faqs:
 
 Paraguay has become one of the most discussed residency destinations for digital nomads, remote workers and small business owners. The core appeal is straightforward: a territorial tax system that does not tax foreign income, a low cost of living, and historically accessible residency routes.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 This post covers what is confirmed from primary sources and what requires verification from a qualified Paraguay immigration lawyer before you act on it.
 
 > **Practitioner caveat:** The investment thresholds and deposit requirements described in this post reflect widely-cited practitioner guidance as of October 2026. Paraguay's immigration rules change frequently. The specific figures for the SUACE investor route and the direct investment route have not been independently verified from the Dirección General de Migraciones. Before taking any action, consult a qualified Paraguay immigration lawyer in Asunción.

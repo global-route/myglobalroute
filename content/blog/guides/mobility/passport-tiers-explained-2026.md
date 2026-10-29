@@ -10,6 +10,13 @@ keywords: "passport tiers, golden passport, visa free travel, Henley passport in
 featured: true
 readTime: "12 min"
 excerpt: "A passport's real value is not its cover colour - it is the number of countries it opens without a prior appointment, and the investment and business rights it carries. Here is how the tier system works, what defines a golden passport, and where African passports sit in 2026."
+faqs:
+  - q: "What tier is the Nigerian passport?"
+    a: "The Nigerian passport is a Tier 4 passport, providing visa-free or visa-on-arrival access to approximately 45 countries as of 2026. It requires advance visas for the EU Schengen area, UK, USA, Canada and most high-income countries."
+  - q: "Which African passport is the strongest?"
+    a: "The Seychelles passport is the strongest African passport, providing visa-free access to approximately 156 countries including the EU Schengen area. Mauritius (147 countries) and South Africa (107 countries) are the next strongest on the continent."
+  - q: "What is a golden passport?"
+    a: "A golden passport is citizenship obtained through investment rather than birth, descent or naturalisation. Countries like Malta, Vanuatu and several Caribbean nations offer citizenship by investment programs, typically requiring USD 100,000 to USD 1,000,000 minimum investment."
 ---
 
 # Passport Tiers Explained: What Your Travel Document Actually Unlocks

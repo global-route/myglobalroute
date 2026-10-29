@@ -22,6 +22,8 @@ faqs:
 
 Standard work visas require an employer. Standard business visas require capital. For African tech founders who have a product and a team but not a salary offer or a large bank balance, both routes are blocked.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 Accelerator programs with startup visa endorsement are a different entry point. The program validates your business rather than your savings. Several Asian and Nordic governments have built formal visa pathways around this model.
 
 This guide covers the programs that are currently active, what they require, and what the visa pathway looks like for each.

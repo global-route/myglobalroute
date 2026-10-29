@@ -11,6 +11,13 @@ featured: true
 image: "/public/blog/images/canada-express-entry-2026.jpg"
 readTime: "16 min"
 excerpt: "Canada Express Entry is an invitation-based system for skilled workers - here's exactly how CRS scores work, what cut-offs look like, and how to maximise your chances of an ITA."
+faqs:
+  - q: "What is the minimum CRS score to get an invitation from Express Entry?"
+    a: "There is no fixed minimum - it depends on the draw. General draws have had cut-offs ranging from 470 to 550+ CRS points in recent years. Category-based draws for healthcare, STEM and French language have had lower cut-offs."
+  - q: "How long does Express Entry take from ITA to PR?"
+    a: "IRCC targets 6 months from Invitation to Apply (ITA) to final decision on permanent residence. Check current processing times at ircc.canada.ca."
+  - q: "What is the difference between FSW, CEC and FST in Express Entry?"
+    a: "Federal Skilled Worker (FSW) is for applicants with foreign work experience. Canadian Experience Class (CEC) is for applicants with Canadian work experience. Federal Skilled Trades (FST) is for qualified tradespeople. All three feed into the Express Entry pool."
 ---
 
 # Canada Express Entry: The Complete 2026 Guide for Nigerians

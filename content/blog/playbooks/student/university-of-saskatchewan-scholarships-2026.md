@@ -23,6 +23,8 @@ faqs:
 
 The University of Saskatchewan (USask) in Saskatoon is a research-intensive Canadian university with automatic scholarship consideration for international students. It is not a low-cost option — international tuition is CAD 39,000-59,000/year. But it has two things that make it strategically interesting for African applicants: automatic scholarship consideration and a clear post-graduation pathway to Canadian permanent residence through the Saskatchewan PNP.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 This post covers what the scholarships actually pay, what the full cost looks like, and why the Saskatchewan pathway matters.
 
 ## What USask automatically offers international students

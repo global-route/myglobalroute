@@ -22,6 +22,8 @@ faqs:
 
 Norway is one of the most accessible high-income countries for Nigerian students because its public universities charge no tuition fees for any student regardless of nationality. The study permit requires proof of living funds. The skilled worker permit requires a job offer.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 ## Study permit
 
 **Zero tuition:** Norwegian public universities charge no tuition fees for non-EU/EEA students. This is a legal requirement, not a scholarship — it applies to all students at all public institutions.

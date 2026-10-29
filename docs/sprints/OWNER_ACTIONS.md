@@ -10,9 +10,10 @@
 |---|---|---|---|
 | 1 | OG image | 20 min | Social share cards broken on every page |
 | 2 | Mailchimp action URL | 10 min | Email signups go nowhere |
-| 3 | ARIA audit | 30 min | Accessibility gate — share results, I fix violations |
-| 4 | Country source sign-off (30 entries) | 1-2 hrs | `dataset.asOf` update |
-| 5 | Legal review | Solicitor | Trust gate for affiliate/lead revenue |
+| 3 | YouTube video IDs (24 posts) | 1-2 hrs | 24 posts have placeholder comments instead of real embeds |
+| 4 | ARIA audit | 30 min | Accessibility gate |
+| 5 | Country source sign-off (30 entries) | 1-2 hrs | `dataset.asOf` update |
+| 6 | Legal review | Solicitor | Trust gate for affiliate/lead revenue |
 | — | Favicon PNG | ✅ Done | Files live in `public/` root |
 | — | Quarterly audit routine | ✅ Done | GitHub Actions workflow live |
 | — | AdSense | ✅ Done | Publisher ID live, Google policy review pending |
@@ -160,3 +161,25 @@ The three legal pages document current product intent. They are not a substitute
 | ⌘K search | ✅ Done | Modal search live on all pages |
 | GOIF + Vertical B | ✅ Done | 7 GOIF pathways, 3 African nomad hubs, all filters live |
 | 52 blog posts | ✅ Done | All 27 original countries have country audit posts |
+
+---
+
+## 3. YouTube video IDs — 24 posts have placeholders
+
+24 blog posts have a `<!-- YOUTUBE_PLACEHOLDER -->` comment where a YouTube embed should go. The posts are fully published and live — the placeholder is invisible to readers. Replace each one with a real embed when you have a suitable video.
+
+**Embed format to use:**
+```html
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:1.5rem 0;">
+  <iframe src="https://www.youtube.com/embed/VIDEO_ID" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen loading="lazy" title="DESCRIPTIVE TITLE"></iframe>
+</div>
+```
+
+Replace `VIDEO_ID` with the 11-character ID from the YouTube URL (e.g. `dQw4w9WgXcQ` from `youtube.com/watch?v=dQw4w9WgXcQ`).
+
+**Posts needing video IDs** — see `docs/sprints/BLOG_POLISH_TASKFILE.md` for the full list.
+
+**After adding all video IDs:**
+```bash
+npm run build && npx wrangler deploy
+```

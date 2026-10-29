@@ -23,6 +23,8 @@ faqs:
 
 Namibia is one of Africa's most stable and least densely populated countries. It borders South Africa, Botswana, Zambia and Angola, and has a well-developed infrastructure by regional standards. The Digital Nomad Visa, introduced to attract remote workers, makes it one of the few Southern African countries with a formal remote work residence route.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 For African remote workers looking for a Southern African base - particularly those with South African clients or business interests - Namibia offers a practical option.
 
 ## What the Digital Nomad Visa is

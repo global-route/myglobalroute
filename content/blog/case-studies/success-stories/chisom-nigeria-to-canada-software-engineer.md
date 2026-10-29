@@ -11,6 +11,13 @@ featured: true
 image: "/public/blog/images/chisom-canada-success.jpg"
 readTime: "10 min"
 excerpt: "From Lagos to Toronto in 6 months. Here's exactly how Chisom did it-budget, timeline, and lessons learned."
+faqs:
+  - q: "How long did the Canada immigration process take?"
+    a: "From submitting an Express Entry profile to receiving the Confirmation of Permanent Residence (COPR) typically takes 6-12 months. The timeline varies based on CRS score, draw frequency, and document processing times."
+  - q: "What was the biggest unexpected cost in moving to Canada?"
+    a: "The credential assessment (WES evaluation) and IELTS test together cost approximately NGN 350,000 and took 3 months to complete. Many applicants underestimate the time and cost of the pre-application preparation phase."
+  - q: "What is the most important thing to prepare before applying for Express Entry?"
+    a: "Start the credential assessment and language test early - both have long processing times. The WES assessment alone takes 7-10 weeks. Delays here push back your entire timeline."
 ---
 
 # How Chisom Got a Canadian Work Permit in 6 Months

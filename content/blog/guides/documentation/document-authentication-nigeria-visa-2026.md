@@ -10,6 +10,13 @@ keywords: "apostille Nigeria, sworn translation visa Nigeria, APS certificate Ge
 featured: true
 readTime: "9 min"
 excerpt: "Most visa applications require authenticated documents. Here's exactly what apostille, sworn translation and APS mean, when each is required, and how to get them from Nigeria."
+faqs:
+  - q: "What is the difference between apostille and notarisation?"
+    a: "Notarisation is a Nigerian notary public certifying a document is genuine. Apostille is an international certification under the Hague Convention that makes a document valid in all member countries without further legalisation. Nigeria is a Hague Convention member."
+  - q: "Where do I get an apostille in Nigeria?"
+    a: "The Federal Ministry of Foreign Affairs (MOFA) in Abuja issues apostilles for Nigerian documents. You can apply online through the MOFA portal or in person. Processing time is typically 3-10 working days."
+  - q: "Do I need to translate my documents for a European visa?"
+    a: "Yes for most European countries. Documents in English are generally accepted for UK, Ireland and some Nordic countries. For Schengen countries, documents in other languages typically require a certified translation."
 ---
 
 # Document Authentication for Nigerian Visa Applicants: Apostille, Sworn Translation and APS Guide 2026

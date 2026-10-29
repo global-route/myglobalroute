@@ -10,6 +10,13 @@ keywords: "visa motivation letter Nigeria, how to write visa letter of motivatio
 featured: true
 readTime: "8 min"
 excerpt: "A motivation letter is required for most student and job-search visas. Here's the structure that works, what to include, and the mistakes that cause rejections."
+faqs:
+  - q: "How long should a visa motivation letter be?"
+    a: "One to two pages maximum. Consulates read hundreds of letters - concise, specific and well-structured letters are more effective than long ones. Cover your purpose, ties to home country, financial means and return intention in clear paragraphs."
+  - q: "What is the most important thing to include in a visa motivation letter?"
+    a: "Your ties to your home country - employment, family, property, financial commitments. The visa officer's primary concern is whether you will return home. Evidence of strong ties is more persuasive than any other element of the letter."
+  - q: "Should I use a template for my visa motivation letter?"
+    a: "Use a template as a structure guide only. Your letter must be specific to your circumstances. Generic letters are easy to identify and less persuasive than personalised ones."
 ---
 
 # How to Write a Visa Motivation Letter That Works

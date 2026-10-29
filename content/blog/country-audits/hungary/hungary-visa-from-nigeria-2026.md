@@ -22,6 +22,8 @@ faqs:
 
 Hungary has two publishable pathways for Nigerian applicants: a study residence permit and a work residence permit. Hungary is also notable for the Stipendium Hungaricum scholarship, which provides fully funded study opportunities for Nigerian students.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 ## Study residence permit
 
 **Requirements:** Valid acceptance letter from a Hungarian higher education institution, valid passport, proof of sufficient financial means, health insurance.

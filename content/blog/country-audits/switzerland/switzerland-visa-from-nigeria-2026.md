@@ -22,6 +22,8 @@ faqs:
 
 Switzerland has two publishable pathways for Nigerian applicants: a study residence permit and a work permit. Both are subject to strict controls — Switzerland applies a priority check for work permits and a quota system that limits non-EU admissions.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 ## Study permit
 
 **Minimum funds:** Approximately CHF 21,000/year (CHF 1,750/month) for living costs. This is the commonly cited minimum — actual costs in Swiss cities are typically higher. Tuition fees are additional and vary by canton and institution (typically CHF 500 to CHF 3,000 per semester at public universities).

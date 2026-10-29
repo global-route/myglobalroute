@@ -22,6 +22,8 @@ faqs:
 
 Luxembourg is a small, wealthy country at the heart of the EU with a highly international workforce. It has two publishable pathways for Nigerian applicants: a student stay authorisation and a salaried worker authorisation. Both are administered via the Guichet.lu portal.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 ## Student stay authorisation
 
 **Requirements:** Enrolment or admission offer at a recognised Luxembourg educational institution, valid passport, proof of sufficient financial means, health insurance.

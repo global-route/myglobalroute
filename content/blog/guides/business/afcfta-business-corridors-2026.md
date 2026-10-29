@@ -22,6 +22,8 @@ faqs:
 
 The African Continental Free Trade Area (AfCFTA) came into force in 2021. It is the world's largest free trade area by number of participating countries. For African entrepreneurs and investors, it creates a strategic question: where do you base your African operations to access the continental market most efficiently?
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 Four countries have emerged as the leading answers: Rwanda, Mauritius, Ghana and Kenya. Each offers a different combination of regulatory ease, tax efficiency, financial infrastructure and market access.
 
 ## Rwanda — the regulatory efficiency hub

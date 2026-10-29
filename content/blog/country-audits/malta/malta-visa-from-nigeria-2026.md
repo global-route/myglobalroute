@@ -22,6 +22,8 @@ faqs:
 
 Malta is an English-speaking EU island nation in the Mediterranean. It has two publishable pathways for Nigerian applicants: a study residence permit and a Single Permit for work. Both are issued by Identità Malta.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 ## Study residence permit
 
 **Requirements:** Acceptance letter from a recognised Maltese educational institution, valid passport, proof of sufficient financial means, health insurance.

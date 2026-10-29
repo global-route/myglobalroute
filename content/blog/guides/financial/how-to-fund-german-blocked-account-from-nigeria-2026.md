@@ -10,6 +10,13 @@ keywords: "German blocked account Nigeria, how to fund blocked account from Nige
 featured: true
 readTime: "10 min"
 excerpt: "The German blocked account (Sperrkonto) requires €11,208. Here's exactly how to fund it from Nigeria - the cheapest transfer methods, the providers, and the timeline."
+faqs:
+  - q: "How long does it take to fund a German blocked account from Nigeria?"
+    a: "Typically 5-15 working days for the transfer to clear and the account to be activated. Allow at least 3-4 weeks before your visa appointment to account for delays."
+  - q: "What is the current EUR 11,208 blocked account requirement?"
+    a: "EUR 11,208 is the standard blocked account amount for a 12-month German student visa (EUR 934/month). The funds are released monthly after you arrive in Germany."
+  - q: "Can I use Wise to fund a German blocked account?"
+    a: "You cannot fund a Fintiba or Expatrio blocked account directly via Wise. You must transfer from a Nigerian bank account via SWIFT wire transfer. Some applicants use a domiciliary account to convert NGN to EUR first, then wire to the blocked account provider."
 ---
 
 # How to Fund a German Blocked Account from Nigeria: The Complete 2026 Guide

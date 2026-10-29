@@ -10,6 +10,13 @@ keywords: "Australia visa from Nigeria, Australian student visa, skilled migrati
 featured: false
 readTime: "11 min"
 excerpt: "Australia has four publishable pathways - one student visa and three points-tested skilled routes. Here is what the official requirements actually say, and where the evidence gaps are."
+faqs:
+  - q: "What is the minimum points score for Australian skilled migration?"
+    a: "65 points is the minimum to submit an Expression of Interest (EOI) for the subclass 189, 190 or 491 visas. However, reaching 65 points does not guarantee an invitation - Home Affairs issues invitations from the pool based on score ranking, and actual cut-offs are typically higher."
+  - q: "How much does it cost to apply for an Australian student visa?"
+    a: "The subclass 500 student visa application fee is AUD 710 as of 2026. You must also show AUD 29,710 per year in living funds plus tuition fees. Confirm current fees at immi.homeaffairs.gov.au before applying."
+  - q: "Can I work while studying in Australia?"
+    a: "Yes. Student visa holders can work up to 48 hours per fortnight during term time and unlimited hours during scheduled course breaks. Your CoE must be from a CRICOS-registered provider."
 ---
 
 # Australia Visa from Nigeria: The 2026 Reality Check

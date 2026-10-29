@@ -23,6 +23,8 @@ faqs:
 
 Mauritius is one of the few African countries with a passport that opens doors - visa-free access to the EU Schengen area, the UK, Singapore and most of Asia. It is also one of the few African countries actively courting remote workers with a dedicated visa route.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 The Premium Visa is not a work permit. It is a residence authorisation for people who already have income from outside Mauritius and want to live on the island while continuing that work. For African remote workers and freelancers, it is a straightforward route to a stable, well-connected base in the Indian Ocean.
 
 ## What the Premium Visa is

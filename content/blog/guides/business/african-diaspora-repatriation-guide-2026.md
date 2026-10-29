@@ -22,6 +22,8 @@ faqs:
 
 The African diaspora sends approximately USD 100 billion home each year in remittances. A smaller but growing number of diaspora members are making a different kind of transfer — moving themselves, or at least their business operations, back to Africa.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 This is not a single decision. It is a spectrum: from maintaining a UK or US business while spending more time in Nigeria, to fully relocating and establishing a new African business. This guide covers the practical steps across that spectrum.
 
 ## The spectrum of repatriation

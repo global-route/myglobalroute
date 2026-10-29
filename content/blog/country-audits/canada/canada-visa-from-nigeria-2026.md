@@ -11,6 +11,13 @@ keywords: "Canada visa from Nigeria, Canada study permit, Express Entry Nigeria,
 featured: true
 readTime: "12 min"
 excerpt: "Canada offers three primary pathways for African applicants - study permit, Express Entry (work), and family sponsorship. Here's what each actually requires, sourced from IRCC."
+faqs:
+  - q: "How much money do I need for a Canada study permit?"
+    a: "CAD 23,448 per year for living expenses for family size 1, outside Quebec, for applications from 1 September 2026. Tuition fees are additional and vary by institution. Quebec has separate rules."
+  - q: "What is the minimum points score for Canada Express Entry?"
+    a: "67 points out of 100 on the Federal Skilled Worker six-factor selection grid. Reaching 67 points qualifies you for the Express Entry pool - a separate Comprehensive Ranking System (CRS) score then determines invitation order."
+  - q: "What happened to the Canada Student Direct Stream?"
+    a: "The Student Direct Stream (SDS) was cancelled in November 2024. All Nigerian study permit applicants now use the standard study permit process through IRCC."
 ---
 
 # Canada Visa from Nigeria: The 2026 Complete Guide

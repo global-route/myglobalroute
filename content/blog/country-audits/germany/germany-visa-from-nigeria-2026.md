@@ -11,6 +11,13 @@ featured: true
 image: "/public/blog/images/germany-visa-2026.jpg"
 readTime: "14 min"
 excerpt: "Germany's zero-tuition public universities and 18-month job search visa make it one of the strongest pathways for African students - here's what the process actually requires."
+faqs:
+  - q: "How much is the Germany blocked account (Sperrkonto)?"
+    a: "EUR 11,208 for a 12-month period (EUR 934/month) as of 2026. This is the standard blocked account amount required for the German student visa. The funds are released monthly after arrival."
+  - q: "What is the Germany Opportunity Card (Chancenkarte)?"
+    a: "The Opportunity Card is a 1-year job search visa that allows you to look for work in Germany without a prior job offer. You need either a recognised German qualification or 6 points on the points system. The minimum funds requirement is EUR 1,091/month."
+  - q: "Are German public universities really free?"
+    a: "Yes. Tuition at German public universities is EUR 0 for most programmes for all students including Nigerians. You pay only a semester contribution (typically EUR 150-350) covering administrative fees and a public transport ticket."
 ---
 
 # Germany Visa from Nigeria: The 2026 Reality Check

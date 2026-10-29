@@ -11,6 +11,13 @@ featured: true
 image: "/public/blog/images/canada-sds-cancelled.jpg"
 readTime: "8 min"
 excerpt: "The Student Direct Stream is gone. Here's what replaces it and your new options."
+faqs:
+  - q: "What replaced the Canada Student Direct Stream?"
+    a: "There is no direct replacement. All Nigerian study permit applicants now use the standard study permit process through IRCC. Processing times under the standard process are longer - typically 8-12 weeks versus the SDS target of 20 days."
+  - q: "Does the SDS cancellation affect existing study permit holders?"
+    a: "No. Students who obtained their study permit under SDS are not affected. The cancellation only applies to new applications submitted after November 2024."
+  - q: "What are the current Canada study permit financial requirements?"
+    a: "CAD 23,448 per year for living expenses for family size 1, outside Quebec, from 1 September 2026. Tuition fees are additional. These figures are from IRCC and are reviewed periodically."
 ---
 
 # Canada SDS Program Cancelled: What Now for Nigerian Students?

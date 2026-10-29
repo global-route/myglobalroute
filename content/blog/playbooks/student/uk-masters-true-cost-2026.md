@@ -11,6 +11,13 @@ featured: true
 image: "/public/blog/images/uk-masters-cost-2026.jpg"
 readTime: "15 min"
 excerpt: "Official prices: £20,000-35,000/year. Real costs: £30,000-50,000 total for 1-year Master's. Here's the complete breakdown for Nigerian students."
+faqs:
+  - q: "What is the total cost of a UK Masters for a Nigerian student?"
+    a: "Tuition (GBP 15,000-35,000) plus maintenance funds (GBP 1,270 for 28 days) plus Immigration Health Surcharge (GBP 776/year) plus living costs (GBP 12,000-15,000/year in London, less outside London). Total first-year cost is typically GBP 30,000-55,000."
+  - q: "What is the Immigration Health Surcharge for UK students?"
+    a: "GBP 776 per year of your visa duration, paid upfront with your visa application. For a 1-year Masters this is GBP 776. For a 2-year programme, GBP 1,552. This gives you access to the NHS during your stay."
+  - q: "Can I work during a UK Masters?"
+    a: "Yes. Student visa holders can work up to 20 hours per week during term time and full time during official vacation periods. This can offset living costs but should not be relied upon to cover tuition."
 ---
 
 # UK Masters True Cost 2026: What They Don't Tell You

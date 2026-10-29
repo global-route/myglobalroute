@@ -11,6 +11,13 @@ featured: false
 image: "/public/blog/images/germany-chancenkarte-2026.jpg"
 readTime: "12 min"
 excerpt: "Germany's new Opportunity Card (Chancenkarte) launched Jan 2024. No job offer required. Points-based system. Path to PR in 3 years. Here's everything Africans need to know."
+faqs:
+  - q: "What is the minimum points score for the Germany Opportunity Card?"
+    a: "6 points on the Chancenkarte points system. Points are awarded for qualifications, work experience, language skills, age, and previous Germany connections. Alternatively, full recognition of a foreign qualification in Germany provides direct access without points."
+  - q: "How much money do I need for the Germany Opportunity Card?"
+    a: "EUR 1,091 per month via a blocked account or formal declaration of commitment for the duration of the job search stay. This is the 2026 figure from make-it-in-germany.com."
+  - q: "Can I work while on the Germany Opportunity Card?"
+    a: "Yes, up to 20 hours per week in any job. This allows you to cover living costs while searching for a qualifying skilled position. Once you find a qualifying job, you can switch to a work visa without leaving Germany."
 ---
 
 # Germany Chancenkarte Visa 2026: Europe's New Opportunity Card

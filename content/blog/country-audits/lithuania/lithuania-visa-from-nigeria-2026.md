@@ -22,6 +22,8 @@ faqs:
 
 Lithuania is an EU member state with affordable tuition fees and a growing international student community. It has two publishable pathways for Nigerian applicants: a study temporary residence permit and a work temporary residence permit.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 ## Study temporary residence permit
 
 **Requirements:** Acceptance letter from a recognised Lithuanian higher education institution, valid passport, proof of sufficient financial means, health insurance.

@@ -23,6 +23,8 @@ faqs:
 
 Australia's standard skilled migration pathways - the 189, 190 and 491 points-tested visas - are competitive, quota-driven and increasingly difficult for African applicants to access without high CRS scores or state nomination. The Designated Area Migration Agreement (DAMA) system is different. It is employer-driven, regionally focused, and carries concessions that do not exist anywhere else in the Australian migration system.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 This playbook covers what DAMAs are, what the concessions actually mean, how to find a DAMA employer, and what the path to permanent residence looks like.
 
 ## What is a DAMA

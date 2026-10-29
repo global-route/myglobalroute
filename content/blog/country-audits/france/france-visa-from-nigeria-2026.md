@@ -10,6 +10,13 @@ keywords: "France visa from Nigeria, French student visa, Talent Passport France
 featured: false
 readTime: "10 min"
 excerpt: "France offers a long-stay study visa and the Talent Passport for high-earning professionals. Here is what the official requirements say - and what is not published."
+faqs:
+  - q: "How much money do I need for a France long-stay student visa?"
+    a: "EUR 877.50 per month for applications submitted from 1 August 2026. This is the proof of resources requirement for the long-stay student visa. Tuition fees are additional."
+  - q: "What is the France Talent Passport?"
+    a: "The Talent Passport is a multi-year residence permit for highly skilled professionals, researchers, investors and artists. The EU Blue Card subcategory requires a salary of at least 1.5 times the gross reference salary (EUR 59,373 in 2026)."
+  - q: "Do I need to speak French to study in France?"
+    a: "Not necessarily. Many French universities offer English-taught programmes, particularly at Masters level. However, French language skills significantly expand your programme options and improve daily life in France."
 ---
 
 # France Visa from Nigeria: The 2026 Reality Check

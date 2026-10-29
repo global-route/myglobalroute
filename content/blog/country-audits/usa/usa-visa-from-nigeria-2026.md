@@ -11,6 +11,13 @@ keywords: "USA visa from Nigeria, F-1 student visa Nigeria, US work visa Africa,
 featured: true
 readTime: "11 min"
 excerpt: "The US F-1 student visa requires proof of sufficient funds for the full programme. Work visas require employer sponsorship and are subject to annual caps. Here's what each pathway actually requires."
+faqs:
+  - q: "What is an I-20 form for the US F-1 student visa?"
+    a: "Form I-20 is a Certificate of Eligibility for Nonimmigrant Student Status issued by your US university after you are admitted and have demonstrated sufficient financial support. You cannot apply for an F-1 visa without an I-20."
+  - q: "What is the H-1B lottery?"
+    a: "The H-1B is the primary US work visa for specialty occupations. Annual demand far exceeds the 85,000 cap, so USCIS runs a random lottery each April. Selection is not based on qualifications - it is random, making the H-1B highly unpredictable."
+  - q: "Are US pathways research-required on this platform?"
+    a: "Yes. The US F-1 and H-1B pathways are marked research-required because the financial requirements and lottery process have evidence gaps that prevent structured recommendations. We will update these records when primary-source evidence is complete."
 ---
 
 # USA Visa from Nigeria: F-1 Student and Work Visa Guide 2026

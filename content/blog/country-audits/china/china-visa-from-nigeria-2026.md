@@ -22,6 +22,8 @@ faqs:
 
 China has two publishable pathways for Nigerian applicants: a student visa (X1 for long-stay) and a work visa (Z visa). China is also notable for the Chinese Government Scholarship (CSC), which provides fully funded study opportunities for Nigerian students.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 ## Student visa (X1)
 
 **Admission notice:** A JW201 (CSC scholarship) or JW202 (self-funded) admission notice from a Chinese university approved by the Ministry of Education is required. The university issues this after accepting your application.

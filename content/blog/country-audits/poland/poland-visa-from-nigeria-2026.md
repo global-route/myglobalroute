@@ -22,6 +22,8 @@ faqs:
 
 Poland is an EU member state with affordable tuition fees and a large international student community. It has two publishable pathways for Nigerian applicants: a study residence permit and an Employee Card work permit.
 
+
+<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 ## Study residence permit
 
 **Requirements:** Acceptance or enrolment letter from a recognised Polish higher education institution, valid passport, proof of sufficient financial means, health insurance.

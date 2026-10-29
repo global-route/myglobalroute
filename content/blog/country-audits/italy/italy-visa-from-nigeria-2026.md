@@ -11,6 +11,13 @@ keywords: "Italy student visa Nigeria, Italy DSU scholarship, Italy work visa Af
 featured: true
 readTime: "10 min"
 excerpt: "Italy offers zero-tuition public universities, the DSU scholarship for low-income students, and a Decreto Flussi work quota. Here's what each pathway actually requires."
+faqs:
+  - q: "How much money do I need for an Italy student visa?"
+    a: "Approximately EUR 6,167 per year (EUR 514/month) in living funds. Tuition fees are additional. DSU scholarship recipients may be exempt from the funds requirement."
+  - q: "What is the Decreto Flussi?"
+    a: "The Decreto Flussi is Italy's annual quota system for non-EU work permits. Employers apply for a Nulla Osta on behalf of the worker within the quota. The quota is announced each year and demand typically exceeds supply within hours of opening."
+  - q: "Can I get the DSU scholarship as a Nigerian student?"
+    a: "Yes. The DSU scholarship is available to non-EU students including Nigerians. Eligibility is based on your ISEE household income assessment, not your nationality. You must be enrolled at a participating Italian public university."
 ---
 
 # Italy Visa from Nigeria: Study, Work and DSU Scholarship Guide 2026
