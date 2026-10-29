@@ -19,6 +19,13 @@ credentials.json
 /internal/
 .internal/
 
+# Root-level internal planning and blueprint docs
+global_opportunity_integration_framework_platform_roadmap.md
+find_mypathway_schema_api_specifications.md
+find_mypathway_ux_layout_interface_design.md
+docs/sprints/system_architecture_platform_blueprint.md
+create_blog_images.py
+
 # Build & Distribution
 dist/
 build/
