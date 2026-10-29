@@ -18,6 +18,7 @@ credentials.json
 # Internal/Confidential (DO NOT PUSH)
 /internal/
 .internal/
+docs/research/
 
 # Root-level internal planning and blueprint docs
 global_opportunity_integration_framework_platform_roadmap.md
