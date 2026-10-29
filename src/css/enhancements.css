@@ -95,16 +95,16 @@
 }
 
 .page-header-badge {
-  display: inline-block;
-  background-color: var(--color-page-bg);
-  border: 1px solid var(--color-neutral-200);
-  color: var(--color-primary);
-  font-size: 0.75rem;
+  display: none;
+}
+
+.page-header-category {
+  font-size: 0.8rem;
   font-weight: 600;
-  padding: 0.25rem 0.75rem;
-  border-radius: 2px;
-  margin-bottom: var(--spacing-md);
-  letter-spacing: 0.03em;
+  color: var(--color-neutral-500);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--spacing-sm);
 }
 
 /* ── SECTION EYEBROW ── */
@@ -625,7 +625,7 @@ th {
   transition: box-shadow var(--transition-base);
 }
 
-.blog-post-card:hover { box-shadow: var(--shadow-md); }
+.blog-post-card:hover { border-color: var(--color-primary); }
 
 .post-category {
   display: inline-flex;
@@ -921,7 +921,7 @@ th {
   transition: box-shadow var(--transition-fast);
 }
 
-.wizard-result-card:hover { box-shadow: var(--shadow-md); }
+.wizard-result-card:hover { border-color: var(--color-primary); }
 
 .wizard-result-header {
   display: flex;
@@ -997,7 +997,7 @@ th {
   transition: box-shadow var(--transition-base);
 }
 
-.tool-split-card:hover { box-shadow: var(--shadow-md); }
+.tool-split-card:hover { border-color: var(--color-primary); }
 
 .tool-split-card--accent {
   border-top-color: var(--color-amber);
