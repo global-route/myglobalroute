@@ -1,6 +1,6 @@
 # Active Sprint — Owner Actions & Ongoing Maintenance
 
-> **Updated:** 2026-10-29 | **Branch:** `main` | **Commit:** `e871731`
+> **Updated:** 2026-10-29 | **Branch:** `main` | **Commit:** `e87f15c`
 > **Production:** `https://mypathway2global.org.uk` (Cloudflare Workers — `globalroute`)
 > **Tests:** 19/19 suites, 180/180 passing
 
@@ -8,25 +8,31 @@
 
 ## Current state
 
-All code phases complete (0-9, B, CP, GOIF, Vertical B). No code tasks are blocked.
+All code phases complete (0-9, B, CP, GOIF, Vertical B). No code tasks are blocked. Remaining work is owner actions and ongoing content maintenance only.
 
 | Metric | Value |
 |---|---|
-| Countries | 30 (27 Europe/Americas/Asia + 3 African nomad hubs) |
+| Countries | 30 (27 original + MU, CV, NA) |
 | Pathways | 68 (62 publishable / 6 research_required) |
-| Evidence records | 208+ |
+| Evidence records | 216 (18 primary + 198 addenda) |
 | Blog posts | 38 across 7 categories |
-| Sitemap URLs | 92+ |
+| Sitemap URLs | 89 |
 | Test suites | 19/19 PASS |
 | Tests | 180/180 PASS |
-| GOIF schema | 7 pathways with asymmetry_category + capital_tier |
-| remote_freelance | MU Premium Visa, CV Remote Work, NA Digital Nomad |
+| GOIF pathways | 7 tagged (asymmetry_category + capital_tier) |
+| remote_freelance | 3 pathways — MU, CV, NA |
+| PR-route tagged | 10 pathways — CA, AU×3, NZ×3, IE, FR, PT |
+| Nomad tagged | 6 pathways — DE, PT, ES, MU, CV, NA |
 | Region filter | 10 regions in Find MyPathway |
-| PR vector filter | 10 pathways tagged pr-route |
 | ⌘K search | Modal search across countries, pathways, posts — all pages |
-| Service Worker | Live (`public/sw.js`) |
+| pSEO pages | pathways-funded-study.html + pathways-regional-skilled.html |
 | localStorage cache | goif_pathways_v1 (24h TTL) |
+| Service Worker | Live (`public/sw.js`) |
+| Save My Plan export | Live (client-side JSON, Find MyPathway) |
+| Stale requirements | 0 — last refreshed 2026-10-29 |
+| OG image | All pages tagged (image asset pending owner) |
 | Ad revenue | £0 — AdSense policy review pending |
+| Email capture | Form live — Mailchimp action URL pending owner |
 
 ---
 
@@ -34,69 +40,64 @@ All code phases complete (0-9, B, CP, GOIF, Vertical B). No code tasks are block
 
 | # | Item | Effort | Blocks |
 |---|---|---|---|
-| 1 | Favicon PNG | 5 min | Browser tab icon, PWA homescreen icon |
-| 2 | OG image | 20 min | Social share cards on all pages |
-| 3 | Mailchimp action URL | 10 min | Email capture going live |
-| 4 | ARIA audit | 30 min | Accessibility gate |
-| 5 | Country source sign-off (27 entries) | 1-2 hrs | `dataset.asOf` update |
-| 6 | Legal review | Solicitor | Trust gate |
-| — | Quarterly audit routine | ✅ Done | GitHub Actions workflow live — `.github/workflows/stale-pathways.yml` |
-| — | AdSense | **Done** | Publisher ID `ca-pub-8077583188666813` live, policy review pending |
+| 1 | OG image (1200×630px) | 20 min | Social share cards on all pages |
+| 2 | Mailchimp action URL | 10 min | Email capture going live |
+| 3 | ARIA audit (axe on 4 pages) | 30 min | Accessibility gate — share results for code fixes |
+| 4 | Country source sign-off (30 entries) | 1-2 hrs | `dataset.asOf` update |
+| 5 | Legal review (privacy/disclaimer/terms) | Solicitor | Trust gate |
+| — | Favicon PNG | ✅ Done | Files in `public/` root |
+| — | Quarterly audit routine | ✅ Done | GitHub Actions workflow live |
+| — | AdSense | ✅ Done | Publisher ID live, policy review pending |
 
 See `docs/sprints/OWNER_ACTIONS.md` for full instructions on each item.
 
 ---
 
-## Completed sprints (see CHANGELOG.md for full deliveries)
+## Completed sprints
 
-| Sprint | Date | Tasks | Reference |
+| Sprint | Date | Commit | Key deliverables |
 |---|---|---|---|
-| GOIF S3-1 + S4 | 2026-10-29 | Gap card GOIF fields, 2 pSEO pages, sitemap, localStorage cache, 3 tests | `d5ce2b0` |
-| GOIF S1 + S2 | 2026-10-29 | 4 seed pathways, route type filter, funded badge, 4 blog posts, sitemap | `d5f0210` |
-| Content Platform Sprint | 2026-10-28 | 14 tasks — Ireland/Spain audits, comparative playbooks, audit badges, localStorage, FAQPage schema, 3 landing pages, SW, export, stale script | `CHANGELOG.md` 2026-10-28 entry |
-| Data freshness + wizard tests | 2026-10-28 | 19 stale fields refreshed, 31 wizard tests, GitHub Actions stale workflow | `CHANGELOG.md` 2026-10-28 entry |
-| N-P2/P3 + 4 country audits | 2026-10-28 | FMP extension routes, evidence trail + next action on cards, Austria/NZ/Japan/South Korea audits | `CHANGELOG.md` 2026-10-28 entry |
-| Production Readiness | 2026-10-25 | 23 tasks | `CHANGELOG.md` 2026-10-25 entry |
+| Vertical B + ⌘K search | 2026-10-29 | `e87f15c` | 3 African nomad countries, 3 remote_freelance pathways, 4 blog posts, region filter, PR filter, ⌘K search modal |
+| Region + PR filters | 2026-10-29 | `e871731` | Target Region select, pr-route filter, IE/FR/PT pr-route tags, doc updates |
+| Data freshness | 2026-10-29 | `6d29814` | 37 stale effectiveDate fields refreshed |
+| GOIF S3-1 + S4 | 2026-10-29 | `d5ce2b0` | Gap card GOIF fields, 2 pSEO pages, localStorage cache, 3 tests |
+| GOIF S1 + S2 | 2026-10-29 | `441b9fe` | 4 seed pathways, route type filter, funded badge, 4 blog posts |
+| Content Platform Sprint | 2026-10-28 | — | Ireland/Spain audits, comparative playbooks, audit badges, SW, export, stale script |
+| N-P2/P3 + 4 country audits | 2026-10-28 | — | FMP extension routes, evidence trail, Austria/NZ/Japan/South Korea audits |
+| Production Readiness | 2026-10-25 | — | 23 tasks — 27-country registry, USA pathways, OG tags, 404, manifest |
 
 ---
 
 ## Next sprint candidates
 
-### Priority 1 — Data freshness
-| ID | Task | Status | Notes |
+### Priority 1 — Owner-gated (no code needed)
+| ID | Task | Effort | Notes |
 |---|---|---|---|
-| N-D1 | Stale pathway requirements | ✅ Done | 37 fields refreshed 2026-10-29 across CA, IE, DE, IT, FR, HU, SE, LU, LT, IS, ES, AT, KR, CN, PL, MT, CH, CZ |
-| N-D2 | Country source sign-off (27 entries) | Owner | Open `docs/data/country-source-review-manifest.json`, set `humanSignOff: true` on all 27 |
+| N-T1 | ARIA audit — 4 core pages | 30 min | Run axe on homepage, Find MyPathway, Visa Wizard, Calculator; share results |
+| N-T2 | Legal review | Solicitor | privacy/disclaimer/terms sign-off |
+| N-T3 | OG image | 20 min | 1200×630px, navy `#10316b` bg, white wordmark |
+| N-T4 | Mailchimp URL | 10 min | Replace placeholder in `src/pages/blog.html` |
+| N-D2 | Country source sign-off (30 entries) | 1-2 hrs | `docs/data/country-source-review-manifest.json` → set `humanSignOff: true` |
 
-### Priority 2 — Trust & compliance (owner-gated)
-| ID | Task | Owner | Notes |
-|---|---|---|---|
-| N-T1 | ARIA audit — 4 core pages | Owner | Run axe DevTools on homepage, Find MyPathway, Visa Wizard, Calculator |
-| N-T2 | Legal review — privacy/disclaimer/terms | Owner | Solicitor sign-off required |
-| N-T3 | Consent UI validation in real browser | Owner | Confirm analytics/advertising toggles, ad slots hidden when consent off |
-| N-T4 | Live CSP audit | Owner | Compare `public/_headers` CSP against actual scripts per page |
-| N-T5 | Quarterly audit routine | ✅ Done | GitHub Actions workflow live |
-
-### Priority 3 — Content expansion
+### Priority 2 — Content gaps (code-ready)
 | ID | Task | Notes |
 |---|---|---|
-| N-C5 | AfCFTA / intra-Africa corridor content | Blueprint Vertical B — Rwanda, Mauritius, Ghana, Kenya business hubs |
-| N-C6 | African digital nomad hub audits | Mauritius Premium Visa, Cape Verde Remote Work, Namibia Digital Nomad |
-| N-C7 | GOIF Sprint 2 playbooks | Australia DAMA, Italy DSU need-blind, Asian/Nordic accelerators, Portugal D3 — markdown content exists, needs editorial review |
+| N-C8 | 12 missing country audit blog posts | FI, SE, NO, LU, HU, LT, IS, PL, MT, CH, CZ, CN — all have publishable pathways, no blog post |
+| N-C9 | AfCFTA business corridors | Rwanda, Mauritius (business), Ghana, Kenya — Vertical B expansion |
+| N-C10 | Diaspora repatriation guide | December campaign — blueprint Vertical B item |
 
-### Priority 4 — Product (code-ready)
+### Priority 3 — Product (code-ready)
 | ID | Task | Notes |
 |---|---|---|
-| N-P4 | WebPage schema on pSEO pages | Add JSON-LD WebPage markup to pathways-funded-study.html + pathways-regional-skilled.html |
-| N-P5 | Nav link for pSEO pages | Add "Funded Routes" entry to footer Explore section |
-| N-P6 | GOIF remote_freelance pathways | Research + ingest digital nomad routes with asymmetry_category: remote_freelance |
+| N-P4 | WebPage JSON-LD on pSEO pages | Add to pathways-funded-study.html + pathways-regional-skilled.html |
+| N-P5 | Footer nav link to pSEO pages | Add "Funded Routes" to footer Explore section |
+| N-P6 | Sidebar layout | Blueprint section 3 — document-style left sidebar on Find MyPathway; significant layout change |
 
-### Priority 5 — Revenue & growth
+### Priority 4 — Revenue
 | ID | Task | Notes |
 |---|---|---|
-| N-R1 | AdSense revenue reconciliation baseline | After first 30 days live: record impressions, clicks, RPM |
-| N-R2 | Mailchimp action URL | Replace placeholder in `src/pages/blog.html` |
-| N-R3 | Affiliate infrastructure | Requires legal review before any lead flow activates |
+| N-R1 | AdSense revenue baseline | After first 30 days live: record impressions, clicks, RPM |
+| N-R2 | Affiliate infrastructure | Requires legal review first |
 
 ---
 
@@ -107,5 +108,6 @@ npm run build                              # build to dist/
 npx wrangler deploy                        # deploy to Cloudflare Workers
 npm test                                   # 19/19 suites, 180/180 tests
 node scripts/verify-build.js               # build integrity check
-node scripts/check-stale-pathways.js       # flag pathway requirements >90 days old
+node scripts/check-stale-pathways.js       # flag requirements >90 days old
+node scripts/generate-country-source-manifest.js --write  # regenerate manifest
 ```

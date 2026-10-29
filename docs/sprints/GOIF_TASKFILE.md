@@ -30,7 +30,9 @@
 | S5-3 remote_freelance in Route Type select | ✅ Done (enum live, no pathways yet) |
 | S5-4 IE/FR/PT pr-route wizardTags | ✅ Done |
 
-**Remaining:** `remote_freelance` pathways — Mauritius Premium Visa, Cape Verde Remote Work, Namibia Digital Nomad. Content + evidence + pathway records needed.
+**Remaining:** `remote_freelance` pathways — ✅ Done. MU-premium-visa, CV-remote-work-visa, NA-digital-nomad-visa all publishable with evidence records and blog posts.
+
+**All GOIF sprints and Vertical B complete.**
 
 ---
 

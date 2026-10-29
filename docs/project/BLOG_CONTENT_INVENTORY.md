@@ -1,6 +1,6 @@
 # Blog Content Inventory & Pathway Reference
 
-> **Generated:** 2026-10-29 | **Posts:** 34 | **Pathways covered:** 55+ across 20 countries
+> **Generated:** 2026-10-29 | **Posts:** 38 | **Pathways covered:** 62 publishable across 30 countries
 > Use this document to plan new posts, identify gaps, and maintain consistency.
 
 ---
@@ -9,14 +9,31 @@
 
 | Category | Posts | Countries covered |
 |---|---|---|
-| Country Audits | 15 | Germany, Canada, UK, Italy, Portugal, USA, Australia, France, Netherlands, Ireland, Spain, Austria, New Zealand, Japan, South Korea |
-| Student Playbooks | 5 | Italy (DSU complete guide, DSU need-blind, DSU vs Germany), UK, Italy vs. Germany |
-| Professional Playbooks | 5 | Canada, Germany, Germany vs. Canada, Australia DAMA, Portugal D3 |
+| Country Audits | 15 | DE, CA, GB, IT, PT, US, AU, FR, NL, IE, ES, AT, NZ, JP, KR |
+| Student Playbooks | 5 | Italy (DSU complete, DSU need-blind, DSU vs Germany), UK, Italy vs. Germany |
+| Professional Playbooks | 8 | Canada, Germany, Germany vs. Canada, AU DAMA, PT D3, MU, CV, NA |
 | Business Playbooks | 1 | USA |
 | Case Studies | 2 | Canada (success), Multi-country (rejection) |
-| Guides | 6 | Multi-country (incl. Nordic/Asia roundup, Asian/Nordic accelerators) |
+| Guides | 7 | Motivation letter, Document auth, Blocked account, Passport tiers, Nordic/Asia study, Asian/Nordic accelerators, African Digital Nomad Hubs |
 | Policy Updates | 1 | Canada |
-| **Total** | **35** | **15 primary + multi-country guides** |
+| **Total** | **39** | **15 country audits + 15 multi-country** |
+
+## Content gaps (countries with pathways but no audit post)
+
+| Country | Pathways | Priority |
+|---|---|---|
+| Finland (FI) | FI-study, FI-work | Medium |
+| Sweden (SE) | SE-study, SE-work | Medium |
+| Norway (NO) | NO-study, NO-work | Medium |
+| Luxembourg (LU) | LU-study, LU-work | Low |
+| Hungary (HU) | HU-study, HU-work | Low |
+| Lithuania (LT) | LT-study, LT-work | Low |
+| Iceland (IS) | IS-study, IS-work | Low |
+| Poland (PL) | PL-study, PL-work | Low |
+| Malta (MT) | MT-study, MT-work | Low |
+| Switzerland (CH) | CH-study, CH-work | Medium |
+| Czechia (CZ) | CZ-study, CZ-work | Low |
+| China (CN) | CN-study, CN-work | Medium |
 
 ---
 

@@ -2,7 +2,7 @@
 
 > **Updated:** 2026-10-29 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 180/180 passing
-> **Commit:** `6d29814` | **Blog posts:** 34 | **Sitemap URLs:** 83+ | **Stale requirements:** 0
+> **Commit:** `e87f15c` | **Blog posts:** 38 | **Sitemap URLs:** 89 | **Stale requirements:** 0
 
 ---
 
@@ -120,17 +120,16 @@ All 23 production readiness tasks complete. See `docs/sprints/PRODUCTION_READINE
 
 ## Phase 1 — Migration intelligence ✅ code / ⏳ owner
 
-- 27-country registry, 65 pathways (59 publishable / 6 research_required)
-- 59/59 publishable pathways have `requirements[]`
+- 30-country registry, 68 pathways (62 publishable / 6 research_required)
+- 62/62 publishable pathways have `requirements[]`
 - 6 research_required all have `permanentBlocker` or `scopeNote`
-- 202+ evidence records across primary-source-verified.json + addenda
+- 216 evidence records (18 primary + 198 addenda)
 - Route engine: `{ matches, alternatives, missingInput, zeroFitExplanations }`
-- 180-day staleness detection on requirement `effectiveDate`
-- Country source manifest generated for all 27 countries
-- All stale requirement `effectiveDate` fields refreshed to 2026-10-29 (37 fields across CA, IE, DE, IT, FR, HU, SE, LU, LT, IS, ES, AT, KR, CN, PL, MT, CH, CZ)
+- 180-day staleness detection; 0 stale as of 2026-10-29
+- Country source manifest generated for all 30 countries
 
 **Open (owner):**
-- Set `humanSignOff: true` on all 27 manifest entries → `docs/data/country-source-review-manifest.json`
+- Set `humanSignOff: true` on all 30 manifest entries → `docs/data/country-source-review-manifest.json`
 - Update `dataset.asOf` after sign-off
 
 ---
@@ -148,22 +147,22 @@ All 23 production readiness tasks complete. See `docs/sprints/PRODUCTION_READINE
 
 ## Phase 3 — Content & acquisition ✅
 
-- 34 blog posts across 7 categories:
+- 38 blog posts across 7 categories:
   - 15 Country Audits
-  - 5 Student Playbooks (+ Italy DSU need-blind)
-  - 5 Professional Playbooks (+ Australia DAMA, Portugal D3)
+  - 5 Student Playbooks
+  - 8 Professional Playbooks (incl. AU DAMA, PT D3, MU, CV, NA)
   - 1 Business Playbook
   - 2 Case Studies
-  - 6 Guides (+ Asian/Nordic tech accelerators)
+  - 7 Guides (incl. African Digital Nomad Hubs, Asian/Nordic accelerators)
   - 1 Policy Update
-- GOIF Sprint 2 playbooks: Australia DAMA, Italy DSU need-blind, Asian/Nordic accelerators, Portugal D3
+- 12 countries with publishable pathways but no country audit: FI, SE, NO, LU, HU, LT, IS, PL, MT, CH, CZ, CN
 - All em dashes replaced with hyphens across all posts
 - 1 YouTube embed per post (verified video IDs)
 - All fabricated approval rate claims removed
 - OG/Twitter tags on all pages
 - Canonical tags on all generated HTML files
 - Sabilytics analytics on all pages
-- All 34 blog posts in sitemap.xml (83+ URLs total)
+- All 38 blog posts in sitemap.xml (89 URLs total)
 
 ---
 
@@ -279,6 +278,21 @@ A task is not complete because a file exists. Legal/data claims require evidence
 - 19/19 suites, 180/180 tests
 
 **Open:** remote_freelance pathways — Mauritius Premium Visa, Cape Verde Remote Work, Namibia Digital Nomad (Vertical B content)
+
+---
+
+## Phase Vertical B — African Mobility Hubs ✅ (2026-10-29)
+
+- 3 new countries: Mauritius (MU), Cape Verde (CV), Namibia (NA)
+- 3 remote_freelance pathways: MU-premium-visa, CV-remote-work-visa, NA-digital-nomad-visa
+- Evidence addendum: 2026-10-29-vertical-b-remote-freelance.json (6 records)
+- 4 blog posts: Mauritius Premium Visa, Cape Verde Remote Work Visa, Namibia Digital Nomad Visa, African Digital Nomad Hubs
+- Target Region filter in Find MyPathway (10 regions from country categories)
+- PR vector filter — 10 pathways tagged pr-route (CA, AU×3, NZ×3, IE, FR, PT)
+- ⌘K search modal on all 26 HTML pages + blog template
+- Countries: 27 → 30 | Pathways: 65 → 68 | Blog posts: 34 → 38 | Evidence: 202 → 216
+
+**Open:** AfCFTA business corridors (Rwanda, Ghana, Kenya), diaspora repatriation guide
 
 ---
 
