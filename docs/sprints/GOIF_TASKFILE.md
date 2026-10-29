@@ -1,117 +1,69 @@
 # GOIF Implementation Taskfile
 **Global Opportunity Integration Framework**
-**Source doc:** `global_opportunity_integration_framework_platform_roadmap.md`
-**Baseline:** 61 pathways · 27 countries · 19/19 suites · 168/168 tests · Cloudflare Workers
+**Updated:** 2026-10-29 | **Baseline:** 65 pathways · 59 publishable · 19/19 suites · 177/177 tests
 
 ---
 
-## How this fits the existing codebase
+## Status summary
 
-| Framework concept | Maps to |
+| Task | Status |
 |---|---|
-| `asymmetry_category` | New optional field on pathway objects in `src/data/pathways.json` |
-| `capital_tier` | New optional field on pathway objects in `src/data/pathways.json` |
-| `regional_concessions` | New optional object on pathway objects (display-only, not eligibility-gated) |
-| `proof_of_funds.amount_usd` | Informational companion to existing `minimum_funds` requirement |
-| Filter toggle "High Asymmetry" | New `<select>` or button group in `src/pages/find-mypathway.html` inline script |
-| Tier 1 Funded badge | New badge variant alongside existing `freshness-badge` in `renderCard()` |
-| Near-Miss gap engine | Extension of existing gap-card logic in `find-mypathway.html` |
-| pSEO landing pages | New static HTML pages in `src/pages/` served by Cloudflare Workers |
-| New playbooks | New markdown files in `content/blog/playbooks/` |
-| Validator | Extension of `scripts/validate-data.js` — new allowed fields |
+| S1-1 Schema + 4 seed pathways | ✅ Done |
+| S1-2 Validator enum checks | ✅ Done |
+| S1-3 Route Type filter in Find MyPathway | ✅ Done |
+| S1-4 Funded badge on cards | ✅ Done |
+| S1-5 Tests (route-engine + data-contract) | ✅ Done |
+| S2-1 Australia DAMA playbook | ❌ Missing |
+| S2-2 Italy DSU need-blind playbook | ❌ Missing |
+| S2-3 Asian & Nordic tech accelerators guide | ❌ Missing |
+| S2-4 Portugal D3 playbook | ❌ Missing |
+| S2-5 blog-posts.json + sitemap for new posts | ❌ Pending S2-1–4 |
+| S3-1 Near-miss gap card (regional_concessions) | ⚠️ Partial — gap card exists but ignores GOIF fields |
+| S3-2 Asymmetry results header note | ✅ Done |
+| S3-3 Funded badge CSS | ✅ Done |
+| S4-1 pSEO page: funded study routes | ❌ Missing |
+| S4-2 pSEO page: regional skilled gap routes | ❌ Missing |
+| S4-3 Sitemap + routes for pSEO pages | ❌ Pending S4-1–2 |
+| S4-4 localStorage cache for pathway data | ❌ Missing |
 
 ---
 
-## Sprint 1 — Schema & Engine (Weeks 1–2)
+## Sprint 2 — Content & Playbooks
 
-### S1-1 · Extend pathway schema — add optional GOIF fields
-
-**File:** `src/data/pathways.json`
-
-Add three optional top-level fields to any pathway object that passes the 4-Filter System. Existing pathways without these fields remain valid.
-
-```json
-"asymmetry_category": "regional_skilled_gap",
-"capital_tier": "tier_2_moderate",
-"regional_concessions": {
-  "age_limit_extension": 55,
-  "language_score_floor_reduction": true,
-  "salary_concession_percent": 10
-}
-```
-
-Allowed `asymmetry_category` values: `tech_engineering` · `academic_research` · `regional_skilled_gap` · `remote_freelance`
-Allowed `capital_tier` values: `tier_1_funded` · `tier_2_moderate` · `tier_3_standard`
-
-**Seed the 4 researched pathways** from the roadmap doc as new pathway objects (status `"publishable"`, type `"work"` or `"study"`, with full `requirements[]` and `evidenceIds[]` following existing schema). Country codes must use existing 2-letter IDs (`AU`, `IT`, `JP`, `PT`).
-
-> ⚠️ `country_code` in the roadmap uses 3-letter ISO — map to existing 2-letter IDs used in `pathways.json`.
-
----
-
-### S1-2 · Update validator to allow new fields
-
-**File:** `scripts/validate-data.js`
-
-Add `asymmetry_category`, `capital_tier`, `regional_concessions` to the list of allowed pathway-level fields so the validator does not reject them. Add enum checks for the two string fields.
-
----
-
-### S1-3 · Add "High Asymmetry" filter to Find MyPathway
-
-**File:** `src/pages/find-mypathway.html`
-
-Add a `<select name="asymmetry">` (or button group) to the existing filter form with options:
-- `""` → All routes (default)
-- `"tier_1_funded"` → Funded / Stipend-backed
-- `"tier_2_moderate"` → Moderate capital
-- `"regional_skilled_gap"` → Regional skilled gap
-- `"tech_engineering"` → Tech & engineering
-
-In the inline `<script>`, extend the profile object to read `asymmetry` from the form. In `RouteEngine.findMatches()` (or the post-filter step in the page script), filter out pathways that don't match when a non-empty asymmetry value is selected. Pathways without `asymmetry_category` or `capital_tier` are excluded when a filter is active.
-
----
-
-### S1-4 · Render Tier 1 Funded badge in pathway cards
-
-**File:** `src/pages/find-mypathway.html` — `renderCard()` function
-
-After the existing `freshness-badge`, conditionally render a second badge:
-
-```js
-const fundedBadge = pathway.capital_tier === 'tier_1_funded'
-  ? '<span class="funded-badge">✦ Funded</span>'
-  : '';
-```
-
-Add `.funded-badge` styles to `src/css/enhancements.css` (green pill, consistent with existing badge styles).
-
----
-
-### S1-5 · Update tests
-
-**File:** `tests/route-engine.test.js`
-
-Add test cases:
-- Pathway with `capital_tier: "tier_1_funded"` is returned when asymmetry filter is `"tier_1_funded"`.
-- Pathway without `asymmetry_category` is excluded when filter is active.
-- Pathway without GOIF fields still passes existing eligibility scoring.
-
-**File:** `tests/data-contract.test.js`
-
-Add assertions that `asymmetry_category` and `capital_tier`, when present, are within their allowed enum sets.
-
----
-
-## Sprint 2 — Content & Playbooks (Weeks 3–4)
-
-### S2-1 · Australia DAMA Deep-Dive Guide
+### S2-1 · Australia DAMA Deep-Dive Playbook
 
 **File:** `content/blog/playbooks/professional/australia-dama-regional-stream-2026.md`
 
-Frontmatter: `category: "Professional Playbooks"`, `goal: "work"`, `country: "Australia"`.
-Cover: DAMA structure, occupation list access, age/English concessions, employer sponsorship process, 491→191 PR vector, proof-of-funds AUD 5,300.
-Primary source: `https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/site-agreements/designated-area-migration-agreements`
+```yaml
+layout: blog-post.njk
+title: "Australia DAMA Regional Stream 2026: The Employer-Sponsored Route with Age and English Concessions"
+date: 2026-10-29
+lastFactChecked: 2026-10-29
+author: "MyPathway2Global Editorial"
+category: "Professional Playbooks"
+country: "Australia"
+goal: "work"
+readTime: "13 min"
+featured: true
+excerpt: "Australia's Designated Area Migration Agreements let regional employers sponsor workers outside the standard skilled occupation list — with age caps extended to 55, English score floors reduced, and salary concessions of up to 10%. Here is what the process actually requires."
+keywords: "australia dama visa nigeria, designated area migration agreement africa, regional employer sponsored visa australia 2026"
+faqs:
+  - q: "What is a DAMA and how is it different from a standard skilled visa?"
+    a: "A DAMA is a formal agreement between the Australian Government and a regional authority that allows employers in that region to sponsor workers for occupations and at concession levels not available under standard skilled migration. The key differences are: age cap extended to 55 (standard is 45), English score floors reduced, and expanded occupation lists."
+  - q: "Do I need a job offer for a DAMA visa?"
+    a: "Yes. DAMA pathways are employer-sponsored — you cannot self-sponsor. The employer must be an approved DAMA sponsor operating in a designated regional area."
+  - q: "Does the DAMA lead to permanent residency?"
+    a: "Yes. DAMA workers typically enter on a Temporary Skill Shortage (TSS) visa or similar, and can transition to permanent residence after meeting regional work requirements — typically 3 years in the region."
+```
+
+Content sections:
+- What is a DAMA — structure, regional authorities, how agreements work
+- The concessions — age 55, English floor reduction, salary concession up to 10%, expanded occupation lists
+- How to find a DAMA employer — regional authority websites, job boards
+- Application process — TSS visa, Labour Agreement stream, nomination, visa application
+- PR vector — 3 years regional work → subclass 191 permanent residence
+- Proof of funds — AUD 5,300 indicative setup cost
+- Evidence note — all figures from `https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/site-agreements/designated-area-migration-agreements`
 
 ---
 
@@ -119,21 +71,73 @@ Primary source: `https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-
 
 **File:** `content/blog/playbooks/student/italy-dsu-need-blind-scholarship-2026.md`
 
-Frontmatter: `category: "Student Playbooks"`, `goal: "study"`, `country: "Italy"`.
-Cover: ISEE calculation for foreign applicants, DSU regional operators, zero-tuition + accommodation + meal voucher + €5,400–7,000 stipend, application timeline, study permit process.
-Primary source: `https://www.dsu.toscana.it/`
+```yaml
+layout: blog-post.njk
+title: "Italy DSU Need-Blind Scholarship 2026: ISEE, Zero Tuition and the EUR 7,000 Stipend"
+date: 2026-10-29
+lastFactChecked: 2026-10-29
+author: "MyPathway2Global Editorial"
+category: "Student Playbooks"
+country: "Italy"
+goal: "study"
+readTime: "12 min"
+featured: true
+excerpt: "Italy's DSU scholarship is means-tested, not merit-tested. If your household income qualifies under the ISEE system, you can receive zero tuition, free accommodation, free meals and up to EUR 7,000/year in cash. Here is how the ISEE calculation works for African applicants."
+keywords: "italy dsu scholarship isee nigeria, need blind scholarship italy africa 2026, free university italy african students"
+faqs:
+  - q: "What is the ISEE and how is it calculated for international students?"
+    a: "ISEE (Indicatore della Situazione Economica Equivalente) is Italy's means-test for household income and assets. For international students, it is calculated using income and assets in your home country, converted to EUR. You obtain the ISEE certification from the Italian consulate in your country or from a CAF office in Italy."
+  - q: "What does the DSU scholarship actually cover?"
+    a: "Zero tuition fees, free on-campus accommodation (where available), free meal vouchers at university canteens, and a cash grant of EUR 5,400 to EUR 7,000 per academic year depending on your ISEE score and the regional DSU authority."
+  - q: "Is the DSU scholarship competitive?"
+    a: "Yes. Not all eligible applicants receive the full benefit package — places for accommodation are limited. You must apply early in the academic year. The scholarship is separate from university admission."
+```
 
-> Note: A DSU playbook already exists (`italy-dsu-scholarship-complete-guide`). This new post should be scoped specifically to the need-blind / ISEE angle and cross-link to the existing guide to avoid duplication.
+Content sections:
+- DSU vs merit scholarships — why need-blind matters for African applicants
+- ISEE for international students — step-by-step: what documents, where to get certified, ISEE thresholds (2025-26: income < EUR 26,306, patrimony < EUR 52,083 for Toscana)
+- What the benefit package covers — tuition waiver, accommodation, meals, cash grant breakdown
+- Regional DSU operators — Toscana, Lombardia, Lazio, how to find your university's operator
+- Application timeline — when bando opens, deadlines, provisional vs final award
+- Study visa process — how DSU interacts with the standard Italian study visa
+- Cross-link to existing `italy-dsu-scholarship-complete-guide` for application walkthrough
+- Evidence note — all figures from `https://www.dsu.toscana.it/`
 
 ---
 
-### S2-3 · Asian & Nordic Tech Accelerators Summary
+### S2-3 · Asian & Nordic Tech Accelerators Guide
 
 **File:** `content/blog/guides/study/asian-nordic-tech-accelerators-africa-2026.md`
 
-Frontmatter: `category: "Guides"`, `goal: ""`.
-Cover: Tokyo Forge / Tokyo Metropolitan startup visa, Nordic accelerator programs (Sweden, Finland, Norway), zero-equity models, grant funding, startup visa endorsement paths.
-Primary source: `https://www.metro.tokyo.lg.jp/english/`
+```yaml
+layout: blog-post.njk
+title: "Asian and Nordic Tech Accelerators for African Founders 2026: Zero-Equity Programs with Visa Pathways"
+date: 2026-10-29
+lastFactChecked: 2026-10-29
+author: "MyPathway2Global Editorial"
+category: "Guides"
+goal: ""
+readTime: "11 min"
+featured: false
+excerpt: "Tokyo, Helsinki, Stockholm and Oslo run zero-equity accelerator programs that include startup visa endorsement. For African tech founders, these are lower-friction entry points than standard work visas. Here is what each program actually requires."
+keywords: "tokyo startup visa africa, nordic accelerator african founders, japan tech accelerator nigeria 2026, helsinki startup permit africa"
+faqs:
+  - q: "What is the Tokyo Startup Visa?"
+    a: "A 6-month status of residence issued to founders endorsed by a Tokyo Metropolitan Government-designated support organisation. It allows you to establish a business in Japan. After 6 months, you can convert to a standard Business Manager visa if your business meets the criteria (JPY 5,000,000 capital or 2 full-time employees)."
+  - q: "Do Nordic accelerators provide visa support?"
+    a: "Sweden, Finland and Norway all have startup visa or entrepreneur residence permit routes. Acceptance into a recognised accelerator program strengthens the application. Finland's startup permit requires endorsement from Business Finland."
+  - q: "What does zero-equity mean in practice?"
+    a: "The accelerator takes no ownership stake in your company in exchange for the program. You receive funding, lab access, mentorship and corporate introductions without diluting your cap table."
+```
+
+Content sections:
+- Why accelerators beat standard work visas for founders — no salary threshold, no employer sponsor
+- Tokyo — Tokyo Metropolitan Government startup support, Tokyo Startup Visa mechanics, 6-month → Business Manager conversion, JPY 5M capital requirement
+- Helsinki — Business Finland startup permit, what qualifies as a startup, processing time
+- Stockholm — Sweden startup visa (Tillstånd för att starta företag), requirements
+- Oslo — Norway self-employed residence permit, what counts as viable business
+- Comparison table — visa type, duration, capital requirement, PR vector for each
+- Evidence note — primary sources for each country
 
 ---
 
@@ -141,142 +145,225 @@ Primary source: `https://www.metro.tokyo.lg.jp/english/`
 
 **File:** `content/blog/playbooks/professional/portugal-d3-highly-qualified-2026.md`
 
-Frontmatter: `category: "Professional Playbooks"`, `goal: "work"`, `country: "Portugal"`.
-Cover: qualifying occupations, salary threshold, AIMA application process, 5-year PR/citizenship vector, Beckham Law interaction.
-Primary source: `https://aima.gov.pt/pt`
+```yaml
+layout: blog-post.njk
+title: "Portugal D3 Highly Qualified Visa 2026: Fast-Track Residence for Tech Specialists and Researchers"
+date: 2026-10-29
+lastFactChecked: 2026-10-29
+author: "MyPathway2Global Editorial"
+category: "Professional Playbooks"
+country: "Portugal"
+goal: "work"
+readTime: "12 min"
+featured: true
+excerpt: "Portugal's D3 visa is for highly qualified workers with a job contract or service agreement with a Portuguese entity. It leads to permanent residence in 5 years and citizenship in 5 years. The minimum income threshold is above the Portuguese minimum wage — here is what AIMA actually requires."
+keywords: "portugal d3 visa nigeria, highly qualified visa portugal africa 2026, portugal tech visa african professionals"
+faqs:
+  - q: "What qualifies as a highly qualified activity for the D3 visa?"
+    a: "Senior management roles, specialist technical roles requiring a degree or equivalent professional qualification, and research or teaching roles at accredited institutions. The activity must be performed for a Portuguese entity under a qualifying employment contract or service agreement."
+  - q: "How long does the D3 visa take to process?"
+    a: "AIMA processing times vary. The initial D3 long-stay visa is issued by the Portuguese consulate in your country (typically 2-4 months). The residence permit is then issued by AIMA after arrival (typically 1-2 months)."
+  - q: "Does the D3 visa lead to permanent residence?"
+    a: "Yes. After 5 years of legal residence in Portugal, you can apply for permanent residence. After 5 years you can also apply for Portuguese citizenship, which gives EU freedom of movement."
+```
+
+Content sections:
+- What the D3 is and who it is for — tech specialists, researchers, executives, senior managers
+- Qualifying activities — what counts, what does not
+- Qualification requirements — degree or 3+ years relevant experience for non-degree holders
+- Income threshold — above Portuguese minimum wage (EUR 1,020/month in 2026), what AIMA assesses
+- Application process — consulate D3 visa → arrival → AIMA residence permit
+- PR and citizenship vector — 5-year timeline, NHR tax regime interaction
+- Comparison with Digital Nomad (D8) — D3 requires Portuguese employer, D8 requires foreign employer
+- Proof of funds — EUR 2,580 indicative setup cost
+- Evidence note — all figures from `https://aima.gov.pt/pt`
 
 ---
 
-### S2-5 · Update blog-posts.json & sitemap
+### S2-5 · Register new posts + sitemap
 
-**File:** `src/data/blog-posts.json` — add entries for all 4 new posts.
-**File:** `public/sitemap.xml` — add 4 new `<url>` entries.
+**File:** `src/data/blog-posts.json` — append 4 entries after the last existing entry, before the closing `]`:
+
+```json
+{
+  "id": "australia-dama-regional-stream-2026",
+  "title": "Australia DAMA Regional Stream 2026: The Employer-Sponsored Route with Age and English Concessions",
+  "slug": "australia-dama-regional-stream-2026",
+  "excerpt": "Australia's Designated Area Migration Agreements let regional employers sponsor workers outside the standard skilled occupation list — with age caps extended to 55, English score floors reduced, and salary concessions of up to 10%.",
+  "category": "professional-playbooks",
+  "date": "2026-10-29",
+  "updated": "2026-10-29",
+  "author": "MyPathway2Global Editorial",
+  "readTime": "13 min",
+  "content": "content/blog/playbooks/professional/australia-dama-regional-stream-2026.md",
+  "featured": true,
+  "keywords": ["Australia DAMA visa Nigeria", "designated area migration agreement Africa", "regional employer sponsored visa Australia 2026"]
+},
+{
+  "id": "italy-dsu-need-blind-scholarship-2026",
+  "title": "Italy DSU Need-Blind Scholarship 2026: ISEE, Zero Tuition and the EUR 7,000 Stipend",
+  "slug": "italy-dsu-need-blind-scholarship-2026",
+  "excerpt": "Italy's DSU scholarship is means-tested, not merit-tested. If your household income qualifies under the ISEE system, you can receive zero tuition, free accommodation, free meals and up to EUR 7,000/year in cash.",
+  "category": "student-playbooks",
+  "date": "2026-10-29",
+  "updated": "2026-10-29",
+  "author": "MyPathway2Global Editorial",
+  "readTime": "12 min",
+  "content": "content/blog/playbooks/student/italy-dsu-need-blind-scholarship-2026.md",
+  "featured": true,
+  "keywords": ["Italy DSU scholarship ISEE Nigeria", "need blind scholarship Italy Africa 2026", "free university Italy African students"]
+},
+{
+  "id": "asian-nordic-tech-accelerators-africa-2026",
+  "title": "Asian and Nordic Tech Accelerators for African Founders 2026: Zero-Equity Programs with Visa Pathways",
+  "slug": "asian-nordic-tech-accelerators-africa-2026",
+  "excerpt": "Tokyo, Helsinki, Stockholm and Oslo run zero-equity accelerator programs that include startup visa endorsement. For African tech founders, these are lower-friction entry points than standard work visas.",
+  "category": "guides",
+  "date": "2026-10-29",
+  "updated": "2026-10-29",
+  "author": "MyPathway2Global Editorial",
+  "readTime": "11 min",
+  "content": "content/blog/guides/study/asian-nordic-tech-accelerators-africa-2026.md",
+  "featured": false,
+  "keywords": ["Tokyo startup visa Africa", "Nordic accelerator African founders", "Japan tech accelerator Nigeria 2026"]
+},
+{
+  "id": "portugal-d3-highly-qualified-2026",
+  "title": "Portugal D3 Highly Qualified Visa 2026: Fast-Track Residence for Tech Specialists and Researchers",
+  "slug": "portugal-d3-highly-qualified-2026",
+  "excerpt": "Portugal's D3 visa is for highly qualified workers with a job contract or service agreement with a Portuguese entity. It leads to permanent residence in 5 years and citizenship in 5 years.",
+  "category": "professional-playbooks",
+  "date": "2026-10-29",
+  "updated": "2026-10-29",
+  "author": "MyPathway2Global Editorial",
+  "readTime": "12 min",
+  "content": "content/blog/playbooks/professional/portugal-d3-highly-qualified-2026.md",
+  "featured": true,
+  "keywords": ["Portugal D3 visa Nigeria", "highly qualified visa Portugal Africa 2026", "Portugal tech visa African professionals"]
+}
+```
+
+**File:** `public/sitemap.xml` — add 4 `<url>` blocks:
+```xml
+<url><loc>https://mypathway2global.org.uk/blog/playbooks/professional/australia-dama-regional-stream-2026/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://mypathway2global.org.uk/blog/playbooks/student/italy-dsu-need-blind-scholarship-2026/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://mypathway2global.org.uk/blog/guides/study/asian-nordic-tech-accelerators-africa-2026/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://mypathway2global.org.uk/blog/playbooks/professional/portugal-d3-highly-qualified-2026/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+```
 
 ---
 
-## Sprint 3 — UI Trust & Near-Miss Gap Engine (Weeks 5–6)
+## Sprint 3 — UI Trust (remaining)
 
-### S3-1 · Near-Miss gap card for high-capital users
+### S3-1 · Near-miss gap card — surface GOIF fields
 
-**File:** `src/pages/find-mypathway.html` — gap card section
+**File:** `src/pages/find-mypathway.html` — `gapHtml` block (line ~367)
 
-When a user's budget falls below a pathway's `minimum_funds` requirement but the pathway has `capital_tier: "tier_1_funded"` or `"tier_2_moderate"`, surface a "Near-Miss" card showing:
-- How far short they are in USD
-- The `regional_concessions` if present (e.g. "Age cap extended to 55")
-- A CTA to the relevant playbook
+Current gap card shows pathway name, funds shortfall, and timeline. Extend it to also show:
+1. `capital_tier` label — "Tier 1 Funded" or "Low capital route"
+2. `regional_concessions` if present — render as a small list: "Age cap: 55 · English floor reduced · Salary concession: 10%"
+3. CTA link to the relevant playbook — map pathway ID to blog slug:
 
-This extends the existing gap-card HTML block already present in the no-results branch.
+```js
+const GOIF_PLAYBOOK_LINKS = {
+  'AU-dama-regional': '/blog/playbooks/professional/australia-dama-regional-stream-2026/',
+  'IT-dsu-need-blind': '/blog/playbooks/student/italy-dsu-need-blind-scholarship-2026/',
+  'JP-tokyo-tech-accelerator': '/blog/guides/study/asian-nordic-tech-accelerators-africa-2026/',
+  'PT-d3-highly-qualified': '/blog/playbooks/professional/portugal-d3-highly-qualified-2026/'
+};
+```
 
----
-
-### S3-2 · Capital tier filter label in results header
-
-**File:** `src/pages/find-mypathway.html`
-
-When `asymmetry` filter is active, prepend a contextual note to the results `<h2>`:
-> "Showing funded & low-capital routes only — not eligibility assessments."
-
----
-
-### S3-3 · Funded badge CSS
-
-**File:** `src/css/enhancements.css`
-
-```css
-.funded-badge {
-  display: inline-block;
-  padding: 0.2rem 0.55rem;
-  border-radius: 999px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  background: #dcfce7;
-  color: #15803d;
-  margin-left: 0.4rem;
+Render concessions:
+```js
+function renderConcessions(pathway) {
+  const c = pathway.regional_concessions;
+  if (!c) return '';
+  const parts = [];
+  if (c.age_limit_extension) parts.push(`Age cap: ${c.age_limit_extension}`);
+  if (c.language_score_floor_reduction) parts.push('English floor reduced');
+  if (c.salary_concession_percent) parts.push(`Salary concession: ${c.salary_concession_percent}%`);
+  return parts.length ? `<p class="gap-concessions">Concessions: ${parts.join(' · ')}</p>` : '';
 }
 ```
 
 ---
 
-## Sprint 4 — Programmatic SEO (Weeks 7–8)
+## Sprint 4 — Programmatic SEO
 
-### S4-1 · pSEO landing page: Funded Study Routes
+### S4-1 · pSEO page: Funded Study Routes
 
 **File:** `src/pages/pathways-funded-study.html`
 
-Static page at `/pages/pathways-funded-study.html` (or configure Cloudflare Worker route to `/pathways/asymmetry/funded-study/`).
-Lists all pathways where `capital_tier === "tier_1_funded"` and `type === "study"`.
-Structured data: `ItemList` schema.
-Links to Italy DSU and Germany public university blog posts.
+Static HTML page. On load, fetches `/data/pathways.json`, filters `capital_tier === 'tier_1_funded' && type === 'study'`, renders a card list. Structured data: `ItemList` JSON-LD.
+
+Page title: "Funded Study Routes for African Students 2026 | MyPathway2Global"
+Meta description: "Evidence-gated study pathways with zero or near-zero upfront cost — scholarships, stipends and funded programmes verified from official sources."
+
+Card per pathway: country name, pathway name, capital tier badge, source authority, link to official source.
+
+Related links section: Italy DSU playbooks, Germany public universities post.
 
 ---
 
-### S4-2 · pSEO landing page: Regional Skilled Gap Routes
+### S4-2 · pSEO page: Regional Skilled Gap Routes
 
 **File:** `src/pages/pathways-regional-skilled.html`
 
-Static page listing all pathways where `asymmetry_category === "regional_skilled_gap"`.
-Structured data: `ItemList` schema.
-Links to Australia DAMA playbook.
+Same pattern. Filters `asymmetry_category === 'regional_skilled_gap'`. Currently only AU-dama-regional qualifies — page should note this and invite users to check back as more are added.
+
+Page title: "Regional Skilled Gap Routes for African Professionals 2026 | MyPathway2Global"
+Meta description: "Employer-sponsored pathways in regional areas with concessions on age, English and occupation lists — verified from official government sources."
+
+Related links: Australia DAMA playbook.
 
 ---
 
-### S4-3 · Add pSEO pages to sitemap & Cloudflare routes
+### S4-3 · Sitemap entries for pSEO pages
 
-**File:** `public/sitemap.xml` — add 2 new `<url>` entries.
-**File:** `wrangler.jsonc` — confirm static asset routing covers new pages (no change needed if serving from `dist/`).
-
----
-
-### S4-4 · localStorage caching for pathway data
-
-**File:** `src/pages/find-mypathway.html` — `fetch('/data/pathways.json')` call
-
-Wrap the fetch with a 24-hour `localStorage` cache keyed on `goif_pathways_v1`:
-
-```js
-const CACHE_KEY = 'goif_pathways_v1';
-const CACHE_TTL = 86400000; // 24h
-const cached = localStorage.getItem(CACHE_KEY);
-if (cached) {
-  const { ts, data } = JSON.parse(cached);
-  if (Date.now() - ts < CACHE_TTL) return data;
-}
-// ...fetch, then:
-localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data }));
+**File:** `public/sitemap.xml`
+```xml
+<url><loc>https://mypathway2global.org.uk/pages/pathways-funded-study.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://mypathway2global.org.uk/pages/pathways-regional-skilled.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 ```
 
 ---
 
-## Acceptance criteria (all sprints)
+### S4-4 · localStorage cache for pathway data
 
-- [ ] `npm test` passes 19/19 suites with no regressions
-- [ ] `npm run build` succeeds
-- [ ] New pathways pass `scripts/validate-data.js` and `scripts/pathway-requirements.js`
-- [ ] `asymmetry_category` and `capital_tier` enums validated in `data-contract.test.js`
-- [ ] Funded badge renders on Tier 1 pathway cards in Find MyPathway
-- [ ] Near-Miss gap card surfaces for under-budget users on Tier 1/2 routes
-- [ ] 4 new blog posts appear in `/blog/` with correct category filter
-- [ ] 2 pSEO pages indexed in sitemap
-- [ ] No new CSP violations (inline scripts already covered by `'unsafe-inline'`)
-- [ ] `npx wrangler deploy` succeeds
+**File:** `src/pages/find-mypathway.html` — replace `loadJson('/data/pathways.json')` call
+
+```js
+async function loadPathways() {
+  const KEY = 'goif_pathways_v1', TTL = 86400000;
+  try {
+    const cached = JSON.parse(localStorage.getItem(KEY) || 'null');
+    if (cached && Date.now() - cached.ts < TTL) return cached.data;
+  } catch (_) {}
+  const data = await loadJson('/data/pathways.json');
+  try { localStorage.setItem(KEY, JSON.stringify({ ts: Date.now(), data })); } catch (_) {}
+  return data;
+}
+```
+
+Replace `loadJson('/data/pathways.json')` in the `Promise.all` call with `loadPathways()`.
 
 ---
 
-## Files touched summary
+## Acceptance criteria
 
-| File | Sprint | Change |
-|---|---|---|
-| `src/data/pathways.json` | S1-1 | Add 4 new pathways + GOIF fields |
-| `scripts/validate-data.js` | S1-2 | Allow new fields, add enum checks |
-| `src/pages/find-mypathway.html` | S1-3, S1-4, S3-1, S3-2, S4-4 | Filter UI, badge render, gap card, cache |
-| `src/css/enhancements.css` | S3-3 | `.funded-badge` styles |
-| `tests/route-engine.test.js` | S1-5 | GOIF filter test cases |
-| `tests/data-contract.test.js` | S1-5 | Enum assertions |
-| `content/blog/playbooks/professional/australia-dama-regional-stream-2026.md` | S2-1 | New post |
-| `content/blog/playbooks/student/italy-dsu-need-blind-scholarship-2026.md` | S2-2 | New post |
-| `content/blog/guides/study/asian-nordic-tech-accelerators-africa-2026.md` | S2-3 | New post |
-| `content/blog/playbooks/professional/portugal-d3-highly-qualified-2026.md` | S2-4 | New post |
-| `src/data/blog-posts.json` | S2-5 | 4 new entries |
-| `public/sitemap.xml` | S2-5, S4-3 | 6 new URLs |
-| `src/pages/pathways-funded-study.html` | S4-1 | New pSEO page |
-| `src/pages/pathways-regional-skilled.html` | S4-2 | New pSEO page |
+- [ ] 19/19 suites, all tests pass after each sprint
+- [ ] 4 new blog posts render at their URLs and appear in `/blog/` category filters
+- [ ] blog-posts.json has 34 entries
+- [ ] Gap card shows `regional_concessions` when present on closest pathway
+- [ ] Gap card shows playbook CTA link for GOIF pathways
+- [ ] pSEO pages load and render pathway cards from live JSON
+- [ ] pSEO pages have `ItemList` JSON-LD
+- [ ] Both pSEO pages in sitemap
+- [ ] localStorage cache: second page load does not fire a network request for pathways.json
+- [ ] `npx wrangler deploy` succeeds
+
+## Execution order
+
+S2-1 → S2-2 → S2-3 → S2-4 → S2-5 (all content first, register together)
+S3-1 (gap card GOIF extension — small, do after S2 so playbook links exist)
+S4-1 → S4-2 → S4-3 → S4-4 (pSEO + cache last)
