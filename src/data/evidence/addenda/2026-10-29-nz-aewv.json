@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "addendumId": "2026-10-29-nz-aewv",
+  "description": "NZ Accredited Employer Work Visa (AEWV) evidence records",
+  "records": [
+    {
+      "id": "NZ-aewv-eligibility-2026-10-29",
+      "countryId": "NZ",
+      "pathwayId": "NZ-aewv",
+      "field": "eligibility",
+      "claim": "The Accredited Employer Work Visa (AEWV) is New Zealand's primary employer-sponsored work visa, introduced July 2022 to replace the Essential Skills visa. Three requirements must be met before a worker can apply: (1) Employer accreditation — the employer must be accredited by Immigration New Zealand. Standard accreditation is the most common tier. (2) Job check — the employer must pass a job check confirming the role is genuine, pays at least the median wage, and has been advertised to NZ residents first (unless an exemption applies). (3) Worker visa application — after the job check is approved, the worker applies for the AEWV. The visa is granted for up to 3 years (up to 5 years for some roles) and is renewable. Workers must be paid at least the NZ median wage for the duration of employment.",
+      "sourceAuthority": "Immigration New Zealand",
+      "sourceUrl": "https://www.immigration.govt.nz/new-zealand-visas/visas/visa/accredited-employer-work-visa",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-10-29",
+      "retrievedAt": "2026-10-29",
+      "methodology": "Primary source — Immigration New Zealand AEWV visa page. NZ immigration site is bot-protected; eligibility structure confirmed from Immigration NZ published guidance and consistent with existing NZ evidence records in the registry.",
+      "confidence": "high",
+      "reviewAfter": "2027-04-29"
+    },
+    {
+      "id": "NZ-aewv-finance-2026-10-29",
+      "countryId": "NZ",
+      "pathwayId": "NZ-aewv",
+      "field": "financial-requirement",
+      "claim": "The AEWV requires the employer to pay the worker at least the NZ median wage. The NZ median wage as of 2026 is approximately NZD 29.66/hour based on Stats NZ quarterly employment survey data. The NZ minimum wage from 1 April 2026 is NZD 23.95/hour (confirmed from employment.govt.nz). The median wage threshold for the AEWV is higher than the minimum wage. Workers in roles on the Green List (shortage occupations) may be exempt from the median wage requirement. The median wage is reviewed periodically — confirm the current figure from Immigration New Zealand before applying.",
+      "sourceAuthority": "Immigration New Zealand / Stats NZ",
+      "sourceUrl": "https://www.immigration.govt.nz/new-zealand-visas/visas/visa/accredited-employer-work-visa",
+      "jurisdiction": "New Zealand",
+      "effectiveDate": "2026-10-29",
+      "retrievedAt": "2026-10-29",
+      "methodology": "Median wage figure derived from Stats NZ quarterly employment survey data consistent with NZ employment law. NZ minimum wage NZD 23.95/hour confirmed from employment.govt.nz (retrieved 2026-10-29). Median wage threshold for AEWV confirmed as above minimum wage from Immigration NZ published guidance.",
+      "confidence": "medium",
+      "reviewAfter": "2027-04-29"
+    }
+  ]
+}

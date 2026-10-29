@@ -78,6 +78,7 @@ Each Italian region has its own DSU authority. The authority at your university 
 - **DiSCo** - covers universities in Rome (La Sapienza, Tor Vergata, Roma Tre)
 - **EDISU Piemonte** - covers universities in Turin
 - **ARDISS** - covers universities in Trieste and Udine
+- **ADISU Calabria** - covers the University of Calabria (UniCal) in Rende, near Cosenza. Southern Italy has a significantly lower cost of living than Milan or Rome - accommodation and food costs in Calabria are among the lowest in Italy, which stretches the DSU cash grant further.
 
 Each operator publishes an annual bando (call for applications) setting out the thresholds, benefit levels and deadlines for that academic year. Find your university's DSU operator and read the bando before applying.
 

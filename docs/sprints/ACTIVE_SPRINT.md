@@ -13,15 +13,15 @@ All code phases complete (0-9, B, CP, GOIF, Vertical B). No code tasks are block
 | Metric | Value |
 |---|---|
 | Countries | 30 (27 original + MU, CV, NA) |
-| Pathways | 68 (62 publishable / 6 research_required) |
-| Evidence records | 216 (18 primary + 198 addenda) |
-| Blog posts | 52 across 7 categories |
-| Sitemap URLs | 103 |
+| Pathways | 69 (63 publishable / 6 research_required) |
+| Evidence records | 218+ |
+| Blog posts | 54 across 7 categories |
+| Sitemap URLs | 105 |
 | Test suites | 19/19 PASS |
 | Tests | 180/180 PASS |
 | GOIF pathways | 7 tagged (asymmetry_category + capital_tier) |
 | remote_freelance | 3 pathways — MU, CV, NA |
-| PR-route tagged | 10 pathways — CA, AU×3, NZ×3, IE, FR, PT |
+| PR-route tagged | 11 pathways — CA, AU×3, NZ×4, IE, FR, PT |
 | Nomad tagged | 6 pathways — DE, PT, ES, MU, CV, NA |
 | Region filter | 10 regions in Find MyPathway |
 | ⌘K search | Modal search across countries, pathways, posts — all pages |
@@ -59,6 +59,7 @@ See `docs/sprints/OWNER_ACTIONS.md` for full instructions on each item.
 |---|---|---|---|
 | Vertical B + ⌘K search | 2026-10-29 | `e87f15c` | 3 African nomad countries, 3 remote_freelance pathways, 4 blog posts, region filter, PR filter, ⌘K search modal |
 | 12 country audits + N-P4/P5/C9/C10 | 2026-10-29 | `68c88d4` | FI SE NO CH LU HU LT IS PL MT CZ CN audits, WebPage schema, footer links, AfCFTA + diaspora guides |
+| Opportunity research sprint | 2026-10-29 | latest | NZ-aewv pathway, USask scholarship post, Paraguay overview, UniCal DSU mention |
 | Region + PR filters | 2026-10-29 | `e871731` | Target Region select, pr-route filter, IE/FR/PT pr-route tags, doc updates |
 | Data freshness | 2026-10-29 | `6d29814` | 37 stale effectiveDate fields refreshed |
 | GOIF S3-1 + S4 | 2026-10-29 | `d5ce2b0` | Gap card GOIF fields, 2 pSEO pages, localStorage cache, 3 tests |
@@ -80,14 +81,20 @@ See `docs/sprints/OWNER_ACTIONS.md` for full instructions on each item.
 | N-T4 | Country source sign-off (30) | 1-2 hrs | `docs/data/country-source-review-manifest.json` — see OWNER_ACTIONS.md |
 | N-T5 | Legal review | Solicitor | privacy/disclaimer/terms — prerequisite for affiliate/lead revenue |
 
-### Priority 2 — Revenue (externally gated)
+### Priority 2 — Deferred research (blocked on verification)
+| ID | Task | Blocker | Notes |
+|---|---|---|---|
+| PY-2 | Paraguay SUACE/Investor Pass deep-dive | USD 70k threshold unverified | Engage Paraguay lawyer — see OPPORTUNITY_TASKFILE.md |
+| USask-2 | Saskatchewan PNP post-graduation pathway | No SINP evidence records | Research SINP from saskatchewan.ca first |
+
+### Priority 3 — Revenue (externally gated)
 | ID | Task | Notes |
 |---|---|---|
 | N-R1 | AdSense revenue baseline | After first 30 days live: record impressions, clicks, RPM |
 | N-R2 | Affiliate infrastructure | Requires legal review (N-T5) first |
-| N-R3 | Lead generation engine | Requires consent architecture + legal review before any lead collection |
+| N-R3 | Lead generation engine | Requires consent architecture + legal review |
 
-### Priority 3 — Phase 6 Scale (hard-gated)
+### Priority 4 — Phase 6 Scale (hard-gated)
 Do not start until Phase 5 revenue baseline exists.
 - Personalisation and saved routes
 - Policy-change alerts

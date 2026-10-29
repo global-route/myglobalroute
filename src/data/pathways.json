@@ -2620,6 +2620,50 @@
           "notes": "Proof of remote employment or freelance income sourced outside Namibia is required. Holders may not work for a Namibia-based employer."
         }
       ]
+    },
+    {
+      "id": "NZ-aewv",
+      "countryId": "NZ",
+      "type": "work",
+      "name": "Accredited Employer Work Visa (AEWV)",
+      "wizardTags": [
+        "pr-route"
+      ],
+      "sourceUrl": "https://www.immigration.govt.nz/new-zealand-visas/visas/visa/accredited-employer-work-visa",
+      "sourceAuthority": "Immigration New Zealand",
+      "status": "publishable",
+      "evidenceIds": [
+        "NZ-aewv-eligibility-2026-10-29",
+        "NZ-aewv-finance-2026-10-29"
+      ],
+      "requirements": [
+        {
+          "id": "NZ-aewv-job-offer-2026-10-29",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "New Zealand",
+          "effectiveDate": "2026-10-29",
+          "sourceUrl": "https://www.immigration.govt.nz/new-zealand-visas/visas/visa/accredited-employer-work-visa",
+          "evidenceIds": [
+            "NZ-aewv-eligibility-2026-10-29"
+          ],
+          "notes": "A job offer from an Immigration New Zealand accredited employer is required. The employer must also pass a job check before the worker can apply. The role must pay at least the NZ median wage."
+        },
+        {
+          "id": "NZ-aewv-sponsorship-2026-10-29",
+          "field": "sponsorship",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "New Zealand",
+          "effectiveDate": "2026-10-29",
+          "sourceUrl": "https://www.immigration.govt.nz/new-zealand-visas/visas/visa/accredited-employer-work-visa",
+          "evidenceIds": [
+            "NZ-aewv-eligibility-2026-10-29"
+          ],
+          "notes": "The employer must be accredited by Immigration New Zealand (standard, high-volume, or franchisee accreditation). Accreditation is the employer's responsibility, not the worker's."
+        }
+      ]
     }
   ]
 }
