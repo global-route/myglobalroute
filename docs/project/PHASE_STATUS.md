@@ -1,8 +1,8 @@
 # Phase Status — MyPathway2Global
 
-> **Updated:** 2026-10-28 | **Release:** GO — production live
-> **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 168/168 passing
-> **Commit:** `1ba24a8` | **Blog posts:** 31 | **Sitemap URLs:** 76+ | **Stale requirements:** 0
+> **Updated:** 2026-10-29 | **Release:** GO — production live
+> **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 180/180 passing
+> **Commit:** `6d29814` | **Blog posts:** 34 | **Sitemap URLs:** 83+ | **Stale requirements:** 0
 
 ---
 
@@ -15,13 +15,14 @@
 | 2 — Canonical product core | **Complete** | — |
 | 3 — Content & acquisition | **Complete** | Editorial freshness ongoing |
 | 4 — Trust/compliance/accessibility | **Code complete** | Legal review, live ARIA audit, consent validation |
-| 5 — Growth/monetization | **Complete** | Google policy review pending (1-14 days) |
+| 5 — Growth/monetization | **Complete** | Google policy review pending |
 | 6 — UI/UX transformation | **Complete** | — |
 | 7 — Rebrand | **Complete** | — |
 | 8 — Production readiness | **Complete** | Two image assets (owner action) |
-| 9 — Scale & Wizard | **Complete** | W3-3 FMP extension routes (deferred) |
-| B — Backlog improvements | **Complete** | B-P1 gap analysis, B-P2 freshness badges, B-P3 localStorage, B-P4 country depth |
-| CP — Content & Platform | **Complete** | Quarterly audit routine (owner: choose GitHub Actions vs. manual calendar) |
+| 9 — Scale & Wizard | **Complete** | — |
+| B — Backlog improvements | **Complete** | — |
+| CP — Content & Platform | **Complete** | — |
+| GOIF — Global Opportunity Integration | **Complete** | `remote_freelance` pathways (content gap) |
 
 ---
 
@@ -119,14 +120,14 @@ All 23 production readiness tasks complete. See `docs/sprints/PRODUCTION_READINE
 
 ## Phase 1 — Migration intelligence ✅ code / ⏳ owner
 
-- 27-country registry, 61 pathways (55 publishable / 6 research_required)
-- 55/55 publishable pathways have `requirements[]`
+- 27-country registry, 65 pathways (59 publishable / 6 research_required)
+- 59/59 publishable pathways have `requirements[]`
 - 6 research_required all have `permanentBlocker` or `scopeNote`
-- 193+ evidence records across primary-source-verified.json + addenda
+- 202+ evidence records across primary-source-verified.json + addenda
 - Route engine: `{ matches, alternatives, missingInput, zeroFitExplanations }`
 - 180-day staleness detection on requirement `effectiveDate`
 - Country source manifest generated for all 27 countries
-- All 19 stale requirement `effectiveDate` fields refreshed to 2026-10-28 (19 fields across IE, DE, FR, HU, SE, LU, LT, IS, ES, PL, MT, CZ)
+- All stale requirement `effectiveDate` fields refreshed to 2026-10-29 (37 fields across CA, IE, DE, IT, FR, HU, SE, LU, LT, IS, ES, AT, KR, CN, PL, MT, CH, CZ)
 
 **Open (owner):**
 - Set `humanSignOff: true` on all 27 manifest entries → `docs/data/country-source-review-manifest.json`
@@ -147,21 +148,22 @@ All 23 production readiness tasks complete. See `docs/sprints/PRODUCTION_READINE
 
 ## Phase 3 — Content & acquisition ✅
 
-- 31 blog posts across 7 categories (21 at phase close; 10 added in CP sprint + N-C1 through N-C4):
-  - 15 Country Audits (Germany, Canada, UK, Italy, Portugal, USA, Australia, France, Netherlands, Ireland, Spain, Austria, New Zealand, Japan, South Korea)
-  - 4 Student Playbooks (Italy DSU, UK Masters, Italy DSU vs. Germany, Nordic/Asia-Pacific roundup)
-  - 3 Professional Playbooks (Canada Express Entry, Germany Chancenkarte, Germany vs. Canada comparative)
-  - 1 Business Playbook (US LLC Setup)
-  - 2 Case Studies (Chisom success story, Rejection patterns)
-  - 5 Guides (Motivation letter, Document auth updated, Blocked account funding, Passport tiers, Study roundup)
-  - 1 Policy Update (Canada SDS cancellation)
-- All em dashes replaced with hyphens across all posts (AI-signal reduction)
+- 34 blog posts across 7 categories:
+  - 15 Country Audits
+  - 5 Student Playbooks (+ Italy DSU need-blind)
+  - 5 Professional Playbooks (+ Australia DAMA, Portugal D3)
+  - 1 Business Playbook
+  - 2 Case Studies
+  - 6 Guides (+ Asian/Nordic tech accelerators)
+  - 1 Policy Update
+- GOIF Sprint 2 playbooks: Australia DAMA, Italy DSU need-blind, Asian/Nordic accelerators, Portugal D3
+- All em dashes replaced with hyphens across all posts
 - 1 YouTube embed per post (verified video IDs)
 - All fabricated approval rate claims removed
 - OG/Twitter tags on all pages
 - Canonical tags on all generated HTML files
 - Sabilytics analytics on all pages
-- All 31 blog posts in sitemap.xml (76+ URLs total, including 3 editorial landing pages)
+- All 34 blog posts in sitemap.xml (83+ URLs total)
 
 ---
 
@@ -259,6 +261,24 @@ A task is not complete because a file exists. Legal/data claims require evidence
 - Revenue reconciliation baseline: after first 30 days of live placement, record impressions, clicks, RPM, total revenue
 - Newsletter / return-user loop: Mailchimp action URL pending owner config
 - Affiliate infrastructure: not yet activated — requires legal review before any lead flow goes live
+
+---
+
+## Phase GOIF — Global Opportunity Integration Framework ✅ (2026-10-29)
+
+- 4 GOIF seed pathways: AU-dama-regional, IT-dsu-need-blind, JP-tokyo-tech-accelerator, PT-d3-highly-qualified
+- `asymmetry_category` + `capital_tier` + `regional_concessions` fields on all 4
+- Route Type filter in Find MyPathway (funded, low-capital, regional gap, tech, academic, remote, PR vector)
+- Target Region filter in Find MyPathway (10 regions from country categories)
+- `✦ Funded` badge on tier_1_funded pathway cards
+- Gap card surfaces capital tier, regional concessions and playbook CTA
+- 2 pSEO pages: pathways-funded-study.html, pathways-regional-skilled.html
+- localStorage 24h cache for pathway data (goif_pathways_v1)
+- IE Critical Skills, FR Talent Passport, PT D3 tagged with pr-route wizardTags
+- 4 GOIF playbooks: Australia DAMA, Italy DSU need-blind, Asian/Nordic accelerators, Portugal D3
+- 19/19 suites, 180/180 tests
+
+**Open:** remote_freelance pathways — Mauritius Premium Visa, Cape Verde Remote Work, Namibia Digital Nomad (Vertical B content)
 
 ---
 

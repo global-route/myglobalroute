@@ -1,6 +1,6 @@
 # Blog Content Inventory & Pathway Reference
 
-> **Generated:** 2026-10-28 | **Posts:** 31 | **Pathways covered:** 50+ across 20 countries
+> **Generated:** 2026-10-29 | **Posts:** 34 | **Pathways covered:** 55+ across 20 countries
 > Use this document to plan new posts, identify gaps, and maintain consistency.
 
 ---
@@ -10,13 +10,13 @@
 | Category | Posts | Countries covered |
 |---|---|---|
 | Country Audits | 15 | Germany, Canada, UK, Italy, Portugal, USA, Australia, France, Netherlands, Ireland, Spain, Austria, New Zealand, Japan, South Korea |
-| Student Playbooks | 3 | Italy, UK, Italy vs. Germany (comparative) |
-| Professional Playbooks | 3 | Canada, Germany, Germany vs. Canada (comparative) |
+| Student Playbooks | 5 | Italy (DSU complete guide, DSU need-blind, DSU vs Germany), UK, Italy vs. Germany |
+| Professional Playbooks | 5 | Canada, Germany, Germany vs. Canada, Australia DAMA, Portugal D3 |
 | Business Playbooks | 1 | USA |
 | Case Studies | 2 | Canada (success), Multi-country (rejection) |
-| Guides | 6 | Multi-country (incl. Nordic/Asia roundup) |
+| Guides | 6 | Multi-country (incl. Nordic/Asia roundup, Asian/Nordic accelerators) |
 | Policy Updates | 1 | Canada |
-| **Total** | **31** | **15 primary + multi-country guides** |
+| **Total** | **35** | **15 primary + multi-country guides** |
 
 ---
 

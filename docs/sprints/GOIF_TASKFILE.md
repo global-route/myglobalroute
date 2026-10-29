@@ -13,18 +13,24 @@
 | S1-3 Route Type filter in Find MyPathway | ✅ Done |
 | S1-4 Funded badge on cards | ✅ Done |
 | S1-5 Tests (route-engine + data-contract) | ✅ Done |
-| S2-1 Australia DAMA playbook | ❌ Missing |
-| S2-2 Italy DSU need-blind playbook | ❌ Missing |
-| S2-3 Asian & Nordic tech accelerators guide | ❌ Missing |
-| S2-4 Portugal D3 playbook | ❌ Missing |
-| S2-5 blog-posts.json + sitemap for new posts | ❌ Pending S2-1–4 |
-| S3-1 Near-miss gap card (regional_concessions) | ⚠️ Partial — gap card exists but ignores GOIF fields |
+| S2-1 Australia DAMA playbook | ✅ Done |
+| S2-2 Italy DSU need-blind playbook | ✅ Done |
+| S2-3 Asian & Nordic tech accelerators guide | ✅ Done |
+| S2-4 Portugal D3 playbook | ✅ Done |
+| S2-5 blog-posts.json + sitemap | ✅ Done — 34 posts registered |
+| S3-1 Near-miss gap card (regional_concessions) | ✅ Done |
 | S3-2 Asymmetry results header note | ✅ Done |
 | S3-3 Funded badge CSS | ✅ Done |
-| S4-1 pSEO page: funded study routes | ❌ Missing |
-| S4-2 pSEO page: regional skilled gap routes | ❌ Missing |
-| S4-3 Sitemap + routes for pSEO pages | ❌ Pending S4-1–2 |
-| S4-4 localStorage cache for pathway data | ❌ Missing |
+| S4-1 pSEO page: funded study routes | ✅ Done |
+| S4-2 pSEO page: regional skilled gap routes | ✅ Done |
+| S4-3 Sitemap + routes for pSEO pages | ✅ Done |
+| S4-4 localStorage cache for pathway data | ✅ Done |
+| S5-1 Target Region filter | ✅ Done |
+| S5-2 PR vector filter (pr-route) | ✅ Done |
+| S5-3 remote_freelance in Route Type select | ✅ Done (enum live, no pathways yet) |
+| S5-4 IE/FR/PT pr-route wizardTags | ✅ Done |
+
+**Remaining:** `remote_freelance` pathways — Mauritius Premium Visa, Cape Verde Remote Work, Namibia Digital Nomad. Content + evidence + pathway records needed.
 
 ---
 

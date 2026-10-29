@@ -32,7 +32,7 @@
       <div class="container">
         <span class="page-header-badge">Route Finder</span>
         <h1>Find MyPathway</h1>
-        <p class="page-header-subtitle">Filter 59 evidence-gated pathways by goal and passport country. Official requirements only — no invented approval rates.</p>
+        <p class="page-header-subtitle">Filter 59 evidence-gated pathways by goal, region and route type. Official requirements only — no invented approval rates.</p>
       </div>
     </div>
     <section class="container" aria-labelledby="route-title" style="padding-top: var(--spacing-2xl); padding-bottom: var(--spacing-3xl);">
@@ -40,7 +40,7 @@
         <div class="problem-card">
           <h3>What this tool does</h3>
           <ul>
-            <li>Filters 59 publishable pathways by goal (study or work) and passport country</li>
+            <li>Filters 59 publishable pathways by goal, region and route type</li>
             <li>Scores by budget, income and experience where declared</li>
             <li>Shows official requirements from government portals</li>
             <li>Surfaces nearby routes with documented blockers shown</li>
@@ -152,6 +152,22 @@
             <option value="regional_skilled_gap">Regional gap</option>
             <option value="tech_engineering">Tech &amp; engineering</option>
             <option value="academic_research">Academic / research</option>
+            <option value="remote_freelance">Remote / freelance</option>
+            <option value="pr-route">Direct PR vector</option>
+          </select>
+        </label>
+        <label>Target region
+          <select name="region">
+            <option value="">All regions</option>
+            <option value="Europe - Western">W. Europe</option>
+            <option value="Europe - Central">C. Europe</option>
+            <option value="Europe - Nordic">Nordic</option>
+            <option value="Europe - Southern">S. Europe</option>
+            <option value="Europe - Baltic">Baltic</option>
+            <option value="Europe - Alpine">Alpine</option>
+            <option value="North America">N. America</option>
+            <option value="Asia-Pacific">Asia-Pacific</option>
+            <option value="Asia">Asia</option>
           </select>
         </label>
         <label>Available budget (USD equivalent)
@@ -294,7 +310,7 @@
 
     // B-P3: persist + restore form inputs via localStorage
     const STORAGE_KEY = 'mp2g_fmp_inputs';
-    const persistFields = ['passportCountry','goal','currentVisa','familySize','applicationDate','budget','monthlyIncome','experienceYears','asymmetry'];
+    const persistFields = ['passportCountry','goal','currentVisa','familySize','applicationDate','budget','monthlyIncome','experienceYears','asymmetry','region'];
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
       if (saved) persistFields.forEach(k => { const el = form.elements[k]; if (el && saved[k] != null) el.value = saved[k]; });
@@ -343,11 +359,22 @@
 
         // GOIF: filter by asymmetry_category or capital_tier before passing to engine
         const asymmetry = profile.asymmetry || '';
-        const filteredPathways = asymmetry
-          ? pathways.pathways.filter(p =>
-              p.capital_tier === asymmetry || p.asymmetry_category === asymmetry
-            )
-          : pathways.pathways;
+        const region = profile.region || '';
+
+        // Build country-to-category map from loaded countries data
+        const countryCategory = new Map(countries.countries.map(c => [c.id, c.category]));
+
+        let filteredPathways = pathways.pathways;
+        if (asymmetry === 'pr-route') {
+          filteredPathways = filteredPathways.filter(p => (p.wizardTags || []).includes('pr-route'));
+        } else if (asymmetry) {
+          filteredPathways = filteredPathways.filter(p =>
+            p.capital_tier === asymmetry || p.asymmetry_category === asymmetry
+          );
+        }
+        if (region) {
+          filteredPathways = filteredPathways.filter(p => countryCategory.get(p.countryId) === region);
+        }
         const { matches, alternatives, missingInput, zeroFitExplanations } = window.GlobalRoute.RouteEngine.recommend(profile, countries.countries, filteredPathways, 5);
         if (!missingInput) {
           window.GlobalRoute?.Analytics?.track('route_recommendation_generated', { page_type: 'find-mypathway' });
