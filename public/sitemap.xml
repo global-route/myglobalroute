@@ -477,5 +477,31 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://mypathway2global.org.uk/blog/playbooks/professional/australia-dama-regional-stream-2026/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mypathway2global.org.uk/blog/playbooks/student/italy-dsu-need-blind-scholarship-2026/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mypathway2global.org.uk/blog/guides/study/asian-nordic-tech-accelerators-africa-2026/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mypathway2global.org.uk/blog/playbooks/professional/portugal-d3-highly-qualified-2026/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
+    <url><loc>https://mypathway2global.org.uk/pages/pathways-funded-study.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://mypathway2global.org.uk/pages/pathways-regional-skilled.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

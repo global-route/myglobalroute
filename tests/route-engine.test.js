@@ -260,3 +260,45 @@ describe('income and experience requirement boundaries', () => {
     expect(result.reasons).not.toContain('experience requirement appears compatible');
   });
 });
+
+describe('GOIF gap card fields', () => {
+  test('regional_concessions is preserved on GOIF pathway objects', () => {
+    const p = {
+      id: 'AU-dama-regional', countryId: 'AU', type: 'work', status: 'publishable',
+      evidenceIds: ['AU-dama-regional-eligibility-2026-10-29'],
+      sourceUrl: 'https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/site-agreements/designated-area-migration-agreements',
+      asymmetry_category: 'regional_skilled_gap',
+      capital_tier: 'tier_2_moderate',
+      regional_concessions: { age_limit_extension: 55, language_score_floor_reduction: true, salary_concession_percent: 10 }
+    };
+    expect(p.regional_concessions.age_limit_extension).toBe(55);
+    expect(p.regional_concessions.language_score_floor_reduction).toBe(true);
+    expect(p.regional_concessions.salary_concession_percent).toBe(10);
+  });
+
+  test('tier_1_funded pathway has no regional_concessions', () => {
+    const p = {
+      id: 'IT-dsu-need-blind', countryId: 'IT', type: 'study', status: 'publishable',
+      evidenceIds: ['IT-dsu-need-blind-eligibility-2026-10-29'],
+      sourceUrl: 'https://www.dsu.toscana.it/',
+      asymmetry_category: 'academic_research',
+      capital_tier: 'tier_1_funded'
+    };
+    expect(p.capital_tier).toBe('tier_1_funded');
+    expect(p.regional_concessions).toBeUndefined();
+  });
+
+  test('scorePathway handles GOIF pathway with regional_concessions without error', () => {
+    const p = {
+      id: 'AU-dama-regional', countryId: 'AU', type: 'work', status: 'publishable',
+      evidenceIds: ['AU-dama-regional-eligibility-2026-10-29'],
+      sourceUrl: 'https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/site-agreements/designated-area-migration-agreements',
+      asymmetry_category: 'regional_skilled_gap',
+      capital_tier: 'tier_2_moderate',
+      regional_concessions: { age_limit_extension: 55, language_score_floor_reduction: true, salary_concession_percent: 10 }
+    };
+    const result = scorePathway(p, { id: 'AU', dataStatus: 'publishable' }, { goal: 'work' });
+    expect(result.eligible).toBe(true);
+    expect(result.score).toBeGreaterThan(0);
+  });
+});

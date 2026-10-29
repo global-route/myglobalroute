@@ -309,6 +309,17 @@
 
     const submitBtn = form.querySelector('button[type="submit"]');
 
+    async function loadPathways() {
+      const KEY = 'goif_pathways_v1', TTL = 86400000;
+      try {
+        const cached = JSON.parse(localStorage.getItem(KEY) || 'null');
+        if (cached && Date.now() - cached.ts < TTL) return cached.data;
+      } catch (_) {}
+      const data = await loadJson('/data/pathways.json');
+      try { localStorage.setItem(KEY, JSON.stringify({ ts: Date.now(), data })); } catch (_) {}
+      return data;
+    }
+
     form.addEventListener('submit', async event => {
       event.preventDefault();
       // MX-4: button loading state
@@ -316,7 +327,7 @@
       submitBtn.textContent = 'Searching…';
       results.innerHTML = Array(3).fill('<div class="skeleton skeleton-card" style="margin-bottom:1rem;"></div>').join('');
       try {
-        const [countries, pathways] = await Promise.all([loadJson('/data/countries.json'), loadJson('/data/pathways.json')]);
+        const [countries, pathways] = await Promise.all([loadJson('/data/countries.json'), loadPathways()]);
         const profile = Object.fromEntries(new FormData(form).entries());
         window.GlobalRoute?.Analytics?.track('route_search_started', { page_type: 'find-mypathway' });
 
@@ -347,6 +358,21 @@
         }
         if (!matches.length) {
           // Near-miss gap analysis — find the closest pathway by funds gap
+          const GOIF_PLAYBOOK_LINKS = {
+            'AU-dama-regional': '/blog/playbooks/professional/australia-dama-regional-stream-2026/',
+            'IT-dsu-need-blind': '/blog/playbooks/student/italy-dsu-need-blind-scholarship-2026/',
+            'JP-tokyo-tech-accelerator': '/blog/guides/study/asian-nordic-tech-accelerators-africa-2026/',
+            'PT-d3-highly-qualified': '/blog/playbooks/professional/portugal-d3-highly-qualified-2026/'
+          };
+          function renderConcessions(pathway) {
+            const c = pathway.regional_concessions;
+            if (!c) return '';
+            const parts = [];
+            if (c.age_limit_extension) parts.push('Age cap: ' + c.age_limit_extension);
+            if (c.language_score_floor_reduction) parts.push('English floor reduced');
+            if (c.salary_concession_percent) parts.push('Salary concession: ' + c.salary_concession_percent + '%');
+            return parts.length ? '<p class="gap-concessions">Concessions: ' + parts.join(' · ') + '</p>' : '';
+          }
           let gapHtml = '';
           const budget = Number(profile.budget);
           if (budget > 0 && pathways.pathways) {
@@ -364,13 +390,24 @@
               const timelineText = months ? ` At your stated income, you could bridge this in <strong>${months} month${months === 1 ? '' : 's'}</strong>.` : '';
               const country = countries.countries.find(c => c.id === closest.pathway.countryId);
               const countryName = country ? country.name : closest.pathway.countryId;
+              const tierLabel = closest.pathway.capital_tier === 'tier_1_funded'
+                ? '<span class="funded-badge">&#10022; Funded</span>'
+                : closest.pathway.capital_tier === 'tier_2_moderate'
+                  ? '<span class="funded-badge" style="background:var(--color-amber-100,#fef3c7);color:#92400e;">Low capital route</span>'
+                  : '';
+              const playbookUrl = GOIF_PLAYBOOK_LINKS[closest.pathway.id];
+              const playbookCta = playbookUrl
+                ? `<a href="${esc(playbookUrl)}" class="btn btn-secondary btn-small">Read full playbook</a>`
+                : '';
               gapHtml = `<div class="gap-analysis">
                 <p class="gap-analysis-heading">Closest pathway to your budget</p>
-                <p><strong>${esc(countryName)} — ${esc(closest.pathway.name)}</strong></p>
+                <p><strong>${esc(countryName)} — ${esc(closest.pathway.name)}</strong> ${tierLabel}</p>
+                ${renderConcessions(closest.pathway)}
                 <p>Requires <strong>${esc(closest.tier.currency)} ${esc(String(closest.tier.value))}</strong>. You are <strong>${esc(closest.tier.currency)} ${esc(String(Math.round(closestGap)))}</strong> short.${timelineText}</p>
                 <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:0.75rem;">
                   <button type="button" class="btn btn-secondary btn-small" onclick="document.querySelector('[name=budget]').value='';form.dispatchEvent(new Event('submit'))">Remove budget filter</button>
                   <a href="/pages/calculator.html" class="btn btn-secondary btn-small">Open budget calculator</a>
+                  ${playbookCta}
                 </div>
               </div>`;
             }
