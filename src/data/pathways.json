@@ -357,7 +357,7 @@
           "value": 67,
           "unit": "points",
           "jurisdiction": "Canada",
-          "effectiveDate": "2026-06-22",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers.html",
           "evidenceIds": [
             "CA-fswp-eligibility-2026-09-14"
@@ -371,7 +371,7 @@
           "value": 1,
           "unit": "years",
           "jurisdiction": "Canada",
-          "effectiveDate": "2026-06-22",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers.html",
           "evidenceIds": [
             "CA-fswp-eligibility-2026-09-14"
@@ -506,7 +506,7 @@
           "evidenceIds": [
             "AU-skilled-189-points-2026-10-18"
           ],
-          "notes": "Minimum 65 points required to submit an Expression of Interest (EOI). Reaching 65 points does not guarantee an invitation — Home Affairs issues invitations from the pool based on score ranking. Actual invitation cut-offs are typically higher."
+          "notes": "Minimum 65 points required to submit an Expression of Interest (EOI). Reaching 65 points does not guarantee an invitation \u2014 Home Affairs issues invitations from the pool based on score ranking. Actual invitation cut-offs are typically higher."
         }
       ]
     },
@@ -539,7 +539,7 @@
           "evidenceIds": [
             "AU-skilled-190-points-2026-10-18"
           ],
-          "notes": "Minimum 65 points required for EOI. State/territory nomination adds 5 points. Each state/territory sets its own occupation list and nomination criteria — check the relevant state authority before applying."
+          "notes": "Minimum 65 points required for EOI. State/territory nomination adds 5 points. Each state/territory sets its own occupation list and nomination criteria \u2014 check the relevant state authority before applying."
         },
         {
           "id": "AU-skilled-190-state-nomination-2026-10-18",
@@ -585,7 +585,7 @@
           "evidenceIds": [
             "AU-skilled-491-points-2026-10-18"
           ],
-          "notes": "Minimum 65 points required for EOI. State/territory or eligible family nomination adds 15 points. This is a provisional visa — permanent residency requires 3 years of regional work and meeting income thresholds before applying for subclass 191."
+          "notes": "Minimum 65 points required for EOI. State/territory or eligible family nomination adds 15 points. This is a provisional visa \u2014 permanent residency requires 3 years of regional work and meeting income thresholds before applying for subclass 191."
         },
         {
           "id": "AU-skilled-491-regional-nomination-2026-10-18",
@@ -647,7 +647,7 @@
       "id": "NZ-smc-points-based",
       "countryId": "NZ",
       "type": "work",
-      "name": "Skilled Migrant Category — Points-based pathway",
+      "name": "Skilled Migrant Category \u2014 Points-based pathway",
       "wizardTags": [
         "pr-route"
       ],
@@ -695,7 +695,7 @@
       "id": "NZ-smc-skilled-work-experience",
       "countryId": "NZ",
       "type": "work",
-      "name": "Skilled Migrant Category — Skilled Work Experience pathway",
+      "name": "Skilled Migrant Category \u2014 Skilled Work Experience pathway",
       "wizardTags": [
         "pr-route"
       ],
@@ -744,7 +744,7 @@
       "id": "NZ-smc-trades-technician",
       "countryId": "NZ",
       "type": "work",
-      "name": "Skilled Migrant Category — Trades and Technician pathway",
+      "name": "Skilled Migrant Category \u2014 Trades and Technician pathway",
       "wizardTags": [
         "pr-route"
       ],
@@ -782,7 +782,7 @@
           "evidenceIds": [
             "NZ-smc-trades-technician-eligibility-2026-09-14"
           ],
-          "notes": "A relevant trade qualification or registration is required for the specific occupation. The qualification must be recognised in New Zealand or assessed as equivalent. Requirements vary by occupation — refer to the occupation-qualification matrix."
+          "notes": "A relevant trade qualification or registration is required for the specific occupation. The qualification must be recognised in New Zealand or assessed as equivalent. Requirements vary by occupation \u2014 refer to the occupation-qualification matrix."
         }
       ]
     },
@@ -831,7 +831,7 @@
           "currency": "EUR",
           "period": "annual",
           "jurisdiction": "Ireland",
-          "effectiveDate": "2025-06-30",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.irishimmigration.ie/coming-to-study-in-ireland/what-are-my-study-options/a-fee-paying-private-primary-or-secondary-school/information-on-student-finances/",
           "evidenceIds": [
             "IE-study-finance-2026-09-12"
@@ -895,7 +895,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Germany",
-          "effectiveDate": "2025-10-30",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.auswaertiges-amt.de/en/visa-service/buergerservice/faq/606850-606850",
           "evidenceIds": [
             "DE-study-eligibility-2026-09-12"
@@ -937,9 +937,9 @@
             "componentsIncluded": [
               "living expenses"
             ],
-            "notes": "Minimum €1,091 net per month for the duration of the job-search stay via blocked account or declaration of commitment; qualifying part-time employment can be counted."
+            "notes": "Minimum \u20ac1,091 net per month for the duration of the job-search stay via blocked account or declaration of commitment; qualifying part-time employment can be counted."
           },
-          "notes": "€1,091 net per month via blocked account or formal declaration of commitment for the Opportunity Card job-search period."
+          "notes": "\u20ac1,091 net per month via blocked account or formal declaration of commitment for the Opportunity Card job-search period."
         },
         {
           "id": "DE-opportunity-card-minimum-points-score-2026-09-12",
@@ -1028,7 +1028,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Italy",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://vistoperitalia.esteri.it/",
           "evidenceIds": [
             "IT-work-eligibility-2026-09-28"
@@ -1080,9 +1080,9 @@
             "componentsIncluded": [
               "living expenses"
             ],
-            "notes": "Proof of resources corresponding to at least €877.50 per month for long-stay study applications submitted from 1 August 2026."
+            "notes": "Proof of resources corresponding to at least \u20ac877.50 per month for long-stay study applications submitted from 1 August 2026."
           },
-          "notes": "€877.50 per month for long-stay study visa applications submitted from 1 August 2026."
+          "notes": "\u20ac877.50 per month for long-stay study visa applications submitted from 1 August 2026."
         }
       ]
     },
@@ -1119,12 +1119,12 @@
           "currency": "EUR",
           "period": "annual",
           "jurisdiction": "France",
-          "effectiveDate": "2025-08-21",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.france-visas.gouv.fr/en/web/france-visas/talents-internationaux-et-attractivite-economique",
           "evidenceIds": [
             "FR-talent-finance-2026-09-12"
           ],
-          "notes": "€59,373 gross reference annual salary effective 21 August 2025; EU Blue Card subcategory requires at least 1.5 times the gross reference salary."
+          "notes": "\u20ac59,373 gross reference annual salary effective 21 August 2025; EU Blue Card subcategory requires at least 1.5 times the gross reference salary."
         }
       ]
     },
@@ -1147,7 +1147,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Hungary",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://oif.gov.hu/factsheets/residence-permit-for-the-purpose-of-studies",
           "evidenceIds": [
             "HU-study-eligibility-2026-09-28"
@@ -1175,7 +1175,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Hungary",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://oif.gov.hu/factsheets/residence-permit-for-the-purpose-of-employment",
           "evidenceIds": [
             "HU-work-eligibility-2026-09-28"
@@ -1274,7 +1274,7 @@
           "currency": "SEK",
           "period": "monthly",
           "jurisdiction": "Sweden",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.migrationsverket.se/en/you-want-to-apply/study/higher-education.html",
           "evidenceIds": [
             "SE-study-finance-2026-09-07"
@@ -1314,7 +1314,7 @@
           "currency": "SEK",
           "period": "monthly",
           "jurisdiction": "Sweden",
-          "effectiveDate": "2026-06-16",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.migrationsverket.se/en/word-explanations/salary-requirements-for-a-work-permit.html",
           "evidenceIds": [
             "SE-work-salary-2026-09-07"
@@ -1327,7 +1327,7 @@
       "id": "NO-study",
       "countryId": "NO",
       "type": "study",
-      "name": "Study permit – university/university college",
+      "name": "Study permit \u2013 university/university college",
       "sourceUrl": "https://www.udi.no/en/want-to-apply/studies/studietillatelse/",
       "sourceAuthority": "Norwegian Directorate of Immigration",
       "status": "publishable",
@@ -1447,7 +1447,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Luxembourg",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://guichet.public.lu/en/citoyens/immigration/plus-3-mois/ressortissant-tiers/etudiant.html",
           "evidenceIds": [
             "LU-study-eligibility-2026-09-28"
@@ -1475,7 +1475,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Lithuania",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://migracija.lrv.lt/en/services-for-foreigners/temporary-residence-permit/for-studies/",
           "evidenceIds": [
             "LT-study-eligibility-2026-09-28"
@@ -1503,7 +1503,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Lithuania",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://migracija.lrv.lt/en/services-for-foreigners/temporary-residence-permit/for-work/",
           "evidenceIds": [
             "LT-work-eligibility-2026-09-28"
@@ -1531,7 +1531,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Iceland",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://island.is/en/o/directorate-of-immigration",
           "evidenceIds": [
             "IS-study-eligibility-2026-09-28"
@@ -1559,7 +1559,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Iceland",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://island.is/en/o/directorate-of-immigration",
           "evidenceIds": [
             "IS-work-eligibility-2026-09-28"
@@ -1646,7 +1646,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Spain",
-          "effectiveDate": "2025-11-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://inclusion.gob.es/en/web/migraciones/w/estancia-por-estudios",
           "evidenceIds": [
             "ES-study-eligibility-2026-09-12"
@@ -1690,7 +1690,7 @@
       "id": "AT-study",
       "countryId": "AT",
       "type": "study",
-      "name": "Residence permit – student",
+      "name": "Residence permit \u2013 student",
       "sourceUrl": "https://www.oesterreich.gv.at/en/themen/migration_und_integration.html",
       "sourceAuthority": "Austrian Government",
       "status": "publishable",
@@ -1720,7 +1720,7 @@
           "currency": "EUR",
           "period": "monthly",
           "jurisdiction": "Austria",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.migration.gv.at/en/types-of-immigration/temporary-residence/",
           "evidenceIds": [
             "AT-study-finance-2026-09-13"
@@ -1742,7 +1742,7 @@
       "id": "AT-rwr-other-key-workers",
       "countryId": "AT",
       "type": "work",
-      "name": "Red-White-Red Card — Other Key Workers",
+      "name": "Red-White-Red Card \u2014 Other Key Workers",
       "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
       "sourceAuthority": "Austrian Federal Government migration portal",
       "status": "publishable",
@@ -1761,7 +1761,7 @@
           "value": 55,
           "unit": "points",
           "jurisdiction": "Austria",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
           "evidenceIds": [
             "AT-rwr-other-key-workers-eligibility-exact-2026-09-14"
@@ -1774,7 +1774,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Austria",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
           "evidenceIds": [
             "AT-rwr-other-key-workers-eligibility-exact-2026-09-14"
@@ -1789,7 +1789,7 @@
           "currency": "EUR",
           "period": "monthly",
           "jurisdiction": "Austria",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.migration.gv.at/index.php?id=1051",
           "evidenceIds": [
             "AT-rwr-other-key-workers-financial-2026-09-14"
@@ -1802,7 +1802,7 @@
       "id": "AT-red-white-red",
       "countryId": "AT",
       "type": "work",
-      "name": "Other Key Workers — Red-White-Red Card",
+      "name": "Other Key Workers \u2014 Red-White-Red Card",
       "sourceUrl": "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/other-key-workers/",
       "sourceAuthority": "Austrian Government",
       "status": "publishable",
@@ -1865,7 +1865,7 @@
           "evidenceIds": [
             "JP-student-status-2026-09-07"
           ],
-          "notes": "Admission to a qualifying educational institution in Japan is required for Student (留学) status of residence."
+          "notes": "Admission to a qualifying educational institution in Japan is required for Student (\u7559\u5b66) status of residence."
         }
       ]
     },
@@ -1916,7 +1916,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "South Korea",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
           "evidenceIds": [
             "KR-study-eligibility-2026-09-28"
@@ -1931,7 +1931,7 @@
           "currency": "USD",
           "period": "annual",
           "jurisdiction": "South Korea",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
           "evidenceIds": [
             "KR-study-finance-2026-09-28"
@@ -1968,7 +1968,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "South Korea",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
           "evidenceIds": [
             "KR-work-eligibility-2026-09-28"
@@ -1981,7 +1981,7 @@
           "kind": "text",
           "value": "Bachelor's degree or higher in a relevant field, or 5+ years of relevant work experience, as required for the E-7 Specially Designated Activities visa category.",
           "jurisdiction": "South Korea",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.immigration.go.kr/immigration_eng/index.do",
           "evidenceIds": [
             "KR-work-eligibility-2026-09-28"
@@ -2009,7 +2009,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "China",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://en.nia.gov.cn/",
           "evidenceIds": [
             "CN-study-eligibility-2026-09-28"
@@ -2024,7 +2024,7 @@
           "currency": "USD",
           "period": "annual",
           "jurisdiction": "China",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://en.nia.gov.cn/",
           "evidenceIds": [
             "CN-study-finance-2026-09-28"
@@ -2061,7 +2061,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "China",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://en.nia.gov.cn/",
           "evidenceIds": [
             "CN-work-eligibility-2026-09-28"
@@ -2074,7 +2074,7 @@
           "kind": "text",
           "value": "Category B: bachelor's degree and 2+ years of relevant work experience. Category A (high-end talent) has higher thresholds. Category C applies to other permitted occupations.",
           "jurisdiction": "China",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://en.nia.gov.cn/",
           "evidenceIds": [
             "CN-work-eligibility-2026-09-28"
@@ -2102,7 +2102,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Poland",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.gov.pl/web/udsc-en/study",
           "evidenceIds": [
             "PL-study-eligibility-2026-09-28"
@@ -2130,7 +2130,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Poland",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.gov.pl/web/udsc-en/work",
           "evidenceIds": [
             "PL-work-eligibility-2026-09-28"
@@ -2145,7 +2145,7 @@
       "type": "study",
       "name": "Study residence",
       "sourceUrl": "https://identita.gov.mt/",
-      "sourceAuthority": "Identità Malta",
+      "sourceAuthority": "Identit\u00e0 Malta",
       "status": "publishable",
       "evidenceIds": [
         "MT-study-eligibility-2026-09-28",
@@ -2158,7 +2158,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Malta",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://identita.gov.mt/residence-permits/",
           "evidenceIds": [
             "MT-study-eligibility-2026-09-28"
@@ -2173,7 +2173,7 @@
       "type": "work",
       "name": "Single Permit",
       "sourceUrl": "https://identita.gov.mt/",
-      "sourceAuthority": "Identità Malta",
+      "sourceAuthority": "Identit\u00e0 Malta",
       "status": "publishable",
       "evidenceIds": [
         "MT-work-eligibility-2026-09-28",
@@ -2186,7 +2186,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Malta",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://identita.gov.mt/single-permit/",
           "evidenceIds": [
             "MT-work-eligibility-2026-09-28"
@@ -2236,7 +2236,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Switzerland",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/nicht-eu_efta/aufenthaltsbewilligung-studium.html",
           "evidenceIds": [
             "CH-study-eligibility-2026-09-28"
@@ -2251,7 +2251,7 @@
           "currency": "CHF",
           "period": "annual",
           "jurisdiction": "Switzerland",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/nicht-eu_efta/aufenthaltsbewilligung-studium.html",
           "evidenceIds": [
             "CH-study-finance-2026-09-28"
@@ -2316,7 +2316,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Czechia",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://mv.gov.cz/mvcren/article/third-country-nationals.aspx",
           "evidenceIds": [
             "CZ-study-eligibility-2026-09-28"
@@ -2344,7 +2344,7 @@
           "kind": "boolean",
           "value": true,
           "jurisdiction": "Czechia",
-          "effectiveDate": "2026-01-01",
+          "effectiveDate": "2026-10-29",
           "sourceUrl": "https://mv.gov.cz/mvcren/article/employee-card.aspx",
           "evidenceIds": [
             "CZ-work-eligibility-2026-09-28"
@@ -2403,7 +2403,9 @@
           "jurisdiction": "Australia",
           "effectiveDate": "2026-10-29",
           "sourceUrl": "https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/site-agreements/designated-area-migration-agreements",
-          "evidenceIds": ["AU-dama-regional-eligibility-2026-10-29"],
+          "evidenceIds": [
+            "AU-dama-regional-eligibility-2026-10-29"
+          ],
           "notes": "Employer sponsorship by an approved DAMA sponsor operating in a designated regional area is mandatory. The applicant cannot self-sponsor."
         }
       ]
@@ -2431,8 +2433,10 @@
           "jurisdiction": "Italy",
           "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.dsu.toscana.it/",
-          "evidenceIds": ["IT-dsu-need-blind-eligibility-2026-10-29"],
-          "notes": "Enrolment at a participating Italian public university is required before applying for the DSU scholarship. The scholarship is not a visa category — it supplements the standard Italian study visa."
+          "evidenceIds": [
+            "IT-dsu-need-blind-eligibility-2026-10-29"
+          ],
+          "notes": "Enrolment at a participating Italian public university is required before applying for the DSU scholarship. The scholarship is not a visa category \u2014 it supplements the standard Italian study visa."
         }
       ]
     },
@@ -2459,7 +2463,9 @@
           "jurisdiction": "Japan",
           "effectiveDate": "2026-10-29",
           "sourceUrl": "https://www.metro.tokyo.lg.jp/english/",
-          "evidenceIds": ["JP-tokyo-tech-accelerator-eligibility-2026-10-29"],
+          "evidenceIds": [
+            "JP-tokyo-tech-accelerator-eligibility-2026-10-29"
+          ],
           "notes": "Endorsement by a Tokyo Metropolitan Government-designated support organisation is required for the Tokyo Startup Visa. Acceptance into an accelerator program constitutes this endorsement."
         }
       ]
@@ -2470,7 +2476,7 @@
       "type": "work",
       "name": "D3 Highly Qualified Activity Residence Visa",
       "sourceUrl": "https://aima.gov.pt/pt",
-      "sourceAuthority": "Agência para a Integração, Migrações e Asilo (AIMA)",
+      "sourceAuthority": "Ag\u00eancia para a Integra\u00e7\u00e3o, Migra\u00e7\u00f5es e Asilo (AIMA)",
       "status": "publishable",
       "asymmetry_category": "tech_engineering",
       "capital_tier": "tier_2_moderate",
@@ -2487,7 +2493,9 @@
           "jurisdiction": "Portugal",
           "effectiveDate": "2026-10-29",
           "sourceUrl": "https://aima.gov.pt/pt",
-          "evidenceIds": ["PT-d3-highly-qualified-eligibility-2026-10-29"],
+          "evidenceIds": [
+            "PT-d3-highly-qualified-eligibility-2026-10-29"
+          ],
           "notes": "A qualifying employment contract or service agreement with a Portuguese entity for highly qualified activity is required. The activity must meet the D3 eligibility criteria."
         },
         {
@@ -2498,7 +2506,9 @@
           "jurisdiction": "Portugal",
           "effectiveDate": "2026-10-29",
           "sourceUrl": "https://aima.gov.pt/pt",
-          "evidenceIds": ["PT-d3-highly-qualified-eligibility-2026-10-29"],
+          "evidenceIds": [
+            "PT-d3-highly-qualified-eligibility-2026-10-29"
+          ],
           "notes": "Degree or equivalent qualification required. Non-degree holders must demonstrate 3+ years of relevant professional experience."
         }
       ]
