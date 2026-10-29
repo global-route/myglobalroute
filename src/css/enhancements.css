@@ -40,11 +40,9 @@
 
 .nav-menu a {
   font-family: var(--font-family-heading);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: rgba(255,255,255,0.85);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
   padding: 0.35rem 0;
   display: inline-flex;
   align-items: center;
@@ -58,19 +56,17 @@
   display: inline-flex;
   align-items: center;
   padding: 0.45rem 1.1rem !important;
-  background-color: var(--color-primary) !important;
-  color: white !important;
+  background-color: var(--color-amber) !important;
+  color: #000 !important;
   border-radius: 2px !important;
-  font-size: 0.85rem !important;
+  font-size: 0.9rem !important;
   font-weight: 600 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.04em !important;
   white-space: nowrap;
 }
 
 .nav-cta:hover {
-  background-color: var(--color-amber) !important;
-  color: #000 !important;
+  background-color: var(--color-primary) !important;
+  color: white !important;
 }
 
 /* ── PAGE HEADER — inner pages ── */
@@ -143,10 +139,7 @@
   background-color: white;
   border: 1px solid var(--color-neutral-200);
   padding: 1.5rem;
-  transition: box-shadow var(--transition-base);
 }
-
-.problem-card:hover { box-shadow: var(--shadow-md); }
 
 .problem-card h3 {
   color: var(--color-dark-navy);
@@ -161,10 +154,7 @@
   background-color: white;
   border: 1px solid var(--color-neutral-200);
   padding: 1.5rem;
-  transition: box-shadow var(--transition-base);
 }
-
-.approach-card:hover { box-shadow: var(--shadow-md); }
 
 .approach-card h3 { color: var(--color-dark-navy); font-size: 1.05rem; }
 .approach-card p  { color: #555; font-size: 0.95rem; }
@@ -176,10 +166,7 @@
   background-color: white;
   border: 1px solid var(--color-neutral-200);
   padding: 1.5rem;
-  transition: box-shadow var(--transition-base);
 }
-
-.featured-card:hover { box-shadow: var(--shadow-md); }
 
 .featured-card h3 { color: var(--color-dark-navy); font-size: 1.05rem; }
 .featured-card p  { color: #555; font-size: 0.95rem; }
@@ -189,22 +176,18 @@
   background-color: white;
   border: 1px solid var(--color-neutral-200);
   padding: 1.5rem;
-  transition: box-shadow var(--transition-base);
 }
-
-.tool-card:hover { box-shadow: var(--shadow-md); }
 
 /* ── COUNTRY CARDS ── */
 .country-card {
   background-color: white;
   border: 1px solid var(--color-neutral-200);
   padding: 1.5rem;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-base);
+  transition: border-color var(--transition-fast);
 }
 
 .country-card:hover {
   border-color: var(--color-primary);
-  box-shadow: var(--shadow-md);
 }
 
 .country-card-header h3 {
@@ -376,7 +359,7 @@
   transition: box-shadow var(--transition-base);
 }
 
-.playbook-card:hover { box-shadow: var(--shadow-md); }
+.playbook-card:hover { border-color: var(--color-primary); }
 
 /* ── ROUTE RESULTS ── */
 .route-results article {
