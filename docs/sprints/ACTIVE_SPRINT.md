@@ -15,8 +15,8 @@ All code phases complete (0-9, B, CP, GOIF, Vertical B). No code tasks are block
 | Countries | 30 (27 original + MU, CV, NA) |
 | Pathways | 68 (62 publishable / 6 research_required) |
 | Evidence records | 216 (18 primary + 198 addenda) |
-| Blog posts | 38 across 7 categories |
-| Sitemap URLs | 89 |
+| Blog posts | 50 across 7 categories |
+| Sitemap URLs | 101 |
 | Test suites | 19/19 PASS |
 | Tests | 180/180 PASS |
 | GOIF pathways | 7 tagged (asymmetry_category + capital_tier) |

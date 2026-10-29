@@ -2,7 +2,7 @@
 
 > **Updated:** 2026-10-29 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 180/180 passing
-> **Commit:** `e87f15c` | **Blog posts:** 38 | **Sitemap URLs:** 89 | **Stale requirements:** 0
+> **Commit:** `e87f15c` | **Blog posts:** 50 | **Sitemap URLs:** 101 | **Stale requirements:** 0
 
 ---
 
@@ -147,22 +147,22 @@ All 23 production readiness tasks complete. See `docs/sprints/PRODUCTION_READINE
 
 ## Phase 3 — Content & acquisition ✅
 
-- 38 blog posts across 7 categories:
-  - 15 Country Audits
+- 50 blog posts across 7 categories:
+  - 27 Country Audits (all 27 original countries covered)
   - 5 Student Playbooks
-  - 8 Professional Playbooks (incl. AU DAMA, PT D3, MU, CV, NA)
+  - 8 Professional Playbooks
   - 1 Business Playbook
   - 2 Case Studies
-  - 7 Guides (incl. African Digital Nomad Hubs, Asian/Nordic accelerators)
+  - 7 Guides
   - 1 Policy Update
-- 12 countries with publishable pathways but no country audit: FI, SE, NO, LU, HU, LT, IS, PL, MT, CH, CZ, CN
+- All 27 original countries now have at least one country audit blog post
 - All em dashes replaced with hyphens across all posts
 - 1 YouTube embed per post (verified video IDs)
 - All fabricated approval rate claims removed
 - OG/Twitter tags on all pages
 - Canonical tags on all generated HTML files
 - Sabilytics analytics on all pages
-- All 38 blog posts in sitemap.xml (89 URLs total)
+- All 50 blog posts in sitemap.xml (101 URLs total)
 
 ---
 
