@@ -21,6 +21,23 @@
 
 .logo-icon { display: none; }
 
+/* Nav home icon */
+.nav-home-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  color: rgba(255,255,255,0.85);
+  transition: color 0.15s;
+}
+
+.nav-menu a:hover .nav-home-icon,
+.nav-menu a.active .nav-home-icon { color: var(--color-amber); }
+
 .nav-menu a {
   font-family: var(--font-family-heading);
   font-size: 0.85rem;
@@ -29,6 +46,9 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
   padding: 0.35rem 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 .nav-menu a:hover { color: var(--color-amber); }

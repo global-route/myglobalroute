@@ -216,6 +216,7 @@ a:hover {
   padding: var(--spacing-md);
   max-width: 1200px;
   margin: 0 auto;
+  gap: var(--spacing-lg);
 }
 
 .logo {
@@ -226,19 +227,55 @@ a:hover {
 .logo-link {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
+  gap: 0.55rem;
   font-size: var(--font-size-lg);
   font-weight: 600;
   color: white;
+  text-decoration: none;
+  letter-spacing: -0.01em;
 }
 
-.logo-icon {
-  font-size: 1.5rem;
+.logo-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--color-primary);
+  border-radius: 6px;
+  flex-shrink: 0;
 }
+
+.logo-mark svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: white;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.logo-wordmark {
+  font-family: var(--font-family-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.logo-wordmark span {
+  color: var(--color-amber);
+}
+
+.logo-icon { display: none; }
 
 .navigation {
   display: flex;
   align-items: center;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .nav-menu {
