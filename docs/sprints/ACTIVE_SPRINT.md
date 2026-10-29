@@ -1,6 +1,6 @@
 # Active Sprint — Owner Actions & Ongoing Maintenance
 
-> **Updated:** 2026-10-29 | **Branch:** `main` | **Commit:** `e87f15c`
+> **Updated:** 2026-10-29 | **Branch:** `main` | **Commit:** `68c88d4`
 > **Production:** `https://mypathway2global.org.uk` (Cloudflare Workers — `globalroute`)
 > **Tests:** 19/19 suites, 180/180 passing
 
@@ -15,8 +15,8 @@ All code phases complete (0-9, B, CP, GOIF, Vertical B). No code tasks are block
 | Countries | 30 (27 original + MU, CV, NA) |
 | Pathways | 68 (62 publishable / 6 research_required) |
 | Evidence records | 216 (18 primary + 198 addenda) |
-| Blog posts | 50 across 7 categories |
-| Sitemap URLs | 101 |
+| Blog posts | 52 across 7 categories |
+| Sitemap URLs | 103 |
 | Test suites | 19/19 PASS |
 | Tests | 180/180 PASS |
 | GOIF pathways | 7 tagged (asymmetry_category + capital_tier) |
@@ -58,6 +58,7 @@ See `docs/sprints/OWNER_ACTIONS.md` for full instructions on each item.
 | Sprint | Date | Commit | Key deliverables |
 |---|---|---|---|
 | Vertical B + ⌘K search | 2026-10-29 | `e87f15c` | 3 African nomad countries, 3 remote_freelance pathways, 4 blog posts, region filter, PR filter, ⌘K search modal |
+| 12 country audits + N-P4/P5/C9/C10 | 2026-10-29 | `68c88d4` | FI SE NO CH LU HU LT IS PL MT CZ CN audits, WebPage schema, footer links, AfCFTA + diaspora guides |
 | Region + PR filters | 2026-10-29 | `e871731` | Target Region select, pr-route filter, IE/FR/PT pr-route tags, doc updates |
 | Data freshness | 2026-10-29 | `6d29814` | 37 stale effectiveDate fields refreshed |
 | GOIF S3-1 + S4 | 2026-10-29 | `d5ce2b0` | Gap card GOIF fields, 2 pSEO pages, localStorage cache, 3 tests |
@@ -73,31 +74,25 @@ See `docs/sprints/OWNER_ACTIONS.md` for full instructions on each item.
 ### Priority 1 — Owner-gated (no code needed)
 | ID | Task | Effort | Notes |
 |---|---|---|---|
-| N-T1 | ARIA audit — 4 core pages | 30 min | Run axe on homepage, Find MyPathway, Visa Wizard, Calculator; share results |
-| N-T2 | Legal review | Solicitor | privacy/disclaimer/terms sign-off |
-| N-T3 | OG image | 20 min | 1200×630px, navy `#10316b` bg, white wordmark |
-| N-T4 | Mailchimp URL | 10 min | Replace placeholder in `src/pages/blog.html` |
-| N-D2 | Country source sign-off (30 entries) | 1-2 hrs | `docs/data/country-source-review-manifest.json` → set `humanSignOff: true` |
+| N-T1 | OG image | 20 min | 1200×630px, navy `#10316b` bg — see OWNER_ACTIONS.md |
+| N-T2 | Mailchimp URL | 10 min | Replace placeholder in `src/pages/blog.html` — see OWNER_ACTIONS.md |
+| N-T3 | ARIA audit | 30 min | Run axe on 4 pages, share results — see OWNER_ACTIONS.md |
+| N-T4 | Country source sign-off (30) | 1-2 hrs | `docs/data/country-source-review-manifest.json` — see OWNER_ACTIONS.md |
+| N-T5 | Legal review | Solicitor | privacy/disclaimer/terms — prerequisite for affiliate/lead revenue |
 
-### Priority 2 — Content gaps (code-ready)
-| ID | Task | Notes |
-|---|---|---|
-| N-C8 | 12 missing country audit blog posts | FI, SE, NO, LU, HU, LT, IS, PL, MT, CH, CZ, CN — all have publishable pathways, no blog post |
-| N-C9 | AfCFTA business corridors | Rwanda, Mauritius (business), Ghana, Kenya — Vertical B expansion |
-| N-C10 | Diaspora repatriation guide | December campaign — blueprint Vertical B item |
-
-### Priority 3 — Product (code-ready)
-| ID | Task | Notes |
-|---|---|---|
-| N-P4 | WebPage JSON-LD on pSEO pages | Add to pathways-funded-study.html + pathways-regional-skilled.html |
-| N-P5 | Footer nav link to pSEO pages | Add "Funded Routes" to footer Explore section |
-| N-P6 | Sidebar layout | Blueprint section 3 — document-style left sidebar on Find MyPathway; significant layout change |
-
-### Priority 4 — Revenue
+### Priority 2 — Revenue (externally gated)
 | ID | Task | Notes |
 |---|---|---|
 | N-R1 | AdSense revenue baseline | After first 30 days live: record impressions, clicks, RPM |
-| N-R2 | Affiliate infrastructure | Requires legal review first |
+| N-R2 | Affiliate infrastructure | Requires legal review (N-T5) first |
+| N-R3 | Lead generation engine | Requires consent architecture + legal review before any lead collection |
+
+### Priority 3 — Phase 6 Scale (hard-gated)
+Do not start until Phase 5 revenue baseline exists.
+- Personalisation and saved routes
+- Policy-change alerts
+- Premium migration intelligence tier
+- B2B data / API products
 
 ---
 

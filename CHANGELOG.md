@@ -4,6 +4,57 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
+## 2026-10-29 — GOIF, Vertical B, 12 country audits, ⌘K search, region filter, AfCFTA guides
+
+**Tests:** 19/19 suites, 180/180 passing | **Blog posts:** 52 | **Sitemap URLs:** 103 | **Stale requirements:** 0
+**Commits:** `e87f15c` → `68c88d4` | **Version:** `4e85244f` (Cloudflare)
+
+### Data — countries 27 → 30
+- Added Mauritius (MU), Cape Verde (CV), Namibia (NA) to `src/data/countries.json`
+- Categories: Africa - Indian Ocean, Africa - Atlantic, Africa - Southern
+- Validator, tests, manifest all updated to 30 countries
+- `scripts/generate-country-source-manifest.js` regenerated for 30 entries
+
+### Data — pathways 65 → 68
+- Added MU-premium-visa, CV-remote-work-visa, NA-digital-nomad-visa
+- All three: `status: publishable`, `asymmetry_category: remote_freelance`, `capital_tier: tier_2_moderate`, `wizardTags: ["nomad"]`
+- Evidence addendum: `2026-10-29-vertical-b-remote-freelance.json` (6 records)
+- IE-critical-skills, FR-talent, PT-d3-highly-qualified tagged `pr-route` — 10 total PR-vector pathways
+- 37 stale `effectiveDate` fields refreshed across CA, IE, DE, IT, FR, HU, SE, LU, LT, IS, ES, AT, KR, CN, PL, MT, CH, CZ
+
+### Find MyPathway — new filters
+- Target Region select (10 regions mapped from `countries.json` categories)
+- Route Type: `remote_freelance` and `pr-route` options added
+- Filter logic: `pr-route` filters by `wizardTags`, region filters by `countryCategory` map
+- `region` added to localStorage persist fields
+
+### ⌘K search modal
+- `src/js/search-modal.js` — searches countries, pathways and blog posts from live JSON
+- Keyboard: ⌘K / Ctrl+K open/close, arrows navigate, Enter follow, Escape close
+- Injected on all 26 HTML pages and `blog-post.njk` template
+- `enhancements.css?v=5` — search trigger button + modal styles
+
+### pSEO pages — schema + footer links
+- WebPage JSON-LD added to `pathways-funded-study.html` and `pathways-regional-skilled.html`
+- "Funded Routes" and "Regional Routes" added to footer Explore section on all 26 HTML pages + blog template
+
+### Blog — 14 new posts (38 → 52)
+- **12 country audits:** Finland, Sweden, Norway, Switzerland, Luxembourg, Hungary, Lithuania, Iceland, Poland, Malta, Czechia, China — all 27 original countries now have at least one country audit post
+- **Vertical B (3):** Mauritius Premium Visa, Cape Verde Remote Work Visa, Namibia Digital Nomad Visa
+- **Vertical B overview:** African Digital Nomad Hubs 2026
+- **GOIF Sprint 2 (4, from prior session):** Australia DAMA, Italy DSU need-blind, Asian/Nordic accelerators, Portugal D3
+- **Vertical B business (2):** AfCFTA Business Corridors 2026, African Diaspora Repatriation Guide 2026
+
+### Docs updated
+- `CHANGELOG.md` — this entry
+- `docs/sprints/ACTIVE_SPRINT.md` — 30 countries, 68 pathways, 52 posts, 103 URLs, all features
+- `docs/project/PHASE_STATUS.md` — Phase 1/3 updated, Vertical B phase added, content gaps cleared
+- `docs/project/BLOG_CONTENT_INVENTORY.md` — 52 posts, 27 country audits, gaps resolved
+- `docs/sprints/GOIF_TASKFILE.md` — all sprints complete
+- `docs/sprints/OWNER_ACTIONS.md` — rewritten with 5 remaining items + full walkthroughs
+
+---
+
 ## 2026-10-28 — Content Platform Sprint, data freshness, wizard tests, route explanations, 4 country audits
 
 **Tests:** 19/19 suites, 168/168 passing | **Blog posts:** 31 | **Sitemap URLs:** 79 | **Stale requirements:** 0
