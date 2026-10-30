@@ -1056,6 +1056,43 @@ th {
   border: 1px solid #fcd34d;
 }
 
+.badge-unverified {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+}
+
+.badge-practitioner-required {
+  background: #f5f3ff;
+  color: #6d28d9;
+  border: 1px solid #c4b5fd;
+}
+
+/* Unverified content callout - used in posts awaiting practitioner sign-off */
+.unverified-callout {
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-left: 4px solid #b91c1c;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  color: #7f1d1d;
+}
+
+.unverified-callout strong { color: #b91c1c; }
+
+.practitioner-required-callout {
+  background: #f5f3ff;
+  border: 1px solid #c4b5fd;
+  border-left: 4px solid #6d28d9;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  color: #3b0764;
+}
+
+.practitioner-required-callout strong { color: #6d28d9; }
+
 /* ── EMAIL CAPTURE ── */
 .email-capture-form { display: flex; flex-direction: column; margin-top: var(--spacing-sm); }
 
