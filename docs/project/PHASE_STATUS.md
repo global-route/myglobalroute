@@ -2,7 +2,7 @@
 
 > **Updated:** 2026-10-29 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 180/180 passing
-> **Commit:** `e87f15c` | **Blog posts:** 50 | **Sitemap URLs:** 101 | **Stale requirements:** 0
+> **Commit:** `b8ce4ed` | **Blog posts:** 96 | **Sitemap URLs:** 145 | **Stale requirements:** 0
 
 ---
 
@@ -147,22 +147,23 @@ All 23 production readiness tasks complete. See `docs/sprints/PRODUCTION_READINE
 
 ## Phase 3 — Content & acquisition ✅
 
-- 50 blog posts across 7 categories:
-  - 27 Country Audits (all 27 original countries covered)
-  - 5 Student Playbooks
-  - 8 Professional Playbooks
-  - 1 Business Playbook
+- 96 blog posts across 7 categories:
+  - 38 Country Audits (all 30 countries covered including MU, CV, NA)
+  - 8 Student Playbooks
+  - 9 Professional Playbooks
+  - 3 Business Playbooks
   - 2 Case Studies
-  - 7 Guides
+  - 35 Guides (incl. CRS/tax series, work visa series, nomad guides, Schengen guides)
   - 1 Policy Update
-- All 27 original countries now have at least one country audit blog post
-- All em dashes replaced with hyphens across all posts
-- 1 YouTube embed per post (verified video IDs)
-- All fabricated approval rate claims removed
-- OG/Twitter tags on all pages
-- Canonical tags on all generated HTML files
-- Sabilytics analytics on all pages
-- All 50 blog posts in sitemap.xml (101 URLs total)
+- All 30 countries now have at least one country audit blog post
+- Emojis removed from all posts; em dashes replaced with hyphens
+- FAQ YAML indentation repaired across all posts
+- Unverified content labels: .unverified-callout + .practitioner-required-callout CSS
+- Partners page live (/pages/partners.html)
+- About page rewritten as org with mission/vision/partner model
+- Contact page with 3 routed paths
+- Reserved posts: 6 posts documented in RESERVED_POSTS_TASKFILE.md
+- All 96 blog posts in sitemap.xml (145 URLs total)
 
 ---
 

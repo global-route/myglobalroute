@@ -1,6 +1,6 @@
 # Blog Content Inventory & Pathway Reference
 
-> **Generated:** 2026-10-29 | **Posts:** 38 | **Pathways covered:** 62 publishable across 30 countries
+> **Generated:** 2026-10-30 | **Posts:** 96 | **Pathways covered:** 63 publishable across 30 countries
 > Use this document to plan new posts, identify gaps, and maintain consistency.
 
 ---
@@ -9,14 +9,14 @@
 
 | Category | Posts | Countries covered |
 |---|---|---|
-| Country Audits | 27 | All 27 original countries |
-| Student Playbooks | 5 | Italy (DSU complete, DSU need-blind, DSU vs Germany), UK, Italy vs. Germany |
-| Professional Playbooks | 8 | Canada, Germany, Germany vs. Canada, AU DAMA, PT D3, MU, CV, NA |
-| Business Playbooks | 1 | USA |
+| Country Audits | 38 | All 30 countries (27 original + MU, CV, NA) |
+| Student Playbooks | 8 | Italy DSU (x3), UK Masters, Italy vs Germany, USask, Erasmus Mundus, DAAD, Commonwealth |
+| Professional Playbooks | 9 | Canada, Germany, Germany vs Canada, AU DAMA, PT D3, MU, CV, NA, Saskatchewan PNP |
+| Business Playbooks | 3 | US LLC, UK Ltd, Mauritius GBL |
 | Case Studies | 2 | Canada (success), Multi-country (rejection) |
-| Guides | 7 | Motivation letter, Document auth, Blocked account, Passport tiers, Nordic/Asia study, Asian/Nordic accelerators, African Digital Nomad Hubs |
+| Guides | 35 | Work visas (continent series), nomad guides, Schengen, CRS/tax series, working holiday, AfCFTA, diaspora |
 | Policy Updates | 1 | Canada |
-| **Total** | **51** | **27 country audits + multi-country guides** |
+| **Total** | **96** | **30 countries, all major migration topics covered** |
 
 ## Content gaps
 

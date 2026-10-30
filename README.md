@@ -2,11 +2,11 @@
 
 **Evidence-gated migration intelligence for African Students, Professionals & Business Owners**
 
-**Current status (2026-10-29):** Production live. All phases 0-9, B, CP, GOIF and Vertical B complete. 19/19 test suites passing (180/180 tests). See [active sprint](docs/sprints/ACTIVE_SPRINT.md), [phase tracker](docs/project/PHASE_STATUS.md).
+**Current status (2026-10-30):** Production live. All phases 0-9, B, CP, GOIF, Vertical B and CRS/Tax series complete. 19/19 test suites passing (180/180 tests). See [active sprint](docs/sprints/ACTIVE_SPRINT.md), [phase tracker](docs/project/PHASE_STATUS.md).
 
-**Current data baseline:** 30 countries, 68 pathways (62 publishable / 6 research-required), 216 evidence records; all 62 publishable pathways have structured requirements[].
+**Current data baseline:** 30 countries, 69 pathways (63 publishable / 6 research-required), 218 evidence records; all 63 publishable pathways have structured requirements[].
 
-**Test status:** 19/19 suites PASS, 180/180 tests PASS.
+**Test status:** 19/19 suites PASS, 180/180 tests PASS. 96 blog posts. 145 sitemap URLs.
 
 **Live site:** [https://mypathway2global.org.uk](https://mypathway2global.org.uk)
 
