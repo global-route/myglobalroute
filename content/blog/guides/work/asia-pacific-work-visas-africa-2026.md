@@ -24,7 +24,7 @@ faqs:
 
 The Asia-Pacific region offers structured work visa routes with clear requirements and strong paths to permanent residence. Australia and New Zealand have the most accessible routes for African professionals. Japan and South Korea require employer sponsorship and relevant qualifications.
 
-## Australia — Three routes for different profiles
+## Australia - Three routes for different profiles
 
 ### Route 1: DAMA Regional Employer-Sponsored Stream
 
@@ -62,7 +62,7 @@ The standard Australian skilled migration routes require a minimum of 65 points 
 
 Australia's employer-sponsored temporary work visas (Temporary Skill Shortage subclass 482) require employer sponsorship and a salary meeting the Temporary Skilled Migration Income Threshold (TSMIT).
 
-## New Zealand — Accredited Employer Work Visa (AEWV)
+## New Zealand - Accredited Employer Work Visa (AEWV)
 
 New Zealand's AEWV is the primary employer-sponsored work visa, introduced in 2022.
 
@@ -78,7 +78,7 @@ New Zealand's AEWV is the primary employer-sponsored work visa, introduced in 20
 
 **Primary source:** `https://www.immigration.govt.nz/new-zealand-visas/visas/visa/accredited-employer-work-visa`
 
-## Japan — Engineer/Specialist/International Services Visa
+## Japan - Engineer/Specialist/International Services Visa
 
 Japan's primary work visa for professionals is the Engineer/Specialist in Humanities/International Services status of residence.
 
@@ -93,7 +93,7 @@ Japan's primary work visa for professionals is the Engineer/Specialist in Humani
 
 **Primary source:** `https://www.moj.go.jp/isa/applications/status/gijinkoku`
 
-## South Korea — E-7 Specially Designated Activities Visa
+## South Korea - E-7 Specially Designated Activities Visa
 
 South Korea's primary work visa for skilled foreign professionals is the E-7.
 

@@ -164,7 +164,7 @@ After graduation, Germany grants an **18-month job search visa** automatically. 
 ## Watch: Italy DSU Scholarship - How to Apply
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/lW5ChW6l_Pc" title="Italy DSU Scholarship Application Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lW5ChW6l_Pc" title="Italy DSU Scholarship Application Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Step-by-step guide to the DSU application process, ISEE documentation and what to expect*

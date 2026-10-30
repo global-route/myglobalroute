@@ -56,22 +56,22 @@ faqs:
 
 As a Nigerian entrepreneur, you face these barriers:
 
-❌ **Stripe banned in Nigeria** (can't accept online payments)  
-❌ **PayPal limited** (receive only, no withdrawals)  
-❌ **Domiciliary account fees** (high forex charges)  
-❌ **Trust issues** (clients hesitant to pay Nigerian companies)  
-❌ **Contract limitations** (can't sign US contracts easily)
+No **Stripe banned in Nigeria** (can't accept online payments) 
+No **PayPal limited** (receive only, no withdrawals) 
+No **Domiciliary account fees** (high forex charges) 
+No **Trust issues** (clients hesitant to pay Nigerian companies) 
+No **Contract limitations** (can't sign US contracts easily)
 
 ### Solution: US LLC
 
 A US LLC solves these problems:
 
-✅ **Stripe account** (accept credit cards, subscriptions)  
-✅ **PayPal business account** (full send/receive/withdraw)  
-✅ **US bank account** (Mercury, Relay, Wise Business)  
-✅ **Global credibility** ("MyCompany LLC" vs. "Ade's Services")  
-✅ **US contracts** (can sign with US clients, platforms, investors)  
-✅ **Lower fees** (Stripe 2.9% vs. Flutterwave 3.8%)
+Yes **Stripe account** (accept credit cards, subscriptions) 
+Yes **PayPal business account** (full send/receive/withdraw) 
+Yes **US bank account** (Mercury, Relay, Wise Business) 
+Yes **Global credibility** ("MyCompany LLC" vs. "Ade's Services") 
+Yes **US contracts** (can sign with US clients, platforms, investors) 
+Yes **Lower fees** (Stripe 2.9% vs. Flutterwave 3.8%)
 
 ---
 
@@ -82,11 +82,11 @@ Not all states are equal. Here are the top 3:
 ### 1. Wyoming LLC (Best Overall)
 
 **Why Wyoming?**
-- ✅ **Zero state income tax**
-- ✅ **No franchise tax**
-- ✅ **Low annual fees** ($60/year)
-- ✅ **Privacy** (owner names not public)
-- ✅ **Fast** (same-day formation)
+- Yes **Zero state income tax**
+- Yes **No franchise tax**
+- Yes **Low annual fees** ($60/year)
+- Yes **Privacy** (owner names not public)
+- Yes **Fast** (same-day formation)
 
 **Costs:**
 - Formation: $100-$150
@@ -102,9 +102,9 @@ Not all states are equal. Here are the top 3:
 ### 2. Delaware LLC (Best for Investors)
 
 **Why Delaware?**
-- ✅ **Investor-friendly** (preferred by VCs)
-- ✅ **Strong legal framework** (Chancery Court)
-- ✅ **Business credibility** (60% of Fortune 500 are Delaware corps)
+- Yes **Investor-friendly** (preferred by VCs)
+- Yes **Strong legal framework** (Chancery Court)
+- Yes **Business credibility** (60% of Fortune 500 are Delaware corps)
 
 **Costs:**
 - Formation: $90
@@ -120,9 +120,9 @@ Not all states are equal. Here are the top 3:
 ### 3. New Mexico LLC (Best for Privacy)
 
 **Why New Mexico?**
-- ✅ **Ultimate privacy** (no owner names disclosed, ever)
-- ✅ **No annual reports** (set and forget)
-- ✅ **Low fees** ($50 filing fee)
+- Yes **Ultimate privacy** (no owner names disclosed, ever)
+- Yes **No annual reports** (set and forget)
+- Yes **Low fees** ($50 filing fee)
 
 **Costs:**
 - Formation: $50
@@ -159,22 +159,22 @@ Not all states are equal. Here are the top 3:
 3. Pay $500
 4. Wait 1-2 weeks
 5. Receive:
-   - Delaware LLC
-   - EIN (tax ID)
-   - Stripe account (pre-activated)
-   - Mercury bank account
-   - IRS tax forms filed
+- Delaware LLC
+- EIN (tax ID)
+- Stripe account (pre-activated)
+- Mercury bank account
+- IRS tax forms filed
 
 **Pros:**
-- ✅ Everything done for you
-- ✅ Stripe account included
-- ✅ Mercury banking integrated
-- ✅ Tax setup handled
+- Yes Everything done for you
+- Yes Stripe account included
+- Yes Mercury banking integrated
+- Yes Tax setup handled
 
 **Cons:**
-- ❌ Delaware only (higher annual fees)
-- ❌ $500 upfront (expensive)
-- ❌ Less control over details
+- No Delaware only (higher annual fees)
+- No $500 upfront (expensive)
+- No Less control over details
 
 **Best for:** Founders who want zero hassle and plan to use Stripe
 
@@ -188,25 +188,25 @@ Not all states are equal. Here are the top 3:
 1. Go to [northwestregisteredagent.com](https://www.northwestregisteredagent.com/)
 2. Select **Wyoming LLC**
 3. Fill in company details:
-   - Company name (e.g., "Ade Consulting LLC")
-   - Your Nigerian address
-   - Email and phone
+- Company name (e.g., "Ade Consulting LLC")
+- Your Nigerian address
+- Email and phone
 4. Pay $39 + $100 state fee = **$139 total**
 5. Wait 3-5 business days
 6. Receive:
-   - LLC formation documents
-   - EIN (they can get it for you for $70 extra)
-   - Operating agreement
+- LLC formation documents
+- EIN (they can get it for you for $70 extra)
+- Operating agreement
 
 **Pros:**
-- ✅ Cheapest option ($139)
-- ✅ Wyoming (low annual fees)
-- ✅ Trusted service (15+ years)
-- ✅ Free registered agent (1st year)
+- Yes Cheapest option ($139)
+- Yes Wyoming (low annual fees)
+- Yes Trusted service (15+ years)
+- Yes Free registered agent (1st year)
 
 **Cons:**
-- ❌ You handle EIN yourself (or pay $70 extra)
-- ❌ No banking setup (you open accounts separately)
+- No You handle EIN yourself (or pay $70 extra)
+- No No banking setup (you open accounts separately)
 
 **Best for:** Budget-conscious founders
 
@@ -224,22 +224,22 @@ Not all states are equal. Here are the top 3:
 5. Pay $297-$497 (depending on package)
 6. Wait 5-7 days
 7. Receive:
-   - Wyoming LLC
-   - EIN
-   - Operating agreement
-   - Registered agent service
-   - Bank account setup help
-   - Bookkeeping tools
+- Wyoming LLC
+- EIN
+- Operating agreement
+- Registered agent service
+- Bank account setup help
+- Bookkeeping tools
 
 **Pros:**
-- ✅ Nigerian-friendly (designed for non-US founders)
-- ✅ EIN included
-- ✅ Banking setup guidance
-- ✅ Ongoing compliance support ($49-$99/month)
+- Yes Nigerian-friendly (designed for non-US founders)
+- Yes EIN included
+- Yes Banking setup guidance
+- Yes Ongoing compliance support ($49-$99/month)
 
 **Cons:**
-- ❌ More expensive than DIY ($297 vs. $139)
-- ❌ Monthly fees for compliance ($49+/month)
+- No More expensive than DIY ($297 vs. $139)
+- No Monthly fees for compliance ($49+/month)
 
 **Best for:** Founders who want guidance + ongoing support
 
@@ -259,9 +259,9 @@ Not all states are equal. Here are the top 3:
 **Step 2: Hire a Registered Agent**
 - Required (must have US address)
 - Options:
-  - Northwest Registered Agent: $50/year
-  - Incfile: $119/year
-  - Registered Agents Inc: $99/year
+- Northwest Registered Agent: $50/year
+- Incfile: $119/year
+- Registered Agents Inc: $99/year
 
 **Step 3: File Articles of Organization**
 - Go to [wyobiz.wyo.gov](https://wyobiz.wyo.gov/)
@@ -294,15 +294,15 @@ You need a **US bank account** to accept Stripe/PayPal payments.
 **What it is:** Online bank for startups (no physical branch)
 
 **Features:**
-- ✅ Free checking account
-- ✅ Free debit card (delivered to Nigeria)
-- ✅ Free domestic wires
-- ✅ Integrates with Stripe, QuickBooks
-- ✅ FDIC insured ($250K)
+- Yes Free checking account
+- Yes Free debit card (delivered to Nigeria)
+- Yes Free domestic wires
+- Yes Integrates with Stripe, QuickBooks
+- Yes FDIC insured ($250K)
 
 **Limits:**
-- ❌ International wires: $35 fee
-- ❌ Can be strict (may close account if suspicious activity)
+- No International wires: $35 fee
+- No Can be strict (may close account if suspicious activity)
 
 **How to open:**
 1. Go to [mercury.com](https://mercury.com/)
@@ -319,14 +319,14 @@ You need a **US bank account** to accept Stripe/PayPal payments.
 **What it is:** Simple online bank (no fees)
 
 **Features:**
-- ✅ Free checking (unlimited accounts)
-- ✅ Free ACH transfers
-- ✅ Free debit card
-- ✅ Multiple accounts (20+)
-- ✅ Easier approval than Mercury
+- Yes Free checking (unlimited accounts)
+- Yes Free ACH transfers
+- Yes Free debit card
+- Yes Multiple accounts (20+)
+- Yes Easier approval than Mercury
 
 **Limits:**
-- ❌ International wires: $30 fee
+- No International wires: $30 fee
 
 **How to open:**
 1. Go to [relayfi.com](https://relayfi.com/)
@@ -342,14 +342,14 @@ You need a **US bank account** to accept Stripe/PayPal payments.
 **What it is:** Multi-currency account (not a bank, but EMI)
 
 **Features:**
-- ✅ Hold 50+ currencies
-- ✅ Low international fees (0.5-1%)
-- ✅ US account number (can receive wires)
-- ✅ Easy approval
+- Yes Hold 50+ currencies
+- Yes Low international fees (0.5-1%)
+- Yes US account number (can receive wires)
+- Yes Easy approval
 
 **Limits:**
-- ❌ Not FDIC insured
-- ❌ Stripe may not accept Wise (check current policy)
+- No Not FDIC insured
+- No Stripe may not accept Wise (check current policy)
 
 **How to open:**
 1. Go to [wise.com/business](https://wise.com/business)
@@ -378,10 +378,10 @@ You need a **US bank account** to accept Stripe/PayPal payments.
 **Good news:** If your LLC has **no US-sourced income**, you pay **$0 US tax**.
 
 **What counts as US-sourced income?**
-- ❌ Services to US clients (if you're outside US) → **NOT US income**
-- ❌ Digital products sold to US customers → **NOT US income**
-- ✅ Rental income from US property → US income (taxed)
-- ✅ US employees' salaries → US income (taxed)
+- No Services to US clients (if you're outside US) → **NOT US income**
+- No Digital products sold to US customers → **NOT US income**
+- Yes Rental income from US property → US income (taxed)
+- Yes US employees' salaries → US income (taxed)
 
 **Example:**
 - You're a Nigerian web developer
@@ -389,7 +389,7 @@ You need a **US bank account** to accept Stripe/PayPal payments.
 - You do work from Nigeria
 - **US tax owed:** $0
 
-**Why?**  
+**Why?** 
 IRS taxes based on **where work is performed**, not where client is located. Since you work from Nigeria, it's foreign income.
 
 ---
@@ -433,9 +433,9 @@ Even if you owe $0 tax, you must file **Form 5472** annually.
 **Setup:**
 1. Go to [stripe.com](https://stripe.com/)
 2. Sign up with:
-   - US LLC details
-   - EIN
-   - Mercury/Relay bank account
+- US LLC details
+- EIN
+- Mercury/Relay bank account
 3. Verify identity (passport, address proof)
 4. Start accepting payments
 
@@ -539,7 +539,7 @@ Even if you owe $0 tax, you must file **Form 5472** annually.
 ## Watch: How to Open a US LLC as a Non-Resident
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/HI-NjzZHGIQ" title="US LLC Formation for Non-Residents" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HI-NjzZHGIQ" title="US LLC Formation for Non-Residents" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Step-by-step guide to forming a US LLC as a foreign national - state selection, EIN and banking*
@@ -611,22 +611,22 @@ A US LLC is the **cheapest and fastest way** for Nigerian entrepreneurs to acces
 - **Credibility:** "MyCompany LLC" vs. "Ade Services"
 
 **Who should do this:**
-- ✅ Freelancers (developers, designers, writers)
-- ✅ Agency owners (marketing, consulting)
-- ✅ SaaS founders
-- ✅ Digital product sellers
-- ✅ Content creators (courses, ebooks)
+- Yes Freelancers (developers, designers, writers)
+- Yes Agency owners (marketing, consulting)
+- Yes SaaS founders
+- Yes Digital product sellers
+- Yes Content creators (courses, ebooks)
 
 **Who shouldn't:**
-- ❌ Local Nigerian businesses (no benefit)
-- ❌ Those with no international clients
-- ❌ Those seeking US visa (LLC ≠ visa)
+- No Local Nigerian businesses (no benefit)
+- No Those with no international clients
+- No Those seeking US visa (LLC ≠ visa)
 
 **Bottom line:** If you earn $500+/month from international clients, a US LLC pays for itself within 3-6 months.
 
 ---
 
-**Updated:** July 21, 2026  
+**Updated:** July 21, 2026 
 **Questions?** [Contact us →](/pages/contact.html)
 
 **Related Articles:**

@@ -97,7 +97,7 @@ These are documented process barriers - not approval rate statistics:
 ## Watch: Express Entry Explained in 5 Minutes
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/Z0eZKzWQW3U" title="Express Entry Explained" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Z0eZKzWQW3U" title="Express Entry Explained" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Clear breakdown of how the Express Entry pool, CRS scoring and draws work*

@@ -55,14 +55,14 @@ faqs:
 
 It's a **regional scholarship program** run by Italian local governments to ensure low-income students can study for free. Unlike most scholarships that only cover tuition, DSU covers **everything**:
 
-- ✅ Full tuition waiver
-- ✅ Free university accommodation (dorm)
-- ✅ Free meals (breakfast, lunch, dinner) at university canteens
-- ✅ Cash stipend (€5,400-€7,200/year)
-- ✅ Free textbooks and study materials (some regions)
-- ✅ Transport pass (some regions)
+- Yes Full tuition waiver
+- Yes Free university accommodation (dorm)
+- Yes Free meals (breakfast, lunch, dinner) at university canteens
+- Yes Cash stipend (€5,400-€7,200/year)
+- Yes Free textbooks and study materials (some regions)
+- Yes Transport pass (some regions)
 
-**What makes it special?**  
+**What makes it special?** 
 It's **means-tested**, not merit-based. If your family income is low, you qualify-even with average grades.
 
 ---
@@ -110,10 +110,10 @@ Your family must earn **below the ISEE threshold**:
 
 ### Other Requirements
 
-- ✅ Enrolled in an Italian public university
-- ✅ Not receiving other full scholarships
-- ✅ Family income below threshold
-- ✅ Not more than 2 years behind in credits
+- Yes Enrolled in an Italian public university
+- Yes Not receiving other full scholarships
+- Yes Family income below threshold
+- Yes Not more than 2 years behind in credits
 
 **Citizenship:** **NOT required**. International students from any country can apply.
 
@@ -180,10 +180,10 @@ The €450-€600/month cash stipend is **yours to spend freely**:
 **For international students:**
 - Download ISEE-U form from [INPS website](https://www.inps.it/)
 - Fill in:
-  - Family income (convert to EUR)
-  - Property value (home, land)
-  - Number of family members
-  - Student status
+- Family income (convert to EUR)
+- Property value (home, land)
+- Number of family members
+- Student status
 
 **Example calculation (Nigerian family of 4):**
 
@@ -217,19 +217,19 @@ Result: €7,747 << €23,000 threshold → QUALIFIED
 - [ ] ISEE-U certification
 - [ ] Passport copy
 - [ ] Family income documentation
-  - Parents' salary slips (last 3 months)
-  - Bank statements (last 6 months)
-  - Tax returns (if applicable)
-  - Sworn declaration of income (notarized)
+- Parents' salary slips (last 3 months)
+- Bank statements (last 6 months)
+- Tax returns (if applicable)
+- Sworn declaration of income (notarized)
 - [ ] Property ownership documents (if any)
 - [ ] High school diploma + transcripts (translated)
 
 **How to apply:**
 1. Create account on regional DSU portal:
-   - Emilia-Romagna: [ER.GO](https://www.er-go.it/)
-   - Lombardy: [DSU Lombardia](https://www.dsu.regione.lombardia.it/)
-   - Tuscany: [DSU Toscana](https://www.dsu.toscana.it/)
-   - Lazio: [DiSCo Lazio](https://www.laziodisco.it/)
+- Emilia-Romagna: [ER.GO](https://www.er-go.it/)
+- Lombardy: [DSU Lombardia](https://www.dsu.regione.lombardia.it/)
+- Tuscany: [DSU Toscana](https://www.dsu.toscana.it/)
+- Lazio: [DiSCo Lazio](https://www.laziodisco.it/)
 
 2. Upload documents online
 3. Submit application by deadline (usually Aug 31)
@@ -289,7 +289,7 @@ DSU is **partially competitive**. You're ranked based on:
 | Father's salary | ₦500,000/month | €658/month | Use official exchange rate |
 | Mother's business | ₦300,000/month | €395/month | Average monthly income |
 | **Total/month** | **₦800,000** | **€1,053** | |
-| **Total/year** | **₦9.6M** | **€12,636** | Below €23,000 threshold ✅ |
+| **Total/year** | **₦9.6M** | **€12,636** | Below €23,000 threshold Yes |
 
 **Family of 4 with €12,636/year income → ISEE ~€7,800 → Strong qualification**
 
@@ -428,7 +428,7 @@ I use the money for my phone, clothes, and I save. I've been here 2 years now-gr
 
 ## Pros & Cons
 
-### Pros ✅
+### Pros Yes
 
 1. **Covers EVERYTHING:** Tuition, housing, food, cash-no gaps
 2. **Low barrier:** Need low income, not high grades
@@ -441,7 +441,7 @@ I use the money for my phone, clothes, and I save. I've been here 2 years now-gr
 
 ---
 
-### Cons ❌
+### Cons No
 
 1. **Competitive:** Only 30-40% of applicants win DSU
 2. **Italian language:** Need B1-B2 by year 2 (extra effort)
@@ -529,7 +529,7 @@ I use the money for my phone, clothes, and I save. I've been here 2 years now-gr
 ## Watch: What the DSU Scholarship Actually Covers in Italy
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/1Pi8ePezFMU" title="Italy DSU Scholarship Real Breakdown" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1Pi8ePezFMU" title="Italy DSU Scholarship Real Breakdown" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Real breakdown of DSU benefits - tuition, accommodation, meals and stipend*
@@ -570,7 +570,7 @@ If your family earns **less than $25,000/year**, apply to Italy. It's the best-k
 
 ---
 
-**Updated:** July 21, 2026  
+**Updated:** July 21, 2026 
 **Questions?** [Contact us →](/pages/contact.html)
 
 **Related Articles:**

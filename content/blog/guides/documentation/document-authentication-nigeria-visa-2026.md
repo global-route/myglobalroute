@@ -201,7 +201,7 @@ If the APS has concerns about your documents, they will inform you. You can prov
 ## Watch: Apostille or Translation First? The Correct Order
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/OSRlhtyUGsI" title="Apostille and Document Authentication Order" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OSRlhtyUGsI" title="Apostille and Document Authentication Order" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Clarifies the correct sequence - apostille before sworn translation - and why the order matters*

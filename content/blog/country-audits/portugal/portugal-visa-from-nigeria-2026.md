@@ -101,7 +101,7 @@ The D7 income threshold is not published as a fixed figure by AIMA. The €820/m
 ## Watch: Portugal D7 Visa - AIMA Appointment Preparation
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/VUE9ojGRSxM" title="Portugal D7 Visa and AIMA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VUE9ojGRSxM" title="Portugal D7 Visa and AIMA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Covers the AIMA residence permit process, processing backlogs and what to prepare*

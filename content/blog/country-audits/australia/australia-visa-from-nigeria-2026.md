@@ -137,7 +137,7 @@ Visitor visas, Working Holiday (subclass 417/462), partner and family visas, and
 ## Watch: Australia's Student Visa Rules Explained
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/G3pE7n_Ar8M" title="Australia Student Visa Rules" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G3pE7n_Ar8M" title="Australia Student Visa Rules" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Covers the Genuine Student requirement, CoE, and living funds thresholds*

@@ -105,7 +105,7 @@ The O-1 is a viable route for accomplished Nigerian professionals - researchers,
 ## Watch: F-1 Student Visa USA - Before Your Interview
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/HGhtCO3FJ8A" title="F-1 Student Visa USA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HGhtCO3FJ8A" title="F-1 Student Visa USA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Covers I-20, proof of funds, non-immigrant intent and the embassy interview*

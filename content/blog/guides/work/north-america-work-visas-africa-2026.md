@@ -26,7 +26,7 @@ North America offers two very different work visa landscapes. Canada has multipl
 
 This post covers what official sources confirm for both countries.
 
-## Canada — Multiple routes, clear requirements
+## Canada - Multiple routes, clear requirements
 
 ### Route 1: Express Entry (Federal Skilled Worker)
 
@@ -65,7 +65,7 @@ Each Canadian province has its own immigration streams. Saskatchewan, Manitoba, 
 
 **Primary source:** Check the immigration website of the specific province you are targeting.
 
-## USA — H-1B and the lottery reality
+## USA - H-1B and the lottery reality
 
 ### H-1B Specialty Occupation Visa
 

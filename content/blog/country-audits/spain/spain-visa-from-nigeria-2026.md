@@ -121,7 +121,7 @@ Spain has both public and private universities. Public university tuition for in
 ## Watch: Spain Digital Nomad Visa - Full Breakdown
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/Hs3coXFKFkM" title="Spain Digital Nomad Visa Explained" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Hs3coXFKFkM" title="Spain Digital Nomad Visa Explained" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Detailed walkthrough of the International Teleworker visa requirements, income proof and Beckham Law*

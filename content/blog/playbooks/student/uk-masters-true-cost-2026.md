@@ -73,7 +73,7 @@ Based on 2025-2026 data from 300+ Nigerian Master's students:
 
 | Cost Category | Official Estimate | Nigerian Reality | Gap |
 |---------------|------------------|-----------------|-----|
-| Tuition | £22,500 | £22,500 | ✓ Accurate |
+| Tuition | £22,500 | £22,500 | Yes Accurate |
 | Accommodation | £9,000/year | £12,000-15,000/year | +33-67% |
 | Food/Groceries | £3,000/year | £4,500-6,000/year | +50-100% |
 | Transport | £600/year | £1,000-1,500/year | +67-150% |
@@ -441,12 +441,12 @@ If renting private flat (accommodation bills not included):
 
 | City | Cost/Month | University Quality | Overall Value | Recommendation |
 |------|-----------|------------------|--------------|-----------------|
-| Leeds | £10,100-13,900 | Excellent (Tier 2) | ⭐⭐⭐⭐⭐ | BEST |
-| Birmingham | £10,100-13,900 | Excellent (Tier 2) | ⭐⭐⭐⭐⭐ | BEST |
-| Manchester | £10,800-15,500 | Excellent (Tier 2) | ⭐⭐⭐⭐⭐ | BEST |
-| Bristol | £10,100-13,900 | Excellent (Tier 2) | ⭐⭐⭐⭐⭐ | BEST |
-| Edinburgh | £12,300-17,200 | Excellent (Tier 2) | ⭐⭐⭐⭐ | Good |
-| London | £15,100-22,500 | Mixed (LSE/UCL top, but expensive) | ⭐⭐⭐ | Premium |
+| Leeds | £10,100-13,900 | Excellent (Tier 2) | | BEST |
+| Birmingham | £10,100-13,900 | Excellent (Tier 2) | | BEST |
+| Manchester | £10,800-15,500 | Excellent (Tier 2) | | BEST |
+| Bristol | £10,100-13,900 | Excellent (Tier 2) | | BEST |
+| Edinburgh | £12,300-17,200 | Excellent (Tier 2) | | Good |
+| London | £15,100-22,500 | Mixed (LSE/UCL top, but expensive) | | Premium |
 
 ---
 
@@ -912,7 +912,7 @@ As a Nigerian international student, you must:
 ## Watch: UK Student Visa - Don't Apply Until You Watch This
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/4Wb_229Bib4" title="UK Student Visa Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4Wb_229Bib4" title="UK Student Visa Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Covers maintenance funds, IHS surcharge, CAS and the real costs most guides skip*
@@ -974,8 +974,8 @@ If you can get **any scholarship (even 25%)** + leverage work income strategical
 
 ---
 
-**Updated:** August 18, 2026  
-**Next update:** January 2027 (new scholarship rounds)  
+**Updated:** August 18, 2026 
+**Next update:** January 2027 (new scholarship rounds) 
 **Found errors?** [Report corrections →](/pages/contact.html)
 
 **Related Articles:**

@@ -34,7 +34,7 @@ This post covers what official sources actually confirm for each country - and w
 
 Your employer applies for a work permit from the relevant labour authority. Once approved, you apply for the visa. The process is employer-led, not applicant-led. If someone is offering you a Gulf work visa without a confirmed job offer from a named employer, that is a red flag.
 
-## UAE — Employment Visa
+## UAE - Employment Visa
 
 **How it works:** Your UAE employer applies for a work permit from MOHRE (Ministry of Human Resources and Emiratisation). Once approved, you apply for an employment visa at the UAE consulate in your country. After arrival, you complete a medical examination and receive your Emirates ID and residence visa.
 
@@ -48,7 +48,7 @@ Your employer applies for a work permit from the relevant labour authority. Once
 
 **Primary source:** `https://u.ae/en/information-and-services/visa-and-emirates-id`
 
-## Qatar — Work Permit
+## Qatar - Work Permit
 
 **How it works:** Your Qatar employer applies for a work permit from the Ministry of Labour. Qatar operates a reformed version of the Kafala (sponsorship) system - since 2020, workers can change jobs without employer permission in some circumstances, but the employer still initiates the work permit.
 
@@ -62,7 +62,7 @@ Your employer applies for a work permit from the relevant labour authority. Once
 
 **Primary source:** `https://www.moi.gov.qa/`
 
-## Oman — Work Visa and Freelance Permit
+## Oman - Work Visa and Freelance Permit
 
 **How it works:** Standard work visa requires employer sponsorship. Oman operates a quota system limiting the number of expatriate workers per company. Your employer must have available quota before they can sponsor you.
 
@@ -77,7 +77,7 @@ Your employer applies for a work permit from the relevant labour authority. Once
 
 **Primary source:** `https://www.mol.gov.om/`
 
-## Saudi Arabia — Work Visa
+## Saudi Arabia - Work Visa
 
 **How it works:** Saudi Arabia operates the Kafala system. Your employer applies for a work permit (Iqama) on your behalf. The process involves the employer's registration with the Ministry of Human Resources and Social Development (MHRSD).
 

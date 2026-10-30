@@ -95,7 +95,7 @@ Netherlands pathways are in the research queue. When evidence records are comple
 ## Watch: Netherlands Work Visa - Highly Skilled Migrant Route
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/ljmlknzjNHg" title="Netherlands Highly Skilled Migrant Visa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ljmlknzjNHg" title="Netherlands Highly Skilled Migrant Visa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Covers the IND Kennismigrant route, recognised sponsor requirement and salary thresholds*

@@ -256,7 +256,7 @@ For investment and business purposes, several African countries actively court p
 ## Watch: Henley Passport Index 2026 - Global Rankings Explained
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/CtgmCTPgCNo" title="Henley Passport Index 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CtgmCTPgCNo" title="Henley Passport Index 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *2026 Henley Passport Index rankings and what drives changes in visa-free access*

@@ -26,9 +26,9 @@ Europe offers the most structured and verifiable work visa routes for African pr
 
 This post covers the five most relevant European work visa routes for African applicants in 2026 - with verified figures from official sources.
 
-## Germany — Two routes, two different profiles
+## Germany - Two routes, two different profiles
 
-### Route 1: Opportunity Card (Chancenkarte) — no job offer required
+### Route 1: Opportunity Card (Chancenkarte) - no job offer required
 
 The Chancenkarte is Germany's job search visa. You come to Germany for up to 1 year to find work, without needing a job offer first.
 
@@ -44,7 +44,7 @@ The Chancenkarte is Germany's job search visa. You come to Germany for up to 1 y
 
 **Primary source:** `https://www.make-it-in-germany.com/en/visa-residence/opportunity-card`
 
-### Route 2: Skilled Worker Visa — job offer required
+### Route 2: Skilled Worker Visa - job offer required
 
 If you already have a job offer from a German employer, you apply for the Skilled Worker visa directly.
 
@@ -55,7 +55,7 @@ If you already have a job offer from a German employer, you apply for the Skille
 
 **Primary source:** `https://www.auswaertiges-amt.de/en/visa-service`
 
-## UK — Skilled Worker Visa
+## UK - Skilled Worker Visa
 
 The UK Skilled Worker visa is the primary route for non-EU professionals. It requires a job offer from a UK employer with a valid sponsor licence.
 
@@ -71,7 +71,7 @@ The UK Skilled Worker visa is the primary route for non-EU professionals. It req
 
 **Primary source:** `https://www.gov.uk/skilled-worker-visa`
 
-## Portugal — D3 Highly Qualified Activity Visa
+## Portugal - D3 Highly Qualified Activity Visa
 
 Portugal's D3 visa is for highly qualified professionals with a job offer from a Portuguese employer. It leads to permanent residence in 5 years and citizenship in 5 years.
 
@@ -84,7 +84,7 @@ Portugal's D3 visa is for highly qualified professionals with a job offer from a
 
 **Primary source:** `https://aima.gov.pt/pt`
 
-## Spain — International Teleworker Visa (Digital Nomad)
+## Spain - International Teleworker Visa (Digital Nomad)
 
 Spain's International Teleworker visa is for remote workers whose income comes from outside Spain.
 
@@ -97,7 +97,7 @@ Spain's International Teleworker visa is for remote workers whose income comes f
 
 **Primary source:** `https://www.inclusion.gob.es/`
 
-## Ireland — Critical Skills Employment Permit
+## Ireland - Critical Skills Employment Permit
 
 Ireland's Critical Skills Employment Permit is one of the most accessible European work permits for skilled professionals. There is no quota and it leads directly to permanent residence.
 

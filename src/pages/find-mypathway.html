@@ -49,7 +49,7 @@
             <li>Assess your personal eligibility</li>
             <li>Predict approval likelihood</li>
             <li>Replace advice from a registered immigration adviser</li>
-            <li>Cover tourist or nomad routes — use the <a href="/pages/visa-wizard.html">Visa Wizard</a> for those</li>
+            <li>Cover tourist or nomad routes - use the <a href="/pages/visa-wizard.html">Visa Wizard</a> for those</li>
           </ul>
         </div>
       </div>
@@ -188,7 +188,7 @@
       </div>
     </section>
   </main>
-  <div class="disclaimer-bar"><p>General information only — not legal or immigration advice. Always verify current requirements with the relevant authority before paying fees or submitting an application. <a href="/pages/disclaimer.html">Full disclaimer →</a></p></div>
+  <div class="disclaimer-bar"><p>General information only - not legal or immigration advice. Always verify current requirements with the relevant authority before paying fees or submitting an application. <a href="/pages/disclaimer.html">Full disclaimer →</a></p></div>
   <footer id="footer" class="footer">
     <div class="footer-content">
       <div class="footer-section"><h4>MyPathway2Global</h4><p>Evidence-gated global mobility intelligence.</p><p style="font-size:0.78rem;opacity:0.7;margin-top:0.5rem;">Independent platform. Not affiliated with any government.</p></div>
@@ -262,7 +262,7 @@
     function renderNextAction(pathway, country) {
       const actions = {
         'DE': { study: 'Apply via the German embassy in your country. Book an appointment at vfs-germany.com. Processing: 6-12 weeks.', work: 'Submit via the German embassy. Use the Make it in Germany portal to check eligibility first.' },
-        'CA': { work: 'Create an Express Entry profile at ircc.canada.ca. Invitations to apply are issued in draws — check current CRS cutoffs.' },
+        'CA': { work: 'Create an Express Entry profile at ircc.canada.ca. Invitations to apply are issued in draws - check current CRS cutoffs.' },
         'GB': { work: 'Your employer must assign a Certificate of Sponsorship (CoS) before you apply at gov.uk/skilled-worker-visa.', study: 'Your institution issues a CAS number. Apply online at gov.uk/student-visa.' },
         'AU': { study: 'Apply online via immi.homeaffairs.gov.au after receiving your CoE from your institution.', work: 'Submit an Expression of Interest via SkillSelect at immi.homeaffairs.gov.au.' },
         'IE': { work: 'Your employer applies for the permit at enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/.', study: 'Apply at inis.gov.ie after receiving your offer letter.' },
@@ -286,23 +286,23 @@
         : '';
       return `<article>
         <div class="pathway-card-header">
-          <h3>${esc(match.country.name)} — ${esc(match.pathway.name)}</h3>
+          <h3>${esc(match.country.name)} - ${esc(match.pathway.name)}</h3>
           <span class="freshness-badge ${esc(badge.cls)}">${esc(badge.text)}</span>${fundedBadge}
         </div>
         ${match.stale ? renderStaleWarning() : ''}
         ${match.matchedTier ? renderMatchedTier(match.matchedTier) : ''}
         ${renderEvidenceTrail(match.pathway)}
         ${renderNextAction(match.pathway, match.country)}
-        <a href="${esc(match.pathway.sourceUrl)}" rel="noopener noreferrer">Review official source — ${esc(match.pathway.sourceAuthority || match.country.name)}</a>
+        <a href="${esc(match.pathway.sourceUrl)}" rel="noopener noreferrer">Review official source - ${esc(match.pathway.sourceAuthority || match.country.name)}</a>
       </article>`;
     }
 
     function renderAlternatives(alternatives) {
       if (!alternatives.length) return '';
       const items = alternatives.map(a =>
-        `<li>${esc(a.country.name)} — ${esc(a.pathway.name)}: <span class="evidence-note">${esc(a.blocker)}</span></li>`
+        `<li>${esc(a.country.name)} - ${esc(a.pathway.name)}: <span class="evidence-note">${esc(a.blocker)}</span></li>`
       ).join('');
-      return `<section aria-labelledby="alt-heading"><h2 id="alt-heading">Nearby routes — current blockers</h2><p>These pathways match your goal but did not pass the current evidence gate. The blocker is shown for each.</p><ul>${items}</ul></section>`;
+      return `<section aria-labelledby="alt-heading"><h2 id="alt-heading">Nearby routes - current blockers</h2><p>These pathways match your goal but did not pass the current evidence gate. The blocker is shown for each.</p><ul>${items}</ul></section>`;
     }
 
     // B-P3: persist + restore form inputs via localStorage
@@ -344,10 +344,10 @@
         const profile = Object.fromEntries(new FormData(form).entries());
         window.GlobalRoute?.Analytics?.track('route_search_started', { page_type: 'find-mypathway' });
 
-        // Business goal — research-required state
+        // Business goal - research-required state
         if (profile.goal === 'business') {
           results.innerHTML = `<div class="wizard-blocker-card">
-            <strong>Business pathways — research in progress</strong>
+            <strong>Business pathways - research in progress</strong>
             <p>Structured business immigration pathways (investor visas, entrepreneur routes, intra-company transfers) require additional evidence verification before they can be recommended. They are not yet in the evidence gate.</p>
             <p style="margin-top:0.75rem;">In the meantime, the <a href="/pages/visa-wizard.html">Visa Wizard</a> can surface work pathways that may be relevant to business owners operating remotely.</p>
           </div>`;
@@ -381,7 +381,7 @@
           return;
         }
         if (!matches.length) {
-          // Near-miss gap analysis — find the closest pathway by funds gap
+          // Near-miss gap analysis - find the closest pathway by funds gap
           const GOIF_PLAYBOOK_LINKS = {
             'AU-dama-regional': '/blog/playbooks/professional/australia-dama-regional-stream-2026/',
             'IT-dsu-need-blind': '/blog/playbooks/student/italy-dsu-need-blind-scholarship-2026/',
@@ -425,7 +425,7 @@
                 : '';
               gapHtml = `<div class="gap-analysis">
                 <p class="gap-analysis-heading">Closest pathway to your budget</p>
-                <p><strong>${esc(countryName)} — ${esc(closest.pathway.name)}</strong> ${tierLabel}</p>
+                <p><strong>${esc(countryName)} - ${esc(closest.pathway.name)}</strong> ${tierLabel}</p>
                 ${renderConcessions(closest.pathway)}
                 <p>Requires <strong>${esc(closest.tier.currency)} ${esc(String(closest.tier.value))}</strong>. You are <strong>${esc(closest.tier.currency)} ${esc(String(Math.round(closestGap)))}</strong> short.${timelineText}</p>
                 <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:0.75rem;">
@@ -444,7 +444,7 @@
           results.innerHTML = '<div style="text-align:center;padding:3rem 1rem;"><h2 style="margin-bottom:0.5rem;">No pathway matches</h2><p style="color:var(--color-neutral-500);max-width:420px;margin:0 auto 1.5rem;">No publishable pathways passed the evidence gate for your inputs. Try broadening your goal or adjusting your budget.</p><div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;"><button type="button" class="btn btn-secondary" onclick="document.querySelector(\"[name=goal]\").value=\"any\";document.querySelector(\"[name=budget]\").value=\"\";form.dispatchEvent(new Event(\"submit\"))">Reset filters</button><a href="/pages/countries.html" class="btn btn-primary">Browse countries</a></div></div>' + gapHtml + explanationHtml + renderAlternatives(alternatives);
           return;
         }
-        const asymmetryNote = asymmetry ? '<p class="evidence-note">Showing filtered routes only — not eligibility assessments. Confirm current requirements at the official source before acting.</p>' : '<p class="evidence-note">Goal matches only — not eligibility assessments. Confirm current requirements at the official source before acting.</p>';
+        const asymmetryNote = asymmetry ? '<p class="evidence-note">Showing filtered routes only - not eligibility assessments. Confirm current requirements at the official source before acting.</p>' : '<p class="evidence-note">Goal matches only - not eligibility assessments. Confirm current requirements at the official source before acting.</p>';
         results.innerHTML = '<h2>Pathways matching your goal</h2>' + asymmetryNote + matches.map(renderCard).join('') + renderAlternatives(alternatives) + renderExtensionRoutes(profile, pathways.pathways, countries.countries);
         // Show export button when results exist
         document.getElementById('export-bar').hidden = false;
@@ -475,12 +475,12 @@
       const items = ext.map(p => {
         const c = countryMap.get(p.countryId);
         if (!c) return '';
-        return `<li><a href="${esc(p.sourceUrl)}" rel="noopener noreferrer"><strong>${esc(c.name)} — ${esc(p.name)}</strong></a></li>`;
+        return `<li><a href="${esc(p.sourceUrl)}" rel="noopener noreferrer"><strong>${esc(c.name)} - ${esc(p.name)}</strong></a></li>`;
       }).filter(Boolean).join('');
       if (!items) return '';
       return `<section class="wizard-extension-section" style="margin-top:var(--spacing-2xl);" aria-labelledby="ext-routes-heading">
         <h2 id="ext-routes-heading">${esc(label)}</h2>
-        <p class="evidence-note">Possible next steps based on your current visa status. In-country switching rules vary — verify with the official authority before acting.</p>
+        <p class="evidence-note">Possible next steps based on your current visa status. In-country switching rules vary - verify with the official authority before acting.</p>
         <ul class="link-list">${items}</ul>
       </section>`;
     }

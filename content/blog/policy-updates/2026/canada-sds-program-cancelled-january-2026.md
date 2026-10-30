@@ -55,17 +55,17 @@ A fast-track student visa program for citizens of 14 countries (including Nigeri
 ### How It Worked (Before Jan 8, 2026)
 
 **Requirements:**
-- ✅ Acceptance letter from Canadian DLI (Designated Learning Institution)
-- ✅ IELTS 6.0+ in each band (or equivalent)
-- ✅ **GIC (Guaranteed Investment Certificate) of CAD 20,635** (₦11.15M)
-- ✅ Proof of 1st-year tuition paid
-- ✅ Medical exam
-- ✅ Police certificate
+- Yes Acceptance letter from Canadian DLI (Designated Learning Institution)
+- Yes IELTS 6.0+ in each band (or equivalent)
+- Yes **GIC (Guaranteed Investment Certificate) of CAD 20,635** (₦11.15M)
+- Yes Proof of 1st-year tuition paid
+- Yes Medical exam
+- Yes Police certificate
 
 **Benefits:**
-- ⚡ **20-day processing** (vs. 12-20 weeks regular stream)
-- ✅ More predictable processing (clear, structured requirements)
-- ✅ Simpler documentation
+- **20-day processing** (vs. 12-20 weeks regular stream)
+- Yes More predictable processing (clear, structured requirements)
+- Yes Simpler documentation
 
 **Why it was popular:**
 - Fast (3 weeks vs. 5 months)
@@ -130,7 +130,7 @@ A fast-track student visa program for citizens of 14 countries (including Nigeri
 
 #### 1. Slower Processing
 
-**Before:** Apply → 20 days → Approved  
+**Before:** Apply → 20 days → Approved 
 **Now:** Apply → 12-20 weeks → Approved
 
 **Impact:** If you're starting in September, you must apply by **April-May** (not July like before).
@@ -139,7 +139,7 @@ A fast-track student visa program for citizens of 14 countries (including Nigeri
 
 #### 2. GIC No Longer Sufficient
 
-**Before:** GIC + tuition = enough financial proof  
+**Before:** GIC + tuition = enough financial proof 
 **Now:** Must show **comprehensive financial capacity**:
 
 - Bank statements (6 months)
@@ -376,7 +376,7 @@ Apply for a **1-year postgraduate certificate** (cheaper than degree):
 ## Watch: Canada Ends SDS - New Study Permit Rules Explained
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/k0ATaQo4b9c" title="Canada SDS Cancelled - New Study Permit Rules" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k0ATaQo4b9c" title="Canada SDS Cancelled - New Study Permit Rules" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Covers what changed when SDS was cancelled and what the new study permit process requires*
@@ -388,10 +388,10 @@ Apply for a **1-year postgraduate certificate** (cheaper than degree):
 **The SDS era is over.** Canada just raised the bar for international students.
 
 **What this means:**
-- ✅ More documentation needed
-- ✅ Longer processing times
-- ✅ Higher risk of refusal
-- ❌ But NOT impossible
+- Yes More documentation needed
+- Yes Longer processing times
+- Yes Higher risk of refusal
+- No But NOT impossible
 
 **Strategy:**
 1. Apply 5 months before program starts (not 2 months)
@@ -404,7 +404,7 @@ Apply for a **1-year postgraduate certificate** (cheaper than degree):
 
 ---
 
-**Updated:** July 21, 2026  
+**Updated:** July 21, 2026 
 **Questions?** [Contact us →](/pages/contact.html)
 
 **Related Articles:**

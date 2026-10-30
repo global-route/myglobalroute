@@ -26,7 +26,7 @@ The African Continental Free Trade Area (AfCFTA) is creating new business and wo
 
 This post covers the most structured intra-African work routes - what they actually require, not what agents claim.
 
-## South Africa — Critical Skills Visa
+## South Africa - Critical Skills Visa
 
 South Africa's Critical Skills Visa is the most accessible work route for qualified African professionals. It does not require a prior job offer.
 
@@ -44,7 +44,7 @@ South Africa's Critical Skills Visa is the most accessible work route for qualif
 
 **Primary source:** `https://www.dha.gov.za/`
 
-## Rwanda — Investor and Skilled Worker Permits
+## Rwanda - Investor and Skilled Worker Permits
 
 Rwanda has the most streamlined business environment in Africa. Business registration takes 1-2 days online through the Rwanda Development Board (RDB).
 
@@ -60,7 +60,7 @@ Rwanda has the most streamlined business environment in Africa. Business registr
 
 **Primary source:** `https://www.rdb.rw/`
 
-## Kenya — Special Pass and Work Permit
+## Kenya - Special Pass and Work Permit
 
 Kenya's work permit system has multiple categories. The most relevant for African professionals are:
 
@@ -74,7 +74,7 @@ Kenya's work permit system has multiple categories. The most relevant for Africa
 
 **Primary source:** `https://www.immigration.go.ke/`
 
-## Ghana — Right of Abode and Work Permit
+## Ghana - Right of Abode and Work Permit
 
 Ghana has a unique provision for the African diaspora: the Right of Abode.
 
@@ -86,7 +86,7 @@ Ghana has a unique provision for the African diaspora: the Right of Abode.
 
 **Primary source:** `https://www.gipc.gov.gh/`
 
-## Mauritius — Occupation Permit
+## Mauritius - Occupation Permit
 
 Mauritius has a well-structured Occupation Permit for foreign professionals and investors.
 

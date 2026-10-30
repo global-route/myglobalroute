@@ -97,7 +97,7 @@ This is the **biggest factor**.
 | Foreign vocational training (2+ years) | 25 | Trade certificates, diplomas |
 | No formal qualification | 0 | Disqualifies most applicants |
 
-**Most common for Africans:** Foreign university degree = 30 points ✅
+**Most common for Africans:** Foreign university degree = 30 points Yes
 
 ---
 
@@ -114,7 +114,7 @@ Work experience in your field:
 | 1-2 years | 3 |
 | Less than 1 year | 0 |
 
-**Example:** Software engineer with 5 years experience = 9 points ✅
+**Example:** Software engineer with 5 years experience = 9 points Yes
 
 ---
 
@@ -142,7 +142,7 @@ Younger applicants score higher:
 | 40-45 | 2 |
 | 45+ | 0 |
 
-**Example:** Age 32 = 6 points ✅
+**Example:** Age 32 = 6 points Yes
 
 ---
 
@@ -154,7 +154,7 @@ Younger applicants score higher:
 - 1 year work experience: 3 points
 - A2 German (just started learning): 0 points
 - Age 28: 6 points
-- **TOTAL: 39 points** ⚠️ (Below typical cutoff)
+- **TOTAL: 39 points** Warning: (Below typical cutoff)
 
 **Status:** Borderline. May need to improve German or gain more experience.
 
@@ -166,7 +166,7 @@ Younger applicants score higher:
 - 5 years work experience: 9 points
 - B1 German (2-3 months study): 5 points
 - Age 32: 6 points
-- **TOTAL: 50 points** ✅ (STRONG APPLICATION)
+- **TOTAL: 50 points** Yes (STRONG APPLICATION)
 
 **Status:** Very competitive. Likely approval.
 
@@ -178,7 +178,7 @@ Younger applicants score higher:
 - 8+ years work experience: 15 points
 - B2 German (6+ months study): 10 points
 - Age 38: 4 points
-- **TOTAL: 59 points** ✅✅ (EXCELLENT)
+- **TOTAL: 59 points** YesYes (EXCELLENT)
 
 **Status:** Strong profile - meets the points threshold. Can apply immediately.
 
@@ -362,7 +362,7 @@ You'll need:
 - Age: 2-6 points (based on date of birth)
 - **Total shows immediately**
 
-**If you score 30+:** System approves application ✅
+**If you score 30+:** System approves application Yes
 **If below 30:** Application rejected
 
 ---
@@ -505,12 +505,12 @@ After 6 months of employment:
 
 | Industry | Demand | Salary | Ease of Hiring |
 |----------|--------|--------|----------------|
-| IT/Software | ⭐⭐⭐⭐⭐ | €40-60K | Very easy |
-| Engineering | ⭐⭐⭐⭐⭐ | €45-65K | Very easy |
-| Healthcare | ⭐⭐⭐⭐⭐ | €35-50K | Very easy |
-| Finance | ⭐⭐⭐⭐ | €45-70K | Easy |
-| Hospitality | ⭐⭐⭐ | €20-30K | Very easy |
-| Skilled Trades | ⭐⭐⭐⭐ | €30-50K | Easy |
+| IT/Software | | €40-60K | Very easy |
+| Engineering | | €45-65K | Very easy |
+| Healthcare | | €35-50K | Very easy |
+| Finance | | €45-70K | Easy |
+| Hospitality | | €20-30K | Very easy |
+| Skilled Trades | | €30-50K | Easy |
 
 **Best for Africans:** IT, engineering, healthcare (highest demand, highest pay)
 
@@ -538,14 +538,14 @@ After 6 months of employment:
 
 | Factor | Chancenkarte | Student Visa | Skilled Worker Visa | Family Visa |
 |--------|------------|-------------|-------------------|-------------|
-| Job offer needed | ❌ NO | ❌ NO | ✅ YES | ❌ NO |
-| Education required | ✅ YES | ✅ YES | ✅ YES | ❌ NO |
-| Language required | ⚠️ A2 | ⚠️ Required | ✅ B1+ | ❌ NO |
+| Job offer needed | No NO | No NO | Yes YES | No NO |
+| Education required | Yes YES | Yes YES | Yes YES | No NO |
+| Language required | Warning: A2 | Warning: Required | Yes B1+ | No NO |
 | Cost | €200 | €11,300+ | €200 | €0 |
 | Processing time | 2-4 weeks | 8-14 weeks | 2-4 weeks | 4-8 weeks |
 | Time in Germany | 1 year search | 2 years study | Ongoing work | Ongoing |
-| Path to PR | ✅ 5 years | ⚠️ Via work visa | ✅ 5 years | ✅ 5 years |
-| Can work full-time | ✅ YES | ❌ 20h/week | ✅ YES | ⚠️ Limited |
+| Path to PR | Yes 5 years | Warning: Via work visa | Yes 5 years | Yes 5 years |
+| Can work full-time | Yes YES | No 20h/week | Yes YES | Warning: Limited |
 
 **Bottom line:** Chancenkarte is **cheapest and fastest for skilled workers without a job offer**.
 
@@ -556,7 +556,7 @@ After 6 months of employment:
 | Factor | Chancenkarte | Canada Express |
 |--------|------------|----------------|
 | Points needed | 30+ (easy) | 480+ (harder) |
-| Job offer needed | ❌ NO | ❌ NO |
+| Job offer needed | No NO | No NO |
 | Processing time | 2-4 weeks | 6 months |
 | Cost | €200 (₦145k) | CAD $1,215 (₦680k) |
 | Time to PR | 5 years | 1 year |
@@ -751,7 +751,7 @@ No need to be in Germany before applying.
 ## Watch: Germany Chancenkarte - The Truth About the Opportunity Card
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/ifsDFMvyRwA" title="Germany Chancenkarte Opportunity Card" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ifsDFMvyRwA" title="Germany Chancenkarte Opportunity Card" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Honest breakdown of the points system, job search reality and what the card actually gives you*
@@ -812,7 +812,7 @@ Why? Because:
 - 4 years work experience (9 points)
 - A2 German (0 points)
 - Age 30 (6 points)
-- **Total: 45 points** ✅ (Likely approval)
+- **Total: 45 points** Yes (Likely approval)
 
 **Timeline to Germany:** 4 weeks preparation → 2 weeks approval → 1 month arrange travel → In Germany with 1 year to find job
 
@@ -826,8 +826,8 @@ Why? Because:
 
 ---
 
-**Updated:** August 18, 2026  
-**Next update:** February 2027 (first annual review)  
+**Updated:** August 18, 2026 
+**Next update:** February 2027 (first annual review) 
 **Found errors?** [Report corrections →](/pages/contact.html)
 
 **Related Articles:**

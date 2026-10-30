@@ -51,11 +51,11 @@ faqs:
 
 Germany is one of the most popular study destinations for African students. The German Academic Exchange Service (DAAD) highlights Germany as a destination with:
 
-- ✅ **Zero tuition fees** at public universities
-- ✅ **High-quality education** (world-ranked institutions)
-- ✅ **18-month post-study work visa** (job search visa)
-- ✅ **Path to permanent residency** after 2 years of employment
-- ✅ **English-taught programs** (1,200+ programs available)
+- Yes **Zero tuition fees** at public universities
+- Yes **High-quality education** (world-ranked institutions)
+- Yes **18-month post-study work visa** (job search visa)
+- Yes **Path to permanent residency** after 2 years of employment
+- Yes **English-taught programs** (1,200+ programs available)
 
 These claims are **100% true**-but they tell only half the story.
 
@@ -104,7 +104,7 @@ This is the **biggest barrier** for Nigerian students.
 | Expatrio | €11,208 | €49 | €4.99 | **€11,322** |
 | X-Patrio | €11,208 | €0 | €6.50 | **€11,286** |
 
-**What is a blocked account?**  
+**What is a blocked account?** 
 A special bank account where you deposit €11,208 (€934/month × 12 months) as **proof of funds**. The German embassy requires this to ensure you can support yourself.
 
 **How to fund it from Nigeria:**
@@ -207,7 +207,7 @@ This **covers your living costs** after the blocked account is exhausted.
 
 ### Pathway Options
 
-**Option A: Direct University Admission**  
+**Option A: Direct University Admission** 
 If you have:
 - Good A-levels, WAEC, or NECO results
 - IELTS 6.5+ or TestDaF 4
@@ -217,7 +217,7 @@ If you have:
 
 ---
 
-**Option B: Studienkolleg (Foundation Year)**  
+**Option B: Studienkolleg (Foundation Year)** 
 If you need academic preparation:
 - 1-year preparatory program
 - Lower blocked account (€10,332 for older rules, check current)
@@ -227,7 +227,7 @@ If you need academic preparation:
 
 ---
 
-**Option C: Language Course → Student Visa**  
+**Option C: Language Course → Student Visa** 
 Start with a language visa, then upgrade:
 - 6-12 month intensive German course
 - Lower initial costs
@@ -265,8 +265,8 @@ Start with a language visa, then upgrade:
 - Apply to **5-8 universities** (increase chances)
 - Via Uni-Assist or directly
 - Application deadlines:
-  - Winter semester (Oct): Jan 15 - July 15
-  - Summer semester (Apr): Aug 15 - Jan 15
+- Winter semester (Oct): Jan 15 - July 15
+- Summer semester (Apr): Aug 15 - Jan 15
 
 **Step 5: Get Admission Letter**
 - Wait 4-12 weeks for response
@@ -474,7 +474,7 @@ Based on 2025 Lagos embassy data, the **top 5 reasons** Nigerian students get re
 ## Watch: Study in Germany for Free - DAAD Scholarships
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/lW5ChW6l_Pc" title="Study in Germany for Free - DAAD Scholarship" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lW5ChW6l_Pc" title="Study in Germany for Free - DAAD Scholarship" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *DAAD scholarship overview - covers zero-tuition public universities and funding options*
@@ -525,7 +525,7 @@ The blocked account (₦8.1M) is steep, but the **zero tuition saves you ₦20-4
 
 ---
 
-**Updated:** July 21, 2026  
+**Updated:** July 21, 2026 
 **Found errors or have updates?** [Report corrections →](/pages/contact.html)
 
 **Related Articles:**

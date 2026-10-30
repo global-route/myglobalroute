@@ -170,7 +170,7 @@ Without MEXT, you need:
 ## Watch: Studying in Norway as an International Student
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/3Yd7gRFOSGE" title="Studying in Norway as an International Student" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3Yd7gRFOSGE" title="Studying in Norway as an International Student" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *What tuition-free actually means in Norway, living costs and the application process*

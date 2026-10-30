@@ -130,7 +130,7 @@ This is entirely within your control and is one of the most avoidable refusal re
 ## Watch: UK Visa Rejected? 4 Common Reasons to Know
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/6cUcYMA6wcI" title="UK Visa Rejection Reasons" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6cUcYMA6wcI" title="UK Visa Rejection Reasons" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Covers the documented refusal patterns that apply across UK, Schengen and Canada applications*

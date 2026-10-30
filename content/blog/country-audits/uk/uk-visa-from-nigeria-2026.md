@@ -67,9 +67,9 @@ The UK Student visa is for international students aged 16 and over studying at a
 - **Admission offer:** Confirmation of Acceptance for Studies (CAS) from a licensed UK student sponsor - [source: UKVI](https://www.gov.uk/student-visa)
 - **Minimum age:** 16 years
 - **Maintenance funds:** You must show you can cover your course fees and living costs:
-  - London: £1,334/month for up to 9 months (£12,006 maximum)
-  - Outside London: £1,023/month for up to 9 months (£9,207 maximum)
-  - Funds must be held for 28 consecutive days before application
+- London: £1,334/month for up to 9 months (£12,006 maximum)
+- Outside London: £1,023/month for up to 9 months (£9,207 maximum)
+- Funds must be held for 28 consecutive days before application
 - **English language:** CEFR B2 level minimum (IELTS Academic 5.5 in each band for most courses)
 
 ### Tuition fees
@@ -96,7 +96,7 @@ These are documented process barriers - not approval rate statistics:
 ## Watch: UK Student Visa - What You Need to Know
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/4Wb_229Bib4" title="UK Student Visa Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4Wb_229Bib4" title="UK Student Visa Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Covers CAS, maintenance funds, IHS surcharge and common mistakes*

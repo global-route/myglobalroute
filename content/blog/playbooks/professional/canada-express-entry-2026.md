@@ -156,9 +156,9 @@ There are **three pathways** under Express Entry. Which one suits you?
 | Education Required | Bachelor's+ | High school | None |
 | Work Experience | 2+ years anywhere | 2+ years anywhere | 3+ years IN Canada |
 | Language Requirement | CLB 7+ | CLB 5+ | CLB 7+ |
-| Without Job Offer | ✅ Yes | ❌ Usually needs offer | ✅ Yes |
+| Without Job Offer | Yes Yes | No Usually needs offer | Yes Yes |
 | Typical CRS Score | 450-520 | 280-400 | 350-450 |
-| Best for Nigerians | ✅ MOST | CMS/trades only | ✅ If already in Canada |
+| Best for Nigerians | Yes MOST | CMS/trades only | Yes If already in Canada |
 
 **Recommendation for Nigerians:** **Federal Skilled Worker (FSW)** is the most common path.
 
@@ -186,10 +186,10 @@ Your **Comprehensive Ranking System (CRS) score** determines if you get an ITA. 
 ---
 
 **Education:** 0-150 points
-- PhD: 150 points ✅ (highest)
+- PhD: 150 points Yes (highest)
 - Master's degree: 126 points
 - 2+ bachelor's degrees: 120 points
-- Bachelor's degree: 120 points ✅ (most common)
+- Bachelor's degree: 120 points Yes (most common)
 - 2-year college diploma: 91 points
 - 1-year certificate: 46 points
 - High school only: 0 points
@@ -200,8 +200,8 @@ Your **Comprehensive Ranking System (CRS) score** determines if you get an ITA. 
 
 **English CLB Scale:**
 - CLB 9: 136 points (native-like fluency)
-- CLB 8: 130 points ✅ (very common target)
-- CLB 7: 119 points ✅ (minimum for FSW)
+- CLB 8: 130 points Yes (very common target)
+- CLB 7: 119 points Yes (minimum for FSW)
 - CLB 6: 98 points
 - CLB 5: 65 points
 - Below CLB 5: 0 points (not eligible)
@@ -222,7 +222,7 @@ Awarded based on **1+ years of experience in primary occupation:**
 - 6+ years: 80 points
 - 5-5.99 years: 70 points
 - 4-4.99 years: 60 points
-- 3-3.99 years: 50 points ✅ (common target)
+- 3-3.99 years: 50 points Yes (common target)
 - 2-2.99 years: 40 points
 - 1-1.99 years: 30 points
 - Less than 1 year: 0 points
@@ -258,7 +258,7 @@ Bonus points if your education or experience transfers to Canada:
 
 This is where **Provincial Nominee Program (PNP)** scores come in:
 
-- **PNP Nomination:** 600 points 🔥 (automatic ITA)
+- **PNP Nomination:** 600 points (automatic ITA)
 - **Valid job offer:** 200 points
 - **Provincial residence:** 30 points
 - **Language: French CLB 5+:** 30 points
@@ -293,7 +293,7 @@ IRCC publishes draw results monthly. Your CRS score must **meet or exceed the cu
 - Bachelor's degree: 120 points
 - English CLB 8 (IELTS 7.5): 130 points
 - 0 years work experience: 0 points
-- **TOTAL: 382 points** ❌ (NOT enough for current draws)
+- **TOTAL: 382 points** No (NOT enough for current draws)
 
 **Strategy:** Get 1+ year work experience first (adds 30+ points), or get PNP nomination.
 
@@ -305,11 +305,11 @@ IRCC publishes draw results monthly. Your CRS score must **meet or exceed the cu
 - Master's degree: 126 points
 - English CLB 8 (IELTS 7.5): 130 points
 - 5 years work experience: 70 points
-- **TOTAL: 428 points** ⚠️ (Close but might not pass current draws)
+- **TOTAL: 428 points** Warning: (Close but might not pass current draws)
 
 **Strategy to push above 495:**
 - Improve English to CLB 9 (+17 points) = 445 → **Still not enough**
-- Get Provincial Nominee (automatic 600+) = ✅ **ITA highly likely**
+- Get Provincial Nominee (automatic 600+) = Yes **ITA highly likely**
 - Get valid job offer (+200 points) = 628 → **ITA highly likely**
 
 ---
@@ -320,8 +320,8 @@ IRCC publishes draw results monthly. Your CRS score must **meet or exceed the cu
 - Master's degree: 126 points
 - English CLB 8: 130 points
 - 8 years work experience: 80 points
-- **Provincial Nominee Program:** 600 points 🔥
-- **TOTAL: 1,020 points** ✅ **ITA GUARANTEED**
+- **Provincial Nominee Program:** 600 points 
+- **TOTAL: 1,020 points** Yes **ITA GUARANTEED**
 
 This person gets ITA in **every draw**.
 
@@ -334,11 +334,11 @@ This person gets ITA in **every draw**.
 - English CLB 8: 130 points
 - French CLB 6 (bonus): 30 points
 - 1 year work experience: 30 points
-- **TOTAL: 442 points** ⚠️ (Still below cutoff)
+- **TOTAL: 442 points** Warning: (Still below cutoff)
 
 **Strategy:** Reach 3+ years work experience (50 points) = 462. Then either:
 - Improve English to CLB 9 = 479
-- Add PNP = 642 ✅
+- Add PNP = 642 Yes
 
 ---
 
@@ -614,7 +614,7 @@ Once you submit, IRCC reviews your application.
 - Bring your passport and CoPR letter
 - Present to border agent upon arrival
 - Get your **Permanent Resident card** mailed within 6 weeks
-- You're now a permanent resident! 🎉
+- You're now a permanent resident! 
 
 ---
 
@@ -685,11 +685,11 @@ Based on 2025 IRCC data, the **top 5 reasons** Nigerian Express Entry applicatio
 **Fix:**
 - Use exact job duties to find correct NOC code at https://www.noc.esdc.gc.ca/
 - Get detailed work letter from employer including:
-  - Exact job title
-  - Main duties and responsibilities
-  - Full-time hours
-  - Salary/pay information
-  - Employment dates
+- Exact job title
+- Main duties and responsibilities
+- Full-time hours
+- Salary/pay information
+- Employment dates
 
 ---
 
@@ -920,7 +920,7 @@ Most people get PR without a job offer, then find a job after landing in Canada.
 ## Watch: Express Entry to Canada PR - Detailed Cost and Process
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/tYOqTs4vZxQ" title="Canada Express Entry PR Process and Cost" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tYOqTs4vZxQ" title="Canada Express Entry PR Process and Cost" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Real breakdown of the full Express Entry process, costs and timeline from someone who went through it*
@@ -985,8 +985,8 @@ Express Entry is **Canada's fastest path to PR** for skilled workers. The proces
 
 ---
 
-**Updated:** August 18, 2026  
-**Next update:** October 2026 (draw data refresh)  
+**Updated:** August 18, 2026 
+**Next update:** October 2026 (draw data refresh) 
 **Found errors?** [Report corrections →](/pages/contact.html)
 
 **Related Articles:**

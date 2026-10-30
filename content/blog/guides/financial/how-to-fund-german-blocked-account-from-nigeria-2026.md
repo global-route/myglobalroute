@@ -70,8 +70,8 @@ Wise (formerly TransferWise) offers the closest to mid-market exchange rate with
 4. Enter the Fintiba or Expatrio account details as the recipient
 5. Fund the Wise transfer from your Nigerian bank account via bank transfer or debit card
 
-**Typical fee:** 1-2% of the transfer amount  
-**Transfer time:** 1-3 business days  
+**Typical fee:** 1-2% of the transfer amount 
+**Transfer time:** 1-3 business days 
 **Exchange rate:** Mid-market rate with a small transparent markup
 
 **Important:** Check whether Wise supports direct NGN → EUR transfers at the time you apply - availability varies. If not, transfer NGN → USD first, then USD → EUR in a second transfer.
@@ -83,16 +83,16 @@ If you have a domiciliary (foreign currency) account at a Nigerian bank (GTBank,
 1. Convert NGN to USD at your bank
 2. Transfer USD from your DOM account to Fintiba or Expatrio (they accept USD and convert to EUR)
 
-**Typical fee:** Bank conversion spread (1-3%) + international wire fee (~$25-$50)  
-**Transfer time:** 3-5 business days  
+**Typical fee:** Bank conversion spread (1-3%) + international wire fee (~$25-$50) 
+**Transfer time:** 3-5 business days 
 **Note:** Nigerian banks apply CBN-regulated exchange rates which may differ from the open market rate
 
 ### Option 3 - Western Union / MoneyGram
 
 Available but typically more expensive than Wise for large transfers.
 
-**Typical fee:** 2-4% plus exchange rate margin  
-**Transfer time:** 1-2 business days  
+**Typical fee:** 2-4% plus exchange rate margin 
+**Transfer time:** 1-2 business days 
 **Note:** Check the maximum transfer limit - large amounts may require multiple transfers or additional verification
 
 ---
@@ -162,7 +162,7 @@ Fintiba and Expatrio will return the funds to you, minus their fees. Check the r
 ## Watch: Fintiba Blocked Account for Germany - How It Works
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/D4jd7N2lz2U" title="Fintiba Blocked Account Germany" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D4jd7N2lz2U" title="Fintiba Blocked Account Germany" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Covers the Fintiba setup process, transfer timeline and what the Finanzierungsnachweis looks like*

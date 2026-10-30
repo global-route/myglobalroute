@@ -40,9 +40,9 @@ faqs:
 
 ### Who is Chisom?
 
-**Age:** 28  
-**Location:** Lagos, Nigeria → Toronto, Canada  
-**Education:** B.Sc Computer Science, University of Lagos (2018)  
+**Age:** 28 
+**Location:** Lagos, Nigeria → Toronto, Canada 
+**Education:** B.Sc Computer Science, University of Lagos (2018) 
 **Work experience:**
 - 2 years at a Lagos fintech startup (Backend Engineer)
 - 2 years at an e-commerce company (Full-stack Developer)
@@ -61,9 +61,9 @@ faqs:
 **Week 1-2: Choosing the pathway**
 
 Chisom researched:
-- ❌ Study route (too expensive: CAD 40K+ for college)
-- ❌ Provincial Nominee Program (PNP) (requires job offer first)
-- ✅ **Express Entry** (points-based, no job offer needed)
+- No Study route (too expensive: CAD 40K+ for college)
+- No Provincial Nominee Program (PNP) (requires job offer first)
+- Yes **Express Entry** (points-based, no job offer needed)
 
 **Why Express Entry?**
 - Software engineers = **high demand (NOC 21232)**
@@ -85,7 +85,7 @@ Chisom used the [CRS calculator](https://www.cic.gc.ca/english/immigrate/skilled
 | Language (IELTS 8.5) | 124 |
 | **Total** | **404 points** |
 
-**Cutoff score (Jan 2026):** 490 points  
+**Cutoff score (Jan 2026):** 490 points 
 **Problem:** Chisom was **86 points short**
 
 ---
@@ -121,10 +121,10 @@ Chisom needed more points. Options:
 - Guaranteed Invitation to Apply (ITA)
 
 **Requirements:**
-- CRS score 350+ (Chisom had 404 ✅)
-- 12 months work experience (Chisom had 48 months ✅)
-- Bachelor's degree (Chisom had one ✅)
-- NOC 21232 (Software Engineer) ✅
+- CRS score 350+ (Chisom had 404 Yes)
+- 12 months work experience (Chisom had 48 months Yes)
+- Bachelor's degree (Chisom had one Yes)
+- NOC 21232 (Software Engineer) Yes
 
 **Timeline:** Ontario draws every 2-4 weeks
 
@@ -139,7 +139,7 @@ Chisom prepared for 3 weeks:
 - Practiced with past papers
 - Took mock tests
 
-**Test day:** British Council Lagos  
+**Test day:** British Council Lagos 
 **Cost:** ₦92,000
 
 **Results (2 weeks later):**
@@ -147,7 +147,7 @@ Chisom prepared for 3 weeks:
 - Reading: 9.0
 - Writing: 7.5
 - Speaking: 8.0
-- **Overall: 8.5** (CLB 10) ✅
+- **Overall: 8.5** (CLB 10) Yes
 
 **Language points:** 124 (maximum)
 
@@ -164,7 +164,7 @@ Chisom needed to prove his Nigerian degree = Canadian Bachelor's.
 4. Paid WES fee (CAD 240 = ₦130,000)
 5. Wait 6 weeks
 
-**Result:** "Bachelor's Degree (4 years)" ✅
+**Result:** "Bachelor's Degree (4 years)" Yes
 
 **Total cost (IELTS + ECA):** ₦237,000
 
@@ -179,10 +179,10 @@ Chisom prepared:
 - [ ] IELTS results
 - [ ] WES ECA report
 - [ ] Proof of work experience
-  - Offer letters (2 companies)
-  - Resignation letters
-  - Payslips (last 3 months per job)
-  - Employment reference letters (detailed job duties)
+- Offer letters (2 companies)
+- Resignation letters
+- Payslips (last 3 months per job)
+- Employment reference letters (detailed job duties)
 - [ ] Police certificate (Nigeria Police Force)
 - [ ] Proof of funds (CAD 13,310 = ₦7.2M in bank account)
 
@@ -193,10 +193,10 @@ Chisom's letters included:
 - Dates of employment
 - Salary
 - **Detailed job duties** (matched NOC 21232 description):
-  - "Developed RESTful APIs using Node.js and Python"
-  - "Designed database schemas (PostgreSQL, MongoDB)"
-  - "Collaborated with frontend team using React"
-  - "Led code reviews and mentored junior developers"
+- "Developed RESTful APIs using Node.js and Python"
+- "Designed database schemas (PostgreSQL, MongoDB)"
+- "Collaborated with frontend team using React"
+- "Led code reviews and mentored junior developers"
 
 **Tip:** Letters MUST match NOC description. Generic letters = rejection.
 
@@ -208,11 +208,11 @@ Chisom created his Express Entry profile online:
 1. Went to [IRCC website](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html)
 2. Created GCKey account
 3. Filled in profile:
-   - Personal details
-   - Education (linked WES report)
-   - Work experience (linked reference letters)
-   - Language (linked IELTS)
-   - Proof of funds
+- Personal details
+- Education (linked WES report)
+- Work experience (linked reference letters)
+- Language (linked IELTS)
+- Proof of funds
 
 **CRS score calculated:** 404 points
 
@@ -238,9 +238,9 @@ Chisom received **Notification of Interest (NOI)** email:
 Chisom submitted Ontario application:
 1. Logged into [Ontario PNP portal](https://www.ontario.ca/page/ontarios-immigrant-nominee-program)
 2. Uploaded:
-   - Resume
-   - Employment letters
-   - Proof he intends to live in Ontario
+- Resume
+- Employment letters
+- Proof he intends to live in Ontario
 3. Paid fee: CAD 1,500 (₦810,000)
 
 **Processing time:** 30-60 days
@@ -252,7 +252,7 @@ Chisom submitted Ontario application:
 **March 10, 2026:** Chisom received approval email:
 > "You have been nominated by Ontario. Your CRS score has increased by 600 points."
 
-**New CRS score:** 404 + 600 = **1,004 points** 🎉
+**New CRS score:** 404 + 600 = **1,004 points** 
 
 ---
 
@@ -283,7 +283,7 @@ Chisom submitted full application:
 
 **Week 3-4: Waiting**
 
-IRCC processing time: 6 months (official)  
+IRCC processing time: 6 months (official) 
 **Chisom's experience:** 4 weeks
 
 **Status updates:**
@@ -299,7 +299,7 @@ IRCC processing time: 6 months (official)
 Chisom received COPR email + PDF:
 > "Your application for permanent residence has been approved. You must land in Canada by September 15, 2026."
 
-**He did it** 🎉
+**He did it** 
 
 ---
 
@@ -309,18 +309,18 @@ Here's exactly what Chisom spent:
 
 | Item | Cost (CAD) | Cost (NGN) |
 |------|-----------|-----------|
-| **Phase 1: Preparation** |  |  |
+| **Phase 1: Preparation** | | |
 | IELTS test | CAD 170 | ₦92,000 |
 | ECA (WES) | CAD 240 | ₦130,000 |
 | Transcript (UNILAG) | - | ₦15,000 |
-| **Phase 2: Applications** |  |  |
+| **Phase 2: Applications** | | |
 | Ontario PNP fee | CAD 1,500 | ₦810,000 |
 | PR application fee | CAD 1,365 | ₦738,000 |
 | Biometrics | CAD 85 | ₦46,000 |
 | Medical exam | - | ₦65,000 |
 | Police certificate | - | ₦10,000 |
 | Document translation | - | ₦50,000 |
-| **Phase 3: Travel** |  |  |
+| **Phase 3: Travel** | | |
 | Flight (Lagos → Toronto) | CAD 1,200 | ₦650,000 |
 | Initial settlement (1 month) | CAD 3,000 | ₦1,620,000 |
 | **TOTAL** | **CAD 7,560** | **₦4,226,000** |
@@ -406,10 +406,10 @@ Here's exactly what Chisom spent:
 
 ## Chisom's Current Life (1 Year Later)
 
-**Job:** Full-stack Developer, Toronto startup  
-**Salary:** CAD 95,000/year (got a raise!)  
-**Rent:** CAD 2,000/month (shares 2-bedroom condo with roommate)  
-**Savings:** CAD 1,500/month  
+**Job:** Full-stack Developer, Toronto startup 
+**Salary:** CAD 95,000/year (got a raise!) 
+**Rent:** CAD 2,000/month (shares 2-bedroom condo with roommate) 
+**Savings:** CAD 1,500/month 
 **Status:** Applying for citizenship (eligible in 2028)
 
 **Family:** Wife and daughter joined him (family sponsorship, 8 months)
@@ -423,7 +423,7 @@ Here's exactly what Chisom spent:
 ## Watch: How to Apply for Canada PR from Nigeria - Step by Step
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/I01MsQWCK58" title="Canada PR from Nigeria - Step by Step" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I01MsQWCK58" title="Canada PR from Nigeria - Step by Step" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Real walkthrough of the Express Entry process from Nigeria - documents, timeline and costs*
@@ -485,7 +485,7 @@ Here's exactly what Chisom spent:
 
 ---
 
-**Updated:** July 21, 2026  
+**Updated:** July 21, 2026 
 **Want your story featured?** [Share it with us →](/pages/contact.html)
 
 **Related Articles:**

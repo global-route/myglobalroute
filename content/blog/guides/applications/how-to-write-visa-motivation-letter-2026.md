@@ -136,7 +136,7 @@ A letter that runs to 4 pages signals poor communication skills. Edit ruthlessly
 ## Watch: How to Write a Motivation Letter for German Visa 2026
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/aRmbhDeRLXA" title="Visa Motivation Letter Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aRmbhDeRLXA" title="Visa Motivation Letter Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Covers structure, what visa officers look for and the mistakes that cause rejections*

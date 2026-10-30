@@ -117,7 +117,7 @@ These are documented process barriers - not approval rate statistics:
 ## Watch: Moving to Ireland - What You Need to Know
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/3Yd7gRFOSGE" title="Moving to Ireland from Nigeria" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3Yd7gRFOSGE" title="Moving to Ireland from Nigeria" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Overview of the Irish immigration system, permit types and what to expect on arrival*

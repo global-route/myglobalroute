@@ -101,7 +101,7 @@ The Decreto Flussi is oversubscribed. Applications are processed on a first-come
 ## Watch: How to Apply to Study in Italy - Universitaly Portal
 
 <div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/I51fI_n1xkI" title="Universitaly Portal Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I51fI_n1xkI" title="Universitaly Portal Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Step-by-step walkthrough of the Universitaly pre-enrolment process required for Nigerian applicants*
