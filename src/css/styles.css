@@ -1411,6 +1411,7 @@ h5 {
 .badge-verified { background: #dcfce7; color: #15803d; }
 .badge-partial  { background: #fef9c3; color: #854d0e; }
 .badge-stale    { background: #fee2e2; color: #b91c1c; }
+.badge-blocked  { background: #fee2e2; color: #b91c1c; }
 
 /* B-P4: country page depth */
 .country-pathway-card {

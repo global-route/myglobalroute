@@ -1271,3 +1271,95 @@ th {
   border-radius: 3px;
   font-family: inherit;
 }
+
+/* UX-1: results sort bar */
+.results-sort-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+.results-sort-bar .results-count {
+  font-size: 0.875rem;
+  color: var(--color-neutral-500);
+}
+.results-sort-bar select {
+  font-size: 0.875rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: 2px;
+  background: #fff;
+}
+
+/* UX-2: per-card status badge */
+.status-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.status-badge-publishable { background: #dcfce7; color: #15803d; }
+.status-badge-research    { background: #fee2e2; color: #b91c1c; }
+
+/* UX-3: mobile filter toggle */
+.filter-toggle-btn {
+  display: none;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  background: #fff;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: 2px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: var(--spacing-md);
+}
+.filter-toggle-btn::after {
+  content: ' \25BE';
+  float: right;
+}
+.filter-toggle-btn[aria-expanded="true"]::after {
+  content: ' \25B4';
+}
+
+/* UX-4: savings rate input inside gap card */
+.gap-savings-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+.gap-savings-row label {
+  font-size: 0.875rem;
+  color: var(--color-neutral-600);
+  white-space: nowrap;
+  margin: 0;
+}
+.gap-savings-row input {
+  width: 120px;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.875rem;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: 2px;
+}
+.gap-savings-result {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+.gap-concessions {
+  font-size: 0.8rem;
+  color: var(--color-neutral-500);
+  margin: 0.25rem 0 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .filter-toggle-btn { display: block; }
+  #filter-panel[hidden] { display: none; }
+}

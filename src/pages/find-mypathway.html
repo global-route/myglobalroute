@@ -9,7 +9,7 @@
   <title>Find MyPathway | MyPathway2Global</title>
   <link rel="stylesheet" href="/css/styles.css?v=3">
   <link rel="stylesheet" href="/css/responsive.css?v=3">
-  <link rel="stylesheet" href="/css/enhancements.css?v=8">
+  <link rel="stylesheet" href="/css/enhancements.css?v=9">
   <link rel="canonical" href="https://mypathway2global.org.uk/pages/find-mypathway">
   <meta property="og:url" content="https://mypathway2global.org.uk/pages/find-mypathway">
 </head>
@@ -53,6 +53,7 @@
           </ul>
         </div>
       </div>
+      <button id="filter-toggle-btn" class="filter-toggle-btn" aria-expanded="true" aria-controls="filter-panel">Filter pathways</button>
       <form id="route-form">
         <label>Passport country
           <select name="passportCountry">
@@ -279,6 +280,11 @@
       return `<div class="next-action-block"><strong>Next step:</strong> ${action}</div>`;
     }
 
+    function renderStatusBadge(pathway) {
+      if (pathway.status === 'research_required') return '<span class="status-badge status-badge-research">Research required</span>';
+      return '<span class="status-badge status-badge-publishable">Verified</span>';
+    }
+
     function renderCard(match) {
       const badge = freshnessLabel(match.pathway);
       const fundedBadge = match.pathway.capital_tier === 'tier_1_funded'
@@ -287,7 +293,7 @@
       return `<article>
         <div class="pathway-card-header">
           <h3>${esc(match.country.name)} - ${esc(match.pathway.name)}</h3>
-          <span class="freshness-badge ${esc(badge.cls)}">${esc(badge.text)}</span>${fundedBadge}
+          <div style="display:flex;gap:0.4rem;align-items:center;flex-wrap:wrap;flex-shrink:0;">${renderStatusBadge(match.pathway)}<span class="freshness-badge ${esc(badge.cls)}">${esc(badge.text)}</span>${fundedBadge}</div>
         </div>
         ${match.stale ? renderStaleWarning() : ''}
         ${match.matchedTier ? renderMatchedTier(match.matchedTier) : ''}
@@ -319,6 +325,27 @@
         localStorage.setItem(STORAGE_KEY, JSON.stringify(vals));
       } catch(e) {}
     });
+
+    // UX-3: mobile filter toggle
+    const filterToggleBtn = document.getElementById('filter-toggle-btn');
+    const filterForm = document.getElementById('route-form');
+    if (filterToggleBtn && filterForm) {
+      filterForm.id = 'filter-panel'; // alias for aria-controls
+      filterToggleBtn.addEventListener('click', () => {
+        const expanded = filterToggleBtn.getAttribute('aria-expanded') === 'true';
+        filterToggleBtn.setAttribute('aria-expanded', String(!expanded));
+        filterForm.hidden = expanded;
+        const active = persistFields.filter(k => { const el = filterForm.elements[k]; return el && el.value && el.value !== 'any' && el.value !== 'none' && el.value !== '1' && el.value !== ''; }).length;
+        filterToggleBtn.textContent = expanded ? 'Filter pathways' : `Filter pathways${active ? ` (${active} active)` : ''}`;
+      });
+      // update count after form changes
+      filterForm.addEventListener('change', () => {
+        if (filterToggleBtn.getAttribute('aria-expanded') === 'false') {
+          const active = persistFields.filter(k => { const el = filterForm.elements[k]; return el && el.value && el.value !== 'any' && el.value !== 'none' && el.value !== '1' && el.value !== ''; }).length;
+          filterToggleBtn.textContent = `Filter pathways${active ? ` (${active} active)` : ''}`;
+        }
+      });
+    }
 
     const submitBtn = form.querySelector('button[type="submit"]');
 
@@ -423,17 +450,36 @@
               const playbookCta = playbookUrl
                 ? `<a href="${esc(playbookUrl)}" class="btn btn-secondary btn-small">Read full playbook</a>`
                 : '';
+              const gapCurrency = esc(closest.tier.currency);
+              const gapAmount = Math.round(closestGap);
               gapHtml = `<div class="gap-analysis">
                 <p class="gap-analysis-heading">Closest pathway to your budget</p>
                 <p><strong>${esc(countryName)} - ${esc(closest.pathway.name)}</strong> ${tierLabel}</p>
                 ${renderConcessions(closest.pathway)}
-                <p>Requires <strong>${esc(closest.tier.currency)} ${esc(String(closest.tier.value))}</strong>. You are <strong>${esc(closest.tier.currency)} ${esc(String(Math.round(closestGap)))}</strong> short.${timelineText}</p>
+                <p>Requires <strong>${gapCurrency} ${esc(String(closest.tier.value))}</strong>. You are <strong>${gapCurrency} ${esc(String(gapAmount))}</strong> short.${timelineText}</p>
+                <div class="gap-savings-row">
+                  <label for="gap-savings-input">Monthly savings (${gapCurrency}):</label>
+                  <input id="gap-savings-input" type="number" min="0" step="100" placeholder="e.g. 500">
+                  <span class="gap-savings-result" id="gap-savings-result"></span>
+                </div>
                 <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:0.75rem;">
                   <button type="button" class="btn btn-secondary btn-small" onclick="document.querySelector('[name=budget]').value='';form.dispatchEvent(new Event('submit'))">Remove budget filter</button>
                   <a href="/pages/calculator.html" class="btn btn-secondary btn-small">Open budget calculator</a>
                   ${playbookCta}
                 </div>
               </div>`;
+              // attach savings-rate listener after DOM update (deferred)
+              setTimeout(() => {
+                const inp = document.getElementById('gap-savings-input');
+                const out = document.getElementById('gap-savings-result');
+                if (!inp || !out) return;
+                inp.addEventListener('input', () => {
+                  const rate = parseFloat(inp.value);
+                  if (!rate || rate <= 0) { out.textContent = ''; return; }
+                  const months = Math.ceil(${gapAmount} / rate);
+                  out.textContent = `Ready in ${months} month${months === 1 ? '' : 's'}`;
+                });
+              }, 0);
             }
           }
           const explanationHtml = zeroFitExplanations.length
@@ -445,7 +491,24 @@
           return;
         }
         const asymmetryNote = asymmetry ? '<p class="evidence-note">Showing filtered routes only - not eligibility assessments. Confirm current requirements at the official source before acting.</p>' : '<p class="evidence-note">Goal matches only - not eligibility assessments. Confirm current requirements at the official source before acting.</p>';
-        results.innerHTML = '<h2>Pathways matching your goal</h2>' + asymmetryNote + matches.map(renderCard).join('') + renderAlternatives(alternatives) + renderExtensionRoutes(profile, pathways.pathways, countries.countries);
+        const sortBar = `<div class="results-sort-bar"><span class="results-count">${matches.length} pathway${matches.length === 1 ? '' : 's'} found</span><label style="display:flex;align-items:center;gap:0.4rem;margin:0;">Sort: <select id="sort-select"><option value="default">Default</option><option value="cost-asc">Cost (low to high)</option><option value="cost-desc">Cost (high to low)</option><option value="country">Country (A-Z)</option></select></label></div>`;
+        let currentMatches = matches.slice();
+        function sortAndRender() {
+          const val = document.getElementById('sort-select')?.value || 'default';
+          const sorted = currentMatches.slice();
+          if (val === 'cost-asc' || val === 'cost-desc') {
+            sorted.sort((a, b) => {
+              const getFunds = m => (m.pathway.requirements || []).find(r => r.field === 'minimum_funds')?.value || 0;
+              return val === 'cost-asc' ? getFunds(a) - getFunds(b) : getFunds(b) - getFunds(a);
+            });
+          } else if (val === 'country') {
+            sorted.sort((a, b) => a.country.name.localeCompare(b.country.name));
+          }
+          const cardsEl = document.getElementById('pathway-cards');
+          if (cardsEl) cardsEl.innerHTML = sorted.map(renderCard).join('');
+        }
+        results.innerHTML = '<h2>Pathways matching your goal</h2>' + asymmetryNote + sortBar + `<div id="pathway-cards">${currentMatches.map(renderCard).join('')}</div>` + renderAlternatives(alternatives) + renderExtensionRoutes(profile, pathways.pathways, countries.countries);
+        document.getElementById('sort-select')?.addEventListener('change', sortAndRender);
         // Show export button when results exist
         document.getElementById('export-bar').hidden = false;
         // Store current results for export
