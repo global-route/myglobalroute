@@ -8,7 +8,7 @@
   <title>Budget Calculator | MyPathway2Global</title>
   <link rel="stylesheet" href="/css/styles.css?v=3">
   <link rel="stylesheet" href="/css/responsive.css?v=3">
-  <link rel="stylesheet" href="/css/enhancements.css?v=8">
+  <link rel="stylesheet" href="/css/enhancements.css?v=9">
   <link rel="canonical" href="https://mypathway2global.org.uk/pages/calculator">
   <meta property="og:url" content="https://mypathway2global.org.uk/pages/calculator">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8077583188666813" crossorigin="anonymous"></script>
@@ -57,5 +57,24 @@
   <script src="/js/analytics.js"></script>
   <script src="/js/app.js"></script>
   <script src="/js/admob-loader.js"></script>
+  <script>
+    (function() {
+      var KEY = 'mp2g_calc_inputs';
+      var fields = ['savings','income','expenses','category'];
+      var form = document.getElementById('budget-calculator');
+      if (!form) return;
+      try {
+        var saved = JSON.parse(localStorage.getItem(KEY) || 'null');
+        if (saved) fields.forEach(function(k) { var el = form.elements[k]; if (el && saved[k] != null) el.value = saved[k]; });
+      } catch(e) {}
+      form.addEventListener('change', function() {
+        try {
+          var vals = {};
+          fields.forEach(function(k) { var el = form.elements[k]; if (el) vals[k] = el.value; });
+          localStorage.setItem(KEY, JSON.stringify(vals));
+        } catch(e) {}
+      });
+    })();
+  </script>
 <script src="/js/search-modal.js"></script></body>
 </html>

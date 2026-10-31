@@ -184,7 +184,7 @@
       : '';
     return `<article class="wizard-result-card">
       <div class="wizard-result-header">
-        <span style="font-size:1.5rem;" aria-hidden="true">${esc(match.country.flag || '')}</span>
+        <span style="font-size:1.5rem;" aria-hidden="true">${esc(match.country.flag || match.country.id)}</span>
         <h3>${esc(match.country.name)} — ${esc(match.pathway.name)}</h3>
       </div>
       ${staleWarn}
@@ -230,7 +230,7 @@
       .slice(0, 3)
       .map(([id, count]) => {
         const c = countries.find(x => x.id === id);
-        return c ? `<li><a href="/pages/countries/${encodeURIComponent(id)}/">${esc(c.flag || '')} ${esc(c.name)}</a> — ${count} publishable pathway${count !== 1 ? 's' : ''}</li>` : '';
+        return c ? `<li><a href="/pages/countries.html">${esc(c.flag || c.id)} ${esc(c.name)}</a> — ${count} publishable pathway${count !== 1 ? 's' : ''}</li>` : '';
       }).join('');
     return `<div style="padding:var(--spacing-xl) 0;">
       <p>Here are the countries with the most verified pathways. Select a purpose above to narrow results, or use <a href="/pages/find-mypathway.html">Find MyPathway</a> to filter by goal.</p>
