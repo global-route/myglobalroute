@@ -4,6 +4,24 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
+## 2026-10-31 — Template fixes: CSS v9, search trigger, Africa filter, Google Fonts removed
+
+**Tests:** 19/19 suites, 180/180 passing | **Commit:** `2b77625` | **CI:** Lint ✅ Quality Gate ✅ Browser Smoke ✅
+
+### Find MyPathway — Africa regions added to Target Region filter
+- Added Africa - Indian Ocean, Africa - Atlantic, Africa - Southern to the Target Region select
+- MU/CV/NA pathways are now reachable via the region filter (were invisible since Vertical B sprint)
+
+### Templates — CSS v9, search trigger, search-modal.js
+- `src/templates/blog-post.njk` — bumped to `enhancements.css?v=9` (affects all 96 blog posts)
+- `src/templates/pathway-landing.njk` — bumped to v=9, added search trigger button, added `search-modal.js`
+- `src/templates/blog-post.html` — bumped to v=9, added search trigger button
+- `content/countries.njk` — bumped to v=9, added search trigger, added `search-modal.js`, removed Google Fonts, fixed logo/nav markup
+- `content/pathways/pathway.njk` — bumped to v=9, added search trigger, added `search-modal.js`, removed Google Fonts, fixed logo/nav markup
+- `content/blog/index.njk` — bumped to v=9, added search trigger, added `search-modal.js`, removed Google Fonts, fixed logo/nav markup, fixed post count badge 31 → 96
+
+---
+
 ## 2026-10-31 — UI scan fixes, UX improvements, e2e spec rewrite, doc audit
 
 **Tests:** 19/19 suites, 180/180 passing | **Blog posts:** 96 | **Sitemap URLs:** 145 | **Stale requirements:** 0

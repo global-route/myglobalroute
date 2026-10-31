@@ -1,6 +1,6 @@
 # Active Sprint — Owner Actions & Ongoing Maintenance
 
-> **Updated:** 2026-10-31 | **Branch:** `main` | **Commit:** `63821c2`
+> **Updated:** 2026-10-31 | **Branch:** `main` | **Commit:** `2b77625`
 > **Production:** `https://mypathway2global.org.uk` (Cloudflare Workers — `globalroute`)
 > **Tests:** 19/19 suites, 180/180 passing | **CI:** Lint ✅ Quality Gate ✅ Browser Smoke ✅
 
@@ -61,6 +61,7 @@ See `docs/sprints/OWNER_ACTIONS.md` for full instructions on each item.
 
 | Sprint | Date | Commit | Key deliverables |
 |---|---|---|---|
+| UI/UX template fixes | 2026-10-31 | `2b77625` | Africa regions in FMP filter, CSS v9 + search trigger + search-modal on all templates, Google Fonts removed from content templates, blog count 31→96 |
 | UI scan fixes + e2e spec rewrite | 2026-10-31 | `63821c2` | 9 bugs fixed (broken wizard URL, 27→30 countries, Africa filter, MU/CV/NA wizard, CSS v9, search trigger all pages, calc localStorage, flag fallback), e2e spec rewritten, CI green |
 | UX gaps | 2026-10-30 | `7445e55` | Sort control, per-card status badge, mobile filter toggle, savings-rate gap input |
 | Doc audit + archive | 2026-10-30 | `e71bcb0` | 8 stale docs fixed, 8 archived, docs/plans/ gitignored, UX taskfile extracted |
