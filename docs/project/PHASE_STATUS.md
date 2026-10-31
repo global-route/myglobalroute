@@ -2,7 +2,7 @@
 
 > **Updated:** 2026-10-30 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 180/180 passing
-> **Commit:** `b8ce4ed` | **Blog posts:** 96 | **Sitemap URLs:** 145 | **Stale requirements:** 0
+> **Commit:** `7445e55` | **Blog posts:** 96 | **Sitemap URLs:** 145 | **Stale requirements:** 0
 
 ---
 
@@ -23,6 +23,7 @@
 | B — Backlog improvements | **Complete** | — |
 | CP — Content & Platform | **Complete** | — |
 | GOIF — Global Opportunity Integration | **Complete** | — |
+| UX — Find MyPathway improvements | **Complete** | — |
 
 ---
 
@@ -261,6 +262,18 @@ A task is not complete because a file exists. Legal/data claims require evidence
 - Revenue reconciliation baseline: after first 30 days of live placement, record impressions, clicks, RPM, total revenue
 - Newsletter / return-user loop: Mailchimp action URL pending owner config
 - Affiliate infrastructure: not yet activated — requires legal review before any lead flow goes live
+
+---
+
+## Phase UX — Find MyPathway Improvements ✅ (2026-10-30)
+
+- Sort control on results: Default / Cost (low-high) / Cost (high-low) / Country (A-Z)
+- Per-card status badge: `Verified` (green) or `Research required` (red) on every pathway card
+- Mobile filter toggle: filter panel collapses on `<768px`, button shows active filter count
+- Savings-rate input in gap card: monthly savings → months to readiness computed inline
+- CSS: `.badge-blocked`, `.status-badge-*`, `.results-sort-bar`, `.filter-toggle-btn`, `.gap-savings-row` added
+- `enhancements.css?v=9` | commit `7445e55`
+- 19/19 suites, 180/180 tests
 
 ---
 

@@ -1,6 +1,6 @@
 # Active Sprint — Owner Actions & Ongoing Maintenance
 
-> **Updated:** 2026-10-30 | **Branch:** `main` | **Commit:** `b8ce4ed`
+> **Updated:** 2026-10-30 | **Branch:** `main` | **Commit:** `7445e55`
 > **Production:** `https://mypathway2global.org.uk` (Cloudflare Workers — `globalroute`)
 > **Tests:** 19/19 suites, 180/180 passing
 
@@ -8,7 +8,7 @@
 
 ## Current state
 
-All code phases complete (0-9, B, CP, GOIF, Vertical B). No code tasks are blocked. Remaining work is owner actions and ongoing content maintenance only.
+All code phases complete (0-9, B, CP, GOIF, Vertical B, UX). No code tasks are blocked. Remaining work is owner actions and ongoing content maintenance only.
 
 | Metric | Value |
 |---|---|
@@ -29,6 +29,10 @@ All code phases complete (0-9, B, CP, GOIF, Vertical B). No code tasks are block
 | localStorage cache | goif_pathways_v1 (24h TTL) |
 | Service Worker | Live (`public/sw.js`) |
 | Save My Plan export | Live (client-side JSON, Find MyPathway) |
+| Sort control | Find MyPathway results — cost/country sort |
+| Per-card status badge | Verified / Research required on every pathway card |
+| Mobile filter toggle | Filter panel collapses on <768px with active count |
+| Savings-rate input | Gap card — monthly savings → months to readiness |
 | Stale requirements | 0 — last refreshed 2026-10-30 |
 | OG image | All pages tagged (image asset pending owner) |
 | Ad revenue | £0 — AdSense policy review pending |
@@ -57,6 +61,9 @@ See `docs/sprints/OWNER_ACTIONS.md` for full instructions on each item.
 
 | Sprint | Date | Commit | Key deliverables |
 |---|---|---|---|
+| UX gaps | 2026-10-30 | `7445e55` | Sort control, per-card status badge, mobile filter toggle, savings-rate gap input |
+| Doc audit + archive | 2026-10-30 | `e71bcb0` | 8 stale docs fixed, 8 archived, docs/plans/ gitignored, UX taskfile extracted |
+| Stale doc fixes | 2026-10-30 | `380cae8` | PHASE_STATUS counts, OWNER_ACTIONS counts, CONTENT_PIPELINE, GOIF tasks marked done |
 | Vertical B + ⌘K search | 2026-10-29 | `e87f15c` | 3 African nomad countries, 3 remote_freelance pathways, 4 blog posts, region filter, PR filter, ⌘K search modal |
 | 12 country audits + N-P4/P5/C9/C10 | 2026-10-29 | `68c88d4` | FI SE NO CH LU HU LT IS PL MT CZ CN audits, WebPage schema, footer links, AfCFTA + diaspora guides |
 | Opportunity research sprint | 2026-10-29 | latest | NZ-aewv pathway, USask scholarship post, Paraguay overview, UniCal DSU mention |
