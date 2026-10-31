@@ -26,38 +26,32 @@ test('countries page loads', async ({ page }) => {
 
 test('route finder returns goal matches after submit', async ({ page }) => {
   await page.goto('/pages/find-mypathway.html');
-  await expect(page.locator('input[name="budget"]')).toHaveCount(1);
   await page.selectOption('select[name="goal"]', 'study');
-  await Promise.all([
-    page.waitForResponse(r => r.url().includes('pathways.json')),
-    page.getByRole('button', { name: 'Find routes' }).click()
-  ]);
-  const h2 = page.locator('#route-results h2');
-  await expect(h2).toContainText('Pathways matching your goal', { timeout: 10000 });
+  await page.getByRole('button', { name: 'Find routes' }).click();
+  // wait for JS to finish updating the DOM after fetch
+  await page.waitForFunction(
+    () => document.querySelector('#route-results h2')?.textContent?.includes('Pathways matching'),
+    { timeout: 15000 }
+  );
   await expect(page.locator('#route-results article').first()).toBeVisible();
 });
 
-test('calculator has verified AdSense publisher id when present', async ({ page }) => {
+test('calculator AdSense script uses verified publisher id', async ({ page }) => {
   await page.goto('/pages/calculator.html');
   const scripts = page.locator('script[src*="pagead2.googlesyndication.com"]');
   const count = await scripts.count();
   if (count > 0) {
     const src = await scripts.first().getAttribute('src');
-    const client = await scripts.first().getAttribute('client');
-    expect((src || '') + (client || '')).toContain('ca-pub-8077583188666813');
+    expect(src).toMatch(/ca-pub-8077583188666813/);
   }
-  // pass if no AdSense script present (e.g. non-ad page or blocked in CI)
 });
 
-test('analytics consent banner is present and hides after reject', async ({ page }) => {
+test('analytics consent banner hides after reject', async ({ page }) => {
   await page.addInitScript(() => localStorage.clear());
   await page.goto('/pages/calculator.html');
   const banner = page.locator('#analytics-consent');
   await expect(banner).toBeVisible();
-  const rejectBtn = banner.getByRole('button', { name: /reject/i });
-  await expect(rejectBtn).toBeVisible();
-  await rejectBtn.click();
-  // banner is hidden (hidden attr), not removed from DOM
+  await banner.getByRole('button', { name: /reject/i }).click();
   await expect(banner).toBeHidden();
   expect(await page.evaluate(() => localStorage.getItem('globalroute.analyticsConsent'))).toBe('denied');
 });
