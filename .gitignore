@@ -20,12 +20,8 @@ credentials.json
 .internal/
 docs/research/
 
-# Root-level internal planning and blueprint docs
-global_opportunity_integration_framework_platform_roadmap.md
-find_mypathway_schema_api_specifications.md
-find_mypathway_ux_layout_interface_design.md
-docs/sprints/system_architecture_platform_blueprint.md
-create_blog_images.py
+# Root-level internal planning and blueprint docs (archived to docs/archive/)
+# docs/sprints/ planning docs moved to docs/archive/ on 2026-10-30
 
 # Build & Distribution
 dist/
@@ -103,6 +99,7 @@ docs/private/
 docs/confidential/
 docs/strategy/private/
 docs/research/
+docs/plans/
 blueprints/
 planning/
 plans/
