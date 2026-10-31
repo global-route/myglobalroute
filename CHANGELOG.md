@@ -4,6 +4,91 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
+## 2026-10-31 — UI scan fixes, UX improvements, e2e spec rewrite, doc audit
+
+**Tests:** 19/19 suites, 180/180 passing | **Blog posts:** 96 | **Sitemap URLs:** 145 | **Stale requirements:** 0
+**Commits:** `7445e55` → `63821c2` | **Version:** `5c5ac770` (Cloudflare) | **CI:** Lint ✅ Quality Gate ✅ Browser Smoke ✅
+
+### Find MyPathway — UX improvements (commit `7445e55`)
+- **Sort control:** Sort bar above results — Default / Cost (low-high) / Cost (high-low) / Country (A-Z). Re-renders cards in-place without re-fetching.
+- **Per-card status badge:** Every pathway card now shows `Verified` (green) or `Research required` (red) based on `pathway.status`.
+- **Mobile filter toggle:** Filter panel collapses on `<768px` behind a `Filter pathways (N active)` button. Active count updates on field change.
+- **Savings-rate input in gap card:** Monthly savings input inside the gap card computes `ceil(gap / rate)` and displays "Ready in X months" inline.
+- **CSS:** `.badge-blocked`, `.status-badge-*`, `.results-sort-bar`, `.filter-toggle-btn`, `.gap-savings-row` added to `enhancements.css?v=9`.
+
+### UI scan — 9 bugs fixed (commits `a8e259f`, `2c8936d`)
+- **Broken 404 URL:** `renderNoGoalState` in `wizard-engine.js` linked to `/pages/countries/${id}/` (non-existent). Fixed to `/pages/countries.html`.
+- **Stale country count:** Countries page title and badge said "27 Countries" — updated to "30 Countries".
+- **Africa filter missing:** Countries page region filter had no Africa options. Added Africa - Indian Ocean, Africa - Atlantic, Africa - Southern.
+- **MU/CV/NA missing from wizard:** Step 2 destination dropdown had no Africa optgroup. Added Mauritius, Cape Verde, Namibia under Africa.
+- **CSS version:** All 25 pages bumped from `enhancements.css?v=8` to `?v=9`.
+- **Search trigger missing:** `#search-trigger` button was only on 2 of 25 pages. Added to all 25 pages.
+- **Pathway count copy:** "Filters 69 publishable pathways" corrected to "Filters 63 publishable pathways" (6 are research_required).
+- **Calculator localStorage:** Form inputs (savings/income/expenses/category) now persist to `mp2g_calc_inputs` on change and restore on load.
+- **Flag fallback:** `wizard-engine.js` `renderMatchCard` now uses `country.flag || country.id` instead of `country.flag || ''`.
+
+### e2e smoke spec rewrite (commits `2c8936d` → `63821c2`)
+- Spec was entirely pre-rebrand: tested for `Global Route` title, `find-my-route.html` URL, `Find My Route` title, 0 AdSense scripts.
+- Rewritten to match current site: correct titles, URLs, form fields, consent banner behaviour, AdSense publisher ID check via `page.content()`.
+- All 8 tests now pass in CI. Browser Smoke green for first time since rebrand.
+
+### Doc audit — stale docs fixed and archived (commits `380cae8`, `e71bcb0`, `69134db`, `0e636ec`)
+- **Archived** (moved to `docs/archive/` with descriptive names): `ARCHITECTURE.md`, `TECH_STACK.md`, `DEPENDENCIES.md`, `CONTENT_STRATEGY.md` (all pre-Cloudflare/pre-rebrand), `system_architecture_platform_blueprint.md`, `find_mypathway_ux_layout_interface_design.md`, `find_mypathway_schema_api_specifications.md`, `global_opportunity_integration_framework_platform_roadmap.md`.
+- **Fixed in place:** PHASE_STATUS counts (Phase 0: 27/61/18/137 → 30/69/19/180), Phase 1 counts, GOIF open note cleared, Vertical B open note updated, W2/W3 deferred notes corrected (both are live), Phase 6 design system corrected.
+- **OWNER_ACTIONS.md:** YouTube count 24 → 96, blog done count 52 → 96.
+- **CONTENT_PIPELINE.md:** Header counts 59/110 → 96/145, Gap 1 marked resolved.
+- **GOIF_REMAINING_TASKFILE.md:** All 5 tasks marked Done.
+- **BLOG_CONTENT_INVENTORY.md:** Content gaps replaced with reserved posts only, stale coverage note removed.
+- **DESIGN_BLUEPRINT.md:** Implementation-complete header added with font/H2 deviation notes.
+- **`docs/reference/INDEX.md`:** Broken links to archived files removed.
+- **`docs/plans/`** created as gitignored folder for private planning. `UX_GAPS_TASKFILE.md` extracted there (all 4 tasks now done).
+- **`docs/sprints/README.md`** rewritten to reflect current folder state.
+
+### Docs updated this entry
+- `CHANGELOG.md` — this entry
+- `docs/sprints/ACTIVE_SPRINT.md` — commit ref, UX sprint entry, new metrics rows
+- `docs/project/PHASE_STATUS.md` — commit ref, UX phase added to summary table and full phase section
+
+---
+
+## 2026-10-30 — Partners page, CRS/tax series, content cleanup, 96 posts, classic style
+
+**Tests:** 19/19 suites, 180/180 passing | **Blog posts:** 96 | **Sitemap URLs:** 145 | **Stale requirements:** 0
+**Commits:** `48b2401` → `a049348` | **Version:** (Cloudflare)
+
+### Partners page + about/contact rewrite
+- `/pages/partners.html` — 3-tier partner model (Practitioner/Agency/Content), trust firewall (6 rules), due diligence process, contact CTA
+- `about.html` rewritten as org with mission/vision/partner model/4-filter methodology
+- `contact.html` with 3 routed paths and subject line guidance
+
+### CRS/tax series (6 posts)
+- CRS explained for African professionals
+- UAE second residency and CRS interaction
+- Split residency structuring
+- FATCA for Nigerians
+- How to cease Nigerian tax residency with FIRS
+- Mauritius GBL and CRS interaction
+
+### Content cleanup
+- All emojis and em dashes removed from 90 posts and 27 HTML pages
+- FAQ YAML indentation repaired across all posts (2-space `- q:`, 4-space `a:`)
+- `.unverified-callout` and `.practitioner-required-callout` CSS classes added
+
+### Gulf/Africa country audits (8 posts)
+- UAE, Qatar, Saudi Arabia, Oman, South Africa, Kenya, Ghana, Rwanda
+
+### Classic immigration style sprint
+- White page background (`#ffffff`), H2 amber underline removed, sentence-case nav
+- System font stack replacing Google Fonts (no external font load)
+- Flat cards (border only, no hover shadows), amber restricted to CTA button
+- SVG globe logo mark + wordmark with amber "2Global" accent
+- Home icon replacing "Home" text in nav
+
+### Docs updated
+- `CHANGELOG.md`, `ACTIVE_SPRINT.md`, `PHASE_STATUS.md`, `BLOG_CONTENT_INVENTORY.md`, `README.md`
+
+---
+
 ## 2026-10-29 — GOIF, Vertical B, 12 country audits, ⌘K search, region filter, AfCFTA guides
 
 **Tests:** 19/19 suites, 180/180 passing | **Blog posts:** 52 | **Sitemap URLs:** 103 | **Stale requirements:** 0

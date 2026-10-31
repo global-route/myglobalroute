@@ -1,6 +1,6 @@
 # Sprint & Delivery Documentation
 
-**Updated:** 2026-10-30
+**Updated:** 2026-10-31
 
 ## Current sources of truth
 
@@ -21,23 +21,27 @@
 
 ## Private planning
 
-Active UX and feature planning lives in `docs/plans/` — gitignored, not committed.
+Active planning lives in `docs/plans/` — gitignored, not committed.
 
-- `docs/plans/UX_GAPS_TASKFILE.md` — 4 unexecuted UX items from planning docs (sort, trust badges, mobile filter, savings calculator)
+- `docs/plans/UX_GAPS_TASKFILE.md` — 4 UX items, all complete as of 2026-10-31
 
-## Completed taskfiles (reference only)
+## Completed taskfiles (archived)
 
-| File | Completed |
-|---|---|
-| `GOIF_TASKFILE.md` | 2026-10-29 — all S1-S4 done |
-| `GOIF_REMAINING_TASKFILE.md` | 2026-10-29 — all S3-S4 done |
-| `CLASSIC_STYLE_TASKFILE.md` | 2026-10-29 — all T1-T8 done |
+| File | Completed | Archive location |
+|---|---|---|
+| `GOIF_TASKFILE.md` | 2026-10-29 | `docs/archive/GOIF_TASKFILE_complete.md` |
+| `GOIF_REMAINING_TASKFILE.md` | 2026-10-29 | `docs/archive/GOIF_REMAINING_TASKFILE_complete.md` |
+| `CLASSIC_STYLE_TASKFILE.md` | 2026-10-29 | `docs/archive/CLASSIC_STYLE_TASKFILE_complete.md` |
 
 ## Archived planning docs
 
-The following planning/blueprint docs were moved to `docs/archive/` on 2026-10-30 — either fully executed or diverged from implementation:
+Moved to `docs/archive/` on 2026-10-30/31:
 
-- `system_architecture_platform_blueprint_v2.4-planning.md` — sidebar nav layout not built; savings-rate input extracted to UX_GAPS_TASKFILE
-- `find_mypathway_ux_layout_interface_design_diverged.md` — sort/badge/mobile specs extracted to UX_GAPS_TASKFILE
-- `find_mypathway_schema_api_specifications_diverged.md` — schema diverged from actual implementation (alpha-2 IDs, not alpha-3)
+- `system_architecture_platform_blueprint_v2.4-planning.md` — sidebar nav not built; savings-rate input extracted to UX_GAPS_TASKFILE (done)
+- `find_mypathway_ux_layout_interface_design_diverged.md` — sort/badge/mobile specs extracted to UX_GAPS_TASKFILE (done)
+- `find_mypathway_schema_api_specifications_diverged.md` — schema diverged from actual implementation
 - `global_opportunity_integration_framework_platform_roadmap_complete.md` — all 4 sprints complete
+- `ARCHITECTURE_pre-cloudflare-2026-01-15.md` — pre-rebrand, wrong hosting
+- `TECH_STACK_pre-cloudflare-2026-01-15.md` — pre-rebrand, Netlify
+- `DEPENDENCIES_pre-cloudflare-2026-01-15.md` — superseded by `package.json`
+- `CONTENT_STRATEGY_pre-evidence-gate-2026-01-15.md` — pre-evidence-gate, references removed fields
