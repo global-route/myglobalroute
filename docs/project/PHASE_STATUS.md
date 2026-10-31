@@ -215,12 +215,12 @@ See `docs/sprints/WIZARD_PLAN.md` for full architecture (now archive — all W1-
 | Phase | Scope | Status |
 |---|---|---|
 | W1 | Wizard UI scaffold + nav + homepage section | **Done** |
-| W2 | Wizard engine + results + extension routes + test suite | **Done** (test suite deferred) |
-| W3 | Find MyPathway upgrades (passport, current visa, business) | **Done** (extension routes section deferred) |
+| W2 | Wizard engine + results + extension routes + test suite | **Done** |
+| W3 | Find MyPathway upgrades (passport, current visa, business) | **Done** |
 | W4 | Data: `wizardTags` + `extensionOf` on pathways.json | **Done** |
 | W5 | Sitemap + WebPage schema + cross-links | **Done** |
 
-**Deferred (post-W5):** FMP extension routes section, passport × destination visa-on-arrival lookup table.
+**All W1-W5 complete.** FMP extension routes section live (`renderExtensionRoutes`). Wizard test suite live (`tests/wizard-engine.test.js`). Passport x destination visa-on-arrival lookup table remains out of scope.
 
 ---
 
