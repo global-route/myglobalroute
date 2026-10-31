@@ -1,7 +1,9 @@
 # GOIF Remaining Tasks — S3-1, S4-1, S4-2, S4-3, S4-4
 
-**Updated:** 2026-10-29
-**Baseline:** S1 + S2 complete. 4 GOIF pathways in DB. 4 blog posts live. Gap card exists but ignores GOIF fields. pSEO pages missing. localStorage cache missing.
+**Updated:** 2026-10-30
+**Status: ALL TASKS COMPLETE** — delivered in sprint `d5ce2b0` (2026-10-29).
+
+This taskfile is preserved as a reference implementation record. Do not re-execute.
 
 ---
 
@@ -11,11 +13,11 @@
 |---|---|
 | S1 Schema + seed pathways | Done |
 | S2 Blog posts + sitemap | Done |
-| S3-1 Gap card GOIF extension | **TODO** |
-| S4-1 pSEO funded-study page | **TODO** |
-| S4-2 pSEO regional-skilled page | **TODO** |
-| S4-3 Sitemap entries for pSEO pages | **TODO** |
-| S4-4 localStorage cache for pathway data | **TODO** |
+| S3-1 Gap card GOIF extension | Done |
+| S4-1 pSEO funded-study page | Done |
+| S4-2 pSEO regional-skilled page | Done |
+| S4-3 Sitemap entries for pSEO pages | Done |
+| S4-4 localStorage cache for pathway data | Done |
 
 ---
 

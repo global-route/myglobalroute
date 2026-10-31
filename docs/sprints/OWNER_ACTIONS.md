@@ -1,6 +1,6 @@
 # Owner Actions — MyPathway2Global
 
-> **Updated:** 2026-10-29 | Nothing here is blocked on code. All items require you.
+> **Updated:** 2026-10-30 | Nothing here is blocked on code. All items require you.
 
 ---
 
@@ -10,7 +10,7 @@
 |---|---|---|---|
 | 1 | OG image | 20 min | Social share cards broken on every page |
 | 2 | Mailchimp action URL | 10 min | Email signups go nowhere |
-| 3 | YouTube video IDs (24 posts) | 1-2 hrs | 24 posts have placeholder comments instead of real embeds |
+| 3 | YouTube video IDs (96 posts) | 1-2 hrs | 96 posts have placeholder comments instead of real embeds |
 | 4 | ARIA audit | 30 min | Accessibility gate |
 | 5 | Country source sign-off (30 entries) | 1-2 hrs | `dataset.asOf` update |
 | 6 | Legal review | Solicitor | Trust gate for affiliate/lead revenue |
@@ -160,13 +160,13 @@ The three legal pages document current product intent. They are not a substitute
 | Service Worker | ✅ Done | `public/sw.js` live — offline caching active |
 | ⌘K search | ✅ Done | Modal search live on all pages |
 | GOIF + Vertical B | ✅ Done | 7 GOIF pathways, 3 African nomad hubs, all filters live |
-| 52 blog posts | ✅ Done | All 27 original countries have country audit posts |
+| 96 blog posts | ✅ Done | All 30 countries have country audit posts. 96 posts live across 7 categories |
 
 ---
 
-## 3. YouTube video IDs — 24 posts have placeholders
+## 3. YouTube video IDs — 96 posts have placeholders
 
-24 blog posts have a `<!-- YOUTUBE_PLACEHOLDER -->` comment where a YouTube embed should go. The posts are fully published and live — the placeholder is invisible to readers. Replace each one with a real embed when you have a suitable video.
+96 blog posts have a `<!-- YOUTUBE_PLACEHOLDER -->` comment where a YouTube embed should go. The posts are fully published and live — the placeholder is invisible to readers. Replace each one with a real embed when you have a suitable video.
 
 **Embed format to use:**
 ```html

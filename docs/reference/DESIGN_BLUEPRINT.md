@@ -2,6 +2,11 @@
 ## Source: schengenvisainfo.com live CSS crawl (2026-10-25)
 ## Purpose: Authoritative reference for rebuilding all pages to the correct classic-editorial standard
 
+> **Implementation status (2026-10-30):** All sections executed as of Phase 6 (2026-10-25) and classic style sprint (2026-10-30). Two deviations from this document are now in effect:
+> - **Fonts (section 14):** Titillium Web + Roboto replaced with system font stack for performance. No Google Fonts loaded.
+> - **H2 amber underline (section 16):** Removed in classic style sprint. Current style is white background, flat editorial, no H2 pseudo-element.
+> All other values (colours, spacing, buttons, tables, callouts, footer) remain as specified below.
+
 ---
 
 ## 1. Why this document exists

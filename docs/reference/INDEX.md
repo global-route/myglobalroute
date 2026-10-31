@@ -4,11 +4,9 @@ This folder contains durable technical and product reference material. Use [the 
 
 ## Architecture and operations
 
-- [Architecture](ARCHITECTURE.md) — application and data flow.
-- [Technology Stack](TECH_STACK.md) — runtime and build stack.
-- [Dependencies](DEPENDENCIES.md) — project dependency inventory.
 - [Deployment](DEPLOYMENT.md) — build/deploy/verification procedures.
 - [Privacy and Security](PRIVACY_SECURITY_COMPLIANCE.md) — privacy, consent and security considerations.
+- Architecture, Tech Stack and Dependencies docs moved to `docs/archive/` (pre-Cloudflare, pre-rebrand — superseded 2026-10-30). Current stack: Cloudflare Workers, Eleventy, `wrangler.jsonc`, see `package.json` for dependencies.
 
 ## Product and data standards
 

@@ -2,6 +2,7 @@
 
 > **Generated:** 2026-10-30 | **Posts:** 96 | **Pathways covered:** 63 publishable across 30 countries
 > Use this document to plan new posts, identify gaps, and maintain consistency.
+> Note: The detailed per-post sections below enumerate the first 27 country audits and original playbooks/guides. Posts added in the content sprint (Gulf/Africa audits, CRS/tax series, working holiday, scholarships, business guides) are registered in `src/data/blog-posts.json` and counted in the summary table but not individually listed here.
 
 ---
 
@@ -20,10 +21,8 @@
 
 ## Content gaps
 
-All 27 original countries now have country audit posts. Remaining content opportunities:
-- AfCFTA business corridors (Rwanda, Ghana, Kenya) — Vertical B expansion
-- Diaspora repatriation guide — blueprint Vertical B item
-- MU, CV, NA country audits (3 new countries added in Vertical B)
+All 30 countries now have country audit posts. Remaining content opportunities are reserved posts only.
+- See `docs/sprints/RESERVED_POSTS_TASKFILE.md` for 6 blocked posts (Guyana, Indonesia, UK Innovator Founder, France Talent Passport deep-dive, Singapore, Canada RCIP).
 
 ---
 
@@ -495,36 +494,22 @@ All 27 original countries now have country audit posts. Remaining content opport
 | `ES-digital-nomad` | Digital Nomad Visa | Spain | Spain country audit |
 | `ES-study` | Study visa | Spain | Spain country audit |
 
-**Pathways in registry with no blog coverage (12 countries, ~25 pathways):**
-HU, FI, SE, NO, LU, LT, IS, CN, PL, MT, CH, CZ — none have dedicated blog posts yet. Ireland, Spain, Austria, New Zealand, Japan, South Korea now covered.
+**Pathways in registry with full blog coverage:** All 30 countries covered.
 
 ---
 
-## Content gaps — highest priority
+## Content gaps — reserved posts only
 
-### Country audits not yet written
-| Country | Registry pathways | Search demand | Notes |
-|---|---|---|---|
-| Ireland | `IE-study`, `IE-critical-skills` | Medium | **Published 2026-10-28** |
-| Spain | `ES-study`, `ES-digital-nomad` | Medium | **Published 2026-10-28** |
-| Austria | `AT-study`, `AT-rwr-other-key-workers` | Medium | **Published 2026-10-28** |
-| Sweden | `SE-study`, `SE-work` | Medium | Nordic destination, growing interest |
-| Norway | `NO-study`, `NO-work` | Medium | Nordic destination |
-| Finland | `FI-study`, `FI-work` | Low-medium | Nordic destination |
-| Japan | `JP-student`, `JP-engineer` | Medium | **Published 2026-10-28** |
-| South Korea | `KR-study`, `KR-work` | Low-medium | **Published 2026-10-28** |
-| Switzerland | `CH-study`, `CH-work` | Low | High cost, niche audience |
-| New Zealand | `NZ-student`, `NZ-smc-*` | Medium | **Published 2026-10-28** |
+See `docs/sprints/RESERVED_POSTS_TASKFILE.md` for full details.
 
-### Backlog posts already planned (from ACTIVE_SPRINT.md)
-| ID | Post | Priority |
+| ID | Post | Blocker |
 |---|---|---|
-| B-C1 | UK Skilled Worker visa deep-dive | High — highest search volume |
-| B-C2 | Italy student visa step-by-step | High — high volume, low competition |
-| B-C3 | How to write a visa motivation letter | Already published (post 23) |
-| B-C4 | Document authentication Nigeria | Already published and updated (post 24) |
-| B-C5 | Germany Chancenkarte points explainer | Medium — long-tail, high intent |
-| B-C6 | Portugal digital nomad visa for Nigerians | Medium |
+| R1 | Guyana freelance visa | No primary source research |
+| R2 | Indonesia visa | No primary source research |
+| R3 | UK Innovator Founder visa | Endorsing body details needed |
+| R4 | France Talent Passport deep-dive | Subcategory details needed |
+| R5 | Singapore work visa | Country not in platform, full setup needed |
+| R6 | Canada RCIP | Program status unclear |
 
 ---
 

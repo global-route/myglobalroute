@@ -1,6 +1,6 @@
 # Phase Status — MyPathway2Global
 
-> **Updated:** 2026-10-29 | **Release:** GO — production live
+> **Updated:** 2026-10-30 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 180/180 passing
 > **Commit:** `b8ce4ed` | **Blog posts:** 96 | **Sitemap URLs:** 145 | **Stale requirements:** 0
 
@@ -11,7 +11,7 @@
 | Phase | Status | Open gates |
 |---|---|---|
 | 0 — Production integrity | **Complete** | Live-browser ARIA audit (owner) |
-| 1 — Migration intelligence | **Code complete** | Human source sign-off (27 countries), `dataset.asOf` update |
+| 1 — Migration intelligence | **Code complete** | Human source sign-off (30 countries), `dataset.asOf` update |
 | 2 — Canonical product core | **Complete** | — |
 | 3 — Content & acquisition | **Complete** | Editorial freshness ongoing |
 | 4 — Trust/compliance/accessibility | **Code complete** | Legal review, live ARIA audit, consent validation |
@@ -22,7 +22,7 @@
 | 9 — Scale & Wizard | **Complete** | — |
 | B — Backlog improvements | **Complete** | — |
 | CP — Content & Platform | **Complete** | — |
-| GOIF — Global Opportunity Integration | **Complete** | `remote_freelance` pathways (content gap) |
+| GOIF — Global Opportunity Integration | **Complete** | — |
 
 ---
 
@@ -92,9 +92,9 @@ All 23 production readiness tasks complete. See `docs/sprints/PRODUCTION_READINE
 ## Phase 6 — UI/UX Transformation ✅ (2026-10-25)
 
 ### Design System
-- **Fonts:** Titillium Web 400/600 + Roboto 300/400/500
-- **Colors:** `#0b409c` primary, `#ffc947` amber, `#10316b` dark navy, `#f2f7ff` page bg
-- **H2 underline:** 40px amber rule on all H2 elements
+- **Fonts:** System font stack (Titillium Web + Roboto subsequently replaced for performance)
+- **Colors:** `#0b409c` primary, `#ffc947` amber, `#10316b` dark navy, `#ffffff` page bg (white, not `#f2f7ff`)
+- **H2 underline:** Removed in classic style sprint — white background, flat editorial style
 - **Buttons:** `border-radius: 2px`, amber hover
 - **No dark mode:** All `prefers-color-scheme: dark` removed
 - **No emojis:** All emoji icons removed
@@ -110,8 +110,8 @@ All 23 production readiness tasks complete. See `docs/sprints/PRODUCTION_READINE
 ## Phase 0 — Production integrity ✅
 
 - Cloudflare Workers deployment live and verified
-- 27 countries, 61 pathways, registries match source
-- 18/18 test suites, 137/137 tests passing
+- 30 countries, 69 pathways, registries match source
+- 19/19 test suites, 180/180 tests passing
 - CSP headers in `public/_headers`
 
 **Open:** live-browser ARIA audit on 4 core pages (owner action)
@@ -120,12 +120,12 @@ All 23 production readiness tasks complete. See `docs/sprints/PRODUCTION_READINE
 
 ## Phase 1 — Migration intelligence ✅ code / ⏳ owner
 
-- 30-country registry, 68 pathways (62 publishable / 6 research_required)
-- 62/62 publishable pathways have `requirements[]`
+- 30-country registry, 69 pathways (63 publishable / 6 research_required)
+- 63/63 publishable pathways have `requirements[]`
 - 6 research_required all have `permanentBlocker` or `scopeNote`
-- 216 evidence records (18 primary + 198 addenda)
+- 218 evidence records
 - Route engine: `{ matches, alternatives, missingInput, zeroFitExplanations }`
-- 180-day staleness detection; 0 stale as of 2026-10-29
+- 180-day staleness detection; 0 stale as of 2026-10-30
 - Country source manifest generated for all 30 countries
 
 **Open (owner):**
@@ -278,7 +278,7 @@ A task is not complete because a file exists. Legal/data claims require evidence
 - 4 GOIF playbooks: Australia DAMA, Italy DSU need-blind, Asian/Nordic accelerators, Portugal D3
 - 19/19 suites, 180/180 tests
 
-**Open:** remote_freelance pathways — Mauritius Premium Visa, Cape Verde Remote Work, Namibia Digital Nomad (Vertical B content)
+**Fully complete** — remote_freelance pathways delivered in Vertical B sprint.
 
 ---
 
@@ -291,9 +291,9 @@ A task is not complete because a file exists. Legal/data claims require evidence
 - Target Region filter in Find MyPathway (10 regions from country categories)
 - PR vector filter — 10 pathways tagged pr-route (CA, AU×3, NZ×3, IE, FR, PT)
 - ⌘K search modal on all 26 HTML pages + blog template
-- Countries: 27 → 30 | Pathways: 65 → 68 | Blog posts: 34 → 38 | Evidence: 202 → 216
+- Countries: 27 → 30 | Pathways: 65 → 69 | Blog posts: 34 → 96 | Evidence: 202 → 218
 
-**Open:** AfCFTA business corridors (Rwanda, Ghana, Kenya), diaspora repatriation guide
+**Open:** Diaspora repatriation guide (deferred — see RESERVED_POSTS_TASKFILE.md)
 
 ---
 

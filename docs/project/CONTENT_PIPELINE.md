@@ -1,41 +1,43 @@
 # Content Pipeline — MyPathway2Global
-**Updated:** 2026-10-30 | **Current posts:** 59 | **Sitemap URLs:** 110
+**Updated:** 2026-10-30 | **Current posts:** 96 | **Sitemap URLs:** 145
+
+> Note: This pipeline document was written when the platform had 59 posts. The gap analysis below is preserved for reference but most Tier 1 and Tier 2 items are now live. For the current content inventory see `docs/project/BLOG_CONTENT_INVENTORY.md`. For reserved/blocked posts see `docs/sprints/RESERVED_POSTS_TASKFILE.md`.
 
 ---
 
-## What exists (59 posts)
+## What exists (96 posts, as of 2026-10-30)
 
 | Category | Count | Coverage |
 |---|---|---|
-| Country Audits | 27 | All 27 original platform countries |
-| Guides | 15 | Work visas by continent (5), nomad/business (5), practical (5) |
-| Professional Playbooks | 8 | Canada, Germany, Germany vs Canada, AU DAMA, PT D3, MU, CV, NA |
-| Student Playbooks | 5 | Italy DSU (x3), UK Masters, USask |
+| Country Audits | 38 | All 30 countries (27 original + MU, CV, NA + Gulf/Africa) |
+| Guides | 35 | Work visas by continent, nomad/business, CRS/tax series, Schengen, working holiday, AfCFTA, diaspora |
+| Professional Playbooks | 9 | Canada, Germany, Germany vs Canada, AU DAMA, PT D3, MU, CV, NA, Saskatchewan PNP |
+| Student Playbooks | 8 | Italy DSU (x3), UK Masters, USask, Erasmus Mundus, DAAD, Commonwealth |
 | Case Studies | 2 | Chisom success story, Rejection patterns |
-| Business Playbooks | 1 | US LLC Setup |
+| Business Playbooks | 3 | US LLC Setup, UK Ltd, Mauritius GBL |
 | Policy Updates | 1 | Canada SDS cancelled |
 
 ---
 
-## Gap 1 — Country audits for new countries (13 missing)
+## Gap 1 — Country audits (all resolved as of 2026-10-30)
 
-Countries in the platform or covered in guides with no dedicated country audit post:
+All 30 countries now have dedicated country audit posts. The items below were the original gap list — all are now published.
 
-| Country | Status | Priority |
-|---|---|---|
-| UAE | In Middle East work guide, no audit | High — biggest Gulf destination |
-| Qatar | In Middle East work guide, no audit | High — active in agent market |
-| Saudi Arabia | In Middle East work guide, no audit | High — largest Gulf economy |
-| Oman | In Middle East work guide, no audit | Medium |
-| South Africa | In intra-Africa guide, no audit | High — largest African economy |
-| Kenya | In intra-Africa guide, no audit | High — East Africa hub |
-| Ghana | In intra-Africa guide, no audit | High — West Africa hub |
-| Rwanda | In intra-Africa guide, no audit | Medium |
-| Mauritius | Nomad guide exists, no country audit | Medium |
-| Cape Verde | Nomad guide exists, no country audit | Low |
-| Namibia | Nomad guide exists, no country audit | Low |
-| Guyana | Mentioned in agent market, no coverage | Low — research needed |
-| Indonesia | Mentioned in agent market, no coverage | Low — research needed |
+| Country | Status |
+|---|---|
+| UAE | Published |
+| Qatar | Published |
+| Saudi Arabia | Published |
+| Oman | Published |
+| South Africa | Published |
+| Kenya | Published |
+| Ghana | Published |
+| Rwanda | Published |
+| Mauritius | Published |
+| Cape Verde | Published |
+| Namibia | Published |
+| Guyana | Reserved — see RESERVED_POSTS_TASKFILE.md |
+| Indonesia | Reserved — see RESERVED_POSTS_TASKFILE.md |
 
 ---
 
