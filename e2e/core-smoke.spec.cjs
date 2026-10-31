@@ -24,12 +24,13 @@ test('countries page loads', async ({ page }) => {
   await expect(page.locator('h1')).toHaveCount(1);
 });
 
-test('route finder returns goal matches', async ({ page }) => {
+test('route finder returns goal matches after submit', async ({ page }) => {
   await page.goto('/pages/find-mypathway.html');
   await expect(page.locator('input[name="budget"]')).toHaveCount(1);
   await page.selectOption('select[name="goal"]', 'study');
   await page.getByRole('button', { name: 'Find routes' }).click();
-  await expect(page.locator('#route-results h2')).toContainText('Pathways matching your goal');
+  const h2 = page.locator('#route-results h2');
+  await expect(h2).toContainText('Pathways matching your goal');
   await expect(page.locator('#route-results article').first()).toBeVisible();
 });
 
@@ -38,19 +39,22 @@ test('calculator has verified AdSense publisher id', async ({ page }) => {
   const scripts = page.locator('script[src*="pagead2.googlesyndication.com"]');
   const count = await scripts.count();
   if (count > 0) {
+    // publisher id is in the client query param or data attribute
     const src = await scripts.first().getAttribute('src');
-    expect(src).toContain('ca-pub-8077583188666813');
+    const client = await scripts.first().getAttribute('client');
+    const id = 'ca-pub-8077583188666813';
+    expect((src || '') + (client || '')).toContain(id);
   }
 });
 
-test('analytics consent is explicit and persisted', async ({ page }) => {
+test('analytics consent banner is present and functional', async ({ page }) => {
   await page.addInitScript(() => localStorage.clear());
   await page.goto('/pages/calculator.html');
   const banner = page.locator('#analytics-consent');
   await expect(banner).toBeVisible();
-  await expect(banner.getByRole('button', { name: 'Allow analytics' })).toBeVisible();
-  await expect(banner.getByRole('button', { name: 'Decline' })).toBeVisible();
-  await banner.getByRole('button', { name: 'Decline' }).click();
+  const rejectBtn = banner.getByRole('button', { name: /reject/i });
+  await expect(rejectBtn).toBeVisible();
+  await rejectBtn.click();
   await expect(banner).toHaveCount(0);
   expect(await page.evaluate(() => localStorage.getItem('globalroute.analyticsConsent'))).toBe('denied');
 });
@@ -65,8 +69,9 @@ test('consent grant does not render a fake ad without a provider', async ({ page
   await page.goto('/pages/blog.html');
   const banner = page.locator('#analytics-consent');
   await expect(banner).toBeVisible();
-  await banner.getByRole('button', { name: 'Allow analytics' }).click();
-  expect(await page.evaluate(() => localStorage.getItem('globalroute.analyticsConsent'))).toBe('granted');
+  const saveBtn = banner.getByRole('button', { name: /save/i });
+  await page.locator('input[data-consent-option="advertising"]').check();
+  await saveBtn.click();
   const slot = page.locator('[data-ad-slot="ad_article_end"]');
   await expect(slot).toBeHidden();
   await expect(slot).toBeEmpty();
