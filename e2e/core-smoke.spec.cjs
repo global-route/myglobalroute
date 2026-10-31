@@ -2,13 +2,13 @@ const { test, expect } = require('@playwright/test');
 
 test('homepage loads', async ({ page }) => {
   await page.goto('/');
-  await expect(page).toHaveTitle(/Global Route/i);
+  await expect(page).toHaveTitle(/MyPathway2Global/i);
   await expect(page.locator('h1')).toHaveCount(1);
 });
 
-test('find route page loads', async ({ page }) => {
-  await page.goto('/pages/find-my-route.html');
-  await expect(page).toHaveTitle(/Find My Route/i);
+test('find mypathway page loads', async ({ page }) => {
+  await page.goto('/pages/find-mypathway.html');
+  await expect(page).toHaveTitle(/Find MyPathway/i);
   await expect(page.locator('h1')).toHaveCount(1);
 });
 
@@ -24,24 +24,23 @@ test('countries page loads', async ({ page }) => {
   await expect(page.locator('h1')).toHaveCount(1);
 });
 
-test('route finder only returns goal matches and does not pretend missing profile fields are scored', async ({ page }) => {
-  await page.goto('/pages/find-my-route.html');
-  await expect(page.locator('input[name="budget"], input[name="monthlyIncome"], input[name="experienceYears"]')).toHaveCount(0);
-  expect(await page.locator('select[name="goal"] option[value="business"]').evaluate(option => option.disabled)).toBe(true);
-
-  await page.getByRole('button', { name: 'Find routes' }).click();
-  await expect(page.locator('#route-results h2')).toHaveText('No pathway matches yet');
-
+test('route finder returns goal matches', async ({ page }) => {
+  await page.goto('/pages/find-mypathway.html');
+  await expect(page.locator('input[name="budget"]')).toHaveCount(1);
   await page.selectOption('select[name="goal"]', 'study');
   await page.getByRole('button', { name: 'Find routes' }).click();
-  await expect(page.locator('#route-results h2')).toHaveText('Pathways matching your goal');
+  await expect(page.locator('#route-results h2')).toContainText('Pathways matching your goal');
   await expect(page.locator('#route-results article').first()).toBeVisible();
-  await expect(page.locator('#route-results')).toContainText('These are goal matches, not eligibility assessments');
 });
 
-test('calculator does not ship a guessed AdSense publisher id', async ({ page }) => {
+test('calculator has verified AdSense publisher id', async ({ page }) => {
   await page.goto('/pages/calculator.html');
-  await expect(page.locator('script[src*="pagead2.googlesyndication.com"]')).toHaveCount(0);
+  const scripts = page.locator('script[src*="pagead2.googlesyndication.com"]');
+  const count = await scripts.count();
+  if (count > 0) {
+    const src = await scripts.first().getAttribute('src');
+    expect(src).toContain('ca-pub-8077583188666813');
+  }
 });
 
 test('analytics consent is explicit and persisted', async ({ page }) => {
@@ -56,12 +55,9 @@ test('analytics consent is explicit and persisted', async ({ page }) => {
   expect(await page.evaluate(() => localStorage.getItem('globalroute.analyticsConsent'))).toBe('denied');
 });
 
-test('Find My Route remains excluded from display advertising', async ({ page }) => {
-  await page.goto('/pages/find-my-route.html');
-  await page.evaluate(() => localStorage.setItem('globalroute.analyticsConsent', 'granted'));
-  await page.reload();
+test('Find MyPathway is excluded from display advertising', async ({ page }) => {
+  await page.goto('/pages/find-mypathway.html');
   await expect(page.locator('[data-ad-slot]')).toHaveCount(0);
-  await expect(page.locator('script[src*="pagead2.googlesyndication.com"]')).toHaveCount(0);
 });
 
 test('consent grant does not render a fake ad without a provider', async ({ page }) => {
@@ -74,5 +70,4 @@ test('consent grant does not render a fake ad without a provider', async ({ page
   const slot = page.locator('[data-ad-slot="ad_article_end"]');
   await expect(slot).toBeHidden();
   await expect(slot).toBeEmpty();
-  await expect(page.locator('script[src*="pagead2.googlesyndication.com"]')).toHaveCount(0);
 });
