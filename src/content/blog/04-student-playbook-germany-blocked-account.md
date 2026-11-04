@@ -1,10 +1,11 @@
 ---
 title: "Student Playbook: How to Fund Germany Blocked Account from Africa"
 date: 2026-02-01
+updated: 2026-02-01
 author: "Global Route Team"
 category: "Sector-Specific Playbooks"
 keywords: "Germany blocked account, student visa from Africa, funding German university"
-image: "/public/assets/blog/playbook-icon.jpg"
+image: "/blog/images/germany-chancenkarte-2026.jpg"
 readTime: "7 min"
 featured: false
 ---
@@ -330,5 +331,16 @@ A: No. Only you, the student visa holder.
 
 ---
 
-**Next step:** Go to `BLOCKED_ACCOUNT_CALCULATOR.html` on our site to estimate your exact savings timeline.
+**Next step:** Use our [Cost Calculator](/pages/calculator.html) to estimate your exact savings timeline and total investment.
+
+---
+
+## Related Resources
+
+- [Germany Visa Reality for Africans](/blog/01-germany-visa-reality-for-africans/) - Full country audit
+- [Germany Student Blocked Account Pathway](/pathways/germany/student-blocked-account.md) - Official pathway guide
+
+---
+
+**Disclaimer:** This content is for informational purposes only and does not constitute financial or immigration advice. Blocked account requirements may change—always verify current amounts with official German sources.
 

@@ -1,10 +1,11 @@
 ---
 title: "Canada Visa Reality 2026: True Rejection Rates for African Applicants"
 date: 2026-01-25
+updated: 2026-01-25
 author: "Global Route Team"
 category: "Country Reality Audits"
 keywords: "Canada visa rejection rates, student visa from Nigeria, Express Entry African applicants"
-image: "/public/assets/blog/canada-flag.jpg"
+image: "/blog/images/canada-express-entry-2026.jpg"
 readTime: "9 min"
 featured: false
 ---
@@ -27,6 +28,19 @@ Immigration Canada proudly advertises a 92% student visa approval rate. Immigrat
 Then applications get rejected. Funds questioned. Timelines stretch to 6 months.
 
 Why? Because Canada changed its rules in 2024, and international agents still aren't caught up.
+
+---
+
+## Important: SDS Program Cancelled (November 2024)
+
+**Major change:** Canada's Student Direct Stream (SDS) program was **cancelled in November 2024**. This program previously offered faster processing (20 days) for students from select countries including Nigeria, Ghana, and Senegal.
+
+**Impact:**
+- All African student visa applications now go through standard processing (8-16 weeks)
+- No more expedited pathway for students with GICs
+- Increased scrutiny on all applications
+
+**What this means for you:** Plan for longer processing times and ensure all documentation is thorough.
 
 ---
 
@@ -400,6 +414,19 @@ These provinces actively recruit international students and have faster visa pro
 
 ---
 
+## Related Pathways
+
+- [Canada Express Entry FSW Pathway](/pathways/canada/express-entry-fsw.md) - Detailed skilled worker guide
+- [Cost Calculator](/pages/calculator.html) - Estimate your total investment
+
+---
+
 **Updated:** January 2026  
 **Next Review:** August 2026  
 **Data Source:** IRCC statistics, visa officer interviews
+
+*Currency conversion note: CAD $1 = ~$0.74 USD as of January 2026*
+
+---
+
+**Disclaimer:** This content is for informational purposes only and does not constitute legal or immigration advice. Canadian immigration policies change frequently—always verify current requirements with IRCC before making decisions.

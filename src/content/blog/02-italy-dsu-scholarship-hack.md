@@ -1,10 +1,11 @@
 ---
 title: "Italy DSU Scholarship: The Complete African Student Hack 2026"
 date: 2026-01-20
+updated: 2026-01-20
 author: "Global Route Team"
 category: "Country Reality Audits"
 keywords: "Italy scholarship for Africans, DSU bursary, Italian university free tuition"
-image: "/public/assets/blog/italy-flag.jpg"
+image: "/blog/images/italy-dsu-scholarship.jpg"
 readTime: "10 min"
 featured: true
 ---
@@ -367,3 +368,9 @@ This guide unmasks the hack.
 **Updated:** January 2026  
 **Next Review:** June 2026 (New scholarship announcements)  
 **Data Sources:** MIUR, DSU Regional Offices, Italian Consulates
+
+*Currency conversion note: €1 = ~$1.08 USD as of January 2026*
+
+---
+
+**Disclaimer:** This content is for informational purposes only and does not constitute legal or immigration advice. Scholarship requirements and deadlines change annually—always verify with official university and government sources before applying.

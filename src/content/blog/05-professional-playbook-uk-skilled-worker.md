@@ -1,10 +1,11 @@
 ---
 title: "Professional Playbook: UK Skilled Worker Visa - The 2026 Reality"
 date: 2026-02-05
+updated: 2026-02-05
 author: "Global Route Team"
 category: "Sector-Specific Playbooks"
 keywords: "UK skilled worker visa, work permit for African professionals, salary requirements 2026"
-image: "/public/assets/blog/playbook-icon.jpg"
+image: "/blog/images/uk-masters-cost-2026.jpg"
 readTime: "8 min"
 featured: false
 ---
@@ -319,4 +320,17 @@ The UK desperately needs skilled workers. Post-Brexit, Europe closed. So they're
 **Updated:** January 2026  
 **Next Review:** July 2026  
 **Data Source:** UK Home Office, NHS, Tech Nation
+
+*Currency conversion note: £1 = ~$1.26 USD as of January 2026*
+
+---
+
+## Related Pathways
+
+- [UK Skilled Worker Visa Pathway](/pathways/uk/skilled-worker-visa.md) - Detailed official guide
+- [Cost Calculator](/pages/calculator.html) - Estimate your total investment
+
+---
+
+**Disclaimer:** This content is for informational purposes only and does not constitute legal or immigration advice. UK immigration rules change frequently—always verify current salary thresholds and requirements with the UK Home Office before making decisions.
 

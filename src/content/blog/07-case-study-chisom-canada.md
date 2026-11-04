@@ -1,10 +1,11 @@
 ---
 title: "Case Study: How Chisom Went from Unemployed in Lagos to Senior Engineer in Toronto"
 date: 2026-02-15
+updated: 2026-02-15
 author: "Global Route Team"
 category: "Community & Case Studies"
 keywords: "visa success story, Nigeria to Canada, software engineer, career transformation"
-image: "/public/assets/blog/case-study-chisom.jpg"
+image: "/blog/images/chisom-canada-success.jpg"
 readTime: "6 min"
 featured: false
 ---
@@ -116,7 +117,7 @@ He's been working as a software engineer in Lagos for 5 years. His skills are so
   - Offer letter: Job offer in hand (major advantage)
 - Score calculated: 465 points (solid but not automatic approval without job offer)
 
-**Key insight:** Job offer alone wouldn't guarantee Express Entry approval. But combined with her background + IELTS score, she was competitive.
+**Key insight:** Job offer alone wouldn't guarantee Express Entry approval. But combined with his background + IELTS score, he was competitive.
 
 ### Step 2: Provincial Nomination (Ontario)
 
@@ -174,7 +175,7 @@ He's been working as a software engineer in Lagos for 5 years. His skills are so
 - Passport stamped, work permit issued (valid 3 years)
 - Cleared customs, got to Airbnb by 11pm
 
-**Immediate thoughts (her words):**
+**Immediate thoughts (his words):**
 > "The airport is massive. So organized. Then I got outside... it's -15°C. I've never experienced weather like this. Suddenly the reality hit: I actually did it. I'm here. But it's so cold."
 
 ### Week 1: Basic Setup
@@ -269,7 +270,7 @@ He's been working as a software engineer in Lagos for 5 years. His skills are so
 **April-June 2025:**
 - Routine established
 - Found Nigerian restaurant community in Toronto
-- Connected with coworkers (team invited her to weekend hikes)
+- Connected with coworkers (team invited him to weekend hikes)
 - Started saving aggressively
 - "I'm not sure if I'm happy, but I'm building something."
 
@@ -284,7 +285,7 @@ He's been working as a software engineer in Lagos for 5 years. His skills are so
 
 ---
 
-## Key Lessons (In Her Words)
+## Key Lessons (In His Words)
 
 ### 1. "The Job Search Is the Hardest Part"
 
@@ -371,4 +372,8 @@ Chisom's answer: "Absolutely. Not because Canada is perfect—it's not. But beca
 **Outcome:** Successfully relocated, stable career, pathway to residency
 
 *Chisom's story represents what's possible with preparation, persistence, and clear goals. Not every journey is this smooth, but the fundamentals (skills + documentation + job search + patience) apply to all.*
+
+---
+
+**Disclaimer:** This is a real case study shared with permission. Individual results vary based on qualifications, timing, and circumstances. This content is for informational purposes only and does not constitute legal or immigration advice.
 

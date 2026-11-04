@@ -25,7 +25,7 @@
   font-family: 'Roboto', sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
-  color: #6b7280;
+  color: #4b5563;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   margin-bottom: 1rem;
@@ -42,7 +42,7 @@
 
 .meta-sep {
   margin: 0 0.5rem;
-  color: #d1d5db;
+  color: #9ca3af;
 }
 
 .article-header h1 {
@@ -88,8 +88,19 @@
   font-weight: 600;
   color: #10316b;
   margin: 3rem 0 1rem 0;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #ffc947;
+  padding-bottom: 0.75rem;
+  border-bottom: none;
+  position: relative;
+}
+
+.article-body h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: #ffc947;
 }
 
 /* H3 — Subsections */
@@ -130,7 +141,7 @@
 
 /* Bold */
 .article-body strong {
-  font-weight: 500;
+  font-weight: 600;
   color: #111827;
 }
 
@@ -179,10 +190,33 @@
    TABLES
    ═══════════════════════════════════════════════════════ */
 
+.article-body .table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.article-body .table-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.9));
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.article-body .table-wrapper.has-overflow::after {
+  opacity: 1;
+}
+
 .article-body table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.5rem 0;
   font-size: 0.9rem;
 }
 
@@ -199,6 +233,7 @@
   color: #10316b;
   background: #f9fafb;
   border-bottom: 2px solid #e5e7eb;
+  white-space: nowrap;
 }
 
 .article-body tr:last-child td {
@@ -370,12 +405,47 @@
   }
 
   .article-body table {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    min-width: 480px;
   }
 
   .article-body th,
   .article-body td {
-    padding: 0.5rem;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .article-body blockquote {
+    margin: 1.5rem -1rem;
+    padding: 1rem;
+    border-left-width: 2px;
+  }
+
+  .article-body ul ul,
+  .article-body ol ol,
+  .article-body ul ol,
+  .article-body ol ul {
+    padding-left: 1rem;
+    margin-left: 0;
+  }
+
+  .article-body pre {
+    padding: 1rem;
+    font-size: 0.8rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border-radius: 0;
+  }
+
+  .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.5rem;
+  }
+
+  .article-share {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 
   .related {

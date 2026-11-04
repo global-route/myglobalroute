@@ -1,10 +1,11 @@
 ---
 title: "Business Playbook: How to Form a US LLC from Africa in 24 Hours"
 date: 2026-02-10
+updated: 2026-02-10
 author: "Global Route Team"
 category: "Sector-Specific Playbooks"
 keywords: "US LLC from Nigeria, offshore business, digital nomad business setup, EIN"
-image: "/public/assets/blog/playbook-icon.jpg"
+image: "/blog/images/us-llc-setup.jpg"
 readTime: "7 min"
 featured: false
 ---
@@ -138,6 +139,11 @@ A US Limited Liability Company (LLC) is:
 3. Fill out Form SS-4
 4. Complete in 15 minutes
 5. Receive EIN immediately (email)
+
+**Important for non-US residents:** If you don't have a US Social Security Number (SSN), you cannot apply online. Instead:
+- **Option A:** Apply by fax using Form SS-4 (fax to 855-641-6935, response in 4 business days)
+- **Option B:** Apply by mail (takes 4-6 weeks)
+- **Option C:** Use a formation service like Stripe Atlas that handles this for you
 
 **Key fields:**
 - Business structure: LLC
@@ -395,3 +401,14 @@ A US Limited Liability Company (LLC) is:
 **Updated:** January 2026  
 **Next Review:** July 2026 (Tax law changes)  
 **Data Source:** IRS, Wyoming Secretary of State, Wise, Stripe
+
+---
+
+**Important Tax Compliance Notes:**
+- **FBAR (FinCEN 114):** If your US accounts exceed $10,000 at any point during the year, you must file an FBAR
+- **FATCA:** Your foreign bank may report your US account to your home country's tax authority
+- **Consult a tax professional** in both the US and your home country before proceeding
+
+---
+
+**Disclaimer:** This content is for informational purposes only and does not constitute legal, tax, or business advice. US business and tax laws are complex—always consult qualified professionals in both the US and your home country before forming an LLC or opening US accounts.
