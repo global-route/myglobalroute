@@ -1255,6 +1255,34 @@ th {
 .search-modal-result-name { font-weight: 600; font-size: 0.9rem; color: #18181b; }
 .search-modal-result-meta { font-size: 0.78rem; color: #6b7280; }
 .search-modal-empty { padding: 2rem 1.25rem; text-align: center; color: #9ca3af; font-size: 0.9rem; }
+.search-modal-empty p { margin: 0 0 0.75rem; }
+.search-modal-empty-hint { font-size: 0.8rem; color: #b0b5bd; margin-bottom: 1rem; }
+.search-modal-suggestions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+.search-modal-suggestion-label {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+.search-modal-suggestion {
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  color: #4b5563;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.search-modal-suggestion:hover {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+}
 .search-modal-footer {
   padding: 0.6rem 1.25rem;
   border-top: 1px solid #e5e7eb;

@@ -51,13 +51,54 @@
     const el = document.getElementById('search-modal-results');
     if (!el) return;
     if (!q || q.length < 2) {
-      el.innerHTML = '<p class="search-modal-empty">Type to search countries, pathways and posts\u2026</p>';
+      el.innerHTML = `
+        <div class="search-modal-empty">
+          <p>Type to search countries, pathways and posts\u2026</p>
+          <div class="search-modal-suggestions">
+            <span class="search-modal-suggestion-label">Popular:</span>
+            <button type="button" class="search-modal-suggestion" data-query="Canada">Canada</button>
+            <button type="button" class="search-modal-suggestion" data-query="Germany">Germany</button>
+            <button type="button" class="search-modal-suggestion" data-query="study">Study</button>
+            <button type="button" class="search-modal-suggestion" data-query="work">Work</button>
+          </div>
+        </div>`;
       activeIdx = -1;
+      // Attach suggestion click handlers
+      el.querySelectorAll('.search-modal-suggestion').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const input = document.getElementById('search-modal-input');
+          if (input) {
+            input.value = btn.dataset.query;
+            input.dispatchEvent(new Event('input'));
+            input.focus();
+          }
+        });
+      });
       return;
     }
     if (!results.length) {
-      el.innerHTML = '<p class="search-modal-empty">No results for \u201c' + q + '\u201d</p>';
+      el.innerHTML = `
+        <div class="search-modal-empty">
+          <p>No results for \u201c${q}\u201d</p>
+          <p class="search-modal-empty-hint">Try searching for a country name, pathway type, or topic.</p>
+          <div class="search-modal-suggestions">
+            <span class="search-modal-suggestion-label">Try:</span>
+            <button type="button" class="search-modal-suggestion" data-query="Canada">Canada</button>
+            <button type="button" class="search-modal-suggestion" data-query="Express Entry">Express Entry</button>
+            <button type="button" class="search-modal-suggestion" data-query="scholarship">Scholarship</button>
+          </div>
+        </div>`;
       activeIdx = -1;
+      el.querySelectorAll('.search-modal-suggestion').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const input = document.getElementById('search-modal-input');
+          if (input) {
+            input.value = btn.dataset.query;
+            input.dispatchEvent(new Event('input'));
+            input.focus();
+          }
+        });
+      });
       return;
     }
     el.innerHTML = results.map((r, i) => `
