@@ -142,7 +142,7 @@
           </select>
         </div>
         <div class="wizard-nav">
-          <span></span>
+          <span class="wizard-nav-placeholder"></span>
           <button type="button" class="btn btn-primary wizard-next" data-validates="passportCountry">Next &rarr;</button>
         </div>
       </div>
@@ -208,7 +208,7 @@
       <div class="wizard-step" id="step-3" data-step="3" hidden>
         <h2>What is your purpose?</h2>
         <p class="wizard-step-hint">Choose the option that best describes why you want to move.</p>
-        <div class="wizard-purpose-grid" role="group" aria-label="Purpose options">
+        <div class="wizard-purpose-grid" role="radiogroup" aria-label="Purpose options" aria-required="true">
           <button type="button" class="wizard-purpose-btn" data-value="study">
             <span class="wizard-purpose-title">Study</span>
             <span class="wizard-purpose-desc">University, college or language school</span>
@@ -258,7 +258,7 @@
       <div class="wizard-step" id="step-5" data-step="5" hidden>
         <h2>What is your available budget?</h2>
         <p class="wizard-step-hint">This is used to match pathways whose known minimum funds requirements are within your range. Budget is a planning aid - not an eligibility assessment.</p>
-        <div class="wizard-budget-grid" role="group" aria-label="Budget options">
+        <div class="wizard-budget-grid" role="radiogroup" aria-label="Budget options" aria-required="true">
           <button type="button" class="wizard-budget-btn" data-value="4999">
             <span class="wizard-budget-amount">Under $5,000</span>
             <span class="wizard-budget-desc">Entry-level budget</span>

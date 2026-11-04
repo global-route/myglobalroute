@@ -34,7 +34,7 @@
       </div>
     </div>
     <section class="container" aria-labelledby="route-title" style="padding-top: var(--spacing-2xl); padding-bottom: var(--spacing-3xl);">
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--spacing-lg); margin-bottom:var(--spacing-xl);">
+      <div class="info-cards-grid">
         <div class="problem-card">
           <h3>What this tool does</h3>
           <ul>
@@ -188,8 +188,9 @@
         <h2>Evidence-gated pathway matches</h2>
         <p>Select Study or Work to view pathways whose exact-route records have passed the current evidence gate. Unverified pathways will not be recommended.</p>
       </section>
-      <div id="export-bar" hidden style="margin-top:var(--spacing-lg);">
+      <div id="export-bar" hidden style="margin-top:var(--spacing-lg);display:flex;gap:0.75rem;flex-wrap:wrap;">
         <button type="button" id="export-json-btn" class="btn btn-secondary" style="font-size:0.85rem;">Save my plan (JSON)</button>
+        <button type="button" id="reset-form-btn" class="btn btn-secondary" style="font-size:0.85rem;">Clear all filters</button>
       </div>
     </section>
   </main>
@@ -477,10 +478,11 @@
                 const inp = document.getElementById('gap-savings-input');
                 const out = document.getElementById('gap-savings-result');
                 if (!inp || !out) return;
+                const gap = gapAmount; // capture in closure
                 inp.addEventListener('input', () => {
                   const rate = parseFloat(inp.value);
                   if (!rate || rate <= 0) { out.textContent = ''; return; }
-                  const months = Math.ceil(${gapAmount} / rate);
+                  const months = Math.ceil(gap / rate);
                   out.textContent = `Ready in ${months} month${months === 1 ? '' : 's'}`;
                 });
               }, 0);
@@ -578,6 +580,14 @@
       a.download = `mypathway-plan-${new Date().toISOString().slice(0,10)}.json`;
       a.click();
       URL.revokeObjectURL(a.href);
+    });
+
+    // Reset form button
+    document.getElementById('reset-form-btn')?.addEventListener('click', () => {
+      form.reset();
+      localStorage.removeItem(STORAGE_KEY);
+      results.innerHTML = '<h2>Evidence-gated pathway matches</h2><p>Select Study or Work to view pathways whose exact-route records have passed the current evidence gate. Unverified pathways will not be recommended.</p>';
+      document.getElementById('export-bar').hidden = true;
     });
   </script>
 <script src="/js/search-modal.js"></script></body>
