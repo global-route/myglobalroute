@@ -1,6 +1,6 @@
 # MyPathway2Global — Documentation Index
 
-> **Updated:** 2026-10-28  
+> **Updated:** 2026-11-05  
 > **Purpose:** Canonical map for public project documentation. Keep one current source of truth per topic; dated or superseded execution notes belong in `archive/`.
 
 ## Start here
@@ -13,6 +13,7 @@
 | Blog post inventory and content gaps | [Blog Content Inventory](project/BLOG_CONTENT_INVENTORY.md) |
 | Release evidence / deployment state | [Release Verification](project/RELEASE_VERIFICATION_2026-10-08.md) |
 | UI redesign findings | [UI/UX Audit & Classic Design Roadmap](product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md) |
+| Product corrections and future expansion | [Product Improvement & Implementation Blueprint](product/MYPATHWAY2GLOBAL_PRODUCT_IMPROVEMENT_IMPLEMENTATION_BLUEPRINT.md) |
 | Documentation structure and ownership | [Documentation Map](README.md) |
 
 ## Project planning
@@ -27,6 +28,7 @@
 ## Product and design
 
 - [UI/UX Audit & Classic Design Roadmap](product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md) — screenshot findings, classic UI principles, Figma workflow.
+- [Product Improvement & Implementation Blueprint](product/MYPATHWAY2GLOBAL_PRODUCT_IMPROVEMENT_IMPLEMENTATION_BLUEPRINT.md) — assessment findings, implementation walkthrough, acceptance criteria, evidence governance and future JobAgent concept.
 
 > Archived: `WIZARD_PLAN.md`, `IMPLEMENTATION_WALKTHROUGH.md`, `ENHANCEMENT_TASKS.md`, `PRODUCTION_READINESS_TASKS.md`, UI sprint docs — all tasks complete, moved to `archive/`.
 
