@@ -6,6 +6,8 @@
 > **Target branch:** `main`  
 > **Status:** Proposed implementation blueprint — findings require code/data/live revalidation before being treated as current verified defects  
 > **Scope:** Product integrity, mobility intelligence, pathway matching, content/evidence governance, financial planning, privacy/monetization and staged product expansion
+>
+> **Related document:** For the full research narrative, benchmark analysis and detailed rationale, see [Deep Website & Product Assessment](../MYPATHWAY2GLOBAL_DEEP_WEBSITE_PRODUCT_ASSESSMENT_AND_IMPLEMENTATION_WALKTHROUGH.md). This Blueprint extracts the actionable implementation tasks.
 
 ---
 

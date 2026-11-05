@@ -6,6 +6,8 @@
 **Document type:** Product assessment, evidence-led correction register, implementation walkthrough and improvement blueprint  
 **Status:** Findings and recommendations; implementation not yet performed by this assessment
 
+> **Related document:** For the condensed implementation checklist, see [Product Improvement & Implementation Blueprint](product/MYPATHWAY2GLOBAL_PRODUCT_IMPROVEMENT_IMPLEMENTATION_BLUEPRINT.md). This assessment provides the full research narrative and rationale; the Blueprint extracts actionable tasks.
+
 > **Source and scope note:** This document preserves the full assessment content supplied in the project discussion, including its findings, weaknesses, benchmark conclusions, recommended corrections and implementation sequence. The original ChatGPT shared-conversation URL could not be independently retrieved during this documentation pass. Accordingly, this is a faithful consolidation of the assessment text provided in the conversation, not a claim that the inaccessible share page was independently exported. Any live-state or official-rule claim must be revalidated against the current production site and primary authority before implementation or publication.
 
 ---

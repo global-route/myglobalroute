@@ -21,6 +21,7 @@
 
 - [Phase Status](project/PHASE_STATUS.md) — phase completion, open gates, Phase 6 roadmap, product north star. **Canonical source of truth.**
 - [Active Sprint](sprints/ACTIVE_SPRINT.md) — current owner actions and prioritised next sprint candidates.
+- [P0 Critical Fixes Taskfile](sprints/P0_CRITICAL_FIXES_TASKFILE.md) — extracted P0 action items from product assessment.
 - [Content Platform Sprint](sprints/CONTENT_PLATFORM_SPRINT.md) — CP sprint full task spec (complete 2026-10-28).
 - [Owner Actions](sprints/OWNER_ACTIONS.md) — owner-managed actions with step-by-step instructions.
 - [Blog Content Inventory](project/BLOG_CONTENT_INVENTORY.md) — all 27 posts, pathway coverage map, content gaps.
