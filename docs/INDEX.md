@@ -14,6 +14,7 @@
 | Release evidence / deployment state | [Release Verification](project/RELEASE_VERIFICATION_2026-10-08.md) |
 | UI redesign findings | [UI/UX Audit & Classic Design Roadmap](product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md) |
 | Product corrections and future expansion | [Product Improvement & Implementation Blueprint](product/MYPATHWAY2GLOBAL_PRODUCT_IMPROVEMENT_IMPLEMENTATION_BLUEPRINT.md) |
+| Full assessment, weaknesses, benchmark research and implementation walkthrough | [Deep Website & Product Assessment](MYPATHWAY2GLOBAL_DEEP_WEBSITE_PRODUCT_ASSESSMENT_AND_IMPLEMENTATION_WALKTHROUGH.md) |
 | Documentation structure and ownership | [Documentation Map](README.md) |
 
 ## Project planning
@@ -29,6 +30,7 @@
 
 - [UI/UX Audit & Classic Design Roadmap](product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md) — screenshot findings, classic UI principles, Figma workflow.
 - [Product Improvement & Implementation Blueprint](product/MYPATHWAY2GLOBAL_PRODUCT_IMPROVEMENT_IMPLEMENTATION_BLUEPRINT.md) — assessment findings, implementation walkthrough, acceptance criteria, evidence governance and future JobAgent concept.
+- [Deep Website & Product Assessment](MYPATHWAY2GLOBAL_DEEP_WEBSITE_PRODUCT_ASSESSMENT_AND_IMPLEMENTATION_WALKTHROUGH.md) — full assessment text, all identified weaknesses, benchmark findings, preservation decisions, correction priorities and detailed implementation walkthrough.
 
 > Archived: `WIZARD_PLAN.md`, `IMPLEMENTATION_WALKTHROUGH.md`, `ENHANCEMENT_TASKS.md`, `PRODUCTION_READINESS_TASKS.md`, UI sprint docs — all tasks complete, moved to `archive/`.
 
