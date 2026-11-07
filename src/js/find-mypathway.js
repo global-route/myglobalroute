@@ -94,6 +94,25 @@
     return '<span class="status-badge status-badge-publishable">Verified</span>';
   }
 
+  function renderNationalityBadge(match) {
+    const status = match.nationalityStatus;
+    if (!status || status === 'eligible') return '';
+    if (status === 'unknown') {
+      return '<p class="nationality-unknown">&#9432; Nationality eligibility not yet verified — confirm with the official source before applying.</p>';
+    }
+    if (status === 'conditional') {
+      return `<p class="nationality-conditional">&#9888; Additional condition applies to your passport: ${esc(match.nationalityReason || '')}</p>`;
+    }
+    return '';
+  }
+
+  function renderWarnings(match) {
+    const warnings = match.warnings;
+    if (!Array.isArray(warnings) || !warnings.length) return '';
+    const items = warnings.map(w => `<li>${esc(w)}</li>`).join('');
+    return `<ul class="requirement-warnings">${items}</ul>`;
+  }
+
   function renderCard(match) {
     const badge = freshnessLabel(match.pathway);
     const fundedBadge = match.pathway.capital_tier === 'tier_1_funded'
@@ -105,6 +124,8 @@
         <div style="display:flex;gap:0.4rem;align-items:center;flex-wrap:wrap;flex-shrink:0;">${renderStatusBadge(match.pathway)}<span class="freshness-badge ${esc(badge.cls)}">${esc(badge.text)}</span>${fundedBadge}</div>
       </div>
       ${match.stale ? renderStaleWarning() : ''}
+      ${renderNationalityBadge(match)}
+      ${renderWarnings(match)}
       ${match.matchedTier ? renderMatchedTier(match.matchedTier) : ''}
       ${renderEvidenceTrail(match.pathway)}
       ${renderNextAction(match.pathway, match.country)}

@@ -1547,3 +1547,41 @@ th {
     margin-bottom: 1rem;
   }
 }
+
+/* P0.2 — Nationality eligibility badges */
+.nationality-unknown {
+  background: #fef9c3;
+  border-left: 3px solid #ca8a04;
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+  color: #713f12;
+  border-radius: 2px;
+}
+
+.nationality-conditional {
+  background: #fff7ed;
+  border-left: 3px solid #ea580c;
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+  color: #7c2d12;
+  border-radius: 2px;
+}
+
+/* P0.3 — Requirement warnings */
+.requirement-warnings {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.requirement-warnings li {
+  background: #f0f9ff;
+  border-left: 3px solid #0284c7;
+  padding: 0.4rem 0.75rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.85rem;
+  color: #0c4a6e;
+  border-radius: 2px;
+}

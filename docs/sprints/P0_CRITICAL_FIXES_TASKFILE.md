@@ -46,12 +46,12 @@ These are the highest-priority corrections identified in the 5 November 2026 pro
 
 | Task | Status |
 |------|--------|
-| Add nationality eligibility fields to pathway schema | ⬜ |
-| Pass passportCountry through Find MyPathway matching | ⬜ |
-| Pass passportCountry through Visa Wizard matching | ⬜ |
-| Implement eligibility statuses: available / not available / conditional / unknown | ⬜ |
+| Add nationality eligibility fields to pathway schema | ✅ `nationalityEligibility` object defined in engine |
+| Pass passportCountry through Find MyPathway matching | ✅ Done — `evaluateNationality()` reads `profile.passportCountry` |
+| Pass passportCountry through Visa Wizard matching | ⏳ Visa Wizard uses same engine — will apply automatically |
+| Implement eligibility statuses: available / not available / conditional / unknown | ✅ Done — all 4 statuses implemented |
 | Add regression tests for Nigerian passport + various routes | ⬜ |
-| Ensure unknown nationality ≠ eligible | ⬜ |
+| Ensure unknown nationality ≠ eligible | ✅ Done — unknown shows warning, not a pass |
 
 **Exit criteria:** Passport-specific decisions are tested and explainable.
 
@@ -63,12 +63,12 @@ These are the highest-priority corrections identified in the 5 November 2026 pro
 
 | Task | Status |
 |------|--------|
-| Inventory all 99 requirement types and their evaluation rules | ⬜ |
-| Implement evaluators for: job_offer, admission_offer, sponsorship | ⬜ |
-| Implement evaluators for: salary, points, qualification, age, experience | ⬜ |
-| Define mandatory vs conditional vs advisory semantics | ⬜ |
-| Ensure unknown mandatory requirements cannot pass | ⬜ |
-| Update result cards to show blockers and unknowns | ⬜ |
+| Inventory all 99 requirement types and their evaluation rules | ✅ Done — all types in schema covered |
+| Implement evaluators for: job_offer, admission_offer, sponsorship | ✅ Done |
+| Implement evaluators for: salary, points, qualification, age, experience | ✅ Done |
+| Define mandatory vs conditional vs advisory semantics | ✅ Done — blockers vs warnings |
+| Ensure unknown mandatory requirements cannot pass | ✅ Done — unknown = warning not pass |
+| Update result cards to show blockers and unknowns | ✅ Done — `renderWarnings()` + `renderNationalityBadge()` |
 | Add unit tests for each requirement type | ⬜ |
 
 **Exit criteria:** Unknown and failed mandatory requirements cannot produce a positive match.
