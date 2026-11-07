@@ -298,9 +298,22 @@
           }
           if (closest) {
             const monthlyIncome = Number(profile.monthlyIncome) || 0;
+            const monthlyExpenses = Number(profile.monthlyExpenses) || 0;
+            const monthlySavings = Math.max(0, monthlyIncome - monthlyExpenses);
             const gapAmount = Math.round(closestGap);
-            const months = monthlyIncome > 0 ? Math.ceil(gapAmount / monthlyIncome) : null;
-            const timelineText = months ? ` At your stated income, you could bridge this in <strong>${months} month${months === 1 ? '' : 's'}</strong>.` : '';
+            // P0.4 — normalize gap to USD for timeline (gap is in tier currency)
+            const norm = window.GlobalRoute?.RouteEngine?.normalizeCurrency(closest.tier.value, closest.tier.currency);
+            const gapUsd = (norm && !norm.unknown) ? Math.round(closestGap * (norm.usd / closest.tier.value)) : gapAmount;
+            const months = monthlySavings > 0 ? Math.ceil(gapUsd / monthlySavings) : null;
+            const timelineText = months
+              ? ` At your stated savings capacity, you could bridge this in <strong>${months} month${months === 1 ? '' : 's'}</strong>.`
+              : monthlyIncome > 0 && monthlyExpenses >= monthlyIncome
+                ? ' Your stated expenses meet or exceed your income — review your budget before planning a timeline.'
+                : '';
+            const usdEquiv = (norm && !norm.unknown && norm.currency !== 'USD') ? ` (≈ USD ${norm.usd})` : '';
+            const rateNote = norm?.stale ? ` <span style="font-size:0.8rem;color:var(--color-neutral-500);">(rate from 2026-11-05 — verify)</span>` : '';
+            const gapCurrency = esc(closest.tier.currency);
+            const gapUsdDisplay = usdEquiv ? esc(String(Math.round(closestGap))) + usdEquiv + rateNote : esc(String(gapAmount));
             const country = countries.countries.find(c => c.id === closest.pathway.countryId);
             const countryName = country ? country.name : closest.pathway.countryId;
             const tierLabel = closest.pathway.capital_tier === 'tier_1_funded'
@@ -312,13 +325,12 @@
             const playbookCta = playbookUrl
               ? `<a href="${esc(playbookUrl)}" class="btn btn-secondary btn-small">Read full playbook</a>`
               : '';
-            const gapCurrency = esc(closest.tier.currency);
             
             gapHtml = `<div class="gap-analysis">
               <p class="gap-analysis-heading">Closest pathway to your budget</p>
               <p><strong>${esc(countryName)} - ${esc(closest.pathway.name)}</strong> ${tierLabel}</p>
               ${renderConcessions(closest.pathway)}
-              <p>Requires <strong>${gapCurrency} ${esc(String(closest.tier.value))}</strong>. You are <strong>${gapCurrency} ${esc(String(gapAmount))}</strong> short.${timelineText}</p>
+              <p>Requires <strong>${gapCurrency} ${esc(String(closest.tier.value))}</strong>. You are <strong>${gapCurrency} ${gapUsdDisplay}</strong> short.${timelineText}</p>
               <div class="gap-savings-row">
                 <label for="gap-savings-input">Monthly savings (${gapCurrency}):</label>
                 <input id="gap-savings-input" type="number" min="0" step="100" placeholder="e.g. 500">

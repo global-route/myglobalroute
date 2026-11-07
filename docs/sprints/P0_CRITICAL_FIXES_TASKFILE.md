@@ -3,7 +3,7 @@
 **Created:** 2026-11-05  
 **Source:** [Product Assessment](../MYPATHWAY2GLOBAL_DEEP_WEBSITE_PRODUCT_ASSESSMENT_AND_IMPLEMENTATION_WALKTHROUGH.md) | [Implementation Blueprint](../product/MYPATHWAY2GLOBAL_PRODUCT_IMPROVEMENT_IMPLEMENTATION_BLUEPRINT.md)  
 **Priority:** P0 — Trust, eligibility and matching integrity  
-**Status:** Not started
+**Status:** In progress
 
 ---
 
@@ -81,10 +81,10 @@ These are the highest-priority corrections identified in the 5 November 2026 pro
 
 | Task | Status |
 |------|--------|
-| Select and document exchange-rate source | ⬜ |
-| Implement currency conversion in route-engine | ⬜ |
-| Preserve original amount + currency alongside normalized value | ⬜ |
-| Define stale-rate and missing-rate fallback behaviour | ⬜ |
+| Select and document exchange-rate source | ✅ Done — FX_RATES_TO_USD table, retrieved 2026-11-05 |
+| Implement currency conversion in route-engine | ✅ Done — `normalizeCurrency()` in route-engine.js |
+| Preserve original amount + currency alongside normalized value | ✅ Done — original + USD equiv shown in warnings |
+| Define stale-rate and missing-rate fallback behaviour | ✅ Done — unknown=warning only, stale=warn+block |
 | Add tests for currency pairs, stale rates, missing rates | ⬜ |
 
 **Exit criteria:** No cross-currency raw numeric comparisons.
@@ -97,9 +97,9 @@ These are the highest-priority corrections identified in the 5 November 2026 pro
 
 | Task | Status |
 |------|--------|
-| Change gap calculation to use: net income - expenses = savings capacity | ⬜ |
-| Handle zero/negative savings capacity gracefully | ⬜ |
-| Update UI copy to reflect actual calculation | ⬜ |
+| Change gap calculation to use: net income - expenses = savings capacity | ✅ Done — `monthlySavings = income - expenses` |
+| Handle zero/negative savings capacity gracefully | ✅ Done — shows budget review message |
+| Update UI copy to reflect actual calculation | ✅ Done — "savings capacity" not "income" |
 | Add tests for various income/expense scenarios | ⬜ |
 
 **Exit criteria:** Savings projections use disposable savings, not gross income.

@@ -92,8 +92,8 @@ See `docs/sprints/P0_CRITICAL_FIXES_TASKFILE.md` for full task list.
 | P0.1 | Nationality content audit — 3 working-holiday articles | 🔧 Correction notices live, owner verification pending |
 | P0.2 | Passport-aware matching logic | ✅ Done — `evaluateNationality()` in route-engine |
 | P0.3 | Structured requirement evaluation | ✅ Done — `evaluateRequirements()` in route-engine |
-| P0.4 | Currency normalization in route engine | ⬜ Not started |
-| P0.5 | Savings gap — disposable savings not gross income | ⬜ Not started |
+| P0.4 | Currency normalization in route engine | ✅ Done — `normalizeCurrency()` + FX table |
+| P0.5 | Savings gap — disposable savings not gross income | ✅ Done — income minus expenses |
 
 ---
 

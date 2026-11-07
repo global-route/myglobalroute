@@ -6,6 +6,44 @@
 
   const STALE_DAYS = 180;
 
+  // P0.4 — Currency normalization.
+  // Dated exchange rates to USD. Source: representative mid-market rates, retrieved 2026-11-05.
+  // These must be updated periodically. A stale rate (>90 days) fails closed — no affordability claim.
+  const FX_RATES_TO_USD = {
+    USD: 1,
+    EUR: 1.08,
+    GBP: 1.27,
+    AUD: 0.65,
+    CAD: 0.73,
+    NZD: 0.60,
+    SEK: 0.096,
+    NOK: 0.093,
+    DKK: 0.145,
+    CHF: 1.13,
+    JPY: 0.0067,
+    KRW: 0.00073,
+    SGD: 0.74,
+    HUF: 0.0028,
+    PLN: 0.25,
+    CZK: 0.044,
+    MUR: 0.022,
+    CVE: 0.0098,
+    NAD: 0.055
+  };
+  const FX_RETRIEVED_DATE = '2026-11-05';
+  const FX_STALE_DAYS = 90;
+
+  // Returns { usd, original, currency, stale, unknown }
+  // unknown=true means no rate available — caller must not make an affordability claim
+  function normalizeCurrency(amount, currency) {
+    const ccy = String(currency || 'USD').toUpperCase();
+    const rate = FX_RATES_TO_USD[ccy];
+    if (!rate) return { usd: null, original: amount, currency: ccy, stale: false, unknown: true };
+    const retrievedMs = new Date(FX_RETRIEVED_DATE).getTime();
+    const stale = (Date.now() - retrievedMs) > FX_STALE_DAYS * 86400000;
+    return { usd: Math.round(amount * rate), original: amount, currency: ccy, stale, unknown: false };
+  }
+
   // P0.2 — Nationality eligibility check.
   // Returns { status, reason } where status is one of:
   //   'eligible'   — passport explicitly allowed or no restriction declared
@@ -199,10 +237,24 @@
       const tier = selectFundsTier(pathway.requirements, profile);
       if (tier) {
         const tierMin = number(tier.value);
-        if (tierMin > 0 && hasValidBudget && budget < tierMin) {
-          return { score: 0, reasons: [`budget below the ${tier.currency || ''} ${tierMin} funds threshold for your family size`], eligible: false };
+        if (tierMin > 0 && hasValidBudget) {
+          // P0.4 — normalize tier currency to USD before comparing against user budget (entered as USD equivalent)
+          const norm = normalizeCurrency(tierMin, tier.currency);
+          if (norm.unknown) {
+            // Cannot safely compare — show original amount as warning, do not block
+            warnings.push(`Funds requirement: ${tier.currency || ''} ${tierMin} (currency conversion unavailable — verify manually).`);
+          } else if (norm.stale) {
+            warnings.push(`Funds requirement: ${tier.currency || ''} ${tierMin} ≈ USD ${norm.usd} (exchange rate from ${FX_RETRIEVED_DATE} — verify current rate).`);
+            if (budget < norm.usd) {
+              return { score: 0, reasons: [`budget may be below the ${tier.currency || ''} ${tierMin} funds threshold (stale rate — verify)`], eligible: false };
+            }
+          } else {
+            if (budget < norm.usd) {
+              return { score: 0, reasons: [`budget below the ${tier.currency || ''} ${tierMin} (≈ USD ${norm.usd}) funds threshold for your family size`], eligible: false };
+            }
+            score += 10; reasons.push(`funds threshold (${tier.currency || ''} ${tierMin} ≈ USD ${norm.usd}) appears compatible`);
+          }
         }
-        if (tierMin > 0 && hasValidBudget) { score += 10; reasons.push(`funds threshold (${tier.currency || ''} ${tierMin}) appears compatible`); }
       }
     }
 
@@ -261,6 +313,6 @@
   }
 
   root.GlobalRoute = root.GlobalRoute || {};
-  root.GlobalRoute.RouteEngine = { recommend, scorePathway, isStale, evaluateNationality, evaluateRequirements };
+  root.GlobalRoute.RouteEngine = { recommend, scorePathway, isStale, evaluateNationality, evaluateRequirements, normalizeCurrency };
   if (typeof module !== 'undefined' && module.exports) module.exports = root.GlobalRoute.RouteEngine;
 })(typeof window !== 'undefined' ? window : globalThis);
