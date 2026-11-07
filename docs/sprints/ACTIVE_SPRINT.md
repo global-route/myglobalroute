@@ -98,6 +98,20 @@ See `docs/sprints/P0_CRITICAL_FIXES_TASKFILE.md` for full task list.
 
 ---
 
+## P1 — Active (opened 2026-11-05)
+
+See `docs/sprints/P1_TASKFILE.md` for full task list.
+
+| ID | Task | Status |
+|---|---|---|
+| P1.1 | Country comparison: replace null fields with registry-backed metrics | ✅ Done — publishable pathways, research required, verified cost |
+| P1.2 | Calculator: honest data availability — heading + always-visible data note | ✅ Done |
+| P1.3 | Article template: fix "N min min read" double-unit bug | ✅ Done — `blog-post.njk` strips trailing "min" from readTime |
+| P1.4 | Content inventory: reconcile hardcoded counts in about.html | ✅ Done — 96 posts, 218+ evidence records, 63 publishable pathways |
+| P1.5 | Privacy/advertising: localStorage + consent + publisher ID audit | ⏳ Owner action — see P1_TASKFILE.md §P1.5 |
+
+---
+
 ## Next sprint candidates
 
 ### Priority 1 - Owner-gated (no code needed)

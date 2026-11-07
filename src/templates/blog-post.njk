@@ -128,7 +128,7 @@
           <span class="meta-sep">/</span>
           <time datetime="{{ date }}">{{ date | readableDate }}</time>
           <span class="meta-sep">/</span>
-          <span>{{ readTime or (content | readingTime) }} min read</span>
+          <span>{{ readTime | replace(" min", "") | replace("min", "") | trim or (content | readingTime) }} min read</span>
         </p>
         {% if lastFactChecked %}
         <span class="badge-audit badge-audit-verified">Official Source Verified &middot; Audited: {{ lastFactChecked | readableDate }}</span>

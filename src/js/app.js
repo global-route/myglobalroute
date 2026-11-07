@@ -253,15 +253,22 @@ const GlobalRoute = (() => {
       }
 
       if (tableBody) {
-        tableBody.innerHTML = filtered.map(country => `
-          <tr id="country-row-${escapeHtml(country.id)}">
+        tableBody.innerHTML = filtered.map(country => {
+          const allPw = (appState.pathwayCounts && Object.keys(appState.pathwayCounts).length)
+            ? appState.pathwayCounts[country.id] || 0 : null;
+          const publishable = allPw !== null ? allPw : '—';
+          const researchRequired = country.dataStatus !== 'publishable' ? 'Yes' : '—';
+          const cost = country.trueCost?.total != null
+            ? `${escapeHtml(country.trueCost.currency)} ${escapeHtml(String(country.trueCost.total))}`
+            : '<span style="color:var(--color-neutral-400)">Not yet verified</span>';
+          return `<tr id="country-row-${escapeHtml(country.id)}">
             <td>${escapeHtml(country.flag)} <a href="/pages/countries/${encodeURIComponent(country.id)}/">${escapeHtml(country.name)}</a></td>
-            <td>${country.officialRate == null ? 'Not published / not verified' : escapeHtml(country.officialRate)}</td>
-            <td>${country.africanRate == null ? 'Not published / not verified' : escapeHtml(country.africanRate)}</td>
-            <td>${country.trueCost?.total == null ? 'Not yet verified' : `${escapeHtml(country.trueCost.currency)} ${escapeHtml(country.trueCost.total)}`}</td>
+            <td>${publishable}</td>
+            <td>${researchRequired}</td>
+            <td>${cost}</td>
             <td>${escapeHtml(country.sweetSpot || country.sweetSpots?.join(', ') || '—')}</td>
-          </tr>
-        `).join('');
+          </tr>`;
+        }).join('');
       }
     };
 
@@ -328,8 +335,6 @@ const GlobalRoute = (() => {
         <a href="/pages/countries/${encodeURIComponent(country.id)}/" style="font-size:0.875rem;font-weight:600;">View country evidence &rarr;</a>
       </article>
     `).join('');
-    const dataNote = document.querySelector('#calculator-data-note');
-    if (dataNote) dataNote.style.display = countries.every(c => c.trueCost?.total == null) ? 'block' : 'none';
     container.style.display = 'block';
   };
 
