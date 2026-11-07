@@ -1,6 +1,6 @@
 # Active Sprint — Owner Actions & Ongoing Maintenance
 
-> **Updated:** 2026-10-31 | **Branch:** `main` | **Commit:** `2b77625`
+> **Updated:** 2026-11-05 | **Branch:** `main` | **Commit:** `3c9e9be`
 > **Production:** `https://mypathway2global.org.uk` (Cloudflare Workers — `globalroute`)
 > **Tests:** 19/19 suites, 180/180 passing | **CI:** Lint ✅ Quality Gate ✅ Browser Smoke ✅
 
@@ -8,7 +8,7 @@
 
 ## Current state
 
-All code phases complete (0-9, B, CP, GOIF, Vertical B, UX). No code tasks are blocked. Remaining work is owner actions and ongoing content maintenance only.
+All original code phases complete (0-9, B, CP, GOIF, Vertical B, UX). A new P0 workstream has been opened following the 5 November 2026 product assessment. See `docs/sprints/P0_CRITICAL_FIXES_TASKFILE.md`.
 
 | Metric | Value |
 |---|---|
@@ -80,6 +80,20 @@ See `docs/sprints/OWNER_ACTIONS.md` for full instructions on each item.
 | Content Platform Sprint | 2026-10-28 | — | Ireland/Spain audits, comparative playbooks, audit badges, SW, export, stale script |
 | N-P2/P3 + 4 country audits | 2026-10-28 | — | FMP extension routes, evidence trail, Austria/NZ/Japan/South Korea audits |
 | Production Readiness | 2026-10-25 | — | 23 tasks — 27-country registry, USA pathways, OG tags, 404, manifest |
+
+---
+
+## P0 — Active (opened 2026-11-05)
+
+See `docs/sprints/P0_CRITICAL_FIXES_TASKFILE.md` for full task list.
+
+| ID | Task | Status |
+|---|---|---|
+| P0.1 | Nationality content audit — 3 working-holiday articles | 🔧 Correction notices live, owner verification pending |
+| P0.2 | Passport-aware matching logic | ⬜ Not started |
+| P0.3 | Structured requirement evaluation | ⬜ Not started |
+| P0.4 | Currency normalization in route engine | ⬜ Not started |
+| P0.5 | Savings gap — disposable savings not gross income | ⬜ Not started |
 
 ---
 

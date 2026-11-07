@@ -1,80 +1,54 @@
 ---
 layout: blog-post.njk
-title: "Ireland Working Holiday Authorisation 2026: Nigerian Nationals Eligible, 12 Months, No Job Offer"
+title: "Ireland Working Holiday Authorisation 2026 — Eligibility Correction Notice"
 date: 2026-10-30
-updated: 2026-10-30
-lastFactChecked: 2026-10-30
+updated: 2026-11-05
+lastFactChecked: 2026-11-05
+eligibilityReviewStatus: "under-correction"
 author: "MyPathway2Global Editorial"
 category: "Guides"
 goal: "work"
 readTime: "10 min"
 featured: false
-excerpt: "Ireland has a Working Holiday Authorisation programme for Nigerian nationals aged 18-35. It allows 12 months of work and travel in Ireland with no job offer required. The annual quota is 100 places. Here is what the Irish Immigration Service confirms."
-keywords: "Ireland working holiday visa Nigeria 2026, Ireland WHV Africa, Ireland work holiday authorisation Nigeria, Dublin work visa no job offer Nigeria"
+excerpt: "Correction notice: An earlier version of this article claimed Nigerian nationals are eligible for the Ireland Working Holiday Authorisation with an annual quota of 100 places. This claim is under review against the official Irish Immigration Service eligible-country list. Do not rely on this article for an eligibility decision until the review is complete."
+keywords: "Ireland working holiday authorisation 2026, Ireland work holiday visa Africa, Ireland WHV eligible countries 2026"
 faqs:
-  - q: "How many places are available for Nigerian applicants?"
-    a: "The annual quota for Nigerian applicants is 100 places. This is a small quota - applications are processed on a first-come, first-served basis. Apply as soon as the application window opens each year."
+  - q: "Are Nigerian nationals eligible for the Ireland Working Holiday Authorisation?"
+    a: "This is under active review. The official Irish Immigration Service eligible-country list must be checked before relying on any eligibility claim. We will update this article once the review is complete. Check irishimmigration.ie directly."
   - q: "What is the minimum salary in Ireland?"
-    a: "Ireland's national minimum wage is EUR 13.50/hour from January 2026. Working full-time at minimum wage earns approximately EUR 2,160/month before tax. Ireland is one of the highest minimum wage countries in the EU."
+    a: "Ireland's national minimum wage is EUR 13.50/hour from January 2026. This applies to eligible visa holders only. Verify your passport eligibility before planning travel."
   - q: "Can I extend the Ireland Working Holiday Authorisation?"
-    a: "The Working Holiday Authorisation is valid for 12 months and cannot be extended. However, if you find employment in Ireland during your stay, you may be eligible to apply for a different work permit (such as the Critical Skills Employment Permit or General Employment Permit) before your authorisation expires."
+    a: "Extension rules apply only to eligible passport holders. Verify your passport eligibility at irishimmigration.ie before making any plans."
 ---
 
-<div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">
-<strong>Key figures (2026)</strong><br>
-Age limit: 18-35<br>
-Duration: 12 months<br>
-Annual quota: 100 places for Nigerian applicants<br>
-Minimum wage: EUR 13.50/hour (EUR 2,160/month full-time)<br>
-Primary source: Irish Immigration Service (irishimmigration.ie)
+<div style="background:#fff3cd;border-left:4px solid #e65100;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">
+<strong>Correction notice — 5 November 2026</strong><br>
+An earlier version of this article stated that Nigerian nationals are eligible for the Ireland Working Holiday Authorisation with an annual quota of 100 places. This claim is under active review against the official Irish Immigration Service eligible-country list at <a href="https://www.irishimmigration.ie/coming-to-work-in-ireland/what-are-my-work-visa-options/working-holiday-authorisation/" target="_blank" rel="noopener">irishimmigration.ie</a>.<br><br>
+<strong>Do not rely on this article for an eligibility decision.</strong> Check the official eligible-country list directly before making any plans. This article will be updated once the review is complete.
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
+## What to check directly
 
-Ireland's Working Holiday Authorisation is one of the most underused opportunities for young Nigerian professionals. Only 100 places per year - but most Nigerians do not know it exists. Here is what the Irish Immigration Service requires.
+The Ireland Working Holiday Authorisation is a real programme. Whether Nigerian nationals are eligible depends on the official participating-country list maintained by the Irish Immigration Service.
 
-## Requirements
+**Official source to verify:** [irishimmigration.ie — Working Holiday Authorisation](https://www.irishimmigration.ie/coming-to-work-in-ireland/what-are-my-work-visa-options/working-holiday-authorisation/)
 
-**Eligibility:**
-- Age 18-35 at time of application
-- Nigerian passport
-- No dependent children accompanying you
-- Meet health and character requirements
-- Have sufficient funds: EUR 1,500 minimum
-- Have a return ticket or sufficient funds to purchase one
+On that page, look for the list of eligible countries. If Nigeria is listed, the programme details below (age limit 18–35, 12 months, no job offer required, EUR 13.50/hour minimum wage) are accurate for the programme itself. If Nigeria is not listed, this route is not currently available to Nigerian passport holders.
 
-**Annual quota:** 100 places for Nigerian applicants. First-come, first-served.
+## Programme details (pending eligibility confirmation)
 
-**Primary source:** `https://www.irishimmigration.ie/coming-to-work-in-ireland/what-are-my-work-visa-options/working-holiday-authorisation/`
+The following information describes the Ireland Working Holiday Authorisation programme. It applies only to passport holders of eligible countries.
 
-## What you can do on the authorisation
+**Age limit:** 18–35
+**Duration:** 12 months (not extendable)
+**Work:** Any job, any employer, any industry
+**Study:** Up to 3 months
+**Minimum wage:** EUR 13.50/hour from January 2026 (approximately EUR 2,160/month full-time)
+**Minimum funds required:** EUR 1,500
+**Application fee:** EUR 100
 
-**Work:** Any job, any employer, any industry. No restriction on type of work.
-
-**Study:** Up to 3 months of study.
-
-**Travel:** Travel freely in and out of Ireland during the 12-month validity.
-
-**Earn:** Ireland's minimum wage is EUR 13.50/hour from January 2026. Working full-time earns approximately EUR 2,160/month before tax - one of the highest minimum wages in the EU.
-
-## The pathway to longer-term work
-
-The Working Holiday Authorisation is 12 months. But it can be a stepping stone:
-
-**Critical Skills Employment Permit:** If you find a job in a critical skills occupation (IT, healthcare, engineering, finance) paying EUR 38,000+/year, you can apply for a Critical Skills permit before your authorisation expires. This leads to Stamp 4 (permanent residence eligibility) after 2 years.
-
-**General Employment Permit:** For jobs paying EUR 34,000+/year in non-critical skills occupations.
-
-## Cost breakdown
-
-| Item | Approximate cost |
-|---|---|
-| Application fee | EUR 100 (NGN 150,000) |
-| Return flight Lagos-Dublin | NGN 600,000 - 1,200,000 |
-| Minimum funds (required) | EUR 1,500 (NGN 2,250,000) |
-| Health insurance (12 months) | EUR 300 - 600 (NGN 450,000 - 900,000) |
-| **Total initial outlay** | **Approximately NGN 3.5M - 4.5M** |
+**Pathway to longer-term work:** If you find a job in a Critical Skills occupation (IT, healthcare, engineering, finance) paying EUR 38,000+/year, you may be eligible to apply for a Critical Skills Employment Permit before your authorisation expires.
 
 ## Evidence note
 
-All figures sourced from the Irish Immigration Service at `https://www.irishimmigration.ie/`, retrieved October 2026. Minimum wage and quota figures are subject to annual change. Verify current requirements before applying.
+This article is under correction. The programme details above are sourced from the Irish Immigration Service at `https://www.irishimmigration.ie/`, retrieved October 2026. The nationality eligibility claim is being revalidated against the official participating-country list. This article will be updated with a confirmed eligibility status and the exact official source passage once the review is complete.

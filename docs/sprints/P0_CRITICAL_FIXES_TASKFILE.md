@@ -21,13 +21,20 @@ These are the highest-priority corrections identified in the 5 November 2026 pro
 
 | Task | Status |
 |------|--------|
-| Locate the 3 named working-holiday articles | ⬜ |
-| Retrieve official participating-country/passport lists for each programme | ⬜ |
-| Verify Nigerian eligibility claim against official rules | ⬜ |
-| Temporarily unpublish or add correction notice if claim unsupported | ⬜ |
+| Locate the 3 named working-holiday articles | ✅ Found: `content/blog/guides/work/` |
+| Retrieve official participating-country/passport lists for each programme | ⏳ Owner action — verify at official sources below |
+| Verify Nigerian eligibility claim against official rules | ⏳ Owner action — see official sources below |
+| Add correction notice to all 3 articles | ✅ Done — commit `P0.1-corrections` |
 | Audit entire 30 October publishing batch for similar issues | ⬜ |
 | Search wider content for unsupported nationality claims | ⬜ |
 | Document review outcome for each article | ⬜ |
+
+**Official sources to verify (owner action):**
+- AU: `https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462` — check eligible countries list
+- IE: `https://www.irishimmigration.ie/coming-to-work-in-ireland/what-are-my-work-visa-options/working-holiday-authorisation/` — check eligible countries list
+- NZ: `https://www.immigration.govt.nz/new-zealand-visas/visas/visa/working-holiday-visa` — check eligible countries list
+
+**Once verified:** Update each article's `eligibilityReviewStatus` from `under-correction` to either `verified-eligible` or `verified-ineligible` and restore or remove the correction banner accordingly.
 
 **Exit criteria:** No unsupported passport-eligibility claim remains published.
 

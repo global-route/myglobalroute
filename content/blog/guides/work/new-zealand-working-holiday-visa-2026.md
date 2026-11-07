@@ -1,83 +1,54 @@
 ---
 layout: blog-post.njk
-title: "New Zealand Working Holiday Visa 2026: Age 18-30, 12 Months, No Job Offer Required"
+title: "New Zealand Working Holiday Visa 2026 — Eligibility Correction Notice"
 date: 2026-10-30
-updated: 2026-10-30
-lastFactChecked: 2026-10-30
+updated: 2026-11-05
+lastFactChecked: 2026-11-05
+eligibilityReviewStatus: "under-correction"
 author: "MyPathway2Global Editorial"
 category: "Guides"
 goal: "work"
 readTime: "10 min"
 featured: false
-excerpt: "New Zealand's Working Holiday Visa allows people aged 18-30 to live and work in New Zealand for 12 months with no job offer required. Nigerian nationals are eligible. The application fee is NZD 280. Here is what Immigration New Zealand actually requires."
-keywords: "New Zealand working holiday visa Nigeria 2026, NZ WHV Africa, New Zealand work holiday visa Africa 2026, New Zealand visa no job offer Nigeria"
+excerpt: "Correction notice: An earlier version of this article claimed Nigerian nationals are eligible for the New Zealand Working Holiday Visa with a limited annual quota. This claim is under review against the official Immigration New Zealand participating-country list. Do not rely on this article for an eligibility decision until the review is complete."
+keywords: "New Zealand working holiday visa 2026, NZ WHV eligible countries, New Zealand work holiday visa Africa 2026"
 faqs:
   - q: "Are Nigerian nationals eligible for the New Zealand Working Holiday Visa?"
-    a: "Yes. New Zealand has a Working Holiday Scheme with Nigeria. Nigerian nationals aged 18-30 can apply. The annual quota for Nigerian applicants is limited - apply early in the quota year (which typically opens in July)."
+    a: "This is under active review. The official Immigration New Zealand participating-country list must be checked before relying on any eligibility claim. We will update this article once the review is complete. Check immigration.govt.nz directly."
   - q: "What is the annual quota for Nigerian applicants?"
-    a: "New Zealand sets an annual quota for Working Holiday visas from each country. The quota for Nigerian applicants is limited. Once the quota is filled, no more applications are accepted until the next quota year. Apply as early as possible after the quota opens."
+    a: "Quota information is only relevant for eligible passport holders. Verify your passport eligibility at immigration.govt.nz before making any plans."
   - q: "Can I extend the New Zealand Working Holiday Visa?"
-    a: "The standard Working Holiday Visa is 12 months and cannot be extended. However, if you complete 3 months of work in the horticulture or viticulture industry in a recognised seasonal employer region, you may be eligible for a second 12-month Working Holiday Visa."
+    a: "Extension rules apply only to eligible passport holders. Verify your passport eligibility at immigration.govt.nz before making any plans."
 ---
 
-<div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">
-<strong>Key figures (2026)</strong><br>
-Age limit: 18-30<br>
-Duration: 12 months<br>
-Application fee: NZD 280 (approximately USD 170 / NGN 255,000)<br>
-Minimum funds: NZD 4,200 (approximately USD 2,550)<br>
-Annual quota: limited - apply early<br>
-Primary source: Immigration New Zealand (immigration.govt.nz)
+<div style="background:#fff3cd;border-left:4px solid #e65100;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">
+<strong>Correction notice — 5 November 2026</strong><br>
+An earlier version of this article stated that Nigerian nationals are eligible for the New Zealand Working Holiday Visa with a limited annual quota. This claim is under active review against the official Immigration New Zealand participating-country list at <a href="https://www.immigration.govt.nz/new-zealand-visas/visas/visa/working-holiday-visa" target="_blank" rel="noopener">immigration.govt.nz</a>.<br><br>
+<strong>Do not rely on this article for an eligibility decision.</strong> Check the official participating-country list directly before making any plans. This article will be updated once the review is complete.
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
+## What to check directly
 
-New Zealand's Working Holiday Visa is one of the most straightforward work visas available to young African professionals. No job offer. No employer sponsorship. No points test. Here is what Immigration New Zealand requires.
+New Zealand's Working Holiday Visa is a real programme. Whether Nigerian nationals are eligible depends on the official participating-country list maintained by Immigration New Zealand.
 
-## Requirements
+**Official source to verify:** [immigration.govt.nz — Working Holiday Visa](https://www.immigration.govt.nz/new-zealand-visas/visas/visa/working-holiday-visa)
 
-**Eligibility:**
-- Age 18-30 at time of application
-- Nigerian passport
-- No dependent children accompanying you
-- Meet health and character requirements
-- Have sufficient funds: NZD 4,200 (approximately USD 2,550)
-- Have a return ticket or sufficient funds to purchase one
+On that page, look for the list of eligible countries. If Nigeria is listed, the programme details below apply. If Nigeria is not listed, this route is not currently available to Nigerian passport holders.
 
-**Application fee:** NZD 280 (approximately USD 170 or NGN 255,000)
+## Programme details (pending eligibility confirmation)
 
-**Primary source:** `https://www.immigration.govt.nz/new-zealand-visas/visas/visa/working-holiday-visa`
+The following information describes the New Zealand Working Holiday Visa programme. It applies only to passport holders of eligible countries.
 
-## The quota - apply early
+**Age limit:** 18–30
+**Duration:** 12 months
+**Work:** Any job, any employer, any industry
+**Study:** Up to 3 months
+**Application fee:** NZD 280 (approximately USD 170)
+**Minimum funds:** NZD 4,200 (approximately USD 2,550)
+**Annual quota:** Limited — applies per eligible country
 
-New Zealand sets an annual quota for Working Holiday visas from each country. For Nigerian applicants, the quota is limited. The quota year typically opens in July.
-
-**What this means:** Once the quota is filled, no more applications are accepted until the next quota year. If you want a New Zealand Working Holiday Visa, apply as soon as the quota opens - do not wait.
-
-## What you can do on the visa
-
-**Work:** Any job, any employer, any industry. No restriction on type of work.
-
-**Study:** Up to 3 months of study.
-
-**Travel:** Travel freely in and out of New Zealand during the 12-month validity.
-
-**Earn:** New Zealand's minimum wage is NZD 23.15/hour (2026). Working full-time at minimum wage earns approximately NZD 3,700/month before tax.
-
-## Extending to 24 months
-
-Complete 3 months of work in the horticulture or viticulture industry in a recognised seasonal employer region during your first visa. This makes you eligible for a second 12-month Working Holiday Visa.
-
-## Cost breakdown
-
-| Item | Approximate cost |
-|---|---|
-| Visa application fee | NZD 280 (NGN 255,000) |
-| Return flight Lagos-Auckland | NGN 1,200,000 - 2,000,000 |
-| Minimum funds (required) | NZD 4,200 (NGN 3,822,000) |
-| Health insurance (12 months) | NZD 400 - 800 (NGN 364,000 - 728,000) |
-| **Total initial outlay** | **Approximately NGN 5.6M - 7M** |
+**Extending to 24 months:** Complete 3 months of work in horticulture or viticulture in a recognised seasonal employer region during your first visa.
 
 ## Evidence note
 
-All figures sourced from Immigration New Zealand at `https://www.immigration.govt.nz/`, retrieved October 2026. Minimum wage and quota figures are subject to annual change. Verify current requirements before applying.
+This article is under correction. The programme details above are sourced from Immigration New Zealand at `https://www.immigration.govt.nz/`, retrieved October 2026. The nationality eligibility claim is being revalidated against the official participating-country list. This article will be updated with a confirmed eligibility status and the exact official source passage once the review is complete.
