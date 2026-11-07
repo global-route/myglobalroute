@@ -1,8 +1,8 @@
 # Blog Content Inventory & Pathway Reference
 
-> **Generated:** 2026-10-30 | **Posts:** 96 | **Pathways covered:** 63 publishable across 30 countries
+> **Generated:** 2026-11-05 | **Posts:** 96 | **Pathways covered:** 63 publishable across 30 countries
 > Use this document to plan new posts, identify gaps, and maintain consistency.
-> Note: The detailed per-post sections below enumerate the first 27 country audits and original playbooks/guides. Posts added in the content sprint (Gulf/Africa audits, CRS/tax series, working holiday, scholarships, business guides) are registered in `src/data/blog-posts.json` and counted in the summary table but not individually listed here.
+> Note: The detailed per-post sections below enumerate the first 27 country audits and original playbooks/guides. Posts added in the content sprint (Gulf/Africa audits, CRS/tax series, working holiday, scholarships, business guides) are registered in `src/data/blog-posts.json` and counted in the summary table but not individually listed here. Three working-holiday articles (AU, IE, NZ) are under active correction — see P0.1 in `docs/sprints/P0_CRITICAL_FIXES_TASKFILE.md`.
 
 ---
 
@@ -15,9 +15,19 @@
 | Professional Playbooks | 9 | Canada, Germany, Germany vs Canada, AU DAMA, PT D3, MU, CV, NA, Saskatchewan PNP |
 | Business Playbooks | 3 | US LLC, UK Ltd, Mauritius GBL |
 | Case Studies | 2 | Canada (success), Multi-country (rejection) |
-| Guides | 35 | Work visas (continent series), nomad guides, Schengen, CRS/tax series, working holiday, AfCFTA, diaspora |
+| Guides | 35 | Work visas (continent series), nomad guides, Schengen, CRS/tax series, working holiday (3 under correction), AfCFTA, diaspora |
 | Policy Updates | 1 | Canada |
 | **Total** | **96** | **30 countries, all major migration topics covered** |
+
+### Working-holiday articles under correction (P0.1)
+
+| Article | File | Status |
+|---------|------|--------|
+| Australia Working Holiday Visa 2026 | `content/blog/guides/work/australia-working-holiday-visa-2026.md` | `eligibilityReviewStatus: under-correction` — correction banner live |
+| Ireland Working Holiday Authorisation 2026 | `content/blog/guides/work/ireland-working-holiday-authorisation-2026.md` | `eligibilityReviewStatus: under-correction` — correction banner live |
+| New Zealand Working Holiday Visa 2026 | `content/blog/guides/work/new-zealand-working-holiday-visa-2026.md` | `eligibilityReviewStatus: under-correction` — correction banner live |
+
+Owner must verify Nigerian eligibility at official sources and update `eligibilityReviewStatus`. See `docs/sprints/OWNER_ACTIONS.md §7`.
 
 ## Content gaps
 

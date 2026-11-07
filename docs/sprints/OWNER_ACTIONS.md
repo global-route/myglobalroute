@@ -1,6 +1,6 @@
 # Owner Actions — MyPathway2Global
 
-> **Updated:** 2026-10-30 | Nothing here is blocked on code. All items require you.
+> **Updated:** 2026-11-05 | Nothing here is blocked on code. All items require you.
 
 ---
 
@@ -14,6 +14,10 @@
 | 4 | ARIA audit | 30 min | Accessibility gate |
 | 5 | Country source sign-off (30 entries) | 1-2 hrs | `dataset.asOf` update |
 | 6 | Legal review | Solicitor | Trust gate for affiliate/lead revenue |
+| 7 | Verify AU/IE/NZ WHV articles at official sources | 1 hr | P0.1 exit gate |
+| 8 | Run P0 test suite | 5 min | P0 test gate |
+| 9 | P1.5 privacy/localStorage audit | 2-3 hrs | P1 exit gate |
+| 10 | Generate post counts from Eleventy collection | 1 hr | Prevents count drift |
 | — | Favicon PNG | ✅ Done | Files live in `public/` root |
 | — | Quarterly audit routine | ✅ Done | GitHub Actions workflow live |
 | — | AdSense | ✅ Done | Publisher ID live, Google policy review pending |
@@ -183,3 +187,81 @@ Replace `VIDEO_ID` with the 11-character ID from the YouTube URL (e.g. `dQw4w9Wg
 ```bash
 npm run build && npx wrangler deploy
 ```
+
+---
+
+## 7. Verify AU/IE/NZ working-holiday articles — P0.1 exit gate
+
+Three working-holiday articles have correction banners live. The banners will remain until you verify the Nigerian eligibility claim at each official source and update the frontmatter.
+
+**What to do for each article:**
+1. Open the official source URL below
+2. Find the participating-country or eligible-passport list
+3. Check whether Nigeria (NG) is listed
+4. Open the article file and update `eligibilityReviewStatus`:
+   - If Nigeria IS listed: set `eligibilityReviewStatus: verified-eligible` and remove the correction banner
+   - If Nigeria is NOT listed: set `eligibilityReviewStatus: verified-ineligible` and update the banner to a permanent ineligibility notice
+
+**Articles and official sources:**
+
+| Article | File | Official source |
+|---------|------|----------------|
+| Australia WHV (subclass 462) | `content/blog/guides/work/australia-working-holiday-visa-2026.md` | `https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462` |
+| Ireland Working Holiday Authorisation | `content/blog/guides/work/ireland-working-holiday-authorisation-2026.md` | `https://www.irishimmigration.ie/coming-to-work-in-ireland/what-are-my-work-visa-options/working-holiday-authorisation/` |
+| New Zealand Working Holiday Visa | `content/blog/guides/work/new-zealand-working-holiday-visa-2026.md` | `https://www.immigration.govt.nz/new-zealand-visas/visas/visa/working-holiday-visa` |
+
+**After updating all three:**
+```bash
+npm run build && npx wrangler deploy
+```
+
+---
+
+## 8. Run P0 test suite — P0 test gate
+
+34 new test cases were written for P0.2 (evaluateNationality), P0.3 (evaluateRequirements) and P0.4 (normalizeCurrency). They have not been run because npm/node is not accessible in the code execution environment.
+
+**What to do:**
+```bash
+cd c:\github\mypathway\myglobalroute
+npm test -- --testPathPattern=route-engine
+```
+
+**Expected result:** All tests pass. The suite should show 34 new tests in addition to the existing route-engine tests.
+
+**If any tests fail:** Share the failure output — I will fix the implementation.
+
+---
+
+## 9. P1.5 privacy/localStorage audit — P1 exit gate
+
+See `docs/sprints/P1_TASKFILE.md §P1.5` for the full checklist. Summary:
+
+1. Audit `analytics.js` and `monetization.js` for all localStorage/sessionStorage writes
+2. Confirm `mp2g_consent` key name, expiry and withdrawal behaviour in a real browser
+3. Verify AdSense publisher ID `ca-pub-8077583188666813` matches your approved AdSense account
+4. Confirm `public/ads.txt` entry matches: `google.com, pub-8077583188666813, DIRECT, f08c47fec0942fa0`
+5. Verify Sabilytics site ID `atsngkb78nmt` is documented in `src/pages/privacy.html`
+6. Update privacy notice to list all localStorage keys, their purposes and expiry
+7. For EEA/UK/CH traffic: check current Google CMP/IAB TCF requirements before enabling personalised ads
+
+---
+
+## 10. Generate post counts from Eleventy collection — prevents count drift
+
+`src/pages/about.html` currently has hardcoded post counts. These will drift again as new posts are added.
+
+**What to do:** Add a global data file that counts blog posts automatically.
+
+Create `src/data/siteStats.js`:
+```js
+const { globSync } = require('glob');
+module.exports = function() {
+  const posts = globSync('content/blog/**/*.md').length;
+  return { blogPostCount: posts };
+};
+```
+
+Then in `about.html` replace the hardcoded number with `{{ siteStats.blogPostCount }}`.
+
+Share the result — I will wire it up in the template.
