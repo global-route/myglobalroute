@@ -3,7 +3,7 @@
 **Created:** 2026-11-05  
 **Source:** [Product Assessment](../MYPATHWAY2GLOBAL_DEEP_WEBSITE_PRODUCT_ASSESSMENT_AND_IMPLEMENTATION_WALKTHROUGH.md) | [Implementation Blueprint](../product/MYPATHWAY2GLOBAL_PRODUCT_IMPROVEMENT_IMPLEMENTATION_BLUEPRINT.md)  
 **Priority:** P0 — Trust, eligibility and matching integrity  
-**Status:** In progress
+**Status:** P0 code complete — tests added — owner verification pending
 
 ---
 
@@ -50,7 +50,7 @@ These are the highest-priority corrections identified in the 5 November 2026 pro
 | Pass passportCountry through Find MyPathway matching | ✅ Done — `evaluateNationality()` reads `profile.passportCountry` |
 | Pass passportCountry through Visa Wizard matching | ⏳ Visa Wizard uses same engine — will apply automatically |
 | Implement eligibility statuses: available / not available / conditional / unknown | ✅ Done — all 4 statuses implemented |
-| Add regression tests for Nigerian passport + various routes | ⬜ |
+| Add regression tests for Nigerian passport + various routes | ✅ Done — `P0.2 evaluateNationality` suite in route-engine.test.js |
 | Ensure unknown nationality ≠ eligible | ✅ Done — unknown shows warning, not a pass |
 
 **Exit criteria:** Passport-specific decisions are tested and explainable.
@@ -69,7 +69,7 @@ These are the highest-priority corrections identified in the 5 November 2026 pro
 | Define mandatory vs conditional vs advisory semantics | ✅ Done — blockers vs warnings |
 | Ensure unknown mandatory requirements cannot pass | ✅ Done — unknown = warning not pass |
 | Update result cards to show blockers and unknowns | ✅ Done — `renderWarnings()` + `renderNationalityBadge()` |
-| Add unit tests for each requirement type | ⬜ |
+| Add unit tests for each requirement type | ✅ Done — `P0.3 evaluateRequirements` suite in route-engine.test.js |
 
 **Exit criteria:** Unknown and failed mandatory requirements cannot produce a positive match.
 
@@ -85,7 +85,7 @@ These are the highest-priority corrections identified in the 5 November 2026 pro
 | Implement currency conversion in route-engine | ✅ Done — `normalizeCurrency()` in route-engine.js |
 | Preserve original amount + currency alongside normalized value | ✅ Done — original + USD equiv shown in warnings |
 | Define stale-rate and missing-rate fallback behaviour | ✅ Done — unknown=warning only, stale=warn+block |
-| Add tests for currency pairs, stale rates, missing rates | ⬜ |
+| Add tests for currency pairs, stale rates, missing rates | ✅ Done — `P0.4 normalizeCurrency` suite in route-engine.test.js |
 
 **Exit criteria:** No cross-currency raw numeric comparisons.
 
@@ -100,7 +100,7 @@ These are the highest-priority corrections identified in the 5 November 2026 pro
 | Change gap calculation to use: net income - expenses = savings capacity | ✅ Done — `monthlySavings = income - expenses` |
 | Handle zero/negative savings capacity gracefully | ✅ Done — shows budget review message |
 | Update UI copy to reflect actual calculation | ✅ Done — "savings capacity" not "income" |
-| Add tests for various income/expense scenarios | ⬜ |
+| Add tests for various income/expense scenarios | ✅ Done — covered in P0.4 scorePathway integration tests |
 
 **Exit criteria:** Savings projections use disposable savings, not gross income.
 

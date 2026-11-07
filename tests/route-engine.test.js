@@ -302,3 +302,300 @@ describe('GOIF gap card fields', () => {
     expect(result.score).toBeGreaterThan(0);
   });
 });
+
+const { evaluateNationality, evaluateRequirements, normalizeCurrency } = require('../src/js/route-engine');
+
+// ── P0.2 — evaluateNationality ────────────────────────────────────────────────
+
+describe('P0.2 evaluateNationality', () => {
+  const allowlistPathway = {
+    nationalityEligibility: {
+      scope: 'allowlist',
+      eligiblePassports: ['CA', 'AU', 'GB'],
+      conditions: [{ passport: 'AU', note: 'Government support letter required.' }]
+    }
+  };
+  const blocklistPathway = {
+    nationalityEligibility: {
+      scope: 'blocklist',
+      excludedPassports: ['RU']
+    }
+  };
+  const openPathway = {
+    nationalityEligibility: { scope: 'all' }
+  };
+  const noNationalityPathway = {};
+
+  test('returns eligible for passport on allowlist with no condition', () => {
+    const r = evaluateNationality(allowlistPathway, 'CA');
+    expect(r.status).toBe('eligible');
+  });
+
+  test('returns conditional for passport on allowlist with a condition', () => {
+    const r = evaluateNationality(allowlistPathway, 'AU');
+    expect(r.status).toBe('conditional');
+    expect(r.reason).toMatch(/Government support letter/);
+  });
+
+  test('returns ineligible for passport not on allowlist', () => {
+    const r = evaluateNationality(allowlistPathway, 'NG');
+    expect(r.status).toBe('ineligible');
+    expect(r.reason).toMatch(/NG passport is not on the eligible-country list/);
+  });
+
+  test('returns ineligible for passport on blocklist', () => {
+    const r = evaluateNationality(blocklistPathway, 'RU');
+    expect(r.status).toBe('ineligible');
+    expect(r.reason).toMatch(/explicitly excluded/);
+  });
+
+  test('returns eligible for passport not on blocklist', () => {
+    const r = evaluateNationality(blocklistPathway, 'NG');
+    expect(r.status).toBe('eligible');
+  });
+
+  test('returns eligible for open scope', () => {
+    const r = evaluateNationality(openPathway, 'NG');
+    expect(r.status).toBe('eligible');
+  });
+
+  test('returns unknown when no nationalityEligibility declared', () => {
+    const r = evaluateNationality(noNationalityPathway, 'NG');
+    expect(r.status).toBe('unknown');
+  });
+
+  test('returns unknown when no passport provided', () => {
+    const r = evaluateNationality(allowlistPathway, '');
+    expect(r.status).toBe('unknown');
+  });
+
+  test('passport matching is case-insensitive', () => {
+    expect(evaluateNationality(allowlistPathway, 'ca').status).toBe('eligible');
+    expect(evaluateNationality(allowlistPathway, 'ng').status).toBe('ineligible');
+  });
+
+  test('ineligible passport blocks scorePathway', () => {
+    const pathway = {
+      type: 'work', status: 'publishable',
+      evidenceIds: ['ev-1'], sourceUrl: 'https://example.gov/work',
+      nationalityEligibility: { scope: 'allowlist', eligiblePassports: ['CA'] }
+    };
+    const result = scorePathway(pathway, { id: 'CA', dataStatus: 'publishable' }, { goal: 'work', passportCountry: 'NG' });
+    expect(result.eligible).toBe(false);
+    expect(result.reasons[0]).toMatch(/not on the eligible-country list/);
+  });
+
+  test('unknown nationality does not block scorePathway but sets nationalityStatus', () => {
+    const pathway = {
+      type: 'work', status: 'publishable',
+      evidenceIds: ['ev-1'], sourceUrl: 'https://example.gov/work'
+    };
+    const result = scorePathway(pathway, { id: 'GB', dataStatus: 'publishable' }, { goal: 'work', passportCountry: 'NG' });
+    expect(result.eligible).toBe(true);
+    expect(result.nationalityStatus).toBe('unknown');
+  });
+});
+
+// ── P0.3 — evaluateRequirements ──────────────────────────────────────────────
+
+describe('P0.3 evaluateRequirements', () => {
+  const basePathway = (reqs) => ({ requirements: reqs });
+
+  test('job_offer=no is a blocker', () => {
+    const { blockers } = evaluateRequirements(
+      basePathway([{ field: 'job_offer', kind: 'boolean', value: true }]),
+      { hasJobOffer: 'no' }
+    );
+    expect(blockers.length).toBe(1);
+    expect(blockers[0]).toMatch(/job offer is required/);
+  });
+
+  test('job_offer unanswered is a warning not a blocker', () => {
+    const { blockers, warnings } = evaluateRequirements(
+      basePathway([{ field: 'job_offer', kind: 'boolean', value: true }]),
+      {}
+    );
+    expect(blockers.length).toBe(0);
+    expect(warnings.length).toBe(1);
+    expect(warnings[0]).toMatch(/job offer/);
+  });
+
+  test('admission_offer=no is a blocker', () => {
+    const { blockers } = evaluateRequirements(
+      basePathway([{ field: 'admission_offer', kind: 'boolean', value: true }]),
+      { hasAdmissionOffer: 'no' }
+    );
+    expect(blockers.length).toBe(1);
+  });
+
+  test('sponsorship=no is a blocker', () => {
+    const { blockers } = evaluateRequirements(
+      basePathway([{ field: 'sponsorship', kind: 'boolean', value: true }]),
+      { hasSponsorship: 'no' }
+    );
+    expect(blockers.length).toBe(1);
+  });
+
+  test('age below minimum is a blocker', () => {
+    const { blockers } = evaluateRequirements(
+      basePathway([{ field: 'minimum_age', kind: 'number', value: 18 }]),
+      { age: 17 }
+    );
+    expect(blockers.length).toBe(1);
+    expect(blockers[0]).toMatch(/Minimum age/);
+  });
+
+  test('age at minimum is not a blocker', () => {
+    const { blockers } = evaluateRequirements(
+      basePathway([{ field: 'minimum_age', kind: 'number', value: 18 }]),
+      { age: 18 }
+    );
+    expect(blockers.length).toBe(0);
+  });
+
+  test('experience below minimum is a blocker', () => {
+    const { blockers } = evaluateRequirements(
+      basePathway([{ field: 'minimum_experience_years', kind: 'number', value: 3 }]),
+      { experienceYears: 2 }
+    );
+    expect(blockers.length).toBe(1);
+  });
+
+  test('annual salary below minimum is a blocker', () => {
+    const { blockers } = evaluateRequirements(
+      basePathway([{ field: 'minimum_annual_salary', kind: 'money', value: 30000, currency: 'GBP' }]),
+      { monthlyIncome: 2000 } // 24000/yr < 30000
+    );
+    expect(blockers.length).toBe(1);
+    expect(blockers[0]).toMatch(/Salary requirement/);
+  });
+
+  test('annual salary at minimum is not a blocker', () => {
+    const { blockers } = evaluateRequirements(
+      basePathway([{ field: 'minimum_annual_salary', kind: 'money', value: 30000, currency: 'GBP' }]),
+      { monthlyIncome: 2500 } // 30000/yr = 30000
+    );
+    expect(blockers.length).toBe(0);
+  });
+
+  test('points below minimum is a blocker', () => {
+    const { blockers } = evaluateRequirements(
+      basePathway([{ field: 'minimum_points_score', kind: 'number', value: 67 }]),
+      { pointsScore: 60 }
+    );
+    expect(blockers.length).toBe(1);
+  });
+
+  test('unanswered points requirement is a warning not a blocker', () => {
+    const { blockers, warnings } = evaluateRequirements(
+      basePathway([{ field: 'minimum_points_score', kind: 'number', value: 67 }]),
+      {}
+    );
+    expect(blockers.length).toBe(0);
+    expect(warnings.length).toBe(1);
+  });
+
+  test('minimum_funds is skipped by evaluateRequirements', () => {
+    const { blockers, warnings } = evaluateRequirements(
+      basePathway([{ field: 'minimum_funds', kind: 'money', value: 10000, currency: 'EUR' }]),
+      {}
+    );
+    expect(blockers.length).toBe(0);
+    expect(warnings.length).toBe(0);
+  });
+
+  test('empty requirements returns no blockers or warnings', () => {
+    const { blockers, warnings } = evaluateRequirements(basePathway([]), {});
+    expect(blockers.length).toBe(0);
+    expect(warnings.length).toBe(0);
+  });
+
+  test('blocker from requirements blocks scorePathway', () => {
+    const pathway = {
+      type: 'work', status: 'publishable',
+      evidenceIds: ['ev-1'], sourceUrl: 'https://example.gov/work',
+      requirements: [{ field: 'job_offer', kind: 'boolean', value: true }]
+    };
+    const result = scorePathway(pathway, { id: 'GB', dataStatus: 'publishable' }, { goal: 'work', hasJobOffer: 'no' });
+    expect(result.eligible).toBe(false);
+    expect(result.reasons[0]).toMatch(/job offer is required/);
+  });
+});
+
+// ── P0.4 — normalizeCurrency ─────────────────────────────────────────────────
+
+describe('P0.4 normalizeCurrency', () => {
+  test('USD to USD returns same amount', () => {
+    const r = normalizeCurrency(1000, 'USD');
+    expect(r.usd).toBe(1000);
+    expect(r.unknown).toBe(false);
+    expect(r.currency).toBe('USD');
+  });
+
+  test('EUR converts to USD', () => {
+    const r = normalizeCurrency(1000, 'EUR');
+    expect(r.usd).toBe(1080);
+    expect(r.unknown).toBe(false);
+    expect(r.original).toBe(1000);
+    expect(r.currency).toBe('EUR');
+  });
+
+  test('GBP converts to USD', () => {
+    const r = normalizeCurrency(1000, 'GBP');
+    expect(r.usd).toBe(1270);
+    expect(r.unknown).toBe(false);
+  });
+
+  test('unknown currency returns unknown=true and null usd', () => {
+    const r = normalizeCurrency(1000, 'XYZ');
+    expect(r.unknown).toBe(true);
+    expect(r.usd).toBeNull();
+    expect(r.original).toBe(1000);
+  });
+
+  test('missing currency defaults to USD', () => {
+    const r = normalizeCurrency(500, undefined);
+    expect(r.usd).toBe(500);
+    expect(r.unknown).toBe(false);
+  });
+
+  test('currency matching is case-insensitive', () => {
+    const r = normalizeCurrency(1000, 'eur');
+    expect(r.usd).toBe(1080);
+    expect(r.unknown).toBe(false);
+  });
+
+  test('EUR funds threshold blocks USD budget below normalized value', () => {
+    const pathway = {
+      type: 'study', status: 'publishable',
+      evidenceIds: ['ev-1'], sourceUrl: 'https://example.gov/study',
+      requirements: [{ field: 'minimum_funds', kind: 'money', value: 10000, currency: 'EUR' }]
+    };
+    // EUR 10000 = USD 10800 — budget of USD 9000 should block
+    const result = scorePathway(pathway, { id: 'DE', dataStatus: 'publishable' }, { goal: 'study', budget: '9000' });
+    expect(result.eligible).toBe(false);
+    expect(result.reasons[0]).toMatch(/EUR 10000/);
+  });
+
+  test('EUR funds threshold passes USD budget above normalized value', () => {
+    const pathway = {
+      type: 'study', status: 'publishable',
+      evidenceIds: ['ev-1'], sourceUrl: 'https://example.gov/study',
+      requirements: [{ field: 'minimum_funds', kind: 'money', value: 10000, currency: 'EUR' }]
+    };
+    // EUR 10000 = USD 10800 — budget of USD 11000 should pass
+    const result = scorePathway(pathway, { id: 'DE', dataStatus: 'publishable' }, { goal: 'study', budget: '11000' });
+    expect(result.eligible).toBe(true);
+  });
+
+  test('unknown currency does not block — produces warning instead', () => {
+    const pathway = {
+      type: 'study', status: 'publishable',
+      evidenceIds: ['ev-1'], sourceUrl: 'https://example.gov/study',
+      requirements: [{ field: 'minimum_funds', kind: 'money', value: 10000, currency: 'XYZ' }]
+    };
+    const result = scorePathway(pathway, { id: 'XX', dataStatus: 'publishable' }, { goal: 'study', budget: '5000' });
+    expect(result.eligible).toBe(true);
+    expect(result.warnings.some(w => w.match(/currency conversion unavailable/))).toBe(true);
+  });
+});
