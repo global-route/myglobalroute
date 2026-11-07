@@ -3,7 +3,9 @@
 **Created:** 2026-11-05  
 **Source:** [Product Assessment](../MYPATHWAY2GLOBAL_DEEP_WEBSITE_PRODUCT_ASSESSMENT_AND_IMPLEMENTATION_WALKTHROUGH.md) | [Implementation Blueprint](../product/MYPATHWAY2GLOBAL_PRODUCT_IMPROVEMENT_IMPLEMENTATION_BLUEPRINT.md)  
 **Priority:** P0 — Trust, eligibility and matching integrity  
-**Status:** P0 code complete — tests added — owner verification pending
+**Status:** P0 code complete — tests written — test run skipped (dependencies not installed in execution environment)
+
+> **Owner action:** Run `npm test -- --testPathPattern=route-engine` to verify 34 new P0 test cases pass before marking P0 exit gate complete.
 
 ---
 
@@ -114,7 +116,7 @@ Before proceeding to P1:
 - [ ] Hard requirements cannot be bypassed by scoring
 - [ ] Currency comparisons are safe
 - [ ] Unknowns remain visible in results
-- [ ] All P0 tests pass
+- [ ] All P0 tests pass — run `npm test -- --testPathPattern=route-engine` (skipped: dependencies not installed in execution environment)
 
 ---
 

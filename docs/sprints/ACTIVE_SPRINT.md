@@ -94,7 +94,7 @@ See `docs/sprints/P0_CRITICAL_FIXES_TASKFILE.md` for full task list.
 | P0.3 | Structured requirement evaluation | ✅ Done — `evaluateRequirements()` in route-engine |
 | P0.4 | Currency normalization in route engine | ✅ Done — `normalizeCurrency()` + FX table |
 | P0.5 | Savings gap — disposable savings not gross income | ✅ Done — income minus expenses |
-| Tests | P0.2 + P0.3 + P0.4 test suites | ⚠️ Added — needs `npm test` run to verify pass |
+| Tests | P0.2 + P0.3 + P0.4 test suites | ⏳ Written — skipped: dependencies not installed in execution environment. Run `npm test -- --testPathPattern=route-engine` manually to verify. |
 
 ---
 
