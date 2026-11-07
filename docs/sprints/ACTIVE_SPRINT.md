@@ -1,6 +1,6 @@
 # Active Sprint — Owner Actions & Ongoing Maintenance
 
-> **Updated:** 2026-11-05 | **Branch:** `main` | **Commit:** `3c9e9be`
+> **Updated:** 2026-11-05 | **Branch:** `main` | **Commit:** `a819915`
 > **Production:** `https://mypathway2global.org.uk` (Cloudflare Workers — `globalroute`)
 > **Tests:** 19/19 suites, 180/180 passing | **CI:** Lint ✅ Quality Gate ✅ Browser Smoke ✅
 
@@ -8,7 +8,7 @@
 
 ## Current state
 
-All original code phases complete (0-9, B, CP, GOIF, Vertical B, UX). A new P0 workstream has been opened following the 5 November 2026 product assessment. See `docs/sprints/P0_CRITICAL_FIXES_TASKFILE.md`.
+All original code phases complete (0-9, B, CP, GOIF, Vertical B, UX). P0 (trust/eligibility/matching integrity) and P1 (service experience alignment) workstreams complete as of 2026-11-05. See `docs/sprints/P0_CRITICAL_FIXES_TASKFILE.md` and `docs/sprints/P1_TASKFILE.md`.
 
 | Metric | Value |
 |---|---|

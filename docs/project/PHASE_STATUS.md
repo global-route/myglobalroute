@@ -1,8 +1,8 @@
 # Phase Status — MyPathway2Global
 
-> **Updated:** 2026-10-30 | **Release:** GO — production live
+> **Updated:** 2026-11-05 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 180/180 passing
-> **Commit:** `7445e55` | **Blog posts:** 96 | **Sitemap URLs:** 145 | **Stale requirements:** 0
+> **Commit:** `a819915` | **Blog posts:** 96 | **Sitemap URLs:** 145 | **Stale requirements:** 0
 
 ---
 
@@ -24,6 +24,45 @@
 | CP — Content & Platform | **Complete** | — |
 | GOIF — Global Opportunity Integration | **Complete** | — |
 | UX — Find MyPathway improvements | **Complete** | — |
+| P0 — Trust, eligibility & matching integrity | **Code complete** | Owner: verify 3 WHV articles; run P0 test suite |
+| P1 — Service experience & governance alignment | **Code complete** | Owner: P1.5 privacy audit; generate post counts from collection |
+
+---
+
+## Phase P0 — Trust, Eligibility & Matching Integrity ✅ code / ⏳ owner (2026-11-05)
+
+See `docs/sprints/P0_CRITICAL_FIXES_TASKFILE.md` for full task list.
+
+- `evaluateNationality(pathway, passportCountry)` — allowlist/blocklist/all/unknown scopes; ineligible = hard block
+- `evaluateRequirements(pathway, profile)` — all 9 requirement types; blockers = hard block, unknown = warning
+- `normalizeCurrency(amount, currency)` — 19-currency FX table (retrieved 2026-11-05, 90-day stale threshold)
+- `renderNationalityBadge()` + `renderWarnings()` on every result card
+- Savings gap fixed: `monthlySavings = income - expenses` (not gross income)
+- 3 working-holiday articles (AU, IE, NZ) corrected with amber banners + `eligibilityReviewStatus: under-correction`
+- 34 new test cases written (P0.2 + P0.3 + P0.4 suites in `route-engine.test.js`)
+- Commit: `dfd6cad`
+
+**Open (owner):**
+- Verify AU/IE/NZ working-holiday articles at official sources; update `eligibilityReviewStatus`
+- Run `npm test -- --testPathPattern=route-engine` to confirm 34 new tests pass
+
+---
+
+## Phase P1 — Service Experience & Governance Alignment ✅ code / ⏳ owner (2026-11-05)
+
+See `docs/sprints/P1_TASKFILE.md` for full task list.
+
+- Country comparison table: replaced null `officialRate`/`africanRate` columns with registry-backed metrics (publishable pathways, research required, verified cost, sweet spot)
+- Calculator: renamed heading to "Countries with verified cost data in your range"; planning-aid note always visible
+- Article template: fixed "N min min read" double-unit bug in `blog-post.njk`
+- About page: counts updated to match registry (96 posts, 218+ evidence records, 63 publishable pathways)
+- P1.5 localStorage/privacy/advertising audit documented as owner action
+- Commit: `a819915`
+
+**Open (owner):**
+- Complete P1.5 localStorage + consent + publisher ID audit (see P1_TASKFILE.md §P1.5)
+- Generate post counts from Eleventy canonical collection to prevent future drift
+- Audit blog posts for body `# H1` conflicts with template H1
 
 ---
 

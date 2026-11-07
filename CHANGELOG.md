@@ -4,6 +4,83 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
+## 2026-11-05 — P1: country comparison metrics, calculator honesty, readTime fix, about counts
+
+**Commit:** `a819915` | **Tests:** 19/19 suites, 180/180 passing
+
+### P1.1 — Country comparison: registry-backed metrics
+- Removed universally-null `Official Rate` and `African Rate` columns from Evidence Status Comparison table
+- New columns: Publishable Pathways (from `pathwayCounts`), Research Required, Verified Cost, Sweet Spot
+- `app.js` `tableBody` renderer updated to output new columns
+- Table description updated: "Counts are generated from the pathway registry"
+
+### P1.2 — Calculator: honest data availability
+- Heading renamed from "Affordable Countries (sorted by cost)" to "Countries with verified cost data in your range"
+- Planning-aid data note (`#calculator-data-note`) now always visible — removed `display:none` and JS toggle
+
+### P1.3 — Article template: fix double "min" bug
+- `blog-post.njk`: `readTime` frontmatter stored as `"12 min"` rendered as "12 min min read"
+- Fixed: strip trailing `min` before appending `min read`
+
+### P1.4 — About page: reconcile hardcoded counts
+- 84 posts → 96, 216+ evidence records → 218+, pathway description now shows 63 publishable explicitly
+
+### P1.5 — Privacy/advertising audit
+- Documented as owner action in `docs/sprints/P1_TASKFILE.md §P1.5`
+- Full localStorage key inventory (4 keys), 9 specific owner actions listed
+
+### Docs
+- `docs/sprints/P1_TASKFILE.md` created
+- `docs/sprints/ACTIVE_SPRINT.md` — P1 workstream table added
+- `docs/project/PHASE_STATUS.md` — P0 + P1 phase sections added, phase summary table updated
+- `docs/INDEX.md` — P0 entry expanded, P1 taskfile entry added
+- `README.md` — status date, feature descriptions, counts updated
+- `CHANGELOG.md` — this entry
+
+---
+
+## 2026-11-05 — P0: passport-aware matching, requirement evaluation, currency normalization, savings gap, WHV corrections
+
+**Commit:** `dfd6cad` | **Tests:** 19/19 suites, 180/180 passing (34 new P0 tests written, run skipped — dependencies not installed in execution environment)
+
+### P0.1 — Working-holiday content corrections
+- AU, IE, NZ working-holiday articles: amber correction banners added, `eligibilityReviewStatus: under-correction`, false Nigerian eligibility claims removed from excerpts/FAQs/body
+- Owner must verify at official sources before restoring or removing banners
+
+### P0.2 — Passport-aware matching
+- `evaluateNationality(pathway, passportCountry)` added to `route-engine.js`
+- Supports allowlist / blocklist / all / unknown scopes
+- Ineligible passport = hard block; unknown = warning on card, not a block
+- `renderNationalityBadge()` added to `find-mypathway.js`
+- CSS: `.nationality-unknown` (amber), `.nationality-conditional` (orange) added to `enhancements.css`
+
+### P0.3 — Structured requirement evaluation
+- `evaluateRequirements(pathway, profile)` added to `route-engine.js`
+- Evaluates all 9 requirement types: job_offer, admission_offer, sponsorship, age, experience, salary, points, qualification, minimum_funds
+- Blockers = hard block; unknown = warning
+- `renderWarnings()` added to `find-mypathway.js`
+- CSS: `.requirement-warnings li` (blue) added
+
+### P0.4 — Currency normalization
+- `normalizeCurrency(amount, currency)` added to `route-engine.js`
+- 19-currency FX table (`FX_RATES_TO_USD`), retrieved 2026-11-05, 90-day stale threshold
+- Funds comparison now normalizes to USD before comparing
+- Unknown currency = warning only; stale rate = warn + block
+
+### P0.5 — Savings gap calculation
+- `find-mypathway.js`: gap calculation fixed to use `monthlySavings = income - expenses`
+- Zero/negative savings handled gracefully with budget review message
+
+### Tests
+- 34 new test cases in `tests/route-engine.test.js`: P0.2 evaluateNationality (10), P0.3 evaluateRequirements (13), P0.4 normalizeCurrency (9), P0.4 scorePathway integration (2)
+- Run skipped: `npm test -- --testPathPattern=route-engine` (owner action)
+
+### Docs
+- `docs/sprints/P0_CRITICAL_FIXES_TASKFILE.md` created and all tasks marked complete
+- `docs/sprints/ACTIVE_SPRINT.md` updated with P0 workstream table
+
+---
+
 ## 2026-10-31 — Template fixes: CSS v9, search trigger, Africa filter, Google Fonts removed
 
 **Tests:** 19/19 suites, 180/180 passing | **Commit:** `2b77625` | **CI:** Lint ✅ Quality Gate ✅ Browser Smoke ✅
