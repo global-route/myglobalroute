@@ -2622,6 +2622,84 @@
       ]
     },
     {
+      "id": "SG-employment-pass",
+      "countryId": "SG",
+      "type": "work",
+      "name": "Employment Pass",
+      "sourceUrl": "https://www.mom.gov.sg/passes-and-permits/employment-pass",
+      "sourceAuthority": "Ministry of Manpower Singapore",
+      "status": "publishable",
+      "evidenceIds": [
+        "SG-employment-pass-eligibility-2026-11-09",
+        "SG-employment-pass-finance-2026-11-09"
+      ],
+      "requirements": [
+        {
+          "id": "SG-ep-job-offer-2026-11-09",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Singapore",
+          "effectiveDate": "2026-11-09",
+          "sourceUrl": "https://www.mom.gov.sg/passes-and-permits/employment-pass/eligibility",
+          "evidenceIds": ["SG-employment-pass-eligibility-2026-11-09"],
+          "notes": "A job offer from a Singapore-registered employer is required. The employer applies for the EP on behalf of the candidate via the EP Online portal."
+        },
+        {
+          "id": "SG-ep-minimum-salary-2026-11-09",
+          "field": "minimum_monthly_salary",
+          "kind": "money",
+          "value": 5000,
+          "currency": "SGD",
+          "period": "monthly",
+          "jurisdiction": "Singapore",
+          "effectiveDate": "2026-09-01",
+          "sourceUrl": "https://www.mom.gov.sg/passes-and-permits/employment-pass/eligibility",
+          "evidenceIds": ["SG-employment-pass-finance-2026-11-09"],
+          "notes": "Minimum SGD 5,000/month for most sectors. Financial services sector minimum is SGD 5,500/month. Older and more experienced candidates are expected to earn more. The COMPASS points framework also applies for new EP applications."
+        }
+      ]
+    },
+    {
+      "id": "SG-s-pass",
+      "countryId": "SG",
+      "type": "work",
+      "name": "S Pass",
+      "sourceUrl": "https://www.mom.gov.sg/passes-and-permits/s-pass",
+      "sourceAuthority": "Ministry of Manpower Singapore",
+      "status": "publishable",
+      "evidenceIds": [
+        "SG-s-pass-eligibility-2026-11-09",
+        "SG-s-pass-finance-2026-11-09"
+      ],
+      "requirements": [
+        {
+          "id": "SG-sp-job-offer-2026-11-09",
+          "field": "job_offer",
+          "kind": "boolean",
+          "value": true,
+          "jurisdiction": "Singapore",
+          "effectiveDate": "2026-11-09",
+          "sourceUrl": "https://www.mom.gov.sg/passes-and-permits/s-pass/eligibility",
+          "evidenceIds": ["SG-s-pass-eligibility-2026-11-09"],
+          "notes": "A job offer from a Singapore-registered employer is required. The employer applies for the S Pass on behalf of the candidate. Subject to employer quota limits."
+        },
+        {
+          "id": "SG-sp-minimum-salary-2026-11-09",
+          "field": "minimum_monthly_salary",
+          "kind": "money",
+          "value": 3150,
+          "currency": "SGD",
+          "period": "monthly",
+          "jurisdiction": "Singapore",
+          "effectiveDate": "2026-09-01",
+          "sourceUrl": "https://www.mom.gov.sg/passes-and-permits/s-pass/eligibility",
+          "evidenceIds": ["SG-s-pass-finance-2026-11-09"],
+          "notes": "Minimum SGD 3,150/month. Older and more experienced candidates are expected to earn more. Subject to employer sector quota limits — employers in some sectors can only hire a fixed percentage of S Pass holders."
+        }
+      ]
+    },
+    {
       "id": "NZ-aewv",
       "countryId": "NZ",
       "type": "work",

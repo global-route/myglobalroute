@@ -531,6 +531,24 @@
       }
     },
     {
+      "id": "SG",
+      "name": "Singapore",
+      "flag": "🇸🇬",
+      "category": "Asia",
+      "sweetSpot": "professional",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Ministry of Manpower Singapore",
+        "url": "https://www.mom.gov.sg/passes-and-permits",
+        "retrievedAt": "2026-11-09",
+        "confidence": "high"
+      }
+    },
+    {
       "id": "NA",
       "name": "Namibia",
       "flag": "🇳🇦",

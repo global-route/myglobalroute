@@ -43,7 +43,7 @@ if (index && !index.includes('<title>MyPathway2Global')) errors.push('generated 
 if (countries) {
   try {
     const payload = JSON.parse(countries);
-    if (!Array.isArray(payload.countries) || payload.countries.length !== 30) errors.push(`generated countries.json must contain exactly 30 countries; found ${payload.countries?.length ?? 0}`);
+    if (!Array.isArray(payload.countries) || payload.countries.length !== 31) errors.push(`generated countries.json must contain exactly 31 countries; found ${payload.countries?.length ?? 0}`);
   } catch (error) { errors.push(`generated countries.json is invalid JSON: ${error.message}`); }
 }
 if (pathways) {

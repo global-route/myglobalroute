@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "registryPath": "src/data/countries.json",
   "registryDatasetAsOf": "2026-10-25",
-  "countryCount": 30,
+  "countryCount": 31,
   "policy": "Tracks country-level source-anchor review only; does not verify pathway-specific eligibility, funds, costs, approval rates or timelines. Tool errors are not evidence a source is down. Human sign-off is required before freshness metadata advances.",
   "countries": [
     {
@@ -543,6 +543,25 @@
       "authority": "Cape Verde Immigration Service",
       "registeredUrl": "https://www.sefcv.gov.cv/",
       "registryRetrievedAt": "2026-10-29",
+      "review": {
+        "status": "pending",
+        "checkedAt": null,
+        "reviewer": null,
+        "method": null,
+        "observedTitle": null,
+        "observedUrl": null,
+        "evidenceUrl": null,
+        "outcome": "Not reviewed yet.",
+        "nextReviewDue": null
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "SG",
+      "countryName": "Singapore",
+      "authority": "Ministry of Manpower Singapore",
+      "registeredUrl": "https://www.mom.gov.sg/passes-and-permits",
+      "registryRetrievedAt": "2026-11-09",
       "review": {
         "status": "pending",
         "checkedAt": null,
