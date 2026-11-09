@@ -2,7 +2,7 @@
 
 > **Updated:** 2026-11-09 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 214/214 passing
-> **Commit:** `79ca927` | **Blog posts:** 101 | **Sitemap URLs:** 145 | **Stale requirements:** 0
+> **Commit:** `75429a8` | **Blog posts:** 107 | **Sitemap URLs:** 145 | **Stale requirements:** 0
 
 ---
 

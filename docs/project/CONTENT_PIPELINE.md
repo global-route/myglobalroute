@@ -1,14 +1,14 @@
 # Content Pipeline
-**Updated:** 2026-11-09 | **Live posts:** 101 | **Sitemap URLs:** 145
+**Updated:** 2026-11-09 | **Live posts:** 107 | **Sitemap URLs:** 145
 
 ---
 
-## What's live (101 posts)
+## What's live (107 posts)
 
 | Category | Count |
 |---|---|
-| Country Audits | 38 — all 30 countries covered |
-| Guides | 35 |
+| Country Audits | 39 — all 31 countries covered |
+| Guides | 40 |
 | Professional Playbooks | 11 |
 | Student Playbooks | 8 |
 | Business Playbooks | 3 |
@@ -38,7 +38,6 @@ If Nigeria is NOT listed: set `eligibilityReviewStatus: verified-ineligible`, up
 |---|---|---|---|---|
 | R1 | Guyana 2-Year Freelance Work Visa | `content/blog/country-audits/guyana/guyana-visa-from-nigeria-2026.md` | No research done — verify at `immigration.gov.gy` | 1-2 hrs |
 | R2 | Indonesia Tourist/Business Visa | `content/blog/country-audits/indonesia/indonesia-visa-from-nigeria-2026.md` | No research done — verify at `imigrasi.go.id` | 1-2 hrs |
-| R5 | Singapore Work Visa | `content/blog/country-audits/singapore/singapore-visa-from-nigeria-2026.md` | Country not in platform — needs country + pathway records added first. EP min SGD 5,000/month, S Pass min SGD 3,150/month — verify at `mom.gov.sg/passes-and-permits` | 3-4 hrs |
 | R6 | Canada RCIP | `content/blog/playbooks/professional/canada-rcip-rural-immigration-2026.md` | Program status unclear (may be replaced) — verify at `canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-northern-immigration-pilot.html` | 2 hrs |
 
 ---
@@ -81,9 +80,11 @@ If Nigeria is NOT listed: set `eligibilityReviewStatus: verified-ineligible`, up
 - Rwanda company formation
 - UAE free zone company setup
 
-**WAA supporting content (needed before WAA-3):**
-- Domestic worker rights in Qatar / UAE / Saudi (legal protections, Kafala reform status)
-- How to verify a recruitment agent is legitimate (red flags, licence check)
-- Trades shortage occupations in Australia 2026 (DAMA eligible list)
-- Germany shortage occupation list 2026 (Engpassberufe)
-- UK shortage occupation list 2026 (post-MAC review)
+**WAA supporting content — all 5 posts now live:**
+- Domestic worker rights in Qatar / UAE / Saudi ✅
+- How to verify a recruitment agent ✅
+- Australia DAMA shortage occupations ✅
+- Germany shortage occupation list ✅
+- UK Immigration Salary List ✅
+
+**WAA-3 content gate cleared.** Remaining WAA-3 blockers are owner actions (agent vetting, commercial agreement, corridor selection).

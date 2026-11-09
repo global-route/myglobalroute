@@ -4,6 +4,26 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
+## 2026-11-09 — Singapore expansion + WAA supporting content + 5 work guides
+
+**Commit:** `75429a8` | **Tests:** 19/19 suites, 214/214 passing | **Build:** 281 files | **Posts:** 101 → 107 | **Countries:** 30 → 31
+
+### Singapore (R5 unblocked)
+- `src/data/countries.json` — Singapore (SG) added as 31st country, category Asia
+- `src/data/pathways.json` — SG-employment-pass (SGD 5,000/month, COMPASS framework) and SG-s-pass (SGD 3,150/month, quota limits) added
+- `src/data/evidence/primary-source-verified.json` — 4 Singapore evidence records added (EP eligibility, EP finance, S Pass eligibility, S Pass finance)
+- `content/blog/country-audits/singapore/singapore-visa-from-nigeria-2026.md` — EP vs S Pass, COMPASS framework, salary context, sector demand
+- `scripts/generate-country-source-manifest.js`, `scripts/verify-build.js`, `tests/data-contract.test.js`, `tests/evidence-registry.test.js`, `tests/country-source-manifest.test.js` — all updated from 30 to 31 countries
+
+### WAA supporting content (5 posts — unblocks WAA-3)
+- `guides/work/domestic-worker-rights-gulf-2026.md` — Qatar/UAE/Saudi legal protections, enforcement gaps, red flags, pre-travel checklist
+- `guides/work/how-to-verify-recruitment-agent-2026.md` — licence check, employer verification, contract requirements, NAPTIP contacts
+- `guides/work/australia-dama-shortage-occupations-2026.md` — DAMA regions, eligible trades, concessions vs. standard requirements, skills assessment
+- `guides/work/germany-shortage-occupations-2026.md` — Engpassberufe categories, labour market test exemption, qualification recognition
+- `guides/work/uk-shortage-occupations-immigration-salary-list-2026.md` — ISL vs. old SOL, healthcare/IT/trades implications, new entrant rate
+
+---
+
 ## 2026-11-09 — WAA-2: WorkAbroadAgent wizard page live
 
 **Commit:** `7a5b282` | **Tests:** 19/19 suites, 214/214 passing | **Build:** 270 files
