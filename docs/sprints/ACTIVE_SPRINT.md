@@ -1,6 +1,6 @@
 # Active Sprint — Owner Actions & Ongoing Maintenance
 
-> **Updated:** 2026-11-05 | **Branch:** `main` | **Commit:** `520b130`
+> **Updated:** 2026-11-05 | **Branch:** `main` | **Commit:** `5c00eac`
 > **Production:** `https://mypathway2global.org.uk` (Cloudflare Workers — `globalroute`)
 > **Tests:** 19/19 suites, 180/180 passing | **CI:** Lint ✅ Quality Gate ✅ Browser Smoke ✅
 
@@ -125,37 +125,89 @@ See `docs/sprints/P1_TASKFILE.md` for full task list.
 
 ---
 
-## Next sprint candidates
+## P2 — Up next
 
-### Priority 1 - Owner-gated (no code needed)
-| ID | Task | Effort | Notes |
+### UI polish tasks (code-ready)
+
+These are concrete, scoped fixes. None require owner input — all can be coded immediately.
+
+| ID | Page | Issue | Effort |
 |---|---|---|---|
-| N-T1 | OG image | 20 min | 1200x630px, navy `#10316b` bg - see OWNER_ACTIONS.md |
-| N-T2 | Mailchimp URL | 10 min | Replace placeholder in `src/pages/blog.html` - see OWNER_ACTIONS.md |
-| N-T3 | YouTube video IDs (96 posts) | 1-2 hrs | Replace YOUTUBE_PLACEHOLDER comments - see OWNER_ACTIONS.md |
-| N-T4 | ARIA audit | 30 min | Run axe on 4 pages, share results - see OWNER_ACTIONS.md |
-| N-T5 | Country source sign-off (30) | 1-2 hrs | `docs/data/country-source-review-manifest.json` - see OWNER_ACTIONS.md |
-| N-T6 | Legal review | Solicitor | privacy/disclaimer/terms - prerequisite for affiliate/lead revenue |
+| UI-01 | countries.html | Region filter has both "Asia-Pacific" and "Asia" as separate options — consolidate or label the distinction | 15 min |
+| UI-02 | countries.html | Compare bar uses extensive inline styles — move to `enhancements.css` | 20 min |
+| UI-03 | countries.html | Filter dropdowns missing `aria-describedby` for helper text | 15 min |
+| UI-04 | find-mypathway.html | Two info-cards grid has no mobile breakpoint — stacks awkwardly below 640px | 15 min |
+| UI-05 | find-mypathway.html | No "Clear all filters" button — user must reload to reset | 20 min |
+| UI-06 | visa-wizard.html | Purpose/budget button grid lacks `role="radiogroup"` and arrow-key navigation | 20 min |
+| UI-07 | visa-wizard.html | Step 1 back-button slot renders an empty `<span>` — hide it or remove the layout gap | 10 min |
+| UI-08 | calculator.html | Results container uses `style="display:none"` — replace with `hidden` attribute for semantics | 10 min |
+| UI-09 | calculator.html | No inline validation feedback on required fields | 20 min |
+| UI-10 | global | Animations do not respect `prefers-reduced-motion` — add media query to CSS | 15 min |
+| UI-11 | global | Search modal "no results" state has no suggestions — add 3 popular search prompts | 20 min |
+| UI-12 | blog-post.njk | Consent banner may overlap mobile footer — needs z-index / positioning fix (verify with axe first) | 30 min |
 
-### Priority 2 - Reserved posts (needs research)
-See `docs/sprints/RESERVED_POSTS_TASKFILE.md` for full details.
-| ID | Post | Blocker |
+**Total estimated effort:** ~3.5 hrs
+
+---
+
+### Content — reserved posts (owner research required first)
+
+See `docs/sprints/RESERVED_POSTS_TASKFILE.md` for unblock checklists and primary source URLs.
+
+| ID | Post | Blocker | Est. research |
+|---|---|---|---|
+| R1 | Guyana 2-Year Freelance Work Visa | No primary source research done | 1-2 hrs |
+| R2 | Indonesia Tourist/Business Visa | No primary source research done | 1-2 hrs |
+| R3 | UK Innovator Founder Visa | Endorsing body details needed | 1 hr |
+| R4 | France Talent Passport deep-dive | Subcategory salary thresholds needed | 1 hr |
+| R5 | Singapore Work Visa | Country not in platform — needs country + pathway records first | 3-4 hrs |
+| R6 | Canada RCIP | Program status unclear (may be replaced) | 2 hrs |
+
+Once research is done for any item, share the primary-source findings and the post can be written immediately.
+
+**Quickest wins:** R3 (UK Innovator Founder) and R4 (France Talent Passport) — both have known primary sources and need only 1 hr of reading.
+
+---
+
+### Content — deferred pipeline (no unblock path yet)
+
+These are from `docs/project/CONTENT_PIPELINE.md` Tier 3. No file path or primary source confirmed yet.
+
+| Post | Blocker |
+|---|---|
+| Paraguay SUACE/Investor Pass deep-dive | Needs immigration lawyer input |
+| Saskatchewan PNP post-graduation | Needs SINP evidence records |
+| Tax residency for African remote workers | Needs tax adviser input |
+| Rwanda bank account guide for foreigners | Needs primary source research |
+| Germany Working Holiday / Au Pair (FSJ) | Medium confidence — research needed |
+
+---
+
+### Owner-gated (no code needed)
+
+| ID | Item | Effort | Blocks |
+|---|---|---|---|
+| N-T1 | OG image (1200×630px) | 20 min | Social share cards on all pages |
+| N-T2 | Mailchimp action URL | 10 min | Email signups going live |
+| N-T3 | YouTube video IDs (96 posts) | 1-2 hrs | Embeds in all blog posts |
+| N-T4 | ARIA audit (axe on 4 pages) | 30 min | Accessibility gate — share results for UI-12 fix |
+| N-T5 | Country source sign-off (30 entries) | 1-2 hrs | `dataset.asOf` update |
+| N-T6 | Legal review | Solicitor | Prerequisite for affiliate/lead revenue |
+
+---
+
+### Revenue (externally gated)
+
+| ID | Task | Gate |
 |---|---|---|
-| R1 | Guyana freelance visa | No primary source research |
-| R2 | Indonesia visa | No primary source research |
-| R3 | UK Innovator Founder visa | Endorsing body details needed |
-| R4 | France Talent Passport deep-dive | Subcategory details needed |
-| R5 | Singapore work visa | Country not in platform, full setup needed |
-| R6 | Canada RCIP | Program status unclear |
+| N-R1 | AdSense revenue baseline | After first 30 days live — record impressions, clicks, RPM |
+| N-R2 | Affiliate infrastructure | Legal review (N-T6) must complete first |
+| N-R3 | Lead generation engine | Consent architecture + legal review first |
 
-### Priority 3 - Revenue (externally gated)
-| ID | Task | Notes |
-|---|---|---|
-| N-R1 | AdSense revenue baseline | After first 30 days live: record impressions, clicks, RPM |
-| N-R2 | Affiliate infrastructure | Requires legal review (N-T6) first |
-| N-R3 | Lead generation engine | Requires consent architecture + legal review |
+---
 
-### Priority 4 - Phase 6 Scale (hard-gated)
+### Phase 6 scale (hard-gated)
+
 Do not start until Phase 5 revenue baseline exists.
 - Personalisation and saved routes
 - Policy-change alerts
