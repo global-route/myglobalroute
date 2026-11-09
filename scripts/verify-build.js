@@ -58,7 +58,7 @@ if (evidence) {
     if (!Array.isArray(payload.records) || payload.records.length < 1) errors.push('generated primary evidence registry is empty');
   } catch (error) { errors.push(`generated primary evidence registry is invalid JSON: ${error.message}`); }
 }
-if (routeFinder && !routeFinder.includes('GlobalRoute.RouteEngine')) errors.push('generated Find My Route page is missing the canonical route engine');
+if (routeFinder && !routeFinder.includes('/js/route-engine.js')) errors.push('generated Find My Route page is missing the canonical route engine script tag');
 
 if (countries && pathways) {
   try {
