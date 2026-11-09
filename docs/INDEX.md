@@ -11,7 +11,7 @@
 | Owner-side actions and external dependencies | [Owner Actions](sprints/OWNER_ACTIONS.md) |
 | Phase status, open gates, Phase 6 roadmap | [Phase Status](project/PHASE_STATUS.md) |
 | Blog post inventory and content gaps | [Blog Content Inventory](project/BLOG_CONTENT_INVENTORY.md) |
-| Release evidence / deployment state | [Release Verification](project/RELEASE_VERIFICATION_2026-10-08.md) |
+| Release evidence / deployment state | [Phase Status](project/PHASE_STATUS.md) — commit `520b130`, CI green, production live |
 | UI redesign findings | [UI/UX Audit & Classic Design Roadmap](product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md) |
 | Product corrections and future expansion | [Product Improvement & Implementation Blueprint](product/MYPATHWAY2GLOBAL_PRODUCT_IMPROVEMENT_IMPLEMENTATION_BLUEPRINT.md) |
 | Full assessment, weaknesses, benchmark research and implementation walkthrough | [Deep Website & Product Assessment](MYPATHWAY2GLOBAL_DEEP_WEBSITE_PRODUCT_ASSESSMENT_AND_IMPLEMENTATION_WALKTHROUGH.md) |

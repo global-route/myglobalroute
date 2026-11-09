@@ -1,9 +1,14 @@
 # Privacy Data Inventory — Engineering Draft
 
-**Status:** Source-tree inventory only; not legal advice or compliance sign-off.  
-**Prepared:** 2026-10-11  
-**Validation:** Not validated; testing and CI are paused by user direction.  
-**Production identity:** Unconfirmed. This document does not establish which provider, domain, logs or third-party integrations are live.
+**Status:** Superseded as the working inventory by `docs/sprints/P1_TASKFILE.md §P1.5` (2026-11-05). This document is retained as the original Phase 4 engineering foundation. The release gates below remain open.
+**Prepared:** 2026-10-11 | **Superseded:** 2026-11-05
+**Validation:** Not validated against production. See P1_TASKFILE.md §P1.5 for the current localStorage key inventory and owner action checklist.
+
+> **Key corrections vs this document:**
+> - Contact email is `hello@mypathway2global.org.uk` (not `hello@global-route.app`)
+> - Actual localStorage keys in use: `mp2g_fmp_inputs`, `mp2g_calc_inputs`, `goif_pathways_v1`, `mp2g_wizard_state`, `mp2g_consent` (not `globalroute.analyticsConsent` / `globalroute.advertisingConsent`)
+> - Production is live on Cloudflare Workers (`globalroute`) at `https://mypathway2global.org.uk` — the NO-GO release decision in `RELEASE_VERIFICATION_2026-10-08.md` is historical
+> - AdSense publisher ID `ca-pub-8077583188666813` is live; Sabilytics (`atsngkb78nmt`) is live on all pages
 
 ## Purpose and scope
 

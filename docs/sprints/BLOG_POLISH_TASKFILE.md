@@ -1,6 +1,6 @@
 # Blog Polish Taskfile
-**Created:** 2026-10-29
-**Purpose:** Track YouTube embed and FAQ gaps across all 54 blog posts
+**Created:** 2026-10-29 | **Updated:** 2026-11-05
+**Purpose:** Track YouTube embed and FAQ gaps across all 96 blog posts
 
 ---
 
@@ -9,8 +9,8 @@
 | Task | Posts | Status |
 |---|---|---|
 | Add FAQs to 21 older posts | 21 | ✅ Done |
-| Add YouTube placeholder to 24 new posts | 24 | ✅ Done — placeholder comment inserted |
-| Owner: replace placeholders with real YouTube video IDs | 24 | ⏸ Owner action |
+| Add YouTube placeholder to posts without embeds | 24+ | ✅ Done — placeholder comment inserted |
+| Owner: replace placeholders with real YouTube video IDs | 96 | ⏸ Owner action — all 96 posts have `<!-- YOUTUBE_PLACEHOLDER -->` or need a real embed |
 
 ---
 

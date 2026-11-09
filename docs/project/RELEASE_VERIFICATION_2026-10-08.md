@@ -1,6 +1,9 @@
 # Release Verification — 2026-10-08
 
-> **Verification candidate update — 2026-10-11:** [`ec0f02c2b2d171d98262d8a3fc4adc807bbe3328`](https://github.com/global-route/myglobalroute/commit/ec0f02c2b2d171d98262d8a3fc4adc807bbe3328) adds route threshold boundary tests for monthly income and experience. The candidate's required workflow results have not yet been confirmed; the last verified source-tree SHA and its run links remain the checkpoint below. Production remains NO-GO.
+> **CLOSED — 2026-11-05.** Production is live at `https://mypathway2global.org.uk` on Cloudflare Workers (commit `520b130`, CI green). The NO-GO decisions recorded below were resolved during the October 2026 production readiness sprint. This document is retained as a historical record of the pre-launch verification process. Current production state is in `docs/project/PHASE_STATUS.md` and `docs/sprints/ACTIVE_SPRINT.md`.
+
+---
+ [`ec0f02c2b2d171d98262d8a3fc4adc807bbe3328`](https://github.com/global-route/myglobalroute/commit/ec0f02c2b2d171d98262d8a3fc4adc807bbe3328) adds route threshold boundary tests for monthly income and experience. The candidate's required workflow results have not yet been confirmed; the last verified source-tree SHA and its run links remain the checkpoint below. Production remains NO-GO.
 
 > **Current-head verification update:** 2026-10-11. This record retains its original filename for continuity; use the latest dated verification section below for current CI status.
 

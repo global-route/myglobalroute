@@ -1,7 +1,6 @@
 # UI/UX Polishing Tasks - Pages & Content
 
-**Generated:** January 2026  
-**Scope:** All pages, content, and UI components beyond blog posts
+> **ARCHIVED — superseded 2026-11-05.** This document was generated in January 2026 and references `find-my-route.html`, "Global Route Team", 40+ posts and pre-rebrand file paths. The platform has since been rebranded, rebuilt and expanded to 96 posts across 30 countries. Current UI/UX issues are tracked in `docs/sprints/P1_TASKFILE.md`. The Phase 1/2/3 completion checkboxes in this document reflect work done in the January–October 2026 period and are not a current task list.
 
 ---
 

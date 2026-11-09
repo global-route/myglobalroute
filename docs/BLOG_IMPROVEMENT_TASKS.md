@@ -1,8 +1,6 @@
 # Blog Posts Improvement Task Document
 
-**Generated:** January 2026  
-**Scope:** All 7 blog posts in `/src/content/blog/`  
-**Focus:** Text formatting, page layout, responsive design, and content issues
+> **ARCHIVED — superseded 2026-11-05.** This document was generated in January 2026 when the platform had 7 blog posts in `/src/content/blog/`. The platform now has 96 posts in `/content/blog/`, a different architecture, and a different CSS/template system. All file paths, post counts and issue descriptions in this document are stale. Current blog quality issues are tracked in `docs/sprints/P1_TASKFILE.md` and `docs/sprints/BLOG_POLISH_TASKFILE.md`.
 
 ---
 

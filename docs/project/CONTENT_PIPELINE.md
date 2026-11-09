@@ -1,7 +1,9 @@
 # Content Pipeline — MyPathway2Global
-**Updated:** 2026-10-30 | **Current posts:** 96 | **Sitemap URLs:** 145
+**Updated:** 2026-11-05 | **Current posts:** 96 | **Sitemap URLs:** 145
 
-> Note: This pipeline document was written when the platform had 59 posts. The gap analysis below is preserved for reference but most Tier 1 and Tier 2 items are now live. For the current content inventory see `docs/project/BLOG_CONTENT_INVENTORY.md`. For reserved/blocked posts see `docs/sprints/RESERVED_POSTS_TASKFILE.md`.
+> **Status note:** This pipeline document was written when the platform had 59 posts. The gap analysis and Tier 1/2/3 pipeline below are preserved for reference. Most Tier 1 and Tier 2 items are now live. For the current content inventory see `docs/project/BLOG_CONTENT_INVENTORY.md`. For reserved/blocked posts see `docs/sprints/RESERVED_POSTS_TASKFILE.md`.
+>
+> **P0.1 correction notice:** Three working-holiday articles listed in Gap 4 as "HIGH confidence" (Australia WHV, New Zealand WHV, Ireland WHA) are under active correction. Nigerian eligibility claims in those articles are unverified. Do not treat them as published and accurate until `eligibilityReviewStatus` is updated from `under-correction`. See `docs/sprints/P0_CRITICAL_FIXES_TASKFILE.md`.
 
 ---
 
@@ -157,8 +159,8 @@ From the Wakanow Affiliates screenshots and market research:
 
 | Status | Count |
 |---|---|
-| Live | 59 |
-| Tier 1 (write now) | 10 |
-| Tier 2 (write after) | 10 |
+| Live | 96 |
+| Tier 1 (written, some under correction) | 10 |
+| Tier 2 (written) | 10 |
 | Tier 3 (deferred) | 5 |
-| **Total with pipeline** | **84** |
+| **Total with pipeline** | **96 live + 5 deferred** |
