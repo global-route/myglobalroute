@@ -1562,6 +1562,30 @@ p a:hover, li a:hover, td a:hover {
   }
 }
 
+/* ── WORK ABROAD AGENT ── */
+.waa-safety-callout {
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-left: 4px solid #b91c1c;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #7f1d1d;
+}
+.waa-safety-callout strong { color: #b91c1c; display: block; margin-bottom: 0.4rem; }
+.waa-safety-callout p { margin: 0 0 0; }
+
+.waa-agent-placeholder {
+  margin-top: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  background: var(--color-page-bg);
+  border: 1px dashed var(--color-neutral-300);
+  border-radius: 2px;
+  font-size: 0.85rem;
+  color: var(--color-neutral-500);
+}
+.waa-agent-placeholder p { margin: 0; }
+
 /* P0.2 — Nationality eligibility badges */
 .nationality-unknown {
   background: #fef9c3;
