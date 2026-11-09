@@ -1,6 +1,6 @@
 # Active Sprint — Owner Actions & Ongoing Maintenance
 
-> **Updated:** 2026-11-05 | **Branch:** `main` | **Commit:** `5c00eac`
+> **Updated:** 2026-11-05 | **Branch:** `main` | **Commit:** `e9ac0e3`
 > **Production:** `https://mypathway2global.org.uk` (Cloudflare Workers — `globalroute`)
 > **Tests:** 19/19 suites, 180/180 passing | **CI:** Lint ✅ Quality Gate ✅ Browser Smoke ✅
 
@@ -133,20 +133,18 @@ These are concrete, scoped fixes. None require owner input — all can be coded 
 
 | ID | Page | Issue | Effort |
 |---|---|---|---|
-| UI-01 | countries.html | Region filter has both "Asia-Pacific" and "Asia" as separate options — consolidate or label the distinction | 15 min |
-| UI-02 | countries.html | Compare bar uses extensive inline styles — move to `enhancements.css` | 20 min |
-| UI-03 | countries.html | Filter dropdowns missing `aria-describedby` for helper text | 15 min |
-| UI-04 | find-mypathway.html | Two info-cards grid has no mobile breakpoint — stacks awkwardly below 640px | 15 min |
-| UI-05 | find-mypathway.html | No "Clear all filters" button — user must reload to reset | 20 min |
-| UI-06 | visa-wizard.html | Purpose/budget button grid lacks `role="radiogroup"` and arrow-key navigation | 20 min |
-| UI-07 | visa-wizard.html | Step 1 back-button slot renders an empty `<span>` — hide it or remove the layout gap | 10 min |
-| UI-08 | calculator.html | Results container uses `style="display:none"` — replace with `hidden` attribute for semantics | 10 min |
-| UI-09 | calculator.html | No inline validation feedback on required fields | 20 min |
-| UI-10 | global | Animations do not respect `prefers-reduced-motion` — add media query to CSS | 15 min |
-| UI-11 | global | Search modal "no results" state has no suggestions — add 3 popular search prompts | 20 min |
-| UI-12 | blog-post.njk | Consent banner may overlap mobile footer — needs z-index / positioning fix (verify with axe first) | 30 min |
-
-**Total estimated effort:** ~3.5 hrs
+| UI-01 | countries.html | ~~Region filter missing `Asia` option — JP/KR/CN were unfilerable~~ | ✅ Done |
+| UI-02 | countries.html | ~~Compare bar inline styles~~ | ✅ Done (prior sprint) |
+| UI-03 | countries.html | ~~Filter dropdowns missing `aria-describedby`~~ | ✅ Done (prior sprint) |
+| UI-04 | find-mypathway.html | ~~Info-cards grid no mobile breakpoint~~ | ✅ Done (prior sprint) |
+| UI-05 | find-mypathway.html | ~~No "Clear all filters" button~~ | ✅ Done (prior sprint) |
+| UI-06 | visa-wizard.html | ~~Purpose/budget grids lacked `role=radio`, `aria-checked`, arrow-key nav~~ | ✅ Done |
+| UI-07 | visa-wizard.html | ~~Step 1 back-button slot rendered visible empty span~~ | ✅ Done |
+| UI-08 | calculator.html | ~~Results container used `style="display:none"` instead of `hidden`~~ | ✅ Done (prior sprint) |
+| UI-09 | calculator.html | ~~No inline validation on required fields~~ | ✅ Done |
+| UI-10 | global | ~~Animations ignore `prefers-reduced-motion`~~ | ✅ Done (prior sprint) |
+| UI-11 | global | ~~Search modal no-results state had no suggestions~~ | ✅ Done (prior sprint) |
+| UI-12 | blog-post.njk | Consent banner may overlap mobile footer — needs axe test first | ⏳ Owner: run axe (N-T4) |
 
 ---
 
