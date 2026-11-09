@@ -79,11 +79,10 @@ const GlobalRoute = (() => {
     navMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNav));
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
     // Active state: match current path to nav links
-    const path = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+    const path = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '').replace(/\/$/, '') || '/';
     navMenu.querySelectorAll('a').forEach(link => {
-      const href = link.getAttribute('href').replace(/\.html$/, '').replace(/\/$/, '') || '/';
-      const current = path.replace(/\/$/, '') || '/';
-      if (href === current || (href !== '/' && current.startsWith(href))) {
+      const href = (link.getAttribute('href') || '').replace(/\.html$/, '').replace(/\/$/, '') || '/';
+      if (href === path || (href !== '/' && href.length > 1 && path === href)) {
         link.classList.add('active');
       }
     });

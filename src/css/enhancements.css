@@ -50,7 +50,7 @@
 }
 
 .nav-menu a:hover { color: var(--color-amber); }
-.nav-menu a.active { color: var(--color-amber); }
+.nav-menu a.active { color: var(--color-amber) !important; }
 
 .nav-cta {
   display: inline-flex;
