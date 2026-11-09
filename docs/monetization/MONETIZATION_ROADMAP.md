@@ -1,6 +1,8 @@
 # Monetization Roadmap
 
-**Status:** Planned / execution roadmap
+**Status:** In progress | **Updated:** 2026-11-05
+
+> **Production state:** Site is live at `https://mypathway2global.org.uk` on Cloudflare Workers. AdSense publisher ID `ca-pub-8077583188666813` is live. `ads.txt` is populated. Google policy review is pending. The "production origin unverified" blocker recorded in earlier versions of this document is resolved.
 
 ## Phase M0 — Architecture and governance
 ### P0
@@ -26,18 +28,18 @@
 
 ## Phase M2 — AdSense readiness
 ### P0
-- [ ] Confirm authoritative production domain. *(blocked: P0-S5 DNS)*
-- [x] Confirm privacy/consent implementation.
-- [ ] Establish Google AdSense account. *(owner action)*
-- [ ] Verify site eligibility. *(owner action)*
-- [ ] Obtain real publisher ID. *(owner action)*
-- [ ] Configure approved ad formats.
-- [x] Create ads.txt placeholder (`public/ads.txt` — must not be populated until publisher ID obtained).
-- [x] Implement page-level ad exclusions.
-- [ ] Run performance/accessibility checks. *(requires live browser)*
-- [ ] Launch controlled ad experiment.
+- [x] Confirm authoritative production domain — `https://mypathway2global.org.uk` on Cloudflare Workers
+- [x] Confirm privacy/consent implementation
+- [x] Establish Google AdSense account
+- [x] Verify site eligibility
+- [x] Obtain real publisher ID — `ca-pub-8077583188666813`
+- [x] Configure approved ad formats
+- [x] Create ads.txt — `google.com, pub-8077583188666813, DIRECT, f08c47fec0942fa0`
+- [x] Implement page-level ad exclusions
+- [ ] Run performance/accessibility checks *(requires live browser — owner action)*
+- [ ] Launch controlled ad experiment *(pending Google policy review)*
 
-**Exit criteria:** AdSense operates without degrading core product workflows.
+**Exit criteria:** AdSense operates without degrading core product workflows. ⏳ Pending Google policy review.
 
 ## Phase M3 — Affiliate foundation
 ### P1
@@ -119,7 +121,7 @@ No monetization release should bypass:
 - commercial disclosure.
 
 ## Current project blocker
-The known authoritative production-origin issue remains a prerequisite for activating production advertising. Do not hardcode or assume a production hostname until independently verified.
+Google AdSense policy review is pending (external, 1-14 days). No code action required. Production origin is confirmed: `https://mypathway2global.org.uk` on Cloudflare Workers.
 
 ## Definition of success
 MyGlobalRoute becomes a diversified revenue business where advertising funds early growth, commercial intent produces higher-value variable revenue, and subscriptions/partner/API products progressively create durable MRR.

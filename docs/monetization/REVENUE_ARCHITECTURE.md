@@ -1,6 +1,8 @@
 # MyGlobalRoute Revenue Architecture
 
-**Status:** Planned / implementation-ready
+**Status:** Foundation live | **Updated:** 2026-11-05
+
+> **Production state:** Site is live at `https://mypathway2global.org.uk`. AdSense publisher ID `ca-pub-8077583188666813` is active. `ads.txt` is populated. References in this document to "no production monetization until origin verified" are resolved.
 
 ## Purpose
 MyGlobalRoute should monetize migration intent without compromising evidence quality, route usability, user trust or editorial independence.

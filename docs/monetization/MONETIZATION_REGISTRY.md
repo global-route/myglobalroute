@@ -1,8 +1,11 @@
 # Monetization Registry Contract
 
-**Phase:** P1-REV  
-**Task:** REV-02  
-**Status:** Foundation implemented; page-type contracts wired; live monetization remains disabled.
+**Phase:** P1-REV
+**Task:** REV-02
+**Status:** Foundation implemented; AdSense live (publisher ID `ca-pub-8077583188666813`, policy review pending); live partner monetization remains disabled.
+**Updated:** 2026-11-05
+
+> **Correction:** An earlier version of this document stated "The registry does not contain a publisher ID and does not load AdSense." AdSense is now live. The static `<script async src="...adsbygoogle.js?client=ca-pub-8077583188666813">` tag is in `<head>` on all 6 ad pages. `public/ads.txt` is populated: `google.com, pub-8077583188666813, DIRECT, f08c47fec0942fa0`. Google policy review is pending.
 
 ## Runtime source
 

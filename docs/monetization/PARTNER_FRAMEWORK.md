@@ -1,9 +1,11 @@
 # Partner Framework — MyPathway2Global
 
 **Document type:** Internal — commercial foundation
-**Status:** Active — pre-launch
-**Updated:** 2026-10-30
+**Status:** Active — partners page live at `/pages/partners.html`
+**Updated:** 2026-11-05
 **Prerequisite:** Legal review required before any partner agreement is signed
+
+> **Note:** The "Next steps" section at the bottom of this document lists building `src/pages/partners.html` as pending. That page is now live. Remaining next steps are the legal/commercial items (agreement template, fee structure, application form, legal entity registration).
 
 ---
 
@@ -128,9 +130,9 @@ The Wakanow Affiliates Telegram group (1,660 members) is representative of the A
 
 ## Next steps (all require legal review)
 
+- [x] Build partner directory page — `src/pages/partners.html` is live
 - [ ] Draft partnership agreement template (solicitor)
 - [ ] Define fee structure for each tier
-- [ ] Build partner directory page (`src/pages/partners.html`)
 - [ ] Build partner application form
 - [ ] Define data protection obligations for Tier B integrations
 - [ ] Register as a legal entity (prerequisite for contracts)

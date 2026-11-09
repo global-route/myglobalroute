@@ -1,6 +1,6 @@
 # Ad Placement Map
 
-**Status:** Planned
+**Status:** Live — AdSense active on configured surfaces, Google policy review pending | **Updated:** 2026-11-05
 
 ## Placement philosophy
 The placement map is deliberately conservative. MyGlobalRoute is a decision-support product, not an advertising-first content farm.

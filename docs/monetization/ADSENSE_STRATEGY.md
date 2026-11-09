@@ -1,6 +1,8 @@
 # AdSense Strategy
 
-**Status:** Planned / implementation-ready
+**Status:** Live — publisher ID `ca-pub-8077583188666813` active, Google policy review pending | **Updated:** 2026-11-05
+
+> Account setup steps below are complete. Publisher ID is live in `<head>` on all 6 ad pages. `ads.txt` is populated. Remaining gate: Google policy review (external, 1-14 days).
 
 ## Objective
 Use Google AdSense as a baseline monetization layer for informational traffic while protecting MyGlobalRoute's core route-discovery experience.
