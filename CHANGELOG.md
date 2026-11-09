@@ -4,6 +4,49 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
+## 2026-11-05 — P2 UI polish: Asia filter, wizard keyboard nav, calculator validation; sprint docs removed
+
+**Commits:** `e9ac0e3`, `4120693` | **Tests:** 19/19 suites, 180/180 passing
+
+### UI fixes
+- `countries.html` — added missing `Asia` region option to filter (JP, KR, CN were unfilerable; `Asia-Pacific` and `Asia` are distinct categories in the data)
+- `visa-wizard.html` / `wizard-engine.js` — purpose and budget tile grids now have `role="radio"`, `aria-checked`, roving `tabindex`, and arrow-key navigation (Left/Up = previous, Right/Down = next, wraps)
+- `enhancements.css` — `.wizard-nav-placeholder { visibility:hidden; width:1px }` — step 1 back-button slot no longer renders a visible gap
+- `calculator.html` — inline validation on required fields (`savings`, `category`): `aria-describedby` error spans, blur + submit-capture validation, `.form-field-error` border, error message shown/hidden
+
+### Repo hygiene
+- Deleted `docs/sprints/` entirely — ACTIVE_SPRINT, OWNER_ACTIONS, P0/P1 taskfiles, RESERVED_POSTS, BLOG_POLISH, OPPORTUNITY taskfiles all removed
+- CHANGELOG is now the sole delivery record for sprint-level work
+
+---
+
+## 2026-11-05 — Repo audit: deleted fabricated draft files, fixed smoke test URL, rewrote reference README
+
+**Commit:** `5c00eac` | **Tests:** 19/19 suites, 180/180 passing
+
+- Deleted 6 pre-rebrand draft files in `src/content/blog/` — January 2026 drafts containing fabricated nationality-specific approval rate statistics ("62-68% for African applicants", "54% for Nigeria") with fake embassy sources. Not built by Eleventy (input dir is `content/`, not `src/content/`); dead tracked code.
+- `.github/workflows/production-smoke.yml` — example URL corrected from `netlify.app` to `mypathway2global.org.uk`
+- `docs/reference/README.md` — rewritten to remove duplicate section and references to archived files
+
+---
+
+## 2026-11-05 — Stale doc fixes across all /docs subfolders
+
+**Commit:** `8cdfbf6`
+
+- `docs/monetization/` (6 files) — updated from pre-launch state: AdSense live with publisher ID `ca-pub-8077583188666813`, production confirmed at `mypathway2global.org.uk`, partner page live
+- `docs/reference/BLUEPRINT_TO_EXECUTION.md` — ARCHIVED notice added
+- `docs/reference/DATA_TRUST_STANDARD.md` — brand fixed, 26→30 countries
+- `docs/reference/DEPLOYMENT.md` — Netlify→Cloudflare correction notice
+- `docs/guides/GOOGLE_ANALYTICS_SETUP.md` — ARCHIVED (platform uses Sabilytics, not GA4)
+- `docs/guides/DEPLOYED_SITE_VERIFICATION.md` — production origin confirmed, stale URL fixed
+- `docs/phase-1/ACTIVE_REVENUE_TASK.md` — AdSense live, Cloudflare confirmed
+- `docs/phase-3/BLOG_CONTENT_SUMMARY.md` — ARCHIVED
+- `docs/BLOG_IMPROVEMENT_TASKS.md`, `docs/UI_POLISHING_TASKS.md` — ARCHIVED notices added
+- `docs/sprints/BLOG_POLISH_TASKFILE.md` — post count corrected 54→96
+
+---
+
 ## 2026-11-05 — P1: country comparison metrics, calculator honesty, readTime fix, about counts
 
 **Commit:** `a819915` | **Tests:** 19/19 suites, 180/180 passing
@@ -30,12 +73,8 @@ Dates reflect repository commits; a changelog entry is not release approval.
 - Full localStorage key inventory (4 keys), 9 specific owner actions listed
 
 ### Docs
-- `docs/sprints/P1_TASKFILE.md` created
-- `docs/sprints/ACTIVE_SPRINT.md` — P1 workstream table added
-- `docs/project/PHASE_STATUS.md` — P0 + P1 phase sections added, phase summary table updated
-- `docs/INDEX.md` — P0 entry expanded, P1 taskfile entry added
+- `docs/project/PHASE_STATUS.md` — P0 + P1 phase sections added
 - `README.md` — status date, feature descriptions, counts updated
-- `CHANGELOG.md` — this entry
 
 ---
 
@@ -73,11 +112,7 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ### Tests
 - 34 new test cases in `tests/route-engine.test.js`: P0.2 evaluateNationality (10), P0.3 evaluateRequirements (13), P0.4 normalizeCurrency (9), P0.4 scorePathway integration (2)
-- Run skipped: `npm test -- --testPathPattern=route-engine` (owner action)
-
-### Docs
-- `docs/sprints/P0_CRITICAL_FIXES_TASKFILE.md` created and all tasks marked complete
-- `docs/sprints/ACTIVE_SPRINT.md` updated with P0 workstream table
+- Run pending owner: `npm test -- --testPathPattern=route-engine`
 
 ---
 
