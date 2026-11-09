@@ -1,19 +1,19 @@
 # Content Pipeline
-**Updated:** 2026-11-05 | **Live posts:** 96 | **Sitemap URLs:** 145
+**Updated:** 2026-11-09 | **Live posts:** 101 | **Sitemap URLs:** 145
 
 ---
 
-## What's live (96 posts)
+## What's live (101 posts)
 
 | Category | Count |
 |---|---|
 | Country Audits | 38 — all 30 countries covered |
 | Guides | 35 |
-| Professional Playbooks | 9 |
+| Professional Playbooks | 11 |
 | Student Playbooks | 8 |
 | Business Playbooks | 3 |
 | Case Studies | 2 |
-| Policy Updates | 1 |
+| Policy Updates | 4 |
 
 ---
 
@@ -38,12 +38,8 @@ If Nigeria is NOT listed: set `eligibilityReviewStatus: verified-ineligible`, up
 |---|---|---|---|---|
 | R1 | Guyana 2-Year Freelance Work Visa | `content/blog/country-audits/guyana/guyana-visa-from-nigeria-2026.md` | No research done — verify at `immigration.gov.gy` | 1-2 hrs |
 | R2 | Indonesia Tourist/Business Visa | `content/blog/country-audits/indonesia/indonesia-visa-from-nigeria-2026.md` | No research done — verify at `imigrasi.go.id` | 1-2 hrs |
-| R3 | UK Innovator Founder Visa | `content/blog/playbooks/professional/uk-innovator-founder-visa-2026.md` | Endorsing body list + GBP 50,000 threshold — verify at `gov.uk/innovator-founder-visa` | 1 hr |
-| R4 | France Talent Passport deep-dive | `content/blog/playbooks/professional/france-talent-passport-deep-dive-2026.md` | Subcategory salary thresholds — verify at `france-visas.gouv.fr/en/web/france-visas/talent-passport` | 1 hr |
 | R5 | Singapore Work Visa | `content/blog/country-audits/singapore/singapore-visa-from-nigeria-2026.md` | Country not in platform — needs country + pathway records added first. EP min SGD 5,000/month, S Pass min SGD 3,150/month — verify at `mom.gov.sg/passes-and-permits` | 3-4 hrs |
 | R6 | Canada RCIP | `content/blog/playbooks/professional/canada-rcip-rural-immigration-2026.md` | Program status unclear (may be replaced) — verify at `canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-northern-immigration-pilot.html` | 2 hrs |
-
-**Quickest wins:** R3 and R4 — both have known primary sources, 1 hr each.
 
 ---
 
@@ -72,7 +68,22 @@ If Nigeria is NOT listed: set `eligibilityReviewStatus: verified-ineligible`, up
 - Australia TSMIT increase 2024
 - Qatar Kafala reform — what changed for workers
 
+**Gap areas (no research blocker — can write when prioritised)**
+
+**Case Studies** (2 live, thin):
+- Real budget breakdown: Nigeria to UAE (construction/healthcare worker)
+- Real budget breakdown: Nigeria to Germany (Chancenkarte journey)
+- Real budget breakdown: Nigeria to Australia (DAMA regional worker)
+- Visa rejection recovery: what happened after refusal and what changed
+
 **Business Playbooks** (3 live):
 - Portugal company formation (NHR + D3 combination)
 - Rwanda company formation
 - UAE free zone company setup
+
+**WAA supporting content (needed before WAA-3):**
+- Domestic worker rights in Qatar / UAE / Saudi (legal protections, Kafala reform status)
+- How to verify a recruitment agent is legitimate (red flags, licence check)
+- Trades shortage occupations in Australia 2026 (DAMA eligible list)
+- Germany shortage occupation list 2026 (Engpassberufe)
+- UK shortage occupation list 2026 (post-MAC review)

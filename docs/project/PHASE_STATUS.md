@@ -1,8 +1,8 @@
 # Phase Status — MyPathway2Global
 
-> **Updated:** 2026-11-05 | **Release:** GO — production live
-> **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 180/180 passing
-> **Commit:** `a819915` | **Blog posts:** 96 | **Sitemap URLs:** 145 | **Stale requirements:** 0
+> **Updated:** 2026-11-09 | **Release:** GO — production live
+> **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 214/214 passing
+> **Commit:** `79ca927` | **Blog posts:** 101 | **Sitemap URLs:** 145 | **Stale requirements:** 0
 
 ---
 
@@ -26,6 +26,10 @@
 | UX — Find MyPathway improvements | **Complete** | — |
 | P0 — Trust, eligibility & matching integrity | **Code complete** | Owner: verify 3 WHV articles; run P0 test suite |
 | P1 — Service experience & governance alignment | **Code complete** | Owner: P1.5 privacy audit; generate post counts from collection |
+| Content depth sprint | **Complete** | — |
+| WAA-1 — Occupation demand data | **Complete** | — |
+| WAA-2 — WorkAbroadAgent wizard UI | **Complete** | WAA-3 blocked: needs verified agent + commercial agreement |
+| WCAG 2.1 AA | **Complete** | Re-run axe after next deploy |
 
 ---
 
@@ -346,6 +350,22 @@ A task is not complete because a file exists. Legal/data claims require evidence
 - Countries: 27 → 30 | Pathways: 65 → 69 | Blog posts: 34 → 96 | Evidence: 202 → 218
 
 **Open:** Diaspora repatriation guide (deferred — see RESERVED_POSTS_TASKFILE.md)
+
+---
+
+## Phase WAA — WorkAbroadAgent ⏳ in progress (2026-11-09)
+
+| Phase | Scope | Status |
+|---|---|---|
+| WAA-1 | Occupation demand registry + agents schema | **Done** — `src/data/occupation-demand.json` (15 records), `src/data/agents.json` (schema only) |
+| WAA-2 | Wizard UI — 4-step occupation-driven routing, safety callouts, agent placeholder | **Done** — `src/pages/work-abroad-agent.html`, `src/js/work-abroad-agent.js`, nav/footer wired |
+| WAA-3 | Agent layer — first verified agent, commercial tracking, "Connect" CTA | **Blocked** — needs: (1) first verified agent onboarded, (2) commercial agreement template, (3) rights content live |
+| WAA-4 | Unskilled track safety layer — Kafala reform status per country, red flag checklist | **Pending WAA-3** |
+
+**Owner actions required before WAA-3:**
+- Define agent vetting process (licence check, reference check, complaint history)
+- Agree lead fee structure with first agent
+- Confirm which 3 corridors to launch with (suggested: NG-DE tech, NG-AU trades, NG-QA domestic)
 
 ---
 
