@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       production_url:
-        description: 'Authoritative deployed origin, e.g. https://example.netlify.app'
+        description: 'Authoritative deployed origin, e.g. https://mypathway2global.org.uk'
         required: true
         type: string
 
