@@ -1441,7 +1441,12 @@ th {
   }
 }
 
-/* ── WIZARD STEP TRANSITIONS ── */
+/* ── WIZARD NAV PLACEHOLDER (step 1 back-button slot) ── */
+.wizard-nav-placeholder {
+  visibility: hidden;
+  width: 1px;
+}
+
 .wizard-step {
   opacity: 1;
   transform: translateX(0);

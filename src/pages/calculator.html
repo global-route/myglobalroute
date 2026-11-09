@@ -29,10 +29,10 @@
       <div class="calculator-layout">
       <form id="budget-calculator" class="form-card">
         <h2 style="margin-top:0;border:none;padding:0;font-size:1.25rem;">Your finances</h2>
-        <div class="form-field"><label for="current-savings">Current savings (USD)</label><input type="number" id="current-savings" name="savings" placeholder="e.g. 5000" min="0" required><small style="color:var(--color-neutral-500);font-size:0.8rem;">Liquid cash available now</small></div>
+        <div class="form-field"><label for="current-savings">Current savings (USD)</label><input type="number" id="current-savings" name="savings" placeholder="e.g. 5000" min="0" required aria-describedby="savings-error"><small style="color:var(--color-neutral-500);font-size:0.8rem;">Liquid cash available now</small><span id="savings-error" class="form-error-message" aria-live="polite" hidden>Please enter your current savings.</span></div>
         <div class="form-field"><label for="monthly-income">Monthly income (USD)</label><input type="number" id="monthly-income" name="income" placeholder="e.g. 2000" min="0"><small style="color:var(--color-neutral-500);font-size:0.8rem;">Gross monthly, if applicable</small></div>
         <div class="form-field"><label for="monthly-expenses">Monthly expenses (USD)</label><input type="number" id="monthly-expenses" name="expenses" placeholder="e.g. 800" min="0"><small style="color:var(--color-neutral-500);font-size:0.8rem;">Your current monthly costs</small></div>
-        <div class="form-field"><label for="category">Goal</label><select id="category" name="category" required><option value="">Select a goal</option><option value="student">Study</option><option value="professional">Work</option><option value="business">Business / Residency</option></select></div>
+        <div class="form-field"><label for="category">Goal</label><select id="category" name="category" required aria-describedby="category-error"><option value="">Select a goal</option><option value="student">Study</option><option value="professional">Work</option><option value="business">Business / Residency</option></select><span id="category-error" class="form-error-message" aria-live="polite" hidden>Please select a goal.</span></div>
         <button type="submit" class="btn btn-primary btn-large" style="width:100%;">Calculate &rarr;</button>
       </form>
 
@@ -63,6 +63,26 @@
       var fields = ['savings','income','expenses','category'];
       var form = document.getElementById('budget-calculator');
       if (!form) return;
+
+      // Inline validation
+      function validateField(name) {
+        var el = form.elements[name];
+        var errEl = document.getElementById(name + '-error');
+        if (!el || !errEl) return true;
+        var valid = el.value.trim() !== '';
+        el.classList.toggle('form-field-error', !valid);
+        errEl.hidden = valid;
+        return valid;
+      }
+      form.addEventListener('submit', function(e) {
+        var ok = validateField('savings') & validateField('category');
+        if (!ok) { e.preventDefault(); e.stopImmediatePropagation(); }
+      }, true);
+      ['current-savings','category'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.addEventListener('blur', function() { validateField(el.name); });
+      });
+
       try {
         var saved = JSON.parse(localStorage.getItem(KEY) || 'null');
         if (saved) fields.forEach(function(k) { var el = form.elements[k]; if (el && saved[k] != null) el.value = saved[k]; });

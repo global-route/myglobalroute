@@ -270,30 +270,58 @@
       if (state.answers[sel.name]) sel.value = state.answers[sel.name];
     });
 
-    // Purpose tile buttons
-    stepEl.querySelectorAll('.wizard-purpose-btn').forEach(btn => {
+    // Purpose tile buttons — click + arrow-key nav (role=radio roving tabindex)
+    const purposeBtns = [...stepEl.querySelectorAll('.wizard-purpose-btn')];
+    purposeBtns.forEach((btn, i) => {
+      btn.setAttribute('role', 'radio');
+      const isSelected = state.answers.purpose === btn.dataset.value;
+      btn.setAttribute('aria-checked', isSelected ? 'true' : 'false');
+      btn.setAttribute('tabindex', (isSelected || (!state.answers.purpose && i === 0)) ? '0' : '-1');
       btn.addEventListener('click', () => {
-        stepEl.querySelectorAll('.wizard-purpose-btn').forEach(b => b.classList.remove('selected'));
+        purposeBtns.forEach(b => { b.classList.remove('selected'); b.setAttribute('aria-checked', 'false'); b.setAttribute('tabindex', '-1'); });
         btn.classList.add('selected');
+        btn.setAttribute('aria-checked', 'true');
+        btn.setAttribute('tabindex', '0');
         state.answers.purpose = btn.dataset.value;
         document.getElementById('purpose').value = btn.dataset.value;
         const nextBtn = stepEl.querySelector('.wizard-next');
         if (nextBtn) nextBtn.disabled = false;
       });
-      if (state.answers.purpose === btn.dataset.value) btn.classList.add('selected');
+      btn.addEventListener('keydown', e => {
+        const dir = (e.key === 'ArrowRight' || e.key === 'ArrowDown') ? 1 : (e.key === 'ArrowLeft' || e.key === 'ArrowUp') ? -1 : 0;
+        if (!dir) return;
+        e.preventDefault();
+        purposeBtns[(i + dir + purposeBtns.length) % purposeBtns.length].focus();
+        purposeBtns[(i + dir + purposeBtns.length) % purposeBtns.length].click();
+      });
+      if (isSelected) btn.classList.add('selected');
     });
 
-    // Budget tile buttons
-    stepEl.querySelectorAll('.wizard-budget-btn').forEach(btn => {
+    // Budget tile buttons — click + arrow-key nav (role=radio roving tabindex)
+    const budgetBtns = [...stepEl.querySelectorAll('.wizard-budget-btn')];
+    budgetBtns.forEach((btn, i) => {
+      btn.setAttribute('role', 'radio');
+      const isSelected = state.answers.budgetRange === btn.dataset.value;
+      btn.setAttribute('aria-checked', isSelected ? 'true' : 'false');
+      btn.setAttribute('tabindex', (isSelected || (!state.answers.budgetRange && i === 0)) ? '0' : '-1');
       btn.addEventListener('click', () => {
-        stepEl.querySelectorAll('.wizard-budget-btn').forEach(b => b.classList.remove('selected'));
+        budgetBtns.forEach(b => { b.classList.remove('selected'); b.setAttribute('aria-checked', 'false'); b.setAttribute('tabindex', '-1'); });
         btn.classList.add('selected');
+        btn.setAttribute('aria-checked', 'true');
+        btn.setAttribute('tabindex', '0');
         state.answers.budgetRange = btn.dataset.value;
         document.getElementById('budgetRange').value = btn.dataset.value;
         const submitBtn = document.getElementById('wizard-submit');
         if (submitBtn) submitBtn.disabled = false;
       });
-      if (state.answers.budgetRange === btn.dataset.value) btn.classList.add('selected');
+      btn.addEventListener('keydown', e => {
+        const dir = (e.key === 'ArrowRight' || e.key === 'ArrowDown') ? 1 : (e.key === 'ArrowLeft' || e.key === 'ArrowUp') ? -1 : 0;
+        if (!dir) return;
+        e.preventDefault();
+        budgetBtns[(i + dir + budgetBtns.length) % budgetBtns.length].focus();
+        budgetBtns[(i + dir + budgetBtns.length) % budgetBtns.length].click();
+      });
+      if (isSelected) btn.classList.add('selected');
     });
 
     // Next button
