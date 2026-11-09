@@ -4,7 +4,34 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
-## 2026-11-09 — CI fix, dependency restore, deployed to production
+## 2026-11-09 — WAA-2: WorkAbroadAgent wizard page live
+
+**Commit:** `7a5b282` | **Tests:** 19/19 suites, 214/214 passing | **Build:** 270 files
+
+- `src/pages/work-abroad-agent.html` — new 4-step occupation-driven work routing wizard. Skill level → occupation → passport → availability. Results load from `occupation-demand.json` and link to existing pathway records.
+- `src/js/work-abroad-agent.js` — engine: tile + select wiring, roving tabindex, localStorage state persistence, demand record matching, safety callout for high-risk categories (domestic worker, construction, factory), agent placeholder card.
+- `src/css/enhancements.css` — `.waa-safety-callout` (red alert box) and `.waa-agent-placeholder` (dashed border) added.
+- Nav updated on all 26 pages + 4 templates — "Work Abroad" CTA added between Visa Wizard and Calculator.
+- Footer updated on all pages — "Work Abroad Agent" link added to Explore section.
+- WAA-3 (agent layer) blocked until: first verified agent, commercial agreement template, rights content live.
+
+---
+
+## 2026-11-09 — Content depth sprint + WAA-1 data foundation
+
+**Commit:** `b18b804` | **Tests:** 19/19 suites, 214/214 passing | **Build:** 270 files | **Posts:** 96 → 101
+
+### Content (5 new posts)
+- R3: `playbooks/professional/uk-innovator-founder-visa-2026.md` — endorsing bodies, no GBP 50k requirement, ILR milestones
+- R4: `playbooks/professional/france-talent-passport-deep-dive-2026.md` — all 10 subcategories, EU Blue Card EUR 89k, HQE EUR 59k, founder track
+- Policy: `uk-skilled-worker-salary-threshold-increase-2024.md` — GBP 26,200 → GBP 38,700, ISL replacing SOL
+- Policy: `australia-tsmit-increase-2024.md` — AUD 53,900 → AUD 73,150, affected visas
+- Policy: `qatar-kafala-reform-what-changed-2024.md` — honest account of what changed vs. what hasn’t
+
+### WAA-1 data foundation
+- `src/data/occupation-demand.json` — 15 seed records across DE/AU/GB/QA/AE/IE/CA/NZ/SA/PT with `riskLevel` and `safetyCalloutRequired` flags
+- `src/data/agents.json` — schema only, empty agents array, policy header
+- `docs/engineering/WORK_ABROAD_AGENT.md` — full engineering plan: user flow, data model, revenue model, trust constraints, 4 implementation phases
 
 **Commits:** `df15331` | **Version:** `a296a7bc` | **Tests:** 19/19 suites, 214/214 passing
 
