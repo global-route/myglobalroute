@@ -2,7 +2,7 @@
 
 > **Generated:** 2026-11-05 | **Posts:** 96 | **Pathways covered:** 63 publishable across 30 countries
 > Use this document to plan new posts, identify gaps, and maintain consistency.
-> Note: The detailed per-post sections below enumerate the first 27 country audits and original playbooks/guides. Posts added in the content sprint (Gulf/Africa audits, CRS/tax series, working holiday, scholarships, business guides) are registered in `src/data/blog-posts.json` and counted in the summary table but not individually listed here. Three working-holiday articles (AU, IE, NZ) are under active correction — see P0.1 in `docs/sprints/P0_CRITICAL_FIXES_TASKFILE.md`.
+> Note: The detailed per-post sections below enumerate the first 27 country audits and original playbooks/guides. Posts added in the content sprint (Gulf/Africa audits, CRS/tax series, working holiday, scholarships, business guides) are registered in `src/data/blog-posts.json` and counted in the summary table but not individually listed here. Three working-holiday articles (AU, IE, NZ) are under active correction — see `docs/project/CONTENT_PIPELINE.md`.
 
 ---
 
@@ -27,12 +27,11 @@
 | Ireland Working Holiday Authorisation 2026 | `content/blog/guides/work/ireland-working-holiday-authorisation-2026.md` | `eligibilityReviewStatus: under-correction` — correction banner live |
 | New Zealand Working Holiday Visa 2026 | `content/blog/guides/work/new-zealand-working-holiday-visa-2026.md` | `eligibilityReviewStatus: under-correction` — correction banner live |
 
-Owner must verify Nigerian eligibility at official sources and update `eligibilityReviewStatus`. See `docs/sprints/OWNER_ACTIONS.md §7`.
+Owner must verify Nigerian eligibility at official sources and update `eligibilityReviewStatus`. See `docs/project/CONTENT_PIPELINE.md`.
 
 ## Content gaps
 
-All 30 countries now have country audit posts. Remaining content opportunities are reserved posts only.
-- See `docs/sprints/RESERVED_POSTS_TASKFILE.md` for 6 blocked posts (Guyana, Indonesia, UK Innovator Founder, France Talent Passport deep-dive, Singapore, Canada RCIP).
+All 30 countries now have country audit posts. Remaining content opportunities are in `docs/project/CONTENT_PIPELINE.md`.
 
 ---
 
@@ -508,9 +507,9 @@ All 30 countries now have country audit posts. Remaining content opportunities a
 
 ---
 
-## Content gaps — reserved posts only
+## Content gaps — blocked posts
 
-See `docs/sprints/RESERVED_POSTS_TASKFILE.md` for full details.
+See `docs/project/CONTENT_PIPELINE.md` for full research checklists.
 
 | ID | Post | Blocker |
 |---|---|---|

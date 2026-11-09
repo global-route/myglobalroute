@@ -1,166 +1,78 @@
-# Content Pipeline — MyPathway2Global
-**Updated:** 2026-11-05 | **Current posts:** 96 | **Sitemap URLs:** 145
-
-> **Status note:** This pipeline document was written when the platform had 59 posts. The gap analysis and Tier 1/2/3 pipeline below are preserved for reference. Most Tier 1 and Tier 2 items are now live. For the current content inventory see `docs/project/BLOG_CONTENT_INVENTORY.md`. For reserved/blocked posts see `docs/sprints/RESERVED_POSTS_TASKFILE.md`.
->
-> **P0.1 correction notice:** Three working-holiday articles listed in Gap 4 as "HIGH confidence" (Australia WHV, New Zealand WHV, Ireland WHA) are under active correction. Nigerian eligibility claims in those articles are unverified. Do not treat them as published and accurate until `eligibilityReviewStatus` is updated from `under-correction`. See `docs/sprints/P0_CRITICAL_FIXES_TASKFILE.md`.
+# Content Pipeline
+**Updated:** 2026-11-05 | **Live posts:** 96 | **Sitemap URLs:** 145
 
 ---
 
-## What exists (96 posts, as of 2026-10-30)
+## What's live (96 posts)
 
-| Category | Count | Coverage |
-|---|---|---|
-| Country Audits | 38 | All 30 countries (27 original + MU, CV, NA + Gulf/Africa) |
-| Guides | 35 | Work visas by continent, nomad/business, CRS/tax series, Schengen, working holiday, AfCFTA, diaspora |
-| Professional Playbooks | 9 | Canada, Germany, Germany vs Canada, AU DAMA, PT D3, MU, CV, NA, Saskatchewan PNP |
-| Student Playbooks | 8 | Italy DSU (x3), UK Masters, USask, Erasmus Mundus, DAAD, Commonwealth |
-| Case Studies | 2 | Chisom success story, Rejection patterns |
-| Business Playbooks | 3 | US LLC Setup, UK Ltd, Mauritius GBL |
-| Policy Updates | 1 | Canada SDS cancelled |
-
----
-
-## Gap 1 — Country audits (all resolved as of 2026-10-30)
-
-All 30 countries now have dedicated country audit posts. The items below were the original gap list — all are now published.
-
-| Country | Status |
+| Category | Count |
 |---|---|
-| UAE | Published |
-| Qatar | Published |
-| Saudi Arabia | Published |
-| Oman | Published |
-| South Africa | Published |
-| Kenya | Published |
-| Ghana | Published |
-| Rwanda | Published |
-| Mauritius | Published |
-| Cape Verde | Published |
-| Namibia | Published |
-| Guyana | Reserved — see RESERVED_POSTS_TASKFILE.md |
-| Indonesia | Reserved — see RESERVED_POSTS_TASKFILE.md |
+| Country Audits | 38 — all 30 countries covered |
+| Guides | 35 |
+| Professional Playbooks | 9 |
+| Student Playbooks | 8 |
+| Business Playbooks | 3 |
+| Case Studies | 2 |
+| Policy Updates | 1 |
 
 ---
 
-## Gap 2 — Deferred posts (blocked on research/verification)
+## Under correction
 
-| Post | File | Blocker |
+Three working-holiday articles have correction banners live. Nigerian eligibility claims are unverified. Do not treat as accurate until `eligibilityReviewStatus` is updated from `under-correction`.
+
+| Article | File | Action required |
 |---|---|---|
-| Paraguay SUACE/Investor Pass deep-dive | `guides/business/paraguay-suace-investor-pass-2026.md` | USD 70k threshold unverified — needs lawyer |
-| Saskatchewan PNP post-graduation | `playbooks/professional/saskatchewan-pnp-post-graduation-2026.md` | Needs SINP evidence records |
+| Australia Working Holiday Visa 2026 | `content/blog/guides/work/australia-working-holiday-visa-2026.md` | Verify at `immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462` |
+| Ireland Working Holiday Authorisation 2026 | `content/blog/guides/work/ireland-working-holiday-authorisation-2026.md` | Verify at `irishimmigration.ie/coming-to-work-in-ireland/what-are-my-work-visa-options/working-holiday-authorisation/` |
+| New Zealand Working Holiday Visa 2026 | `content/blog/guides/work/new-zealand-working-holiday-visa-2026.md` | Verify at `immigration.govt.nz/new-zealand-visas/visas/visa/working-holiday-visa` |
+
+If Nigeria IS listed: set `eligibilityReviewStatus: verified-eligible`, remove correction banner.
+If Nigeria is NOT listed: set `eligibilityReviewStatus: verified-ineligible`, update banner to permanent ineligibility notice.
 
 ---
 
-## Gap 3 — Thin categories needing depth
+## Blocked — needs primary source research before writing
 
-**Business Playbooks (1 post):** Only US LLC. Missing:
-- UK Ltd company setup from Africa
-- Portugal company formation (NHR + D3 combination)
-- Rwanda company formation (fastest in Africa)
-- UAE free zone company setup
+| ID | Post | Target file | Blocker | Est. research |
+|---|---|---|---|---|
+| R1 | Guyana 2-Year Freelance Work Visa | `content/blog/country-audits/guyana/guyana-visa-from-nigeria-2026.md` | No research done — verify at `immigration.gov.gy` | 1-2 hrs |
+| R2 | Indonesia Tourist/Business Visa | `content/blog/country-audits/indonesia/indonesia-visa-from-nigeria-2026.md` | No research done — verify at `imigrasi.go.id` | 1-2 hrs |
+| R3 | UK Innovator Founder Visa | `content/blog/playbooks/professional/uk-innovator-founder-visa-2026.md` | Endorsing body list + GBP 50,000 threshold — verify at `gov.uk/innovator-founder-visa` | 1 hr |
+| R4 | France Talent Passport deep-dive | `content/blog/playbooks/professional/france-talent-passport-deep-dive-2026.md` | Subcategory salary thresholds — verify at `france-visas.gouv.fr/en/web/france-visas/talent-passport` | 1 hr |
+| R5 | Singapore Work Visa | `content/blog/country-audits/singapore/singapore-visa-from-nigeria-2026.md` | Country not in platform — needs country + pathway records added first. EP min SGD 5,000/month, S Pass min SGD 3,150/month — verify at `mom.gov.sg/passes-and-permits` | 3-4 hrs |
+| R6 | Canada RCIP | `content/blog/playbooks/professional/canada-rcip-rural-immigration-2026.md` | Program status unclear (may be replaced) — verify at `canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-northern-immigration-pilot.html` | 2 hrs |
 
-**Case Studies (2 posts):** Only Chisom + rejection patterns. Missing:
+**Quickest wins:** R3 and R4 — both have known primary sources, 1 hr each.
+
+---
+
+## Deferred — needs external input (no unblock path yet)
+
+| Post | Blocker |
+|---|---|
+| Paraguay SUACE/Investor Pass deep-dive | USD 70k threshold unverified — needs immigration lawyer |
+| Saskatchewan PNP post-graduation | Needs SINP evidence records |
+| Tax residency for African remote workers | Needs tax adviser input |
+| Rwanda bank account guide for foreigners | Needs primary source research |
+| Germany Working Holiday / Au Pair (FSJ) | Medium confidence — research needed |
+
+---
+
+## Gap areas (no research blocker — can write when prioritised)
+
+**Case Studies** (2 live, thin):
 - Real budget breakdown: Nigeria to UAE (construction/healthcare worker)
 - Real budget breakdown: Nigeria to Germany (Chancenkarte journey)
 - Real budget breakdown: Nigeria to Australia (DAMA regional worker)
 - Visa rejection recovery: what happened after refusal and what changed
 
-**Policy Updates (1 post):** Only Canada SDS. Missing:
-- UK salary threshold increase 2024 (GBP 26,200 -> GBP 38,700)
+**Policy Updates** (1 live, thin):
+- UK salary threshold increase (GBP 26,200 to GBP 38,700)
 - Australia TSMIT increase 2024
-- Germany Chancenkarte launch 2024
-- Qatar Kafala reform 2020 — what changed for workers
+- Qatar Kafala reform — what changed for workers
 
----
-
-## Gap 4 — Hot topics from the agent market (research-ready)
-
-From the Wakanow Affiliates screenshots and market research:
-
-### Work and holiday visas (high search volume, agent market active)
-| Topic | Why it matters | Research status |
-|---|---|---|
-| Australia Working Holiday Visa (subclass 417/462) | Huge demand, age 18-35, no job offer needed | Primary source: homeaffairs.gov.au — HIGH confidence |
-| New Zealand Working Holiday Visa | Age 18-30 (35 for some countries), 12 months | Primary source: immigration.govt.nz — HIGH confidence |
-| Ireland Working Holiday Authorisation | Age 18-35, 12 months, for Nigerian nationals | Primary source: irishimmigration.ie — HIGH confidence |
-| Germany Working Holiday (Au Pair/FSJ) | Age 18-26, cultural exchange | Primary source: auswaertiges-amt.de — MEDIUM confidence |
-
-### Schengen tourist visa (highest volume in agent market)
-| Topic | Why it matters | Research status |
-|---|---|---|
-| Schengen visa from Nigeria 2026 | Most searched visa topic for Nigerians | Primary source: VFS Global + embassy portals — HIGH confidence |
-| Schengen visa rejection recovery | Second most common agent query | Evidence from refusal patterns — MEDIUM confidence |
-| Schengen visa financial proof requirements | Specific figures agents get wrong | Primary source: embassy portals — HIGH confidence |
-
-### Nomad and remote work (growing market)
-| Topic | Why it matters | Research status |
-|---|---|---|
-| Best countries for African digital nomads 2026 | Consolidates existing nomad content | Existing research — HIGH confidence |
-| How to prove remote income for a visa application | Practical gap — agents don't cover this | General guidance — MEDIUM confidence |
-| Tax residency for African remote workers | Critical for nomads, no one covers it honestly | Complex — needs tax adviser input |
-
-### Investment and business (AfCFTA angle)
-| Topic | Why it matters | Research status |
-|---|---|---|
-| How to open a bank account in Rwanda as a foreigner | Practical gap for AfCFTA business | Research needed |
-| Mauritius Global Business Licence explained | For holding company structures | Primary source: edbmauritius.org — HIGH confidence |
-| South Africa Critical Skills Visa — full application guide | High demand, complex process | Primary source: dha.gov.za — HIGH confidence |
-
-### Student (gaps in existing coverage)
-| Topic | Why it matters | Research status |
-|---|---|---|
-| Erasmus Mundus scholarships for African students | Fully funded EU masters, high value | Primary source: ec.europa.eu — HIGH confidence |
-| DAAD scholarships for Nigerian students | Germany-specific, high demand | Primary source: daad.de — HIGH confidence |
-| Commonwealth scholarships 2026 | UK-based, African applicants eligible | Primary source: cscuk.fcdo.gov.uk — HIGH confidence |
-| How to get a student loan for studying abroad | Practical gap — no one covers this | Research needed |
-
----
-
-## Recommended immediate pipeline (20 posts)
-
-### Tier 1 — Write now (high confidence, high demand)
-
-1. **Australia Working Holiday Visa 2026** — subclass 417/462, age 18-35, no job offer, 12 months, path to second year
-2. **New Zealand Working Holiday Visa 2026** — age 18-30, 12 months, work anywhere
-3. **Ireland Working Holiday Authorisation 2026** — Nigerian nationals eligible, 12 months
-4. **Schengen Visa from Nigeria 2026: The Complete Financial Proof Guide** — what banks want, how much, how long to hold
-5. **South Africa Critical Skills Visa 2026: Full Application Guide** — step by step, documents, professional body assessment
-6. **UAE Visa from Nigeria 2026** — country audit, employment visa, freelance visa, tourist visa
-7. **Qatar Visa from Nigeria 2026** — country audit, work permit, Kafala reform
-8. **Saudi Arabia Visa from Nigeria 2026** — country audit, work visa, Vision 2030 routes
-9. **Kenya Visa from Nigeria 2026** — country audit, work permit, Special Pass
-10. **Ghana Visa from Nigeria 2026** — country audit, Right of Abode, GIPC investor permit
-
-### Tier 2 — Write after Tier 1 (medium confidence, high demand)
-
-11. **Erasmus Mundus Scholarships for African Students 2026** — fully funded EU masters
-12. **DAAD Scholarships for Nigerian Students 2026** — Germany government scholarships
-13. **Commonwealth Scholarships 2026** — UK-based, African applicants
-14. **Oman Visa from Nigeria 2026** — country audit, work visa, freelance permit
-15. **Rwanda Visa from Nigeria 2026** — country audit, investor permit, skilled worker
-16. **UK Company Setup from Africa 2026** — UK Ltd, bank account, tax obligations
-17. **Mauritius Global Business Licence 2026** — holding company structure, treaty network
-18. **Best Countries for African Digital Nomads 2026** — consolidation guide
-19. **How to Prove Remote Income for a Visa Application** — practical guide
-20. **Schengen Visa Rejection Recovery 2026** — what to do after refusal
-
-### Tier 3 — Deferred (needs verification/research)
-
-21. Paraguay SUACE/Investor Pass deep-dive — needs lawyer
-22. Saskatchewan PNP post-graduation — needs SINP evidence
-23. Tax residency for African remote workers — needs tax adviser input
-24. How to open a bank account in Rwanda as a foreigner — needs research
-25. Germany Working Holiday (Au Pair/FSJ) — medium confidence, research needed
-
----
-
-## Total pipeline
-
-| Status | Count |
-|---|---|
-| Live | 96 |
-| Tier 1 (written, some under correction) | 10 |
-| Tier 2 (written) | 10 |
-| Tier 3 (deferred) | 5 |
-| **Total with pipeline** | **96 live + 5 deferred** |
+**Business Playbooks** (3 live):
+- Portugal company formation (NHR + D3 combination)
+- Rwanda company formation
+- UAE free zone company setup
