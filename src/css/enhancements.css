@@ -1441,6 +1441,15 @@ th {
   }
 }
 
+/* ── INLINE LINK UNDERLINES (WCAG 1.4.1 — links distinguishable without color) ── */
+p a, li a, td a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+p a:hover, li a:hover, td a:hover {
+  text-decoration: none;
+}
+
 /* ── WIZARD NAV PLACEHOLDER (step 1 back-button slot) ── */
 .wizard-nav-placeholder {
   visibility: hidden;
