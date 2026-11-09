@@ -1,7 +1,8 @@
 # Global Route: Blog Content Summary
 
-**Created:** July 21, 2026  
-**Status:** Foundation Complete
+> **ARCHIVED — superseded 2026-11-05.** This document was created in July 2026 when the platform had 5 blog posts and Phase 2/3 integration was pending. The platform now has 96 posts across 7 categories, all 30 countries covered, Eleventy fully integrated, and all pages live. URLs referenced here (`global-route.app`) are the old domain — production is `https://mypathway2global.org.uk`. See `docs/project/BLOG_CONTENT_INVENTORY.md` for the current content inventory.
+
+**Created:** July 21, 2026 (archived)
 
 ---
 

@@ -1,8 +1,6 @@
-# 📚 Blueprint to Execution: Complete Guide
+# Blueprint to Execution
 
-**Status:** All documentation extracted from Blueprint and pushed to GitHub  
-**Date:** January 15, 2026  
-**Repository:** https://github.com/global-route/myglobalroute
+> **ARCHIVED — superseded 2026-11-05.** This document was written in January 2026 when the platform had 5 blog posts and Phase 2/3 tasks were pending. All items listed as pending (playbook pages, calculator, countries page, 26-country database, 10+ articles) are now complete. The platform has 96 posts, 30 countries, 69 pathways and all core pages live. Current state is in `docs/project/PHASE_STATUS.md` and `docs/sprints/ACTIVE_SPRINT.md`.
 
 ---
 

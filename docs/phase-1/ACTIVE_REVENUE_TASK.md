@@ -1,10 +1,10 @@
 # Active Revenue Task — P1-REV Commercial Measurement & Readiness
 
-> Cross-sprint status and release sequencing are governed by [`docs/project/HANDOVER_RECONCILIATION_2026-10-09.md`](../project/HANDOVER_RECONCILIATION_2026-10-09.md). Revenue implementation is concurrent work, not a release bypass.
+> **Updated 2026-11-05:** Most remaining acceptance items below are now resolved. AdSense publisher ID `ca-pub-8077583188666813` is live. `ads.txt` is populated. Production origin is confirmed: `https://mypathway2global.org.uk` on Cloudflare Workers (not Netlify). The cross-reference to `HANDOVER_RECONCILIATION_2026-10-09.md` points to an archived doc — see `docs/sprints/ACTIVE_SPRINT.md` for current state.
 
-**Phase:** P1-REV  
-**Status:** Foundation implemented; verification and external launch gates remain  
-**Execution relationship:** Concurrent preparation with P0-S5, never a substitute for release verification.
+**Phase:** P1-REV
+**Status:** AdSense live — Google policy review pending. Partner/lead infrastructure not yet activated.
+**Updated:** 2026-11-05
 
 ## Completed in the current implementation
 

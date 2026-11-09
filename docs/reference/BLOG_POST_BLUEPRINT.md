@@ -1,6 +1,6 @@
 # Blog Post Blueprint
 
-s the **Purpose:** Define the editorial standard for MyPathway2Global blog posts — productive, tool-enriched, evidence-gated content.
+**Purpose:** Define the editorial standard for MyPathway2Global blog posts — productive, tool-enriched, evidence-gated content.
 
 ---
 

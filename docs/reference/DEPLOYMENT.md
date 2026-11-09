@@ -1,6 +1,18 @@
 # Deployment & DevOps Guide
 
-**Reconciled:** September 12, 2026
+**Updated:** 2026-11-05
+
+> **Correction:** This document was written in September 2026 when the platform was on Netlify. The platform is now deployed on **Cloudflare Workers** via `wrangler.jsonc`. The Netlify-specific rules below are historical. Current deployment commands are:
+>
+> ```bash
+> npm run build          # build to dist/
+> npx wrangler deploy    # deploy to Cloudflare Workers
+> npm run deploy:wrangler
+> ```
+>
+> The production smoke test route `/pages/find-my-route.html` is now `/pages/find-mypathway.html`.
+
+**Reconciled:** September 12, 2026 (Netlify era — see correction above)
 
 ## Production pipeline
 

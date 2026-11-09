@@ -1,5 +1,7 @@
 # Deployed Site Verification
 
+> **Updated 2026-11-05:** Production origin is confirmed: `https://mypathway2global.org.uk` on Cloudflare Workers. The "do not use until verified" note below is historical. The route `/pages/find-my-route.html` is now `/pages/find-mypathway.html`.
+
 ## Purpose
 
 Verify an authoritative deployed Global Route origin without guessing a hostname or restoring stale production metadata.

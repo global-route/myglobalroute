@@ -18,9 +18,13 @@ This directory contains stable technical and product standards, not the current 
 - `PRIVACY_SECURITY_COMPLIANCE.md` — privacy and security implementation notes.
 
 ## Planning references
-- `BLUEPRINT_TO_EXECUTION.md` — how the product vision maps to implementation.
+- `BLUEPRINT_TO_EXECUTION.md` — ARCHIVED: January 2026 doc, all Phase 2/3 tasks now complete. See PHASE_STATUS.md.
 - `Global Route Blueprint.md` — original/historical blueprint. Older claims are not authoritative when they conflict with current official evidence or the Data Trust Standard.
 - `INDEX.md` — this directory's detailed index.
+
+## Architecture and operations
+- `DEPLOYMENT.md` — NOTE: written for Netlify (Sept 2026). Platform is now on Cloudflare Workers. See correction notice at top of file.
+- `PRIVACY_SECURITY_COMPLIANCE.md` — privacy and security implementation notes.
 
 For the complete map, use [`docs/INDEX.md`](../INDEX.md). For current work, use [`docs/sprints/ACTIVE_SPRINT.md`](../sprints/ACTIVE_SPRINT.md) and [`docs/project/PHASE_STATUS.md`](../project/PHASE_STATUS.md).
 

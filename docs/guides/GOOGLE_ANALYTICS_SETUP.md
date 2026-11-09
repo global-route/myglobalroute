@@ -1,6 +1,10 @@
 # Google Analytics 4 Setup Guide
 
-## Overview
+> **ARCHIVED — superseded 2026-11-05.** This guide was written in August 2026 for a GA4 setup that was never completed. The platform uses **Sabilytics** (`atsngkb78nmt`) for analytics, not GA4. The `analytics.js` module uses a provider-neutral event contract, not the GA4-specific functions described here. The website URL referenced (`https://myglobalroute.com`) is not the production domain — production is `https://mypathway2global.org.uk`. Do not follow this guide.
+
+---
+
+**Last Updated:** August 18, 2026 (archived)
 
 Google Analytics 4 (GA4) is configured for Global Route to track user behavior, engagement, and conversions. This guide explains how to complete the setup.
 

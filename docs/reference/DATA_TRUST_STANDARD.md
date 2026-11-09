@@ -1,7 +1,10 @@
 # Global Route Data Trust Standard
 
-**Status:** Active engineering standard  
+**Status:** Active engineering standard
+**Updated:** 2026-11-05
 **Effective:** September 5, 2026
+
+> **Corrections vs original:** Brand is now MyPathway2Global (not Global Route). Registry is 30 countries (not 26). The "incomplete blueprint dataset" note is historical — the registry is now fully populated with 69 pathways (63 publishable), 218+ evidence records and structured requirements on all 63 publishable pathways. The implementation sequence below is complete.
 
 ## Purpose
 
