@@ -1,0 +1,5 @@
+{
+  "schemaVersion": "1.0.0",
+  "policy": "No agent is shown to users until verificationStatus is 'verified'. Verification requires: (1) confirmed business registration in operating country, (2) licence number where applicable, (3) reference check, (4) signed commercial agreement. Agents with verificationStatus 'pending' or 'suspended' are never surfaced in the UI.",
+  "agents": []
+}

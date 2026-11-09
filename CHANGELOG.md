@@ -4,9 +4,21 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
+## 2026-11-09 — CI fix, dependency restore, deployed to production
+
+**Commits:** `df15331` | **Version:** `a296a7bc` | **Tests:** 19/19 suites, 214/214 passing
+
+- `scripts/verify-build.js` — route engine check fixed: was looking for `GlobalRoute.RouteEngine` string inlined in HTML; engine is loaded via `<script src="/js/route-engine.js">` so check now looks for that script tag. Was causing quality gate failure on every build.
+- `npm install` run in `myglobalroute/` — restored 589 packages including `markdown-it` (was missing after wrangler was accidentally installed in parent directory)
+- `wrangler` installed locally as devDependency — no longer requires npx download at deploy time
+- Build: 265 files, 0 errors (Eleventy 3.1.8) | Build verify ✅ | SEO/a11y ✅ | Tests ✅
+- Deployed to `mypathway2global.org.uk`
+
+---
+
 ## 2026-11-09 — WCAG 2.1 AA: nav contrast fix, inline link underlines
 
-**Commits:** `6630a80`, `0431e87` | **Axe scan:** 4 pages, 0 Critical, Serious violations pending re-scan after deploy
+**Commits:** `6630a80`, `0431e87`, `1c23c39` | **Axe scan:** 4 pages, 0 Critical/Serious violations after fixes
 
 - `enhancements.css` — `.nav-menu a.active { color: var(--color-amber) !important }` — active nav link was rendering `#0b409c` on `#10316b` (ratio 1.33:1). Amber `#ffc947` on `#10316b` is ~7.5:1, passes WCAG AA. Affected all 4 pages (4-5 Serious violations each).
 - `app.js` — nav active matching changed from `startsWith` to exact path equality — `startsWith` caused multiple links to receive `.active` simultaneously, which was the root cause of the wrong color rendering.
@@ -14,7 +26,7 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
-
+## 2026-11-08 — P2 UI polish, WCAG prep, sprint docs deleted
 
 **Commits:** `e9ac0e3`, `4120693` | **Tests:** 19/19 suites, 180/180 passing
 

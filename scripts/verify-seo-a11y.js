@@ -15,7 +15,7 @@ const walkHtml = directory => {
 
 const isCoreRoute = relative => (
   relative === 'index.html' ||
-  relative === 'pages/find-my-route.html' ||
+  relative === 'pages/find-mypathway.html' ||
   relative === 'pages/countries.html' ||
   relative === 'pages/calculator.html' ||
   relative.startsWith('pages/countries/') ||
