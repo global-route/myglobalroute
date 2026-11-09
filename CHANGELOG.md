@@ -4,7 +4,17 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
-## 2026-11-05 — P2 UI polish: Asia filter, wizard keyboard nav, calculator validation; sprint docs removed
+## 2026-11-09 — WCAG 2.1 AA: nav contrast fix, inline link underlines
+
+**Commits:** `6630a80`, `0431e87` | **Axe scan:** 4 pages, 0 Critical, Serious violations pending re-scan after deploy
+
+- `enhancements.css` — `.nav-menu a.active { color: var(--color-amber) !important }` — active nav link was rendering `#0b409c` on `#10316b` (ratio 1.33:1). Amber `#ffc947` on `#10316b` is ~7.5:1, passes WCAG AA. Affected all 4 pages (4-5 Serious violations each).
+- `app.js` — nav active matching changed from `startsWith` to exact path equality — `startsWith` caused multiple links to receive `.active` simultaneously, which was the root cause of the wrong color rendering.
+- `enhancements.css` — `p a, li a, td a { text-decoration: underline }` added — fixes WCAG 1.4.1 "links must be distinguishable without relying on color" (2 Serious violations on find-mypathway). Underline removed on hover for visual cleanliness.
+
+---
+
+
 
 **Commits:** `e9ac0e3`, `4120693` | **Tests:** 19/19 suites, 180/180 passing
 
