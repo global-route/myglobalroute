@@ -2,7 +2,7 @@
 
 > **Updated:** 2026-11-10 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 214/214 passing
-> **Commit:** `192ad97` | **Blog posts:** 107 | **Sitemap URLs:** 145 | **Stale requirements:** 0
+> **Commit:** `a437640` | **Blog posts:** 107 | **Sitemap URLs:** 146 | **Stale requirements:** 38
 
 ---
 
@@ -28,7 +28,11 @@
 | P1 — Service experience & governance alignment | **Code complete** | Owner: P1.5 privacy audit; generate post counts from collection |
 | Content depth sprint | **Complete** | — |
 | WAA-1 — Occupation demand data | **Complete** | — |
-| WAA-2 — WorkAbroadAgent wizard UI | **Complete** | WAA-3 blocked: needs verified agent + commercial agreement |
+| WAA-2 — WorkAbroadAgent wizard UI | **Complete** | — |
+| WAA-3b/3c/3d — Agent matching, intake form, analytics | **Complete** | — |
+| WAA-4 — Unskilled safety gate | **Complete** | — |
+| WAA notification worker | **Built, not deployed** | Owner: Resend account + Worker deploy + first agent |
+| WAA-3a — First verified agent | **Blocked** | Owner: vet agent, sign agreement, add to agents.json |
 | WCAG 2.1 AA | **Complete** | Re-run axe after next deploy |
 
 ---
@@ -353,41 +357,30 @@ A task is not complete because a file exists. Legal/data claims require evidence
 
 ---
 
-## Phase WAA — WorkAbroadAgent ⏳ in progress (2026-11-09)
+## Phase WAA — WorkAbroadAgent ⏳ owner-gated (2026-11-10)
 
 | Phase | Scope | Status |
 |---|---|---|
-| WAA-1 | Occupation demand registry + agents schema | **Done** — `src/data/occupation-demand.json` (15 records), `src/data/agents.json` (schema only) |
-| WAA-2 | Wizard UI — 4-step occupation-driven routing, safety callouts, agent placeholder | **Done** — `src/pages/work-abroad-agent.html`, `src/js/work-abroad-agent.js`, nav/footer wired |
-| WAA-3a | Populate agents.json — first verified agent, signed commercial agreement | **Blocked** — owner must vet first agent and sign commercial agreement |
-| WAA-3b | Agent matching logic + intake form + Formspree submission | **Done** — `192ad97` |
-| WAA-3c | Analytics events: agent_connect_clicked, agent_lead_submitted | **Done** — `192ad97` |
-| WAA-4 | Unskilled safety gate — pre-form checklist for high-risk categories | **Done** — `192ad97` |
-| validate-agent-registry.js | Quality gate script for agents.json | **Done** — `192ad97` |
+| WAA-1 | Occupation demand registry + agents schema | **Done** — 15 records, schema v1.1.0 |
+| WAA-2 | Wizard UI — 4-step routing, safety callouts, agent placeholder | **Done** — `a437640` |
+| WAA-3b | Agent matching logic (corridor + occupation + skillLevel) | **Done** — `192ad97` |
+| WAA-3c | Intake form + `/api/agent-lead` Worker submission | **Done** — `a437640` |
+| WAA-3d | Analytics events: agent_connect_clicked, agent_lead_submitted | **Done** — `192ad97` |
+| WAA-4 | Unskilled safety gate — 5-item pre-form checklist | **Done** — `192ad97` |
+| validate-agent-registry.js | Quality gate script | **Done** — `192ad97` |
+| Notification Worker | Fan-out to Slack/Telegram/WhatsApp/Email | **Built** — `workers/agent-lead.js` — not deployed |
+| WAA-3a | First verified agent in agents.json | **Blocked** — owner |
 
-**WAA gap — what is built vs what is live:**
-- Steps 1-4 (skill, occupation, passport, availability): built and live
-- Demand matching engine: built and live (15 records across DE, AU, GB, QA, AE, IE, CA, NZ, SA, PT)
-- Country result cards with demand badges and visa route links: built and live
-- Safety callouts for high-risk categories (domestic_worker, construction, factory, logistics): built and live
-- WAA-4 safety gate checklist (5-item pre-form confirmation for high-risk): built and live
-- Agent matching logic (matchAgents by corridor + occupation + skillLevel): built, live, untestable end-to-end
-- Intake form (name, email, WhatsApp, 2 checkboxes): built, live, untestable end-to-end
-- Formspree submission handler: built, live, requires `data-formspree-id` per agent to activate
-- Analytics events (agent_connect_clicked, agent_lead_submitted): built and live
-- validate-agent-registry.js quality gate: built and live
-- `agents.json` populated with verified agents: **0 agents — blocked on owner**
-- Formspree form IDs configured: **0 configured — blocked on owner**
+**What is built and waiting:**
+- Full wizard UI (steps 1-4), demand matching, result cards, safety callouts: live
+- Agent matching logic, intake form, form submission to `/api/agent-lead`: live in code, Worker not deployed
+- Notification Worker fans out to Slack + Telegram + WhatsApp + Email in parallel: built, awaiting deploy + secrets
+- agents.json schema v1.1.0 with `notifications` block per agent: ready
+- validate-agent-registry.js quality gate: ready
+- work-abroad-agent.html added to sitemap: done
 
-**Single remaining blocker:** Owner vets one agent, signs commercial agreement, adds to agents.json with Formspree ID. Everything else is ready.
-
-**WAA-3 scope (simple):** wizard collects profile → matches verified agents by corridor + occupation → user fills inline intake form (name, email, WhatsApp, 2 checkboxes) → agent receives lead by email. No dashboard, no payments, no accounts. See `docs/engineering/WORK_ABROAD_AGENT.md`.
-
-**Owner actions required before WAA-3a:**
-- Define agent vetting checklist (business registration, licence, reference, signed agreement)
-- Sign first commercial agreement — suggested first corridor: NG-DE tech
-- Confirm lead fee structure
-- Choose form submission method: Formspree (fast) or Cloudflare Worker (more control)
+**Single path to live:** Owner sets Resend secret → deploys Worker → vets first agent → adds to agents.json → deploys site.
+Full walkthrough: `docs/engineering/WAA_ACTIVE_TASK.md`
 
 ---
 
