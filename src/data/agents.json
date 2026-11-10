@@ -1,5 +1,28 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "policy": "No agent is shown to users until verificationStatus is 'verified'. Verification requires: (1) confirmed business registration in operating country, (2) licence number where applicable, (3) reference check, (4) signed commercial agreement. Agents with verificationStatus 'pending' or 'suspended' are never surfaced in the UI.",
-  "agents": []
+  "agents": [
+    {
+      "_template": true,
+      "_note": "Copy this object, remove _template and _note, fill all fields, set verificationStatus to verified when due diligence is complete.",
+      "id": "agent-CORRIDOR-OCC-001",
+      "name": "Agency Full Name",
+      "corridors": ["NG-DE"],
+      "occupationCategories": ["software_it"],
+      "skillLevels": ["skilled"],
+      "verificationStatus": "pending",
+      "verifiedAt": null,
+      "tier": "free",
+      "contactEmail": "agent@example.com",
+      "notifications": {
+        "slackWebhookUrl": null,
+        "telegramBotToken": null,
+        "telegramChatId": null,
+        "whatsappNumber": null
+      },
+      "licenceNumber": null,
+      "licenceAuthority": null,
+      "formspreeId": null
+    }
+  ]
 }

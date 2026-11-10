@@ -16,4 +16,12 @@
       "custom_domain": true
     }
   ]
+  // Worker entrypoint for API routes (agent lead fan-out)
+  // Uncomment when deploying the agent-lead worker:
+  // "main": "workers/agent-lead.js"
+  //
+  // To add the /api/agent-lead route, the assets worker and the API worker
+  // must be split into two named workers or use a single worker with
+  // assets + fetch handler. See docs/engineering/WORK_ABROAD_AGENT.md
+  // for deployment instructions.
 }

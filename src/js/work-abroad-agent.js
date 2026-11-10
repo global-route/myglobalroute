@@ -365,10 +365,14 @@
           _subject:  `Work abroad lead — ${state.answers.passportCountry}→${dest} ${state.answers.occupationCategory}`
         };
 
-        // Formspree endpoint — one per agent, keyed by agentId
-        // Owner must set data-formspree-id on the form or configure per agent
-        const formspreeId = form.dataset.formspreeId || agentEmail;
-        if (!formspreeId) {
+        // POST to Cloudflare Worker /api/agent-lead
+        const formspreeId = form.dataset.formspreeId;
+        const useWorker = !formspreeId; // prefer Worker endpoint; fall back to Formspree if id set
+        const endpoint = useWorker
+          ? '/api/agent-lead'
+          : `https://formspree.io/f/${formspreeId}`;
+
+        if (!useWorker && !formspreeId) {
           showFormResult(form, false, 'Agent contact not configured yet. Please check back soon.');
           submitBtn.disabled = false;
           submitBtn.textContent = 'Send my details to agent';
@@ -376,7 +380,7 @@
         }
 
         try {
-          const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
+          const res = await fetch(endpoint, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
             body: JSON.stringify(payload)
