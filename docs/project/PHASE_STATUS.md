@@ -1,6 +1,6 @@
 # Phase Status — MyPathway2Global
 
-> **Updated:** 2026-11-09 | **Release:** GO — production live
+> **Updated:** 2026-11-10 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 214/214 passing
 > **Commit:** `192ad97` | **Blog posts:** 107 | **Sitemap URLs:** 145 | **Stale requirements:** 0
 
@@ -364,6 +364,22 @@ A task is not complete because a file exists. Legal/data claims require evidence
 | WAA-3c | Analytics events: agent_connect_clicked, agent_lead_submitted | **Done** — `192ad97` |
 | WAA-4 | Unskilled safety gate — pre-form checklist for high-risk categories | **Done** — `192ad97` |
 | validate-agent-registry.js | Quality gate script for agents.json | **Done** — `192ad97` |
+
+**WAA gap — what is built vs what is live:**
+- Steps 1-4 (skill, occupation, passport, availability): built and live
+- Demand matching engine: built and live (15 records across DE, AU, GB, QA, AE, IE, CA, NZ, SA, PT)
+- Country result cards with demand badges and visa route links: built and live
+- Safety callouts for high-risk categories (domestic_worker, construction, factory, logistics): built and live
+- WAA-4 safety gate checklist (5-item pre-form confirmation for high-risk): built and live
+- Agent matching logic (matchAgents by corridor + occupation + skillLevel): built, live, untestable end-to-end
+- Intake form (name, email, WhatsApp, 2 checkboxes): built, live, untestable end-to-end
+- Formspree submission handler: built, live, requires `data-formspree-id` per agent to activate
+- Analytics events (agent_connect_clicked, agent_lead_submitted): built and live
+- validate-agent-registry.js quality gate: built and live
+- `agents.json` populated with verified agents: **0 agents — blocked on owner**
+- Formspree form IDs configured: **0 configured — blocked on owner**
+
+**Single remaining blocker:** Owner vets one agent, signs commercial agreement, adds to agents.json with Formspree ID. Everything else is ready.
 
 **WAA-3 scope (simple):** wizard collects profile → matches verified agents by corridor + occupation → user fills inline intake form (name, email, WhatsApp, 2 checkboxes) → agent receives lead by email. No dashboard, no payments, no accounts. See `docs/engineering/WORK_ABROAD_AGENT.md`.
 

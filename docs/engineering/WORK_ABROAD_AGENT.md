@@ -1,6 +1,6 @@
 # WorkAbroadAgent — Engineering Blueprint
-**Status:** WAA-1 done | WAA-2 done | WAA-3 next
-**Updated:** 2026-11-09
+**Status:** WAA-1 done | WAA-2 done | WAA-3b/3c/3d done | WAA-4 done | WAA-3a blocked (owner)
+**Updated:** 2026-11-10
 
 ---
 
@@ -335,12 +335,12 @@ This is a UI gate only — it does not prevent a determined user from proceeding
 |---|---|---|---|
 | WAA-1 | Demand data + agents schema | Done | — |
 | WAA-2 | Wizard steps 1-4 + result cards + safety callout | Done | — |
-| WAA-3a | Populate agents.json with first verified agent | Blocked | Owner: agent vetting + commercial agreement |
-| WAA-3b | Agent matching logic in work-abroad-agent.js | Ready to build | WAA-3a (need at least one agent to test against) |
-| WAA-3c | Intake form + Formspree submission | Ready to build | WAA-3a |
-| WAA-3d | Analytics events for connect + submit | Ready to build | WAA-3b |
-| WAA-4 | Unskilled safety gate checklist | Ready to build | Nothing — can start now |
-| validate-agent-registry.js | Quality gate script | Ready to build | Nothing |
+| WAA-3a | Populate agents.json with first verified agent | **Blocked** | Owner: agent vetting + commercial agreement |
+| WAA-3b | Agent matching logic in work-abroad-agent.js | **Done** — `192ad97` | — |
+| WAA-3c | Intake form + Formspree submission | **Done** — `192ad97` | — |
+| WAA-3d | Analytics events for connect + submit | **Done** — `192ad97` | — |
+| WAA-4 | Unskilled safety gate checklist | **Done** — `192ad97` | — |
+| validate-agent-registry.js | Quality gate script | **Done** — `192ad97` | — |
 
 WAA-3b, 3c, 3d, and WAA-4 can all be built now. They just cannot be tested end-to-end until WAA-3a (first verified agent) is done.
 

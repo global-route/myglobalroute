@@ -2,7 +2,7 @@
 
 **Document type:** Internal — commercial foundation
 **Status:** Active — partners page live at `/pages/partners.html`
-**Updated:** 2026-11-05
+**Updated:** 2026-11-10
 **Prerequisite:** Legal review required before any partner agreement is signed
 
 > **Note:** The "Next steps" section at the bottom of this document lists building `src/pages/partners.html` as pending. That page is now live. Remaining next steps are the legal/commercial items (agreement template, fee structure, application form, legal entity registration).
@@ -114,6 +114,24 @@ MyPathway2Global operates a three-tier partner model. Each tier has defined obli
 8. Data protection obligations (partner is data controller for their client data)
 
 **This agreement requires solicitor review before use.**
+
+---
+
+## WAA agent pipeline — research-identified candidates
+
+The following agents/companies were observed in the Wakanow Affiliates Telegram group (1,660 members) and Nigerian Facebook migration communities during field research on 2026-11-09. This is NOT a verified list. It is a research starting point for Tier B due diligence.
+
+| Agent/Company | Seen in | Services claimed | Verification needed |
+|---|---|---|---|
+| HelpOverseas | Facebook paid ads | Canada PR, Express Entry | Check RCIC registration at `college-ic.ca` |
+| HY BAZE Travels and Tours | Telegram | Canada Francophone, Schengen tourist | Lagos-based. Check CAC registration Nigeria |
+| Aventria Tours and Events | Telegram | Canada PR, South Africa ETA, Doha holidays | Check CAC registration, verify RCIC if claiming PR services |
+| Liberty Track Travels | Telegram | Europe visa packages, EUR 3,500 | Lagos + Accra offices. Check CAC + Ghana Tourism Authority |
+| Dola-Bello Trust Resources Ltd | Telegram | Antigua and Barbuda visa | Check CAC registration |
+| Yellowlane | Telegram | Visa assistance, Lagos/Abuja/Canada/USA/UK | Website: yellowlanehq.com |
+| Future First Consulting Ltd | Telegram | Study abroad referral partnership | Website: futurefirstconsults.com |
+
+Policy: No agent enters `agents.json` until `verificationStatus: verified`. Verification requires business registration, licence number where applicable, reference check, and signed commercial agreement.
 
 ---
 

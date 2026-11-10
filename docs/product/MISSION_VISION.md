@@ -2,7 +2,7 @@
 
 **Document type:** Internal — strategic foundation  
 **Status:** Active  
-**Updated:** 2026-10-30
+**Updated:** 2026-11-10
 
 ---
 
@@ -19,6 +19,19 @@ Every pathway record cites its official source, declares its evidence status, an
 A continent where every African who wants to move — for work, study, investment or opportunity — has access to the same quality of verified information that was previously available only to those who could afford a lawyer or a premium agency.
 
 And where the agencies and practitioners who serve that market compete on service quality, not on who can make the most convincing unverified claim.
+
+---
+
+## Field research finding (2026-11-09)
+
+Primary research across Nigerian Facebook migration groups and the Wakanow Affiliates Telegram channel (1,660 members) confirms the problem at scale:
+
+- A single Facebook post asking "is Mongolia a real work destination?" received 267 comments and 47 shares — the audience is large, anxious, and actively being misled
+- Agents in the same Telegram network openly say: "I don't even know who to work with anymore" and "If travel agents don't trust each other... honestly it is worrisome"
+- Offers circulating include: Qatar work visa in 3-5 days for NGN 3.2m (official processing is 2-4 weeks, official fees are a fraction of that), Mongolia student+work visa for NGN 8m (no documented NG-MN labour corridor exists), and "job assistance when you get there" for Antigua (no guaranteed employment before travel)
+- Six real opportunities were also identified: Canada tech (Express Entry), Canada Francophone caregivers/PSWs, Oman trades (mechanics/electricians), Guyana freelance visa, Bulgaria study, Croatia study
+
+This is the exact market the platform exists to serve. The trust vacuum is documented and real.
 
 ---
 
