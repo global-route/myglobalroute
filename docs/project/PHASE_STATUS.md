@@ -359,13 +359,19 @@ A task is not complete because a file exists. Legal/data claims require evidence
 |---|---|---|
 | WAA-1 | Occupation demand registry + agents schema | **Done** — `src/data/occupation-demand.json` (15 records), `src/data/agents.json` (schema only) |
 | WAA-2 | Wizard UI — 4-step occupation-driven routing, safety callouts, agent placeholder | **Done** — `src/pages/work-abroad-agent.html`, `src/js/work-abroad-agent.js`, nav/footer wired |
-| WAA-3 | Agent layer — first verified agent, commercial tracking, "Connect" CTA | **Blocked** — needs: (1) first verified agent onboarded, (2) commercial agreement template, (3) rights content live |
-| WAA-4 | Unskilled track safety layer — Kafala reform status per country, red flag checklist | **Pending WAA-3** |
+| WAA-3a | Populate agents.json — first verified agent, signed commercial agreement | **Blocked** — owner must vet first agent and sign commercial agreement |
+| WAA-3b | Agent matching logic + intake form + Formspree submission | **Ready to build** — waiting on WAA-3a for end-to-end test |
+| WAA-3c | Analytics events: agent_connect_clicked, agent_lead_submitted | **Ready to build** |
+| WAA-4 | Unskilled safety gate — pre-form checklist for high-risk categories | **Ready to build now** — no blocker |
+| validate-agent-registry.js | Quality gate script for agents.json | **Ready to build now** — no blocker |
 
-**Owner actions required before WAA-3:**
-- Define agent vetting process (licence check, reference check, complaint history)
-- Agree lead fee structure with first agent
-- Confirm which 3 corridors to launch with (suggested: NG-DE tech, NG-AU trades, NG-QA domestic)
+**WAA-3 scope (simple):** wizard collects profile → matches verified agents by corridor + occupation → user fills inline intake form (name, email, WhatsApp, 2 checkboxes) → agent receives lead by email. No dashboard, no payments, no accounts. See `docs/engineering/WORK_ABROAD_AGENT.md`.
+
+**Owner actions required before WAA-3a:**
+- Define agent vetting checklist (business registration, licence, reference, signed agreement)
+- Sign first commercial agreement — suggested first corridor: NG-DE tech
+- Confirm lead fee structure
+- Choose form submission method: Formspree (fast) or Cloudflare Worker (more control)
 
 ---
 

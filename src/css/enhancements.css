@@ -1586,6 +1586,164 @@ p a:hover, li a:hover, td a:hover {
 }
 .waa-agent-placeholder p { margin: 0; }
 
+/* WAA-3 — Agent card */
+.waa-agent-card {
+  margin-top: 0.75rem;
+  padding: 0.9rem 1rem;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-left: 3px solid #0284c7;
+  border-radius: 2px;
+}
+.waa-agent-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.waa-agent-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-dark-navy);
+  margin: 0;
+}
+.waa-agent-meta {
+  font-size: 0.78rem;
+  color: var(--color-neutral-500);
+  margin: 0 0 0.5rem;
+}
+.waa-agent-badge-featured {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  background: #fef9c3;
+  color: #a16207;
+  border: 1px solid #fde047;
+  border-radius: 2px;
+}
+.waa-agent-disclaimer {
+  font-size: 0.75rem;
+  color: var(--color-neutral-500);
+  margin: 0.4rem 0 0;
+}
+
+/* WAA-3 — Intake form */
+.waa-intake-form {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #bae6fd;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.waa-intake-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-neutral-600);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.waa-intake-form input[type="text"],
+.waa-intake-form input[type="email"],
+.waa-intake-form input[type="tel"] {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  font-size: 0.95rem;
+  font-family: var(--font-family-body);
+  background: white;
+  transition: border-color var(--transition-fast);
+}
+.waa-intake-form input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+.waa-checkbox {
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 0.5rem !important;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  color: var(--color-neutral-700) !important;
+  cursor: pointer;
+}
+.waa-checkbox input[type="checkbox"] {
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+.waa-form-disclaimer {
+  font-size: 0.75rem;
+  color: var(--color-neutral-500);
+  margin: 0;
+}
+.waa-form-success {
+  padding: 0.75rem 1rem;
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  color: #15803d;
+  font-weight: 600;
+}
+.waa-form-error {
+  padding: 0.75rem 1rem;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-radius: 2px;
+  font-size: 0.85rem;
+  color: #b91c1c;
+}
+
+/* WAA-4 — Unskilled safety gate checklist */
+.waa-safety-gate {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-left: 4px solid #ea580c;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  border-radius: 2px;
+}
+.waa-safety-gate-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #7c2d12;
+  margin: 0 0 0.65rem;
+}
+.waa-safety-gate-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.waa-safety-gate-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #7c2d12;
+}
+.waa-safety-gate-list input[type="checkbox"] {
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.waa-connect-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
 /* P0.2 — Nationality eligibility badges */
 .nationality-unknown {
   background: #fef9c3;

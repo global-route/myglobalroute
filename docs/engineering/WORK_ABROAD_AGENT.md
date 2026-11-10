@@ -1,245 +1,386 @@
-# WorkAbroadAgent — Engineering Plan
-**Status:** Planning | **Created:** 2026-11-09 | **Target:** Sprint after content depth sprint
+# WorkAbroadAgent — Engineering Blueprint
+**Status:** WAA-1 done | WAA-2 done | WAA-3 next
+**Updated:** 2026-11-09
 
 ---
 
-## What it is
+## What it does in one sentence
 
-A demand-driven work routing wizard. The user describes their skill level and occupation. The engine matches them to countries and routes where that labour is actively needed, then surfaces a registered agent or recruiter working that specific corridor.
+User answers 4 questions. Platform matches them to verified agents who handle that corridor. User fills a short intake form. Agent receives the lead and contacts the user to begin their journey.
 
-Two user tracks:
-
-- **Skilled** — developer, nurse, engineer, accountant, teacher. Routed to countries with documented shortages in their occupation (e.g. DE Chancenkarte for tech, AU DAMA for trades, UK Skilled Worker for healthcare).
-- **Unskilled / semi-skilled** — domestic worker, carer, hospitality, construction, agriculture. Routed to countries with documented demand for that labour category and a legal pathway to enter (e.g. Qatar domestic worker, Saudi Arabia hospitality, UAE construction).
+That is the entire product. Nothing more.
 
 ---
 
-## How it differs from the existing Visa Wizard
-
-| | Visa Wizard | WorkAbroadAgent |
-|---|---|---|
-| Entry point | Goal (study/work/nomad) | Occupation + skill level |
-| Output | Matched pathways by profile | Countries where your labour is needed + agent contact |
-| Agent layer | None | Core — agent is the conversion point |
-| Unskilled users | Not served | First-class user |
-| Revenue model | AdSense / affiliate | Agent referral fee / lead gen |
-
----
-
-## User flow (proposed)
+## The user journey — end to end
 
 ```
-Step 1 — Skill level
-  [ ] Skilled professional (degree or 3+ yrs experience)
-  [ ] Trades / technician (certified trade)
-  [ ] Semi-skilled (hospitality, care, domestic, agriculture)
-  [ ] Unskilled (general labour, construction, domestic)
+Step 1  What is your skill level?
+        Skilled / Trades / Semi-skilled / General labour
 
-Step 2 — Occupation (conditional on step 1)
-  Skilled:    dropdown — Software/IT, Healthcare, Engineering, Finance, Teaching, Other
-  Trades:     dropdown — Electrician, Plumber, Carpenter, Mechanic, Welder, Other
-  Semi/Unskilled: dropdown — Domestic worker, Carer, Hospitality, Agriculture, Construction, Other
+Step 2  What is your occupation?
+        Dropdown filtered by step 1 answer
 
-Step 3 — Passport country
-  (reuse existing 54-country African passport select)
+Step 3  What passport do you hold?
+        African country select
 
-Step 4 — Availability
-  [ ] Ready now   [ ] 3-6 months   [ ] 6-12 months
+Step 4  When are you available to move?
+        Ready now / 1-3 months / 3-6 months / 6-12 months
 
-Step 5 — Results
-  - Country cards showing: demand level, visa route, agent name + contact
-  - "Connect with agent" CTA per card
-  - Disclaimer: agent referral, not immigration advice
+        → Platform matches profile to demand records
+        → Shows country cards with visa route and demand level
+        → Each card has: "Connect with an agent for this route"
+
+Step 5  Agent intake form  ← THIS IS THE MISSING STEP
+        Name
+        Email
+        WhatsApp number
+        Confirm: I have not paid any agent fees yet (checkbox)
+        Confirm: I understand this is a referral, not a guarantee (checkbox)
+        Submit → lead goes to matched agent(s) for that corridor
+
+Agent receives:
+        User name, email, WhatsApp
+        Corridor (e.g. NG → DE, software_it, skilled)
+        Availability
+        Timestamp
+```
+
+The user never leaves the platform to find an agent. The agent comes to the user via the lead.
+
+---
+
+## What is built vs what is missing
+
+### Built (WAA-1 + WAA-2)
+- Steps 1-4: skill level, occupation, passport, availability — all wired and working
+- Demand matching engine — filters `occupation-demand.json` by skillLevel + occupationCategory
+- Country result cards — flag, demand badge, visa route link, notes
+- Safety callout for high-risk categories (domestic_worker, construction, factory)
+- localStorage state persistence
+- Agent placeholder card on every result ("Verified agents coming soon")
+
+### Missing (WAA-3)
+- Step 5: the intake form
+- Agent matching logic — which agent(s) serve this corridor + occupation
+- Form submission — POST to a form handler or email relay
+- Agent receives lead — email notification or dashboard entry
+- `agents.json` populated with at least one verified agent
+
+### What WAA-3 is NOT
+- Not a booking system
+- Not a payment system
+- Not a case management system
+- Not a chat interface
+- Not a job board
+
+WAA-3 is a lead routing form. One form. One submit. Agent gets an email. That is it.
+
+---
+
+## Data flow
+
+```
+User profile (from wizard state)
+  skillLevel: "skilled"
+  occupationCategory: "software_it"
+  passportCountry: "NG"
+  availability: "3months"
+
+  ↓
+
+Demand matching (existing — works today)
+  occupation-demand.json filtered by skillLevel + occupationCategory
+  Returns: [DE-software-it, GB-software-it, IE-software-it, CA-software-it, ...]
+
+  ↓
+
+Agent matching (WAA-3 — to build)
+  agents.json filtered by:
+    corridors includes "NG-DE" or "NG-*" or "*-DE"
+    occupationCategories includes "software_it"
+    skillLevels includes "skilled"
+    verificationStatus === "verified"
+  Returns: [agent-de-tech-001, ...]
+
+  ↓
+
+Result card shows:
+  Country + demand level + visa route
+  Agent name + "Connect with this agent" button
+
+  ↓
+
+User clicks "Connect"
+  Intake form appears (inline, same page — no redirect)
+  User fills: name, email, WhatsApp, two checkboxes
+  Submit
+
+  ↓
+
+Lead delivered to agent
+  Email to agent with user profile + contact details
+  Analytics event: agent_lead_submitted
 ```
 
 ---
 
-## Data model additions needed
-
-### 1. Occupation demand registry (`src/data/occupation-demand.json`)
+## agents.json schema (what WAA-3 needs)
 
 ```json
 {
-  "records": [
-    {
-      "id": "DE-software-engineer-2026",
-      "countryId": "DE",
-      "occupationCategory": "software_it",
-      "skillLevel": "skilled",
-      "demandLevel": "high",
-      "visaRoute": "DE-opportunity-card",
-      "sourceUrl": "https://www.make-it-in-germany.com/en/jobs/shortage-occupations",
-      "effectiveDate": "2026-11-01",
-      "notes": "IT occupations on German shortage list. Chancenkarte points route available without job offer."
-    },
-    {
-      "id": "AU-trades-dama-2026",
-      "countryId": "AU",
-      "occupationCategory": "trades",
-      "skillLevel": "trades",
-      "demandLevel": "high",
-      "visaRoute": "AU-dama-regional",
-      "sourceUrl": "https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/site-agreements/designated-area-migration-agreements",
-      "effectiveDate": "2026-11-01",
-      "notes": "DAMA regional stream covers trades in designated areas. Employer sponsorship required."
-    },
-    {
-      "id": "QA-domestic-worker-2026",
-      "countryId": "QA",
-      "occupationCategory": "domestic_worker",
-      "skillLevel": "unskilled",
-      "demandLevel": "high",
-      "visaRoute": null,
-      "sourceUrl": "https://www.moi.gov.qa/",
-      "effectiveDate": "2026-11-01",
-      "notes": "Qatar domestic worker visa. Kafala system — agent-mediated. High demand, high risk. Agent vetting required before referral."
-    }
-  ]
-}
-```
-
-Fields:
-- `occupationCategory` — maps to wizard step 2 options
-- `skillLevel` — `skilled | trades | semi_skilled | unskilled`
-- `demandLevel` — `high | medium | low` (from shortage lists / labour market data)
-- `visaRoute` — links to existing `pathways.json` id, or `null` if agent-only route
-- `effectiveDate` — when demand data was retrieved
-
-### 2. Agent registry (`src/data/agents.json`)
-
-```json
-{
+  "schemaVersion": "1.0.0",
+  "policy": "No agent shown until verificationStatus is verified. Verification requires: business registration, licence number where applicable, reference check, signed commercial agreement.",
   "agents": [
     {
       "id": "agent-de-tech-001",
-      "name": "<Agency Name>",
-      "corridors": ["NG-DE", "GH-DE", "KE-DE"],
+      "name": "Agency Name",
+      "corridors": ["NG-DE", "GH-DE"],
       "occupationCategories": ["software_it", "engineering"],
       "skillLevels": ["skilled"],
-      "contactUrl": "https://...",
-      "verifiedAt": "2026-11-01",
-      "verificationStatus": "pending",
-      "notes": "Registered German recruitment agency. Verify licence before listing."
+      "contactEmail": "agent@example.com",
+      "whatsapp": "+49...",
+      "licenceNumber": "...",
+      "licenceAuthority": "...",
+      "verifiedAt": "2026-11-09",
+      "verificationStatus": "verified",
+      "tier": "free"
     }
   ]
 }
 ```
 
-Fields:
-- `corridors` — origin-destination pairs (ISO country codes)
-- `verificationStatus` — `pending | verified | suspended` — only `verified` agents shown to users
-- Agent is NEVER shown until `verificationStatus: verified`
+`tier`: `free | lead | featured`
+- `free` — listed, no referral fee
+- `lead` — platform charges per qualified lead (commercial agreement required)
+- `featured` — priority position in results, labelled "Featured" (commercial agreement required)
+
+`corridors` format: `"NG-DE"` = Nigeria to Germany. `"NG-*"` = Nigeria to any country. `"*-DE"` = any origin to Germany. Match logic handles wildcards.
 
 ---
 
-## Content gaps this requires
+## WAA-3 implementation — exactly what to build
 
-Before launch, need blog posts covering:
-- Domestic worker rights in Qatar / UAE / Saudi (legal protections, Kafala reform)
-- How to verify a recruitment agent is legitimate (red flags, NAFDAC/NiMC registration)
-- Trades shortage occupations in Australia 2026 (DAMA eligible list)
-- Germany shortage occupation list 2026 (Engpassberufe)
-- UK shortage occupation list 2026 (post-MAC review)
+### 1. Agent matching function (add to `work-abroad-agent.js`)
 
-These are not optional — the agent wizard without this content creates liability.
+```js
+function matchAgents(agents, corridor, occupationCategory, skillLevel) {
+  return agents.filter(a => {
+    if (a.verificationStatus !== 'verified') return false;
+    const corridorMatch = a.corridors.some(c =>
+      c === corridor || c === `${corridor.split('-')[0]}-*` || c === `*-${corridor.split('-')[1]}`
+    );
+    const occMatch = a.occupationCategories.includes(occupationCategory);
+    const skillMatch = a.skillLevels.includes(skillLevel);
+    return corridorMatch && occMatch && skillMatch;
+  });
+}
+```
+
+### 2. Intake form (inline HTML, rendered into result card)
+
+Rendered by `renderAgentCard()` when a verified agent exists for the corridor.
+
+```html
+<div class="waa-agent-card">
+  <p class="waa-agent-name">{agent.name}</p>
+  <p class="waa-agent-corridors">Handles: {corridors}</p>
+  <button type="button" class="btn btn-primary waa-connect-btn"
+          data-agent-id="{agent.id}">
+    Connect with this agent
+  </button>
+  <form class="waa-intake-form" hidden data-agent-id="{agent.id}">
+    <label>Full name <input type="text" name="name" required></label>
+    <label>Email <input type="email" name="email" required></label>
+    <label>WhatsApp number <input type="tel" name="whatsapp" required></label>
+    <label class="waa-checkbox">
+      <input type="checkbox" name="no_fees_paid" required>
+      I have not paid any agent fees yet
+    </label>
+    <label class="waa-checkbox">
+      <input type="checkbox" name="referral_understood" required>
+      I understand this is a referral, not a guarantee of employment
+    </label>
+    <button type="submit" class="btn btn-primary">Send my details to agent</button>
+    <p class="waa-form-disclaimer">
+      Your details are shared only with this agent.
+      <a href="/pages/privacy.html">Privacy policy</a>
+    </p>
+  </form>
+</div>
+```
+
+"Connect with this agent" button toggles the form visible. Form submit sends the lead.
+
+### 3. Form submission
+
+Two options — owner decides which:
+
+**Option A — Formspree (no backend needed)**
+- Form action: `https://formspree.io/f/{form_id}`
+- Agent receives email with all fields
+- Free tier: 50 submissions/month. Paid: unlimited.
+- Zero infrastructure. Works today.
+
+**Option B — Cloudflare Worker endpoint**
+- POST to `/api/agent-lead`
+- Worker validates fields, emails agent via SendGrid/Mailgun
+- More control, more setup
+
+Recommendation: Start with Formspree per agent. One form ID per agent. When volume justifies it, move to Cloudflare Worker.
+
+### 4. Analytics events (add to existing `analytics.js` calls)
+
+```js
+// When user clicks "Connect with this agent"
+GlobalRoute.Analytics.track('agent_connect_clicked', {
+  agentId, corridor, occupationCategory, skillLevel
+});
+
+// When form is submitted successfully
+GlobalRoute.Analytics.track('agent_lead_submitted', {
+  agentId, corridor, occupationCategory, skillLevel
+});
+```
 
 ---
 
-## Revenue model
+## Multi-agent handling
 
-Three tiers:
+When multiple verified agents serve the same corridor:
 
-1. **Free listing** — verified agents listed, no referral fee. Builds supply side.
-2. **Lead referral** — user clicks "Connect with agent" → tracked referral → agent pays per qualified lead. Requires commercial agreement per agent.
-3. **Featured placement** — agent pays for priority position in results for a corridor. Clearly labelled "Featured".
-
-All three require the `commercial-registry.json` to be extended with agent entries and the `commercial.js` affiliate tracking to handle agent referral paths.
-
----
-
-## Trust and safety constraints (non-negotiable)
-
-- No agent is shown without `verificationStatus: verified`
-- Unskilled / domestic worker routes must show a rights and safety callout before results (Kafala reform status, ILO conventions, red flag checklist)
-- Agent listings must include licence number where applicable (NAFDAC for Nigeria, POEA for Philippines-style corridors)
-- "Connect with agent" is a referral, not an endorsement — disclaimer required on every card
-- No agent referral for Russia, Belarus, or any country with active travel warnings for the user's passport country
+- Show all matched agents as separate cards
+- `featured` tier agents appear first, labelled "Featured"
+- `lead` and `free` tier agents appear below in alphabetical order
+- Maximum 3 agents shown per corridor to avoid choice paralysis
+- If no verified agent exists for a corridor: show the existing placeholder ("Verified agents coming soon")
 
 ---
 
-## Implementation phases
+## What the agent receives (lead email format)
 
-### Phase WAA-1 — Data foundation (no UI)
-- Create `occupation-demand.json` with 10-15 seed records (DE tech, AU trades, UK healthcare, QA domestic, UAE hospitality)
-- Create `agents.json` with schema only, 0 verified agents
-- Write `scripts/validate-agent-registry.js` — checks verificationStatus, required fields, corridor format
-- Add to quality gate
+```
+Subject: New work abroad lead — NG→DE Software/IT
 
-### Phase WAA-2 — Wizard UI (static, no agent layer)
-- New page `src/pages/work-abroad-agent.html`
-- 5-step wizard using existing wizard-engine patterns
-- Results show country + demand level + visa route card
-- "Agent coming soon" placeholder where agent would appear
-- Add to nav and homepage
+Profile:
+  Skill level: Skilled professional
+  Occupation: Software / IT
+  Passport: Nigeria
+  Availability: 1-3 months
 
-### Phase WAA-3 — Agent layer
-- First verified agent onboarded
-- `agents.json` gets first `verified` entry
-- Results show agent card with "Connect" CTA
-- Commercial tracking wired via `commercial.js`
+Contact:
+  Name: [user name]
+  Email: [user email]
+  WhatsApp: [user whatsapp]
 
-### Phase WAA-4 — Unskilled track safety layer
-- Rights and safety callout component for domestic/unskilled routes
-- Kafala reform status per country
-- Red flag checklist before agent referral
+Confirmed:
+  No fees paid yet: Yes
+  Referral understood: Yes
+
+Submitted: 2026-11-09 14:32 UTC
+Source: mypathway2global.org.uk/pages/work-abroad-agent.html
+```
+
+Agent responds directly to user via email or WhatsApp. Platform is not in the conversation after lead delivery.
 
 ---
 
-## What exists in the platform that WAA can reuse
+## What happens after the lead — agent's responsibility
 
-| Existing asset | How WAA uses it |
+The platform's job ends at lead delivery. The agent's job begins:
+
+1. Contact user within 48 hours (this becomes a commercial agreement term)
+2. Conduct candidate assessment (documents, qualifications, eligibility)
+3. Advise on visa route and process
+4. If proceeding: sign service agreement with user
+5. Process application
+
+The platform does not manage this process. It does not track application status. It does not handle disputes. That is out of scope for WAA-3.
+
+---
+
+## Trust constraints (unchanged — non-negotiable)
+
+- No agent shown without `verificationStatus: verified`
+- Safety callout fires before results for high-risk categories (domestic_worker, construction, factory, logistics)
+- Intake form has two mandatory checkboxes: no fees paid, referral understood
+- Disclaimer on every agent card: "Referral only — not an endorsement. Verify independently."
+- No agent referral for Belarus, Russia, or countries with active FCDO travel warnings
+- Agent listings must include licence number where applicable
+
+---
+
+## WAA-4 — unskilled safety gate (runs parallel to WAA-3)
+
+For `riskLevel: high` demand records, add a pre-form checklist the user must acknowledge before the intake form appears:
+
+```
+Before connecting with an agent, confirm:
+[ ] I have NOT been asked to pay a recruitment fee upfront
+[ ] I have seen a written job description with salary stated
+[ ] I know the employer's name and can verify they exist
+[ ] I understand I can leave the job if conditions are unsafe
+[ ] I have read the worker rights guide for this country
+```
+
+All five boxes must be checked. "Connect with agent" button is disabled until all checked.
+
+This is a UI gate only — it does not prevent a determined user from proceeding, but it creates a documented moment of informed consent.
+
+---
+
+## Implementation phases — updated
+
+| Phase | What | Status | Blocked by |
+|---|---|---|---|
+| WAA-1 | Demand data + agents schema | Done | — |
+| WAA-2 | Wizard steps 1-4 + result cards + safety callout | Done | — |
+| WAA-3a | Populate agents.json with first verified agent | Blocked | Owner: agent vetting + commercial agreement |
+| WAA-3b | Agent matching logic in work-abroad-agent.js | Ready to build | WAA-3a (need at least one agent to test against) |
+| WAA-3c | Intake form + Formspree submission | Ready to build | WAA-3a |
+| WAA-3d | Analytics events for connect + submit | Ready to build | WAA-3b |
+| WAA-4 | Unskilled safety gate checklist | Ready to build | Nothing — can start now |
+| validate-agent-registry.js | Quality gate script | Ready to build | Nothing |
+
+WAA-3b, 3c, 3d, and WAA-4 can all be built now. They just cannot be tested end-to-end until WAA-3a (first verified agent) is done.
+
+---
+
+## Owner actions required (unchanged)
+
+1. Define agent vetting checklist — what does verification require? (business registration, licence, reference, signed agreement)
+2. Sign first commercial agreement with first agent — which corridor? Suggested: NG-DE tech
+3. Confirm lead fee structure — what does the agent pay per qualified lead?
+4. Choose form submission method — Formspree (fast, no infrastructure) or Cloudflare Worker (more control)
+
+None of these are engineering decisions. All four are owner decisions.
+
+---
+
+## Files to touch in WAA-3
+
+| File | Change |
 |---|---|
-| `src/data/pathways.json` | `visaRoute` field links directly to existing pathway records |
-| `src/js/wizard-engine.js` | Step rendering, tile nav, roving tabindex — reuse pattern |
-| `src/js/commercial.js` | Agent referral tracking via `buildTrackedPath()` |
-| `src/data/commercial-registry.json` | Extend with agent entries |
-| `src/js/analytics.js` | Track `work_agent_search_started`, `agent_connect_clicked` events |
-| `src/css/enhancements.css` | Wizard tile styles, badge styles already exist |
-| 30-country registry | Demand records map to existing country IDs |
-| 63 publishable pathways | Most skilled routes already have pathway records |
+| `src/data/agents.json` | Add first verified agent |
+| `src/js/work-abroad-agent.js` | Add matchAgents(), renderAgentCard(), intake form wiring, form submit handler, analytics events |
+| `src/css/enhancements.css` | `.waa-agent-card`, `.waa-intake-form`, `.waa-checkbox` styles |
+| `src/pages/partners.html` | Add agent onboarding section — what verification requires, how to apply |
+| `scripts/validate-agent-registry.js` | New script — validates agents.json schema, checks verificationStatus, corridor format, verifiedAt presence |
+
+That is 5 files. No new pages. No new routes. No new data fetches beyond what already exists.
 
 ---
 
-## What the blog scan found — content already supporting WAA
+## What this is NOT (architecture guardrails)
 
-Posts already live that support WAA launch:
-- Germany Chancenkarte vs Canada Express Entry (skilled routing)
-- Australia DAMA regional worker (trades routing)
-- UK Skilled Worker Visa (healthcare/professional routing)
-- UAE, Qatar, Saudi Arabia country audits (Gulf unskilled demand context)
-- African Diaspora Repatriation Guide (return corridor context)
+Do not add any of the following to WAA-3:
 
-Missing (must write before WAA-3):
-- Domestic worker rights in Gulf states
-- How to spot a fake recruitment agent
-- UK/AU/DE shortage occupation lists 2026
+- A separate agent dashboard or portal — out of scope
+- Application status tracking — out of scope
+- In-platform messaging between user and agent — out of scope
+- Payment processing — out of scope
+- User accounts or login — out of scope
+- A separate API endpoint for agent data — not needed, agents.json is fetched client-side like all other data files
+- A separate page for the intake form — the form is inline on the result card, same page
 
----
-
-## Open questions (owner decisions needed)
-
-1. **Agent vetting process** — who verifies agents before `verificationStatus: verified`? Owner must define the due diligence checklist (licence check, reference check, complaint history).
-2. **Lead fee structure** — what does an agent pay per qualified lead? This needs a commercial agreement template before WAA-3.
-3. **Unskilled track scope** — include Gulf domestic worker routes at launch, or defer until rights content is live?
-4. **Corridor priority** — which 3 corridors to launch with? Suggested: NG-DE (tech), NG-AU (trades), NG-QA (domestic) — but owner decides.
-
----
-
-## Sprint readiness gate
-
-WAA-1 can start immediately — data schema only, no UI risk.
-WAA-2 can start after WAA-1 data is validated.
-WAA-3 is blocked until: (a) first verified agent, (b) commercial agreement template, (c) rights content live.
-WAA-4 runs in parallel with WAA-3.
-
-Do not launch WAA-3 without the safety layer for unskilled routes.
+Every one of these would add complexity without adding value at this stage. The product is: wizard → match → form → lead. Keep it that way.

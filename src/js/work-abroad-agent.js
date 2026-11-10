@@ -4,24 +4,23 @@
 
   if (document.body?.dataset?.pageType !== 'work-abroad-agent') return;
 
-  // ── Occupation options by skill level ──────────────────────────────────────
   const OCCUPATION_OPTIONS = {
     skilled: [
-      { value: 'software_it',  label: 'Software / IT' },
-      { value: 'engineering',  label: 'Engineering' },
-      { value: 'healthcare',   label: 'Healthcare / Nursing' },
-      { value: 'finance',      label: 'Finance / Accounting' },
-      { value: 'teaching',     label: 'Teaching / Education' },
-      { value: 'other_skilled',label: 'Other skilled profession' }
+      { value: 'software_it',   label: 'Software / IT' },
+      { value: 'engineering',   label: 'Engineering' },
+      { value: 'healthcare',    label: 'Healthcare / Nursing' },
+      { value: 'finance',       label: 'Finance / Accounting' },
+      { value: 'teaching',      label: 'Teaching / Education' },
+      { value: 'other_skilled', label: 'Other skilled profession' }
     ],
     trades: [
-      { value: 'trades',       label: 'Trades (electrician, plumber, carpenter, welder, mechanic)' }
+      { value: 'trades', label: 'Trades (electrician, plumber, carpenter, welder, mechanic)' }
     ],
     semi_skilled: [
-      { value: 'hospitality',  label: 'Hospitality / Food service' },
-      { value: 'care_work',    label: 'Care work / Support worker' },
-      { value: 'agriculture',  label: 'Agriculture / Farm work' },
-      { value: 'retail',       label: 'Retail / Customer service' }
+      { value: 'hospitality', label: 'Hospitality / Food service' },
+      { value: 'care_work',   label: 'Care work / Support worker' },
+      { value: 'agriculture', label: 'Agriculture / Farm work' },
+      { value: 'retail',      label: 'Retail / Customer service' }
     ],
     unskilled: [
       { value: 'domestic_worker', label: 'Domestic worker / Housekeeper' },
@@ -31,11 +30,18 @@
     ]
   };
 
-  // ── Safety callout required for these occupation categories ────────────────
-  const HIGH_RISK_CATEGORIES = new Set(['domestic_worker', 'construction', 'factory']);
+  const HIGH_RISK_CATEGORIES = new Set(['domestic_worker', 'construction', 'factory', 'logistics']);
 
-  // ── State ──────────────────────────────────────────────────────────────────
+  const SAFETY_GATE_ITEMS = [
+    'I have NOT been asked to pay a recruitment fee upfront',
+    'I have seen a written job description with salary stated',
+    'I know the employer\'s name and can verify they exist',
+    'I understand I can leave the job if conditions are unsafe',
+    'I have read the worker rights guide for this country'
+  ];
+
   const STORAGE_KEY = 'mp2g_waa_state';
+  const TOTAL_STEPS = 4;
 
   function loadState() {
     try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null'); } catch { return null; }
@@ -53,18 +59,15 @@
     )
   };
 
-  const TOTAL_STEPS = 4;
-
-  // ── DOM refs ───────────────────────────────────────────────────────────────
   const progressFill  = document.getElementById('waa-progress-fill');
   const progressLabel = document.getElementById('waa-progress-label');
   const progressBar   = document.querySelector('.wizard-progress');
   const resultsEl     = document.getElementById('waa-results');
   const resultsBody   = document.getElementById('waa-results-body');
 
-  const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const esc = v => String(v ?? '').replace(/[&<>"']/g, c =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-  // ── Step navigation ────────────────────────────────────────────────────────
   function showStep(n) {
     document.querySelectorAll('.wizard-step').forEach(el => { el.hidden = true; });
     const el = document.getElementById(`waa-step-${n}`);
@@ -86,7 +89,6 @@
     runEngine();
   }
 
-  // ── Populate occupation select based on skill level ────────────────────────
   function populateOccupations(skillLevel) {
     const sel = document.getElementById('waa-occupation');
     if (!sel) return;
@@ -94,11 +96,9 @@
     const options = OCCUPATION_OPTIONS[skillLevel] || [];
     options.forEach(opt => {
       const o = document.createElement('option');
-      o.value = opt.value;
-      o.textContent = opt.label;
+      o.value = opt.value; o.textContent = opt.label;
       sel.appendChild(o);
     });
-    // If only one option (e.g. trades), auto-select it
     if (options.length === 1) {
       sel.value = options[0].value;
       state.answers.occupationCategory = options[0].value;
@@ -106,6 +106,25 @@
       if (nextBtn) nextBtn.disabled = false;
     }
     if (state.answers.occupationCategory) sel.value = state.answers.occupationCategory;
+  }
+
+  // ── Agent matching ─────────────────────────────────────────────────────────
+  function matchAgents(agents, passportCountry, destCountryId, occupationCategory, skillLevel) {
+    const corridor = `${passportCountry}-${destCountryId}`;
+    return agents.filter(a => {
+      if (a.verificationStatus !== 'verified') return false;
+      const [origin] = corridor.split('-');
+      const corridorMatch = a.corridors.some(c => {
+        const [co, cd] = c.split('-');
+        return (co === origin || co === '*') && (cd === destCountryId || cd === '*');
+      });
+      const occMatch = a.occupationCategories.includes(occupationCategory);
+      const skillMatch = a.skillLevels.includes(skillLevel);
+      return corridorMatch && occMatch && skillMatch;
+    }).sort((a, b) => {
+      const tierOrder = { featured: 0, lead: 1, free: 2 };
+      return (tierOrder[a.tier] ?? 9) - (tierOrder[b.tier] ?? 9);
+    }).slice(0, 3);
   }
 
   // ── Engine ─────────────────────────────────────────────────────────────────
@@ -117,12 +136,13 @@
       occupation: state.answers.occupationCategory
     });
 
-    let demandData, pathwayData, countryData;
+    let demandData, pathwayData, countryData, agentData;
     try {
-      [demandData, pathwayData, countryData] = await Promise.all([
+      [demandData, pathwayData, countryData, agentData] = await Promise.all([
         fetch('/data/occupation-demand.json').then(r => r.json()),
         fetch('/data/pathways.json').then(r => r.json()),
-        fetch('/data/countries.json').then(r => r.json())
+        fetch('/data/countries.json').then(r => r.json()),
+        fetch('/data/agents.json').then(r => r.json())
       ]);
     } catch {
       resultsBody.innerHTML = `<p class="evidence-note">Unable to load data. Please refresh and try again.</p>`;
@@ -130,25 +150,22 @@
     }
 
     const { skillLevel, occupationCategory, passportCountry } = state.answers;
-    const records = demandData.records || [];
-    const pathways = pathwayData.pathways || [];
+    const records   = demandData.records   || [];
+    const pathways  = pathwayData.pathways || [];
     const countries = countryData.countries || [];
+    const agents    = agentData.agents     || [];
+
     const countryMap = new Map(countries.map(c => [c.id, c]));
     const pathwayMap = new Map(pathways.map(p => [p.id, p]));
 
-    // Match demand records to profile
     const matched = records.filter(r =>
-      r.skillLevel === skillLevel &&
-      r.occupationCategory === occupationCategory
+      r.skillLevel === skillLevel && r.occupationCategory === occupationCategory
     );
-
-    // Sort: high demand first
     const demandOrder = { high: 0, medium: 1, low: 2 };
     matched.sort((a, b) => (demandOrder[a.demandLevel] ?? 9) - (demandOrder[b.demandLevel] ?? 9));
 
     let html = '';
 
-    // Safety callout for high-risk categories
     if (HIGH_RISK_CATEGORIES.has(occupationCategory)) {
       html += renderSafetyCallout(occupationCategory);
     }
@@ -156,8 +173,11 @@
     if (!matched.length) {
       html += renderNoMatch(skillLevel, occupationCategory);
     } else {
-      html += `<p class="evidence-note" style="margin-bottom:1.5rem;">Showing ${matched.length} country${matched.length !== 1 ? 's' : ''} with documented demand for your occupation. Demand data is from official shortage lists and government labour market sources. Verify current requirements before acting.</p>`;
-      html += matched.map(r => renderDemandCard(r, countryMap, pathwayMap)).join('');
+      html += `<p class="evidence-note" style="margin-bottom:1.5rem;">Showing ${matched.length} countr${matched.length !== 1 ? 'ies' : 'y'} with documented demand for your occupation. Demand data is from official shortage lists and government labour market sources. Verify current requirements before acting.</p>`;
+      html += matched.map(r => {
+        const matchedAgents = matchAgents(agents, passportCountry, r.countryId, occupationCategory, skillLevel);
+        return renderDemandCard(r, countryMap, pathwayMap, matchedAgents, occupationCategory);
+      }).join('');
     }
 
     html += `<p style="margin-top:2rem;font-size:0.875rem;color:var(--color-neutral-500);">
@@ -165,14 +185,15 @@
     </p>`;
 
     resultsBody.innerHTML = html;
+    wireIntakeForms();
   }
 
   // ── Render helpers ─────────────────────────────────────────────────────────
-  function renderDemandCard(record, countryMap, pathwayMap) {
-    const country = countryMap.get(record.countryId);
-    const pathway = record.visaRoute ? pathwayMap.get(record.visaRoute) : null;
+  function renderDemandCard(record, countryMap, pathwayMap, matchedAgents, occupationCategory) {
+    const country     = countryMap.get(record.countryId);
+    const pathway     = record.visaRoute ? pathwayMap.get(record.visaRoute) : null;
     const countryName = country ? country.name : record.countryId;
-    const flag = country?.flag || '';
+    const flag        = country?.flag || '';
 
     const demandBadge = {
       high:   '<span class="status-badge status-badge-publishable">High demand</span>',
@@ -191,9 +212,11 @@
           <a href="${esc(record.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="wizard-source-link">Review official source &rarr;</a>
         </div>`;
 
-    const agentSection = `<div class="waa-agent-placeholder">
-      <p>Verified agents for this corridor coming soon. <a href="/pages/partners.html">Become a listed agent &rarr;</a></p>
-    </div>`;
+    const agentSection = matchedAgents.length
+      ? matchedAgents.map(a => renderAgentCard(a, record.countryId, occupationCategory)).join('')
+      : `<div class="waa-agent-placeholder">
+          <p>Verified agents for this corridor coming soon. <a href="/pages/partners.html">Become a listed agent &rarr;</a></p>
+        </div>`;
 
     return `<article class="wizard-result-card">
       <div class="wizard-result-header">
@@ -207,11 +230,61 @@
     </article>`;
   }
 
+  function renderAgentCard(agent, destCountryId, occupationCategory) {
+    const featuredBadge = agent.tier === 'featured'
+      ? '<span class="waa-agent-badge-featured">Featured</span>' : '';
+    const isHighRisk = HIGH_RISK_CATEGORIES.has(occupationCategory);
+
+    const safetyGate = isHighRisk ? `
+      <div class="waa-safety-gate" id="gate-${esc(agent.id)}-${esc(destCountryId)}">
+        <p class="waa-safety-gate-title">Before connecting — confirm all of the following:</p>
+        <ul class="waa-safety-gate-list">
+          ${SAFETY_GATE_ITEMS.map((item, i) =>
+            `<li><input type="checkbox" id="gate-chk-${esc(agent.id)}-${i}" data-gate="${esc(agent.id)}-${esc(destCountryId)}"> <label for="gate-chk-${esc(agent.id)}-${i}">${esc(item)}</label></li>`
+          ).join('')}
+        </ul>
+      </div>` : '';
+
+    return `<div class="waa-agent-card" data-agent-id="${esc(agent.id)}" data-dest="${esc(destCountryId)}">
+      <div class="waa-agent-card-header">
+        <p class="waa-agent-name">${esc(agent.name)} ${featuredBadge}</p>
+      </div>
+      <p class="waa-agent-meta">Handles: ${esc((agent.corridors || []).join(', '))}</p>
+      ${safetyGate}
+      <button type="button" class="btn btn-primary waa-connect-btn"
+              data-agent-id="${esc(agent.id)}"
+              data-dest="${esc(destCountryId)}"
+              ${isHighRisk ? 'disabled' : ''}>
+        Connect with this agent
+      </button>
+      <form class="waa-intake-form" hidden
+            data-agent-id="${esc(agent.id)}"
+            data-dest="${esc(destCountryId)}"
+            data-agent-email="${esc(agent.contactEmail || '')}">
+        <label>Full name <input type="text" name="name" required autocomplete="name"></label>
+        <label>Email address <input type="email" name="email" required autocomplete="email"></label>
+        <label>WhatsApp number <input type="tel" name="whatsapp" required autocomplete="tel"></label>
+        <label class="waa-checkbox">
+          <input type="checkbox" name="no_fees_paid" required>
+          I have not paid any agent fees yet
+        </label>
+        <label class="waa-checkbox">
+          <input type="checkbox" name="referral_understood" required>
+          I understand this is a referral, not a guarantee of employment
+        </label>
+        <button type="submit" class="btn btn-primary">Send my details to agent</button>
+        <p class="waa-form-disclaimer">Your details are shared only with this agent. <a href="/pages/privacy.html">Privacy policy</a></p>
+      </form>
+      <p class="waa-agent-disclaimer">Referral only — not an endorsement. Verify independently before paying any fees.</p>
+    </div>`;
+  }
+
   function renderSafetyCallout(category) {
     const messages = {
-      domestic_worker: 'Domestic work abroad carries significant risks. Workers in private homes have limited oversight and limited ability to report problems. Before proceeding: verify your employer is registered with the destination country\'s labour authority, ensure you have a signed contract in a language you understand, and do not pay recruitment fees — legitimate employers do not charge workers.',
-      construction: 'Construction work abroad carries risks including wage theft, document confiscation and unsafe conditions. Verify your employer is registered, ensure you have a signed contract, and do not pay recruitment fees.',
-      factory: 'Factory and manufacturing work abroad can involve long hours and limited worker protections in some countries. Verify your employer is registered and ensure you have a signed contract before travelling.'
+      domestic_worker: 'Domestic work abroad carries significant risks. Workers in private homes have limited oversight. Before proceeding: verify your employer is registered with the destination country\'s labour authority, ensure you have a signed contract in a language you understand, and do not pay recruitment fees. Red flag: any agent offering a Qatar or Saudi domestic worker visa in less than 2 weeks is not using the official process — official processing takes 3-6 weeks minimum.',
+      construction:    'Construction work abroad carries risks including wage theft, document confiscation and unsafe conditions. Verify your employer is registered, ensure you have a signed contract, and do not pay recruitment fees.',
+      factory:         'Factory and manufacturing work abroad can involve long hours and limited worker protections in some countries. Verify your employer is registered and ensure you have a signed contract before travelling.',
+      logistics:       'Warehouse and logistics work in Gulf countries carries risks including document confiscation and wage theft. Verify your employer is registered with the relevant labour authority and ensure you have a signed contract before travelling.'
     };
     return `<div class="waa-safety-callout" role="alert">
       <strong>Before you proceed — worker safety information</strong>
@@ -222,35 +295,147 @@
 
   function renderNoMatch(skillLevel, occupation) {
     return `<div style="padding:2rem 0;">
-      <p>No demand records found for <strong>${esc(occupation.replace(/_/g,' '))}</strong> at <strong>${esc(skillLevel.replace(/_/g,' '))}</strong> level yet. We are expanding the demand registry.</p>
+      <p>No demand records found for <strong>${esc(occupation.replace(/_/g, ' '))}</strong> at <strong>${esc(skillLevel.replace(/_/g, ' '))}</strong> level yet. We are expanding the demand registry.</p>
       <p style="margin-top:0.75rem;">In the meantime, try <a href="/pages/find-mypathway.html">Find MyPathway</a> to browse all verified work routes, or <a href="/blog/">read our work visa guides</a>.</p>
+      <p style="margin-top:0.75rem;font-size:0.85rem;color:var(--color-neutral-500);">If an agent has suggested a country not shown here, research it carefully before paying any fees. Some countries are promoted by agents without any documented labour demand for your occupation.</p>
     </div>`;
   }
 
-  // ── Tile button wiring (shared pattern with wizard-engine) ─────────────────
+  // ── Intake form wiring (runs after results render) ─────────────────────────
+  function wireIntakeForms() {
+    // Safety gate checkboxes — enable connect button when all checked
+    resultsBody.querySelectorAll('.waa-safety-gate-list input[type="checkbox"]').forEach(chk => {
+      chk.addEventListener('change', () => {
+        const gateId = chk.dataset.gate;
+        const allChecked = [...resultsBody.querySelectorAll(
+          `.waa-safety-gate-list input[data-gate="${gateId}"]`
+        )].every(c => c.checked);
+        const btn = resultsBody.querySelector(
+          `.waa-connect-btn[data-agent-id="${gateId.split('-')[0]}"][data-dest="${gateId.split('-').slice(1).join('-')}"]`
+        );
+        if (btn) btn.disabled = !allChecked;
+      });
+    });
+
+    // Connect button — toggle intake form
+    resultsBody.querySelectorAll('.waa-connect-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (btn.disabled) return;
+        const agentId = btn.dataset.agentId;
+        const dest    = btn.dataset.dest;
+        const form    = resultsBody.querySelector(
+          `.waa-intake-form[data-agent-id="${agentId}"][data-dest="${dest}"]`
+        );
+        if (!form) return;
+        form.hidden = !form.hidden;
+        btn.textContent = form.hidden ? 'Connect with this agent' : 'Cancel';
+        if (!form.hidden) form.querySelector('input[type="text"]')?.focus();
+
+        window.GlobalRoute?.Analytics?.track('agent_connect_clicked', {
+          agentId, dest,
+          skillLevel: state.answers.skillLevel,
+          occupation: state.answers.occupationCategory
+        });
+      });
+    });
+
+    // Form submit
+    resultsBody.querySelectorAll('.waa-intake-form').forEach(form => {
+      form.addEventListener('submit', async e => {
+        e.preventDefault();
+        const submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        const agentId    = form.dataset.agentId;
+        const dest       = form.dataset.dest;
+        const agentEmail = form.dataset.agentEmail;
+
+        const payload = {
+          name:      form.querySelector('[name="name"]').value.trim(),
+          email:     form.querySelector('[name="email"]').value.trim(),
+          whatsapp:  form.querySelector('[name="whatsapp"]').value.trim(),
+          skillLevel:   state.answers.skillLevel,
+          occupation:   state.answers.occupationCategory,
+          passport:     state.answers.passportCountry,
+          availability: state.answers.availability,
+          corridor:  `${state.answers.passportCountry}-${dest}`,
+          agentId,
+          _replyto:  form.querySelector('[name="email"]').value.trim(),
+          _subject:  `Work abroad lead — ${state.answers.passportCountry}→${dest} ${state.answers.occupationCategory}`
+        };
+
+        // Formspree endpoint — one per agent, keyed by agentId
+        // Owner must set data-formspree-id on the form or configure per agent
+        const formspreeId = form.dataset.formspreeId || agentEmail;
+        if (!formspreeId) {
+          showFormResult(form, false, 'Agent contact not configured yet. Please check back soon.');
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send my details to agent';
+          return;
+        }
+
+        try {
+          const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          if (res.ok) {
+            showFormResult(form, true, 'Your details have been sent. The agent will contact you within 48 hours via email or WhatsApp.');
+            window.GlobalRoute?.Analytics?.track('agent_lead_submitted', {
+              agentId, dest,
+              skillLevel: state.answers.skillLevel,
+              occupation: state.answers.occupationCategory
+            });
+          } else {
+            showFormResult(form, false, 'Something went wrong. Please try again or contact us directly.');
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send my details to agent';
+          }
+        } catch {
+          showFormResult(form, false, 'Network error. Please check your connection and try again.');
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send my details to agent';
+        }
+      });
+    });
+  }
+
+  function showFormResult(form, success, message) {
+    const existing = form.parentElement.querySelector('.waa-form-success, .waa-form-error');
+    if (existing) existing.remove();
+    const div = document.createElement('div');
+    div.className = success ? 'waa-form-success' : 'waa-form-error';
+    div.textContent = message;
+    if (success) form.hidden = true;
+    form.parentElement.insertBefore(div, form.nextSibling);
+  }
+
+  // ── Tile button wiring ─────────────────────────────────────────────────────
   function wireTileGroup(stepEl, selector, hiddenId, onSelect) {
     const btns = [...stepEl.querySelectorAll(selector)];
     btns.forEach((btn, i) => {
       btn.setAttribute('role', 'radio');
-      const isSelected = state.answers[hiddenId.replace('waa-','')] === btn.dataset.value ||
-                         (hiddenId === 'waa-skill-level' && state.answers.skillLevel === btn.dataset.value) ||
-                         (hiddenId === 'waa-availability' && state.answers.availability === btn.dataset.value);
+      const key = hiddenId === 'waa-skill-level' ? 'skillLevel' : 'availability';
+      const isSelected = state.answers[key] === btn.dataset.value;
       btn.setAttribute('aria-checked', isSelected ? 'true' : 'false');
-      btn.setAttribute('tabindex', (isSelected || (!state.answers[hiddenId] && i === 0)) ? '0' : '-1');
+      btn.setAttribute('tabindex', (isSelected || (!state.answers[key] && i === 0)) ? '0' : '-1');
       if (isSelected) btn.classList.add('selected');
 
       btn.addEventListener('click', () => {
-        btns.forEach(b => { b.classList.remove('selected'); b.setAttribute('aria-checked','false'); b.setAttribute('tabindex','-1'); });
+        btns.forEach(b => { b.classList.remove('selected'); b.setAttribute('aria-checked', 'false'); b.setAttribute('tabindex', '-1'); });
         btn.classList.add('selected');
-        btn.setAttribute('aria-checked','true');
-        btn.setAttribute('tabindex','0');
+        btn.setAttribute('aria-checked', 'true');
+        btn.setAttribute('tabindex', '0');
         const hidden = document.getElementById(hiddenId);
         if (hidden) hidden.value = btn.dataset.value;
         onSelect(btn.dataset.value);
       });
 
       btn.addEventListener('keydown', e => {
-        const dir = (e.key==='ArrowRight'||e.key==='ArrowDown') ? 1 : (e.key==='ArrowLeft'||e.key==='ArrowUp') ? -1 : 0;
+        const dir = (e.key === 'ArrowRight' || e.key === 'ArrowDown') ? 1
+                  : (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   ? -1 : 0;
         if (!dir) return;
         e.preventDefault();
         const next = btns[(i + dir + btns.length) % btns.length];
@@ -261,7 +446,6 @@
 
   // ── Wire each step ─────────────────────────────────────────────────────────
   function wireSteps() {
-    // Step 1 — skill level tiles
     const step1 = document.getElementById('waa-step-1');
     wireTileGroup(step1, '.wizard-purpose-btn', 'waa-skill-level', val => {
       state.answers.skillLevel = val;
@@ -272,11 +456,9 @@
     step1.querySelector('.waa-next')?.addEventListener('click', () => {
       if (!state.answers.skillLevel) return;
       populateOccupations(state.answers.skillLevel);
-      saveState();
-      showStep(2);
+      saveState(); showStep(2);
     });
 
-    // Step 2 — occupation select
     const step2 = document.getElementById('waa-step-2');
     const occSel = document.getElementById('waa-occupation');
     occSel?.addEventListener('change', () => {
@@ -290,7 +472,6 @@
       saveState(); showStep(3);
     });
 
-    // Step 3 — passport select
     const step3 = document.getElementById('waa-step-3');
     const passportSel = document.getElementById('waa-passport');
     if (state.answers.passportCountry) passportSel.value = state.answers.passportCountry;
@@ -305,7 +486,6 @@
       saveState(); showStep(4);
     });
 
-    // Step 4 — availability tiles
     const step4 = document.getElementById('waa-step-4');
     wireTileGroup(step4, '.wizard-budget-btn', 'waa-availability', val => {
       state.answers.availability = val;
@@ -321,26 +501,23 @@
 
   // Restart
   document.addEventListener('click', e => {
-    if (e.target.closest('.waa-restart')) {
-      state.answers = { skillLevel: '', occupationCategory: '', passportCountry: '', availability: '' };
-      state.step = 1;
-      try { localStorage.removeItem(STORAGE_KEY); } catch {}
-      document.querySelectorAll('.wizard-purpose-btn, .wizard-budget-btn').forEach(b => {
-        b.classList.remove('selected');
-        b.setAttribute('aria-checked','false');
-      });
-      document.getElementById('waa-skill-level').value = '';
-      document.getElementById('waa-availability').value = '';
-      document.getElementById('waa-occupation').value = '';
-      document.getElementById('waa-passport').value = '';
-      showStep(1);
-    }
+    if (!e.target.closest('.waa-restart')) return;
+    state.answers = { skillLevel: '', occupationCategory: '', passportCountry: '', availability: '' };
+    state.step = 1;
+    try { localStorage.removeItem(STORAGE_KEY); } catch {}
+    document.querySelectorAll('.wizard-purpose-btn, .wizard-budget-btn').forEach(b => {
+      b.classList.remove('selected'); b.setAttribute('aria-checked', 'false');
+    });
+    ['waa-skill-level', 'waa-availability', 'waa-occupation', 'waa-passport'].forEach(id => {
+      const el = document.getElementById(id); if (el) el.value = '';
+    });
+    showStep(1);
   });
 
   // ── Init ───────────────────────────────────────────────────────────────────
   wireSteps();
   if (saved?.answers?.skillLevel) populateOccupations(saved.answers.skillLevel);
-  const initStep = saved?.step && saved.step >= 1 && saved.step <= TOTAL_STEPS ? saved.step : 1;
+  const initStep = saved?.step >= 1 && saved?.step <= TOTAL_STEPS ? saved.step : 1;
   showStep(initStep);
 
 })();
