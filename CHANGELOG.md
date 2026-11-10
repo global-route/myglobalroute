@@ -4,6 +4,44 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
+## 2026-11-09 — WAA-3b/3c/3d + WAA-4: agent matching, intake form, safety gate
+
+**Commit:** `192ad97` | **Tests:** 19/19 suites, 214/214 passing | **Build:** 281 files
+
+### WorkAbroadAgent — WAA-3b/3c/3d
+- `src/js/work-abroad-agent.js` — `matchAgents()` filters `agents.json` by corridor (wildcard-aware `XX-*`/`*-YY`), occupationCategory, skillLevel, verificationStatus. Featured agents sort first, max 3 per corridor.
+- `renderAgentCard()` — inline agent card with name, corridors, "Connect with this agent" button, inline intake form (name, email, WhatsApp, 2 mandatory checkboxes), Formspree submit handler, success/error feedback.
+- Analytics: `agent_connect_clicked` and `agent_lead_submitted` events wired.
+- Agents data now fetched alongside demand/pathway/country data in `runEngine()`.
+
+### WorkAbroadAgent — WAA-4 unskilled safety gate
+- Pre-form checklist (5 items) renders for `riskLevel: high` categories before intake form.
+- "Connect with this agent" button disabled until all 5 boxes checked.
+- High-risk categories expanded: `domestic_worker`, `construction`, `factory`, `logistics`.
+- Safety callout for `domestic_worker` strengthened: processing time red flag added.
+- No-match message: obscure-country warning added.
+
+### CSS — enhancements.css v11
+- `.waa-agent-card`, `.waa-agent-card-header`, `.waa-agent-name`, `.waa-agent-meta`, `.waa-agent-badge-featured`
+- `.waa-intake-form`, `.waa-checkbox`, `.waa-form-success`, `.waa-form-error`, `.waa-form-disclaimer`
+- `.waa-safety-gate`, `.waa-safety-gate-title`, `.waa-safety-gate-list`, `.waa-connect-btn:disabled`
+
+### Quality gate
+- `scripts/validate-agent-registry.js` — validates `agents.json`: verificationStatus values, corridors format (XX-YY/XX-*/\*-YY), verifiedAt required on verified agents, contactEmail rules, tier values, duplicate id check.
+- `package.json` — `agents:validate` script added, wired into `verify` chain.
+
+### HTML + docs
+- `work-abroad-agent.html` — CSS bumped v10→v11, step 1 and step 3 hint text updated to plain language.
+- `docs/engineering/WORK_ABROAD_AGENT.md` — rewritten as clean blueprint: correct user journey, data flow, WAA-3 implementation spec, multi-agent handling, Formspree vs Worker decision, architecture guardrails.
+- `docs/engineering/WAA_RESEARCH_PREP.md` — full image research doc: 20 images extracted, 18 offers assessed, 6 verified real, 7 scam/misleading, 22 blog posts queued (W1-W22), 8 new demand records needed.
+- `docs/project/CONTENT_PIPELINE.md` — image research pipeline section replaced with full 22-post queue.
+- `docs/project/PHASE_STATUS.md` — WAA phase table updated: WAA-3 split into 3a/3b/3c/3d, WAA-4 marked ready to build.
+
+**WAA-3a remains blocked on owner:** first verified agent + signed commercial agreement.
+**WAA-3b/3c/3d are code-complete** — will activate automatically when agents.json gets first verified entry.
+
+---
+
 ## 2026-11-09 — Singapore expansion + WAA supporting content + 5 work guides
 
 **Commit:** `75429a8` | **Tests:** 19/19 suites, 214/214 passing | **Build:** 281 files | **Posts:** 101 → 107 | **Countries:** 30 → 31

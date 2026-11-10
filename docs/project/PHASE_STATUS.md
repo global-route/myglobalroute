@@ -2,7 +2,7 @@
 
 > **Updated:** 2026-11-09 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 214/214 passing
-> **Commit:** `75429a8` | **Blog posts:** 107 | **Sitemap URLs:** 145 | **Stale requirements:** 0
+> **Commit:** `192ad97` | **Blog posts:** 107 | **Sitemap URLs:** 145 | **Stale requirements:** 0
 
 ---
 
@@ -360,10 +360,10 @@ A task is not complete because a file exists. Legal/data claims require evidence
 | WAA-1 | Occupation demand registry + agents schema | **Done** — `src/data/occupation-demand.json` (15 records), `src/data/agents.json` (schema only) |
 | WAA-2 | Wizard UI — 4-step occupation-driven routing, safety callouts, agent placeholder | **Done** — `src/pages/work-abroad-agent.html`, `src/js/work-abroad-agent.js`, nav/footer wired |
 | WAA-3a | Populate agents.json — first verified agent, signed commercial agreement | **Blocked** — owner must vet first agent and sign commercial agreement |
-| WAA-3b | Agent matching logic + intake form + Formspree submission | **Ready to build** — waiting on WAA-3a for end-to-end test |
-| WAA-3c | Analytics events: agent_connect_clicked, agent_lead_submitted | **Ready to build** |
-| WAA-4 | Unskilled safety gate — pre-form checklist for high-risk categories | **Ready to build now** — no blocker |
-| validate-agent-registry.js | Quality gate script for agents.json | **Ready to build now** — no blocker |
+| WAA-3b | Agent matching logic + intake form + Formspree submission | **Done** — `192ad97` |
+| WAA-3c | Analytics events: agent_connect_clicked, agent_lead_submitted | **Done** — `192ad97` |
+| WAA-4 | Unskilled safety gate — pre-form checklist for high-risk categories | **Done** — `192ad97` |
+| validate-agent-registry.js | Quality gate script for agents.json | **Done** — `192ad97` |
 
 **WAA-3 scope (simple):** wizard collects profile → matches verified agents by corridor + occupation → user fills inline intake form (name, email, WhatsApp, 2 checkboxes) → agent receives lead by email. No dashboard, no payments, no accounts. See `docs/engineering/WORK_ABROAD_AGENT.md`.
 
