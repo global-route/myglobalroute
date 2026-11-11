@@ -128,10 +128,10 @@ Active posts being written. Each post requires: frontmatter with watermark field
 | W5 | How to spot a fake travel agent — Nigerian checklist | Guide — Work | `guides/work/how-to-spot-fake-travel-agent-nigeria-2026.md` | **DONE** |
 | W6 | Oman work visa for mechanics and electricians | Guide — Work | `guides/work/oman-trades-work-visa-mechanic-electrician-2026.md` | **DONE** |
 | W7 | Guyana 2-year freelance work visa | Country Audit | `country-audits/guyana/guyana-visa-from-nigeria-2026.md` | **DONE** |
-| W8 | Bulgaria study visa for Nigerians 2026 | Country Audit | `country-audits/bulgaria/bulgaria-visa-from-nigeria-2026.md` | **PENDING** |
-| W9 | Croatia study visa 2026 — RIT University, debt trap warning | Country Audit | `country-audits/croatia/croatia-visa-from-nigeria-2026.md` | **PENDING** |
-| W10 | Canada LMIA warehouse and logistics work permit | Guide — Work | `guides/work/canada-lmia-warehouse-logistics-2026.md` | **PENDING** |
-| W11 | Singapore Employment Pass — COMPASS explained | Guide — Work | `guides/work/singapore-employment-pass-compass-guide-2026.md` | **PENDING** |
+| W8 | Bulgaria study visa for Nigerians 2026 | Country Audit | `country-audits/bulgaria/bulgaria-visa-from-nigeria-2026.md` | **DONE** |
+| W9 | Croatia study visa 2026 — RIT University, debt trap warning | Country Audit | `country-audits/croatia/croatia-visa-from-nigeria-2026.md` | **DONE** |
+| W10 | Canada LMIA warehouse and logistics work permit | Guide — Work | `guides/work/canada-lmia-warehouse-logistics-2026.md` | **DONE** |
+| W11 | Singapore Employment Pass — COMPASS explained | Guide — Work | `guides/work/singapore-employment-pass-compass-guide-2026.md` | **DONE** |
 | W12 | "Job assistance when you get there" — red flag guide | Guide — Work | `guides/work/job-assistance-on-arrival-red-flag-2026.md` | **PENDING** |
 | W13 | What "zero deposit" visa offers actually mean | Guide — Work | `guides/work/zero-deposit-visa-offers-what-they-mean-2026.md` | **PENDING** |
 | W14 | Antigua and Barbuda visa from Nigeria | Country Audit | `country-audits/antigua-barbuda/antigua-barbuda-visa-from-nigeria-2026.md` | **PENDING** |
@@ -265,10 +265,10 @@ These run on every deploy. No action needed unless they fail.
 | Sprint | Total | Done | In-progress | Pending | Blocked |
 |---|---|---|---|---|---|
 | A — Watermark | 13 | 13 | 0 | 0 | 0 |
-| B — Content W1-W22 | 22 | 7 | 0 | 15 | 0 |
+| B — Content W1-W22 | 22 | 11 | 0 | 11 | 0 |
 | C — Demand records | 8 | 7 | 0 | 1 | 0 |
-| D — New countries | 4 | 1 | 0 | 3 | 0 |
+| D — New countries | 4 | 3 | 0 | 1 | 0 |
 | E — Deploy | 10 | 8 | 0 | 0 | 2 |
 | F — WAA-3a | 5 | 0 | 0 | 0 | 5 |
 | G — Quality gates | 6 | 6 | 0 | 0 | 0 |
-| **Total** | **68** | **42** | **0** | **19** | **7** |
+| **Total** | **68** | **48** | **0** | **13** | **7** |
