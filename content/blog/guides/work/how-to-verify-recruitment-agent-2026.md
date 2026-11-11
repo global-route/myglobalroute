@@ -7,8 +7,10 @@ author: "MyPathway2Global Editorial"
 category: "Guides"
 country: "Nigeria"
 keywords: "verify recruitment agent Nigeria, fake recruitment agent, recruitment scam Nigeria, legitimate recruitment agency Africa, NAPTIP recruitment fraud"
-featured: false
-image: "/public/blog/images/verify-recruitment-agent-2026.jpg"
+lastFactChecked: 2026-11-09
+evidenceStatus: verified
+sourceAuthority: Federal Ministry of Labour and Employment Nigeria / NAPTIP
+sourceUrl: https://www.labour.gov.ng/
 readTime: "8 min"
 excerpt: "Recruitment fraud is one of the most common ways Nigerians lose money and end up in dangerous situations abroad. Here is how to verify whether a recruitment agent is legitimate before paying any fees or handing over documents."
 faqs:

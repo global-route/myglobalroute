@@ -7,8 +7,10 @@ author: "MyPathway2Global Editorial"
 category: "Guides"
 country: "Australia"
 keywords: "Australia DAMA occupations 2026, Australia trades shortage, Australia regional work visa Africa, DAMA eligible occupations Nigeria"
-featured: false
-image: "/public/blog/images/australia-dama-occupations-2026.jpg"
+lastFactChecked: 2026-11-09
+evidenceStatus: verified
+sourceAuthority: Department of Home Affairs Australia
+sourceUrl: https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/site-agreements/designated-area-migration-agreements
 readTime: "9 min"
 excerpt: "Australia's Designated Area Migration Agreements (DAMAs) allow regional employers to sponsor workers in occupations not on the standard skilled lists. Trades are heavily represented. Here is what occupations are covered and how the route works for African applicants."
 faqs:

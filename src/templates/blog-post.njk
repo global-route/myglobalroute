@@ -88,7 +88,7 @@
   </script>
   
   <link rel="stylesheet" href="/css/styles.css?v=3">
-  <link rel="stylesheet" href="/css/enhancements.css?v=9">
+  <link rel="stylesheet" href="/css/enhancements.css?v=12">
   <link rel="stylesheet" href="/css/blog-post.css?v=3">
 </head>
 <body data-page-type="blog-post">
@@ -137,6 +137,36 @@
         {% if excerpt %}
         <p class="article-lead">{{ excerpt }}</p>
         {% endif %}
+
+        <!-- Source trail watermark -->
+        <div class="post-source-trail">
+          {% if evidenceStatus == "verified" %}
+            <span class="post-source-badge post-source-badge--verified">Source verified</span>
+          {% elif evidenceStatus == "under-correction" %}
+            <span class="post-source-badge post-source-badge--under-correction">Under correction</span>
+          {% elif evidenceStatus == "research-required" %}
+            <span class="post-source-badge post-source-badge--research-required">Research required</span>
+          {% else %}
+            <span class="post-source-badge post-source-badge--unaudited">Not yet audited</span>
+          {% endif %}
+          <span class="post-source-authority">
+            {% if sourceUrl and sourceAuthority %}
+              <a href="{{ sourceUrl }}" target="_blank" rel="noopener noreferrer">{{ sourceAuthority }}</a>
+            {% elif sourceAuthority %}
+              {{ sourceAuthority }}
+            {% else %}
+              <span style="color:var(--color-neutral-400);">Source not recorded</span>
+            {% endif %}
+          </span>
+          <span class="post-source-date">
+            {% if lastFactChecked %}
+              Verified {{ lastFactChecked | readableDate }}
+            {% else %}
+              <span class="post-source-unaudited">Date not recorded</span>
+            {% endif %}
+          </span>
+          <span class="post-source-independence">Independent platform. Not affiliated with any government or immigration authority.</span>
+        </div>
       </header>
 
       <!-- Article Body -->

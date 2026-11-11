@@ -7,8 +7,10 @@ author: "MyPathway2Global Editorial"
 category: "Guides"
 country: "United Kingdom"
 keywords: "UK shortage occupation list 2026, UK Immigration Salary List, UK skilled worker shortage occupations Africa, UK work visa shortage"
-featured: false
-image: "/public/blog/images/uk-shortage-occupations-2026.jpg"
+lastFactChecked: 2026-11-09
+evidenceStatus: verified
+sourceAuthority: UK Visas and Immigration
+sourceUrl: https://www.gov.uk/government/publications/immigration-salary-list
 readTime: "7 min"
 excerpt: "The UK abolished the Shortage Occupation List in April 2024 and replaced it with the Immigration Salary List. The new list works differently — it identifies occupations where the going rate is below the general GBP 38,700 threshold, not occupations with a salary discount. Here is what changed and what it means."
 faqs:

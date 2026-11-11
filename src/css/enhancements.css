@@ -1562,6 +1562,75 @@ p a:hover, li a:hover, td a:hover {
   }
 }
 
+/* ── POST SOURCE TRAIL (watermark) ── */
+.post-source-trail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  padding: 0.6rem 0 0.75rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-neutral-200);
+  font-size: 0.78rem;
+}
+.post-source-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.18rem 0.55rem;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.post-source-badge--verified {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #86efac;
+}
+.post-source-badge--under-correction {
+  background: #fef9c3;
+  color: #a16207;
+  border: 1px solid #fde047;
+}
+.post-source-badge--research-required {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+}
+.post-source-badge--unaudited {
+  background: #fef9c3;
+  color: #a16207;
+  border: 1px solid #fde047;
+}
+.post-source-authority {
+  color: var(--color-neutral-600);
+  font-weight: 500;
+}
+.post-source-authority a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.post-source-authority a:hover { color: var(--color-dark-navy); }
+.post-source-date {
+  color: var(--color-neutral-500);
+}
+.post-source-unaudited {
+  color: #a16207;
+  font-weight: 500;
+}
+.post-source-independence {
+  color: var(--color-neutral-400);
+  font-size: 0.72rem;
+  flex-basis: 100%;
+  margin-top: 0.1rem;
+}
+@media (max-width: 600px) {
+  .post-source-trail { gap: 0.4rem 0.75rem; }
+  .post-source-independence { flex-basis: 100%; }
+}
+
 /* ── WORK ABROAD AGENT ── */
 .waa-safety-callout {
   background: #fef2f2;

@@ -7,8 +7,10 @@ author: "MyPathway2Global Editorial"
 category: "Guides"
 country: "Germany"
 keywords: "Germany shortage occupations 2026, Engpassberufe Germany, Germany skilled worker shortage Africa, Germany Chancenkarte occupations"
-featured: false
-image: "/public/blog/images/germany-shortage-occupations-2026.jpg"
+lastFactChecked: 2026-11-09
+evidenceStatus: verified
+sourceAuthority: Federal Employment Agency Germany (Bundesagentur fur Arbeit)
+sourceUrl: https://www.arbeitsagentur.de/en/shortage-occupations
 readTime: "8 min"
 excerpt: "Germany's Federal Employment Agency publishes a shortage occupation list (Engpassberufe) updated quarterly. Being on the list does not guarantee a visa but it affects processing times and some concessions. Here is what is on the list and what it means for African applicants."
 faqs:

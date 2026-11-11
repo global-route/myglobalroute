@@ -7,8 +7,10 @@ author: "MyPathway2Global Editorial"
 category: "Guides"
 country: "Qatar"
 keywords: "domestic worker rights Gulf, Qatar domestic worker visa, UAE domestic worker rights, Saudi Arabia domestic worker, Kafala domestic worker Africa"
-featured: false
-image: "/public/blog/images/domestic-worker-rights-gulf-2026.jpg"
+lastFactChecked: 2026-11-09
+evidenceStatus: verified
+sourceAuthority: Qatar Ministry of Labour / UAE MOHRE / Saudi Ministry of Human Resources
+sourceUrl: https://adlsa.gov.qa/
 readTime: "10 min"
 excerpt: "Domestic workers in Qatar, UAE and Saudi Arabia have legal protections on paper. Here is what those protections actually cover, where enforcement is weak, and what to verify before accepting a domestic work offer in the Gulf."
 faqs:
