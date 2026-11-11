@@ -132,10 +132,10 @@ Active posts being written. Each post requires: frontmatter with watermark field
 | W9 | Croatia study visa 2026 — RIT University, debt trap warning | Country Audit | `country-audits/croatia/croatia-visa-from-nigeria-2026.md` | **DONE** |
 | W10 | Canada LMIA warehouse and logistics work permit | Guide — Work | `guides/work/canada-lmia-warehouse-logistics-2026.md` | **DONE** |
 | W11 | Singapore Employment Pass — COMPASS explained | Guide — Work | `guides/work/singapore-employment-pass-compass-guide-2026.md` | **DONE** |
-| W12 | "Job assistance when you get there" — red flag guide | Guide — Work | `guides/work/job-assistance-on-arrival-red-flag-2026.md` | **PENDING** |
-| W13 | What "zero deposit" visa offers actually mean | Guide — Work | `guides/work/zero-deposit-visa-offers-what-they-mean-2026.md` | **PENDING** |
+| W12 | "Job assistance when you get there" — red flag guide | Guide — Work | `guides/work/job-assistance-on-arrival-red-flag-2026.md` | **DONE** |
+| W13 | What "zero deposit" visa offers actually mean | Guide — Work | `guides/work/zero-deposit-visa-offers-what-they-mean-2026.md` | **DONE** |
 | W14 | Antigua and Barbuda visa from Nigeria | Country Audit | `country-audits/antigua-barbuda/antigua-barbuda-visa-from-nigeria-2026.md` | **PENDING** |
-| W15 | Oman freelance visa vs employment visa | Guide — Work | `guides/work/oman-freelance-visa-vs-employment-visa-2026.md` | **PENDING** |
+| W15 | Oman freelance visa vs employment visa | Guide — Work | `guides/work/oman-freelance-visa-vs-employment-visa-2026.md` | **DONE** |
 | W16 | Kafala reform tracker 2026 | Guide — Work | `guides/work/kafala-reform-tracker-2026.md` | **PENDING** |
 | W17 | How to read a Gulf employment contract | Guide — Work | `guides/work/gulf-employment-contract-guide-2026.md` | **PENDING** |
 | W18 | What to do if your employer confiscates your passport | Guide — Work | `guides/work/passport-confiscation-what-to-do-2026.md` | **PENDING** |
@@ -265,10 +265,10 @@ These run on every deploy. No action needed unless they fail.
 | Sprint | Total | Done | In-progress | Pending | Blocked |
 |---|---|---|---|---|---|
 | A — Watermark | 13 | 13 | 0 | 0 | 0 |
-| B — Content W1-W22 | 22 | 11 | 0 | 11 | 0 |
+| B — Content W1-W22 | 22 | 14 | 0 | 8 | 0 |
 | C — Demand records | 8 | 7 | 0 | 1 | 0 |
 | D — New countries | 4 | 3 | 0 | 1 | 0 |
 | E — Deploy | 10 | 8 | 0 | 0 | 2 |
 | F — WAA-3a | 5 | 0 | 0 | 0 | 5 |
 | G — Quality gates | 6 | 6 | 0 | 0 | 0 |
-| **Total** | **68** | **48** | **0** | **13** | **7** |
+| **Total** | **68** | **51** | **0** | **10** | **7** |
