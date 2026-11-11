@@ -29,7 +29,7 @@
       "retrievedAt": "2026-10-11",
       "methodology": "Direct review of current IRCC financial-support guidance on 2026-10-11. Confirmed that applicants must cover tuition, living expenses and transportation; the published annual living-expense table applies from 2026-09-01 and varies by family size. Outside Quebec, the table lists CAD 23,448 / 29,192 / 35,888 / 43,572 / 49,419 / 55,736 / 62,054 for family sizes 1–7, excluding tuition and transportation; each additional member above seven adds CAD 6,318. Quebec uses separate provincial rules. Structured pathway records represent only the fixed family-size values 1–7; the >7 increment is explicitly not modelled as a fixed threshold.",
       "confidence": "high",
-      "reviewAfter": "2026-11-10"
+      "reviewAfter": "2027-02-11"
     },
     {
       "id": "NO-study-eligibility-2026-09-07",
@@ -104,7 +104,7 @@
       "retrievedAt": "2026-10-11",
       "methodology": "Rechecked current Immigration Services Agency of Japan residence-status Q&A and status-of-residence listings on 2026-10-11. The record remains a general status-scope statement; programme-specific admission and supporting-document requirements must be checked against the relevant institution/category.",
       "confidence": "high",
-      "reviewAfter": "2026-11-10"
+      "reviewAfter": "2027-02-11"
     },
     {
       "id": "JP-engineer-status-2026-09-07",
@@ -119,7 +119,7 @@
       "retrievedAt": "2026-10-11",
       "methodology": "Rechecked the current Immigration Services Agency status-of-residence information and the official Engineer/Specialist in Humanities/International Services clarification, whose attachments were revised on 15 April 2026. The claim remains scoped to qualifying contract-based professional activities; category-specific qualification evidence must be verified against the applicable guidance.",
       "confidence": "high",
-      "reviewAfter": "2026-11-10"
+      "reviewAfter": "2027-02-11"
     }
   ],
   "verifiedAt": "2026-10-11"

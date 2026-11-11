@@ -1,6 +1,7 @@
 # SPRINT TASKFILE — MyPathway2Global
-**Updated:** 2026-11-11 | **Commit:** `85b016b` | **Tests:** 19/19, 214/214
+**Updated:** 2026-11-11 | **Commit:** `b6e5d7b` | **Tests:** 19/19, 214/214
 **Blog posts:** 125 | **Countries:** 31 | **Pathways:** 71 | **Demand records:** 22 | **Stale requirements:** 1 (evidence-locked)
+**Data validation:** PASSED (222 evidence records)
 
 Single source of truth for all active work. Status: DONE / PENDING / BLOCKED
 

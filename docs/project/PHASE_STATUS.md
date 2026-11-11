@@ -2,7 +2,8 @@
 
 > **Updated:** 2026-11-11 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 214/214 passing
-> **Commit:** `85b016b` | **Blog posts:** 125 | **Sitemap URLs:** 146 | **Stale requirements:** 1 (IE-critical-skills job_offer — evidence-date locked)
+> **Commit:** `b6e5d7b` | **Blog posts:** 125 | **Sitemap URLs:** 146 | **Stale requirements:** 1 (IE-critical-skills — evidence-locked)
+> **Data validation:** PASSED — 31 countries, 71 pathways, 222 evidence records
 
 ---
 

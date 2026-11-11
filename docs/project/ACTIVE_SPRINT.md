@@ -1,9 +1,9 @@
 # ACTIVE SPRINT TASKFILE — MyPathway2Global
-**Created:** 2026-11-11 | **Baseline commit:** `85b016b` | **Tests:** 19/19, 214/214
-**Posts:** 125 | **Countries:** 31 | **Pathways:** 71 | **Demand records:** 22
+**Updated:** 2026-11-11 | **Commit:** `b6e5d7b` | **Tests:** 19/19, 214/214
+**Posts:** 125 | **Countries:** 31 | **Pathways:** 71 | **Demand records:** 22 | **Evidence records:** 222
+**Data validation:** PASSED | **Stale requirements:** 1 (IE-critical-skills — evidence-date locked)
 
-This is the single source of truth for all outstanding work before and after deployment.
-Status: DONE / IN-PROGRESS / PENDING / BLOCKED
+Single source of truth for all outstanding work. Status: DONE / PENDING / BLOCKED
 
 ---
 
@@ -13,12 +13,13 @@ Status: DONE / IN-PROGRESS / PENDING / BLOCKED
 |---|---|---|---|
 | P1-1 | Sitemap: add all 22 new posts (W1-W22) | `public/sitemap.xml` | **PENDING** |
 | P1-2 | Sitemap: add Bulgaria, Croatia, Guyana country pages | `public/sitemap.xml` | **PENDING** |
-| P1-3 | Sitemap: add Singapore country page (added Nov 9, not in sitemap) | `public/sitemap.xml` | **PENDING** |
+| P1-3 | Sitemap: add Singapore country page | `public/sitemap.xml` | **PENDING** |
 | P1-4 | Sitemap: update lastmod dates on all existing entries to 2026-11-11 | `public/sitemap.xml` | **PENDING** |
-| P1-5 | IE Critical Skills stale requirement — re-verify job_offer at enterprise.gov.ie, update effectiveDate | `src/data/pathways.json` | **PENDING** |
-| P1-6 | About page: update post count (107→125), country count (31), pathway count (71) | `src/pages/about.html` | **PENDING** |
-| P1-7 | Build verify + full test run after all P1 fixes | — | **PENDING** |
-| P1-8 | Commit + push P1 fixes | — | **PENDING** |
+| P1-5 | IE Critical Skills stale requirement — evidence-date locked, cannot update without new evidence record | `src/data/pathways.json` | **BLOCKED** (evidence-locked) |
+| P1-6 | About page: update post count (107→125), country count (31), pathway count (71) | `src/pages/about.html` | **DONE** `b6e5d7b` |
+| P1-7 | Data validation: fix 57 effectiveDate mismatches + 12 expired reviewAfter evidence records | `src/data/pathways.json` + evidence files | **DONE** (this session) |
+| P1-8 | Build verify + full test run after all P1 fixes | — | **DONE** — 214/214, DATA VALIDATION PASSED |
+| P1-9 | Commit + push P1 fixes | — | **PENDING** |
 
 ---
 
@@ -26,18 +27,19 @@ Status: DONE / IN-PROGRESS / PENDING / BLOCKED
 
 | ID | Task | File | Status |
 |---|---|---|---|
-| P2-1 | Add Bulgaria (BG) to `countries.json` — category Europe - Eastern, study route | `src/data/countries.json` | **PENDING** |
-| P2-2 | Add Croatia (HR) to `countries.json` — category Europe - Eastern, study route | `src/data/countries.json` | **PENDING** |
-| P2-3 | Add Guyana (GY) to `countries.json` — category Americas, freelance work route | `src/data/countries.json` | **PENDING** |
+| P2-1 | Add Bulgaria (BG) to `countries.json` | `src/data/countries.json` | **PENDING** |
+| P2-2 | Add Croatia (HR) to `countries.json` | `src/data/countries.json` | **PENDING** |
+| P2-3 | Add Guyana (GY) to `countries.json` | `src/data/countries.json` | **PENDING** |
 | P2-4 | Add BG-study pathway to `pathways.json` | `src/data/pathways.json` | **PENDING** |
 | P2-5 | Add HR-study pathway to `pathways.json` | `src/data/pathways.json` | **PENDING** |
 | P2-6 | Add GY-freelance-work pathway to `pathways.json` | `src/data/pathways.json` | **PENDING** |
-| P2-7 | Add OM-employer-sponsored-trades pathway to `pathways.json` (country exists, pathway missing) | `src/data/pathways.json` | **PENDING** |
-| P2-8 | Add D8: `NL-software-it-skilled-2026` demand record | `src/data/occupation-demand.json` | **PENDING** |
-| P2-9 | Update `validate-data.js` country count 31→34 after BG/HR/GY added | `scripts/validate-data.js` | **PENDING** |
-| P2-10 | Update test files for new country count | `tests/data-contract.test.js`, `tests/country-source-manifest.test.js`, `tests/evidence-registry.test.js` | **PENDING** |
-| P2-11 | Regenerate country source manifest | `scripts/generate-country-source-manifest.js --write` | **PENDING** |
-| P2-12 | Commit + push P2 data additions | — | **PENDING** |
+| P2-7 | Add OM-employer-sponsored-trades pathway to `pathways.json` | `src/data/pathways.json` | **PENDING** |
+| P2-8 | Add D7: `IE-healthcare-skilled-2026` demand record | `src/data/occupation-demand.json` | **PENDING** |
+| P2-9 | Add D8: `NL-software-it-skilled-2026` demand record | `src/data/occupation-demand.json` | **PENDING** |
+| P2-10 | Update `validate-data.js` country count 31→34 after BG/HR/GY added | `scripts/validate-data.js` | **PENDING** |
+| P2-11 | Update test files for new country count | `tests/data-contract.test.js`, `tests/country-source-manifest.test.js`, `tests/evidence-registry.test.js` | **PENDING** |
+| P2-12 | Regenerate country source manifest | `scripts/generate-country-source-manifest.js --write` | **PENDING** |
+| P2-13 | Commit + push P2 data additions | — | **PENDING** |
 
 ---
 
@@ -99,16 +101,14 @@ When WAA-3a-1 to 4 are resolved, WAA-3b/3c/3d code already live activates automa
 
 | ID | Task | Status |
 |---|---|---|
-| D1 | Fix wrangler DNS issue: run `$env:NODE_OPTIONS="--dns-result-order=ipv4first"` before deploy | **OWNER ACTION** |
-| D2 | Deploy command sequence (see below) | **OWNER ACTION** |
-| D3 | Post-deploy smoke test: verify mypathway2global.org.uk loads, WAA wizard works, new posts accessible | **OWNER ACTION** |
+| D1 | Fix wrangler DNS issue — downgrade to v3: `npm install --save-dev wrangler@3` | **OWNER ACTION** |
+| D2 | Deploy: `npx wrangler deploy` | **OWNER ACTION** |
+| D3 | Post-deploy smoke test: verify site loads, WAA wizard works, new posts accessible | **OWNER ACTION** |
 | D4 | Re-run axe accessibility audit after deploy (WCAG 2.1 AA) | **OWNER ACTION** |
 
-**Deploy command sequence:**
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-cd C:\github\mypathway\myglobalroute
-$env:NODE_OPTIONS="--dns-result-order=ipv4first"
+**Deploy command (macOS):**
+```bash
+npm install --save-dev wrangler@3
 npx wrangler deploy
 ```
 
@@ -116,14 +116,14 @@ npx wrangler deploy
 
 ## PRIORITY 7 — Ongoing quality gates (run before every deploy)
 
-| Gate | Command | Last result |
+| Gate | Command | Status |
 |---|---|---|
 | Tests | `npm test` | 19/19, 214/214 PASS |
-| Agent registry | `node scripts/validate-agent-registry.js` | PASS (1 template agent, 0 errors) |
+| Data validation | `node scripts/validate-data.js` | PASS — 31 countries, 71 pathways, 222 evidence records |
+| Agent registry | `node scripts/validate-agent-registry.js` | PASS (0 verified agents) |
 | Commercial registry | `node scripts/validate-commercial-registry.js` | PASS |
 | Build integrity | `node scripts/verify-build.js` | PASS |
-| Build | `npm run build` | PASS (302 files) |
-| Stale pathways | `node scripts/check-stale-pathways.js` | 1 stale: IE Critical Skills (P1-5) |
+| Stale pathways | `node scripts/check-stale-pathways.js` | 1 stale (IE-critical-skills — evidence-locked) |
 
 ---
 
@@ -153,10 +153,11 @@ These are the next content items after deployment. No code blocker.
 | Blog posts | 125 | 126 (after W14) |
 | Countries in registry | 31 | 34 (after BG/HR/GY) |
 | Pathways | 71 | 75 (after BG/HR/GY/OM) |
-| Demand records | 22 | 23 (after D8 NL) |
-| Sitemap URLs | 146 | ~170 (after P1 sitemap update) |
+| Demand records | 22 | 24 (after D7 IE, D8 NL) |
+| Evidence records | 222 | 222 |
+| Sitemap URLs | 146 | ~172 (after P1 sitemap update) |
 | Tests | 214/214 | 214/214 |
-| Build files | 302 | ~310 (after new countries) |
+| Data validation | PASSED | PASSED |
 | Watermark coverage | 125/125 posts | 125/125 |
 | Agent records (verified) | 0 | 1 (after WAA-3a owner action) |
 
@@ -164,17 +165,21 @@ These are the next content items after deployment. No code blocker.
 
 ## Execution order recommendation
 
-**Before deploy:**
-1. P1-1 to P1-8 (sitemap + stale pathway + about page) — ~30 min
-2. P2-1 to P2-12 (BG/HR/GY countries + pathways + demand record) — ~45 min
+**Before deploy (code tasks — no owner needed):**
+1. P1-1 to P1-4 (sitemap update) — ~20 min
+2. P2-1 to P2-13 (BG/HR/GY countries + pathways + demand records) — ~45 min
 3. P3-1 (W14 Antigua post) — ~20 min
-4. Full test + build verify
-5. Deploy with DNS fix (D1 + D2)
+4. Full test + data validation + build verify
+5. Commit + push
 
-**After deploy:**
-6. R1-R7 research verification — ongoing
-7. R8 agent company research — feeds WAA-3a
-8. N1-N10 next content sprint — ongoing
+**Deploy (owner action):**
+6. `npm install --save-dev wrangler@3 && npx wrangler deploy`
+7. Post-deploy smoke test
+
+**After deploy (ongoing):**
+8. R1-R7 research verification
+9. R8 agent company research — feeds WAA-3a
+10. N1-N10 next content sprint
 
 **Blocked until owner action:**
 - WAA-3a-1 to 5 — first verified agent

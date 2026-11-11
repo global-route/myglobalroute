@@ -76,7 +76,7 @@
       "retrievedAt": "2026-10-11",
       "methodology": "Direct review of current GOV.UK Skilled Worker route and salary guidance on 2026-10-11. Confirmed the route requires an eligible job, approved sponsor and Certificate of Sponsorship; the usual baseline is £41,700/year or the occupation going rate, whichever is higher, subject to exceptions and transitional rules.",
       "confidence": "high",
-      "reviewAfter": "2026-11-10"
+      "reviewAfter": "2027-02-11"
     },
     {
       "id": "GB-skilled-worker-cost-2026-09-06",
@@ -91,7 +91,7 @@
       "retrievedAt": "2026-10-11",
       "methodology": "Direct review of current GOV.UK Skilled Worker cost guidance on 2026-10-11. Confirmed the £1,270 maintenance rule, 28-day holding period, employer certification/exemption cases, variable application fees and usual annual health surcharge.",
       "confidence": "high",
-      "reviewAfter": "2026-11-10"
+      "reviewAfter": "2027-02-11"
     },
     {
       "id": "GB-student-eligibility-2026-09-06",
@@ -106,7 +106,7 @@
       "retrievedAt": "2026-10-11",
       "methodology": "Direct review of current GOV.UK Student visa overview and required-documents guidance on 2026-10-11; age, licensed-sponsor offer, finances, English and under-18 consent conditions were checked.",
       "confidence": "high",
-      "reviewAfter": "2026-11-10"
+      "reviewAfter": "2027-02-11"
     },
     {
       "id": "CA-study-finance-2026-09-06",
@@ -136,7 +136,7 @@
       "retrievedAt": "2026-10-11",
       "methodology": "Direct review of current Department of Home Affairs SkillSelect guidance on 2026-10-11. Confirmed EOI is required for subclasses 189, 190 and 491 before invitation, minimum threshold is 65 points, and meeting it does not guarantee invitation.",
       "confidence": "high",
-      "reviewAfter": "2026-11-10"
+      "reviewAfter": "2027-02-11"
     },
     {
       "id": "AU-skilled-priority-2026-09-06",
@@ -211,7 +211,7 @@
       "retrievedAt": "2026-10-11",
       "methodology": "Direct review of current Migri student income requirement guidance on 2026-10-11. Confirmed EUR 800/month and EUR 9,600 for studies lasting at least one year, with tuition funds separately required where applicable and reductions for qualifying institutional support.",
       "confidence": "high",
-      "reviewAfter": "2026-11-10"
+      "reviewAfter": "2027-02-11"
     },
     {
       "id": "LU-salaried-eligibility-2026-09-06",
@@ -286,7 +286,7 @@
       "retrievedAt": "2026-10-11",
       "methodology": "Direct review of current Swedish Migration Agency salary-requirement guidance on 2026-10-11. Confirmed 90% of median salary for covered first-time work-permit decisions from 1 June 2026; current median SEK 38,300 and threshold SEK 34,470/month for applications received from 16 June 2026. Transitional and exempt categories remain applicable.",
       "confidence": "high",
-      "reviewAfter": "2026-11-10"
+      "reviewAfter": "2027-02-11"
     },
     {
       "id": "SE-work-rules-2026-09-07",
@@ -316,7 +316,7 @@
       "retrievedAt": "2026-10-11",
       "methodology": "Direct review of current Swedish Migration Agency higher-education permit guidance on 2026-10-11. Confirmed maintenance requirement of SEK 10,656/month for 2026 applications, possible food/housing reductions, family additions, and related permit conditions.",
       "confidence": "high",
-      "reviewAfter": "2026-11-10"
+      "reviewAfter": "2027-02-11"
     },
     {
       "id": "SE-study-work-rights-2026-09-07",
