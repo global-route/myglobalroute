@@ -12,13 +12,13 @@ Status: DONE / IN-PROGRESS / BLOCKED / PENDING
 
 | ID | Task | Status | File(s) |
 |---|---|---|---|
-| WM-1 | Add `.post-source-trail` CSS block to `enhancements.css` | **PENDING** | `src/css/enhancements.css` |
-| WM-2 | Add source trail block to `blog-post.njk` template (renders after H1, before body) | **PENDING** | `src/templates/blog-post.njk` |
-| WM-3 | Bump CSS version in `blog-post.njk` to v12 | **PENDING** | `src/templates/blog-post.njk` |
-| WM-4 | Add `sourceAuthority`, `sourceUrl`, `lastFactChecked`, `evidenceStatus` to new posts going forward | **PENDING** | All new content files |
-| WM-5 | Backfill `sourceAuthority` + `sourceUrl` on the 5 WAA supporting posts already live | **PENDING** | `content/blog/guides/work/` (5 files) |
-| WM-6 | Test build — confirm amber "unaudited" state renders on old posts, green on new | **PENDING** | `npm run build` |
-| WM-7 | Commit + push watermark sprint | **PENDING** | — |
+| WM-1 | Add `.post-source-trail` CSS block to `enhancements.css` | **DONE** `168070d` | `src/css/enhancements.css` |
+| WM-2 | Add source trail block to `blog-post.njk` template | **DONE** `168070d` | `src/templates/blog-post.njk` |
+| WM-3 | Bump CSS version in `blog-post.njk` to v12 | **DONE** `168070d` | `src/templates/blog-post.njk` |
+| WM-4 | Add watermark fields to new posts going forward | **DONE** — standard on all new posts | All new content files |
+| WM-5 | Backfill watermark fields on 5 WAA supporting posts | **DONE** `168070d` | `content/blog/guides/work/` (5 files) |
+| WM-6 | Test build — confirm amber/green states render correctly | **DONE** — 284 files, 0 errors | `npm run build` |
+| WM-7 | Commit + push watermark sprint | **DONE** `168070d` | — |
 
 **Watermark spec (dictated):**
 
@@ -49,9 +49,9 @@ Active posts being written. Each post requires: frontmatter with watermark field
 
 | ID | Post | Category | File | Status |
 |---|---|---|---|---|
-| W1 | Canada tech visa 2026 — the honest version | Professional Playbook | `playbooks/professional/canada-tech-express-entry-honest-guide-2026.md` | **DONE** — written, not committed |
-| W2 | Canada Francophone immigration — caregivers, PSWs | Professional Playbook | `playbooks/professional/canada-francophone-immigration-caregivers-2026.md` | **DONE** — written, not committed |
-| W3 | Qatar work visa reality check | Guide — Work | `guides/work/qatar-work-visa-reality-check-2026.md` | **IN-PROGRESS** |
+| W1 | Canada tech visa 2026 — the honest version | Professional Playbook | `playbooks/professional/canada-tech-express-entry-honest-guide-2026.md` | **DONE** `168070d` |
+| W2 | Canada Francophone immigration — caregivers, PSWs | Professional Playbook | `playbooks/professional/canada-francophone-immigration-caregivers-2026.md` | **DONE** `168070d` |
+| W3 | Qatar work visa reality check | Guide — Work | `guides/work/qatar-work-visa-reality-check-2026.md` | **DONE** `168070d` |
 | W4 | Is Mongolia a real work destination? | Guide — Work | `guides/work/mongolia-work-visa-nigeria-reality-2026.md` | **PENDING** |
 | W5 | How to spot a fake travel agent — Nigerian checklist | Guide — Work | `guides/work/how-to-spot-fake-travel-agent-nigeria-2026.md` | **PENDING** |
 | W6 | Oman work visa for mechanics and electricians | Guide — Work | `guides/work/oman-trades-work-visa-mechanic-electrician-2026.md` | **PENDING** |
@@ -121,9 +121,9 @@ Pre-deployment checklist. All items must be green before `npx wrangler deploy`.
 | E3 | `node scripts/validate-commercial-registry.js` — 0 errors | **PASSING** |
 | E4 | `node scripts/verify-build.js` — BUILD INTEGRITY PASSED | **PASSING** |
 | E5 | `npm run build` — 0 Eleventy errors | **PASSING** (281 files) |
-| E6 | Watermark sprint (WM-1 to WM-7) complete | **PENDING** |
-| E7 | Batch 1 content (W1+W2+W3) committed | **PENDING** |
-| E8 | All tests still passing after content additions | **PENDING** |
+| E6 | Watermark sprint (WM-1 to WM-7) complete | **DONE** `168070d` |
+| E7 | Batch 1 content (W1+W2+W3) committed | **DONE** `168070d` |
+| E8 | All tests still passing after content additions | **DONE** — 214/214 |
 | E9 | `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` run in PowerShell | **OWNER ACTION** |
 | E10 | `npx wrangler deploy` from `myglobalroute/` directory | **OWNER ACTION** |
 
@@ -192,11 +192,11 @@ These run on every deploy. No action needed unless they fail.
 
 | Sprint | Total | Done | In-progress | Pending | Blocked |
 |---|---|---|---|---|---|
-| A — Watermark | 7 | 0 | 0 | 7 | 0 |
-| B — Content W1-W22 | 22 | 2 | 1 | 19 | 0 |
+| A — Watermark | 7 | 7 | 0 | 0 | 0 |
+| B — Content W1-W22 | 22 | 3 | 0 | 19 | 0 |
 | C — Demand records | 8 | 0 | 0 | 8 | 0 |
 | D — New countries | 4 | 0 | 0 | 4 | 0 |
-| E — Deploy | 10 | 5 | 0 | 3 | 2 |
+| E — Deploy | 10 | 8 | 0 | 0 | 2 |
 | F — WAA-3a | 5 | 0 | 0 | 0 | 5 |
 | G — Quality gates | 6 | 6 | 0 | 0 | 0 |
-| **Total** | **62** | **13** | **1** | **41** | **7** |
+| **Total** | **62** | **24** | **0** | **31** | **7** |

@@ -4,7 +4,24 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
-## 2026-11-09 — WAA-3b/3c/3d + WAA-4: agent matching, intake form, safety gate
+## 2026-11-09 — Watermark trust layer + content Batch 1 (W1/W2/W3)
+
+**Commit:** `168070d` | **Tests:** 19/19 suites, 214/214 passing | **Build:** 284 files | **Posts:** 107 → 110
+
+### Watermark sprint (WM-1 to WM-7) — complete
+- `src/css/enhancements.css` v12 — `.post-source-trail` block: badge (verified/under-correction/research-required/unaudited), source authority link, verified date, independence notice
+- `src/templates/blog-post.njk` — source trail renders on every post after H1, before body. Missing frontmatter fields show amber unaudited state — self-maintaining audit queue. CSS bumped v9→v12.
+- `docs/project/SPRINT_TASKFILE.md` — master taskfile created: 62 tasks across 7 sprints (A-G)
+- WM-5: `sourceAuthority`, `sourceUrl`, `lastFactChecked`, `evidenceStatus` backfilled on 5 WAA supporting posts
+
+### Content Batch 1
+- W1: `canada-tech-express-entry-honest-guide-2026.md` — NOC codes verified, CRS reality, salary data from Job Bank Canada, HelpOverseas ad debunk, honest 12-24 month timeline
+- W2: `canada-francophone-immigration-caregivers-2026.md` — FCIP program, PSW/caregiver shortage, French CLB 5 requirement, salary reality, agent red flags
+- W3: `qatar-work-visa-reality-check-2026.md` — 3 red flags debunked (3-5 day processing, NGN 3.2m fee, freelance visa framing), official fees, Kafala reform status, employer verification checklist
+
+---
+
+ + WAA-4: agent matching, intake form, safety gate
 
 **Commit:** `192ad97` | **Tests:** 19/19 suites, 214/214 passing | **Build:** 281 files
 
