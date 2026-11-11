@@ -4,7 +4,62 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
-## 2026-11-09 — Watermark trust layer + content Batch 1 (W1/W2/W3)
+## 2026-11-09 — Content sprint W1-W22 complete: 22 posts, 4 new countries, 8 demand records
+
+**Commits:** `168070d` → `70d4b7a` | **Tests:** 19/19 suites, 214/214 passing | **Build:** 302 files | **Posts:** 107 → 125
+
+### Content delivered (W1-W22)
+
+**Batch 1 — High-priority corridors (W1-W3)**
+- W1: Canada tech Express Entry honest guide — NOC codes, CRS reality, HelpOverseas ad debunk
+- W2: Canada Francophone caregivers/PSWs — FCIP program, French CLB 5, PSW shortage
+- W3: Qatar work visa reality check — 3 red flags debunked, official fees, Kafala status
+
+**Batch 2 — Field research findings (W4-W7)**
+- W4: Mongolia debunk — 267-comment Facebook post answered, NGN 8m offer exposed
+- W5: How to spot a fake travel agent — 10-point checklist, CAC/licence verification
+- W6: Oman trades work visa — OMR 150-350/month verified, employer package model
+- W7: Guyana freelance visa — R1 unblocked, oil boom context, USD 3-10k/month
+
+**Batch 3 — New corridors (W8-W11)**
+- W8: Bulgaria study visa — Schengen Jan 2024, EUR 2-4k/year tuition, language reality
+- W9: Croatia study visa — RIT Croatia real but not dual degree, USD 12-15k/year, debt trap warning
+- W10: Canada LMIA warehouse/logistics — CAD 18-22/hour, family sponsorship myth debunked
+- W11: Singapore EP COMPASS — 5 criteria explained, diversity advantage for African applicants
+
+**Batch 4 — Safety content (W12/W13/W15)**
+- W12: Job assistance on arrival red flag — stranded worker pattern, NAPTIP link
+- W13: Zero deposit visa offers — sales tactic decoded, 4 payment structures explained
+- W15: Oman freelance vs employment visa — who pays, practical test
+
+**Batch 5 — WAA-4 Kafala safety layer (W16-W18)**
+- W16: Kafala reform tracker — all 6 GCC states, what changed and what has not
+- W17: Gulf employment contract guide — 10 mandatory elements, contract substitution
+- W18: Passport confiscation guide — illegal in all 6 GCC states, 5-step action plan, embassy contacts
+
+**Batch 6 — Platform expansion (W19-W22)**
+- W19: Netherlands Highly Skilled Migrant — EUR 46,107/year threshold, 2-week processing
+- W20: Poland construction work permit — PLN 4,300 minimum wage, Schengen travel benefit
+- W21: Ireland nursing NMBI — 3-step registration, EUR 32,000 threshold, Stamp 4 after 2 years
+- W22: Germany care work Pflegekrafte — B1 German accepted, Chancenkarte route, 500k shortage
+
+### Watermark system (WM-1 to WM-13)
+- Hybrid document watermark on every blog post: `MyPathway2Global · v2026.11 · Verified · [Source] · [Date]`
+- 5 evidence states: verified (navy), under-correction (amber), research-required (red), unaudited (amber), archived (grey)
+- Edition versioning: `postVersion: v2026.11` on every post
+- `supersededBy` field for multi-edition linking
+- `backfill-watermark-fields.js` — CRLF-aware backfill tool, 99 posts updated
+- 54 posts verified, 53 research-required, 0 missing fields
+
+### Bug fixes
+- `occupation-demand.json` duplicate block stripped — build unblocked
+- `agents.json` contactEmail cleared on pending template agent
+- `blog-post.njk` backtick-n nav/footer corruption removed
+- `validate-data.js` country count 30→31
+- `.eleventy.js` formatVersion filter added
+
+---
+
 
 **Commit:** `168070d` | **Tests:** 19/19 suites, 214/214 passing | **Build:** 284 files | **Posts:** 107 → 110
 
