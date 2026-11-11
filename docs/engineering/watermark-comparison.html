@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Watermark Design Comparison — MyPathway2Global</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f0f0f0; padding: 2rem 1rem; }
+
+  .page-title {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.02em;
+  }
+  .page-subtitle {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 2.5rem;
+  }
+
+  .comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .design-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 2px;
+    display: inline-block;
+  }
+  .label-current { background: #fee2e2; color: #b91c1c; }
+  .label-proposed { background: #dcfce7; color: #15803d; }
+
+  /* ── SHARED ARTICLE CHROME ── */
+  .article-mock {
+    background: white;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 3rem;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+
+  .article-meta {
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.9rem;
+  }
+  .article-meta a { color: #0b409c; text-decoration: none; }
+  .meta-sep { margin: 0 0.4rem; color: #9ca3af; }
+
+  .badge-audit {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 2px;
+    margin-bottom: 0.9rem;
+    background: #e6f4ea;
+    color: #1a7340;
+    border: 1px solid #a8d5b5;
+    letter-spacing: 0.02em;
+  }
+
+  .article-h1 {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #10316b;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.01em;
+  }
+
+  .article-lead {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-body-preview {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #1f2937;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1.5rem;
+  }
+  .article-body-preview p { margin-bottom: 1rem; }
+  .article-body-preview .skeleton {
+    height: 0.9rem;
+    background: #f3f4f6;
+    border-radius: 2px;
+    margin-bottom: 0.6rem;
+  }
+  .article-body-preview .skeleton.short { width: 65%; }
+  .article-body-preview .skeleton.med { width: 85%; }
+  .article-body-preview .skeleton.full { width: 100%; }
+
+  /* ── CURRENT WATERMARK ── */
+  .post-source-trail-current {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    padding: 0.6rem 0 0.75rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.78rem;
+  }
+  .psb {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.18rem 0.55rem;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    background: #dcfce7;
+    color: #15803d;
+    border: 1px solid #86efac;
+  }
+  .psa { color: #374151; font-weight: 500; }
+  .psa a { color: #0b409c; text-decoration: underline; }
+  .psd { color: #6b7280; }
+  .psi {
+    color: #9ca3af;
+    font-size: 0.72rem;
+    flex-basis: 100%;
+    margin-top: 0.1rem;
+  }
+
+  /* ── PROPOSED WATERMARK — DOCUMENT MARK ── */
+  .post-doc-mark {
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+    padding: 0.55rem 0.85rem;
+    margin-bottom: 1.75rem;
+    background: #f8f9fb;
+    border-top: 2px solid #10316b;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #6b7280;
+    line-height: 1.4;
+    flex-wrap: wrap;
+    gap: 0 0.6rem;
+  }
+  .pdm-brand {
+    font-weight: 700;
+    color: #10316b;
+    letter-spacing: 0.08em;
+  }
+  .pdm-sep {
+    color: #d1d5db;
+    margin: 0 0.1rem;
+  }
+  .pdm-status-verified {
+    color: #15803d;
+    font-weight: 600;
+  }
+  .pdm-status-unaudited {
+    color: #a16207;
+    font-weight: 600;
+  }
+  .pdm-source a {
+    color: #0b409c;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .pdm-date { color: #6b7280; }
+  .pdm-notice {
+    color: #9ca3af;
+    font-size: 0.68rem;
+    flex-basis: 100%;
+    margin-top: 0.2rem;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    font-style: italic;
+  }
+
+  /* ── PROPOSED VARIANT B — RULED DATELINE ── */
+  .post-dateline {
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #9ca3af;
+    padding: 0.5rem 0;
+    margin-bottom: 1.75rem;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .pdl-brand {
+    font-weight: 700;
+    color: #10316b;
+  }
+  .pdl-dot { color: #d1d5db; }
+  .pdl-verified { color: #15803d; font-weight: 600; }
+  .pdl-unaudited { color: #a16207; font-weight: 600; }
+  .pdl-source a { color: #374151; text-decoration: none; }
+  .pdl-notice {
+    margin-left: auto;
+    font-size: 0.68rem;
+    color: #d1d5db;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  @media (max-width: 900px) {
+    .comparison { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<p class="page-title">Watermark Design Comparison</p>
+<p class="page-subtitle">Left: current implementation &nbsp;|&nbsp; Right: proposed document-mark (two variants)</p>
+
+<div class="comparison">
+
+  <!-- ══════════════════════════════════════════════════
+       COLUMN 1 — CURRENT
+  ══════════════════════════════════════════════════ -->
+  <div>
+    <span class="design-label label-current">Current — what renders now</span>
+
+    <!-- CURRENT: verified post -->
+    <div class="article-mock" style="margin-bottom:1.5rem;">
+      <div class="article-meta">
+        <a href="#">Professional Playbooks</a>
+        <span class="meta-sep">/</span>
+        <span>9 Nov 2026</span>
+        <span class="meta-sep">/</span>
+        <span>12 min read</span>
+      </div>
+      <span class="badge-audit">Official Source Verified &middot; Audited: 9 Nov 2026</span>
+      <h1 class="article-h1">Canada Tech Visa 2026 — The Honest Version</h1>
+      <p class="article-lead">Software developers, data analysts and DevOps engineers can genuinely get Canadian PR through Express Entry. Here is what the ads get right, what they get wrong, and what the process actually looks like.</p>
+
+      <!-- CURRENT WATERMARK -->
+      <div class="post-source-trail-current">
+        <span class="psb">Source verified</span>
+        <span class="psa"><a href="#">Immigration, Refugees and Citizenship Canada</a></span>
+        <span class="psd">Verified 9 Nov 2026</span>
+        <span class="psi">Independent platform. Not affiliated with any government or immigration authority.</span>
+      </div>
+
+      <div class="article-body-preview">
+        <div class="skeleton full"></div>
+        <div class="skeleton med"></div>
+        <div class="skeleton full"></div>
+        <div class="skeleton short"></div>
+        <div class="skeleton full" style="margin-top:0.8rem;"></div>
+        <div class="skeleton med"></div>
+      </div>
+    </div>
+
+    <!-- CURRENT: unaudited post (old post, no frontmatter) -->
+    <div class="article-mock">
+      <div class="article-meta">
+        <a href="#">Country Audits</a>
+        <span class="meta-sep">/</span>
+        <span>15 Jan 2026</span>
+        <span class="meta-sep">/</span>
+        <span>14 min read</span>
+      </div>
+      <!-- no badge-audit because no lastFactChecked -->
+      <h1 class="article-h1">Germany Visa from Nigeria: The 2026 Reality Check</h1>
+      <p class="article-lead">Germany's zero-tuition public universities and 18-month job search visa make it one of the strongest pathways for African students.</p>
+
+      <!-- CURRENT WATERMARK — unaudited state -->
+      <div class="post-source-trail-current">
+        <span class="psb" style="background:#fef9c3;color:#a16207;border-color:#fde047;">Not yet audited</span>
+        <span class="psa" style="color:#9ca3af;">Source not recorded</span>
+        <span class="psd" style="color:#a16207;font-weight:500;">Date not recorded</span>
+        <span class="psi">Independent platform. Not affiliated with any government or immigration authority.</span>
+      </div>
+
+      <div class="article-body-preview">
+        <div class="skeleton full"></div>
+        <div class="skeleton med"></div>
+        <div class="skeleton full"></div>
+        <div class="skeleton short"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       COLUMN 2 — PROPOSED
+  ══════════════════════════════════════════════════ -->
+  <div>
+    <span class="design-label label-proposed">Proposed — document mark (2 variants)</span>
+
+    <!-- VARIANT A: Navy top-border document mark — verified -->
+    <p style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#666;margin-bottom:0.5rem;">Variant A — Navy ruled mark</p>
+    <div class="article-mock" style="margin-bottom:1.5rem;">
+      <div class="article-meta">
+        <a href="#">Professional Playbooks</a>
+        <span class="meta-sep">/</span>
+        <span>9 Nov 2026</span>
+        <span class="meta-sep">/</span>
+        <span>12 min read</span>
+      </div>
+      <span class="badge-audit">Official Source Verified &middot; Audited: 9 Nov 2026</span>
+      <h1 class="article-h1">Canada Tech Visa 2026 — The Honest Version</h1>
+      <p class="article-lead">Software developers, data analysts and DevOps engineers can genuinely get Canadian PR through Express Entry. Here is what the ads get right, what they get wrong, and what the process actually looks like.</p>
+
+      <!-- PROPOSED WATERMARK VARIANT A — verified -->
+      <div class="post-doc-mark">
+        <span class="pdm-brand">MyPathway2Global</span>
+        <span class="pdm-sep">&nbsp;&middot;&nbsp;</span>
+        <span class="pdm-status-verified">Source verified</span>
+        <span class="pdm-sep">&nbsp;&middot;&nbsp;</span>
+        <span class="pdm-source"><a href="#">Immigration, Refugees and Citizenship Canada</a></span>
+        <span class="pdm-sep">&nbsp;&middot;&nbsp;</span>
+        <span class="pdm-date">9 Nov 2026</span>
+        <span class="pdm-notice">Independent platform. Not affiliated with any government or immigration authority. Not legal advice.</span>
+      </div>
+
+      <div class="article-body-preview">
+        <div class="skeleton full"></div>
+        <div class="skeleton med"></div>
+        <div class="skeleton full"></div>
+        <div class="skeleton short"></div>
+        <div class="skeleton full" style="margin-top:0.8rem;"></div>
+        <div class="skeleton med"></div>
+      </div>
+    </div>
+
+    <!-- VARIANT A: unaudited -->
+    <p style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#666;margin-bottom:0.5rem;">Variant A — unaudited (old post)</p>
+    <div class="article-mock" style="margin-bottom:2rem;">
+      <div class="article-meta">
+        <a href="#">Country Audits</a>
+        <span class="meta-sep">/</span>
+        <span>15 Jan 2026</span>
+        <span class="meta-sep">/</span>
+        <span>14 min read</span>
+      </div>
+      <h1 class="article-h1">Germany Visa from Nigeria: The 2026 Reality Check</h1>
+      <p class="article-lead">Germany's zero-tuition public universities and 18-month job search visa make it one of the strongest pathways for African students.</p>
+
+      <!-- PROPOSED WATERMARK VARIANT A — unaudited -->
+      <div class="post-doc-mark" style="border-top-color:#a16207;">
+        <span class="pdm-brand">MyPathway2Global</span>
+        <span class="pdm-sep">&nbsp;&middot;&nbsp;</span>
+        <span class="pdm-status-unaudited">Source not yet audited</span>
+        <span class="pdm-sep">&nbsp;&middot;&nbsp;</span>
+        <span style="color:#9ca3af;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;">Date not recorded</span>
+        <span class="pdm-notice">Independent platform. Not affiliated with any government or immigration authority. Not legal advice.</span>
+      </div>
+
+      <div class="article-body-preview">
+        <div class="skeleton full"></div>
+        <div class="skeleton med"></div>
+        <div class="skeleton full"></div>
+        <div class="skeleton short"></div>
+      </div>
+    </div>
+
+    <!-- VARIANT B: Thin ruled dateline — verified -->
+    <p style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#666;margin-bottom:0.5rem;">Variant B — thin ruled dateline</p>
+    <div class="article-mock" style="margin-bottom:1.5rem;">
+      <div class="article-meta">
+        <a href="#">Professional Playbooks</a>
+        <span class="meta-sep">/</span>
+        <span>9 Nov 2026</span>
+        <span class="meta-sep">/</span>
+        <span>12 min read</span>
+      </div>
+      <span class="badge-audit">Official Source Verified &middot; Audited: 9 Nov 2026</span>
+      <h1 class="article-h1">Canada Tech Visa 2026 — The Honest Version</h1>
+      <p class="article-lead">Software developers, data analysts and DevOps engineers can genuinely get Canadian PR through Express Entry. Here is what the ads get right, what they get wrong, and what the process actually looks like.</p>
+
+      <!-- PROPOSED WATERMARK VARIANT B — verified -->
+      <div class="post-dateline">
+        <span class="pdl-brand">MyPathway2Global</span>
+        <span class="pdl-dot">&middot;</span>
+        <span class="pdl-verified">Verified</span>
+        <span class="pdl-dot">&middot;</span>
+        <span class="pdl-source"><a href="#">IRCC Canada</a></span>
+        <span class="pdl-dot">&middot;</span>
+        <span style="color:#9ca3af;">9 Nov 2026</span>
+        <span class="pdl-notice">Not immigration advice &middot; Independent platform</span>
+      </div>
+
+      <div class="article-body-preview">
+        <div class="skeleton full"></div>
+        <div class="skeleton med"></div>
+        <div class="skeleton full"></div>
+        <div class="skeleton short"></div>
+        <div class="skeleton full" style="margin-top:0.8rem;"></div>
+        <div class="skeleton med"></div>
+      </div>
+    </div>
+
+    <!-- VARIANT B: unaudited -->
+    <p style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#666;margin-bottom:0.5rem;">Variant B — unaudited (old post)</p>
+    <div class="article-mock">
+      <div class="article-meta">
+        <a href="#">Country Audits</a>
+        <span class="meta-sep">/</span>
+        <span>15 Jan 2026</span>
+        <span class="meta-sep">/</span>
+        <span>14 min read</span>
+      </div>
+      <h1 class="article-h1">Germany Visa from Nigeria: The 2026 Reality Check</h1>
+      <p class="article-lead">Germany's zero-tuition public universities and 18-month job search visa make it one of the strongest pathways for African students.</p>
+
+      <!-- PROPOSED WATERMARK VARIANT B — unaudited -->
+      <div class="post-dateline" style="border-top-color:#fde047;border-bottom-color:#fde047;">
+        <span class="pdl-brand">MyPathway2Global</span>
+        <span class="pdl-dot">&middot;</span>
+        <span class="pdl-unaudited">Not yet audited</span>
+        <span class="pdl-dot">&middot;</span>
+        <span style="color:#9ca3af;">Source date not recorded</span>
+        <span class="pdl-notice">Not immigration advice &middot; Independent platform</span>
+      </div>
+
+      <div class="article-body-preview">
+        <div class="skeleton full"></div>
+        <div class="skeleton med"></div>
+        <div class="skeleton full"></div>
+        <div class="skeleton short"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<p style="text-align:center;font-size:0.78rem;color:#999;margin-top:3rem;">
+  Open this file in a browser: <code>docs/engineering/watermark-comparison.html</code>
+</p>
+
+</body>
+</html>

@@ -19,27 +19,99 @@ Status: DONE / IN-PROGRESS / BLOCKED / PENDING
 | WM-5 | Backfill watermark fields on 5 WAA supporting posts | **DONE** `168070d` | `content/blog/guides/work/` (5 files) |
 | WM-6 | Test build — confirm amber/green states render correctly | **DONE** — 284 files, 0 errors | `npm run build` |
 | WM-7 | Commit + push watermark sprint | **DONE** `168070d` | — |
+| WM-8 | Replace current trail block with hybrid document mark in `blog-post.njk` | **PENDING** | `src/templates/blog-post.njk` |
+| WM-9 | Replace `.post-source-trail` CSS with `.wm-hybrid` CSS in `enhancements.css` | **PENDING** | `src/css/enhancements.css` |
+| WM-10 | Add `postVersion` + `supersededBy` frontmatter fields to new posts | **PENDING** | All new content files |
+| WM-11 | Backfill `postVersion` on all 110 existing posts (derive from date: v{YYYY}.{MM}) | **PENDING** | All content files |
+| WM-12 | Backfill `sourceAuthority` + `sourceUrl` + `lastFactChecked` + `evidenceStatus` on all posts missing them | **PENDING** | All content files |
+| WM-13 | Build + test + commit hybrid watermark | **PENDING** | — |
 
-**Watermark spec (dictated):**
+---
 
-Renders as a single compact row immediately after the article H1, before body content. Four elements:
+### Hybrid watermark spec
 
-1. **Evidence status badge** — `verified` (green) / `under-correction` (amber) / `research-required` (red). Reads from `evidenceStatus` frontmatter. If missing: renders amber "Not yet audited".
-2. **Source authority** — linked to `sourceUrl`. Reads from `sourceAuthority` frontmatter. If missing: renders muted "Source not recorded".
-3. **Verified date** — "Verified [date]". Reads from `lastFactChecked`. If missing: renders amber "Date not recorded" — this is the visible audit queue signal.
-4. **Independence notice** — always present, always the same: "Independent platform. Not affiliated with any government or immigration authority."
+Design reference: `docs/engineering/watermark-hybrid.html` — open in browser to see all states.
 
-CSS classes:
-- `.post-source-trail` — flex row, border-bottom, padding, muted background
-- `.post-source-badge` — pill, 3 colour variants
-- `.post-source-badge--verified` — green `#dcfce7 / #15803d`
-- `.post-source-badge--under-correction` — amber `#fef9c3 / #a16207`
-- `.post-source-badge--research-required` — red `#fee2e2 / #b91c1c`
-- `.post-source-badge--unaudited` — amber, used when `evidenceStatus` missing
-- `.post-source-authority` — normal weight, linked
-- `.post-source-date` — muted, small
-- `.post-source-unaudited` — amber text, used when date missing
-- `.post-source-independence` — muted, smallest, always shown
+**Format:** Single dateline. Navy 2px top border + light grey fill. No badge cluster.
+
+```
+MyPathway2Global · v2026.11 · Verified · [Source Authority] · 9 Nov 2026    [Newer edition →]
+Independent platform. Not affiliated with any government or immigration authority. Not legal advice.
+```
+
+**Five evidence states:**
+
+| State | Border colour | Status text | When |
+|---|---|---|---|
+| `verified` | Navy `#10316b` | `Verified` (green) | `evidenceStatus: verified` + `lastFactChecked` present |
+| `under-correction` | Amber `#d97706` | `Under correction` (amber) | `evidenceStatus: under-correction` |
+| `research-required` | Red `#b91c1c` | `Research required` (red) | `evidenceStatus: research-required` |
+| `not-yet-audited` | Amber `#d97706` | `Not yet audited` (amber) | `evidenceStatus` missing |
+| `archived` | Grey `#6b7280` | `Archived — verified at time of publication` (grey) | `supersededBy` present |
+
+**Edition versioning — the key new concept:**
+
+Every post has a `postVersion` field: `v{YYYY}.{MM}` — e.g. `v2026.11`.
+
+This solves the multi-edition problem: different versions of the same topic (UK salary threshold April 2024, November 2026) are all publishable. Each is a dated edition. The watermark makes the edition visible at a glance. Older editions stay live for SEO and historical reference — they just show the archived state and link to the current edition.
+
+**New frontmatter fields required on every post:**
+
+```yaml
+postVersion: "v2026.11"          # year.month of this edition
+sourceAuthority: "IRCC Canada"   # official body name
+sourceUrl: "https://..."         # direct link to primary source
+lastFactChecked: 2026-11-09      # date verified against source
+evidenceStatus: verified         # verified | under-correction | research-required
+supersededBy: ""                 # URL of newer edition if this is archived (leave blank if current)
+```
+
+**Verification standard — what counts as `verified`:**
+
+A post is `evidenceStatus: verified` when every material claim in it has been checked against a primary source (official government website, official shortage list, official ministry publication) and the `sourceUrl` links directly to that source. The `lastFactChecked` date records when this check was done.
+
+This means:
+- A post about Canada Express Entry verified against `canada.ca` = `verified`
+- A post about Germany shortage occupations verified against `arbeitsagentur.de` = `verified`
+- A post about Qatar work visas verified against `adlsa.gov.qa` = `verified`
+- A post written from secondary sources or agent claims without primary source check = `research-required`
+- A post with a known factual error being corrected = `under-correction`
+
+Different editions of the same topic are all publishable as `verified` — each edition is verified against the source at the time of writing. When a new edition supersedes an old one, the old one moves to `archived` state (grey border, link to current edition).
+
+**High-risk corridor posts** (WAA unskilled routes): append to the notice line:
+`High-risk corridor — read full disclaimer before acting.`
+
+**CSS classes (replacing current `.post-source-trail`):**
+
+```css
+.wm-hybrid          /* container: flex, navy top border, grey fill */
+.wm-hybrid.amber    /* under-correction / not-yet-audited state */
+.wm-hybrid.red      /* research-required state */
+.wm-hybrid.archived /* archived state — grey border */
+.wh-brand           /* MyPathway2Global — navy bold */
+.wh-dot             /* · separator — light grey */
+.wh-ver             /* v2026.11 — muted grey */
+.wh-status-v        /* Verified — green */
+.wh-status-uc       /* Under correction — amber */
+.wh-status-rr       /* Research required — red */
+.wh-status-na       /* Not yet audited — amber */
+.wh-src             /* Source authority — linked */
+.wh-date            /* Date — muted */
+.wh-sup             /* Newer/older edition link — right-aligned */
+.wh-notice          /* Independence + legal notice — second line, italic */
+```
+
+**Backfill priority for WM-12:**
+
+All 110 posts need watermark fields. Priority order:
+1. WAA corridor posts (W1-W22) — highest risk, most user-facing
+2. Country audit posts (39 posts) — high traffic
+3. Professional playbooks (11 posts) — high trust requirement
+4. Guides (40 posts) — medium priority
+5. Student playbooks, business playbooks, case studies, policy updates — lowest priority
+
+For posts where the primary source is known from the content (e.g. Germany post cites DAAD, Canada post cites IRCC), set `evidenceStatus: verified` and add the source fields. For posts where the primary source is unclear, set `evidenceStatus: research-required`.
 
 ---
 
@@ -192,11 +264,11 @@ These run on every deploy. No action needed unless they fail.
 
 | Sprint | Total | Done | In-progress | Pending | Blocked |
 |---|---|---|---|---|---|
-| A — Watermark | 7 | 7 | 0 | 0 | 0 |
+| A — Watermark | 13 | 7 | 0 | 6 | 0 |
 | B — Content W1-W22 | 22 | 3 | 0 | 19 | 0 |
 | C — Demand records | 8 | 0 | 0 | 8 | 0 |
 | D — New countries | 4 | 0 | 0 | 4 | 0 |
 | E — Deploy | 10 | 8 | 0 | 0 | 2 |
 | F — WAA-3a | 5 | 0 | 0 | 0 | 5 |
 | G — Quality gates | 6 | 6 | 0 | 0 | 0 |
-| **Total** | **62** | **24** | **0** | **31** | **7** |
+| **Total** | **68** | **24** | **0** | **37** | **7** |

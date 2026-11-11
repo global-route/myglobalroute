@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hybrid Watermark — MyPathway2Global</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f0f0f0; padding: 2rem 1rem; }
+
+.page-title { text-align:center; font-size:1.1rem; font-weight:700; color:#111; margin-bottom:0.3rem; }
+.page-subtitle { text-align:center; font-size:0.82rem; color:#666; margin-bottom:0.5rem; }
+.page-note { text-align:center; font-size:0.78rem; color:#0b409c; margin-bottom:2.5rem; font-style:italic; }
+
+.grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.5rem; max-width:1400px; margin:0 auto; }
+.col-label { font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em;
+  margin-bottom:0.6rem; padding:0.25rem 0.6rem; border-radius:2px; display:inline-block; }
+.lc { background:#fee2e2; color:#b91c1c; }
+.lh { background:#dbeafe; color:#1d4ed8; }
+.lv { font-size:0.65rem; color:#6b7280; display:block; margin-bottom:0.4rem; font-style:italic; }
+
+/* shared article shell */
+.art { background:white; padding:2rem 1.75rem 2.5rem; font-family:'Segoe UI',sans-serif;
+  box-shadow:0 2px 10px rgba(0,0,0,0.07); margin-bottom:1.25rem; }
+.art-meta { font-size:0.75rem; color:#4b5563; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:0.75rem; }
+.art-meta a { color:#0b409c; text-decoration:none; }
+.sep { margin:0 0.35rem; color:#d1d5db; }
+.art-h1 { font-size:1.65rem; font-weight:700; line-height:1.2; color:#10316b;
+  margin-bottom:0.75rem; letter-spacing:-0.01em; }
+.art-lead { font-size:1rem; font-weight:300; line-height:1.6; color:#4b5563; margin-bottom:1.25rem; }
+.sk { height:0.85rem; background:#f3f4f6; border-radius:2px; margin-bottom:0.5rem; }
+.sk.f { width:100%; } .sk.m { width:82%; } .sk.s { width:60%; }
+.body-area { border-top:1px solid #e5e7eb; padding-top:1.25rem; }
+
+/* ── CURRENT watermark ── */
+.wm-current { display:flex; flex-wrap:wrap; align-items:center; gap:0.4rem 0.85rem;
+  padding:0.55rem 0 0.65rem; margin-bottom:1.1rem; border-bottom:1px solid #e5e7eb; font-size:0.75rem; }
+.wm-badge { display:inline-flex; align-items:center; padding:0.15rem 0.5rem; border-radius:2px;
+  font-weight:600; font-size:0.68rem; letter-spacing:0.02em; white-space:nowrap; }
+.wm-v { background:#dcfce7; color:#15803d; border:1px solid #86efac; }
+.wm-u { background:#fef9c3; color:#a16207; border:1px solid #fde047; }
+.wm-auth { color:#374151; font-weight:500; }
+.wm-auth a { color:#0b409c; text-decoration:underline; }
+.wm-date { color:#6b7280; }
+.wm-ind { color:#9ca3af; font-size:0.68rem; flex-basis:100%; margin-top:0.1rem; }
+
+/* ── HYBRID watermark ── */
+.wm-hybrid {
+  display:flex; align-items:center; flex-wrap:wrap; gap:0 0.5rem;
+  padding:0.5rem 0.8rem;
+  margin-bottom:1.5rem;
+  background:#f8f9fb;
+  border-top:2px solid #10316b;
+  border-bottom:1px solid #e5e7eb;
+  font-size:0.7rem;
+  letter-spacing:0.055em;
+  text-transform:uppercase;
+  line-height:1.5;
+}
+.wm-hybrid.amber { border-top-color:#d97706; }
+.wm-hybrid.red   { border-top-color:#b91c1c; }
+
+.wh-brand { font-weight:700; color:#10316b; letter-spacing:0.08em; flex-shrink:0; }
+.wh-dot   { color:#d1d5db; margin:0 0.1rem; }
+.wh-ver   { font-weight:600; color:#6b7280; flex-shrink:0; }
+
+.wh-status-v  { font-weight:700; color:#15803d; flex-shrink:0; }
+.wh-status-uc { font-weight:700; color:#d97706; flex-shrink:0; }
+.wh-status-rr { font-weight:700; color:#b91c1c; flex-shrink:0; }
+.wh-status-na { font-weight:700; color:#a16207; flex-shrink:0; }
+
+.wh-src { color:#374151; font-weight:500; flex-shrink:0; }
+.wh-src a { color:#0b409c; text-decoration:none; }
+.wh-src a:hover { text-decoration:underline; }
+.wh-date { color:#6b7280; flex-shrink:0; }
+
+.wh-sup { margin-left:auto; font-size:0.65rem; color:#9ca3af; text-transform:none;
+  letter-spacing:0; font-style:italic; flex-shrink:0; }
+.wh-sup a { color:#0b409c; }
+
+.wh-notice { flex-basis:100%; font-size:0.65rem; color:#9ca3af; text-transform:none;
+  letter-spacing:0; font-style:italic; margin-top:0.15rem; }
+
+@media (max-width:1000px) { .grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<p class="page-title">Hybrid Watermark — Design Reference</p>
+<p class="page-subtitle">Current (left) vs Hybrid (centre + right) across all 4 evidence states</p>
+<p class="page-note">Hybrid = Variant A navy border + Variant B dateline format + edition version tag (v2026.11) + superseded-by link</p>
+
+<div class="grid">
+
+<!-- ═══════════════════ COL 1 — CURRENT ═══════════════════ -->
+<div>
+  <span class="col-label lc">Current — live now</span>
+
+  <!-- verified -->
+  <span class="lv">State: verified</span>
+  <div class="art">
+    <div class="art-meta"><a href="#">Professional Playbooks</a><span class="sep">/</span>9 Nov 2026<span class="sep">/</span>12 min read</div>
+    <h1 class="art-h1">Canada Tech Visa 2026 — The Honest Version</h1>
+    <p class="art-lead">Software developers and DevOps engineers can genuinely get Canadian PR. Here is what the ads get right and what they get wrong.</p>
+    <div class="wm-current">
+      <span class="wm-badge wm-v">Source verified</span>
+      <span class="wm-auth"><a href="#">Immigration, Refugees and Citizenship Canada</a></span>
+      <span class="wm-date">Verified 9 Nov 2026</span>
+      <span class="wm-ind">Independent platform. Not affiliated with any government or immigration authority.</span>
+    </div>
+    <div class="body-area"><div class="sk f"></div><div class="sk m"></div><div class="sk f"></div><div class="sk s"></div></div>
+  </div>
+
+  <!-- under-correction -->
+  <span class="lv">State: under-correction</span>
+  <div class="art">
+    <div class="art-meta"><a href="#">Guides</a><span class="sep">/</span>3 Oct 2026<span class="sep">/</span>8 min read</div>
+    <h1 class="art-h1">Australia Working Holiday Visa 2026</h1>
+    <p class="art-lead">The WHV allows young people to work and travel in Australia for up to 12 months.</p>
+    <div class="wm-current">
+      <span class="wm-badge wm-u">Under correction</span>
+      <span class="wm-auth" style="color:#9ca3af;">Source not recorded</span>
+      <span class="wm-date" style="color:#a16207;font-weight:500;">Date not recorded</span>
+      <span class="wm-ind">Independent platform. Not affiliated with any government or immigration authority.</span>
+    </div>
+    <div class="body-area"><div class="sk f"></div><div class="sk m"></div><div class="sk s"></div></div>
+  </div>
+
+  <!-- unaudited -->
+  <span class="lv">State: not yet audited (old post)</span>
+  <div class="art">
+    <div class="art-meta"><a href="#">Country Audits</a><span class="sep">/</span>15 Jan 2026<span class="sep">/</span>14 min read</div>
+    <h1 class="art-h1">Germany Visa from Nigeria: The 2026 Reality Check</h1>
+    <p class="art-lead">Germany's zero-tuition universities and 18-month job search visa make it one of the strongest pathways.</p>
+    <div class="wm-current">
+      <span class="wm-badge wm-u">Not yet audited</span>
+      <span class="wm-auth" style="color:#9ca3af;">Source not recorded</span>
+      <span class="wm-date" style="color:#a16207;font-weight:500;">Date not recorded</span>
+      <span class="wm-ind">Independent platform. Not affiliated with any government or immigration authority.</span>
+    </div>
+    <div class="body-area"><div class="sk f"></div><div class="sk m"></div><div class="sk s"></div></div>
+  </div>
+
+  <!-- research-required -->
+  <span class="lv">State: research-required</span>
+  <div class="art">
+    <div class="art-meta"><a href="#">Country Audits</a><span class="sep">/</span>1 Sep 2026<span class="sep">/</span>6 min read</div>
+    <h1 class="art-h1">USA H-1B Visa from Nigeria 2026</h1>
+    <p class="art-lead">The H-1B is a specialty occupation visa for US employers sponsoring skilled foreign workers.</p>
+    <div class="wm-current">
+      <span class="wm-badge" style="background:#fee2e2;color:#b91c1c;border:1px solid #fca5a5;">Research required</span>
+      <span class="wm-auth" style="color:#9ca3af;">Source not recorded</span>
+      <span class="wm-date" style="color:#9ca3af;">—</span>
+      <span class="wm-ind">Independent platform. Not affiliated with any government or immigration authority.</span>
+    </div>
+    <div class="body-area"><div class="sk f"></div><div class="sk m"></div><div class="sk s"></div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════ COL 2 — HYBRID VERIFIED + UNDER-CORRECTION ═══════════════════ -->
+<div>
+  <span class="col-label" style="background:#dbeafe;color:#1d4ed8;">Hybrid — verified &amp; under-correction</span>
+
+  <!-- verified — standard -->
+  <span class="lv">State: verified — standard post</span>
+  <div class="art">
+    <div class="art-meta"><a href="#">Professional Playbooks</a><span class="sep">/</span>9 Nov 2026<span class="sep">/</span>12 min read</div>
+    <h1 class="art-h1">Canada Tech Visa 2026 — The Honest Version</h1>
+    <p class="art-lead">Software developers and DevOps engineers can genuinely get Canadian PR. Here is what the ads get right and what they get wrong.</p>
+    <div class="wm-hybrid">
+      <span class="wh-brand">MyPathway2Global</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-ver">v2026.11</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-status-v">Verified</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-src"><a href="#">IRCC Canada</a></span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-date">9 Nov 2026</span>
+      <span class="wh-notice">Independent platform. Not affiliated with any government or immigration authority. Not legal advice.</span>
+    </div>
+    <div class="body-area"><div class="sk f"></div><div class="sk m"></div><div class="sk f"></div><div class="sk s"></div></div>
+  </div>
+
+  <!-- verified — with superseded-by link (new edition exists) -->
+  <span class="lv">State: verified — older edition, newer exists</span>
+  <div class="art">
+    <div class="art-meta"><a href="#">Professional Playbooks</a><span class="sep">/</span>12 Mar 2026<span class="sep">/</span>11 min read</div>
+    <h1 class="art-h1">Canada Express Entry 2026 — Complete Guide</h1>
+    <p class="art-lead">Canada Express Entry is an invitation-based system for skilled workers. Here is exactly how CRS scores work.</p>
+    <div class="wm-hybrid">
+      <span class="wh-brand">MyPathway2Global</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-ver">v2026.03</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-status-v">Verified</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-src"><a href="#">IRCC Canada</a></span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-date">12 Mar 2026</span>
+      <span class="wh-sup"><a href="#">Newer edition: v2026.11 &rarr;</a></span>
+      <span class="wh-notice">Independent platform. Not affiliated with any government or immigration authority. Not legal advice.</span>
+    </div>
+    <div class="body-area"><div class="sk f"></div><div class="sk m"></div><div class="sk f"></div><div class="sk s"></div></div>
+  </div>
+
+  <!-- under-correction -->
+  <span class="lv">State: under-correction</span>
+  <div class="art">
+    <div class="art-meta"><a href="#">Guides</a><span class="sep">/</span>3 Oct 2026<span class="sep">/</span>8 min read</div>
+    <h1 class="art-h1">Australia Working Holiday Visa 2026</h1>
+    <p class="art-lead">The WHV allows young people to work and travel in Australia for up to 12 months.</p>
+    <div class="wm-hybrid amber">
+      <span class="wh-brand">MyPathway2Global</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-ver">v2026.10</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-status-uc">Under correction</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-src"><a href="#">DIBP Australia</a></span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-date">3 Oct 2026</span>
+      <span class="wh-notice">Independent platform. Not affiliated with any government or immigration authority. Not legal advice.</span>
+    </div>
+    <div class="body-area"><div class="sk f"></div><div class="sk m"></div><div class="sk s"></div></div>
+  </div>
+
+  <!-- unaudited -->
+  <span class="lv">State: not yet audited (old post, no frontmatter)</span>
+  <div class="art">
+    <div class="art-meta"><a href="#">Country Audits</a><span class="sep">/</span>15 Jan 2026<span class="sep">/</span>14 min read</div>
+    <h1 class="art-h1">Germany Visa from Nigeria: The 2026 Reality Check</h1>
+    <p class="art-lead">Germany's zero-tuition universities and 18-month job search visa make it one of the strongest pathways.</p>
+    <div class="wm-hybrid amber">
+      <span class="wh-brand">MyPathway2Global</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-ver" style="color:#a16207;">v2026.01</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-status-na">Not yet audited</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-src" style="color:#9ca3af;">Source not recorded</span>
+      <span class="wh-notice">Independent platform. Not affiliated with any government or immigration authority. Not legal advice.</span>
+    </div>
+    <div class="body-area"><div class="sk f"></div><div class="sk m"></div><div class="sk s"></div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════ COL 3 — HYBRID RESEARCH-REQUIRED + MULTI-EDITION ═══════════════════ -->
+<div>
+  <span class="col-label" style="background:#dbeafe;color:#1d4ed8;">Hybrid — research-required &amp; multi-edition</span>
+
+  <!-- research-required -->
+  <span class="lv">State: research-required</span>
+  <div class="art">
+    <div class="art-meta"><a href="#">Country Audits</a><span class="sep">/</span>1 Sep 2026<span class="sep">/</span>6 min read</div>
+    <h1 class="art-h1">USA H-1B Visa from Nigeria 2026</h1>
+    <p class="art-lead">The H-1B is a specialty occupation visa for US employers sponsoring skilled foreign workers.</p>
+    <div class="wm-hybrid red">
+      <span class="wh-brand">MyPathway2Global</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-ver">v2026.09</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-status-rr">Research required</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-src"><a href="#">USCIS</a></span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-date">1 Sep 2026</span>
+      <span class="wh-notice">Independent platform. Not affiliated with any government or immigration authority. Not legal advice.</span>
+    </div>
+    <div class="body-area"><div class="sk f"></div><div class="sk m"></div><div class="sk s"></div></div>
+  </div>
+
+  <!-- multi-edition: newest (v2026.11) -->
+  <span class="lv">Multi-edition: newest edition (v2026.11)</span>
+  <div class="art">
+    <div class="art-meta"><a href="#">Policy Updates</a><span class="sep">/</span>9 Nov 2026<span class="sep">/</span>5 min read</div>
+    <h1 class="art-h1">UK Skilled Worker Salary Threshold — November 2026 Update</h1>
+    <p class="art-lead">The general threshold rose to GBP 41,700 from April 2026. Here is what changed and which occupations are affected.</p>
+    <div class="wm-hybrid">
+      <span class="wh-brand">MyPathway2Global</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-ver">v2026.11</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-status-v">Verified</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-src"><a href="#">UK Visas and Immigration</a></span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-date">9 Nov 2026</span>
+      <span class="wh-sup">Latest edition</span>
+      <span class="wh-notice">Independent platform. Not affiliated with any government or immigration authority. Not legal advice.</span>
+    </div>
+    <div class="body-area"><div class="sk f"></div><div class="sk m"></div><div class="sk f"></div><div class="sk s"></div></div>
+  </div>
+
+  <!-- multi-edition: older (v2024.04) — superseded -->
+  <span class="lv">Multi-edition: older edition (v2024.04) — superseded</span>
+  <div class="art">
+    <div class="art-meta"><a href="#">Policy Updates</a><span class="sep">/</span>4 Apr 2024<span class="sep">/</span>5 min read</div>
+    <h1 class="art-h1">UK Skilled Worker Salary Threshold — April 2024 Update</h1>
+    <p class="art-lead">The general threshold rose to GBP 38,700 from April 2024, replacing the previous GBP 26,200 floor.</p>
+    <div class="wm-hybrid" style="border-top-color:#6b7280;background:#f9fafb;">
+      <span class="wh-brand">MyPathway2Global</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-ver" style="color:#9ca3af;">v2024.04</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-status-v" style="color:#6b7280;font-weight:600;">Archived — verified at time of publication</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-src"><a href="#">UK Visas and Immigration</a></span>
+      <span class="wh-sup"><a href="#">Current edition: v2026.11 &rarr;</a></span>
+      <span class="wh-notice">Independent platform. Not affiliated with any government or immigration authority. Not legal advice.</span>
+    </div>
+    <div class="body-area"><div class="sk f"></div><div class="sk m"></div><div class="sk s"></div></div>
+  </div>
+
+  <!-- WAA corridor post — high risk -->
+  <span class="lv">WAA corridor post — high-risk route</span>
+  <div class="art">
+    <div class="art-meta"><a href="#">Guides — Work</a><span class="sep">/</span>9 Nov 2026<span class="sep">/</span>9 min read</div>
+    <h1 class="art-h1">Qatar Work Visa 2026 — What the NGN 3.2m Offer Actually Means</h1>
+    <p class="art-lead">Agents are selling Qatar work visas for NGN 3.2 million with visa out in 3-5 days. Here is what is real and what is not.</p>
+    <div class="wm-hybrid">
+      <span class="wh-brand">MyPathway2Global</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-ver">v2026.11</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-status-v">Verified</span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-src"><a href="#">Qatar Ministry of Labour</a></span>
+      <span class="wh-dot">&middot;</span>
+      <span class="wh-date">9 Nov 2026</span>
+      <span class="wh-notice">Independent platform. Not affiliated with any government or immigration authority. Not legal advice. High-risk corridor — read full disclaimer before acting.</span>
+    </div>
+    <div class="body-area"><div class="sk f"></div><div class="sk m"></div><div class="sk f"></div><div class="sk s"></div></div>
+  </div>
+</div>
+
+</div><!-- end grid -->
+
+<div style="max-width:900px;margin:3rem auto 0;padding:1.5rem;background:white;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#10316b;margin-bottom:1rem;">Hybrid design — what it adds over current</p>
+  <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+    <tr style="border-bottom:2px solid #e5e7eb;">
+      <th style="text-align:left;padding:0.5rem 0.75rem;color:#10316b;background:#f9fafb;">Element</th>
+      <th style="text-align:left;padding:0.5rem 0.75rem;color:#10316b;background:#f9fafb;">Current</th>
+      <th style="text-align:left;padding:0.5rem 0.75rem;color:#10316b;background:#f9fafb;">Hybrid</th>
+    </tr>
+    <tr style="border-bottom:1px solid #f3f4f6;">
+      <td style="padding:0.5rem 0.75rem;font-weight:600;">Visual weight</td>
+      <td style="padding:0.5rem 0.75rem;color:#6b7280;">Flex badge row — reads as UI chrome</td>
+      <td style="padding:0.5rem 0.75rem;color:#15803d;">Navy 2px top border + fill — reads as document header</td>
+    </tr>
+    <tr style="border-bottom:1px solid #f3f4f6;">
+      <td style="padding:0.5rem 0.75rem;font-weight:600;">Format</td>
+      <td style="padding:0.5rem 0.75rem;color:#6b7280;">Badge + separate spans</td>
+      <td style="padding:0.5rem 0.75rem;color:#15803d;">Single dateline: Brand · version · status · source · date</td>
+    </tr>
+    <tr style="border-bottom:1px solid #f3f4f6;">
+      <td style="padding:0.5rem 0.75rem;font-weight:600;">Edition versioning</td>
+      <td style="padding:0.5rem 0.75rem;color:#6b7280;">None — no way to distinguish editions</td>
+      <td style="padding:0.5rem 0.75rem;color:#15803d;">v2026.11 — year.month edition tag on every post</td>
+    </tr>
+    <tr style="border-bottom:1px solid #f3f4f6;">
+      <td style="padding:0.5rem 0.75rem;font-weight:600;">Multi-edition linking</td>
+      <td style="padding:0.5rem 0.75rem;color:#6b7280;">None</td>
+      <td style="padding:0.5rem 0.75rem;color:#15803d;">supersededBy link in watermark — older editions stay live, link to current</td>
+    </tr>
+    <tr style="border-bottom:1px solid #f3f4f6;">
+      <td style="padding:0.5rem 0.75rem;font-weight:600;">Archived state</td>
+      <td style="padding:0.5rem 0.75rem;color:#6b7280;">None</td>
+      <td style="padding:0.5rem 0.75rem;color:#15803d;">Grey border + "Archived — verified at time of publication"</td>
+    </tr>
+    <tr style="border-bottom:1px solid #f3f4f6;">
+      <td style="padding:0.5rem 0.75rem;font-weight:600;">High-risk notice</td>
+      <td style="padding:0.5rem 0.75rem;color:#6b7280;">None in watermark</td>
+      <td style="padding:0.5rem 0.75rem;color:#15803d;">Appended to independence notice line for WAA corridor posts</td>
+    </tr>
+    <tr>
+      <td style="padding:0.5rem 0.75rem;font-weight:600;">Unaudited signal</td>
+      <td style="padding:0.5rem 0.75rem;color:#6b7280;">Amber badge — easy to miss</td>
+      <td style="padding:0.5rem 0.75rem;color:#15803d;">Amber 2px top border — visible at a glance, creates audit queue</td>
+    </tr>
+  </table>
+</div>
+
+<p style="text-align:center;font-size:0.75rem;color:#9ca3af;margin-top:2rem;padding-bottom:2rem;">
+  File: <code>docs/engineering/watermark-hybrid.html</code>
+</p>
+</body>
+</html>
