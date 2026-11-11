@@ -124,10 +124,10 @@ Active posts being written. Each post requires: frontmatter with watermark field
 | W1 | Canada tech visa 2026 — the honest version | Professional Playbook | `playbooks/professional/canada-tech-express-entry-honest-guide-2026.md` | **DONE** `168070d` |
 | W2 | Canada Francophone immigration — caregivers, PSWs | Professional Playbook | `playbooks/professional/canada-francophone-immigration-caregivers-2026.md` | **DONE** `168070d` |
 | W3 | Qatar work visa reality check | Guide — Work | `guides/work/qatar-work-visa-reality-check-2026.md` | **DONE** `168070d` |
-| W4 | Is Mongolia a real work destination? | Guide — Work | `guides/work/mongolia-work-visa-nigeria-reality-2026.md` | **PENDING** |
-| W5 | How to spot a fake travel agent — Nigerian checklist | Guide — Work | `guides/work/how-to-spot-fake-travel-agent-nigeria-2026.md` | **PENDING** |
-| W6 | Oman work visa for mechanics and electricians | Guide — Work | `guides/work/oman-trades-work-visa-mechanic-electrician-2026.md` | **PENDING** |
-| W7 | Guyana 2-year freelance work visa | Country Audit | `country-audits/guyana/guyana-visa-from-nigeria-2026.md` | **PENDING** |
+| W4 | Is Mongolia a real work destination? | Guide — Work | `guides/work/mongolia-work-visa-nigeria-reality-2026.md` | **DONE** |
+| W5 | How to spot a fake travel agent — Nigerian checklist | Guide — Work | `guides/work/how-to-spot-fake-travel-agent-nigeria-2026.md` | **DONE** |
+| W6 | Oman work visa for mechanics and electricians | Guide — Work | `guides/work/oman-trades-work-visa-mechanic-electrician-2026.md` | **DONE** |
+| W7 | Guyana 2-year freelance work visa | Country Audit | `country-audits/guyana/guyana-visa-from-nigeria-2026.md` | **DONE** |
 | W8 | Bulgaria study visa for Nigerians 2026 | Country Audit | `country-audits/bulgaria/bulgaria-visa-from-nigeria-2026.md` | **PENDING** |
 | W9 | Croatia study visa 2026 — RIT University, debt trap warning | Country Audit | `country-audits/croatia/croatia-visa-from-nigeria-2026.md` | **PENDING** |
 | W10 | Canada LMIA warehouse and logistics work permit | Guide — Work | `guides/work/canada-lmia-warehouse-logistics-2026.md` | **PENDING** |
@@ -264,11 +264,11 @@ These run on every deploy. No action needed unless they fail.
 
 | Sprint | Total | Done | In-progress | Pending | Blocked |
 |---|---|---|---|---|---|
-| A — Watermark | 13 | 7 | 0 | 6 | 0 |
-| B — Content W1-W22 | 22 | 3 | 0 | 19 | 0 |
-| C — Demand records | 8 | 0 | 0 | 8 | 0 |
-| D — New countries | 4 | 0 | 0 | 4 | 0 |
+| A — Watermark | 13 | 13 | 0 | 0 | 0 |
+| B — Content W1-W22 | 22 | 7 | 0 | 15 | 0 |
+| C — Demand records | 8 | 7 | 0 | 1 | 0 |
+| D — New countries | 4 | 1 | 0 | 3 | 0 |
 | E — Deploy | 10 | 8 | 0 | 0 | 2 |
 | F — WAA-3a | 5 | 0 | 0 | 0 | 5 |
 | G — Quality gates | 6 | 6 | 0 | 0 | 0 |
-| **Total** | **68** | **24** | **0** | **37** | **7** |
+| **Total** | **68** | **42** | **0** | **19** | **7** |
