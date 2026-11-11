@@ -136,9 +136,9 @@ Active posts being written. Each post requires: frontmatter with watermark field
 | W13 | What "zero deposit" visa offers actually mean | Guide — Work | `guides/work/zero-deposit-visa-offers-what-they-mean-2026.md` | **DONE** |
 | W14 | Antigua and Barbuda visa from Nigeria | Country Audit | `country-audits/antigua-barbuda/antigua-barbuda-visa-from-nigeria-2026.md` | **PENDING** |
 | W15 | Oman freelance visa vs employment visa | Guide — Work | `guides/work/oman-freelance-visa-vs-employment-visa-2026.md` | **DONE** |
-| W16 | Kafala reform tracker 2026 | Guide — Work | `guides/work/kafala-reform-tracker-2026.md` | **PENDING** |
-| W17 | How to read a Gulf employment contract | Guide — Work | `guides/work/gulf-employment-contract-guide-2026.md` | **PENDING** |
-| W18 | What to do if your employer confiscates your passport | Guide — Work | `guides/work/passport-confiscation-what-to-do-2026.md` | **PENDING** |
+| W16 | Kafala reform tracker 2026 | Guide — Work | `guides/work/kafala-reform-tracker-2026.md` | **DONE** |
+| W17 | How to read a Gulf employment contract | Guide — Work | `guides/work/gulf-employment-contract-guide-2026.md` | **DONE** |
+| W18 | What to do if your employer confiscates your passport | Guide — Work | `guides/work/passport-confiscation-what-to-do-2026.md` | **DONE** |
 | W19 | Netherlands Highly Skilled Migrant visa | Guide — Work | `guides/work/netherlands-highly-skilled-migrant-visa-2026.md` | **PENDING** |
 | W20 | Poland construction work permit 2026 | Guide — Work | `guides/work/poland-construction-work-permit-2026.md` | **PENDING** |
 | W21 | Ireland nursing visa — NMBI registration | Guide — Work | `guides/work/ireland-nursing-visa-nmbi-registration-2026.md` | **PENDING** |
@@ -265,10 +265,10 @@ These run on every deploy. No action needed unless they fail.
 | Sprint | Total | Done | In-progress | Pending | Blocked |
 |---|---|---|---|---|---|
 | A — Watermark | 13 | 13 | 0 | 0 | 0 |
-| B — Content W1-W22 | 22 | 14 | 0 | 8 | 0 |
+| B — Content W1-W22 | 22 | 17 | 0 | 5 | 0 |
 | C — Demand records | 8 | 7 | 0 | 1 | 0 |
 | D — New countries | 4 | 3 | 0 | 1 | 0 |
 | E — Deploy | 10 | 8 | 0 | 0 | 2 |
 | F — WAA-3a | 5 | 0 | 0 | 0 | 5 |
 | G — Quality gates | 6 | 6 | 0 | 0 | 0 |
-| **Total** | **68** | **51** | **0** | **10** | **7** |
+| **Total** | **68** | **54** | **0** | **7** | **7** |
