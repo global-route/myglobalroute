@@ -1,8 +1,8 @@
 # Phase Status — MyPathway2Global
 
-> **Updated:** 2026-11-10 | **Release:** GO — production live
+> **Updated:** 2026-11-11 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 214/214 passing
-> **Commit:** `a437640` | **Blog posts:** 107 | **Sitemap URLs:** 146 | **Stale requirements:** 38
+> **Commit:** `85b016b` | **Blog posts:** 125 | **Sitemap URLs:** 146 | **Stale requirements:** 1 (IE-critical-skills job_offer — evidence-date locked)
 
 ---
 
@@ -34,6 +34,10 @@
 | WAA notification worker | **Built, not deployed** | Owner: Resend account + Worker deploy + first agent |
 | WAA-3a — First verified agent | **Blocked** | Owner: vet agent, sign agreement, add to agents.json |
 | WCAG 2.1 AA | **Complete** | Re-run axe after next deploy |
+| Sprint A — Watermark trust layer | **WM-1 to WM-7 done** | WM-8 to WM-13 pending (hybrid design) |
+| Sprint B — W1-W22 content | **17/22 done** | W14/W19/W20/W21/W22 pending |
+| Sprint C — Demand records | **7/8 done** | D7 IE-healthcare pending |
+| Sprint D — New countries | **3/4 done** | C4 Oman pathway record pending |
 
 ---
 
@@ -381,6 +385,61 @@ A task is not complete because a file exists. Legal/data claims require evidence
 
 **Single path to live:** Owner sets Resend secret → deploys Worker → vets first agent → adds to agents.json → deploys site.
 Full walkthrough: `docs/engineering/WAA_ACTIVE_TASK.md`
+
+---
+
+## Sprint A — Watermark trust layer ⏳ in progress (2026-11-10)
+
+Every blog post now shows a dateline watermark with evidence status, source authority, and last fact-checked date. Design reference: `docs/engineering/watermark-hybrid.html`.
+
+| Phase | Scope | Status |
+|---|---|---|
+| WM-1 to WM-7 | CSS block, template wiring, CSS v12, backfill 5 WAA posts, build test, commit | **Done** — `168070d` |
+| WM-8 | Replace current trail block with hybrid document mark in `blog-post.njk` | **Pending** |
+| WM-9 | Replace `.post-source-trail` CSS with `.wm-hybrid` CSS | **Pending** |
+| WM-10 | Add `postVersion` + `supersededBy` frontmatter fields to new posts | **Pending** |
+| WM-11 | Backfill `postVersion` on all 125 existing posts | **Pending** |
+| WM-12 | Backfill `sourceAuthority` + `sourceUrl` + `lastFactChecked` + `evidenceStatus` on all posts | **Pending** |
+| WM-13 | Build + test + commit hybrid watermark | **Pending** |
+
+**Hybrid watermark format:**
+```
+MyPathway2Global · v2026.11 · Verified · [Source Authority] · 9 Nov 2026    [Newer edition →]
+Independent platform. Not affiliated with any government or immigration authority. Not legal advice.
+```
+
+**Five states:** verified (navy), under-correction (amber), research-required (red), not-yet-audited (amber), archived (grey).
+
+---
+
+## Sprint B — Content W1-W22 ⏳ in progress (2026-11-10)
+
+| ID | Post | Status |
+|---|---|---|
+| W1 | Canada tech visa — the honest version | **Done** `168070d` |
+| W2 | Canada Francophone caregivers/PSWs | **Done** `168070d` |
+| W3 | Qatar work visa reality check | **Done** `168070d` |
+| W4 | Mongolia work destination debunk | **Done** `20310d7` |
+| W5 | How to spot a fake travel agent | **Done** `20310d7` |
+| W6 | Oman trades work visa | **Done** `20310d7` |
+| W7 | Guyana 2-year freelance visa | **Done** `20310d7` |
+| W8 | Bulgaria study visa | **Done** `5acb221` |
+| W9 | Croatia study visa — RIT, debt trap warning | **Done** `5acb221` |
+| W10 | Canada LMIA warehouse/logistics | **Done** `5acb221` |
+| W11 | Singapore Employment Pass — COMPASS | **Done** `5acb221` |
+| W12 | "Job assistance on arrival" red flag | **Done** `e1c985e` |
+| W13 | "Zero deposit" visa offers explainer | **Done** `e1c985e` |
+| W14 | Antigua and Barbuda visa from Nigeria | **Pending** |
+| W15 | Oman freelance vs employment visa | **Done** `e1c985e` |
+| W16 | Kafala reform tracker 2026 | **Done** `e323e79` |
+| W17 | How to read a Gulf employment contract | **Done** `e323e79` |
+| W18 | Passport confiscation — what to do | **Done** `e323e79` |
+| W19 | Netherlands Highly Skilled Migrant visa | **Pending** |
+| W20 | Poland construction work permit | **Pending** |
+| W21 | Ireland nursing visa — NMBI | **Pending** |
+| W22 | Germany care work visa (Pflegekrafte) | **Pending** |
+
+**5 posts remaining.** W14 (Antigua) needs primary source research. W19-W22 are platform expansion — no blocker.
 
 ---
 

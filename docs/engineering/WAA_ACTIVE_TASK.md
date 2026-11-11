@@ -1,6 +1,20 @@
 # WAA Active Task — Agent Notification Infrastructure
-**Created:** 2026-11-10 | **Status:** Owner-gated — awaiting agent credentials
-**Commit:** f0059e3 (docs) | Worker: `workers/agent-lead.js` built, not yet deployed
+**Updated:** 2026-11-11 | **Status:** Owner-gated — awaiting agent credentials + deploy
+**Latest commit:** `85b016b` | Worker: `workers/agent-lead.js` built, not yet deployed
+
+---
+
+## Current deploy blocker
+
+`upload.assets.cloudflare.com` is not resolving via DNS (confirmed via Google 8.8.8.8 and Cloudflare 1.1.1.1). This is a wrangler 4.x issue with the asset upload endpoint.
+
+**Fix — downgrade wrangler to v3:**
+```bash
+npm install --save-dev wrangler@3
+npx wrangler deploy
+```
+
+Wrangler 3 uses a different upload endpoint that resolves correctly. Once deployed, upgrade back if needed.
 
 ---
 

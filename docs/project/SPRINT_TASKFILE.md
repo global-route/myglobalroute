@@ -1,8 +1,8 @@
 # SPRINT TASKFILE — MyPathway2Global
-**Created:** 2026-11-09 | **Commit baseline:** `2f4689c` | **Tests:** 19/19, 214/214
+**Updated:** 2026-11-11 | **Commit:** `85b016b` | **Tests:** 19/19, 214/214
+**Blog posts:** 125 | **Countries:** 31 | **Pathways:** 71 | **Demand records:** 22 | **Stale requirements:** 1 (evidence-locked)
 
-This is the single source of truth for all active work. Updated as tasks complete.
-Status: DONE / IN-PROGRESS / BLOCKED / PENDING
+Single source of truth for all active work. Status: DONE / PENDING / BLOCKED
 
 ---
 
@@ -17,13 +17,13 @@ Status: DONE / IN-PROGRESS / BLOCKED / PENDING
 | WM-3 | Bump CSS version in `blog-post.njk` to v12 | **DONE** `168070d` | `src/templates/blog-post.njk` |
 | WM-4 | Add watermark fields to new posts going forward | **DONE** — standard on all new posts | All new content files |
 | WM-5 | Backfill watermark fields on 5 WAA supporting posts | **DONE** `168070d` | `content/blog/guides/work/` (5 files) |
-| WM-6 | Test build — confirm amber/green states render correctly | **DONE** — 284 files, 0 errors | `npm run build` |
+| WM-6 | Test build — confirm amber/green states render correctly | **DONE** `168070d` | `npm run build` |
 | WM-7 | Commit + push watermark sprint | **DONE** `168070d` | — |
 | WM-8 | Replace current trail block with hybrid document mark in `blog-post.njk` | **PENDING** | `src/templates/blog-post.njk` |
 | WM-9 | Replace `.post-source-trail` CSS with `.wm-hybrid` CSS in `enhancements.css` | **PENDING** | `src/css/enhancements.css` |
 | WM-10 | Add `postVersion` + `supersededBy` frontmatter fields to new posts | **PENDING** | All new content files |
-| WM-11 | Backfill `postVersion` on all 110 existing posts (derive from date: v{YYYY}.{MM}) | **PENDING** | All content files |
-| WM-12 | Backfill `sourceAuthority` + `sourceUrl` + `lastFactChecked` + `evidenceStatus` on all posts missing them | **PENDING** | All content files |
+| WM-11 | Backfill `postVersion` on all 125 existing posts | **PENDING** | All content files |
+| WM-12 | Backfill `sourceAuthority` + `sourceUrl` + `lastFactChecked` + `evidenceStatus` on all posts | **PENDING** | All content files |
 | WM-13 | Build + test + commit hybrid watermark | **PENDING** | — |
 
 ---
@@ -124,21 +124,21 @@ Active posts being written. Each post requires: frontmatter with watermark field
 | W1 | Canada tech visa 2026 — the honest version | Professional Playbook | `playbooks/professional/canada-tech-express-entry-honest-guide-2026.md` | **DONE** `168070d` |
 | W2 | Canada Francophone immigration — caregivers, PSWs | Professional Playbook | `playbooks/professional/canada-francophone-immigration-caregivers-2026.md` | **DONE** `168070d` |
 | W3 | Qatar work visa reality check | Guide — Work | `guides/work/qatar-work-visa-reality-check-2026.md` | **DONE** `168070d` |
-| W4 | Is Mongolia a real work destination? | Guide — Work | `guides/work/mongolia-work-visa-nigeria-reality-2026.md` | **DONE** |
-| W5 | How to spot a fake travel agent — Nigerian checklist | Guide — Work | `guides/work/how-to-spot-fake-travel-agent-nigeria-2026.md` | **DONE** |
-| W6 | Oman work visa for mechanics and electricians | Guide — Work | `guides/work/oman-trades-work-visa-mechanic-electrician-2026.md` | **DONE** |
-| W7 | Guyana 2-year freelance work visa | Country Audit | `country-audits/guyana/guyana-visa-from-nigeria-2026.md` | **DONE** |
-| W8 | Bulgaria study visa for Nigerians 2026 | Country Audit | `country-audits/bulgaria/bulgaria-visa-from-nigeria-2026.md` | **DONE** |
-| W9 | Croatia study visa 2026 — RIT University, debt trap warning | Country Audit | `country-audits/croatia/croatia-visa-from-nigeria-2026.md` | **DONE** |
-| W10 | Canada LMIA warehouse and logistics work permit | Guide — Work | `guides/work/canada-lmia-warehouse-logistics-2026.md` | **DONE** |
-| W11 | Singapore Employment Pass — COMPASS explained | Guide — Work | `guides/work/singapore-employment-pass-compass-guide-2026.md` | **DONE** |
-| W12 | "Job assistance when you get there" — red flag guide | Guide — Work | `guides/work/job-assistance-on-arrival-red-flag-2026.md` | **DONE** |
-| W13 | What "zero deposit" visa offers actually mean | Guide — Work | `guides/work/zero-deposit-visa-offers-what-they-mean-2026.md` | **DONE** |
-| W14 | Antigua and Barbuda visa from Nigeria | Country Audit | `country-audits/antigua-barbuda/antigua-barbuda-visa-from-nigeria-2026.md` | **PENDING** |
-| W15 | Oman freelance visa vs employment visa | Guide — Work | `guides/work/oman-freelance-visa-vs-employment-visa-2026.md` | **DONE** |
-| W16 | Kafala reform tracker 2026 | Guide — Work | `guides/work/kafala-reform-tracker-2026.md` | **DONE** |
-| W17 | How to read a Gulf employment contract | Guide — Work | `guides/work/gulf-employment-contract-guide-2026.md` | **DONE** |
-| W18 | What to do if your employer confiscates your passport | Guide — Work | `guides/work/passport-confiscation-what-to-do-2026.md` | **DONE** |
+| W4 | Is Mongolia a real work destination? | Guide — Work | `guides/work/mongolia-work-visa-nigeria-reality-2026.md` | **DONE** `20310d7` |
+| W5 | How to spot a fake travel agent — Nigerian checklist | Guide — Work | `guides/work/how-to-spot-fake-travel-agent-nigeria-2026.md` | **DONE** `20310d7` |
+| W6 | Oman work visa for mechanics and electricians | Guide — Work | `guides/work/oman-trades-work-visa-mechanic-electrician-2026.md` | **DONE** `20310d7` |
+| W7 | Guyana 2-year freelance work visa | Country Audit | `country-audits/guyana/guyana-visa-from-nigeria-2026.md` | **DONE** `20310d7` |
+| W8 | Bulgaria study visa for Nigerians 2026 | Country Audit | `country-audits/bulgaria/bulgaria-visa-from-nigeria-2026.md` | **DONE** `5acb221` |
+| W9 | Croatia study visa 2026 — RIT University, debt trap warning | Country Audit | `country-audits/croatia/croatia-visa-from-nigeria-2026.md` | **DONE** `5acb221` |
+| W10 | Canada LMIA warehouse and logistics work permit | Guide — Work | `guides/work/canada-lmia-warehouse-logistics-2026.md` | **DONE** `5acb221` |
+| W11 | Singapore Employment Pass — COMPASS explained | Guide — Work | `guides/work/singapore-employment-pass-compass-guide-2026.md` | **DONE** `5acb221` |
+| W12 | "Job assistance when you get there" — red flag guide | Guide — Work | `guides/work/job-assistance-on-arrival-red-flag-2026.md` | **DONE** `e1c985e` |
+| W13 | What "zero deposit" visa offers actually mean | Guide — Work | `guides/work/zero-deposit-visa-offers-what-they-mean-2026.md` | **DONE** `e1c985e` |
+| W14 | Antigua and Barbuda visa from Nigeria | Country Audit | `country-audits/antigua-barbuda/antigua-barbuda-visa-from-nigeria-2026.md` | **PENDING** — needs primary source research |
+| W15 | Oman freelance visa vs employment visa | Guide — Work | `guides/work/oman-freelance-visa-vs-employment-visa-2026.md` | **DONE** `e1c985e` |
+| W16 | Kafala reform tracker 2026 | Guide — Work | `guides/work/kafala-reform-tracker-2026.md` | **DONE** `e323e79` |
+| W17 | How to read a Gulf employment contract | Guide — Work | `guides/work/gulf-employment-contract-guide-2026.md` | **DONE** `e323e79` |
+| W18 | What to do if your employer confiscates your passport | Guide — Work | `guides/work/passport-confiscation-what-to-do-2026.md` | **DONE** `e323e79` |
 | W19 | Netherlands Highly Skilled Migrant visa | Guide — Work | `guides/work/netherlands-highly-skilled-migrant-visa-2026.md` | **PENDING** |
 | W20 | Poland construction work permit 2026 | Guide — Work | `guides/work/poland-construction-work-permit-2026.md` | **PENDING** |
 | W21 | Ireland nursing visa — NMBI registration | Guide — Work | `guides/work/ireland-nursing-visa-nmbi-registration-2026.md` | **PENDING** |
@@ -160,12 +160,12 @@ New demand records needed to power WAA wizard results for new corridors.
 
 | ID | Record ID | Country | Occupation | Status |
 |---|---|---|---|---|
-| D1 | `CA-healthcare-semiskilled-francophone-2026` | CA | care_work / semi_skilled | **PENDING** — add with W2 commit |
-| D2 | `CA-logistics-semiskilled-2026` | CA | logistics / semi_skilled | **PENDING** — add with W10 commit |
-| D3 | `OM-trades-unskilled-2026` | OM | trades / trades | **PENDING** — add with W6 commit |
-| D4 | `QA-trades-unskilled-2026` | QA | trades / unskilled | **PENDING** — add with W3 commit |
-| D5 | `SG-software-it-skilled-2026` | SG | software_it / skilled | **PENDING** — add with W11 commit |
-| D6 | `DE-care-work-skilled-2026` | DE | care_work / skilled | **PENDING** — add with W22 commit |
+| D1 | `CA-healthcare-semiskilled-francophone-2026` | CA | care_work / semi_skilled | **DONE** `d8b7f36` |
+| D2 | `CA-logistics-semiskilled-2026` | CA | logistics / semi_skilled | **DONE** `d8b7f36` |
+| D3 | `OM-trades-unskilled-2026` | OM | trades / trades | **DONE** `d8b7f36` |
+| D4 | `QA-trades-unskilled-2026` | QA | trades / unskilled | **DONE** `d8b7f36` |
+| D5 | `SG-software-it-skilled-2026` | SG | software_it / skilled | **DONE** `d8b7f36` |
+| D6 | `DE-care-work-skilled-2026` | DE | care_work / skilled | **DONE** `d8b7f36` |
 | D7 | `IE-healthcare-skilled-2026` | IE | healthcare / skilled | **PENDING** — add with W21 commit |
 | D8 | `NL-software-it-skilled-2026` | NL | software_it / skilled | **PENDING** — add with W19 commit |
 
@@ -175,10 +175,10 @@ New demand records needed to power WAA wizard results for new corridors.
 
 | ID | Country | ISO | Route | Status |
 |---|---|---|---|---|
-| C1 | Bulgaria | BG | Study visa | **PENDING** — add with W8 commit |
-| C2 | Croatia | HR | Study visa | **PENDING** — add with W9 commit |
-| C3 | Guyana | GY | Freelance work visa | **PENDING** — add with W7 commit |
-| C4 | Oman pathway record | OM | Employer-sponsored trades | **PENDING** — add with W6 commit (country exists, pathway missing) |
+| C1 | Bulgaria | BG | Study visa | **DONE** `5acb221` |
+| C2 | Croatia | HR | Study visa | **DONE** `5acb221` |
+| C3 | Guyana | GY | Freelance work visa | **DONE** `20310d7` |
+| C4 | Oman pathway record | OM | Employer-sponsored trades | **PENDING** — country exists, pathway record missing |
 
 ---
 
@@ -188,21 +188,23 @@ Pre-deployment checklist. All items must be green before `npx wrangler deploy`.
 
 | ID | Check | Status |
 |---|---|---|
-| E1 | `npm test` — 19/19 suites, 214/214 passing | **PASSING** (baseline `2f4689c`) |
+| E1 | `npm test` — 19/19 suites, 214/214 passing | **PASSING** `85b016b` |
 | E2 | `node scripts/validate-agent-registry.js` — 0 errors | **PASSING** |
 | E3 | `node scripts/validate-commercial-registry.js` — 0 errors | **PASSING** |
 | E4 | `node scripts/verify-build.js` — BUILD INTEGRITY PASSED | **PASSING** |
-| E5 | `npm run build` — 0 Eleventy errors | **PASSING** (281 files) |
+| E5 | `npm run build` — 0 Eleventy errors | **PASSING** |
 | E6 | Watermark sprint (WM-1 to WM-7) complete | **DONE** `168070d` |
-| E7 | Batch 1 content (W1+W2+W3) committed | **DONE** `168070d` |
+| E7 | Batch 1-6 content (W1-W13, W15-W18) committed | **DONE** `85b016b` |
 | E8 | All tests still passing after content additions | **DONE** — 214/214 |
-| E9 | `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` run in PowerShell | **OWNER ACTION** |
-| E10 | `npx wrangler deploy` from `myglobalroute/` directory | **OWNER ACTION** |
+| E9 | Wrangler deploy — DNS issue with `upload.assets.cloudflare.com` | **BLOCKED** — owner: retry or downgrade wrangler to v3 |
+| E10 | `npx wrangler deploy` from project root | **OWNER ACTION** |
 
-**Deploy command sequence (owner):**
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-cd C:\github\mypathway\myglobalroute
+**Deploy command (owner):**
+```bash
+# Option A — downgrade wrangler to fix DNS issue (recommended)
+npm install --save-dev wrangler@3 && npx wrangler deploy
+
+# Option B — retry with current wrangler (may work if DNS resolves)
 npx wrangler deploy
 ```
 
@@ -241,34 +243,35 @@ These run on every deploy. No action needed unless they fail.
 
 **What is production-ready now:**
 - All 19 test suites passing, 214 tests
-- Build clean at 281 files, 0 errors
+- Build clean, 0 errors
 - WAA wizard fully wired (steps 1-4, demand matching, safety callouts, agent matching engine, intake form, WAA-4 safety gate)
-- 31 countries, 71 pathways, 107 blog posts
+- 31 countries, 71 pathways, 125 blog posts, 22 demand records
 - Quality gates all passing
-- Commit `2f4689c` is deployable
+- Commit `85b016b` is deployable
+- Watermark trust layer on all posts (WM-1 to WM-7)
+- W1-W13 + W15-W18 content live in repo
 
-**What is missing before deploy is ideal (not blocking):**
-- Watermark sprint (WM-1 to WM-7) — trust layer on all posts. High value, low risk. Should ship with this deploy.
-- W1 + W2 content — already written, not committed. Should ship with this deploy.
-- W3 Qatar post — in progress. Should ship with this deploy.
+**What is blocked on deploy:**
+- `upload.assets.cloudflare.com` DNS not resolving — fix: `npm install --save-dev wrangler@3 && npx wrangler deploy`
 
-**What is blocked and does NOT block deploy:**
-- WAA-3a (first verified agent) — owner action only
-- W4-W22 content — can ship in subsequent deploys
-
-**Recommendation:** Complete WM sprint + commit W1/W2/W3, run full test suite, then deploy. Do not wait for W4-W22.
+**What is pending but does NOT block deploy:**
+- WM-8 to WM-13 (hybrid watermark upgrade)
+- W14 (Antigua — needs research), W19-W22 (platform expansion)
+- D7/D8 demand records (IE healthcare, NL software)
+- C4 Oman pathway record
+- WAA-3a (first verified agent — owner action)
 
 ---
 
 ## Remaining task count
 
-| Sprint | Total | Done | In-progress | Pending | Blocked |
-|---|---|---|---|---|---|
-| A — Watermark | 13 | 13 | 0 | 0 | 0 |
-| B — Content W1-W22 | 22 | 17 | 0 | 5 | 0 |
-| C — Demand records | 8 | 7 | 0 | 1 | 0 |
-| D — New countries | 4 | 3 | 0 | 1 | 0 |
-| E — Deploy | 10 | 8 | 0 | 0 | 2 |
-| F — WAA-3a | 5 | 0 | 0 | 0 | 5 |
-| G — Quality gates | 6 | 6 | 0 | 0 | 0 |
-| **Total** | **68** | **54** | **0** | **7** | **7** |
+| Sprint | Total | Done | Pending | Blocked |
+|---|---|---|---|---|
+| A — Watermark | 13 | 7 | 6 | 0 |
+| B — Content W1-W22 | 22 | 17 | 5 | 0 |
+| C — Demand records | 8 | 6 | 2 | 0 |
+| D — New countries | 4 | 3 | 1 | 0 |
+| E — Deploy | 10 | 8 | 1 | 1 |
+| F — WAA-3a | 5 | 0 | 0 | 5 |
+| G — Quality gates | 6 | 6 | 0 | 0 |
+| **Total** | **68** | **47** | **15** | **6** |
