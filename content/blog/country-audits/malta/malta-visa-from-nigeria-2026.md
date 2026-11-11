@@ -18,6 +18,11 @@ faqs:
     a: "The Single Permit is Malta's combined work and residence authorisation for non-EU nationals. It replaces the separate work permit and residence permit. The employer applies on your behalf after obtaining labour market clearance."
   - q: "What language is used in Malta?"
     a: "Malta has two official languages: Maltese and English. English is widely spoken and used in business, education and government. This makes Malta accessible for Nigerian applicants."
+postVersion: "v2026.10"
+sourceAuthority: "Identita Malta"
+sourceUrl: "https://identita.gov.mt"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 Malta is an English-speaking EU island nation in the Mediterranean. It has two publishable pathways for Nigerian applicants: a study residence permit and a Single Permit for work. Both are issued by Identità Malta.

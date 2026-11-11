@@ -17,6 +17,11 @@ faqs:
     a: "Yes. A rejection is not permanent. You can reapply once you have addressed the documented reason for refusal. Always request the refusal letter and read the stated reason carefully before reapplying."
   - q: "Does a previous visa rejection affect future applications?"
     a: "Yes. Most visa applications ask whether you have previously been refused a visa. You must answer honestly. A previous refusal is not automatically disqualifying but it requires explanation and evidence that the circumstances have changed."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 # Why African Visa Applications Get Rejected: The 5 Documented Patterns

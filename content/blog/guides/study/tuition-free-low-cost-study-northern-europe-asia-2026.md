@@ -16,6 +16,11 @@ faqs:
     a: "Yes. Both Sweden and Finland introduced tuition fees for non-EU/EEA students - Sweden in 2011, Finland in 2017. Fees at Swedish universities range from SEK 80,000-140,000/year (approximately €7,000-€12,000). Finnish fees range from €6,000-€18,000/year. Both countries offer scholarships that can cover these fees."
   - q: "What is the MEXT scholarship for Japan?"
     a: "MEXT (Ministry of Education, Culture, Sports, Science and Technology) is Japan's government scholarship for international students. It covers full tuition, a monthly stipend of approximately ¥117,000 (approximately €700/month), and travel costs. Applications are made through the Japanese embassy in your country, typically in April-May each year."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 # Tuition-Free and Low-Cost Study in Northern Europe and Asia 2026

@@ -17,6 +17,11 @@ faqs:
     a: "After 2 years on a Critical Skills Employment Permit, you can apply for stamp 4 permission, which allows you to work without a permit and is a step toward permanent residency."
   - q: "Can I study in Ireland as a Nigerian?"
     a: "Yes. You need a study visa (D visa) for courses longer than 3 months. You must have an acceptance letter from a recognised Irish institution and show approximately €7,000 in living funds per year."
+postVersion: "v2026.10"
+sourceAuthority: "Irish Immigration Service Delivery"
+sourceUrl: "https://www.irishimmigration.ie"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 # Ireland Visa from Nigeria: The 2026 Reality Check

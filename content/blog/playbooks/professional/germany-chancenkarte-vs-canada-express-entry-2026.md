@@ -16,6 +16,11 @@ faqs:
     a: "Germany Chancenkarte costs approximately €200 in fees (₦145,000). Canada Express Entry costs approximately CAD $1,215 (₦680,000) in government fees alone, plus credential assessment (CAD $220) and language tests. Germany is significantly cheaper upfront."
   - q: "Do I need a job offer for either route?"
     a: "No. Neither Germany Chancenkarte nor Canada Express Entry requires a job offer. Both are points-based systems where you qualify on your own profile. A job offer adds points in Canada (200 CRS points) but is not required."
+postVersion: "v2026.10"
+sourceAuthority: "Federal Employment Agency Germany"
+sourceUrl: "https://www.arbeitsagentur.de/en/shortage-occupations"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 # Germany Chancenkarte vs. Canada Express Entry 2026

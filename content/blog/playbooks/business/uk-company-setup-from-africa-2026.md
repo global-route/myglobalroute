@@ -18,6 +18,11 @@ faqs:
     a: "Traditional UK banks (Barclays, HSBC, Lloyds) require in-person visits and are difficult for non-UK residents. Fintech alternatives (Wise Business, Revolut Business, Airwallex) can be opened remotely and are the practical solution for most African founders. They provide UK sort codes and account numbers."
   - q: "Does a UK company give me a UK visa?"
     a: "No. Owning a UK company does not give you any UK immigration status. You still need a valid UK visa to enter the UK. The Innovator Founder visa is available for founders of innovative UK businesses, but it requires endorsement from an approved body and a minimum investment."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

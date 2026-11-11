@@ -18,6 +18,12 @@ faqs:
     a: "The Opportunity Card is a 1-year job search visa that allows you to look for work in Germany without a prior job offer. You need either a recognised German qualification or 6 points on the points system. The minimum funds requirement is EUR 1,091/month."
   - q: "Are German public universities really free?"
     a: "Yes. Tuition at German public universities is EUR 0 for most programmes for all students including Nigerians. You pay only a semester contribution (typically EUR 150-350) covering administrative fees and a public transport ticket."
+postVersion: "v2026.01"
+sourceAuthority: "Federal Foreign Office Germany"
+sourceUrl: "https://www.auswaertiges-amt.de/en/visa-service"
+lastFactChecked: 2026-01-15
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 # Germany Visa from Nigeria: The 2026 Reality Check

@@ -18,6 +18,11 @@ faqs:
     a: "Paraguay's territorial tax system is confirmed by the Subsecretaria de Estado de Tributacion (SET) at set.gov.py. Only income sourced within Paraguay is subject to Paraguayan income tax. Foreign-sourced income is not taxed. The personal income tax rate on Paraguay-sourced income is 10% flat. This is high-confidence information."
   - q: "Why are some figures in this post marked as unverified?"
     a: "This platform only publishes claims that can be traced to a primary government source. The USD 70,000 SUACE capital threshold and the USD 150,000-200,000 Investor Pass thresholds are widely cited by Paraguay immigration practitioners but have not been confirmed from the Direccion General de Migraciones or a published MIC decree. We have labelled them clearly so you know exactly what to verify before acting."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div class="practitioner-required-callout">

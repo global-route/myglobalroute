@@ -18,6 +18,11 @@ faqs:
     a: "The JW201 is issued for CSC scholarship students. The JW202 is issued for self-funded students. Both are admission notices issued by the Chinese university and required for the X1 (long-stay) student visa application."
   - q: "What qualifications do I need for a China work visa?"
     a: "Category B (professional talent): a bachelor's degree and at least 2 years of relevant work experience. Category A (high-end talent) has higher thresholds. The employer must obtain a work permit notice from the local human resources authority before you apply for the Z visa."
+postVersion: "v2026.10"
+sourceAuthority: "National Immigration Administration China"
+sourceUrl: "https://en.nia.gov.cn"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 China has two publishable pathways for Nigerian applicants: a student visa (X1 for long-stay) and a work visa (Z visa). China is also notable for the Chinese Government Scholarship (CSC), which provides fully funded study opportunities for Nigerian students.

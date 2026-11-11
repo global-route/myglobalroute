@@ -17,6 +17,11 @@ faqs:
     a: "The Federal Ministry of Foreign Affairs (MOFA) in Abuja issues apostilles for Nigerian documents. You can apply online through the MOFA portal or in person. Processing time is typically 3-10 working days."
   - q: "Do I need to translate my documents for a European visa?"
     a: "Yes for most European countries. Documents in English are generally accepted for UK, Ireland and some Nordic countries. For Schengen countries, documents in other languages typically require a certified translation."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 # Document Authentication for Nigerian Visa Applicants: Apostille, Sworn Translation and APS Guide 2026

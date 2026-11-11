@@ -18,6 +18,11 @@ faqs:
     a: "The African Continental Free Trade Area (AfCFTA) is a free trade agreement covering 54 African countries. It aims to liberalise trade in goods and services across the continent. For workers, it creates the framework for easier movement - but individual countries still control their own immigration rules. The AfCFTA does not automatically give you the right to work in another African country."
   - q: "Which African country is easiest to get a work permit in?"
     a: "Rwanda has the most streamlined business and work permit process - registration takes 1-2 days online. Mauritius has a well-structured Occupation Permit for professionals and investors. Both countries actively court foreign talent as part of their economic development strategies."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->

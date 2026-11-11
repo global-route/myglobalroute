@@ -19,6 +19,11 @@ faqs:
     a: "International undergraduate tuition at USask ranges from CAD 39,007/year (Arts) to CAD 59,383/year (Engineering) for 2026-27. The CAD 5,000 automatic scholarship covers approximately 10-12% of annual tuition. Living costs in Saskatoon add approximately CAD 12,000-15,000/year."
   - q: "Can I stay in Canada after graduating from USask?"
     a: "Yes. USask graduates are eligible for a Post-Graduation Work Permit (PGWP) for up to 3 years. Saskatchewan also has the Saskatchewan Immigrant Nominee Program (SINP) which has streams for international graduates and skilled workers. The SINP is one of the more accessible provincial nominee programs for African graduates."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 The University of Saskatchewan (USask) in Saskatoon is a research-intensive Canadian university with automatic scholarship consideration for international students. It is not a low-cost option - international tuition is CAD 39,000-59,000/year. But it has two things that make it strategically interesting for African applicants: automatic scholarship consideration and a clear post-graduation pathway to Canadian permanent residence through the Saskatchewan PNP.

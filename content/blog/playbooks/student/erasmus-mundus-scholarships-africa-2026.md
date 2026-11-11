@@ -18,6 +18,11 @@ faqs:
     a: "Erasmus Mundus is competitive but African students are well-represented. The European Commission specifically targets students from developing countries. In recent years, African students have received approximately 30-40% of all Erasmus Mundus scholarships. Strong academic records, relevant work experience, and a compelling motivation letter are the key differentiators."
   - q: "Can I apply to multiple Erasmus Mundus programmes?"
     a: "Yes. You can apply to multiple programmes simultaneously. Each programme has its own application process and deadline. There is no central application - you apply directly to each programme consortium. Most applicants apply to 3-5 programmes to maximise their chances."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

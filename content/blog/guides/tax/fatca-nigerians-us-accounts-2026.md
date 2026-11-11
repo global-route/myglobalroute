@@ -18,6 +18,11 @@ faqs:
     a: "FATCA is a US law that requires foreign financial institutions to report accounts held by US persons to the IRS. CRS is an OECD framework where countries report accounts held by foreign tax residents to each other. The key difference: FATCA focuses on US persons globally, while CRS focuses on foreign account holders in participating countries. The USA reports outward (US persons abroad) but does not receive inward reports from other countries under CRS."
   - q: "Does my US LLC get reported to Nigeria?"
     a: "A US LLC owned by a Nigerian who is not a US person is not automatically reported to FIRS under FATCA. However, if the LLC has a US bank account and you receive distributions from it, those distributions may be subject to US withholding tax. The LLC itself is a pass-through entity for US tax purposes - the tax obligation flows to the owner. Consult a US tax adviser and a Nigerian tax adviser about your specific obligations."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

@@ -18,6 +18,11 @@ faqs:
     a: "ADEM (Agence pour le Developpement de l'Emploi) is Luxembourg's national employment agency. Employers must file a vacancy declaration with ADEM before sponsoring a non-EU worker, unless an exemption applies."
   - q: "Is Luxembourg expensive to live in?"
     a: "Yes. Luxembourg is one of the most expensive countries in Europe. Accommodation in Luxembourg City is particularly costly. However, salaries are also among the highest in Europe."
+postVersion: "v2026.10"
+sourceAuthority: "Guichet.lu Luxembourg"
+sourceUrl: "https://guichet.public.lu/en"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 Luxembourg is a small, wealthy country at the heart of the EU with a highly international workforce. It has two publishable pathways for Nigerian applicants: a student stay authorisation and a salaried worker authorisation. Both are administered via the Guichet.lu portal.

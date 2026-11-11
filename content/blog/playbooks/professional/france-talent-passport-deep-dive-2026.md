@@ -18,6 +18,12 @@ faqs:
     a: "For most subcategories yes - you need an employment contract or service agreement with a French entity. The exception is the Innovative Economic Project subcategory, which requires endorsement from a recognised French public body rather than an employment contract."
   - q: "How long is the France Talent Passport valid?"
     a: "The initial residence permit is valid for up to 4 years. After 5 years of legal residence in France, you can apply for a 10-year residence permit (carte de resident). The Talent Passport itself is a multi-entry long-stay visa that converts to a residence permit on arrival."
+postVersion: "v2026.11"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+lastFactChecked: 2026-11-09
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 # France Talent Passport 2026: Multi-Track Visa for Skilled Africans

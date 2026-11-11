@@ -18,6 +18,11 @@ faqs:
     a: "There is no mandatory waiting period. You can reapply immediately after a refusal. However, reapplying with the same documents that caused the refusal will likely result in another refusal. Address the specific reason for refusal before reapplying."
   - q: "Does a Schengen visa refusal affect future applications?"
     a: "Yes. All Schengen visa applications ask whether you have previously been refused a visa. You must answer honestly. A previous refusal is not automatically disqualifying, but you must explain what has changed since the refusal. A well-explained previous refusal with a strong new application is better than hiding it."
+postVersion: "v2026.10"
+sourceAuthority: "European Commission"
+sourceUrl: "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa_en"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

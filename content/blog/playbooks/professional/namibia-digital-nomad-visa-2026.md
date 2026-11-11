@@ -19,6 +19,11 @@ faqs:
     a: "The commonly cited minimum income threshold is approximately USD 2,000/month. This is not a fixed published figure - the Ministry of Home Affairs assesses sufficient financial means on a case-by-case basis."
   - q: "Is Namibia safe for remote workers?"
     a: "Namibia is one of the most politically stable countries in Southern Africa. Windhoek, the capital, has a well-developed infrastructure. Standard urban safety precautions apply. Namibia has a low population density and vast open spaces - it is a very different environment from West African cities."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 Namibia is one of Africa's most stable and least densely populated countries. It borders South Africa, Botswana, Zambia and Angola, and has a well-developed infrastructure by regional standards. The Digital Nomad Visa, introduced to attract remote workers, makes it one of the few Southern African countries with a formal remote work residence route.

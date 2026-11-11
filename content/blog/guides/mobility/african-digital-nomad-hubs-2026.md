@@ -18,6 +18,11 @@ faqs:
     a: "Mauritius has long-term residence routes for investors and retirees but the Premium Visa alone does not lead to citizenship. Cape Verde and Namibia have naturalisation routes after extended legal residence, but the remote work visas are not designed as citizenship pathways."
   - q: "Do I need to pay tax in these countries as a remote worker?"
     a: "Tax obligations depend on your specific situation, the source of your income, and the tax treaties between your home country and the destination. Mauritius has a flat 15% income tax. Cape Verde and Namibia have their own tax regimes. Consult a local tax adviser before relocating."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 The narrative around African mobility has historically focused on leaving Africa - European study visas, North American skilled worker routes, Australian points tests. But a parallel story is emerging: African countries competing to attract remote workers, digital entrepreneurs and mobile professionals who want to stay on the continent while earning internationally.

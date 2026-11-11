@@ -18,6 +18,11 @@ faqs:
     a: "SUACE (Sistema Unificado de Apertura y Cierre de Empresas) is Paraguay's fast-track company registration system operated by the Ministry of Industry and Commerce (MIC). It allows company formation in 24-72 hours through an online portal. A SUACE company can be used as the basis for an investor residency application."
   - q: "How long does it take to get Paraguayan citizenship?"
     a: "The standard route is approximately 5 years: 2 years temporary residency + 3 years permanent residency before citizenship eligibility. The investor fast-track routes skip the 2-year temporary stage, reducing the timeline to approximately 3 years of permanent residency before citizenship eligibility."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 Paraguay has become one of the most discussed residency destinations for digital nomads, remote workers and small business owners. The core appeal is straightforward: a territorial tax system that does not tax foreign income, a low cost of living, and historically accessible residency routes.

@@ -18,6 +18,12 @@ faqs:
     a: "No. Both the Employment Pass and S Pass require employer sponsorship. Your employer applies on your behalf via the Ministry of Manpower's EP Online portal. You cannot self-apply for a Singapore work visa."
   - q: "What is the COMPASS framework for the Singapore Employment Pass?"
     a: "COMPASS (Complementarity Assessment Framework) is a points-based system introduced in September 2023 for new EP applications. It assesses candidates on salary, qualifications, diversity and support for local employment. Candidates must score at least 40 points. Your employer submits the COMPASS assessment as part of the EP application."
+postVersion: "v2026.11"
+sourceAuthority: "Ministry of Manpower Singapore"
+sourceUrl: "https://www.mom.gov.sg"
+lastFactChecked: 2026-11-09
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 # Singapore Visa from Nigeria 2026

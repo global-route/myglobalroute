@@ -18,6 +18,11 @@ faqs:
     a: "The 183-day rule is the most common threshold for determining tax residency. If you spend more than 183 days in a country in a tax year, most countries will consider you tax resident there. However, the rule varies - some countries use 90 days, some use 6 months, and some have additional criteria beyond just days spent. The 183-day rule is a starting point, not a universal rule."
   - q: "What is a territorial tax system and why does it matter for remote workers?"
     a: "A territorial tax system taxes only income sourced within the country. Foreign-sourced income is not taxed. Mauritius, Cape Verde, Namibia and Paraguay all operate territorial tax systems. This means if you are tax resident in one of these countries and your income comes from foreign clients, you may pay little or no income tax on that income. However, you must still comply with Nigerian tax obligations if you remain a Nigerian tax resident."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

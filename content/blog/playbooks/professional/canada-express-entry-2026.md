@@ -18,6 +18,12 @@ faqs:
     a: "IRCC targets 6 months from Invitation to Apply (ITA) to final decision on permanent residence. Check current processing times at ircc.canada.ca."
   - q: "What is the difference between FSW, CEC and FST in Express Entry?"
     a: "Federal Skilled Worker (FSW) is for applicants with foreign work experience. Canadian Experience Class (CEC) is for applicants with Canadian work experience. Federal Skilled Trades (FST) is for qualified tradespeople. All three feed into the Express Entry pool."
+postVersion: "v2026.08"
+sourceAuthority: "Immigration, Refugees and Citizenship Canada"
+sourceUrl: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html"
+lastFactChecked: 2026-08-18
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 # Canada Express Entry: The Complete 2026 Guide for Nigerians

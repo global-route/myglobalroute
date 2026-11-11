@@ -17,6 +17,11 @@ faqs:
     a: "EUR 11,208 is the standard blocked account amount for a 12-month German student visa (EUR 934/month). The funds are released monthly after you arrive in Germany."
   - q: "Can I use Wise to fund a German blocked account?"
     a: "You cannot fund a Fintiba or Expatrio blocked account directly via Wise. You must transfer from a Nigerian bank account via SWIFT wire transfer. Some applicants use a domiciliary account to convert NGN to EUR first, then wire to the blocked account provider."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 # How to Fund a German Blocked Account from Nigeria: The Complete 2026 Guide

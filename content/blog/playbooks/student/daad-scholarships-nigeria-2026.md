@@ -18,6 +18,11 @@ faqs:
     a: "EPOS (Development-Related Postgraduate Courses) is DAAD's flagship scholarship for students from developing countries including Nigeria. It funds postgraduate study (Masters or PhD) in Germany in fields relevant to development: engineering, agriculture, economics, public health, environmental sciences, and others."
   - q: "Do I need to speak German to apply for a DAAD scholarship?"
     a: "Not necessarily. Many DAAD-funded programmes are taught in English. However, some programmes require German language skills. Check the language requirements of the specific programme you are applying to. DAAD also offers German language courses as part of some scholarship packages."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

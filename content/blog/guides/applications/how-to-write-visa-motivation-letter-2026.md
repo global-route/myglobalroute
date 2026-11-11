@@ -17,6 +17,11 @@ faqs:
     a: "Your ties to your home country - employment, family, property, financial commitments. The visa officer's primary concern is whether you will return home. Evidence of strong ties is more persuasive than any other element of the letter."
   - q: "Should I use a template for my visa motivation letter?"
     a: "Use a template as a structure guide only. Your letter must be specific to your circumstances. Generic letters are easy to identify and less persuasive than personalised ones."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 # How to Write a Visa Motivation Letter That Works

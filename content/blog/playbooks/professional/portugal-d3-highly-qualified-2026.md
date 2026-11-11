@@ -19,6 +19,11 @@ faqs:
     a: "The initial D3 long-stay visa is issued by the Portuguese consulate in your country - processing times vary by consulate but typically 2-4 months. After arrival, you apply to AIMA for the residence permit, which typically takes 1-3 months."
   - q: "Does the D3 visa lead to permanent residence?"
     a: "Yes. After 5 years of legal residence in Portugal, you can apply for permanent residence. After 5 years you can also apply for Portuguese citizenship, which gives EU freedom of movement across all 27 EU member states."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 Portugal's D3 visa sits between the standard work visa and the Digital Nomad (D8) route. It is for professionals who have a qualifying employment contract or service agreement with a Portuguese entity - not a foreign employer, not remote work for a non-Portuguese client, but a direct relationship with a Portuguese company or institution.

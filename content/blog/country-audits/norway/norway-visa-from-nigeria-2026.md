@@ -18,6 +18,11 @@ faqs:
     a: "NOK 170,368 per academic year (or NOK 15,488 per month) for living expenses. This is the 2026 figure from the Norwegian Directorate of Immigration. Tuition fees are zero at public universities."
   - q: "What does the Norway skilled worker permit require?"
     a: "A concrete full-time (or at least 80%) job offer from an employer in Norway requiring skilled qualifications. There is no published minimum salary threshold as a universal figure - the offer must meet the standard for the occupation."
+postVersion: "v2026.10"
+sourceAuthority: "Norwegian Directorate of Immigration"
+sourceUrl: "https://www.udi.no/en"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 Norway is one of the most accessible high-income countries for Nigerian students because its public universities charge no tuition fees for any student regardless of nationality. The study permit requires proof of living funds. The skilled worker permit requires a job offer.

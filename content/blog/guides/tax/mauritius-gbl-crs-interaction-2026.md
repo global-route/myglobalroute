@@ -18,6 +18,11 @@ faqs:
     a: "These are two separate reporting streams. The GBL company's bank accounts are reported as Mauritius-resident entity accounts. The owner's personal bank accounts (wherever they are held) are reported based on the owner's declared personal tax residency. If the owner is a Nigerian tax resident, their personal accounts in CRS-participating countries are reported to FIRS - regardless of whether they own a GBL company."
   - q: "Does the GBL structure protect the owner's personal accounts from CRS reporting?"
     a: "No. The GBL structure affects how the company's accounts are reported - not the owner's personal accounts. The owner's personal accounts are reported based on their personal tax residency declaration. To change where personal accounts are reported, the owner must change their personal tax residency - not just set up a GBL company."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

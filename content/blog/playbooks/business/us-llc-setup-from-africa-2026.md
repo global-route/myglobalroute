@@ -18,6 +18,12 @@ faqs:
     a: "Wyoming has no state income tax, lower annual fees (USD 60/year), and strong privacy protections. Delaware has a more established legal framework preferred by venture-backed startups. For most African entrepreneurs running online businesses, Wyoming is the more cost-effective choice."
   - q: "Does a US LLC give me a US visa?"
     a: "No. Owning a US LLC does not give you any US immigration status. You still need a valid US visa to enter the USA. The LLC is a business structure, not an immigration pathway."
+postVersion: "v2026.01"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+lastFactChecked: 2026-01-20
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 # How to Form a US LLC from Nigeria in 5 Minutes (2026 Guide)

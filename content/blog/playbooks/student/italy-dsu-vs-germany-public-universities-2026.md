@@ -16,6 +16,11 @@ faqs:
     a: "DSU (Diritto allo Studio Universitario) is Italy's regional student welfare system. It provides grants of €15,000-€20,000/year in combined benefits to eligible students, including free accommodation, free meals, and a cash grant. It is means-tested based on your ISEE (income and assets declaration). Competition is high - not all applicants receive the full benefit."
   - q: "Which is easier to get into - Italy DSU or a German university?"
     a: "German university admission is generally more straightforward for international students with strong academic records. Italy DSU requires both university admission and a separate DSU application with ISEE documentation. The DSU benefit is competitive and not guaranteed even if you are admitted to the university."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 # Italy DSU vs. Germany Public Universities 2026

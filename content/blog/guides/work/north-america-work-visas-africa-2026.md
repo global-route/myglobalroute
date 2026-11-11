@@ -18,6 +18,11 @@ faqs:
     a: "Some is, some is not. Legitimate Canadian employer sponsorship requires an LMIA from Employment and Social Development Canada (ESDC). If an agent is offering 'Canada work sponsorship' without naming the specific employer and their LMIA number, treat it with caution. Verify any job offer through the employer's official website."
   - q: "What are my chances of getting an H-1B visa for the USA?"
     a: "The H-1B is subject to an annual lottery. In recent years, USCIS has received 3-5 times more applications than the 85,000 cap. Selection is random - your qualifications do not improve your lottery odds. If you are not selected, you cannot apply that year. This makes the H-1B highly unpredictable as a migration strategy."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->

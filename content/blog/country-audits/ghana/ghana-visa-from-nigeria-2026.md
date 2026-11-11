@@ -18,6 +18,11 @@ faqs:
     a: "No. Nigerian nationals can enter Ghana without a visa under the ECOWAS free movement protocol. You can stay for up to 90 days. This does not give you the right to work - employment requires a work permit."
   - q: "What is the minimum investment for the GIPC investor permit?"
     a: "USD 200,000 for joint ventures with Ghanaian partners, USD 500,000 for wholly foreign-owned enterprises. The investment must be in a qualifying sector. The GIPC (Ghana Investment Promotion Centre) administers the permit."
+postVersion: "v2026.10"
+sourceAuthority: "Ghana Immigration Service"
+sourceUrl: "https://www.ghanaimmigration.org"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

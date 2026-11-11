@@ -19,6 +19,11 @@ faqs:
     a: "Yes. DAMA pathways are employer-sponsored - you cannot self-sponsor. The employer must be an approved DAMA sponsor operating in a designated regional area and must have an active Labour Agreement with the Department of Home Affairs."
   - q: "Does the DAMA lead to permanent residency?"
     a: "Yes. DAMA workers typically enter on a Temporary Skill Shortage (TSS) visa subclass 482 under a Labour Agreement stream. After meeting regional work requirements - typically 3 years living and working in the designated region - you can apply for permanent residence."
+postVersion: "v2026.10"
+sourceAuthority: "Department of Home Affairs Australia"
+sourceUrl: "https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/site-agreements/designated-area-migration-agreements"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 Australia's standard skilled migration pathways - the 189, 190 and 491 points-tested visas - are competitive, quota-driven and increasingly difficult for African applicants to access without high CRS scores or state nomination. The Designated Area Migration Agreement (DAMA) system is different. It is employer-driven, regionally focused, and carries concessions that do not exist anywhere else in the Australian migration system.

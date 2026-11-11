@@ -22,6 +22,11 @@ faqs:
     a: "Points-based (general skilled workers), Skilled Work Experience (3+ years in a skilled role), and Trades and Technician (qualified tradespeople with a job offer)."
   - q: "Is the Skilled Migrant Category a temporary or permanent visa?"
     a: "It is a direct residence visa - permanent from the outset, not a temporary work visa."
+postVersion: "v2026.10"
+sourceAuthority: "Immigration New Zealand"
+sourceUrl: "https://www.immigration.govt.nz"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 New Zealand offers evidence-gated pathways through the student visa and three Skilled Migrant Category (SMC) sub-routes. The SMC is a direct residence pathway - not a temporary work visa.

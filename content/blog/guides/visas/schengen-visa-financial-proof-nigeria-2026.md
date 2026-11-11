@@ -18,6 +18,11 @@ faqs:
     a: "Most Schengen consulates want to see 3-6 months of bank statements showing consistent balances. The money should not appear as a sudden large deposit just before your application - this is a red flag. Consulates look for regular income patterns and stable balances over time."
   - q: "Can I use a sponsor's bank statement instead of my own?"
     a: "Yes, if you have a sponsor (family member, employer, or host in the Schengen area) who is covering your costs. You need a formal sponsorship letter (Verpflichtungserklarung in Germany, lettre d'invitation in France) plus the sponsor's bank statements and proof of their legal status in the Schengen area."
+postVersion: "v2026.10"
+sourceAuthority: "European Commission"
+sourceUrl: "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa_en"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

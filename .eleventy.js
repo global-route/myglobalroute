@@ -43,6 +43,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("readableDate", dateObj => new Date(dateObj).toLocaleDateString("en-US", {
     year: "numeric", month: "long", day: "numeric"
   }));
+  eleventyConfig.addFilter("formatVersion", dateObj => {
+    const d = new Date(dateObj);
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    return `${y}.${m}`;
+  });
   eleventyConfig.addFilter("readingTime", text => Math.ceil(text.split(/\s/g).length / 200));
   eleventyConfig.addFilter("excerpt", content => {
     const excerpt = content.substring(0, 200);

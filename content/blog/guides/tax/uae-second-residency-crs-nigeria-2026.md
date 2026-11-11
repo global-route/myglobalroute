@@ -18,6 +18,11 @@ faqs:
     a: "Zero. The UAE has no personal income tax on employment income, investment income or business income for individuals. The UAE introduced corporate tax (9%) in 2023 for businesses with profits above AED 375,000, but this does not apply to individuals' personal income. This is why UAE tax residency is attractive - even if your accounts are reported to the UAE tax authority, there is no personal income tax consequence."
   - q: "Is it legal to use UAE residency to avoid Nigerian tax?"
     a: "It depends entirely on whether you are genuinely a UAE tax resident. If you genuinely live in the UAE for 183+ days, have a real residence permit, and have genuinely ceased Nigerian tax residency, this is legal tax planning. If you obtain a UAE residence permit but continue living in Nigeria and declare UAE tax residency to your bank while remaining a Nigerian tax resident, this is tax evasion - a criminal offence in Nigeria."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

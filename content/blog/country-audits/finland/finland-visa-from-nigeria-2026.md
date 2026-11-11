@@ -18,6 +18,11 @@ faqs:
     a: "Yes. Students from outside the EU can work up to 25 hours per week during term time without a separate work permit. During holidays you can work full time."
   - q: "What is the TTOL work permit?"
     a: "TTOL (Tyontekijan oleskelulupa) is Finland's standard residence permit for employed persons. It requires a binding employment contract from a Finnish employer confirming that terms meet the collective agreement for the sector."
+postVersion: "v2026.10"
+sourceAuthority: "Finnish Immigration Service"
+sourceUrl: "https://migri.fi/en"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 Finland has two publishable pathways for Nigerian applicants: a study residence permit and a work residence permit (TTOL). Both are issued by the Finnish Immigration Service (Migri).

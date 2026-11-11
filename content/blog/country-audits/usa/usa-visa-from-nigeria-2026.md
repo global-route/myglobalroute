@@ -18,6 +18,11 @@ faqs:
     a: "The H-1B is the primary US work visa for specialty occupations. Annual demand far exceeds the 85,000 cap, so USCIS runs a random lottery each April. Selection is not based on qualifications - it is random, making the H-1B highly unpredictable."
   - q: "Are US pathways research-required on this platform?"
     a: "Yes. The US F-1 and H-1B pathways are marked research-required because the financial requirements and lottery process have evidence gaps that prevent structured recommendations. We will update these records when primary-source evidence is complete."
+postVersion: "v2026.10"
+sourceAuthority: "U.S. Department of State"
+sourceUrl: "https://travel.state.gov"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 # USA Visa from Nigeria: F-1 Student and Work Visa Guide 2026

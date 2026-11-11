@@ -19,6 +19,11 @@ faqs:
     a: "Quota information is only relevant for eligible passport holders. Verify your passport eligibility at immigration.govt.nz before making any plans."
   - q: "Can I extend the New Zealand Working Holiday Visa?"
     a: "Extension rules apply only to eligible passport holders. Verify your passport eligibility at immigration.govt.nz before making any plans."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#fff3cd;border-left:4px solid #e65100;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

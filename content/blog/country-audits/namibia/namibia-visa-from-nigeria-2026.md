@@ -18,6 +18,11 @@ faqs:
     a: "Approximately USD 2,000/month. This is the commonly cited figure - not a fixed published requirement. The Ministry of Home Affairs assesses sufficient financial means on a case-by-case basis."
   - q: "Why choose Namibia over Mauritius or Cape Verde?"
     a: "Namibia is the best choice if you have South African business interests or want access to the Southern African Development Community (SADC) region. It is English-speaking (unlike Cape Verde which is Portuguese-speaking), in the UTC+2 time zone (good for European and East African business hours), and has reliable connectivity in Windhoek."
+postVersion: "v2026.10"
+sourceAuthority: "Ministry of Home Affairs Namibia"
+sourceUrl: "https://mhaiss.gov.na"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

@@ -18,6 +18,11 @@ faqs:
     a: "Sal has the most developed tourist infrastructure and reliable connectivity. Santiago (home to the capital Praia) has the best overall infrastructure. Sao Vicente (Mindelo) has a strong arts and culture scene with good connectivity. Santo Antao is scenic but has limited internet outside main towns."
   - q: "What is the cost of living in Cape Verde?"
     a: "Cape Verde is one of the most affordable remote work destinations. A comfortable lifestyle costs approximately EUR 800-1,200/month including accommodation, food and transport. The Cape Verdean Escudo (CVE) is pegged to the Euro at a fixed rate, providing currency stability."
+postVersion: "v2026.10"
+sourceAuthority: "Cape Verde Immigration Service"
+sourceUrl: "https://www.sefcv.gov.cv"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

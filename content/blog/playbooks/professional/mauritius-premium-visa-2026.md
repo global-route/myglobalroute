@@ -19,6 +19,11 @@ faqs:
     a: "No. The Premium Visa is for remote workers whose income comes from outside Mauritius. Working for a Mauritius-based employer requires a separate work permit."
   - q: "Is there a minimum income requirement for the Mauritius Premium Visa?"
     a: "The Economic Development Board does not publish a fixed minimum income threshold. You must demonstrate sufficient financial means to support yourself. Remote workers earning USD 2,000-3,000/month would comfortably meet this requirement."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 Mauritius is one of the few African countries with a passport that opens doors - visa-free access to the EU Schengen area, the UK, Singapore and most of Asia. It is also one of the few African countries actively courting remote workers with a dedicated visa route.

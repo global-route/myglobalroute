@@ -18,6 +18,12 @@ faqs:
     a: "The credential assessment (WES evaluation) and IELTS test together cost approximately NGN 350,000 and took 3 months to complete. Many applicants underestimate the time and cost of the pre-application preparation phase."
   - q: "What is the most important thing to prepare before applying for Express Entry?"
     a: "Start the credential assessment and language test early - both have long processing times. The WES assessment alone takes 7-10 weeks. Delays here push back your entire timeline."
+postVersion: "v2026.01"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+lastFactChecked: 2026-01-22
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 # How Chisom Got a Canadian Work Permit in 6 Months

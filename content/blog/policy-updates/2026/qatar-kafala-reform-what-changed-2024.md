@@ -18,6 +18,12 @@ faqs:
     a: "Workers can change jobs without employer permission after completing their contract period or after one year of service in some circumstances. However, in practice many workers face barriers including contract disputes, withheld documents and employer resistance. The legal right exists but enforcement is inconsistent."
   - q: "What is the minimum wage in Qatar?"
     a: "QAR 1,000 per month basic wage plus QAR 500 food allowance and QAR 500 accommodation allowance if not provided by employer, totalling QAR 2,000 per month minimum (from March 2021). This applies to all workers regardless of nationality - it is a non-discriminatory minimum wage."
+postVersion: "v2026.11"
+sourceAuthority: "ILO Gulf Programme"
+sourceUrl: "https://www.ilo.org/beirut/countries"
+lastFactChecked: 2026-11-09
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 # Qatar Kafala Reform 2024: What Actually Changed for Workers

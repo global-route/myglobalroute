@@ -18,6 +18,11 @@ faqs:
     a: "67 points out of 100 on the Federal Skilled Worker six-factor selection grid. Reaching 67 points qualifies you for the Express Entry pool - a separate Comprehensive Ranking System (CRS) score then determines invitation order."
   - q: "What happened to the Canada Student Direct Stream?"
     a: "The Student Direct Stream (SDS) was cancelled in November 2024. All Nigerian study permit applicants now use the standard study permit process through IRCC."
+postVersion: "v2026.10"
+sourceAuthority: "Immigration, Refugees and Citizenship Canada"
+sourceUrl: "https://www.canada.ca/en/immigration-refugees-citizenship.html"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 # Canada Visa from Nigeria: The 2026 Complete Guide

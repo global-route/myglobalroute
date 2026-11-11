@@ -20,6 +20,11 @@ faqs:
     a: "No. A job offer from an Austrian employer is mandatory for the Other Key Workers category."
   - q: "How long does Austria visa processing take?"
     a: "Typically 8-12 weeks from the Austrian embassy in your country."
+postVersion: "v2026.10"
+sourceAuthority: "Austrian Government Migration Portal"
+sourceUrl: "https://www.migration.gv.at/en"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 Austria offers two evidence-gated pathways for Nigerian applicants: the Red-White-Red (RWR) Card for skilled workers and the study residence permit. No approval rates are published by Austrian authorities for Nigerian applicants.

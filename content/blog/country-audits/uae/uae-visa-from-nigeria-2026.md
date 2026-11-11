@@ -18,6 +18,11 @@ faqs:
     a: "The Golden Visa is a 10-year renewable residence visa for investors, entrepreneurs, exceptional talents, scientists, outstanding students and humanitarian pioneers. The minimum investment threshold for the investor category is AED 2,000,000 (approximately USD 545,000). It is not a work visa - it is a long-term residence permit."
   - q: "How much does a UAE employment visa cost?"
     a: "Government fees for the UAE employment visa are typically paid by the employer, not the worker. If an agent is asking you to pay large upfront fees for a UAE work visa, ask for documentation showing these are government fees. Agent service fees are separate from government fees."
+postVersion: "v2026.10"
+sourceAuthority: "UAE Ministry of Human Resources and Emiratisation"
+sourceUrl: "https://www.mohre.gov.ae"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

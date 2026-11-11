@@ -20,6 +20,11 @@ faqs:
     a: "Yes, up to 28 hours per week during term time with a work permit applied for after arrival."
   - q: "Do I need to speak Japanese to get the Engineer visa?"
     a: "Not necessarily. Many multinational employers in Japan hire English-speaking engineers. However, Japanese language ability improves your application and daily life."
+postVersion: "v2026.10"
+sourceAuthority: "Immigration Services Agency of Japan"
+sourceUrl: "https://www.moj.go.jp/isa"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 Japan offers two evidence-gated pathways for Nigerian applicants: the student visa and the Engineer/Specialist in Humanities/International Services visa. Both require a Certificate of Eligibility (CoE) filed by your institution or employer before you apply at the embassy.

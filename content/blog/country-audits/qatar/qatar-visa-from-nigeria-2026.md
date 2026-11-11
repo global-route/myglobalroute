@@ -18,6 +18,11 @@ faqs:
     a: "QAR 1,000/month (approximately USD 275/month or NGN 412,000/month at current rates). This is the legal floor for all workers regardless of nationality. Most skilled positions pay significantly above this. The minimum wage was introduced in 2021 as part of the Kafala reform package."
   - q: "How long does a Qatar work permit take to process?"
     a: "Qatar work permit processing is employer-initiated and typically takes 2-6 weeks after the employer submits the application to the Ministry of Labour. Claims of 3-5 day processing are not consistent with official timelines."
+postVersion: "v2026.10"
+sourceAuthority: "Qatar Ministry of Labour"
+sourceUrl: "https://adlsa.gov.qa"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

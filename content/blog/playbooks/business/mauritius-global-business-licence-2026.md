@@ -18,6 +18,11 @@ faqs:
     a: "Since 2019, Mauritius has strengthened substance requirements for GBL companies. A GBL company must: have at least two resident directors in Mauritius, maintain its principal bank account in Mauritius, keep its accounting records in Mauritius, hold at least one board meeting per year in Mauritius, and have adequate staff and expenditure in Mauritius. Pure shell structures are no longer viable."
   - q: "How does the Mauritius treaty network benefit African investors?"
     a: "Mauritius has 46 double taxation treaties including with India, China, France, UK, South Africa, and several African countries. These treaties reduce withholding taxes on dividends, interest and royalties paid from investee companies to the Mauritius holding company. For example, the India-Mauritius treaty historically reduced withholding tax on dividends from 10% to 5%."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

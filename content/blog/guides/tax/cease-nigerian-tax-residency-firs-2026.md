@@ -18,6 +18,11 @@ faqs:
     a: "Nigerian-source income (rental income from Nigerian property, dividends from Nigerian companies, interest from Nigerian bank accounts) may still be subject to Nigerian withholding tax even after you cease Nigerian tax residency. The withholding tax is deducted at source by the payer. You may need to file a Nigerian non-resident tax return to claim any applicable treaty benefits."
   - q: "Can I keep my Nigerian bank accounts after ceasing Nigerian tax residency?"
     a: "Yes. Ceasing Nigerian tax residency does not require you to close your Nigerian bank accounts. However, you should update your tax residency declaration with your Nigerian bank to reflect your new country of tax residence. This affects how your account is reported under CRS."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

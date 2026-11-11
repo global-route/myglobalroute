@@ -19,6 +19,11 @@ faqs:
     a: "Extension rules apply only to eligible passport holders. Verify your passport eligibility at homeaffairs.gov.au before planning any extension."
   - q: "What work can I do on an Australia Working Holiday Visa?"
     a: "Eligible visa holders can work for any employer in any industry, with no more than 6 months for the same employer without permission. Eligibility must be confirmed first."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#fff3cd;border-left:4px solid #e65100;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

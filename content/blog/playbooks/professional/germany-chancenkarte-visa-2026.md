@@ -18,6 +18,12 @@ faqs:
     a: "EUR 1,091 per month via a blocked account or formal declaration of commitment for the duration of the job search stay. This is the 2026 figure from make-it-in-germany.com."
   - q: "Can I work while on the Germany Opportunity Card?"
     a: "Yes, up to 20 hours per week in any job. This allows you to cover living costs while searching for a qualifying skilled position. Once you find a qualifying job, you can switch to a work visa without leaving Germany."
+postVersion: "v2026.08"
+sourceAuthority: "Federal Employment Agency Germany"
+sourceUrl: "https://www.arbeitsagentur.de/en/shortage-occupations"
+lastFactChecked: 2026-08-18
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 # Germany Chancenkarte Visa 2026: Europe's New Opportunity Card

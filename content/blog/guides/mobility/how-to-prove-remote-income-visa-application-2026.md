@@ -18,6 +18,11 @@ faqs:
     a: "Cryptocurrency income is the hardest to document for visa purposes. Convert to fiat currency (NGN, USD, EUR) and show the conversion in your bank statements. A history of regular crypto-to-fiat conversions appearing in your bank account is more convincing than crypto wallet screenshots. Some consulates do not accept crypto as proof of income at all."
   - q: "I am a freelancer with irregular income - how do I handle months with low earnings?"
     a: "Show your average monthly income over 12 months, not just recent months. A 12-month average that meets the threshold is more convincing than 3 months of high income. Include a cover letter explaining the nature of freelance income and showing that your average meets the requirement. Supplement with savings that cover the gap."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

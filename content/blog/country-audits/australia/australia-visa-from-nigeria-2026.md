@@ -17,6 +17,12 @@ faqs:
     a: "The subclass 500 student visa application fee is AUD 710 as of 2026. You must also show AUD 29,710 per year in living funds plus tuition fees. Confirm current fees at immi.homeaffairs.gov.au before applying."
   - q: "Can I work while studying in Australia?"
     a: "Yes. Student visa holders can work up to 48 hours per fortnight during term time and unlimited hours during scheduled course breaks. Your CoE must be from a CRICOS-registered provider."
+postVersion: "v2026.10"
+sourceAuthority: "Department of Home Affairs Australia"
+sourceUrl: "https://immi.homeaffairs.gov.au"
+lastFactChecked: 2026-10-25
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 # Australia Visa from Nigeria: The 2026 Reality Check

@@ -17,6 +17,11 @@ faqs:
     a: "The Seychelles passport is the strongest African passport, providing visa-free access to approximately 156 countries including the EU Schengen area. Mauritius (147 countries) and South Africa (107 countries) are the next strongest on the continent."
   - q: "What is a golden passport?"
     a: "A golden passport is citizenship obtained through investment rather than birth, descent or naturalisation. Countries like Malta, Vanuatu and several Caribbean nations offer citizenship by investment programs, typically requiring USD 100,000 to USD 1,000,000 minimum investment."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 # Passport Tiers Explained: What Your Travel Document Actually Unlocks

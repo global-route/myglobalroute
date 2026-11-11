@@ -18,6 +18,11 @@ faqs:
     a: "Yes. Basic German language skills are required - typically A1 or A2 level on the Common European Framework of Reference (CEFR). You do not need to be fluent, but you must be able to communicate with the host family and children. German language courses are available in Nigeria before departure."
   - q: "How do I find a host family in Germany?"
     a: "Au pair placement agencies (both in Nigeria and Germany) match au pairs with host families. Reputable agencies include AuPairWorld, Cultural Care Au Pair, and Au Pair in America (for Germany placements). The German consulate in Lagos may have a list of recognised agencies. Verify any agency's credentials before paying placement fees."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

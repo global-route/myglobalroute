@@ -18,6 +18,11 @@ faqs:
     a: "The Employee Card (Zamestnanecka karta) is Czechia's combined work and residence permit for non-EU nationals. It requires a job offer for a position registered in the central vacancy register. The employer applies on your behalf."
   - q: "Do I need to speak Czech to study in Czechia?"
     a: "Not necessarily. Many Czech universities offer English-taught programmes. Czech-taught programmes are free but require Czech language proficiency."
+postVersion: "v2026.10"
+sourceAuthority: "Ministry of the Interior Czech Republic"
+sourceUrl: "https://mv.gov.cz/mvcren"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 Czechia is an EU member state with affordable living costs and a growing international student community. It has two publishable pathways for Nigerian applicants: a long-term study residence permit and an Employee Card work permit.

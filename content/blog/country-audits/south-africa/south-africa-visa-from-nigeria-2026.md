@@ -18,6 +18,11 @@ faqs:
     a: "No. The Critical Skills Visa does not require a prior job offer. You apply on the basis of your qualifications and experience in a listed critical skill. After arrival, you have 12 months to find employment. Once employed, you register with the relevant professional body."
   - q: "How long does the South Africa visa process take?"
     a: "The Critical Skills Visa typically takes 4-8 weeks to process at the South African High Commission in Abuja. The General Work Visa takes longer due to the labour market test requirement. Apply well in advance of your intended travel date."
+postVersion: "v2026.10"
+sourceAuthority: "Department of Home Affairs South Africa"
+sourceUrl: "https://www.dha.gov.za"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

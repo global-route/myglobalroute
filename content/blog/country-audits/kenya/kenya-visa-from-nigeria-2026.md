@@ -18,6 +18,11 @@ faqs:
     a: "The Special Pass is a temporary work authorisation valid for up to 3 months while a full work permit is being processed. It allows you to start work legally while your Class G work permit application is pending. It is issued by the Department of Immigration."
   - q: "What is Silicon Savannah and why does it matter for African tech professionals?"
     a: "Silicon Savannah is the nickname for Nairobi's technology ecosystem - one of the most developed in Africa. It includes M-Pesa (the world's most successful mobile money platform), major tech hubs, accelerators, and a large pool of technical talent. For African tech professionals, Nairobi offers more tech employment opportunities than most other African cities."
+postVersion: "v2026.10"
+sourceAuthority: "Department of Immigration Services Kenya"
+sourceUrl: "https://immigration.go.ke"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

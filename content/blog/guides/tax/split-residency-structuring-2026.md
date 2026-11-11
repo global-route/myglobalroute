@@ -18,6 +18,11 @@ faqs:
     a: "The Philippines has not fully implemented CRS automatic exchange as of 2026, meaning Philippine bank accounts are less likely to be automatically reported to foreign tax authorities. Opening a Philippine bank account is legal. Using it specifically to hide income from FIRS while remaining a Nigerian tax resident is tax evasion. The Philippines can still share information on request under anti-money laundering frameworks."
   - q: "How many days can I spend in Nigeria without becoming a Nigerian tax resident?"
     a: "The standard threshold is 183 days per year. If you spend fewer than 183 days in Nigeria in a tax year, you are generally not considered a Nigerian tax resident for that year - provided you have established genuine tax residency elsewhere. However, Nigeria also considers other factors including your domicile, principal place of business, and economic ties. Consult a Nigerian tax adviser for your specific situation."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

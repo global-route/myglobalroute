@@ -17,6 +17,12 @@ faqs:
     a: "The Talent Passport is a multi-year residence permit for highly skilled professionals, researchers, investors and artists. The EU Blue Card subcategory requires a salary of at least 1.5 times the gross reference salary (EUR 59,373 in 2026)."
   - q: "Do I need to speak French to study in France?"
     a: "Not necessarily. Many French universities offer English-taught programmes, particularly at Masters level. However, French language skills significantly expand your programme options and improve daily life in France."
+postVersion: "v2026.10"
+sourceAuthority: "France-Visas"
+sourceUrl: "https://france-visas.gouv.fr/en/web/france-visas"
+lastFactChecked: 2026-10-25
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 # France Visa from Nigeria: The 2026 Reality Check

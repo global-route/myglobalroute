@@ -18,6 +18,11 @@ faqs:
     a: "The USA does not participate in CRS - it uses its own FATCA system instead. The Philippines has not fully implemented CRS automatic exchange as of 2026. Panama and Bahrain have signed but have limited exchange partners. However, non-participation does not mean zero reporting risk - these countries can still share information on request under anti-money laundering frameworks."
   - q: "Does FIRS actually use CRS information?"
     a: "Nigeria is a committed CRS participant and FIRS is the competent authority. FIRS enforcement of CRS-reported information is currently limited in practice, but this is changing as FIRS builds capacity and the OECD Global Forum conducts peer reviews. The risk is not zero and is growing. Do not structure your finances on the assumption that FIRS will not act on CRS data."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

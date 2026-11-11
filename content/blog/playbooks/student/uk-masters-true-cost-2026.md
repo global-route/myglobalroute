@@ -18,6 +18,12 @@ faqs:
     a: "GBP 776 per year of your visa duration, paid upfront with your visa application. For a 1-year Masters this is GBP 776. For a 2-year programme, GBP 1,552. This gives you access to the NHS during your stay."
   - q: "Can I work during a UK Masters?"
     a: "Yes. Student visa holders can work up to 20 hours per week during term time and full time during official vacation periods. This can offset living costs but should not be relied upon to cover tuition."
+postVersion: "v2026.08"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+lastFactChecked: 2026-08-18
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 # UK Masters True Cost 2026: What They Don't Tell You

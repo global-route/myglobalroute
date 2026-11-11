@@ -18,6 +18,11 @@ faqs:
     a: "It depends on the route. Germany's Opportunity Card does not require a job offer - it is a 1-year job search visa. All other European work visas covered in this post require a confirmed job offer from an employer in the destination country."
   - q: "Can I bring my family on a European work visa?"
     a: "Yes, in most cases. EU member states allow family reunification for work permit holders after a qualifying period. The UK allows dependants on the Skilled Worker visa. Specific rules vary by country and visa type - check the official immigration authority for the country you are applying to."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->

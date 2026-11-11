@@ -17,6 +17,11 @@ faqs:
     a: "The Beckham Law (Ley Beckham) allows qualifying new residents to pay a flat 24% income tax rate on Spanish-sourced income up to €600,000/year, instead of the progressive rate which reaches 47%. It applies for the year of arrival and the following 5 years (6 years total). You must apply within 6 months of registering as a resident."
   - q: "Can I study in Spain as a Nigerian?"
     a: "Yes. You need a student visa for courses longer than 90 days. You must have an acceptance letter from a recognised Spanish institution and show sufficient financial means - typically around €600/month for living costs."
+postVersion: "v2026.10"
+sourceAuthority: "Spanish Government"
+sourceUrl: "https://www.inclusion.gob.es"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 # Spain Visa from Nigeria: The 2026 Reality Check

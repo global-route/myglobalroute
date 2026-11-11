@@ -18,6 +18,11 @@ faqs:
     a: "Yes. International students in Lithuania can work up to 20 hours per week during term time without a separate work permit."
   - q: "What is the minimum wage in Lithuania?"
     a: "The Lithuanian minimum wage is EUR 1,038/month gross (2026 figure). Most skilled positions pay above this."
+postVersion: "v2026.10"
+sourceAuthority: "Migration Department of Lithuania"
+sourceUrl: "https://migracija.lrv.lt/en"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 Lithuania is an EU member state with affordable tuition fees and a growing international student community. It has two publishable pathways for Nigerian applicants: a study temporary residence permit and a work temporary residence permit.

@@ -18,6 +18,11 @@ faqs:
     a: "Tuition fees at Hungarian public universities for non-EU students range from EUR 2,000 to EUR 8,000 per year depending on the programme. Living costs are approximately EUR 500-700/month in Budapest."
   - q: "What does the Hungary work residence permit require?"
     a: "A valid job offer from a Hungarian employer, subject to labour-market test and quota rules. Hungary applies a priority check - the employer must demonstrate that no suitable Hungarian or EU candidate was available."
+postVersion: "v2026.10"
+sourceAuthority: "National Directorate-General for Aliens Policing Hungary"
+sourceUrl: "https://oif.gov.hu"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 Hungary has two publishable pathways for Nigerian applicants: a study residence permit and a work residence permit. Hungary is also notable for the Stipendium Hungaricum scholarship, which provides fully funded study opportunities for Nigerian students.

@@ -20,6 +20,11 @@ faqs:
     a: "A relevant degree or professional qualification in your field, plus a job offer from a Korean employer. The employer files the visa application on your behalf."
   - q: "Can I work while studying in South Korea?"
     a: "Yes, up to 20 hours per week during term time with a part-time work permit. Apply at the immigration office after arrival."
+postVersion: "v2026.10"
+sourceAuthority: "Korea Immigration Service"
+sourceUrl: "https://www.immigration.go.kr/immigration_eng"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 South Korea offers two evidence-gated pathways for Nigerian applicants: the student visa (D-2) and the work visa for professionals (E-series). The KGSP scholarship is the most viable route to study in Korea without self-funding.

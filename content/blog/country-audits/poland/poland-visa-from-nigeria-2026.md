@@ -18,6 +18,11 @@ faqs:
     a: "The Employee Card (Karta Pobytu dla pracownika) is Poland's combined work and residence permit for non-EU nationals. It requires a job offer for a position registered in the central vacancy database for Employee Card holders."
   - q: "Can I work while studying in Poland?"
     a: "Yes. International students in Poland can work without a separate work permit during their studies."
+postVersion: "v2026.10"
+sourceAuthority: "Office for Foreigners Poland"
+sourceUrl: "https://www.gov.pl/web/udsc-en"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 Poland is an EU member state with affordable tuition fees and a large international student community. It has two publishable pathways for Nigerian applicants: a study residence permit and an Employee Card work permit.

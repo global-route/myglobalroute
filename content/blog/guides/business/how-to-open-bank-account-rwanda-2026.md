@@ -18,6 +18,11 @@ faqs:
     a: "Bank of Kigali (BK) is Rwanda's largest bank and the most commonly used by foreign nationals. Equity Bank Rwanda and I&M Bank Rwanda also have experience with foreign national accounts. All three have English-language services and online banking."
   - q: "Can I open a Rwanda business bank account remotely?"
     a: "Most Rwandan banks require in-person attendance to open a business account. However, if you have registered your company through the RDB portal, some banks will allow you to initiate the process online and complete it in person when you arrive in Rwanda. Plan to visit a branch within the first week of arrival."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

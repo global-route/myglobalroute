@@ -18,6 +18,12 @@ faqs:
     a: "No. Students who obtained their study permit under SDS are not affected. The cancellation only applies to new applications submitted after November 2024."
   - q: "What are the current Canada study permit financial requirements?"
     a: "CAD 23,448 per year for living expenses for family size 1, outside Quebec, from 1 September 2026. Tuition fees are additional. These figures are from IRCC and are reviewed periodically."
+postVersion: "v2026.01"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+lastFactChecked: 2026-01-10
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 # Canada SDS Program Cancelled: What Now for Nigerian Students?

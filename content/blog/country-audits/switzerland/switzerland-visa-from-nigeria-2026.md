@@ -18,6 +18,11 @@ faqs:
     a: "Yes. Switzerland applies a strict priority check - the employer must demonstrate that no suitable Swiss or EU/EFTA candidate was available before sponsoring a non-EU national. The quota system limits the number of non-EU work permits issued each year."
   - q: "Which cantons issue the study permit?"
     a: "The cantonal migration authority (Migrationsamt) of the canton where your university is located issues the permit. Requirements are set federally by the State Secretariat for Migration (SEM) but administered at cantonal level."
+postVersion: "v2026.10"
+sourceAuthority: "State Secretariat for Migration Switzerland"
+sourceUrl: "https://www.sem.admin.ch/sem/en"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 Switzerland has two publishable pathways for Nigerian applicants: a study residence permit and a work permit. Both are subject to strict controls - Switzerland applies a priority check for work permits and a quota system that limits non-EU admissions.

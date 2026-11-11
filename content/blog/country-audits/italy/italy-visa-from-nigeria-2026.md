@@ -18,6 +18,11 @@ faqs:
     a: "The Decreto Flussi is Italy's annual quota system for non-EU work permits. Employers apply for a Nulla Osta on behalf of the worker within the quota. The quota is announced each year and demand typically exceeds supply within hours of opening."
   - q: "Can I get the DSU scholarship as a Nigerian student?"
     a: "Yes. The DSU scholarship is available to non-EU students including Nigerians. Eligibility is based on your ISEE household income assessment, not your nationality. You must be enrolled at a participating Italian public university."
+postVersion: "v2026.10"
+sourceAuthority: "Italian Ministry of Foreign Affairs"
+sourceUrl: "https://vistoperitalia.esteri.it"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 # Italy Visa from Nigeria: Study, Work and DSU Scholarship Guide 2026

@@ -18,6 +18,11 @@ faqs:
     a: "The Premium Residency (Iqama Mumayaza) is a long-term residence permit for high-net-worth individuals and exceptional talent. The permanent category requires SAR 800,000 (approximately USD 213,000) as a one-time fee. The temporary category requires SAR 100,000/year. It provides residence rights without employer sponsorship."
   - q: "Which sectors hire the most African workers in Saudi Arabia?"
     a: "Healthcare (nurses, doctors, technicians), construction (engineers, tradespeople, labourers), hospitality (hotel staff, catering), domestic services (housekeepers, drivers), and education (teachers, tutors) are the primary sectors for African workers in Saudi Arabia."
+postVersion: "v2026.10"
+sourceAuthority: "Saudi Ministry of Human Resources"
+sourceUrl: "https://www.mol.gov.sa"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

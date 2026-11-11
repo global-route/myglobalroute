@@ -18,6 +18,11 @@ faqs:
     a: "Proof of remote employment or service relationship with an entity or clients outside Portugal. No single fixed income threshold is published - AIMA assesses whether your income is sufficient to support yourself in Portugal."
   - q: "Does Portugal D3 lead to citizenship?"
     a: "Yes. After 5 years of legal residence in Portugal on a D3 or other qualifying permit, you can apply for Portuguese citizenship, which gives you an EU passport and freedom of movement across all 27 EU member states."
+postVersion: "v2026.10"
+sourceAuthority: "AIMA Portugal"
+sourceUrl: "https://aima.gov.pt"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 # Portugal Visa from Nigeria: Study, Digital Nomad and D7 Guide 2026

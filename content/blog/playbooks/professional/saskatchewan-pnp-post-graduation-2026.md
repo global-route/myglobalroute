@@ -19,6 +19,11 @@ faqs:
     a: "For the International Skilled Worker - Saskatchewan Express Entry stream, you do not need to be in Saskatchewan at the time of application. However, you must intend to live and work in Saskatchewan after receiving permanent residence. For the Occupations In-Demand stream, you must have a job offer from a Saskatchewan employer."
   - q: "What is the connection to the University of Saskatchewan?"
     a: "Graduates of the University of Saskatchewan (USask) in Saskatoon are eligible for the SINP International Graduate stream. This stream has lower requirements than the skilled worker streams and is specifically designed for graduates of Saskatchewan post-secondary institutions who want to stay in the province."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

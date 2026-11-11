@@ -18,6 +18,11 @@ faqs:
     a: "Rwanda consistently ranks highest in Africa on the World Bank Ease of Doing Business index. Business registration takes 1-2 days online. Mauritius is second - the Mauritius Business Registration system is fully digital and takes 1-3 days."
   - q: "Do I need to be physically present to register a company in these countries?"
     a: "Rwanda and Mauritius allow remote company registration through their online portals. Ghana and Kenya require more in-person steps, though registered agents can handle much of the process on your behalf."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 The African Continental Free Trade Area (AfCFTA) came into force in 2021. It is the world's largest free trade area by number of participating countries. For African entrepreneurs and investors, it creates a strategic question: where do you base your African operations to access the continental market most efficiently?

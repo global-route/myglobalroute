@@ -19,6 +19,11 @@ faqs:
     a: "The commonly cited minimum income threshold is approximately EUR 1,500/month (approximately USD 1,650/month). This is not a fixed published figure - the Cape Verde Immigration Service assesses sufficient financial means on a case-by-case basis."
   - q: "Do I need to speak Portuguese to live in Cape Verde?"
     a: "Portuguese is the official language of Cape Verde. Cape Verdean Creole (Kriolu) is widely spoken. English is spoken in tourist areas and by many professionals. You do not need to speak Portuguese to apply for the visa, but it helps for daily life."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 Cape Verde is an archipelago of ten islands in the Atlantic Ocean, 570 kilometres off the coast of Senegal. It is politically stable, Portuguese-speaking, and has been actively positioning itself as a destination for remote workers and digital nomads since 2021.

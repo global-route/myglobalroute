@@ -18,6 +18,11 @@ faqs:
     a: "MUR 60,000 per month (approximately USD 1,300/month) for the Professional category. This is the minimum salary your Mauritian employer must pay you. The Investor category requires a minimum investment of USD 50,000 and a minimum annual turnover of USD 100,000 from year 2."
   - q: "Is Mauritius a good base for African remote workers?"
     a: "Yes. Mauritius has reliable island-wide connectivity, a well-developed financial sector, English and French as official languages, and a 15% flat income tax rate on local income (foreign income not taxed under the territorial system). The Premium Visa allows remote workers to live there for 1 year, renewable, with no fixed income threshold published."
+postVersion: "v2026.10"
+sourceAuthority: "Economic Development Board Mauritius"
+sourceUrl: "https://www.edbmauritius.org"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

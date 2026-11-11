@@ -18,6 +18,12 @@ faqs:
     a: "Zero tuition fees, free on-campus accommodation where available, free meal vouchers at university canteens, and a cash grant of EUR 5,400 to EUR 7,000 per academic year depending on your ISEE score and the regional DSU authority."
   - q: "When should I apply for the DSU scholarship?"
     a: "The bando (call for applications) is published in July-August each year for the following academic year. Apply as early as possible - accommodation places are limited and allocated by ISEE score ranking."
+postVersion: "v2026.01"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+lastFactChecked: 2026-01-18
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 # Italy DSU Scholarship: The Hidden Hack for African Students

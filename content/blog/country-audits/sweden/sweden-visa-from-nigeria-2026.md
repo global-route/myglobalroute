@@ -18,6 +18,11 @@ faqs:
     a: "SEK 34,470 per month gross (approximately EUR 3,050/month) from 1 June 2026. This is 90% of the median salary. The threshold applies to the job offer, not the applicant's personal income."
   - q: "Can I work while studying in Sweden?"
     a: "Yes. There is no formal restriction on working hours for international students in Sweden. Your study permit allows you to work alongside your studies."
+postVersion: "v2026.10"
+sourceAuthority: "Swedish Migration Agency"
+sourceUrl: "https://www.migrationsverket.se/en"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 Sweden has two publishable pathways for Nigerian applicants: a study residence permit and a standard work permit. Both are issued by the Swedish Migration Agency (Migrationsverket).

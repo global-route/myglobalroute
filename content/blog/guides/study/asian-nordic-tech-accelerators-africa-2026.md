@@ -18,6 +18,11 @@ faqs:
     a: "Sweden, Finland and Norway all have startup visa or entrepreneur residence permit routes. Acceptance into a recognised accelerator program strengthens the application significantly. Finland's startup permit requires endorsement from Business Finland, which some accelerators can facilitate."
   - q: "What does zero-equity mean in practice?"
     a: "The accelerator takes no ownership stake in your company in exchange for the program. You receive funding, lab access, mentorship and corporate introductions without diluting your cap table. This is different from traditional accelerators like Y Combinator which take equity."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 Standard work visas require an employer. Standard business visas require capital. For African tech founders who have a product and a team but not a salary offer or a large bank balance, both routes are blocked.

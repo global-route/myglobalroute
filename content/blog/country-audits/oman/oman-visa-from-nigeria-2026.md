@@ -18,6 +18,11 @@ faqs:
     a: "Oman does have a freelance permit system, but the specific terms, fees and duration advertised by agents vary significantly from official government information. The NGN 2.5M fees quoted by agents are agent service fees, not government fees. Verify current requirements directly with the Oman Ministry of Labour before paying any fees."
   - q: "What sectors hire the most African workers in Oman?"
     a: "Construction, engineering, healthcare, hospitality, domestic services and retail are the primary sectors for African workers in Oman. Oman's Vision 2040 programme is creating new opportunities in tourism, logistics and technology."
+postVersion: "v2026.10"
+sourceAuthority: "Oman Ministry of Labour"
+sourceUrl: "https://mol.gov.om"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

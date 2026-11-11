@@ -18,6 +18,11 @@ faqs:
     a: "Ghana's Right of Abode is a residence right available to persons of African descent. It allows indefinite residence in Ghana without a visa or residence permit. Applications are made to the Ghana Immigration Service. It does not automatically confer citizenship or the right to work for a Ghanaian employer."
   - q: "How do I transfer money from the UK or US to Nigeria for investment?"
     a: "The most reliable routes are international wire transfers through established banks, or fintech platforms like Wise, Remitly or Grey. For large investment amounts (above USD 10,000), you should document the source of funds carefully for both the sending and receiving country's compliance requirements."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 The African diaspora sends approximately USD 100 billion home each year in remittances. A smaller but growing number of diaspora members are making a different kind of transfer - moving themselves, or at least their business operations, back to Africa.

@@ -107,7 +107,8 @@
         <ul class="nav-menu">
           <li><a href="/" aria-label="Home"><svg class="nav-home-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10.707 2.293a1 1 0 0 0-1.414 0l-7 7A1 1 0 0 0 3 11h1v6a1 1 0 0 0 1 1h4v-4h2v4h4a1 1 0 0 0 1-1v-6h1a1 1 0 0 0 .707-1.707l-7-7z"/></svg></a></li>
           <li><a href="/pages/countries.html">Countries</a></li>
-          <li><a href="/pages/work-abroad-agent.html">Work Abroad</a></li>`n          <li><a href="/pages/calculator.html">Calculator</a></li>
+          <li><a href="/pages/work-abroad-agent.html">Work Abroad</a></li>
+          <li><a href="/pages/calculator.html">Calculator</a></li>
           <li><a href="/blog/">Blog</a></li>
           <li><a href="/pages/about.html">About</a></li>
           <li><a href="/pages/find-mypathway.html" class="nav-cta">Find MyPathway</a></li>
@@ -138,34 +139,46 @@
         <p class="article-lead">{{ excerpt }}</p>
         {% endif %}
 
-        <!-- Source trail watermark -->
-        <div class="post-source-trail">
-          {% if evidenceStatus == "verified" %}
-            <span class="post-source-badge post-source-badge--verified">Source verified</span>
+        <!-- Hybrid document watermark -->
+        {% if evidenceStatus == "under-correction" or evidenceStatus == "research-required" or (not evidenceStatus and not lastFactChecked) %}
+          {% set wmClass = "wm-hybrid amber" %}
+        {% elif evidenceStatus == "research-required" %}
+          {% set wmClass = "wm-hybrid red" %}
+        {% elif supersededBy %}
+          {% set wmClass = "wm-hybrid archived" %}
+        {% else %}
+          {% set wmClass = "wm-hybrid" %}
+        {% endif %}
+        <div class="{{ wmClass }}">
+          <span class="wh-brand">MyPathway2Global</span>
+          <span class="wh-dot">&middot;</span>
+          <span class="wh-ver">{{ postVersion or "v" + (date | formatVersion) }}</span>
+          <span class="wh-dot">&middot;</span>
+          {% if evidenceStatus == "verified" and not supersededBy %}
+            <span class="wh-status-v">Verified</span>
           {% elif evidenceStatus == "under-correction" %}
-            <span class="post-source-badge post-source-badge--under-correction">Under correction</span>
+            <span class="wh-status-uc">Under correction</span>
           {% elif evidenceStatus == "research-required" %}
-            <span class="post-source-badge post-source-badge--research-required">Research required</span>
+            <span class="wh-status-rr">Research required</span>
+          {% elif supersededBy %}
+            <span class="wh-status-arc">Archived</span>
           {% else %}
-            <span class="post-source-badge post-source-badge--unaudited">Not yet audited</span>
+            <span class="wh-status-na">Not yet audited</span>
           {% endif %}
-          <span class="post-source-authority">
-            {% if sourceUrl and sourceAuthority %}
-              <a href="{{ sourceUrl }}" target="_blank" rel="noopener noreferrer">{{ sourceAuthority }}</a>
-            {% elif sourceAuthority %}
-              {{ sourceAuthority }}
-            {% else %}
-              <span style="color:var(--color-neutral-400);">Source not recorded</span>
-            {% endif %}
-          </span>
-          <span class="post-source-date">
-            {% if lastFactChecked %}
-              Verified {{ lastFactChecked | readableDate }}
-            {% else %}
-              <span class="post-source-unaudited">Date not recorded</span>
-            {% endif %}
-          </span>
-          <span class="post-source-independence">Independent platform. Not affiliated with any government or immigration authority.</span>
+          {% if sourceAuthority %}
+            <span class="wh-dot">&middot;</span>
+            <span class="wh-src">
+              {% if sourceUrl %}<a href="{{ sourceUrl }}" target="_blank" rel="noopener noreferrer">{{ sourceAuthority }}</a>{% else %}{{ sourceAuthority }}{% endif %}
+            </span>
+          {% endif %}
+          {% if lastFactChecked %}
+            <span class="wh-dot">&middot;</span>
+            <span class="wh-date">{{ lastFactChecked | readableDate }}</span>
+          {% endif %}
+          {% if supersededBy %}
+            <span class="wh-sup"><a href="{{ supersededBy }}">Current edition &rarr;</a></span>
+          {% endif %}
+          <span class="wh-notice">Independent platform. Not affiliated with any government or immigration authority. Not legal advice.{% if riskLevel == "high" %} High-risk corridor &mdash; read full disclaimer before acting.{% endif %}</span>
         </div>
       </header>
 
@@ -211,9 +224,11 @@
         <ul>
           <li><a href="/pages/countries.html">Countries</a></li>
           <li><a href="/pages/find-mypathway.html">Find MyPathway</a></li>
-          <li><a href="/pages/work-abroad-agent.html">Work Abroad</a></li>`n          <li><a href="/pages/calculator.html">Calculator</a></li>
+          <li><a href="/pages/work-abroad-agent.html">Work Abroad</a></li>
+          <li><a href="/pages/calculator.html">Calculator</a></li>
           <li><a href="/blog/">Blog</a></li>
-          <li><a href="/pages/work-abroad-agent.html">Work Abroad Agent</a></li>`n      <li><a href="/pages/pathways-funded-study.html">Funded Routes</a></li>
+          <li><a href="/pages/work-abroad-agent.html">Work Abroad Agent</a></li>
+          <li><a href="/pages/pathways-funded-study.html">Funded Routes</a></li>
           <li><a href="/pages/pathways-regional-skilled.html">Regional Routes</a></li>
         </ul>
       </div>

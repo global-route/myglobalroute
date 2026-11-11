@@ -18,6 +18,11 @@ faqs:
     a: "The Kafala (sponsorship) system ties a worker's legal status to their employer. Qatar reformed it in 2020 to allow job changes without employer permission in some circumstances. The UAE, Oman and Saudi Arabia retain versions of the sponsorship system. This means your visa status is linked to your employer - if you leave the job, your visa status changes."
   - q: "Are the fees quoted by agents the official government fees?"
     a: "No. Agent fees are separate from government fees. Government fees for Gulf work visas are typically paid by the employer, not the worker. When an agent quotes you NGN 2.5M or NGN 3.2M for a Gulf work visa, that is their service fee - not a government fee. Always ask for a breakdown of what is government fee and what is agent fee."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->

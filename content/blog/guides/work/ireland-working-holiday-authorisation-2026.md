@@ -19,6 +19,11 @@ faqs:
     a: "Ireland's national minimum wage is EUR 13.50/hour from January 2026. This applies to eligible visa holders only. Verify your passport eligibility before planning travel."
   - q: "Can I extend the Ireland Working Holiday Authorisation?"
     a: "Extension rules apply only to eligible passport holders. Verify your passport eligibility at irishimmigration.ie before making any plans."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#fff3cd;border-left:4px solid #e65100;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

@@ -18,6 +18,12 @@ faqs:
     a: "An endorsing body is an organisation approved by the Home Office to assess Innovator Founder applications. They review your business idea for innovation, viability and scalability. A list of approved endorsing bodies is published at gov.uk/government/publications/endorsing-bodies-innovator-founder."
   - q: "Can I apply for the UK Innovator Founder visa without a job offer?"
     a: "Yes. The Innovator Founder route is for people establishing their own business in the UK. You do not need a job offer or employer sponsor. You need endorsement from an approved body confirming your business idea meets the innovation, viability and scalability criteria."
+postVersion: "v2026.11"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+lastFactChecked: 2026-11-09
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 # UK Innovator Founder Visa 2026: Business Route to British Residency

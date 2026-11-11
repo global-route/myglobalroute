@@ -19,6 +19,11 @@ faqs:
     a: "Zero tuition fees (the university tassa is waived), free on-campus accommodation where available, free meal vouchers at university canteens, and a cash grant of EUR 5,400 to EUR 7,000 per academic year depending on your ISEE score and the regional DSU authority."
   - q: "Is the DSU scholarship competitive?"
     a: "Yes. Not all eligible applicants receive the full benefit package - accommodation places are limited and allocated by ISEE score ranking. You must apply early in the academic year. The scholarship is separate from university admission - you must secure admission first, then apply to DSU."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 The Italy DSU scholarship is one of the most underused opportunities in African student migration. It is not a merit scholarship - you do not need top grades or a competitive application. It is a needs-based welfare system that provides zero tuition, free housing, free meals and a cash stipend to students whose household income falls below a threshold. For African applicants from lower-income households, the threshold is often achievable.

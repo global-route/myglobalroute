@@ -18,6 +18,11 @@ faqs:
     a: "The Commonwealth Scholarship is highly competitive. Nigeria typically receives 20-30 scholarships per year across all categories. The selection is based on academic merit, development impact, and leadership potential. A strong academic record (minimum 2:1 or equivalent) and a compelling development impact statement are essential."
   - q: "What is the development impact requirement?"
     a: "Commonwealth Scholarships prioritise applicants who can demonstrate how their proposed study will contribute to development in their home country. Your application must include a development impact statement explaining how the knowledge and skills you gain will benefit Nigeria. This is weighted heavily in the selection process."
+postVersion: "v2026.10"
+sourceAuthority: "MyPathway2Global Editorial"
+sourceUrl: "https://mypathway2global.org.uk"
+evidenceStatus: research-required
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

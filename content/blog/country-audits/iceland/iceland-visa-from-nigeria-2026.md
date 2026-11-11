@@ -18,6 +18,11 @@ faqs:
     a: "Iceland is one of the most expensive countries in the world. Living costs in Reykjavik are approximately EUR 1,500-2,000/month including accommodation, food and transport."
   - q: "What does the Iceland work permit require?"
     a: "A confirmed job offer from an Icelandic employer, satisfaction of the labour-market test or shortage occupation conditions. Iceland has documented labour shortages in healthcare, construction, tourism and IT."
+postVersion: "v2026.10"
+sourceAuthority: "Directorate of Immigration Iceland"
+sourceUrl: "https://island.is/en/o/directorate-of-immigration"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 Iceland is a Nordic island nation with a small population and documented labour shortages in several sectors. It has two publishable pathways for Nigerian applicants: a study residence permit and a work-based residence permit.

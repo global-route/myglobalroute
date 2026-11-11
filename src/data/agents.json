@@ -13,7 +13,7 @@
       "verificationStatus": "pending",
       "verifiedAt": null,
       "tier": "free",
-      "contactEmail": "agent@example.com",
+      "contactEmail": null,
       "notifications": {
         "slackWebhookUrl": null,
         "telegramBotToken": null,

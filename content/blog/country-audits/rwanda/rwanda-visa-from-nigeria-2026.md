@@ -18,6 +18,11 @@ faqs:
     a: "Business registration through the Rwanda Development Board (RDB) online portal takes 1-2 working days. Rwanda consistently ranks first in Africa on the World Bank Ease of Doing Business index. The process is fully digital and can be completed remotely."
   - q: "What is the Kigali International Financial Centre?"
     a: "The Kigali International Financial Centre (KIFC) is Rwanda's initiative to position Kigali as a financial hub for East and Central Africa. It offers tax incentives, streamlined licensing, and a regulatory framework designed to attract financial services firms. It is relevant for African finance professionals and investors looking for a regional base."
+postVersion: "v2026.10"
+sourceAuthority: "Directorate General of Immigration Rwanda"
+sourceUrl: "https://www.migration.gov.rw"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">

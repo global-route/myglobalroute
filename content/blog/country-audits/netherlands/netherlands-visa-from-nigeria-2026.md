@@ -17,6 +17,12 @@ faqs:
     a: "Not for most international programmes. Dutch universities offer hundreds of English-taught Bachelor's and Master's programmes. Dutch language skills are helpful for daily life but not required for admission to English-taught programmes."
   - q: "What is the IND in the Netherlands?"
     a: "The IND (Immigratie- en Naturalisatiedienst) is the Dutch Immigration and Naturalisation Service. It processes all residence permit applications for the Netherlands."
+postVersion: "v2026.10"
+sourceAuthority: "IND Netherlands"
+sourceUrl: "https://ind.nl/en"
+lastFactChecked: 2026-10-25
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 # Netherlands Visa from Nigeria: The 2026 Reality Check

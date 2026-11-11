@@ -18,6 +18,11 @@ faqs:
     a: "GBP 1,270 held for 28 consecutive days before applying. This is a maintenance balance, not an annual cost. Your sponsor university may certify maintenance on your behalf, which removes the personal funds requirement."
   - q: "What is a CAS for the UK student visa?"
     a: "A Confirmation of Acceptance for Studies (CAS) is a reference number issued by your UK university after you accept an unconditional offer. You cannot apply for a UK student visa without a CAS."
+postVersion: "v2026.10"
+sourceAuthority: "UK Visas and Immigration"
+sourceUrl: "https://www.gov.uk/browse/visas-immigration"
+evidenceStatus: verified
+supersededBy: ""
 ---
 
 # UK Visa from Nigeria: Skilled Worker and Student Visa Guide 2026
