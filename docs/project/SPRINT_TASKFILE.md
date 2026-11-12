@@ -167,8 +167,8 @@ New demand records needed to power WAA wizard results for new corridors.
 | D4 | `QA-trades-unskilled-2026` | QA | trades / unskilled | **DONE** `d8b7f36` |
 | D5 | `SG-software-it-skilled-2026` | SG | software_it / skilled | **DONE** `d8b7f36` |
 | D6 | `DE-care-work-skilled-2026` | DE | care_work / skilled | **DONE** `d8b7f36` |
-| D7 | `IE-healthcare-skilled-2026` | IE | healthcare / skilled | **PENDING** — add with W21 commit |
-| D8 | `NL-software-it-skilled-2026` | NL | software_it / skilled | **PENDING** — add with W19 commit |
+| D7 | `IE-healthcare-skilled-2026` | IE | healthcare / skilled | **DONE** 2026-11-12 |
+| D8 | `NL-software-it-skilled-2026` | NL | software_it / skilled | **DONE** 2026-11-12 |
 
 ---
 
@@ -179,7 +179,7 @@ New demand records needed to power WAA wizard results for new corridors.
 | C1 | Bulgaria | BG | Study visa | **DONE** `5acb221` |
 | C2 | Croatia | HR | Study visa | **DONE** `5acb221` |
 | C3 | Guyana | GY | Freelance work visa | **DONE** `20310d7` |
-| C4 | Oman pathway record | OM | Employer-sponsored trades | **PENDING** — country exists, pathway record missing |
+| C4 | Oman pathway record | OM | Employer-sponsored trades | **DONE** 2026-11-12 (`research_required`; OM country record added too) |
 
 ---
 

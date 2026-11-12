@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "registryPath": "src/data/countries.json",
   "registryDatasetAsOf": "2026-10-25",
-  "countryCount": 31,
+  "countryCount": 35,
   "policy": "Tracks country-level source-anchor review only; does not verify pathway-specific eligibility, funds, costs, approval rates or timelines. Tool errors are not evidence a source is down. Human sign-off is required before freshness metadata advances.",
   "countries": [
     {
@@ -581,6 +581,82 @@
       "authority": "Ministry of Home Affairs, Immigration, Safety and Security",
       "registeredUrl": "https://mhaiss.gov.na/",
       "registryRetrievedAt": "2026-10-29",
+      "review": {
+        "status": "pending",
+        "checkedAt": null,
+        "reviewer": null,
+        "method": null,
+        "observedTitle": null,
+        "observedUrl": null,
+        "evidenceUrl": null,
+        "outcome": "Not reviewed yet.",
+        "nextReviewDue": null
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "BG",
+      "countryName": "Bulgaria",
+      "authority": "Bulgarian Ministry of Foreign Affairs",
+      "registeredUrl": "https://www.mfa.bg/en/services-bulgarians/consular-services/visa-services",
+      "registryRetrievedAt": "2026-11-09",
+      "review": {
+        "status": "pending",
+        "checkedAt": null,
+        "reviewer": null,
+        "method": null,
+        "observedTitle": null,
+        "observedUrl": null,
+        "evidenceUrl": null,
+        "outcome": "Not reviewed yet.",
+        "nextReviewDue": null
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "HR",
+      "countryName": "Croatia",
+      "authority": "Croatian Ministry of Interior",
+      "registeredUrl": "https://mup.gov.hr/aliens-281621/281621",
+      "registryRetrievedAt": "2026-11-09",
+      "review": {
+        "status": "pending",
+        "checkedAt": null,
+        "reviewer": null,
+        "method": null,
+        "observedTitle": null,
+        "observedUrl": null,
+        "evidenceUrl": null,
+        "outcome": "Not reviewed yet.",
+        "nextReviewDue": null
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "GY",
+      "countryName": "Guyana",
+      "authority": "Guyana Immigration Department",
+      "registeredUrl": "https://immigration.gov.gy",
+      "registryRetrievedAt": "2026-11-09",
+      "review": {
+        "status": "pending",
+        "checkedAt": null,
+        "reviewer": null,
+        "method": null,
+        "observedTitle": null,
+        "observedUrl": null,
+        "evidenceUrl": null,
+        "outcome": "Not reviewed yet.",
+        "nextReviewDue": null
+      },
+      "pathwayClaimsVerified": false
+    },
+    {
+      "countryId": "OM",
+      "countryName": "Oman",
+      "authority": "Oman Ministry of Labour",
+      "registeredUrl": "https://mol.gov.om",
+      "registryRetrievedAt": "2026-11-09",
       "review": {
         "status": "pending",
         "checkedAt": null,

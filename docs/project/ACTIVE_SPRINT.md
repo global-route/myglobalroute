@@ -1,9 +1,11 @@
 # ACTIVE SPRINT TASKFILE — MyPathway2Global
-**Updated:** 2026-11-11 | **Commit:** `b6e5d7b` | **Tests:** 19/19, 214/214
-**Posts:** 125 | **Countries:** 31 | **Pathways:** 71 | **Demand records:** 22 | **Evidence records:** 222
+**Updated:** 2026-11-12 | **Base commit:** `cd4b21c` | **Tests:** not re-run this session (no node_modules, network off); `validate-data.js` PASSED
+**Posts:** 125 | **Countries:** 35 | **Pathways:** 75 | **Demand records:** 24 | **Evidence records:** 222
 **Data validation:** PASSED | **Stale requirements:** 1 (IE-critical-skills — evidence-date locked)
 
 Single source of truth for all outstanding work. Status: DONE / PENDING / BLOCKED
+
+> **Note (2026-11-12):** Oman (OM) was not actually in `countries.json`, so the OM pathway needed it added: registry is 35 countries (not 34). BG-study, HR-study, GY-freelance-work and OM-employer-sponsored-trades are `research_required` (no evidence records). Run `npm test` and `npm run build && node scripts/verify-build.js` locally before deploy.
 
 ---
 
@@ -11,10 +13,10 @@ Single source of truth for all outstanding work. Status: DONE / PENDING / BLOCKE
 
 | ID | Task | File | Status |
 |---|---|---|---|
-| P1-1 | Sitemap: add all 22 new posts (W1-W22) | `public/sitemap.xml` | **PENDING** |
-| P1-2 | Sitemap: add Bulgaria, Croatia, Guyana country pages | `public/sitemap.xml` | **PENDING** |
-| P1-3 | Sitemap: add Singapore country page | `public/sitemap.xml` | **PENDING** |
-| P1-4 | Sitemap: update lastmod dates on all existing entries to 2026-11-11 | `public/sitemap.xml` | **PENDING** |
+| P1-1 | Sitemap: add all 22 new posts (W1-W22) | `public/sitemap.xml` | **DONE** (2026-11-12) |
+| P1-2 | Sitemap: add Bulgaria, Croatia, Guyana country pages | `public/sitemap.xml` | **DONE** (2026-11-12) |
+| P1-3 | Sitemap: add Singapore country page | `public/sitemap.xml` | **DONE** (2026-11-12) |
+| P1-4 | Sitemap: update lastmod dates on all existing entries to 2026-11-11 | `public/sitemap.xml` | **DONE** (2026-11-12) |
 | P1-5 | IE Critical Skills stale requirement — evidence-date locked, cannot update without new evidence record | `src/data/pathways.json` | **BLOCKED** (evidence-locked) |
 | P1-6 | About page: update post count (107→125), country count (31), pathway count (71) | `src/pages/about.html` | **DONE** `b6e5d7b` |
 | P1-7 | Data validation: fix 57 effectiveDate mismatches + 12 expired reviewAfter evidence records | `src/data/pathways.json` + evidence files | **DONE** (this session) |
@@ -27,18 +29,18 @@ Single source of truth for all outstanding work. Status: DONE / PENDING / BLOCKE
 
 | ID | Task | File | Status |
 |---|---|---|---|
-| P2-1 | Add Bulgaria (BG) to `countries.json` | `src/data/countries.json` | **PENDING** |
-| P2-2 | Add Croatia (HR) to `countries.json` | `src/data/countries.json` | **PENDING** |
-| P2-3 | Add Guyana (GY) to `countries.json` | `src/data/countries.json` | **PENDING** |
-| P2-4 | Add BG-study pathway to `pathways.json` | `src/data/pathways.json` | **PENDING** |
-| P2-5 | Add HR-study pathway to `pathways.json` | `src/data/pathways.json` | **PENDING** |
-| P2-6 | Add GY-freelance-work pathway to `pathways.json` | `src/data/pathways.json` | **PENDING** |
-| P2-7 | Add OM-employer-sponsored-trades pathway to `pathways.json` | `src/data/pathways.json` | **PENDING** |
-| P2-8 | Add D7: `IE-healthcare-skilled-2026` demand record | `src/data/occupation-demand.json` | **PENDING** |
-| P2-9 | Add D8: `NL-software-it-skilled-2026` demand record | `src/data/occupation-demand.json` | **PENDING** |
-| P2-10 | Update `validate-data.js` country count 31→34 after BG/HR/GY added | `scripts/validate-data.js` | **PENDING** |
-| P2-11 | Update test files for new country count | `tests/data-contract.test.js`, `tests/country-source-manifest.test.js`, `tests/evidence-registry.test.js` | **PENDING** |
-| P2-12 | Regenerate country source manifest | `scripts/generate-country-source-manifest.js --write` | **PENDING** |
+| P2-1 | Add Bulgaria (BG) to `countries.json` | `src/data/countries.json` | **DONE** (2026-11-12) |
+| P2-2 | Add Croatia (HR) to `countries.json` | `src/data/countries.json` | **DONE** (2026-11-12) |
+| P2-3 | Add Guyana (GY) to `countries.json` | `src/data/countries.json` | **DONE** (2026-11-12) |
+| P2-4 | Add BG-study pathway to `pathways.json` | `src/data/pathways.json` | **DONE** (2026-11-12, `research_required` until R2/R3/R4 evidence records exist) |
+| P2-5 | Add HR-study pathway to `pathways.json` | `src/data/pathways.json` | **DONE** (2026-11-12, `research_required` until R2/R3/R4 evidence records exist) |
+| P2-6 | Add GY-freelance-work pathway to `pathways.json` | `src/data/pathways.json` | **DONE** (2026-11-12, `research_required` until R2/R3/R4 evidence records exist) |
+| P2-7 | Add OM-employer-sponsored-trades pathway to `pathways.json` | `src/data/pathways.json` | **DONE** (2026-11-12, `research_required` until R2/R3/R4 evidence records exist) |
+| P2-8 | Add D7: `IE-healthcare-skilled-2026` demand record | `src/data/occupation-demand.json` | **DONE** (2026-11-12) |
+| P2-9 | Add D8: `NL-software-it-skilled-2026` demand record | `src/data/occupation-demand.json` | **DONE** (2026-11-12; demandLevel medium, not shortage-list based) |
+| P2-10 | Update `validate-data.js` country count 31→34 after BG/HR/GY added | `scripts/validate-data.js` | **DONE** (2026-11-12; now 35, see note) |
+| P2-11 | Update test files for new country count | `tests/data-contract.test.js`, `tests/country-source-manifest.test.js`, `tests/evidence-registry.test.js` | **DONE** (2026-11-12) |
+| P2-12 | Regenerate country source manifest | `scripts/generate-country-source-manifest.js --write` | **DONE** (2026-11-12) |
 | P2-13 | Commit + push P2 data additions | — | **PENDING** |
 
 ---
@@ -151,11 +153,11 @@ These are the next content items after deployment. No code blocker.
 | Metric | Current | Target (next deploy) |
 |---|---|---|
 | Blog posts | 125 | 126 (after W14) |
-| Countries in registry | 31 | 34 (after BG/HR/GY) |
-| Pathways | 71 | 75 (after BG/HR/GY/OM) |
-| Demand records | 22 | 24 (after D7 IE, D8 NL) |
+| Countries in registry | 35 | 35 |
+| Pathways | 75 | 75 |
+| Demand records | 24 | 24 |
 | Evidence records | 222 | 222 |
-| Sitemap URLs | 146 | ~172 (after P1 sitemap update) |
+| Sitemap URLs | 186 | 186 |
 | Tests | 214/214 | 214/214 |
 | Data validation | PASSED | PASSED |
 | Watermark coverage | 125/125 posts | 125/125 |

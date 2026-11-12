@@ -2750,6 +2750,46 @@
           "notes": "The employer must be accredited by Immigration New Zealand (standard, high-volume, or franchisee accreditation). Accreditation is the employer's responsibility, not the worker's."
         }
       ]
+    },
+    {
+      "id": "BG-study",
+      "countryId": "BG",
+      "type": "study",
+      "name": "Study visa",
+      "sourceUrl": "https://www.mfa.bg/en/services-bulgarians/consular-services/visa-services",
+      "sourceAuthority": "Bulgarian Ministry of Foreign Affairs",
+      "status": "research_required",
+      "scopeNote": "Registered so the WorkAbroadAgent wizard and country pages can reference this route. Not publishable: no field-level primary-source evidence record exists yet for Bulgaria study visa requirements, funds or fees. Promote only after the matching research task (R2/R3/R4 in docs/project/ACTIVE_SPRINT.md) is verified against the official source and evidence records are added."
+    },
+    {
+      "id": "HR-study",
+      "countryId": "HR",
+      "type": "study",
+      "name": "Study visa",
+      "sourceUrl": "https://mup.gov.hr/aliens-281621/281621",
+      "sourceAuthority": "Croatian Ministry of Interior",
+      "status": "research_required",
+      "scopeNote": "Registered so the WorkAbroadAgent wizard and country pages can reference this route. Not publishable: no field-level primary-source evidence record exists yet for Croatia study visa requirements, funds or fees. Promote only after the matching research task (R2/R3/R4 in docs/project/ACTIVE_SPRINT.md) is verified against the official source and evidence records are added."
+    },
+    {
+      "id": "GY-freelance-work",
+      "countryId": "GY",
+      "type": "work",
+      "name": "Freelance and self-employed work permit",
+      "sourceUrl": "https://immigration.gov.gy",
+      "sourceAuthority": "Guyana Immigration Department",
+      "status": "research_required",
+      "scopeNote": "Registered so the WorkAbroadAgent wizard and country pages can reference this route. Not publishable: no field-level primary-source evidence record exists yet for the Guyana freelance work permit duration, fees or documents. Promote only after the matching research task (R2/R3/R4 in docs/project/ACTIVE_SPRINT.md) is verified against the official source and evidence records are added."
+    },
+    {
+      "id": "OM-employer-sponsored-trades",
+      "countryId": "OM",
+      "type": "work",
+      "name": "Employer-sponsored work visa (trades)",
+      "sourceUrl": "https://mol.gov.om",
+      "sourceAuthority": "Oman Ministry of Labour",
+      "status": "research_required",
+      "scopeNote": "Registered so the WorkAbroadAgent wizard and country pages can reference this route. Not publishable: no field-level primary-source evidence record exists yet for Oman trades work visa requirements or salary ranges. Promote only after the matching research task (R2/R3/R4 in docs/project/ACTIVE_SPRINT.md) is verified against the official source and evidence records are added."
     }
   ]
 }

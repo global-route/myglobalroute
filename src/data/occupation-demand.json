@@ -280,6 +280,30 @@
       "sourceAuthority": "Singapore Ministry of Manpower",
       "effectiveDate": "2026-11-10",
       "notes": "Singapore Employment Pass for software and IT professionals. COMPASS points framework applies since 2023. Minimum salary SGD 5,000/month (higher for financial services). Degree required. COMPASS scores on salary, qualifications, diversity and local workforce support. Tech roles in fintech, cloud, cybersecurity in high demand."
+    },
+    {
+      "id": "IE-healthcare-skilled-2026",
+      "countryId": "IE",
+      "occupationCategory": "healthcare",
+      "skillLevel": "skilled",
+      "demandLevel": "high",
+      "visaRoute": "IE-critical-skills",
+      "sourceUrl": "https://www.nmbi.ie/Registration/Overseas-Applicants",
+      "sourceAuthority": "Nursing and Midwifery Board of Ireland",
+      "effectiveDate": "2026-11-12",
+      "notes": "Nursing in Ireland: NMBI registration first (application fee EUR 330, typically 3-6 months), then a Critical Skills Employment Permit (salary threshold EUR 32,000 for nursing per the W21 guide). Stamp 4 possible after 2 years on the permit. Shortage claim rests on nursing being on the Critical Skills Occupations List; re-verify against the official list and NMBI fee (task R6) before relying on demandLevel."
+    },
+    {
+      "id": "NL-software-it-skilled-2026",
+      "countryId": "NL",
+      "occupationCategory": "software_it",
+      "skillLevel": "skilled",
+      "demandLevel": "medium",
+      "visaRoute": null,
+      "sourceUrl": "https://ind.nl/en/residence-permits/work/highly-skilled-migrant",
+      "sourceAuthority": "IND Netherlands",
+      "effectiveDate": "2026-11-12",
+      "notes": "Highly Skilled Migrant permit is employer-sponsored via a recognised sponsor and is salary-threshold based, not shortage-list based. 2026 thresholds per the W19 guide: EUR 46,107 (under 30), EUR 63,503 (30 and over), EUR 36,889 (recent graduates). No official shortage source is cited, so demandLevel is a conservative medium. Re-verify thresholds at ind.nl (task R5)."
     }
   ]
-}
+}
