@@ -11,15 +11,15 @@ Single source of truth for all outstanding work. Status: DONE / PENDING / BLOCKE
 
 | ID | Task | File | Status |
 |---|---|---|---|
-| P1-1 | Sitemap: add all 22 new posts (W1-W22) | `public/sitemap.xml` | **PENDING** |
-| P1-2 | Sitemap: add Bulgaria, Croatia, Guyana country pages | `public/sitemap.xml` | **PENDING** |
-| P1-3 | Sitemap: add Singapore country page | `public/sitemap.xml` | **PENDING** |
-| P1-4 | Sitemap: update lastmod dates on all existing entries to 2026-11-11 | `public/sitemap.xml` | **PENDING** |
+| P1-1 | Sitemap: add all 22 new posts (W1-W22) | `public/sitemap.xml` | **DONE** |
+| P1-2 | Sitemap: add Bulgaria, Croatia, Guyana country pages | `public/sitemap.xml` | **DONE** |
+| P1-3 | Sitemap: add Singapore country page | `public/sitemap.xml` | **DONE** |
+| P1-4 | Sitemap: update lastmod dates on all existing entries to 2026-11-11 | `public/sitemap.xml` | **DONE** |
 | P1-5 | IE Critical Skills stale requirement — evidence-date locked, cannot update without new evidence record | `src/data/pathways.json` | **BLOCKED** (evidence-locked) |
 | P1-6 | About page: update post count (107→125), country count (31), pathway count (71) | `src/pages/about.html` | **DONE** `b6e5d7b` |
-| P1-7 | Data validation: fix 57 effectiveDate mismatches + 12 expired reviewAfter evidence records | `src/data/pathways.json` + evidence files | **DONE** (this session) |
+| P1-7 | Data validation: fix 57 effectiveDate mismatches + 12 expired reviewAfter evidence records | `src/data/pathways.json` + evidence files | **DONE** |
 | P1-8 | Build verify + full test run after all P1 fixes | — | **DONE** — 214/214, DATA VALIDATION PASSED |
-| P1-9 | Commit + push P1 fixes | — | **PENDING** |
+| P1-9 | Commit + push P1 fixes | — | **DONE** |
 
 ---
 
@@ -155,7 +155,7 @@ These are the next content items after deployment. No code blocker.
 | Pathways | 71 | 75 (after BG/HR/GY/OM) |
 | Demand records | 22 | 24 (after D7 IE, D8 NL) |
 | Evidence records | 222 | 222 |
-| Sitemap URLs | 146 | ~172 (after P1 sitemap update) |
+| Sitemap URLs | 181 | 181 ✓ |
 | Tests | 214/214 | 214/214 |
 | Data validation | PASSED | PASSED |
 | Watermark coverage | 125/125 posts | 125/125 |
