@@ -150,7 +150,7 @@ These are the next content items after deployment. No code blocker.
 
 | Metric | Current | Target (next deploy) |
 |---|---|---|
-| Blog posts | 125 | 126 (after W14) |
+| Blog posts | 126 | 126 ? |
 | Countries in registry | 35 | 35 ? (after BG/HR/GY) |
 | Pathways | 75 | 75 ? (after BG/HR/GY/OM) |
 | Demand records | 24 | 24 ? (after D7 IE, D8 NL) |
