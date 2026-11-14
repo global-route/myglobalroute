@@ -1,6 +1,6 @@
 # ACTIVE SPRINT TASKFILE â€” MyPathway2Global
 **Updated:** 2026-11-11 | **Commit:** `b6e5d7b` | **Tests:** 19/19, 214/214
-**Posts:** 125 | **Countries:** 31 | **Pathways:** 71 | **Demand records:** 22 | **Evidence records:** 222
+**Posts:** 126 | **Countries:** 35 | **Pathways:** 75 | **Demand records:** 24 | **Evidence records:** 222
 **Data validation:** PASSED | **Stale requirements:** 1 (IE-critical-skills â€” evidence-date locked)
 
 Single source of truth for all outstanding work. Status: DONE / PENDING / BLOCKED
@@ -61,13 +61,13 @@ These are research actions that feed future content and agent pipeline. No code 
 
 | ID | Task | Source | Output |
 |---|---|---|---|
-| R1 | Verify Canada Francophone Immigration Pilot current status at canada.ca â€” confirm FCIP is still active and occupation list unchanged | `canada.ca/francophone-community` | Update W2 post if anything changed |
-| R2 | Verify Guyana freelance work permit at immigration.gov.gy â€” confirm 2-year permit still active, current fees | `immigration.gov.gy` | Update W7 post if anything changed |
-| R3 | Verify Oman Ministry of Labour trades salary data â€” confirm OMR 150-350 range is current | `mol.gov.om` | Update W6 post if anything changed |
-| R4 | Verify Bulgaria Schengen land border status â€” confirm Jan 2025 land border accession | `mfa.bg` | Update W8 post if anything changed |
-| R5 | Verify Netherlands Highly Skilled Migrant salary thresholds for 2026 â€” EUR 46,107 / EUR 63,503 | `ind.nl` | Update W19 post if anything changed |
-| R6 | Verify Ireland NMBI registration fee â€” EUR 330 current | `nmbi.ie` | Update W21 post if anything changed |
-| R7 | Verify Germany Pflegekrafte B1 language acceptance â€” confirm B1 is accepted for care roles | `make-it-in-germany.com` | Update W22 post if anything changed |
+| R1 | Verify Canada Francophone Immigration Pilot current status at canada.ca — confirm FCIP is still active and occupation list unchanged | `canada.ca/francophone-community` | **DONE** — FCIP active, claims verified |
+| R2 | Verify Guyana freelance work permit at immigration.gov.gy — confirm 2-year permit still active, current fees | `immigration.gov.gy` | **DONE** — 2-year permit confirmed |
+| R3 | Verify Oman Ministry of Labour trades salary data — confirm OMR 150-350 range is current | `mol.gov.om` | **DONE** — OMR range confirmed |
+| R4 | Verify Bulgaria Schengen land border status — confirm Jan 2025 land border accession | `mfa.bg` | **DONE** — Jan 2025 confirmed |
+| R5 | Verify Netherlands Highly Skilled Migrant salary thresholds for 2026 — EUR 46,107 / EUR 63,503 | `ind.nl` | **DONE** — thresholds confirmed |
+| R6 | Verify Ireland NMBI registration fee — EUR 330 current | `nmbi.ie` | **DONE** — EUR 330 confirmed |
+| R7 | Verify Germany Pflegekrafte B1 language acceptance — confirm B1 is accepted for care roles | `make-it-in-germany.com` | **DONE** — B1 confirmed |
 | R8 | Agent vetting research â€” 8 companies from WAA_RESEARCH_PREP.md Section 8 | See WAA_RESEARCH_PREP.md | Feed WAA-3a agent pipeline |
 
 **Agent companies to research (from field research images):**
