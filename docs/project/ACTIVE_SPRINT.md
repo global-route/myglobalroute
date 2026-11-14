@@ -101,10 +101,10 @@ When WAA-3a-1 to 4 are resolved, WAA-3b/3c/3d code already live activates automa
 
 | ID | Task | Status |
 |---|---|---|
-| D1 | Fix wrangler DNS issue — downgrade to v3: `npm install --save-dev wrangler@3` | **OWNER ACTION** |
-| D2 | Deploy: `npx wrangler deploy` | **OWNER ACTION** |
-| D3 | Post-deploy smoke test: verify site loads, WAA wizard works, new posts accessible | **OWNER ACTION** |
-| D4 | Re-run axe accessibility audit after deploy (WCAG 2.1 AA) | **OWNER ACTION** |
+| D1 | Fix wrangler DNS issue — downgrade to v3: `npm install --save-dev wrangler@3` | **DONE** |
+| D2 | Deploy: `npx wrangler deploy` | **DONE** |
+| D3 | Post-deploy smoke test: verify site loads, WAA wizard works, new posts accessible | **DONE** |
+| D4 | Re-run axe accessibility audit after deploy (WCAG 2.1 AA) | **DONE** |
 
 **Deploy command (macOS):**
 ```bash
