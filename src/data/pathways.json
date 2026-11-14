@@ -2750,6 +2750,102 @@
           "notes": "The employer must be accredited by Immigration New Zealand (standard, high-volume, or franchisee accreditation). Accreditation is the employer's responsibility, not the worker's."
         }
       ]
+    },
+    {
+      "id": "BG-study",
+      "countryId": "BG",
+      "type": "study",
+      "status": "research_required",
+      "name": "Bulgaria Student Visa (Type D)",
+      "visaName": "Type D Long-Stay Visa",
+      "officialUrl": "https://www.mfa.bg/en/",
+      "sourceAuthority": "Bulgarian Ministry of Foreign Affairs",
+      "sourceUrl": "https://www.mfa.bg/en/",
+      "requirements": [
+        {
+          "id": "BG-study-admission-offer-2026-11-11",
+          "field": "admission_offer",
+          "label": "University admission letter",
+          "value": true,
+          "unit": "boolean",
+          "effectiveDate": "2026-11-11",
+          "sourceUrl": "https://www.mfa.bg/en/",
+          "evidenceIds": [],
+          "notes": "Admission letter from a Bulgarian state-accredited university required."
+        }
+      ]
+    },
+    {
+      "id": "HR-study",
+      "countryId": "HR",
+      "type": "study",
+      "status": "research_required",
+      "name": "Croatia Student Visa (Type D)",
+      "visaName": "Type D Long-Stay Visa",
+      "officialUrl": "https://mup.gov.hr/",
+      "sourceAuthority": "Croatian Ministry of the Interior",
+      "sourceUrl": "https://mup.gov.hr/",
+      "requirements": [
+        {
+          "id": "HR-study-admission-offer-2026-11-11",
+          "field": "admission_offer",
+          "label": "University admission letter",
+          "value": true,
+          "unit": "boolean",
+          "effectiveDate": "2026-11-11",
+          "sourceUrl": "https://mup.gov.hr/",
+          "evidenceIds": [],
+          "notes": "Admission letter from a Croatian accredited university required. Croatia joined Schengen in January 2023."
+        }
+      ]
+    },
+    {
+      "id": "GY-freelance-work",
+      "countryId": "GY",
+      "type": "work",
+      "status": "research_required",
+      "name": "Guyana Freelance Work Permit",
+      "visaName": "Work Permit (Self-Employed)",
+      "officialUrl": "https://immigration.gov.gy/",
+      "sourceAuthority": "Guyana Immigration Department",
+      "sourceUrl": "https://immigration.gov.gy/",
+      "requirements": [
+        {
+          "id": "GY-freelance-work-permit-2026-11-11",
+          "field": "work_permit",
+          "label": "Freelance work permit",
+          "value": true,
+          "unit": "boolean",
+          "effectiveDate": "2026-11-11",
+          "sourceUrl": "https://immigration.gov.gy/",
+          "evidenceIds": [],
+          "notes": "Guyana offers a 2-year renewable work permit for self-employed/freelance workers. Oil boom driving demand for skilled professionals. No job offer required for freelance route."
+        }
+      ]
+    },
+    {
+      "id": "OM-employer-sponsored-trades",
+      "countryId": "OM",
+      "type": "work",
+      "status": "research_required",
+      "name": "Oman Employer-Sponsored Work Visa (Trades)",
+      "visaName": "Oman Work Visa",
+      "officialUrl": "https://mol.gov.om/",
+      "sourceAuthority": "Oman Ministry of Labour",
+      "sourceUrl": "https://mol.gov.om/",
+      "requirements": [
+        {
+          "id": "OM-trades-job-offer-2026-11-11",
+          "field": "job_offer",
+          "label": "Employer job offer",
+          "value": true,
+          "unit": "boolean",
+          "effectiveDate": "2026-11-11",
+          "sourceUrl": "https://mol.gov.om/",
+          "evidenceIds": [],
+          "notes": "Employer-sponsored work visa for trades workers (mechanics, electricians, AC technicians, plumbers). Employer handles visa application. Standard processing 2-4 weeks. Salary OMR 150-300/month. Accommodation typically provided."
+        }
+      ]
     }
   ]
 }

@@ -280,6 +280,30 @@
       "sourceAuthority": "Singapore Ministry of Manpower",
       "effectiveDate": "2026-11-10",
       "notes": "Singapore Employment Pass for software and IT professionals. COMPASS points framework applies since 2023. Minimum salary SGD 5,000/month (higher for financial services). Degree required. COMPASS scores on salary, qualifications, diversity and local workforce support. Tech roles in fintech, cloud, cybersecurity in high demand."
+    },
+    {
+      "id": "IE-healthcare-skilled-2026",
+      "countryId": "IE",
+      "occupationCategory": "healthcare",
+      "skillLevel": "skilled",
+      "demandLevel": "high",
+      "visaRoute": "IE-critical-skills",
+      "sourceUrl": "https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/employment-permit-eligibility/highly-regulated-occupations/",
+      "sourceAuthority": "Government of Ireland",
+      "effectiveDate": "2026-11-11",
+      "notes": "Nurses, midwives and allied health professionals on Irish Critical Skills Eligible Occupations List. NMBI registration required for nurses. Critical Skills Employment Permit available. Salary threshold EUR 32,000 for nurses. Path to stamp 4 after 2 years. NMBI registration fee EUR 330."
+    },
+    {
+      "id": "NL-software-it-skilled-2026",
+      "countryId": "NL",
+      "occupationCategory": "software_it",
+      "skillLevel": "skilled",
+      "demandLevel": "high",
+      "visaRoute": null,
+      "sourceUrl": "https://ind.nl/en/residence-permits/work/highly-skilled-migrant",
+      "sourceAuthority": "IND — Immigration and Naturalisation Service Netherlands",
+      "effectiveDate": "2026-11-11",
+      "notes": "Netherlands Highly Skilled Migrant (Kennismigrant) permit for software and IT professionals. Salary threshold EUR 46,107/year (under 30: EUR 33,716). Employer must be IND-recognised sponsor. Amsterdam and Eindhoven tech hubs. 30% ruling tax benefit available for first 5 years."
     }
   ]
 }

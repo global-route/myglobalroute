@@ -565,6 +565,78 @@
         "retrievedAt": "2026-10-29",
         "confidence": "medium"
       }
+    },
+    {
+      "id": "BG",
+      "name": "Bulgaria",
+      "flag": "🇧🇬",
+      "category": "Europe - Eastern",
+      "sweetSpot": "student",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Bulgarian Ministry of Foreign Affairs",
+        "url": "https://www.mfa.bg/en/",
+        "retrievedAt": "2026-11-11",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "HR",
+      "name": "Croatia",
+      "flag": "🇭🇷",
+      "category": "Europe - Eastern",
+      "sweetSpot": "student",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Croatian Ministry of the Interior",
+        "url": "https://mup.gov.hr/",
+        "retrievedAt": "2026-11-11",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "GY",
+      "name": "Guyana",
+      "flag": "🇬🇾",
+      "category": "Americas",
+      "sweetSpot": "nomad",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Guyana Immigration Department",
+        "url": "https://immigration.gov.gy/",
+        "retrievedAt": "2026-11-11",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "OM",
+      "name": "Oman",
+      "flag": "🇴🇲",
+      "category": "Middle East",
+      "sweetSpot": "professional",
+      "officialRate": null,
+      "africanRate": null,
+      "trueCost": null,
+      "timeline": null,
+      "dataStatus": "evidence_required",
+      "source": {
+        "authority": "Oman Ministry of Labour",
+        "url": "https://mol.gov.om/",
+        "retrievedAt": "2026-11-11",
+        "confidence": "medium"
+      }
     }
   ]
 }

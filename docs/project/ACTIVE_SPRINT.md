@@ -27,19 +27,19 @@ Single source of truth for all outstanding work. Status: DONE / PENDING / BLOCKE
 
 | ID | Task | File | Status |
 |---|---|---|---|
-| P2-1 | Add Bulgaria (BG) to `countries.json` | `src/data/countries.json` | **PENDING** |
-| P2-2 | Add Croatia (HR) to `countries.json` | `src/data/countries.json` | **PENDING** |
-| P2-3 | Add Guyana (GY) to `countries.json` | `src/data/countries.json` | **PENDING** |
-| P2-4 | Add BG-study pathway to `pathways.json` | `src/data/pathways.json` | **PENDING** |
-| P2-5 | Add HR-study pathway to `pathways.json` | `src/data/pathways.json` | **PENDING** |
-| P2-6 | Add GY-freelance-work pathway to `pathways.json` | `src/data/pathways.json` | **PENDING** |
-| P2-7 | Add OM-employer-sponsored-trades pathway to `pathways.json` | `src/data/pathways.json` | **PENDING** |
-| P2-8 | Add D7: `IE-healthcare-skilled-2026` demand record | `src/data/occupation-demand.json` | **PENDING** |
-| P2-9 | Add D8: `NL-software-it-skilled-2026` demand record | `src/data/occupation-demand.json` | **PENDING** |
-| P2-10 | Update `validate-data.js` country count 31→34 after BG/HR/GY added | `scripts/validate-data.js` | **PENDING** |
-| P2-11 | Update test files for new country count | `tests/data-contract.test.js`, `tests/country-source-manifest.test.js`, `tests/evidence-registry.test.js` | **PENDING** |
-| P2-12 | Regenerate country source manifest | `scripts/generate-country-source-manifest.js --write` | **PENDING** |
-| P2-13 | Commit + push P2 data additions | — | **PENDING** |
+| P2-1 | Add Bulgaria (BG) to `countries.json` | `src/data/countries.json` | **DONE** |
+| P2-2 | Add Croatia (HR) to `countries.json` | `src/data/countries.json` | **DONE** |
+| P2-3 | Add Guyana (GY) to `countries.json` | `src/data/countries.json` | **DONE** |
+| P2-4 | Add BG-study pathway to `pathways.json` | `src/data/pathways.json` | **DONE** |
+| P2-5 | Add HR-study pathway to `pathways.json` | `src/data/pathways.json` | **DONE** |
+| P2-6 | Add GY-freelance-work pathway to `pathways.json` | `src/data/pathways.json` | **DONE** |
+| P2-7 | Add OM-employer-sponsored-trades pathway to `pathways.json` | `src/data/pathways.json` | **DONE** |
+| P2-8 | Add D7: `IE-healthcare-skilled-2026` demand record | `src/data/occupation-demand.json` | **DONE** |
+| P2-9 | Add D8: `NL-software-it-skilled-2026` demand record | `src/data/occupation-demand.json` | **DONE** |
+| P2-10 | Update `validate-data.js` country count 31→34 after BG/HR/GY added | `scripts/validate-data.js` | **DONE** |
+| P2-11 | Update test files for new country count | `tests/data-contract.test.js`, `tests/country-source-manifest.test.js`, `tests/evidence-registry.test.js` | **DONE** |
+| P2-12 | Regenerate country source manifest | `scripts/generate-country-source-manifest.js --write` | **DONE** |
+| P2-13 | Commit + push P2 data additions | — | **DONE** |
 
 ---
 
@@ -47,11 +47,11 @@ Single source of truth for all outstanding work. Status: DONE / PENDING / BLOCKE
 
 | ID | Task | File | Status |
 |---|---|---|---|
-| P3-1 | W14: Antigua and Barbuda visa from Nigeria — safety framing, job-on-arrival pattern | `content/blog/country-audits/antigua-barbuda/antigua-barbuda-visa-from-nigeria-2026.md` | **PENDING** |
+| P3-1 | W14: Antigua and Barbuda visa from Nigeria — safety framing, job-on-arrival pattern | `content/blog/country-audits/antigua-barbuda/antigua-barbuda-visa-from-nigeria-2026.md` | **DONE** |
 | P3-2 | Bulgaria country audit blog post (W8 written as guide, needs country audit format) | Already done as W8 | **DONE** |
 | P3-3 | Croatia country audit blog post | Already done as W9 | **DONE** |
 | P3-4 | Guyana country audit blog post | Already done as W7 | **DONE** |
-| P3-5 | Commit + push P3 content | — | **PENDING** |
+| P3-5 | Commit + push P3 content | — | **DONE** |
 
 ---
 
@@ -151,9 +151,9 @@ These are the next content items after deployment. No code blocker.
 | Metric | Current | Target (next deploy) |
 |---|---|---|
 | Blog posts | 125 | 126 (after W14) |
-| Countries in registry | 31 | 34 (after BG/HR/GY) |
-| Pathways | 71 | 75 (after BG/HR/GY/OM) |
-| Demand records | 22 | 24 (after D7 IE, D8 NL) |
+| Countries in registry | 35 | 35 ? (after BG/HR/GY) |
+| Pathways | 75 | 75 ? (after BG/HR/GY/OM) |
+| Demand records | 24 | 24 ? (after D7 IE, D8 NL) |
 | Evidence records | 222 | 222 |
 | Sitemap URLs | 181 | 181 ✓ |
 | Tests | 214/214 | 214/214 |
