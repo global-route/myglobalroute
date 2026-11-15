@@ -1,5 +1,5 @@
 # ACTIVE SPRINT TASKFILE — MyPathway2Global
-**Updated:** 2026-11-11 | **Commit:** `b6e5d7b` | **Tests:** 19/19, 214/214
+**Updated:** 2026-11-11 | **Commit:** `73e498c` | **Tests:** 19/19, 214/214
 **Posts:** 126 | **Countries:** 35 | **Pathways:** 75 | **Demand records:** 24 | **Evidence records:** 222
 **Data validation:** PASSED | **Stale requirements:** 1 (IE-critical-skills — evidence-date locked)
 
@@ -61,13 +61,13 @@ These are research actions that feed future content and agent pipeline. No code 
 
 | ID | Task | Source | Output |
 |---|---|---|---|
-| R1 | Verify Canada Francophone Immigration Pilot current status at canada.ca � confirm FCIP is still active and occupation list unchanged | `canada.ca/francophone-community` | **DONE** � FCIP active, claims verified |
-| R2 | Verify Guyana freelance work permit at immigration.gov.gy � confirm 2-year permit still active, current fees | `immigration.gov.gy` | **DONE** � 2-year permit confirmed |
-| R3 | Verify Oman Ministry of Labour trades salary data � confirm OMR 150-350 range is current | `mol.gov.om` | **DONE** � OMR range confirmed |
-| R4 | Verify Bulgaria Schengen land border status � confirm Jan 2025 land border accession | `mfa.bg` | **DONE** � Jan 2025 confirmed |
-| R5 | Verify Netherlands Highly Skilled Migrant salary thresholds for 2026 � EUR 46,107 / EUR 63,503 | `ind.nl` | **DONE** � thresholds confirmed |
-| R6 | Verify Ireland NMBI registration fee � EUR 330 current | `nmbi.ie` | **DONE** � EUR 330 confirmed |
-| R7 | Verify Germany Pflegekrafte B1 language acceptance � confirm B1 is accepted for care roles | `make-it-in-germany.com` | **DONE** � B1 confirmed |
+| R1 | Verify Canada Francophone Immigration Pilot current status at canada.ca � confirm FCIP is still active and occupation list unchanged | `canada.ca/francophone-community` | **DONE** � FCIP active, claims verified |
+| R2 | Verify Guyana freelance work permit at immigration.gov.gy � confirm 2-year permit still active, current fees | `immigration.gov.gy` | **DONE** � 2-year permit confirmed |
+| R3 | Verify Oman Ministry of Labour trades salary data � confirm OMR 150-350 range is current | `mol.gov.om` | **DONE** � OMR range confirmed |
+| R4 | Verify Bulgaria Schengen land border status � confirm Jan 2025 land border accession | `mfa.bg` | **DONE** � Jan 2025 confirmed |
+| R5 | Verify Netherlands Highly Skilled Migrant salary thresholds for 2026 � EUR 46,107 / EUR 63,503 | `ind.nl` | **DONE** � thresholds confirmed |
+| R6 | Verify Ireland NMBI registration fee � EUR 330 current | `nmbi.ie` | **DONE** � EUR 330 confirmed |
+| R7 | Verify Germany Pflegekrafte B1 language acceptance � confirm B1 is accepted for care roles | `make-it-in-germany.com` | **DONE** � B1 confirmed |
 | R8 | Agent vetting research — 8 companies from WAA_RESEARCH_PREP.md Section 8 | See WAA_RESEARCH_PREP.md | Feed WAA-3a agent pipeline |
 
 **Agent companies to research (from field research images):**
@@ -119,7 +119,7 @@ npx wrangler deploy
 | Gate | Command | Status |
 |---|---|---|
 | Tests | `npm test` | 19/19, 214/214 PASS |
-| Data validation | `node scripts/validate-data.js` | PASS — 31 countries, 71 pathways, 222 evidence records |
+| Data validation | `node scripts/validate-data.js` | PASS — 35 countries, 75 pathways, 222 evidence records |
 | Agent registry | `node scripts/validate-agent-registry.js` | PASS (0 verified agents) |
 | Commercial registry | `node scripts/validate-commercial-registry.js` | PASS |
 | Build integrity | `node scripts/verify-build.js` | PASS |
@@ -143,43 +143,52 @@ These are the next content items after deployment. No code blocker.
 | N8 | Real budget breakdown: Nigeria to UAE (construction/healthcare worker) | Case Study | Gap area in CONTENT_PIPELINE.md |
 | N9 | Visa rejection recovery — what happened after refusal and what changed | Case Study | Gap area in CONTENT_PIPELINE.md |
 | N10 | UK Innovator Founder Visa — updated with current endorsing bodies | Professional Playbook | Existing post needs freshness update |
+| N11 | Ireland Critical Skills for African software engineers — EUR 38,000 threshold | Guide — Work | High paid-ad signal from field research |
+| N12 | French language as a Canada PR strategy — Oct 27 draw CRS 407 vs 490+ general | Professional Playbook | Extends W2, strong audience demand |
+| N13 | Serbia work visa — what the 69.4M-view TikTok ads aren't telling you | Guide — Work | Safety framing, massive reach signal |
+| N14 | Germany Ausbildung for Nigerians — why most people fail | Guide — Work | Debunk signal from field research |
+| N15 | Finland work permit for African software developers | Guide — Work | Paid-ad signal, Nordic tech corridor |
+| N16 | European study destinations 2027 — Lithuania, Slovakia, Latvia, Norway compared | Guide — Study | Sep 2027 intake, high search intent |
+
+**Also from Researchprop research — existing post updates (no new file):**
+- Canada Express Entry 2026: add CEC no-proof-of-funds callout + PTE Core as accepted test
+- Germany care work W22: add honest Ausbildung section
 
 ---
 
 ## Platform state summary
 
-| Metric | Current | Target (next deploy) |
-|---|---|---|
-| Blog posts | 126 | 126 ? |
-| Countries in registry | 35 | 35 ? (after BG/HR/GY) |
-| Pathways | 75 | 75 ? (after BG/HR/GY/OM) |
-| Demand records | 24 | 24 ? (after D7 IE, D8 NL) |
-| Evidence records | 222 | 222 |
-| Sitemap URLs | 181 | 181 ✓ |
-| Tests | 214/214 | 214/214 |
-| Data validation | PASSED | PASSED |
-| Watermark coverage | 125/125 posts | 125/125 |
-| Agent records (verified) | 0 | 1 (after WAA-3a owner action) |
+| Metric | Current (73e498c) |
+|---|---|
+| Blog posts | 126 |
+| Countries in registry | 35 |
+| Pathways | 75 |
+| Demand records | 24 |
+| Evidence records | 222 |
+| Sitemap URLs | 181 |
+| Tests | 214/214 PASS |
+| Data validation | PASSED |
+| Watermark coverage | 126/126 posts |
+| Agent records (verified) | 0 — blocked on owner |
 
 ---
 
-## Execution order recommendation
+## Execution order — next actions
 
-**Before deploy (code tasks — no owner needed):**
-1. P1-1 to P1-4 (sitemap update) — ~20 min
-2. P2-1 to P2-13 (BG/HR/GY countries + pathways + demand records) — ~45 min
-3. P3-1 (W14 Antigua post) — ~20 min
-4. Full test + data validation + build verify
-5. Commit + push
+**Ready to write now (no blocker):**
+1. R6 — Canada RCIP post (HIGH — opens Jan 1, 2027)
+2. N16 — European study destinations 2027 (HIGH — Sep 2027 intake)
+3. N11/N12/N15 — Ireland/French Canada/Finland work posts (MEDIUM)
+4. NEW-B1/NEW-B2 — RAK + Antigua CBI business playbooks (MEDIUM, verify sources first)
+5. WM-8 to WM-13 — Sprint A hybrid watermark completion
 
-**Deploy (owner action):**
-6. `npm install --save-dev wrangler@3 && npx wrangler deploy`
-7. Post-deploy smoke test
-
-**After deploy (ongoing):**
-8. R1-R7 research verification
-9. R8 agent company research — feeds WAA-3a
-10. N1-N10 next content sprint
+**Deploy (owner action — ready now):**
+```bash
+npm install --save-dev wrangler@3
+npx wrangler deploy
+```
+Then: post-deploy smoke test + axe ARIA audit
 
 **Blocked until owner action:**
-- WAA-3a-1 to 5 — first verified agent
+- WAA-3a-1 to 5 — first verified agent (R8 agent company research feeds this)
+- Working-holiday article verification AU/IE/NZ (Action 6 in OWNER_ACTIONS.md)
