@@ -38,8 +38,26 @@ const countries = read('data/countries.json');
 const pathways = read('data/pathways.json');
 const evidence = read('data/evidence/primary-source-verified.json');
 const routeFinder = read('pages/find-mypathway.html');
+const calculator = read('pages/calculator.html');
+const countriesPage = read('pages/countries.html');
 
 if (index && !index.includes('<title>MyPathway2Global')) errors.push('generated homepage is missing the expected title');
+if (routeFinder) {
+  if (!/<title>.*Find MyPathway/i.test(routeFinder)) errors.push('find-mypathway.html is missing the expected title');
+  if (!routeFinder.includes('/js/route-engine.js')) errors.push('generated Find My Route page is missing the canonical route engine script tag');
+  if (!routeFinder.includes('name="goal"')) errors.push('find-mypathway.html is missing goal selector');
+  if (!routeFinder.includes('name="budget"')) errors.push('find-mypathway.html is missing budget input');
+  if (!routeFinder.includes('name="region"')) errors.push('find-mypathway.html is missing region selector');
+  if (!routeFinder.includes('id="route-results"')) errors.push('find-mypathway.html is missing #route-results container');
+  if (routeFinder.includes('data-ad-slot')) errors.push('find-mypathway.html must not contain display ad slots');
+}
+if (calculator) {
+  if (!/<title>.*Calculator/i.test(calculator)) errors.push('calculator.html is missing the expected title');
+  if (!calculator.includes('ca-pub-8077583188666813')) errors.push('calculator.html is missing verified AdSense publisher ID');
+}
+if (countriesPage) {
+  if (!/<title>.*(?:Country Directory|Countries)/i.test(countriesPage)) errors.push('countries.html is missing the expected title');
+}
 if (countries) {
   try {
     const payload = JSON.parse(countries);

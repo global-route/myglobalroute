@@ -38,7 +38,7 @@ If Nigeria is NOT listed: set `eligibilityReviewStatus: verified-ineligible`, up
 |---|---|---|---|---|
 | R1 | Guyana 2-Year Freelance Work Visa | `content/blog/country-audits/guyana/guyana-visa-from-nigeria-2026.md` | No research done — verify at `immigration.gov.gy` | 1-2 hrs |
 | R2 | Indonesia Tourist/Business Visa | `content/blog/country-audits/indonesia/indonesia-visa-from-nigeria-2026.md` | No research done — verify at `imigrasi.go.id` | 1-2 hrs |
-| R6 | Canada RCIP | `content/blog/playbooks/professional/canada-rcip-rural-immigration-2026.md` | Program status unclear (may be replaced) — verify at `canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-northern-immigration-pilot.html` | 2 hrs |
+| R6 | Canada RCIP | `content/blog/playbooks/professional/canada-rcip-rural-immigration-2026.md` | **UNBLOCKED** — permanent programme confirmed Nov 9, 2026, opens Jan 1, 2027. Verify at `canada.ca/en/immigration-refugees-citizenship/news/2026/11/overview-of-the-rural-community-immigration-program.html` | 2 hrs |
 
 ---
 
@@ -160,3 +160,40 @@ Full details, primary sources, and write order in `docs/engineering/WAA_RESEARCH
 | W20 | Poland construction and manufacturing work permit 2026 | `guides/work/poland-construction-work-permit-2026.md` |
 | W21 | Ireland nursing visa — NMBI registration step by step | `guides/work/ireland-nursing-visa-nmbi-registration-2026.md` |
 | W22 | Germany care work visa (Pflegekräfte) | `guides/work/germany-care-work-visa-pflegekrafte-2026.md` |
+
+---
+
+## Researchprop image research — N-series queue (2026-11-11)
+
+Full extraction: `docs/research/researchprop-extraction-2026-11-11.md`
+
+### High priority
+
+| ID | Post | Category | File |
+|---|---|---|---|
+| R6 | Canada RCIP — permanent rural immigration, opens Jan 1, 2027. PR targets: 5,500 (2027) → 6,000 (2028) → 6,500 (2029). 14 communities. Job offer + community recommendation required. | Professional Playbook | `playbooks/professional/canada-rcip-rural-immigration-2026.md` |
+| N16 | European study destinations for Nigerian students 2027 — Lithuania, Slovakia, Latvia, Norway compared (exclude Russia) | Guide — Study | `guides/study/european-study-destinations-nigeria-2027.md` |
+
+### Medium priority
+
+| ID | Post | Category | File |
+|---|---|---|---|
+| N11 | Ireland Critical Skills for African software engineers — EUR 38,000 threshold, what it means in practice | Guide — Work | `guides/work/ireland-critical-skills-software-engineers-2026.md` |
+| N12 | French language as a Canada PR strategy — Oct 27 draw: CRS 407 vs 490+ general; 5,000 invitations | Professional Playbook | `playbooks/professional/canada-french-language-express-entry-strategy-2026.md` |
+| N13 | Serbia work visa — what the 69.4M-view TikTok ads aren't telling you (safety framing) | Guide — Work | `guides/work/serbia-work-visa-tiktok-ads-reality-2026.md` |
+| N15 | Finland work permit for African software developers — salary threshold ~EUR 3,000/month, process, timeline | Guide — Work | `guides/work/finland-work-permit-software-developers-2026.md` |
+| NEW-B1 | RAK free zone company formation for African entrepreneurs — privacy vs CRS, ~$900 registry fee | Business Playbook | `playbooks/business/rak-free-zone-company-formation-africa-2026.md` |
+| NEW-B2 | Antigua CBI — what $230,000 buys, CRS implications, UK access status | Business Playbook | `playbooks/business/antigua-barbuda-citizenship-by-investment-2026.md` |
+
+### Low priority
+
+| ID | Post | Category | File |
+|---|---|---|---|
+| N14 | Germany Ausbildung for Nigerians — why most people fail and what actually works | Guide — Work | `guides/work/germany-ausbildung-nigerians-honest-guide-2026.md` |
+
+### Existing post updates (no new file needed)
+
+| Post | Update |
+|---|---|
+| Canada Express Entry 2026 | Add CEC no-proof-of-funds callout; add PTE Core as accepted test alongside IELTS |
+| Germany care work visa W22 | Add honest Ausbildung section |
