@@ -2760,23 +2760,7 @@
       "visaName": "Type D Long-Stay Visa",
       "officialUrl": "https://www.mfa.bg/en/",
       "sourceAuthority": "Bulgarian Ministry of Foreign Affairs",
-      "sourceUrl": "https://www.mfa.bg/en/",
-      "requirements": [
-        {
-          "id": "BG-study-admission-offer-2026-11-11",
-          "field": "admission_offer",
-          "label": "University admission letter",
-          "value": true,
-          "effectiveDate": "2026-11-11",
-          "sourceUrl": "https://www.mfa.bg/en/",
-          "evidenceIds": [
-            "BG-study-admission-offer-2026-11-11"
-          ],
-          "notes": "Admission letter from a Bulgarian state-accredited university required.",
-          "kind": "boolean",
-          "jurisdiction": "Bulgaria"
-        }
-      ]
+      "sourceUrl": "https://www.mfa.bg/en/"
     },
     {
       "id": "HR-study",
@@ -2787,23 +2771,7 @@
       "visaName": "Type D Long-Stay Visa",
       "officialUrl": "https://mup.gov.hr/",
       "sourceAuthority": "Croatian Ministry of the Interior",
-      "sourceUrl": "https://mup.gov.hr/",
-      "requirements": [
-        {
-          "id": "HR-study-admission-offer-2026-11-11",
-          "field": "admission_offer",
-          "label": "University admission letter",
-          "value": true,
-          "effectiveDate": "2026-11-11",
-          "sourceUrl": "https://mup.gov.hr/",
-          "evidenceIds": [
-            "HR-study-admission-offer-2026-11-11"
-          ],
-          "notes": "Admission letter from a Croatian accredited university required. Croatia joined Schengen in January 2023.",
-          "kind": "boolean",
-          "jurisdiction": "Croatia"
-        }
-      ]
+      "sourceUrl": "https://mup.gov.hr/"
     },
     {
       "id": "GY-freelance-work",
@@ -2814,23 +2782,7 @@
       "visaName": "Work Permit (Self-Employed)",
       "officialUrl": "https://immigration.gov.gy/",
       "sourceAuthority": "Guyana Immigration Department",
-      "sourceUrl": "https://immigration.gov.gy/",
-      "requirements": [
-        {
-          "id": "GY-freelance-work-permit-2026-11-11",
-          "field": "job_offer",
-          "label": "Freelance work permit",
-          "value": true,
-          "effectiveDate": "2026-11-11",
-          "sourceUrl": "https://immigration.gov.gy/",
-          "evidenceIds": [
-            "GY-freelance-work-permit-2026-11-11"
-          ],
-          "notes": "Guyana offers a 2-year renewable work permit for self-employed/freelance workers. Oil boom driving demand for skilled professionals. No job offer required for freelance route.",
-          "kind": "boolean",
-          "jurisdiction": "Guyana"
-        }
-      ]
+      "sourceUrl": "https://immigration.gov.gy/"
     },
     {
       "id": "OM-employer-sponsored-trades",
@@ -2841,23 +2793,7 @@
       "visaName": "Oman Work Visa",
       "officialUrl": "https://mol.gov.om/",
       "sourceAuthority": "Oman Ministry of Labour",
-      "sourceUrl": "https://mol.gov.om/",
-      "requirements": [
-        {
-          "id": "OM-trades-job-offer-2026-11-11",
-          "field": "job_offer",
-          "label": "Employer job offer",
-          "value": true,
-          "effectiveDate": "2026-11-11",
-          "sourceUrl": "https://mol.gov.om/",
-          "evidenceIds": [
-            "OM-trades-job-offer-2026-11-11"
-          ],
-          "notes": "Employer-sponsored work visa for trades workers (mechanics, electricians, AC technicians, plumbers). Employer handles visa application. Standard processing 2-4 weeks. Salary OMR 150-300/month. Accommodation typically provided.",
-          "kind": "boolean",
-          "jurisdiction": "Oman"
-        }
-      ]
+      "sourceUrl": "https://mol.gov.om/"
     }
   ]
 }
