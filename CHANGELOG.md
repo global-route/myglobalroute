@@ -4,6 +4,41 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
+## 2026-11-14 — Sprint clear: P1-P4 complete, 315 files deployed, CI deploy workflow added
+
+**Commits:** `334a77a` → `1614757` | **Tests:** 19/19, 214/214 | **Build:** 315 files | **Posts:** 125 → 126 | **Countries:** 31 → 35 | **Pathways:** 71 → 75 | **Demand records:** 22 → 24
+
+### P1 — Sitemap (334a77a)
+- `public/sitemap.xml` — 146 → 181 URLs: all W1-W22 posts added, BG/HR/GY/SG country pages added, all lastmod dates updated to 2026-11-11
+
+### P2 — Data completeness (a72b512)
+- `src/data/countries.json` — added Bulgaria (BG), Croatia (HR), Guyana (GY), Oman (OM) — 31 → 35 countries
+- `src/data/pathways.json` — added BG-study, HR-study, GY-freelance-work, OM-employer-sponsored-trades — 71 → 75 pathways
+- `src/data/occupation-demand.json` — added IE-healthcare-skilled-2026 (D7) and NL-software-it-skilled-2026 (D8) — 22 → 24 demand records
+- `scripts/validate-data.js`, `scripts/generate-country-source-manifest.js` — country count updated 31 → 35
+- `tests/data-contract.test.js`, `tests/country-source-manifest.test.js`, `tests/evidence-registry.test.js` — counts updated 31 → 35, 71 → 75
+- `docs/data/country-source-review-manifest.json` — regenerated for 35 countries
+
+### P3 — Content (ea16bf9)
+- W14: `content/blog/country-audits/antigua-barbuda/antigua-barbuda-visa-from-nigeria-2026.md` — job-on-arrival safety framing, Dola-Bello Trust offer debunked, official work permit process documented
+
+### P4 — Research verification (ff61e18)
+- R1-R7 all verified against live primary sources — no post updates needed
+- R1: FCIP active ✓ | R2: Guyana 2-year permit ✓ | R3: Oman OMR 150-350 ✓ | R4: Bulgaria Schengen Jan 2025 ✓ | R5: NL EUR 46,107/63,503 ✓ | R6: IE NMBI EUR 330 ✓ | R7: DE B1 care roles ✓
+
+### Build fix (1614757)
+- `scripts/verify-build.js` — country count 31 → 35
+
+### Deploy
+- 315 files built and deployed to `mypathway2global.org.uk` via `npx wrangler deploy`
+- Cloudflare Workers Version ID: `6d2994a7-e4b8-476b-8574-a14c6985028e`
+
+### CI deploy workflow
+- `.github/workflows/deploy.yml` added — triggers on push to main, builds site, deploys via wrangler using `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` repository secrets
+- No more local deploy required
+
+---
+
 ## 2026-11-09 — Content sprint W1-W22 complete: 22 posts, 4 new countries, 8 demand records
 
 **Commits:** `168070d` → `70d4b7a` | **Tests:** 19/19 suites, 214/214 passing | **Build:** 302 files | **Posts:** 107 → 125
