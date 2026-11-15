@@ -2,11 +2,11 @@
 
 **Evidence-gated migration intelligence for African Students, Professionals & Business Owners**
 
-**Current status (2026-11-05):** Production live. All phases 0-9, B, CP, GOIF, Vertical B, CRS/Tax series, P0 and P1 complete. 19/19 test suites passing (180/180 tests). See [active sprint](docs/sprints/ACTIVE_SPRINT.md), [phase tracker](docs/project/PHASE_STATUS.md).
+**Current status (2026-11-11):** Production live. All phases 0-9, B, CP, GOIF, Vertical B, CRS/Tax series, P0, P1, WAA-1 to WAA-4, Sprint B (W1-W22) complete. 19/19 test suites passing (214/214 tests). See [active sprint](docs/project/ACTIVE_SPRINT.md), [phase tracker](docs/project/PHASE_STATUS.md).
 
-**Current data baseline:** 30 countries, 69 pathways (63 publishable / 6 research-required), 218+ evidence records; all 63 publishable pathways have structured requirements[].
+**Current data baseline:** 35 countries, 75 pathways, 222+ evidence records, 24 demand records; all publishable pathways have structured requirements[].
 
-**Test status:** 19/19 suites PASS, 180/180 tests PASS. 96 blog posts. 145 sitemap URLs.
+**Test status:** 19/19 suites PASS, 214/214 tests PASS. 126 blog posts. 181 sitemap URLs.
 
 **Live site:** [https://mypathway2global.org.uk](https://mypathway2global.org.uk)
 
@@ -22,15 +22,16 @@ MyPathway2Global is an evidence-gated mobility platform for African passport hol
 
 ## 🎯 Core Features
 
-- **Find MyPathway:** Filter 63 evidence-gated pathways by goal, passport country and current visa — with passport-aware matching, structured requirement evaluation and currency-normalized budget comparison
+- **Find MyPathway:** Filter 75 evidence-gated pathways by goal, passport country and current visa — with passport-aware matching, structured requirement evaluation and currency-normalized budget comparison
 - **Visa Wizard:** Guided 5-step tool for tourists, nomads and undecided movers
-- **Country Directory:** 30 countries with official source trails, registry-backed comparison metrics and evidence status
+- **WorkAbroadAgent:** 4-step wizard matching skilled/semi-skilled workers to verified agents by corridor and occupation
+- **Country Directory:** 35 countries with official source trails, registry-backed comparison metrics and evidence status
 - **Budget Calculator:** Savings-readiness planning aid — shows countries with verified cost data only
-- **Research Blog:** 96 posts across 7 categories — country audits, playbooks, case studies, guides, policy updates
+- **Research Blog:** 126 posts across 7 categories — country audits, playbooks, case studies, guides, policy updates
 
 ---
 
-## 📝 Blog Content (96 posts — selected highlights)
+## 📝 Blog Content (126 posts — selected highlights)
 
 ### Country Audits (15)
 - [Germany Visa from Nigeria 2026](/blog/country-audits/germany/germany-visa-from-nigeria-2026/) — Zero tuition, €11,208 blocked account, 18-month job search visa
@@ -48,6 +49,18 @@ MyPathway2Global is an evidence-gated mobility platform for African passport hol
 - [New Zealand Visa from Nigeria 2026](/blog/country-audits/new-zealand/new-zealand-visa-from-nigeria-2026/) — SMC direct residence, NZD 20,000 student funds
 - [Japan Visa from Nigeria 2026](/blog/country-audits/japan/japan-visa-from-nigeria-2026/) — MEXT JPY 117,000/month, Engineer visa
 - [South Korea Visa from Nigeria 2026](/blog/country-audits/south-korea/south-korea-visa-from-nigeria-2026/) — KGSP KRW 900,000/month, USD 9,000 student funds
+
+### New additions (Sprint B + WAA)
+- [Antigua and Barbuda Visa from Nigeria 2026](/blog/country-audits/antigua-barbuda/antigua-barbuda-visa-from-nigeria-2026/) — job-on-arrival safety framing
+- [Bulgaria Study Visa 2026](/blog/country-audits/bulgaria/bulgaria-visa-from-nigeria-2026/) — Schengen land border Jan 2025
+- [Croatia Study Visa 2026](/blog/country-audits/croatia/croatia-visa-from-nigeria-2026/) — RIT University, debt trap warning
+- [Guyana Freelance Work Visa 2026](/blog/country-audits/guyana/guyana-visa-from-nigeria-2026/) — 2-year permit
+- [Qatar Work Visa Reality Check 2026](/blog/guides/work/qatar-work-visa-reality-check-2026/)
+- [How to Spot a Fake Travel Agent 2026](/blog/guides/work/how-to-spot-fake-travel-agent-nigeria-2026/)
+- [Kafala Reform Tracker 2026](/blog/guides/work/kafala-reform-tracker-2026/)
+- [Ireland Nursing Visa — NMBI Registration 2026](/blog/guides/work/ireland-nursing-visa-nmbi-registration-2026/)
+- [Germany Care Work Visa (Pflegekräfte) 2026](/blog/guides/work/germany-care-work-visa-pflegekrafte-2026/)
+- [Singapore Employment Pass — COMPASS 2026](/blog/guides/work/singapore-employment-pass-compass-guide-2026/)
 
 ### Student Playbooks (3)
 - [Italy DSU Scholarship Complete Guide](/blog/playbooks/student/italy-dsu-scholarship-complete-guide/) — €15-20K/year in free benefits
@@ -91,12 +104,12 @@ MyPathway2Global is an evidence-gated mobility platform for African passport hol
 │   ├── pages/                         # Static HTML pages (incl. 404.html, visa-wizard.html)
 │   └── templates/                     # Eleventy templates
 ├── content/
-│   └── blog/                          # 96 blog posts (markdown)
+│   └── blog/                          # 126 blog posts (markdown)
 ├── scripts/                           # Validation, build, deploy, stale-audit scripts
-├── tests/                             # Jest unit tests (19 suites, 180 tests)
+├── tests/                             # Jest unit tests (19 suites, 214 tests)
 ├── docs/
-│   ├── project/                       # Phase status, roadmap, task spec
-│   ├── sprints/                       # Active sprint, walkthrough, owner actions
+│   ├── project/                       # Phase status, active sprint, content pipeline
+│   ├── engineering/                   # WAA task files, watermark design
 │   ├── reference/                     # Architecture, design blueprint, SEO
 │   ├── monetization/                  # Revenue roadmap, ad placement
 │   ├── data/                          # Country source manifest
@@ -130,12 +143,12 @@ npx wrangler deploy
 
 ## 📚 Documentation
 
-- [Active Sprint](docs/sprints/ACTIVE_SPRINT.md)
+- [Active Sprint](docs/project/ACTIVE_SPRINT.md)
 - [Phase Status](docs/project/PHASE_STATUS.md)
-- [Owner Actions](docs/sprints/OWNER_ACTIONS.md)
-- [Blog Content Inventory](docs/project/BLOG_CONTENT_INVENTORY.md)
+- [Content Pipeline](docs/project/CONTENT_PIPELINE.md)
+- [Owner Actions](docs/OWNER_ACTIONS.md)
 - [Design Blueprint](docs/reference/DESIGN_BLUEPRINT.md)
-- [Architecture](docs/reference/ARCHITECTURE.md)
+- [WAA Active Task](docs/engineering/WAA_ACTIVE_TASK.md)
 
 ---
 

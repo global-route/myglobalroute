@@ -2,8 +2,8 @@
 
 > **Updated:** 2026-11-11 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 214/214 passing
-> **Commit:** `b6e5d7b` | **Blog posts:** 125 | **Sitemap URLs:** 146 | **Stale requirements:** 1 (IE-critical-skills — evidence-locked)
-> **Data validation:** PASSED — 31 countries, 71 pathways, 222 evidence records
+> **Commit:** `a5267ca` | **Blog posts:** 126 | **Sitemap URLs:** 181 | **Stale requirements:** 1 (IE-critical-skills — evidence-locked)
+> **Data validation:** PASSED — 35 countries, 75 pathways, 222 evidence records, 24 demand records
 
 ---
 
@@ -36,9 +36,10 @@
 | WAA-3a — First verified agent | **Blocked** | Owner: vet agent, sign agreement, add to agents.json |
 | WCAG 2.1 AA | **Complete** | Re-run axe after next deploy |
 | Sprint A — Watermark trust layer | **WM-1 to WM-7 done** | WM-8 to WM-13 pending (hybrid design) |
-| Sprint B — W1-W22 content | **17/22 done** | W14/W19/W20/W21/W22 pending |
-| Sprint C — Demand records | **7/8 done** | D7 IE-healthcare pending |
-| Sprint D — New countries | **3/4 done** | C4 Oman pathway record pending |
+| Sprint B — W1-W22 content | **Complete** | All 22 posts done |
+| Sprint C — Demand records | **8/8 done** | — |
+| Sprint D — New countries | **4/4 done** | — |
+| Researchprop image extraction | **Complete** | N11-N16 content queue added to pipeline |
 
 ---
 
