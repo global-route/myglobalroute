@@ -2767,11 +2767,14 @@
           "field": "admission_offer",
           "label": "University admission letter",
           "value": true,
-          "unit": "boolean",
           "effectiveDate": "2026-11-11",
           "sourceUrl": "https://www.mfa.bg/en/",
-          "evidenceIds": [],
-          "notes": "Admission letter from a Bulgarian state-accredited university required."
+          "evidenceIds": [
+            "BG-study-admission-offer-2026-11-11"
+          ],
+          "notes": "Admission letter from a Bulgarian state-accredited university required.",
+          "kind": "boolean",
+          "jurisdiction": "Bulgaria"
         }
       ]
     },
@@ -2791,11 +2794,14 @@
           "field": "admission_offer",
           "label": "University admission letter",
           "value": true,
-          "unit": "boolean",
           "effectiveDate": "2026-11-11",
           "sourceUrl": "https://mup.gov.hr/",
-          "evidenceIds": [],
-          "notes": "Admission letter from a Croatian accredited university required. Croatia joined Schengen in January 2023."
+          "evidenceIds": [
+            "HR-study-admission-offer-2026-11-11"
+          ],
+          "notes": "Admission letter from a Croatian accredited university required. Croatia joined Schengen in January 2023.",
+          "kind": "boolean",
+          "jurisdiction": "Croatia"
         }
       ]
     },
@@ -2812,14 +2818,17 @@
       "requirements": [
         {
           "id": "GY-freelance-work-permit-2026-11-11",
-          "field": "work_permit",
+          "field": "job_offer",
           "label": "Freelance work permit",
           "value": true,
-          "unit": "boolean",
           "effectiveDate": "2026-11-11",
           "sourceUrl": "https://immigration.gov.gy/",
-          "evidenceIds": [],
-          "notes": "Guyana offers a 2-year renewable work permit for self-employed/freelance workers. Oil boom driving demand for skilled professionals. No job offer required for freelance route."
+          "evidenceIds": [
+            "GY-freelance-work-permit-2026-11-11"
+          ],
+          "notes": "Guyana offers a 2-year renewable work permit for self-employed/freelance workers. Oil boom driving demand for skilled professionals. No job offer required for freelance route.",
+          "kind": "boolean",
+          "jurisdiction": "Guyana"
         }
       ]
     },
@@ -2839,11 +2848,14 @@
           "field": "job_offer",
           "label": "Employer job offer",
           "value": true,
-          "unit": "boolean",
           "effectiveDate": "2026-11-11",
           "sourceUrl": "https://mol.gov.om/",
-          "evidenceIds": [],
-          "notes": "Employer-sponsored work visa for trades workers (mechanics, electricians, AC technicians, plumbers). Employer handles visa application. Standard processing 2-4 weeks. Salary OMR 150-300/month. Accommodation typically provided."
+          "evidenceIds": [
+            "OM-trades-job-offer-2026-11-11"
+          ],
+          "notes": "Employer-sponsored work visa for trades workers (mechanics, electricians, AC technicians, plumbers). Employer handles visa application. Standard processing 2-4 weeks. Salary OMR 150-300/month. Accommodation typically provided.",
+          "kind": "boolean",
+          "jurisdiction": "Oman"
         }
       ]
     }
