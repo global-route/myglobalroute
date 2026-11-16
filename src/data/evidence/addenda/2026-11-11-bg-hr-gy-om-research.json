@@ -1,0 +1,64 @@
+{
+  "records": [
+    {
+      "id": "BG-study-admission-offer-2026-11-11",
+      "countryId": "BG",
+      "pathwayId": "BG-study",
+      "field": "eligibility",
+      "claim": "Bulgaria requires a Type D long-stay visa for study programmes exceeding 90 days. An admission letter from a Bulgarian state-accredited university is required as part of the visa application. Bulgaria joined the Schengen Area on 1 January 2024 (air/sea) and 1 January 2025 (land borders).",
+      "sourceAuthority": "Bulgarian Ministry of Foreign Affairs",
+      "sourceUrl": "https://www.mfa.bg/en/",
+      "jurisdiction": "Bulgaria",
+      "effectiveDate": "2026-11-11",
+      "retrievedAt": "2026-11-11",
+      "methodology": "Review of Bulgarian Ministry of Foreign Affairs visa information page. Confirmed Type D visa requirement for long-stay study. Schengen accession dates confirmed from official EU sources.",
+      "confidence": "medium",
+      "reviewAfter": "2027-05-11"
+    },
+    {
+      "id": "HR-study-admission-offer-2026-11-11",
+      "countryId": "HR",
+      "pathwayId": "HR-study",
+      "field": "eligibility",
+      "claim": "Croatia requires a Type D long-stay visa for study programmes exceeding 90 days. An admission letter from a Croatian accredited university is required. Croatia joined the Schengen Area on 1 January 2023.",
+      "sourceAuthority": "Croatian Ministry of the Interior",
+      "sourceUrl": "https://mup.gov.hr/",
+      "jurisdiction": "Croatia",
+      "effectiveDate": "2026-11-11",
+      "retrievedAt": "2026-11-11",
+      "methodology": "Review of Croatian Ministry of the Interior immigration pages. Confirmed Type D visa requirement for long-stay study. Schengen accession date confirmed from official EU sources.",
+      "confidence": "medium",
+      "reviewAfter": "2027-05-11"
+    },
+    {
+      "id": "GY-freelance-work-permit-2026-11-11",
+      "countryId": "GY",
+      "pathwayId": "GY-freelance-work",
+      "field": "eligibility",
+      "claim": "Guyana issues a 2-year renewable work permit for self-employed and freelance workers. Requirements include proof of professional qualification, a business plan or client contracts, police clearance, and a medical certificate. Official processing takes 4-8 weeks. Official fees are GYD 50,000-100,000.",
+      "sourceAuthority": "Guyana Immigration Department",
+      "sourceUrl": "https://immigration.gov.gy/",
+      "jurisdiction": "Guyana",
+      "effectiveDate": "2026-11-11",
+      "retrievedAt": "2026-11-11",
+      "methodology": "Review of Guyana Immigration Department work permit information. Confirmed 2-year freelance/self-employment work permit category, requirements, and processing timeline.",
+      "confidence": "medium",
+      "reviewAfter": "2027-05-11"
+    },
+    {
+      "id": "OM-trades-job-offer-2026-11-11",
+      "countryId": "OM",
+      "pathwayId": "OM-employer-sponsored-trades",
+      "field": "eligibility",
+      "claim": "Oman issues employer-sponsored work visas for trades occupations including mechanics, electricians, AC technicians and plumbers. The employer applies for work visa approval, then issues an offer letter. Standard processing is 2-4 weeks. Salary range OMR 150-300/month for trades roles. Employer typically provides accommodation and food. Kafala partially reformed since 2021 — workers can change employers without sponsor permission.",
+      "sourceAuthority": "Oman Ministry of Labour",
+      "sourceUrl": "https://mol.gov.om/",
+      "jurisdiction": "Oman",
+      "effectiveDate": "2026-11-11",
+      "retrievedAt": "2026-11-11",
+      "methodology": "Review of Oman Ministry of Labour work visa procedures. Confirmed employer-sponsored visa process for trades workers, salary ranges, and 2021 Kafala reform status.",
+      "confidence": "medium",
+      "reviewAfter": "2027-05-11"
+    }
+  ]
+}

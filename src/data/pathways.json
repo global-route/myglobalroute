@@ -2760,7 +2760,22 @@
       "visaName": "Type D Long-Stay Visa",
       "officialUrl": "https://www.mfa.bg/en/",
       "sourceAuthority": "Bulgarian Ministry of Foreign Affairs",
-      "sourceUrl": "https://www.mfa.bg/en/"
+      "sourceUrl": "https://www.mfa.bg/en/",
+      "requirements": [
+        {
+          "id": "BG-study-admission-offer-2026-11-11",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "label": "University admission letter",
+          "value": true,
+          "jurisdiction": "Bulgaria",
+          "effectiveDate": "2026-11-11",
+          "sourceUrl": "https://www.mfa.bg/en/",
+          "evidenceIds": [
+            "BG-study-admission-offer-2026-11-11"
+          ]
+        }
+      ]
     },
     {
       "id": "HR-study",
@@ -2771,7 +2786,22 @@
       "visaName": "Type D Long-Stay Visa",
       "officialUrl": "https://mup.gov.hr/",
       "sourceAuthority": "Croatian Ministry of the Interior",
-      "sourceUrl": "https://mup.gov.hr/"
+      "sourceUrl": "https://mup.gov.hr/",
+      "requirements": [
+        {
+          "id": "HR-study-admission-offer-2026-11-11",
+          "field": "admission_offer",
+          "kind": "boolean",
+          "label": "University admission letter",
+          "value": true,
+          "jurisdiction": "Croatia",
+          "effectiveDate": "2026-11-11",
+          "sourceUrl": "https://mup.gov.hr/",
+          "evidenceIds": [
+            "HR-study-admission-offer-2026-11-11"
+          ]
+        }
+      ]
     },
     {
       "id": "GY-freelance-work",
@@ -2782,7 +2812,22 @@
       "visaName": "Work Permit (Self-Employed)",
       "officialUrl": "https://immigration.gov.gy/",
       "sourceAuthority": "Guyana Immigration Department",
-      "sourceUrl": "https://immigration.gov.gy/"
+      "sourceUrl": "https://immigration.gov.gy/",
+      "requirements": [
+        {
+          "id": "GY-freelance-work-permit-2026-11-11",
+          "field": "job_offer",
+          "kind": "boolean",
+          "label": "Freelance work permit",
+          "value": true,
+          "jurisdiction": "Guyana",
+          "effectiveDate": "2026-11-11",
+          "sourceUrl": "https://immigration.gov.gy/",
+          "evidenceIds": [
+            "GY-freelance-work-permit-2026-11-11"
+          ]
+        }
+      ]
     },
     {
       "id": "OM-employer-sponsored-trades",
@@ -2793,7 +2838,22 @@
       "visaName": "Oman Work Visa",
       "officialUrl": "https://mol.gov.om/",
       "sourceAuthority": "Oman Ministry of Labour",
-      "sourceUrl": "https://mol.gov.om/"
+      "sourceUrl": "https://mol.gov.om/",
+      "requirements": [
+        {
+          "id": "OM-trades-job-offer-2026-11-11",
+          "field": "job_offer",
+          "kind": "boolean",
+          "label": "Employer job offer",
+          "value": true,
+          "jurisdiction": "Oman",
+          "effectiveDate": "2026-11-11",
+          "sourceUrl": "https://mol.gov.om/",
+          "evidenceIds": [
+            "OM-trades-job-offer-2026-11-11"
+          ]
+        }
+      ]
     }
   ]
 }
