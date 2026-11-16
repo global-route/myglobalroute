@@ -1,9 +1,106 @@
 # Content Pipeline
-**Updated:** 2026-11-09 | **Live posts:** 107 | **Sitemap URLs:** 145
+**Updated:** 2026-11-16 | **Live posts:** 126 | **Sitemap URLs:** 181
 
 ---
 
-## What's live (107 posts)
+## What's live (126 posts)
+
+| Category | Count |
+|---|---|
+| Country Audits | 40 — all 35 countries covered (incl. BG, HR, GY, Antigua) |
+| Guides | 55 |
+| Professional Playbooks | 13 |
+| Student Playbooks | 8 |
+| Business Playbooks | 3 |
+| Case Studies | 2 |
+| Policy Updates | 5 |
+
+---
+
+## W1-W22 sprint — ALL COMPLETE
+
+All 22 posts from the Researchprop image research are live. See `docs/engineering/WAA_RESEARCH_PREP.md` for full research doc.
+
+---
+
+## Under correction
+
+Three working-holiday articles have correction banners live. Nigerian eligibility claims are unverified.
+
+| Article | File | Action required |
+|---|---|---|
+| Australia Working Holiday Visa 2026 | `content/blog/guides/work/australia-working-holiday-visa-2026.md` | Verify at `immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462` |
+| Ireland Working Holiday Authorisation 2026 | `content/blog/guides/work/ireland-working-holiday-authorisation-2026.md` | Verify at `irishimmigration.ie/coming-to-work-in-ireland/what-are-my-work-visa-options/working-holiday-authorisation/` |
+| New Zealand Working Holiday Visa 2026 | `content/blog/guides/work/new-zealand-working-holiday-visa-2026.md` | Verify at `immigration.govt.nz/new-zealand-visas/visas/visa/working-holiday-visa` |
+
+---
+
+## Next sprint — N-series (priority order)
+
+### Tier 1 — High priority (write now)
+
+| ID | Post | Category | File | Why |
+|---|---|---|---|---|
+| R6 | Canada RCIP — permanent rural immigration, opens Jan 1 2027 | Professional Playbook | `playbooks/professional/canada-rcip-rural-immigration-2026.md` | New permanent programme confirmed Nov 2026. 5,500 PR targets. Time-sensitive. |
+| N1 | Canada healthcare — nurses via Provincial Nominee Programs | Professional Playbook | `playbooks/professional/canada-healthcare-nurses-pnp-2026.md` | High-volume corridor, no dedicated post, IE healthcare demand record exists |
+| N6 | Canada PNP tech streams — Ontario, BC, Alberta | Professional Playbook | `playbooks/professional/canada-pnp-tech-streams-2026.md` | Fastest route for most tech applicants, companion to W1 |
+| N12 | French language as a Canada PR strategy | Professional Playbook | `playbooks/professional/canada-french-language-express-entry-strategy-2026.md` | Oct 27 draw: CRS 407 vs 490+ general. French = 80-point advantage. |
+| N11 | Ireland Critical Skills for African software engineers | Guide — Work | `guides/work/ireland-critical-skills-software-engineers-2026.md` | EUR 38,000 threshold, demand record exists, no dedicated post |
+
+### Tier 2 — Medium priority
+
+| ID | Post | Category | File | Why |
+|---|---|---|---|---|
+| N2 | Germany care work — finding Pflegeheim employers | Guide — Work | `guides/work/germany-pflegeheim-employer-search-2026.md` | Companion to W22, practical next step users need |
+| N3 | UAE trades — electricians and plumbers | Guide — Work | `guides/work/uae-trades-electricians-plumbers-2026.md` | Demand record exists, no post |
+| N4 | Singapore S Pass — mid-skilled route | Guide — Work | `guides/work/singapore-s-pass-mid-skilled-2026.md` | S Pass demand record exists, separate from EP |
+| N5 | Ireland healthcare beyond nursing | Guide — Work | `guides/work/ireland-healthcare-beyond-nursing-2026.md` | IE healthcare demand record covers physio/radiography/OT |
+| N13 | Serbia work visa — what the TikTok ads aren't telling you | Guide — Work | `guides/work/serbia-work-visa-tiktok-ads-reality-2026.md` | 69.4M-view TikTok ads targeting Nigerians. Safety framing needed. |
+| N15 | Finland work permit for African software developers | Guide — Work | `guides/work/finland-work-permit-software-developers-2026.md` | EUR 3,000/month threshold, growing corridor |
+| N16 | European study destinations 2027 — Lithuania, Slovakia, Latvia, Norway | Guide — Study | `guides/study/european-study-destinations-nigeria-2027.md` | Emerging corridors, no posts yet |
+
+### Tier 3 — Case studies and business
+
+| ID | Post | Category | File | Why |
+|---|---|---|---|---|
+| N7 | Real budget breakdown: Nigeria to Germany (Chancenkarte) | Case Study | `case-studies/budget-breakdown-nigeria-germany-chancenkarte-2026.md` | Gap area, high user value |
+| N8 | Real budget breakdown: Nigeria to UAE (construction/healthcare) | Case Study | `case-studies/budget-breakdown-nigeria-uae-2026.md` | Gap area |
+| N9 | Visa rejection recovery — what happened and what changed | Case Study | `case-studies/visa-rejection-recovery-2026.md` | High search demand |
+| N10 | UK Innovator Founder Visa — updated with current endorsing bodies | Professional Playbook | Update existing `playbooks/professional/uk-innovator-founder-visa-2026.md` | Freshness update needed |
+| N14 | Germany Ausbildung for Nigerians — why most people fail | Guide — Work | `guides/work/germany-ausbildung-nigerians-honest-guide-2026.md` | Companion to W22 |
+| NEW-B1 | RAK free zone company formation for African entrepreneurs | Business Playbook | `playbooks/business/rak-free-zone-company-formation-africa-2026.md` | ~$900 registry fee, CRS implications |
+| NEW-B2 | Antigua CBI — what $230,000 buys, CRS implications, UK access | Business Playbook | `playbooks/business/antigua-barbuda-citizenship-by-investment-2026.md` | Complements Antigua country audit |
+
+---
+
+## Existing post updates needed
+
+| Post | Update |
+|---|---|
+| Canada Express Entry 2026 | Add CEC no-proof-of-funds callout; add PTE Core as accepted test |
+| Germany care work visa W22 | Add honest Ausbildung section |
+
+---
+
+## Deferred — needs external input
+
+| Post | Blocker |
+|---|---|
+| Paraguay SUACE/Investor Pass deep-dive | USD 70k threshold unverified — needs immigration lawyer |
+| Tax residency for African remote workers | Needs tax adviser input |
+
+---
+
+## WAA agent pipeline (owner-gated)
+
+All WAA code is live. Blocked on owner actions:
+1. Vet first agent (checklist in `docs/engineering/WORK_ABROAD_AGENT.md`)
+2. Sign commercial agreement
+3. Add to `src/data/agents.json` with `verificationStatus: verified`
+4. Deploy Resend notification Worker (`workers/agent-lead.js`)
+
+Suggested first corridor: **NG-DE / software_it / skilled**
+
 
 | Category | Count |
 |---|---|

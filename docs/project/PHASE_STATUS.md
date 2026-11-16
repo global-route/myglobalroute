@@ -1,9 +1,10 @@
 # Phase Status — MyPathway2Global
 
-> **Updated:** 2026-11-11 | **Release:** GO — production live
+> **Updated:** 2026-11-16 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 214/214 passing
-> **Commit:** `a5267ca` | **Blog posts:** 126 | **Sitemap URLs:** 181 | **Stale requirements:** 1 (IE-critical-skills — evidence-locked)
-> **Data validation:** PASSED — 35 countries, 75 pathways, 222 evidence records, 24 demand records
+> **Commit:** `e91e0d8` | **Blog posts:** 126 | **Sitemap URLs:** 181 | **Stale requirements:** 1 (IE-critical-skills — evidence-locked)
+> **Data validation:** PASSED — 35 countries, 75 pathways, 226 evidence records, 24 demand records
+> **CI deploy:** GitHub Actions workflow live — every push to main auto-deploys via Cloudflare Workers
 
 ---
 
@@ -38,8 +39,9 @@
 | Sprint A — Watermark trust layer | **WM-1 to WM-7 done** | WM-8 to WM-13 pending (hybrid design) |
 | Sprint B — W1-W22 content | **Complete** | All 22 posts done |
 | Sprint C — Demand records | **8/8 done** | — |
-| Sprint D — New countries | **4/4 done** | — |
-| Researchprop image extraction | **Complete** | N11-N16 content queue added to pipeline |
+| Sprint D — New countries | **4/4 done** | BG/HR/GY/OM added, evidence records added |
+| Sprint E — CI/CD | **Complete** | GitHub Actions deploy workflow live |
+| Researchprop image extraction | **Complete** | Images deleted, N11-N16 + R6 content queue documented |
 
 ---
 
@@ -431,15 +433,15 @@ Independent platform. Not affiliated with any government or immigration authorit
 | W11 | Singapore Employment Pass — COMPASS | **Done** `5acb221` |
 | W12 | "Job assistance on arrival" red flag | **Done** `e1c985e` |
 | W13 | "Zero deposit" visa offers explainer | **Done** `e1c985e` |
-| W14 | Antigua and Barbuda visa from Nigeria | **Pending** |
+| W14 | Antigua and Barbuda visa from Nigeria | **Done** `ea16bf9` |
 | W15 | Oman freelance vs employment visa | **Done** `e1c985e` |
 | W16 | Kafala reform tracker 2026 | **Done** `e323e79` |
 | W17 | How to read a Gulf employment contract | **Done** `e323e79` |
 | W18 | Passport confiscation — what to do | **Done** `e323e79` |
-| W19 | Netherlands Highly Skilled Migrant visa | **Pending** |
-| W20 | Poland construction work permit | **Pending** |
-| W21 | Ireland nursing visa — NMBI | **Pending** |
-| W22 | Germany care work visa (Pflegekrafte) | **Pending** |
+| W19 | Netherlands Highly Skilled Migrant visa | **Done** `70d4b7a` |
+| W20 | Poland construction work permit | **Done** `70d4b7a` |
+| W21 | Ireland nursing visa — NMBI | **Done** `70d4b7a` |
+| W22 | Germany care work visa (Pflegekrafte) | **Done** `70d4b7a` |
 
 **5 posts remaining.** W14 (Antigua) needs primary source research. W19-W22 are platform expansion — no blocker.
 
