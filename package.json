@@ -5,7 +5,7 @@
   "main": "src/js/app.js",
   "scripts": {
     "dev": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy",
+    "build": "node scripts/generate-og-image.js && npx @11ty/eleventy",
     "build:old": "npm run build:css && npm run build:js",
     "build:css": "node scripts/build-css.js",
     "build:js": "node scripts/build-js.js",
@@ -50,6 +50,7 @@
     "postcss": "^8.4.35",
     "postcss-cli": "^11.0.0",
     "prettier": "^3.2.5",
+    "sharp": "^0.35.5",
     "wrangler": "^4.155.0"
   },
   "dependencies": {
