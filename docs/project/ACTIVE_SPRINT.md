@@ -181,7 +181,7 @@ No code blocker on any item. Execute in order. Full file paths in `docs/project/
 
 ## Platform state summary
 
-| Metric | Current (73e498c) |
+| Metric | Current (17cc3d4) |
 |---|---|
 | Blog posts | 126 |
 | Countries in registry | 35 |
@@ -193,6 +193,83 @@ No code blocker on any item. Execute in order. Full file paths in `docs/project/
 | Data validation | PASSED |
 | Watermark coverage | 126/126 posts |
 | Agent records (verified) | 0 — blocked on owner |
+| Posts under correction | 3 (AU/IE/NZ working holiday) |
+| Posts evidenceStatus: research-required | 54 |
+
+---
+
+## PRIORITY 9 — Evidence verification queue
+
+### 9A — Under correction (owner action — verify Nigerian eligibility at official source)
+
+| Post | File | Verify at | Status |
+|---|---|---|---|
+| Australia Working Holiday Visa 2026 | `guides/work/australia-working-holiday-visa-2026.md` | `immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462` | ⬜ Owner |
+| Ireland Working Holiday Authorisation 2026 | `guides/work/ireland-working-holiday-authorisation-2026.md` | `irishimmigration.ie/coming-to-work-in-ireland/what-are-my-work-visa-options/working-holiday-authorisation/` | ⬜ Owner |
+| New Zealand Working Holiday Visa 2026 | `guides/work/new-zealand-working-holiday-visa-2026.md` | `immigration.govt.nz/new-zealand-visas/visas/visa/working-holiday-visa` | ⬜ Owner |
+
+For each: if Nigeria IS listed → set `eligibilityReviewStatus: verified-eligible`, remove correction banner. If NOT listed → set `eligibilityReviewStatus: verified-ineligible`, update banner to permanent notice.
+
+---
+
+### 9B — High trust risk (primary source re-verification before next content update)
+
+These are live posts where claims directly affect professional/financial decisions. Verify key figures at primary source before next edit.
+
+| Post | File | Key claims to verify | Status |
+|---|---|---|---|
+| UK Innovator Founder Visa 2026 | `playbooks/professional/uk-innovator-founder-visa-2026.md` | Current endorsing bodies list, GBP 50k investment threshold | ⬜ Pending |
+| France Talent Passport 2026 | `playbooks/professional/france-talent-passport-deep-dive-2026.md` | Salary thresholds, eligible professions | ⬜ Pending |
+| Portugal D3 Highly Qualified 2026 | `playbooks/professional/portugal-d3-highly-qualified-2026.md` | D3 salary threshold, updated 2024 criteria | ⬜ Pending |
+| Namibia Digital Nomad Visa 2026 | `playbooks/professional/namibia-digital-nomad-visa-2026.md` | Programme still active, current fees | ⬜ Pending |
+| Cape Verde Remote Work Visa 2026 | `playbooks/professional/cape-verde-remote-work-visa-2026.md` | Programme still active, current fees | ⬜ Pending |
+| Mauritius Premium Visa 2026 | `playbooks/professional/mauritius-premium-visa-2026.md` | USD 1,500/month threshold, current fees | ⬜ Pending |
+| Saskatchewan PNP Post-Graduation 2026 | `playbooks/professional/saskatchewan-pnp-post-graduation-2026.md` | SINP streams open/closed status | ⬜ Pending |
+| US LLC Setup from Africa 2026 | `playbooks/business/us-llc-setup-from-africa-2026.md` | State fees, registered agent costs | ⬜ Pending |
+| UK Company Setup from Africa 2026 | `playbooks/business/uk-company-setup-from-africa-2026.md` | Companies House fees (updated 2024) | ⬜ Pending |
+| Mauritius Global Business Licence 2026 | `playbooks/business/mauritius-global-business-licence-2026.md` | FSC fees, GBL requirements | ⬜ Pending |
+
+---
+
+### 9C — Student playbooks (annual freshness check — scholarship deadlines change)
+
+| Post | File | Status |
+|---|---|---|
+| Italy DSU Scholarship Complete Guide | `playbooks/student/italy-dsu-scholarship-complete-guide.md` | ⬜ Pending |
+| Italy DSU Need-Blind Scholarship 2026 | `playbooks/student/italy-dsu-need-blind-scholarship-2026.md` | ⬜ Pending |
+| Italy DSU vs Germany Public Universities 2026 | `playbooks/student/italy-dsu-vs-germany-public-universities-2026.md` | ⬜ Pending |
+| UK Masters True Cost 2026 | `playbooks/student/uk-masters-true-cost-2026.md` | ⬜ Pending |
+| Commonwealth Scholarships Nigeria 2026 | `playbooks/student/commonwealth-scholarships-nigeria-2026.md` | ⬜ Pending |
+| DAAD Scholarships Nigeria 2026 | `playbooks/student/daad-scholarships-nigeria-2026.md` | ⬜ Pending |
+| Erasmus Mundus Scholarships Africa 2026 | `playbooks/student/erasmus-mundus-scholarships-africa-2026.md` | ⬜ Pending |
+| University of Saskatchewan Scholarships 2026 | `playbooks/student/university-of-saskatchewan-scholarships-2026.md` | ⬜ Pending |
+
+---
+
+### 9D — Policy updates (freshness check)
+
+| Post | File | Issue | Status |
+|---|---|---|---|
+| Australia TSMIT Increase 2024 | `policy-updates/2026/australia-tsmit-increase-2024.md` | Dated 2024 — verify current TSMIT figure | ⬜ Pending |
+| UK Skilled Worker Salary Threshold Increase 2024 | `policy-updates/2026/uk-skilled-worker-salary-threshold-increase-2024.md` | Dated 2024 — confirm GBP 38,700 still current | ⬜ Pending |
+
+---
+
+### 9E — Quarterly audit cycle (lower urgency — roundup/overview guides)
+
+14 regional roundup guides + 17 general guides carry `evidenceStatus: research-required`. These link out to primary sources rather than making specific claims. Schedule for quarterly stale audit via `node scripts/check-stale-pathways.js`.
+
+Key files:
+- `guides/work/asia-pacific-work-visas-africa-2026.md`
+- `guides/work/europe-work-visas-africa-2026.md`
+- `guides/work/middle-east-work-visas-africa-2026.md`
+- `guides/work/north-america-work-visas-africa-2026.md`
+- `guides/work/intra-africa-work-opportunities-2026.md`
+- `guides/mobility/best-countries-african-digital-nomads-2026.md`
+- `guides/mobility/african-digital-nomad-hubs-2026.md`
+- `guides/tax/*` (6 posts — CRS, FATCA, split residency, UAE, Mauritius, FIRS)
+- `guides/visas/schengen-visa-financial-proof-nigeria-2026.md`
+- `guides/visas/schengen-visa-rejection-recovery-2026.md`
 
 ---
 
@@ -205,6 +282,12 @@ No code blocker on any item. Execute in order. Full file paths in `docs/project/
 4. NEW-B1/NEW-B2 — RAK + Antigua CBI business playbooks (MEDIUM, verify sources first)
 5. WM-8 to WM-13 — Sprint A hybrid watermark completion
 
+**Evidence verification (parallel — can run alongside writing):**
+6. P9A — Owner verifies AU/IE/NZ working holiday eligibility
+7. P9B — Re-verify 10 high trust risk playbooks at primary source
+8. P9C — Student playbook freshness check (annual)
+9. P9D — Policy update freshness check
+
 **Deploy (owner action — ready now):**
 ```bash
 npm install --save-dev wrangler@3
@@ -213,5 +296,7 @@ npx wrangler deploy
 Then: post-deploy smoke test + axe ARIA audit
 
 **Blocked until owner action:**
+- WAA-3a-1 to 5 — first verified agent
+- Working-holiday article verification AU/IE/NZ (P9A above)
 - WAA-3a-1 to 5 — first verified agent (R8 agent company research feeds this)
 - Working-holiday article verification AU/IE/NZ (Action 6 in OWNER_ACTIONS.md)
