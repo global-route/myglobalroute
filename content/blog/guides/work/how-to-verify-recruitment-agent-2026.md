@@ -1,3 +1,4 @@
+postVersion: v2026.11
 ---
 layout: blog-post.njk
 title: "How to Verify a Recruitment Agent is Legitimate 2026: Red Flags and Checks"
@@ -20,6 +21,7 @@ faqs:
     a: "Recruitment agencies placing workers abroad must be licensed by the Federal Ministry of Labour and Employment. You can verify a licence by contacting the Ministry directly at info@labour.gov.ng or visiting the Ministry office. The agency should be able to provide their licence number on request."
   - q: "What is NAPTIP and how does it relate to recruitment fraud?"
     a: "NAPTIP is the National Agency for the Prohibition of Trafficking in Persons. Fraudulent recruitment is a common trafficking vector. If you suspect a recruitment offer is fraudulent or involves trafficking, report it to NAPTIP at naptip.gov.ng or call 0800-NAPTIP-1 (0800-627847-1)."
+postVersion: v2026.11
 ---
 
 # How to Verify a Recruitment Agent is Legitimate 2026
@@ -35,6 +37,7 @@ Recruitment fraud targeting Nigerians seeking work abroad is widespread. Common 
 
 This guide gives you concrete steps to verify an agent before paying anything or handing over documents.
 
+postVersion: v2026.11
 ---
 
 ## Step 1 — Ask for the licence number
@@ -48,6 +51,7 @@ A legitimate agent will provide this immediately. An agent who cannot or will no
 - Visit the Ministry office: 1 Hill Station Hotel Road, Abuja
 - Ask specifically for the Private Employment Agency (PEA) licence register
 
+postVersion: v2026.11
 ---
 
 ## Step 2 — Verify the employer independently
@@ -66,6 +70,7 @@ A legitimate job offer comes from a real employer. Before paying any fees, verif
 
 If the employer does not appear in the official register, the job offer is not from a registered business.
 
+postVersion: v2026.11
 ---
 
 ## Step 3 — Get the employment contract before paying
@@ -82,6 +87,7 @@ A legitimate agent will provide a signed employment contract before asking for a
 
 If an agent asks for payment before providing a contract, do not pay.
 
+postVersion: v2026.11
 ---
 
 ## Step 4 — Check the salary is realistic
@@ -96,6 +102,7 @@ Agents sometimes quote inflated salaries to attract applicants. Verify the salar
 
 If the salary quoted is significantly above these ranges, verify it in the contract before believing it.
 
+postVersion: v2026.11
 ---
 
 ## Step 5 — Verify the visa route is real
@@ -110,6 +117,7 @@ Every legitimate work destination has a documented visa process. Ask the agent w
 
 If the agent cannot name the specific visa category, or if the visa they describe does not appear on the official website, the offer is not legitimate.
 
+postVersion: v2026.11
 ---
 
 ## Red flags — stop and verify before proceeding
@@ -126,6 +134,7 @@ Any of these should cause you to pause and verify independently:
 - The job is in a country you did not apply for
 - You are told you will be "placed" with an employer on arrival rather than having a confirmed employer before you travel
 
+postVersion: v2026.11
 ---
 
 ## If you suspect fraud
@@ -135,6 +144,7 @@ Any of these should cause you to pause and verify independently:
 - Report to the Nigeria Police Force Economic and Financial Crimes Commission (EFCC): efcc.gov.ng
 - If you are already abroad and in danger: contact the Nigerian embassy or consulate in the destination country
 
+postVersion: v2026.11
 ---
 
 **Updated:** November 9, 2026

@@ -1,3 +1,4 @@
+postVersion: v2026.11
 ---
 layout: blog-post.njk
 title: "UK Shortage Occupation List 2026: Immigration Salary List and What Changed"
@@ -20,6 +21,7 @@ faqs:
     a: "The ISL includes occupations where the MAC-set going rate is below GBP 38,700. This includes some healthcare roles, some education roles, and some technical roles. The full list is published at gov.uk/government/publications/immigration-salary-list. Check the current version as it is updated periodically."
   - q: "Does being in a shortage occupation speed up my UK visa application?"
     a: "No. The UK Skilled Worker visa does not have a fast-track for shortage occupations. Processing times are the same regardless of whether your occupation is on the Immigration Salary List. The ISL only affects the salary threshold that applies to your application."
+postVersion: v2026.11
 ---
 
 # UK Shortage Occupation List 2026: What Changed
@@ -37,6 +39,7 @@ In April 2024, the SOL was abolished and replaced by the Immigration Salary List
 
 **The practical effect:** The ISL is a narrower concession than the old SOL. Most workers who previously benefited from the SOL discount no longer benefit.
 
+postVersion: v2026.11
 ---
 
 ## How the Immigration Salary List works
@@ -53,6 +56,7 @@ In practice, ISL occupations are those where the MAC has determined the market r
 
 **Primary source:** gov.uk/government/publications/immigration-salary-list
 
+postVersion: v2026.11
 ---
 
 ## Occupations commonly on the Immigration Salary List
@@ -76,6 +80,7 @@ The ISL is updated periodically. Check the current version at gov.uk before appl
 - Some engineering roles
 - Some IT roles at entry level
 
+postVersion: v2026.11
 ---
 
 ## What this means for African applicants
@@ -96,6 +101,7 @@ Most IT and engineering roles are not on the ISL — they pay above GBP 38,700 i
 
 Most trade occupations are not on the ISL. The general threshold of GBP 38,700 applies. Trades are not a primary route to the UK under the Skilled Worker visa — the UK does not have a DAMA-equivalent for trades.
 
+postVersion: v2026.11
 ---
 
 ## Checking your specific occupation
@@ -106,12 +112,14 @@ The Skilled Worker visa uses Standard Occupational Classification (SOC) codes. T
 2. Check the going rate for your SOC code at gov.uk/skilled-worker-visa/your-job
 3. Check whether your SOC code is on the current Immigration Salary List at gov.uk/government/publications/immigration-salary-list
 
+postVersion: v2026.11
 ---
 
 ## New entrant rate
 
 If you are under 26 or a recent graduate (within 2 years of completing a UK degree), the new entrant rate applies: GBP 30,960 per year (80% of the general threshold). This applies for a maximum of 4 years.
 
+postVersion: v2026.11
 ---
 
 ## Resources
@@ -121,6 +129,7 @@ If you are under 26 or a recent graduate (within 2 years of completing a UK degr
 - Eligible occupations and going rates: gov.uk/skilled-worker-visa/your-job
 - NMC registration for nurses: nmc.org.uk/registration/joining-the-register/
 
+postVersion: v2026.11
 ---
 
 **Updated:** November 9, 2026

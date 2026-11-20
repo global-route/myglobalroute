@@ -1,8 +1,8 @@
 # Phase Status — MyPathway2Global
 
-> **Updated:** 2026-11-16 | **Release:** GO — production live
+> **Updated:** 2026-11-20 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 214/214 passing
-> **Commit:** `e91e0d8` | **Blog posts:** 126 | **Sitemap URLs:** 181 | **Stale requirements:** 1 (IE-critical-skills — evidence-locked)
+> **Commit:** `4588a5d` | **Blog posts:** 145 | **Sitemap URLs:** 199 | **Stale requirements:** 1 (IE-critical-skills — evidence-locked)
 > **Data validation:** PASSED — 35 countries, 75 pathways, 226 evidence records, 24 demand records
 > **CI deploy:** GitHub Actions workflow live — every push to main auto-deploys via Cloudflare Workers
 
@@ -36,7 +36,7 @@
 | WAA notification worker | **Built, not deployed** | Owner: Resend account + Worker deploy + first agent |
 | WAA-3a — First verified agent | **Blocked** | Owner: vet agent, sign agreement, add to agents.json |
 | WCAG 2.1 AA | **Complete** | Re-run axe after next deploy |
-| Sprint A — Watermark trust layer | **WM-1 to WM-7 done** | WM-8 to WM-13 pending (hybrid design) |
+| Sprint A — Watermark trust layer | **Complete** | WM-1 to WM-13 all done |
 | Sprint B — W1-W22 content | **Complete** | All 22 posts done |
 | Sprint C — Demand records | **8/8 done** | — |
 | Sprint D — New countries | **4/4 done** | BG/HR/GY/OM added, evidence records added |
@@ -399,12 +399,12 @@ Every blog post now shows a dateline watermark with evidence status, source auth
 | Phase | Scope | Status |
 |---|---|---|
 | WM-1 to WM-7 | CSS block, template wiring, CSS v12, backfill 5 WAA posts, build test, commit | **Done** — `168070d` |
-| WM-8 | Replace current trail block with hybrid document mark in `blog-post.njk` | **Pending** |
-| WM-9 | Replace `.post-source-trail` CSS with `.wm-hybrid` CSS | **Pending** |
-| WM-10 | Add `postVersion` + `supersededBy` frontmatter fields to new posts | **Pending** |
-| WM-11 | Backfill `postVersion` on all 125 existing posts | **Pending** |
-| WM-12 | Backfill `sourceAuthority` + `sourceUrl` + `lastFactChecked` + `evidenceStatus` on all posts | **Pending** |
-| WM-13 | Build + test + commit hybrid watermark | **Pending** |
+| WM-8 | Replace current trail block with hybrid document mark in `blog-post.njk` | **Done** |
+| WM-9 | Replace `.post-source-trail` CSS with `.wm-hybrid` CSS | **Done** |
+| WM-10 | Add `postVersion` + `supersededBy` frontmatter fields to new posts | **Done** |
+| WM-11 | Backfill `postVersion` on all 145 posts | **Done** |
+| WM-12 | Backfill `sourceAuthority` + `sourceUrl` + `lastFactChecked` + `evidenceStatus` on all posts | **Done** |
+| WM-13 | Build + test + commit hybrid watermark | **Done** |
 
 **Hybrid watermark format:**
 ```

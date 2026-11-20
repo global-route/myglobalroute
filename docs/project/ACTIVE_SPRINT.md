@@ -1,6 +1,6 @@
 # ACTIVE SPRINT TASKFILE — MyPathway2Global
-**Updated:** 2026-11-11 | **Commit:** `73e498c` | **Tests:** 19/19, 214/214
-**Posts:** 126 | **Countries:** 35 | **Pathways:** 75 | **Demand records:** 24 | **Evidence records:** 222
+**Updated:** 2026-11-20 | **Commit:** `4588a5d` | **Tests:** 19/19, 214/214
+**Posts:** 145 | **Countries:** 35 | **Pathways:** 75 | **Demand records:** 24 | **Evidence records:** 222
 **Data validation:** PASSED | **Stale requirements:** 1 (IE-critical-skills — evidence-date locked)
 
 Single source of truth for all outstanding work. Status: DONE / PENDING / BLOCKED
@@ -275,12 +275,11 @@ Key files:
 
 ## Execution order — next actions
 
-**Ready to write now (no blocker):**
-1. R6 — Canada RCIP post (HIGH — opens Jan 1, 2027)
-2. N16 — European study destinations 2027 (HIGH — Sep 2027 intake)
-3. N11/N12/N15 — Ireland/French Canada/Finland work posts (MEDIUM)
-4. NEW-B1/NEW-B2 — RAK + Antigua CBI business playbooks (MEDIUM, verify sources first)
-5. WM-8 to WM-13 — Sprint A hybrid watermark completion
+**Content sprint — ALL DONE:**
+- R6, N1-N16, NEW-B1, NEW-B2, N10 update, 2 post updates — all complete
+- WM-8 to WM-13 — Sprint A hybrid watermark — all complete
+
+**Deploy (owner action — ready now):**
 
 **Evidence verification (parallel — can run alongside writing):**
 6. P9A — Owner verifies AU/IE/NZ working holiday eligibility

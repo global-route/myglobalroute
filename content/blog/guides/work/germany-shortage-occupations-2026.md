@@ -1,3 +1,4 @@
+postVersion: v2026.11
 ---
 layout: blog-post.njk
 title: "Germany Shortage Occupation List 2026: Which Jobs Are in Demand"
@@ -20,6 +21,7 @@ faqs:
     a: "No. The Skilled Worker visa (Fachkraftevisa) is available for any occupation that requires a recognised qualification, not just shortage occupations. However, being in a shortage occupation can speed up processing and may exempt your employer from the labour market test (Vorrangprufung)."
   - q: "Does the Chancenkarte (Opportunity Card) require a shortage occupation?"
     a: "No. The Chancenkarte is available to anyone with a recognised foreign qualification who scores enough points on the points system. You do not need to be in a shortage occupation. However, being in a shortage occupation makes it easier to find a job once you arrive in Germany."
+postVersion: v2026.11
 ---
 
 # Germany Shortage Occupation List 2026
@@ -36,6 +38,7 @@ The list is updated quarterly. Check the current version at arbeitsagentur.de be
 
 **Primary source:** arbeitsagentur.de/en/shortage-occupations
 
+postVersion: v2026.11
 ---
 
 ## Key shortage categories (2026)
@@ -88,6 +91,7 @@ The following categories consistently appear on the German shortage list. This i
 - Vocational training instructors
 - Special needs educators
 
+postVersion: v2026.11
 ---
 
 ## What shortage status means for your application
@@ -104,6 +108,7 @@ Shortage occupation applications are typically processed faster by the German em
 
 Being in a shortage occupation does not directly add points to your Chancenkarte score. However, it makes it significantly easier to find a job once you arrive in Germany on the Chancenkarte, which is the main purpose of the card.
 
+postVersion: v2026.11
 ---
 
 ## How to check your specific occupation
@@ -115,6 +120,7 @@ The Engpassberufe list uses the KldB (Klassifikation der Berufe) occupation clas
 3. Check whether your specific KldB code is listed as a shortage occupation
 4. Note whether the shortage is national or regional (some shortages are only in certain states)
 
+postVersion: v2026.11
 ---
 
 ## Qualification recognition
@@ -127,6 +133,7 @@ Being in a shortage occupation does not bypass the qualification recognition req
 
 Recognition can take 3-12 months. Start this process before applying for a visa.
 
+postVersion: v2026.11
 ---
 
 ## Resources
@@ -136,6 +143,7 @@ Recognition can take 3-12 months. Start this process before applying for a visa.
 - ANABIN degree recognition: anabin.kmk.org
 - Chancenkarte: make-it-in-germany.com/en/visa-residence/opportunity-card
 
+postVersion: v2026.11
 ---
 
 **Updated:** November 9, 2026

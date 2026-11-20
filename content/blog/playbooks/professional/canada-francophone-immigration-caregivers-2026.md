@@ -1,3 +1,4 @@
+postVersion: v2026.11
 ---
 layout: blog-post.njk
 title: "Canada Francophone Immigration for Caregivers and PSWs 2026 — The Complete Guide"
@@ -22,6 +23,7 @@ faqs:
     a: Yes. The FCIP is a direct permanent residence pathway — not a temporary work permit. You apply for PR directly.
   - q: What is a Personal Support Worker?
     a: A PSW provides personal care and support to elderly, disabled, or ill individuals in their homes or in care facilities. Tasks include bathing, dressing, meal preparation, medication reminders, and companionship. No degree required — a PSW certificate (typically 6-8 months of training) is the standard qualification.
+postVersion: v2026.11
 ---
 
 Canada has a documented shortage of personal support workers, caregivers, and hospitality workers in francophone communities outside Quebec. The Francophone Community Immigration Pilot (FCIP) was created specifically to fill this gap — and it leads directly to permanent residence, not a temporary work permit.

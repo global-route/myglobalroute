@@ -1,3 +1,4 @@
+postVersion: v2026.11
 ---
 layout: blog-post.njk
 title: "Domestic Worker Rights in Qatar, UAE and Saudi Arabia 2026: What the Law Says"
@@ -20,6 +21,7 @@ faqs:
     a: "Passport confiscation is illegal in Qatar, UAE and Saudi Arabia. All three countries have laws prohibiting employers from holding workers' passports. In practice it still occurs. If an employer takes your passport, you can report this to the relevant labour ministry. Do not hand over your passport voluntarily."
   - q: "What is the minimum wage for domestic workers in the Gulf?"
     a: "Qatar: QAR 1,000/month (approximately USD 275) applies to all workers including domestic workers. UAE: no universal minimum wage for domestic workers - the employment contract governs. Saudi Arabia: no published minimum wage for domestic workers. Always get the salary in writing in the contract before travelling."
+postVersion: v2026.11
 ---
 
 # Domestic Worker Rights in Qatar, UAE and Saudi Arabia 2026
@@ -30,6 +32,7 @@ Domestic work is one of the most common routes for African workers to the Gulf. 
 
 This article covers what the law says in each country, where the gaps are, and what to check before accepting any domestic work offer.
 
+postVersion: v2026.11
 ---
 
 ## Qatar
@@ -63,6 +66,7 @@ Qatar's 2020 labour reforms extended some protections to domestic workers:
 
 Qatar Ministry of Labour: mol.gov.qa
 
+postVersion: v2026.11
 ---
 
 ## UAE
@@ -91,6 +95,7 @@ Passport confiscation is illegal under UAE law. If an employer takes your passpo
 
 UAE Ministry of Human Resources and Emiratisation: mohre.gov.ae
 
+postVersion: v2026.11
 ---
 
 ## Saudi Arabia
@@ -119,6 +124,7 @@ Saudi Arabia does not publish a minimum wage for domestic workers. The employmen
 
 Saudi Ministry of Human Resources: mol.gov.sa
 
+postVersion: v2026.11
 ---
 
 ## Red flags — what to watch for before accepting any offer
@@ -132,6 +138,7 @@ These are warning signs that a domestic work offer may be fraudulent or exploita
 - The salary is quoted in NGN or USD only — insist on the local currency figure in the contract.
 - You are told you will not need your passport once you arrive.
 
+postVersion: v2026.11
 ---
 
 ## Before you travel — checklist
@@ -146,6 +153,7 @@ These are warning signs that a domestic work offer may be fraudulent or exploita
 - [ ] You have the contact number for the relevant labour ministry in the destination country
 - [ ] Someone in Nigeria knows your employer's details and your expected arrival date
 
+postVersion: v2026.11
 ---
 
 ## Contacts
@@ -155,6 +163,7 @@ These are warning signs that a domestic work offer may be fraudulent or exploita
 - Saudi Ministry of Human Resources: mol.gov.sa | Musaned platform: musaned.com.sa
 - ILO Gulf programme: ilo.org/beirut/countries
 
+postVersion: v2026.11
 ---
 
 **Updated:** November 9, 2026

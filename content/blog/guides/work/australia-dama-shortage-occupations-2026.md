@@ -1,3 +1,4 @@
+postVersion: v2026.11
 ---
 layout: blog-post.njk
 title: "Australia DAMA Shortage Occupations 2026: Trades and Regional Work Routes"
@@ -20,6 +21,7 @@ faqs:
     a: "DAMA agreements vary by region but commonly include: electricians, plumbers, carpenters, welders, mechanics, refrigeration and air conditioning mechanics, bricklayers, plasterers, painters and decorators, and heavy vehicle drivers. The specific list depends on which DAMA region your employer is in."
   - q: "Can I apply for a DAMA visa from Nigeria without a job offer?"
     a: "No. The DAMA route requires employer sponsorship from an accredited DAMA sponsor in a designated regional area. You cannot self-nominate. The employer must be approved by the relevant regional authority and by the Department of Home Affairs."
+postVersion: v2026.11
 ---
 
 # Australia DAMA Shortage Occupations 2026
@@ -30,6 +32,7 @@ A Designated Area Migration Agreement (DAMA) is a formal agreement between the A
 
 DAMAs exist because regional Australia has different labour needs from the major cities. A region with a shortage of electricians or welders can negotiate a DAMA to bring in workers even if those occupations are not on the national shortage list.
 
+postVersion: v2026.11
 ---
 
 ## Current DAMA regions
@@ -52,6 +55,7 @@ Each DAMA has its own occupation list and concession arrangements. The Northern 
 
 **Primary source:** immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/site-agreements/designated-area-migration-agreements
 
+postVersion: v2026.11
 ---
 
 ## Occupations commonly covered
@@ -87,6 +91,7 @@ DAMA agreements typically cover occupations in these categories. The specific li
 - Agricultural technician
 - Farm manager
 
+postVersion: v2026.11
 ---
 
 ## DAMA concessions vs. standard requirements
@@ -102,6 +107,7 @@ This is why DAMA is significant for African applicants. Standard skilled visas h
 
 These concessions are not universal — they depend on the specific DAMA and the specific occupation. Verify with the regional authority before applying.
 
+postVersion: v2026.11
 ---
 
 ## How to get a DAMA job offer
@@ -118,6 +124,7 @@ You cannot apply for a DAMA visa independently. The process is:
 - Use Australian job boards (Seek.com.au, Indeed.com.au) filtering for regional locations
 - Contact industry associations in your trade (Master Electricians Australia, Master Plumbers, etc.)
 
+postVersion: v2026.11
 ---
 
 ## Skills assessment
@@ -132,6 +139,7 @@ A skills assessment confirms your overseas qualifications and experience are equ
 
 **Primary source:** immi.homeaffairs.gov.au/visas/working-in-australia/skills-assessment
 
+postVersion: v2026.11
 ---
 
 ## Path to permanent residence
@@ -144,6 +152,7 @@ The DAMA route can lead to permanent residence:
 
 You must remain in the designated regional area for the duration of your temporary visa. Moving to a major city before applying for permanent residence may affect your eligibility.
 
+postVersion: v2026.11
 ---
 
 ## Resources
@@ -153,6 +162,7 @@ You must remain in the designated regional area for the duration of your tempora
 - Skills assessment (TRA): tradesrecognitionaustralia.gov.au
 - Australian job boards: seek.com.au, indeed.com.au
 
+postVersion: v2026.11
 ---
 
 **Updated:** November 9, 2026
