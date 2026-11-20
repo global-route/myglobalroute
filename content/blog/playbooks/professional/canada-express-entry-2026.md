@@ -153,6 +153,8 @@ There are **three pathways** under Express Entry. Which one suits you?
 
 **Best for:** Nigerians already working in Canada on a work permit who want PR
 
+**Important — CEC does not require proof of settlement funds.** Unlike the Federal Skilled Worker stream, CEC applicants are not required to show proof of funds. If you are already working in Canada, you do not need to demonstrate a minimum bank balance to apply for PR through CEC. Verify current requirements at canada.ca — this rule applies as of 2026.
+
 ---
 
 ### Comparison: Which Program Should You Choose?
@@ -422,10 +424,19 @@ If YES to all → proceed.
 - Test format: 1 hour (online)
 - Growing acceptance
 
+**PTE Core**
+- Cost: approximately ₦55,000-65,000
+- Score validity: 2 years
+- Required score: 60 = CLB 7 minimum
+- Test format: 2 hours (computer-based)
+- Accepted for Express Entry since 2023 — now mainstream
+- Available at Pearson test centres; also available online
+
 **Which should you take?**
 - **Nigeria only:** Duolingo (cheapest, fastest)
 - **International:** IELTS (most recognized)
 - **Academic background:** TOEFL (traditional)
+- **Computer-based preference:** PTE Core (fast results, 2-5 business days)
 
 **Pro tip:** Take the test at least **1 month before you submit your Express Entry profile** to ensure scores arrive in time.
 

@@ -105,3 +105,26 @@ Germany's care work shortage is real and severe. The qualification bar is lower 
 The investment required: a recognised care qualification, B1 German (minimum), and EUR 1,091/month in a blocked account for the Chancenkarte period.
 
 For African workers with care experience or qualifications who are willing to learn German to B1 level, this is one of the most accessible routes to Germany available.
+
+## Ausbildung vs direct employment — which is right for you?
+
+Some applicants ask about Ausbildung (vocational training) as a route into care work in Germany. Here is the honest comparison:
+
+**Ausbildung (Pflegefachhelfer or Pflegefachmann/frau):**
+- 1-3 year training programme
+- Monthly stipend: EUR 600-1,000 (not a living wage in most German cities)
+- Requires B2 German (higher than direct employment)
+- Employer must agree to take you on as a trainee
+- At the end: a recognised German care qualification
+- Best for: applicants without an existing care qualification who want a German credential
+
+**Direct employment (Pflegekraft):**
+- Start working immediately once visa and recognition are in place
+- Salary: EUR 2,200-3,500/month from day one
+- Requires B1 German (lower bar)
+- Requires an existing care qualification from your home country
+- Best for: applicants with existing care experience or qualifications
+
+**For most Nigerian applicants with care experience:** direct employment is faster and better compensated. Ausbildung makes sense if you have no care background and want to build a German qualification from scratch — but budget for 2-3 years at a low stipend.
+
+Full Ausbildung guide: [Germany Ausbildung for Nigerians — Why Most People Fail](/blog/guides/work/germany-ausbildung-nigerians-honest-guide-2026/)

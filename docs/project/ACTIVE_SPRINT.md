@@ -174,8 +174,8 @@ No code blocker on any item. Execute in order. Full file paths in `docs/project/
 
 | Post | Update | Status |
 |---|---|---|
-| Canada Express Entry 2026 | Add CEC no-proof-of-funds callout + PTE Core as accepted test | ⬜ Pending |
-| Germany care work visa (W22) | Add honest Ausbildung section | ⬜ Pending |
+| Canada Express Entry 2026 | Add CEC no-proof-of-funds callout + PTE Core as accepted test | ✅ Done `2026-11-20` |
+| Germany care work visa (W22) | Add honest Ausbildung section | ✅ Done `2026-11-20` |
 
 ---
 
