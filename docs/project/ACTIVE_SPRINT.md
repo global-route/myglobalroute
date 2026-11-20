@@ -135,7 +135,7 @@ No code blocker on any item. Execute in order. Full file paths in `docs/project/
 
 | ID | Post | Category | Status |
 |---|---|---|---|
-| R6 | Canada RCIP — permanent rural immigration, opens Jan 1 2027. 14 communities, 5,500→6,500 PR slots. Job offer + community recommendation required. | Professional Playbook | ⬜ Pending |
+| R6 | Canada RCIP — permanent rural immigration, opens Jan 1 2027. 14 communities, 5,500→6,500 PR slots. Job offer + community recommendation required. | Professional Playbook | ✅ Done `2026-11-20` |
 | N16 | European study destinations 2027 — Lithuania, Slovakia, Latvia, Norway compared | Guide — Study | ⬜ Pending |
 
 ### Medium priority — work
@@ -183,12 +183,12 @@ No code blocker on any item. Execute in order. Full file paths in `docs/project/
 
 | Metric | Current (17cc3d4) |
 |---|---|
-| Blog posts | 126 |
+| Blog posts | 127 |
 | Countries in registry | 35 |
 | Pathways | 75 |
 | Demand records | 24 |
 | Evidence records | 222 |
-| Sitemap URLs | 181 |
+| Sitemap URLs | 182 |
 | Tests | 214/214 PASS |
 | Data validation | PASSED |
 | Watermark coverage | 126/126 posts |
