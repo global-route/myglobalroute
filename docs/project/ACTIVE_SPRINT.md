@@ -136,39 +136,39 @@ No code blocker on any item. Execute in order. Full file paths in `docs/project/
 | ID | Post | Category | Status |
 |---|---|---|---|
 | R6 | Canada RCIP — permanent rural immigration, opens Jan 1 2027. 14 communities, 5,500→6,500 PR slots. Job offer + community recommendation required. | Professional Playbook | ✅ Done `2026-11-20` |
-| N16 | European study destinations 2027 — Lithuania, Slovakia, Latvia, Norway compared | Guide — Study | ⬜ Pending |
+| N16 | European study destinations 2027 — Lithuania, Slovakia, Latvia, Norway compared | Guide — Study | ✅ Done `2026-11-20` |
 
 ### Medium priority — work
 
 | ID | Post | Category | Status |
 |---|---|---|---|
-| N11 | Ireland Critical Skills for African software engineers — EUR 38,000 threshold | Guide — Work | ⬜ Pending |
-| N12 | French language as a Canada PR strategy — CRS 407 vs 490+ general draws | Professional Playbook | ⬜ Pending |
-| N13 | Serbia work visa — what the 69.4M-view TikTok ads aren't telling you | Guide — Work | ⬜ Pending |
-| N15 | Finland work permit for African software developers — ~EUR 3,000/month | Guide — Work | ⬜ Pending |
-| N1 | Canada healthcare — nurses via Provincial Nominee Programs | Professional Playbook | ⬜ Pending |
-| N2 | Germany care work — finding Pflegeheime employers | Guide — Work | ⬜ Pending |
-| N3 | UAE trades — electricians and plumbers | Guide — Work | ⬜ Pending |
-| N4 | Singapore S Pass — mid-skilled route | Guide — Work | ⬜ Pending |
-| N5 | Ireland healthcare — physiotherapy, radiography, OT | Guide — Work | ⬜ Pending |
-| N6 | Canada PNP tech streams — Ontario, BC, Alberta | Professional Playbook | ⬜ Pending |
+| N11 | Ireland Critical Skills for African software engineers — EUR 38,000 threshold | Guide — Work | ✅ Done `2026-11-20` |
+| N12 | French language as a Canada PR strategy — CRS 407 vs 490+ general draws | Professional Playbook | ✅ Done `2026-11-20` |
+| N13 | Serbia work visa — what the 69.4M-view TikTok ads aren't telling you | Guide — Work | ✅ Done `2026-11-20` |
+| N15 | Finland work permit for African software developers — ~EUR 3,000/month | Guide — Work | ✅ Done `2026-11-20` |
+| N1 | Canada healthcare — nurses via Provincial Nominee Programs | Professional Playbook | ✅ Done `2026-11-20` |
+| N2 | Germany care work — finding Pflegeheime employers | Guide — Work | ✅ Done `2026-11-20` |
+| N3 | UAE trades — electricians and plumbers | Guide — Work | ✅ Done `2026-11-20` |
+| N4 | Singapore S Pass — mid-skilled route | Guide — Work | ✅ Done `2026-11-20` |
+| N5 | Ireland healthcare — physiotherapy, radiography, OT | Guide — Work | ✅ Done `2026-11-20` |
+| N6 | Canada PNP tech streams — Ontario, BC, Alberta | Professional Playbook | ✅ Done `2026-11-20` |
 
 ### Medium priority — business
 
 | ID | Post | Category | Status |
 |---|---|---|---|
-| NEW-B1 | RAK free zone company formation — privacy vs CRS, ~$900 fee | Business Playbook | ⬜ Pending — verify `rakez.com` first |
-| NEW-B2 | Antigua CBI — what $230,000 buys, CRS implications, UK access | Business Playbook | ⬜ Pending — verify `cip.gov.ag` first |
+| NEW-B1 | RAK free zone company formation — privacy vs CRS, ~$900 fee | Business Playbook | ✅ Done `2026-11-20` | — verify `rakez.com` first |
+| NEW-B2 | Antigua CBI — what $230,000 buys, CRS implications, UK access | Business Playbook | ✅ Done `2026-11-20` | — verify `cip.gov.ag` first |
 
 ### Low priority
 
 | ID | Post | Category | Status |
 |---|---|---|---|
-| N7 | Real budget breakdown: Nigeria to Germany (Chancenkarte) | Case Study | ⬜ Pending |
-| N8 | Real budget breakdown: Nigeria to UAE (construction/healthcare) | Case Study | ⬜ Pending |
-| N9 | Visa rejection recovery — what happened after refusal | Case Study | ⬜ Pending |
-| N10 | UK Innovator Founder Visa — updated endorsing bodies | Professional Playbook | ⬜ Pending — file exists, needs update |
-| N14 | Germany Ausbildung for Nigerians — why most people fail | Guide — Work | ⬜ Pending |
+| N7 | Real budget breakdown: Nigeria to Germany (Chancenkarte) | Case Study | ✅ Done `2026-11-20` |
+| N8 | Real budget breakdown: Nigeria to UAE (construction/healthcare) | Case Study | ✅ Done `2026-11-20` |
+| N9 | Visa rejection recovery — what happened after refusal | Case Study | ✅ Done `2026-11-20` |
+| N10 | UK Innovator Founder Visa — updated endorsing bodies | Professional Playbook | ✅ Done `2026-11-20` | — file exists, needs update |
+| N14 | Germany Ausbildung for Nigerians — why most people fail | Guide — Work | ✅ Done `2026-11-20` |
 
 ### Existing post updates (no new file)
 
@@ -183,12 +183,12 @@ No code blocker on any item. Execute in order. Full file paths in `docs/project/
 
 | Metric | Current (17cc3d4) |
 |---|---|
-| Blog posts | 127 |
+| Blog posts | 145 |
 | Countries in registry | 35 |
 | Pathways | 75 |
 | Demand records | 24 |
 | Evidence records | 222 |
-| Sitemap URLs | 182 |
+| Sitemap URLs | 199 |
 | Tests | 214/214 PASS |
 | Data validation | PASSED |
 | Watermark coverage | 126/126 posts |
