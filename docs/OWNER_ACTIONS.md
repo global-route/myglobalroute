@@ -1,5 +1,5 @@
 # Owner Actions — MyPathway2Global
-**Updated:** 2026-11-10 | **Commit:** `a437640`
+**Updated:** 2026-11-20 | **Commit:** `56f2969`
 **All code tasks are complete. Everything below is owner-gated.**
 
 ---
@@ -8,20 +8,58 @@
 
 | # | Action | Effort | Unlocks |
 |---|---|---|---|
-| 1 | WAA: Resend account + Worker deploy | 20 min | Agent lead delivery (email channel) |
-| 2 | WAA: First agent credentials + agents.json | 1-2 hrs | Full WAA feature live end-to-end |
-| 3 | OG image (1200x630px) | 20 min | Social share cards on all pages |
-| 4 | Mailchimp action URL | 10 min | Email capture live |
-| 5 | ARIA audit (axe, 4 pages) | 30 min | Accessibility gate |
-| 6 | Working-holiday article verification (AU/IE/NZ) | 1 hr | P0 correction banners resolved |
-| 7 | Country source sign-off (31 entries) | 1-2 hrs | dataset.asOf update, Phase 1 complete |
-| 8 | Legal review (privacy/disclaimer/terms) | Solicitor | Affiliate + lead revenue gate |
-| 9 | AdSense revenue baseline | After 30 days live | Phase 5 reconciliation |
-| 10 | Mailchimp URL in blog.html | 10 min | Newsletter capture live |
+
+
+
+| 1 | Deploy site | 5 min | All 145 posts + 199 URLs live |
+| 2 | OG image — screenshot `docs/engineering/og-image-design.html` at 1200×630, save as `public/assets/og-default.png`, redeploy | 20 min | Social share cards on all 26 pages |
+| 3 | WAA: Resend account + Worker deploy | 20 min | Agent lead delivery (email channel) |
+| 4 | WAA: First agent credentials + agents.json | 1-2 hrs | Full WAA feature live end-to-end |
+| 5 | Working-holiday article verification (AU/IE/NZ) | 1 hr | Removes correction banners from 3 posts |
+| 6 | ARIA audit (axe, 4 pages) | 30 min | Accessibility gate |
+| 7 | Mailchimp action URL in blog.html | 10 min | Email capture live |
+| 8 | Country source sign-off (35 entries) | 1-2 hrs | dataset.asOf update, Phase 1 complete |
+| 9 | Legal review (privacy/disclaimer/terms) | Solicitor | Affiliate + lead revenue gate |
+| 10 | AdSense revenue baseline (after 30 days live) | 5 min | Phase 5 reconciliation, Phase 6 gate |
 
 ---
 
-## Action 1 — WAA: Resend account + Worker deploy
+## Action 1 — Deploy site
+**Effort:** 5 min | **Unlocks:** all 145 posts + 199 sitemap URLs live
+
+```bash
+npm install --save-dev wrangler@3
+npx wrangler deploy
+```
+
+Then verify: `https://mypathway2global.org.uk` loads, new posts accessible, WAA wizard works.
+
+---
+
+## Action 2 — OG image
+**Effort:** 20 min | **Unlocks:** social share cards on all 26 pages (fixes the broken grey card on X/Twitter)
+
+Design is ready at `docs/engineering/og-image-design.html`.
+
+1. Open `docs/engineering/og-image-design.html` in Chrome
+2. Open DevTools (F12) → device toolbar (Cmd+Shift+M) → set 1200×630
+3. Right-click → Capture screenshot → save as `og-default.png`
+4. Move to `public/assets/og-default.png`
+5. `npx wrangler deploy`
+6. Validate at `cards-dev.twitter.com/validator` and `developers.facebook.com/tools/debug`
+
+Or use Chrome headless:
+```bash
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+  --headless --screenshot \
+  --window-size=1200,630 \
+  "file:///Users/machine/My Drive/Github Projects/mypathway2global.org.uk/docs/engineering/og-image-design.html"
+mv screenshot.png "/Users/machine/My Drive/Github Projects/mypathway2global.org.uk/public/assets/og-default.png"
+```
+
+---
+
+## Action 3 — WAA: Resend account + Worker deploy
 **Effort:** 20 min | **Unlocks:** email lead delivery to agents
 
 ### Step 1 — Create Resend account

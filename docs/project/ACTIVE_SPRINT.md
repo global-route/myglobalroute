@@ -218,14 +218,14 @@ These are live posts where claims directly affect professional/financial decisio
 
 | Post | File | Key claims to verify | Status |
 |---|---|---|---|
-| UK Innovator Founder Visa 2026 | `playbooks/professional/uk-innovator-founder-visa-2026.md` | Current endorsing bodies list, GBP 50k investment threshold | ⬜ Pending |
-| France Talent Passport 2026 | `playbooks/professional/france-talent-passport-deep-dive-2026.md` | Salary thresholds, eligible professions | ⬜ Pending |
-| Portugal D3 Highly Qualified 2026 | `playbooks/professional/portugal-d3-highly-qualified-2026.md` | D3 salary threshold, updated 2024 criteria | ⬜ Pending |
-| Namibia Digital Nomad Visa 2026 | `playbooks/professional/namibia-digital-nomad-visa-2026.md` | Programme still active, current fees | ⬜ Pending |
-| Cape Verde Remote Work Visa 2026 | `playbooks/professional/cape-verde-remote-work-visa-2026.md` | Programme still active, current fees | ⬜ Pending |
-| Mauritius Premium Visa 2026 | `playbooks/professional/mauritius-premium-visa-2026.md` | USD 1,500/month threshold, current fees | ⬜ Pending |
-| Saskatchewan PNP Post-Graduation 2026 | `playbooks/professional/saskatchewan-pnp-post-graduation-2026.md` | SINP streams open/closed status | ⬜ Pending |
-| US LLC Setup from Africa 2026 | `playbooks/business/us-llc-setup-from-africa-2026.md` | State fees, registered agent costs | ⬜ Pending |
+| UK Innovator Founder Visa 2026 | `playbooks/professional/uk-innovator-founder-visa-2026.md` | Current endorsing bodies list, GBP 50k investment threshold | ✅ Done `2026-11-20` |
+| France Talent Passport 2026 | `playbooks/professional/france-talent-passport-deep-dive-2026.md` | Salary thresholds, eligible professions | ✅ Done `2026-11-20` |
+| Portugal D3 Highly Qualified 2026 | `playbooks/professional/portugal-d3-highly-qualified-2026.md` | D3 salary threshold, updated 2024 criteria | ✅ Done `2026-11-20` |
+| Namibia Digital Nomad Visa 2026 | `playbooks/professional/namibia-digital-nomad-visa-2026.md` | Programme still active, current fees | ✅ Done `2026-11-20` |
+| Cape Verde Remote Work Visa 2026 | `playbooks/professional/cape-verde-remote-work-visa-2026.md` | Programme still active, current fees | ✅ Done `2026-11-20` |
+| Mauritius Premium Visa 2026 | `playbooks/professional/mauritius-premium-visa-2026.md` | USD 1,500/month threshold, current fees | ✅ Done `2026-11-20` |
+| Saskatchewan PNP Post-Graduation 2026 | `playbooks/professional/saskatchewan-pnp-post-graduation-2026.md` | SINP streams open/closed status | ✅ Done `2026-11-20` |
+| US LLC Setup from Africa 2026 | `playbooks/business/us-llc-setup-from-africa-2026.md` | State fees, registered agent costs | ✅ Done `2026-11-20` |
 | UK Company Setup from Africa 2026 | `playbooks/business/uk-company-setup-from-africa-2026.md` | Companies House fees (updated 2024) | ⬜ Pending |
 | Mauritius Global Business Licence 2026 | `playbooks/business/mauritius-global-business-licence-2026.md` | FSC fees, GBL requirements | ⬜ Pending |
 
@@ -299,3 +299,37 @@ Then: post-deploy smoke test + axe ARIA audit
 - Working-holiday article verification AU/IE/NZ (P9A above)
 - WAA-3a-1 to 5 — first verified agent (R8 agent company research feeds this)
 - Working-holiday article verification AU/IE/NZ (Action 6 in OWNER_ACTIONS.md)
+
+---
+
+## PRIORITY 10 — Blog UX features (Sprint B)
+
+Standard blog features missing from the current template. All are template/CSS changes — no data changes, no test impact.
+
+| ID | Feature | File | Status |
+|---|---|---|---|
+| B1 | WhatsApp share button | `src/templates/blog-post.njk` | ✅ Done `2026-11-20` |
+| B2 | Facebook share button | `src/templates/blog-post.njk` | ✅ Done `2026-11-20` |
+| B3 | Copy link button (clipboard) | `src/templates/blog-post.njk` | ✅ Done `2026-11-20` |
+| B4 | Related articles block | `src/templates/blog-post.njk` | ✅ Done `2026-11-20` |
+| B5 | Reading progress bar | `src/templates/blog-post.njk` + `blog-post.css` | ✅ Done `2026-11-20` |
+| B6 | Back to top button | `src/templates/blog-post.njk` + `blog-post.css` | ✅ Done `2026-11-20` |
+| B7 | Table of contents (auto-generated from H2s) | `src/templates/blog-post.njk` + JS | ✅ Done `2026-11-20` |
+| B8 | Key numbers callout box (CSS class) | `src/css/blog-post.css` | ✅ Done `2026-11-20` |
+
+---
+
+## PRIORITY 10 — Blog UX features (Sprint B)
+
+Standard blog features missing from the current template. All are template/CSS changes — no data changes, no test impact.
+
+| ID | Feature | File | Status |
+|---|---|---|---|
+| B1 | WhatsApp share button | `src/templates/blog-post.njk` | ✅ Done `2026-11-20` |
+| B2 | Facebook share button | `src/templates/blog-post.njk` | ✅ Done `2026-11-20` |
+| B3 | Copy link button (clipboard) | `src/templates/blog-post.njk` | ✅ Done `2026-11-20` |
+| B4 | Related articles block | `src/templates/blog-post.njk` | ✅ Done `2026-11-20` |
+| B5 | Reading progress bar | `src/templates/blog-post.njk` + `blog-post.css` | ✅ Done `2026-11-20` |
+| B6 | Back to top button | `src/templates/blog-post.njk` + `blog-post.css` | ✅ Done `2026-11-20` |
+| B7 | Table of contents (auto-generated from H2s) | `src/templates/blog-post.njk` + JS | ✅ Done `2026-11-20` |
+| B8 | Key numbers callout box (CSS class) | `src/css/blog-post.css` | ✅ Done `2026-11-20` |
