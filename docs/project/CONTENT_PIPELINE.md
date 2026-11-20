@@ -1,5 +1,5 @@
 # Content Pipeline
-**Updated:** 2026-11-16 | **Live posts:** 126 | **Sitemap URLs:** 181
+**Updated:** 2026-11-11 | **Live posts:** 126 | **Sitemap URLs:** 181 | **Commit:** `df5d8e7`
 
 ---
 
@@ -7,290 +7,113 @@
 
 | Category | Count |
 |---|---|
-| Country Audits | 40 — all 35 countries covered (incl. BG, HR, GY, Antigua) |
-| Guides | 55 |
+| Country Audits | 46 — all 35 countries covered + Antigua, Bulgaria, Croatia, Guyana |
+| Guides | 47 |
 | Professional Playbooks | 13 |
 | Student Playbooks | 8 |
 | Business Playbooks | 3 |
 | Case Studies | 2 |
-| Policy Updates | 5 |
-
----
-
-## W1-W22 sprint — ALL COMPLETE
-
-All 22 posts from the Researchprop image research are live. See `docs/engineering/WAA_RESEARCH_PREP.md` for full research doc.
-
----
-
-## Under correction
-
-Three working-holiday articles have correction banners live. Nigerian eligibility claims are unverified.
-
-| Article | File | Action required |
-|---|---|---|
-| Australia Working Holiday Visa 2026 | `content/blog/guides/work/australia-working-holiday-visa-2026.md` | Verify at `immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462` |
-| Ireland Working Holiday Authorisation 2026 | `content/blog/guides/work/ireland-working-holiday-authorisation-2026.md` | Verify at `irishimmigration.ie/coming-to-work-in-ireland/what-are-my-work-visa-options/working-holiday-authorisation/` |
-| New Zealand Working Holiday Visa 2026 | `content/blog/guides/work/new-zealand-working-holiday-visa-2026.md` | Verify at `immigration.govt.nz/new-zealand-visas/visas/visa/working-holiday-visa` |
-
----
-
-## Next sprint — N-series (priority order)
-
-### Tier 1 — High priority (write now)
-
-| ID | Post | Category | File | Why |
-|---|---|---|---|---|
-| R6 | Canada RCIP — permanent rural immigration, opens Jan 1 2027 | Professional Playbook | `playbooks/professional/canada-rcip-rural-immigration-2026.md` | New permanent programme confirmed Nov 2026. 5,500 PR targets. Time-sensitive. |
-| N1 | Canada healthcare — nurses via Provincial Nominee Programs | Professional Playbook | `playbooks/professional/canada-healthcare-nurses-pnp-2026.md` | High-volume corridor, no dedicated post, IE healthcare demand record exists |
-| N6 | Canada PNP tech streams — Ontario, BC, Alberta | Professional Playbook | `playbooks/professional/canada-pnp-tech-streams-2026.md` | Fastest route for most tech applicants, companion to W1 |
-| N12 | French language as a Canada PR strategy | Professional Playbook | `playbooks/professional/canada-french-language-express-entry-strategy-2026.md` | Oct 27 draw: CRS 407 vs 490+ general. French = 80-point advantage. |
-| N11 | Ireland Critical Skills for African software engineers | Guide — Work | `guides/work/ireland-critical-skills-software-engineers-2026.md` | EUR 38,000 threshold, demand record exists, no dedicated post |
-
-### Tier 2 — Medium priority
-
-| ID | Post | Category | File | Why |
-|---|---|---|---|---|
-| N2 | Germany care work — finding Pflegeheim employers | Guide — Work | `guides/work/germany-pflegeheim-employer-search-2026.md` | Companion to W22, practical next step users need |
-| N3 | UAE trades — electricians and plumbers | Guide — Work | `guides/work/uae-trades-electricians-plumbers-2026.md` | Demand record exists, no post |
-| N4 | Singapore S Pass — mid-skilled route | Guide — Work | `guides/work/singapore-s-pass-mid-skilled-2026.md` | S Pass demand record exists, separate from EP |
-| N5 | Ireland healthcare beyond nursing | Guide — Work | `guides/work/ireland-healthcare-beyond-nursing-2026.md` | IE healthcare demand record covers physio/radiography/OT |
-| N13 | Serbia work visa — what the TikTok ads aren't telling you | Guide — Work | `guides/work/serbia-work-visa-tiktok-ads-reality-2026.md` | 69.4M-view TikTok ads targeting Nigerians. Safety framing needed. |
-| N15 | Finland work permit for African software developers | Guide — Work | `guides/work/finland-work-permit-software-developers-2026.md` | EUR 3,000/month threshold, growing corridor |
-| N16 | European study destinations 2027 — Lithuania, Slovakia, Latvia, Norway | Guide — Study | `guides/study/european-study-destinations-nigeria-2027.md` | Emerging corridors, no posts yet |
-
-### Tier 3 — Case studies and business
-
-| ID | Post | Category | File | Why |
-|---|---|---|---|---|
-| N7 | Real budget breakdown: Nigeria to Germany (Chancenkarte) | Case Study | `case-studies/budget-breakdown-nigeria-germany-chancenkarte-2026.md` | Gap area, high user value |
-| N8 | Real budget breakdown: Nigeria to UAE (construction/healthcare) | Case Study | `case-studies/budget-breakdown-nigeria-uae-2026.md` | Gap area |
-| N9 | Visa rejection recovery — what happened and what changed | Case Study | `case-studies/visa-rejection-recovery-2026.md` | High search demand |
-| N10 | UK Innovator Founder Visa — updated with current endorsing bodies | Professional Playbook | Update existing `playbooks/professional/uk-innovator-founder-visa-2026.md` | Freshness update needed |
-| N14 | Germany Ausbildung for Nigerians — why most people fail | Guide — Work | `guides/work/germany-ausbildung-nigerians-honest-guide-2026.md` | Companion to W22 |
-| NEW-B1 | RAK free zone company formation for African entrepreneurs | Business Playbook | `playbooks/business/rak-free-zone-company-formation-africa-2026.md` | ~$900 registry fee, CRS implications |
-| NEW-B2 | Antigua CBI — what $230,000 buys, CRS implications, UK access | Business Playbook | `playbooks/business/antigua-barbuda-citizenship-by-investment-2026.md` | Complements Antigua country audit |
-
----
-
-## Existing post updates needed
-
-| Post | Update |
-|---|---|
-| Canada Express Entry 2026 | Add CEC no-proof-of-funds callout; add PTE Core as accepted test |
-| Germany care work visa W22 | Add honest Ausbildung section |
-
----
-
-## Deferred — needs external input
-
-| Post | Blocker |
-|---|---|
-| Paraguay SUACE/Investor Pass deep-dive | USD 70k threshold unverified — needs immigration lawyer |
-| Tax residency for African remote workers | Needs tax adviser input |
-
----
-
-## WAA agent pipeline (owner-gated)
-
-All WAA code is live. Blocked on owner actions:
-1. Vet first agent (checklist in `docs/engineering/WORK_ABROAD_AGENT.md`)
-2. Sign commercial agreement
-3. Add to `src/data/agents.json` with `verificationStatus: verified`
-4. Deploy Resend notification Worker (`workers/agent-lead.js`)
-
-Suggested first corridor: **NG-DE / software_it / skilled**
-
-
-| Category | Count |
-|---|---|
-| Country Audits | 39 — all 31 countries covered |
-| Guides | 40 |
-| Professional Playbooks | 11 |
-| Student Playbooks | 8 |
-| Business Playbooks | 3 |
-| Case Studies | 2 |
 | Policy Updates | 4 |
+| Tax/CRS series | 6 |
 
 ---
 
-## Under correction
+## Under correction — owner action required
 
-Three working-holiday articles have correction banners live. Nigerian eligibility claims are unverified. Do not treat as accurate until `eligibilityReviewStatus` is updated from `under-correction`.
-
-| Article | File | Action required |
+| Article | File | Action |
 |---|---|---|
-| Australia Working Holiday Visa 2026 | `content/blog/guides/work/australia-working-holiday-visa-2026.md` | Verify at `immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462` |
-| Ireland Working Holiday Authorisation 2026 | `content/blog/guides/work/ireland-working-holiday-authorisation-2026.md` | Verify at `irishimmigration.ie/coming-to-work-in-ireland/what-are-my-work-visa-options/working-holiday-authorisation/` |
-| New Zealand Working Holiday Visa 2026 | `content/blog/guides/work/new-zealand-working-holiday-visa-2026.md` | Verify at `immigration.govt.nz/new-zealand-visas/visas/visa/working-holiday-visa` |
-
-If Nigeria IS listed: set `eligibilityReviewStatus: verified-eligible`, remove correction banner.
-If Nigeria is NOT listed: set `eligibilityReviewStatus: verified-ineligible`, update banner to permanent ineligibility notice.
+| Australia Working Holiday Visa 2026 | `guides/work/australia-working-holiday-visa-2026.md` | Verify Nigerian eligibility at `immi.homeaffairs.gov.au` — set `eligibilityReviewStatus` |
+| Ireland Working Holiday Authorisation 2026 | `guides/work/ireland-working-holiday-authorisation-2026.md` | Verify at `irishimmigration.ie` |
+| New Zealand Working Holiday Visa 2026 | `guides/work/new-zealand-working-holiday-visa-2026.md` | Verify at `immigration.govt.nz` |
 
 ---
 
-## Blocked — needs primary source research before writing
+## Blocked — needs primary source research
 
-| ID | Post | Target file | Blocker | Est. research |
-|---|---|---|---|---|
-| R1 | Guyana 2-Year Freelance Work Visa | `content/blog/country-audits/guyana/guyana-visa-from-nigeria-2026.md` | No research done — verify at `immigration.gov.gy` | 1-2 hrs |
-| R2 | Indonesia Tourist/Business Visa | `content/blog/country-audits/indonesia/indonesia-visa-from-nigeria-2026.md` | No research done — verify at `imigrasi.go.id` | 1-2 hrs |
-| R6 | Canada RCIP | `content/blog/playbooks/professional/canada-rcip-rural-immigration-2026.md` | **UNBLOCKED** — permanent programme confirmed Nov 9, 2026, opens Jan 1, 2027. Verify at `canada.ca/en/immigration-refugees-citizenship/news/2026/11/overview-of-the-rural-community-immigration-program.html` | 2 hrs |
-
----
-
-## Deferred — needs external input (no unblock path yet)
-
-| Post | Blocker |
-|---|---|
-| Paraguay SUACE/Investor Pass deep-dive | USD 70k threshold unverified — needs immigration lawyer |
-| Saskatchewan PNP post-graduation | Needs SINP evidence records |
-| Tax residency for African remote workers | Needs tax adviser input |
-| Rwanda bank account guide for foreigners | Needs primary source research |
-| Germany Working Holiday / Au Pair (FSJ) | Medium confidence — research needed |
-
----
-
-## Gap areas (no research blocker — can write when prioritised)
-
-**Case Studies** (2 live, thin):
-- Real budget breakdown: Nigeria to UAE (construction/healthcare worker)
-- Real budget breakdown: Nigeria to Germany (Chancenkarte journey)
-- Real budget breakdown: Nigeria to Australia (DAMA regional worker)
-- Visa rejection recovery: what happened after refusal and what changed
-
-**Policy Updates** (1 live, thin):
-- UK salary threshold increase (GBP 26,200 to GBP 38,700)
-- Australia TSMIT increase 2024
-- Qatar Kafala reform — what changed for workers
-
-**Gap areas (no research blocker — can write when prioritised)**
-
-**Case Studies** (2 live, thin):
-- Real budget breakdown: Nigeria to UAE (construction/healthcare worker)
-- Real budget breakdown: Nigeria to Germany (Chancenkarte journey)
-- Real budget breakdown: Nigeria to Australia (DAMA regional worker)
-- Visa rejection recovery: what happened after refusal and what changed
-
-**Business Playbooks** (3 live):
-- Portugal company formation (NHR + D3 combination)
-- Rwanda company formation
-- UAE free zone company setup
-
-**WAA supporting content — all 5 posts now live:**
-- Domestic worker rights in Qatar / UAE / Saudi ✅
-- How to verify a recruitment agent ✅
-- Australia DAMA shortage occupations ✅
-- Germany shortage occupation list ✅
-- UK Immigration Salary List ✅
-
-**WAA-3 content gate cleared.** Remaining WAA-3 blockers are owner actions (agent vetting, commercial agreement, corridor selection).
-
----
-
-## WAA-4 content — can write now
-
-| Post | Target file | Research source |
-|---|---|---|
-| Kafala reform tracker — Qatar, UAE, Saudi, Kuwait 2026 | `content/blog/guides/work/kafala-reform-tracker-2026.md` | ILO, Human Rights Watch, official ministry sites |
-| How to read a Gulf employment contract | `content/blog/guides/work/gulf-employment-contract-guide-2026.md` | MOHRE UAE, Qatar Ministry of Labour |
-| What to do if your employer confiscates your passport | `content/blog/guides/work/passport-confiscation-what-to-do-2026.md` | ILO conventions, embassy contacts |
-
----
-
-## Image research — COMPLETE
-
-20 images from `docs/engineering/workabroadagent wizard/` fully extracted and researched.
-Full research document: `docs/engineering/WAA_RESEARCH_PREP.md`
-
-**Summary:** 20 images analysed, 18 offers extracted, 6 verified as real opportunities, 7 identified as scam/misleading patterns, 22 blog posts queued, 8 new demand records needed, 4 new countries to add.
-
----
-
-## Image research content queue — 22 posts (W1-W22)
-
-Full details, primary sources, and write order in `docs/engineering/WAA_RESEARCH_PREP.md` Section 6.
-
-### Tier 1 — Write immediately
-
-| ID | Post | Category | File |
+| ID | Post | Target file | Blocker |
 |---|---|---|---|
-| W1 | Canada tech visa 2026 — the honest version | Professional Playbook | `playbooks/professional/canada-tech-express-entry-honest-guide-2026.md` |
-| W2 | Canada Francophone immigration — caregivers, PSWs, hospitality | Professional Playbook | `playbooks/professional/canada-francophone-immigration-caregivers-2026.md` |
-| W3 | Is the Qatar work visa real? What the NGN 3.2m offer actually means | Guide — Work | `guides/work/qatar-work-visa-reality-check-2026.md` |
-| W4 | Is Mongolia a real work destination for Nigerians? | Guide — Work | `guides/work/mongolia-work-visa-nigeria-reality-2026.md` |
-| W5 | How to know if your travel agent is legitimate — the Nigerian checklist | Guide — Work | `guides/work/how-to-spot-fake-travel-agent-nigeria-2026.md` |
-
-### Tier 2 — Real opportunities, new corridors
-
-| ID | Post | Category | File |
-|---|---|---|---|
-| W6 | Oman work visa for mechanics and electricians 2026 | Guide — Work | `guides/work/oman-trades-work-visa-mechanic-electrician-2026.md` |
-| W7 | Guyana 2-year freelance work visa — the complete guide | Country Audit | `country-audits/guyana/guyana-visa-from-nigeria-2026.md` |
-| W8 | Bulgaria study visa for Nigerians 2026 | Country Audit | `country-audits/bulgaria/bulgaria-visa-from-nigeria-2026.md` |
-| W9 | Croatia study visa 2026 — RIT University, work rights, debt trap warning | Country Audit | `country-audits/croatia/croatia-visa-from-nigeria-2026.md` |
-| W10 | Canada warehouse and logistics work permit — LMIA sponsorship | Guide — Work | `guides/work/canada-lmia-warehouse-logistics-2026.md` |
-| W11 | Singapore Employment Pass — COMPASS explained | Guide — Work | `guides/work/singapore-employment-pass-compass-guide-2026.md` |
-
-### Tier 3 — Safety content
-
-| ID | Post | File |
-|---|---|---|
-| W12 | "Job assistance when you get there" — why this phrase should stop you | `guides/work/job-assistance-on-arrival-red-flag-2026.md` |
-| W13 | What "zero deposit" visa offers actually mean | `guides/work/zero-deposit-visa-offers-what-they-mean-2026.md` |
-| W14 | Antigua and Barbuda visa from Nigeria | `country-audits/antigua-barbuda/antigua-barbuda-visa-from-nigeria-2026.md` |
-| W15 | Oman freelance visa vs employment visa — what is the difference | `guides/work/oman-freelance-visa-vs-employment-visa-2026.md` |
-
-### Tier 4 — WAA-4 safety layer (already in pipeline)
-
-| ID | Post | File |
-|---|---|---|
-| W16 | Kafala reform tracker 2026 | `guides/work/kafala-reform-tracker-2026.md` |
-| W17 | How to read a Gulf employment contract | `guides/work/gulf-employment-contract-guide-2026.md` |
-| W18 | What to do if your employer confiscates your passport | `guides/work/passport-confiscation-what-to-do-2026.md` |
-
-### Tier 5 — Platform expansion
-
-| ID | Post | File |
-|---|---|---|
-| W19 | Netherlands Highly Skilled Migrant visa for African tech workers | `guides/work/netherlands-highly-skilled-migrant-visa-2026.md` |
-| W20 | Poland construction and manufacturing work permit 2026 | `guides/work/poland-construction-work-permit-2026.md` |
-| W21 | Ireland nursing visa — NMBI registration step by step | `guides/work/ireland-nursing-visa-nmbi-registration-2026.md` |
-| W22 | Germany care work visa (Pflegekräfte) | `guides/work/germany-care-work-visa-pflegekrafte-2026.md` |
+| R2 | Indonesia Tourist/Business Visa | `country-audits/indonesia/indonesia-visa-from-nigeria-2026.md` | Verify at `imigrasi.go.id` — 1-2 hrs |
+| DEF-1 | Paraguay SUACE/Investor Pass deep-dive | `playbooks/business/paraguay-suace-investor-pass-deep-dive-2026.md` | USD 70k threshold unverified — needs immigration lawyer |
 
 ---
 
-## Researchprop image research — N-series queue (2026-11-11)
+## Sprint B — W1-W22 (ALL DONE)
 
-Full extraction: `docs/research/researchprop-extraction-2026-11-11.md`
+All 22 posts written and live. Archived here for reference.
+
+| ID | Post | Status |
+|---|---|---|
+| W1 | Canada tech visa 2026 — the honest version | ✅ Live |
+| W2 | Canada Francophone immigration — caregivers, PSWs, hospitality | ✅ Live |
+| W3 | Qatar work visa reality check | ✅ Live |
+| W4 | Mongolia work destination debunk | ✅ Live |
+| W5 | How to spot a fake travel agent | ✅ Live |
+| W6 | Oman trades work visa | ✅ Live |
+| W7 | Guyana 2-year freelance visa | ✅ Live |
+| W8 | Bulgaria study visa | ✅ Live |
+| W9 | Croatia study visa — RIT, debt trap warning | ✅ Live |
+| W10 | Canada LMIA warehouse/logistics | ✅ Live |
+| W11 | Singapore Employment Pass — COMPASS | ✅ Live |
+| W12 | Job assistance on arrival red flag | ✅ Live |
+| W13 | Zero deposit visa offers explainer | ✅ Live |
+| W14 | Antigua and Barbuda visa from Nigeria | ✅ Live |
+| W15 | Oman freelance vs employment visa | ✅ Live |
+| W16 | Kafala reform tracker 2026 | ✅ Live |
+| W17 | How to read a Gulf employment contract | ✅ Live |
+| W18 | Passport confiscation — what to do | ✅ Live |
+| W19 | Netherlands Highly Skilled Migrant visa | ✅ Live |
+| W20 | Poland construction work permit | ✅ Live |
+| W21 | Ireland nursing visa — NMBI registration | ✅ Live |
+| W22 | Germany care work visa (Pflegekräfte) | ✅ Live |
+
+---
+
+## Next sprint — 19 posts + 2 updates
+
+Full execution checklist in `docs/project/ACTIVE_SPRINT.md` Priority 8.
 
 ### High priority
 
-| ID | Post | Category | File |
-|---|---|---|---|
-| R6 | Canada RCIP — permanent rural immigration, opens Jan 1, 2027. PR targets: 5,500 (2027) → 6,000 (2028) → 6,500 (2029). 14 communities. Job offer + community recommendation required. | Professional Playbook | `playbooks/professional/canada-rcip-rural-immigration-2026.md` |
-| N16 | European study destinations for Nigerian students 2027 — Lithuania, Slovakia, Latvia, Norway compared (exclude Russia) | Guide — Study | `guides/study/european-study-destinations-nigeria-2027.md` |
+| ID | Post | Category | File | Status |
+|---|---|---|---|---|
+| R6 | Canada RCIP — permanent rural immigration, opens Jan 1 2027. 14 communities, 5,500 PR slots (2027) → 6,500 (2029). Job offer + community recommendation required. | Professional Playbook | `playbooks/professional/canada-rcip-rural-immigration-2026.md` | ⬜ Pending |
+| N16 | European study destinations for Nigerian students 2027 — Lithuania, Slovakia, Latvia, Norway compared | Guide — Study | `guides/study/european-study-destinations-nigeria-2027.md` | ⬜ Pending |
 
-### Medium priority
+### Medium priority — work
 
-| ID | Post | Category | File |
-|---|---|---|---|
-| N11 | Ireland Critical Skills for African software engineers — EUR 38,000 threshold, what it means in practice | Guide — Work | `guides/work/ireland-critical-skills-software-engineers-2026.md` |
-| N12 | French language as a Canada PR strategy — Oct 27 draw: CRS 407 vs 490+ general; 5,000 invitations | Professional Playbook | `playbooks/professional/canada-french-language-express-entry-strategy-2026.md` |
-| N13 | Serbia work visa — what the 69.4M-view TikTok ads aren't telling you (safety framing) | Guide — Work | `guides/work/serbia-work-visa-tiktok-ads-reality-2026.md` |
-| N15 | Finland work permit for African software developers — salary threshold ~EUR 3,000/month, process, timeline | Guide — Work | `guides/work/finland-work-permit-software-developers-2026.md` |
-| NEW-B1 | RAK free zone company formation for African entrepreneurs — privacy vs CRS, ~$900 registry fee | Business Playbook | `playbooks/business/rak-free-zone-company-formation-africa-2026.md` |
-| NEW-B2 | Antigua CBI — what $230,000 buys, CRS implications, UK access status | Business Playbook | `playbooks/business/antigua-barbuda-citizenship-by-investment-2026.md` |
+| ID | Post | Category | File | Status |
+|---|---|---|---|---|
+| N11 | Ireland Critical Skills for African software engineers — EUR 38,000 threshold in practice | Guide — Work | `guides/work/ireland-critical-skills-software-engineers-2026.md` | ⬜ Pending |
+| N12 | French language as a Canada PR strategy — CRS 407 vs 490+ general draws | Professional Playbook | `playbooks/professional/canada-french-language-express-entry-strategy-2026.md` | ⬜ Pending |
+| N13 | Serbia work visa — what the 69.4M-view TikTok ads aren't telling you | Guide — Work | `guides/work/serbia-work-visa-tiktok-ads-reality-2026.md` | ⬜ Pending |
+| N15 | Finland work permit for African software developers — ~EUR 3,000/month threshold | Guide — Work | `guides/work/finland-work-permit-software-developers-2026.md` | ⬜ Pending |
+| N1 | Canada healthcare — nurses via Provincial Nominee Programs | Professional Playbook | `playbooks/professional/canada-healthcare-nurses-pnp-2026.md` | ⬜ Pending |
+| N2 | Germany care work — finding Pflegeheime employers (job search guide) | Guide — Work | `guides/work/germany-care-work-finding-employers-2026.md` | ⬜ Pending |
+| N3 | UAE trades — electricians and plumbers | Guide — Work | `guides/work/uae-trades-electricians-plumbers-2026.md` | ⬜ Pending |
+| N4 | Singapore S Pass — mid-skilled route | Guide — Work | `guides/work/singapore-s-pass-mid-skilled-2026.md` | ⬜ Pending |
+| N5 | Ireland healthcare — physiotherapy, radiography, OT (beyond nursing) | Guide — Work | `guides/work/ireland-healthcare-allied-professionals-2026.md` | ⬜ Pending |
+| N6 | Canada PNP tech streams — Ontario, BC, Alberta | Professional Playbook | `playbooks/professional/canada-pnp-tech-streams-2026.md` | ⬜ Pending |
+
+### Medium priority — business
+
+| ID | Post | Category | File | Status |
+|---|---|---|---|---|
+| NEW-B1 | RAK free zone company formation for African entrepreneurs — privacy vs CRS, ~$900 fee | Business Playbook | `playbooks/business/rak-free-zone-company-formation-africa-2026.md` | ⬜ Pending — verify at `rakez.com` |
+| NEW-B2 | Antigua CBI — what $230,000 buys, CRS implications, UK access status | Business Playbook | `playbooks/business/antigua-barbuda-citizenship-by-investment-2026.md` | ⬜ Pending — verify at `cip.gov.ag` |
 
 ### Low priority
 
-| ID | Post | Category | File |
-|---|---|---|---|
-| N14 | Germany Ausbildung for Nigerians — why most people fail and what actually works | Guide — Work | `guides/work/germany-ausbildung-nigerians-honest-guide-2026.md` |
+| ID | Post | Category | File | Status |
+|---|---|---|---|---|
+| N7 | Real budget breakdown: Nigeria to Germany (Chancenkarte journey) | Case Study | `case-studies/budget-breakdowns/nigeria-to-germany-chancenkarte-2026.md` | ⬜ Pending |
+| N8 | Real budget breakdown: Nigeria to UAE (construction/healthcare worker) | Case Study | `case-studies/budget-breakdowns/nigeria-to-uae-worker-2026.md` | ⬜ Pending |
+| N9 | Visa rejection recovery — what happened after refusal and what changed | Case Study | `case-studies/rejection-analysis/visa-rejection-recovery-2026.md` | ⬜ Pending |
+| N10 | UK Innovator Founder Visa — updated with current endorsing bodies | Professional Playbook | `playbooks/professional/uk-innovator-founder-visa-2026.md` | ⬜ Pending — file exists, needs freshness update |
+| N14 | Germany Ausbildung for Nigerians — why most people fail and what actually works | Guide — Work | `guides/work/germany-ausbildung-nigerians-honest-guide-2026.md` | ⬜ Pending |
 
-### Existing post updates (no new file needed)
+### Existing post updates (no new file)
 
-| Post | Update |
-|---|---|
-| Canada Express Entry 2026 | Add CEC no-proof-of-funds callout; add PTE Core as accepted test alongside IELTS |
-| Germany care work visa W22 | Add honest Ausbildung section |
+| Post | Update | Status |
+|---|---|---|
+| Canada Express Entry 2026 | Add CEC no-proof-of-funds callout + PTE Core as accepted test | ⬜ Pending |
+| Germany care work visa (W22) | Add honest Ausbildung section | ⬜ Pending |

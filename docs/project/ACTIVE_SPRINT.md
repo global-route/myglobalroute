@@ -127,32 +127,55 @@ npx wrangler deploy
 
 ---
 
-## PRIORITY 8 — Post-deploy content pipeline (next sprint)
+## PRIORITY 8 — Next content sprint (19 posts + 2 updates)
 
-These are the next content items after deployment. No code blocker.
+No code blocker on any item. Execute in order. Full file paths in `docs/project/CONTENT_PIPELINE.md`.
 
-| ID | Post | Category | Why |
+### High priority — write first
+
+| ID | Post | Category | Status |
 |---|---|---|---|
-| N1 | Canada healthcare — nurses via Provincial Nominee Programs | Professional Playbook | High-volume corridor, no dedicated post |
-| N2 | Germany care work — finding employers (Pflegeheime job search guide) | Guide — Work | Companion to W22, practical next step |
-| N3 | UAE trades — electricians and plumbers (separate from domestic/construction) | Guide — Work | Demand record exists, no post |
-| N4 | Singapore S Pass — mid-skilled route (separate from EP) | Guide — Work | S Pass demand record exists, no post |
-| N5 | Ireland healthcare — beyond nursing (physiotherapy, radiography, OT) | Guide — Work | IE healthcare demand record covers more than nursing |
-| N6 | Canada PNP tech streams — Ontario, BC, Alberta (companion to W1) | Professional Playbook | PNP is the fastest route for most tech applicants |
-| N7 | Real budget breakdown: Nigeria to Germany (Chancenkarte journey) | Case Study | Gap area in CONTENT_PIPELINE.md |
-| N8 | Real budget breakdown: Nigeria to UAE (construction/healthcare worker) | Case Study | Gap area in CONTENT_PIPELINE.md |
-| N9 | Visa rejection recovery — what happened after refusal and what changed | Case Study | Gap area in CONTENT_PIPELINE.md |
-| N10 | UK Innovator Founder Visa — updated with current endorsing bodies | Professional Playbook | Existing post needs freshness update |
-| N11 | Ireland Critical Skills for African software engineers — EUR 38,000 threshold | Guide — Work | High paid-ad signal from field research |
-| N12 | French language as a Canada PR strategy — Oct 27 draw CRS 407 vs 490+ general | Professional Playbook | Extends W2, strong audience demand |
-| N13 | Serbia work visa — what the 69.4M-view TikTok ads aren't telling you | Guide — Work | Safety framing, massive reach signal |
-| N14 | Germany Ausbildung for Nigerians — why most people fail | Guide — Work | Debunk signal from field research |
-| N15 | Finland work permit for African software developers | Guide — Work | Paid-ad signal, Nordic tech corridor |
-| N16 | European study destinations 2027 — Lithuania, Slovakia, Latvia, Norway compared | Guide — Study | Sep 2027 intake, high search intent |
+| R6 | Canada RCIP — permanent rural immigration, opens Jan 1 2027. 14 communities, 5,500→6,500 PR slots. Job offer + community recommendation required. | Professional Playbook | ⬜ Pending |
+| N16 | European study destinations 2027 — Lithuania, Slovakia, Latvia, Norway compared | Guide — Study | ⬜ Pending |
 
-**Also from Researchprop research — existing post updates (no new file):**
-- Canada Express Entry 2026: add CEC no-proof-of-funds callout + PTE Core as accepted test
-- Germany care work W22: add honest Ausbildung section
+### Medium priority — work
+
+| ID | Post | Category | Status |
+|---|---|---|---|
+| N11 | Ireland Critical Skills for African software engineers — EUR 38,000 threshold | Guide — Work | ⬜ Pending |
+| N12 | French language as a Canada PR strategy — CRS 407 vs 490+ general draws | Professional Playbook | ⬜ Pending |
+| N13 | Serbia work visa — what the 69.4M-view TikTok ads aren't telling you | Guide — Work | ⬜ Pending |
+| N15 | Finland work permit for African software developers — ~EUR 3,000/month | Guide — Work | ⬜ Pending |
+| N1 | Canada healthcare — nurses via Provincial Nominee Programs | Professional Playbook | ⬜ Pending |
+| N2 | Germany care work — finding Pflegeheime employers | Guide — Work | ⬜ Pending |
+| N3 | UAE trades — electricians and plumbers | Guide — Work | ⬜ Pending |
+| N4 | Singapore S Pass — mid-skilled route | Guide — Work | ⬜ Pending |
+| N5 | Ireland healthcare — physiotherapy, radiography, OT | Guide — Work | ⬜ Pending |
+| N6 | Canada PNP tech streams — Ontario, BC, Alberta | Professional Playbook | ⬜ Pending |
+
+### Medium priority — business
+
+| ID | Post | Category | Status |
+|---|---|---|---|
+| NEW-B1 | RAK free zone company formation — privacy vs CRS, ~$900 fee | Business Playbook | ⬜ Pending — verify `rakez.com` first |
+| NEW-B2 | Antigua CBI — what $230,000 buys, CRS implications, UK access | Business Playbook | ⬜ Pending — verify `cip.gov.ag` first |
+
+### Low priority
+
+| ID | Post | Category | Status |
+|---|---|---|---|
+| N7 | Real budget breakdown: Nigeria to Germany (Chancenkarte) | Case Study | ⬜ Pending |
+| N8 | Real budget breakdown: Nigeria to UAE (construction/healthcare) | Case Study | ⬜ Pending |
+| N9 | Visa rejection recovery — what happened after refusal | Case Study | ⬜ Pending |
+| N10 | UK Innovator Founder Visa — updated endorsing bodies | Professional Playbook | ⬜ Pending — file exists, needs update |
+| N14 | Germany Ausbildung for Nigerians — why most people fail | Guide — Work | ⬜ Pending |
+
+### Existing post updates (no new file)
+
+| Post | Update | Status |
+|---|---|---|
+| Canada Express Entry 2026 | Add CEC no-proof-of-funds callout + PTE Core as accepted test | ⬜ Pending |
+| Germany care work visa (W22) | Add honest Ausbildung section | ⬜ Pending |
 
 ---
 
