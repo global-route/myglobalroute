@@ -11,9 +11,9 @@
 
 
 
-| 1 | Deploy site | 5 min | All 145 posts + 199 URLs live |
-| 2 | OG image — screenshot `docs/engineering/og-image-design.html` at 1200×630, save as `public/assets/og-default.png`, redeploy | 20 min | Social share cards on all 26 pages |
-| 3 | WAA: Resend account + Worker deploy | 20 min | Agent lead delivery (email channel) |
+| 1 | Deploy site | 5 min | ✅ DONE 2026-11-20 — Version 24bb5546 |
+| 2 | OG image — screenshot `docs/engineering/og-image-design.html` at 1200×630, save as `public/assets/og-default.png`, redeploy | 20 min | ✅ DONE 2026-11-20 — confirmed live via Facebook debugger |
+| 3 | WAA: Resend account + Worker deploy | 20 min | ⏳ Blocked — needs first verified agent (Action 4) first |
 | 4 | WAA: First agent credentials + agents.json | 1-2 hrs | Full WAA feature live end-to-end |
 | 5 | Working-holiday article verification (AU/IE/NZ) | 1 hr | Removes correction banners from 3 posts |
 | 6 | ARIA audit (axe, 4 pages) | 30 min | Accessibility gate |

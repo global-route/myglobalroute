@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1200px; height: 630px; overflow: hidden; background: #10316b; font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+
+  .card {
+    width: 1200px;
+    height: 630px;
+    background: #10316b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 64px 80px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Subtle geometric accent — top-right corner arc */
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -160px;
+    right: -160px;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,201,71,0.18);
+  }
+  .card::after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,201,71,0.10);
+  }
+
+  /* Top row — wordmark + tagline */
+  .top {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .wordmark {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  /* MP2G monogram badge */
+  .monogram {
+    width: 56px;
+    height: 56px;
+    background: #ffc947;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .monogram span {
+    font-size: 20px;
+    font-weight: 800;
+    color: #10316b;
+    letter-spacing: -1px;
+  }
+
+  .site-name {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+  }
+  .site-name em {
+    color: #ffc947;
+    font-style: normal;
+  }
+
+  .tagline {
+    font-size: 20px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    padding-left: 0;
+  }
+
+  /* Middle — main value statement */
+  .headline {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  .headline h1 {
+    font-size: 52px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    max-width: 820px;
+  }
+  .headline h1 span {
+    color: #ffc947;
+  }
+
+  /* Bottom row — stats strip */
+  .stats {
+    display: flex;
+    gap: 48px;
+    align-items: flex-end;
+  }
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .stat-number {
+    font-size: 32px;
+    font-weight: 800;
+    color: #ffc947;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  .divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255,255,255,0.15);
+    align-self: flex-end;
+    margin-bottom: 4px;
+  }
+
+  /* Bottom-right domain */
+  .domain {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    align-self: flex-end;
+    font-size: 16px;
+    color: rgba(255,255,255,0.35);
+    font-weight: 400;
+    letter-spacing: 0.3px;
+  }
+  .domain svg {
+    display: block;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+  <div class="top">
+    <div class="wordmark">
+      <div class="site-name">MyPathway<em>2</em>Global</div>
+    </div>
+    <div class="tagline">Evidence-gated migration intelligence for African talent</div>
+  </div>
+
+  <div class="headline">
+    <h1>Your honest guide to<br><span>global mobility</span> from Africa.</h1>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-number">35</div>
+      <div class="stat-label">Countries</div>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <div class="stat-number">75</div>
+      <div class="stat-label">Pathways</div>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <div class="stat-number">145</div>
+      <div class="stat-label">Blog posts</div>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <div class="stat-number">222+</div>
+      <div class="stat-label">Evidence records</div>
+    </div>
+    <div class="domain">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffc947" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+      mypathway2global.org.uk
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

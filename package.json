@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "npx @11ty/eleventy --serve",
     "build": "node scripts/generate-og-image.js && npx @11ty/eleventy",
+    "og:generate": "node scripts/generate-og-image.js",
     "build:old": "npm run build:css && npm run build:js",
     "build:css": "node scripts/build-css.js",
     "build:js": "node scripts/build-js.js",
@@ -50,8 +51,9 @@
     "postcss": "^8.4.35",
     "postcss-cli": "^11.0.0",
     "prettier": "^3.2.5",
+    "puppeteer": "^25.18.1",
     "sharp": "^0.35.5",
-    "wrangler": "^4.155.0"
+    "wrangler": "^3.114.17"
   },
   "dependencies": {
     "fuse.js": "^7.0.0"

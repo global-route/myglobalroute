@@ -1,5 +1,5 @@
 # ACTIVE SPRINT TASKFILE — MyPathway2Global
-**Updated:** 2026-11-20 | **Commit:** `4588a5d` | **Tests:** 19/19, 214/214
+**Updated:** 2026-11-20 | **Commit:** `5aa42f4` | **Tests:** 19/19, 214/214
 **Posts:** 145 | **Countries:** 35 | **Pathways:** 75 | **Demand records:** 24 | **Evidence records:** 222
 **Data validation:** PASSED | **Stale requirements:** 1 (IE-critical-skills — evidence-date locked)
 
@@ -102,9 +102,9 @@ When WAA-3a-1 to 4 are resolved, WAA-3b/3c/3d code already live activates automa
 | ID | Task | Status |
 |---|---|---|
 | D1 | Fix wrangler DNS issue — downgrade to v3: `npm install --save-dev wrangler@3` | **DONE** |
-| D2 | Deploy: `npx wrangler deploy` | **DONE** |
+| D2 | Deploy: `npx wrangler deploy` | **DONE** `2026-11-20` — 145 posts, 199 URLs, OG image live |
 | D3 | Post-deploy smoke test: verify site loads, WAA wizard works, new posts accessible | **DONE** |
-| D4 | Re-run axe accessibility audit after deploy (WCAG 2.1 AA) | **DONE** |
+| D4 | Re-run axe accessibility audit after deploy (WCAG 2.1 AA) | **PENDING** — owner action |
 
 **Deploy command (macOS):**
 ```bash
