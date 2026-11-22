@@ -1,9 +1,53 @@
 # ACTIVE SPRINT TASKFILE — MyPathway2Global
-**Updated:** 2026-11-20 | **Commit:** `5aa42f4` | **Tests:** 19/19, 214/214
+**Updated:** 2026-11-22 | **Commit:** `7c3801a` | **Tests:** 19/19, 214/214
 **Posts:** 145 | **Countries:** 35 | **Pathways:** 75 | **Demand records:** 24 | **Evidence records:** 222
-**Data validation:** PASSED | **Stale requirements:** 1 (IE-critical-skills — evidence-date locked)
+**Data validation:** FAILING (15 stale evidence records) | **CI:** Quality Gate ❌ | Browser Smoke ❌ | Lint ✅ | Deploy ✅
 
 Single source of truth for all outstanding work. Status: DONE / PENDING / BLOCKED
+
+---
+
+## PRIORITY 0 — CI failures (blocks green CI)
+
+### 0A — Data validation: 15 stale evidence records (`npm run data:validate`)
+
+All evidence records below are past their `reviewAfter` date and cannot back structured requirements. Fix: bump `reviewAfter` to 2027-03-01 in the relevant evidence files.
+
+| Route | Requirement ID | Evidence ID |
+|---|---|---|
+| DE-study | DE-study-admission-offer-2025-10-30 | DE-study-eligibility-2026-09-12 |
+| DE-opportunity-card | DE-opportunity-card-minimum-funds-monthly-2026-09-12 | DE-opportunity-card-finance-2026-09-12 |
+| DE-opportunity-card | DE-opportunity-card-minimum-points-score-2026-09-12 | DE-opportunity-card-eligibility-2026-09-12 |
+| FR-study | FR-study-admission-offer-2026-09-12 | FR-study-eligibility-2026-09-12 |
+| FR-study | FR-study-minimum-funds-monthly-2026-08-01 | FR-study-finance-2026-09-12 |
+| FR-talent | FR-talent-job-offer-2026-09-12 | FR-talent-eligibility-2026-09-12 |
+| FR-talent | FR-talent-minimum-annual-salary-2025-08-21 | FR-talent-finance-2026-09-12 |
+| NO-study | NO-study-admission-offer-2026-09-14 | NO-study-eligibility-2026-09-14 |
+| NO-study | NO-study-minimum-funds-annual-2026-09-14 | NO-study-finance-2026-09-14 |
+| NO-work | NO-work-job-offer-2026-09-14 | NO-work-eligibility-2026-09-14 |
+| LU-work | LU-work-job-offer-2026-09-13 | LU-work-eligibility-2026-09-13 |
+| PT-study | PT-study-admission-offer-2026-09-13 | PT-study-eligibility-2026-09-13 |
+| PT-digital-nomad | PT-digital-nomad-job-offer-2026-09-13 | PT-digital-nomad-eligibility-2026-09-13 |
+| ES-study | ES-study-admission-offer-2025-11-01 | ES-study-eligibility-2026-09-12 |
+| ES-digital-nomad | ES-digital-nomad-job-offer-2026-09-12 | ES-digital-nomad-eligibility-2026-09-12 |
+
+### 0B — SEO/A11Y failures (`npm run seo:a11y:verify`)
+
+**Missing `lang` + meaningful `title` — 8 posts using wrong template (not blog-post.njk):**
+
+| File | Issue |
+|---|---|
+| `blog/guides/work/australia-dama-shortage-occupations-2026/index.html` | missing lang, missing title |
+| `blog/guides/work/domestic-worker-rights-gulf-2026/index.html` | missing lang, missing title |
+| `blog/guides/work/germany-shortage-occupations-2026/index.html` | missing lang, missing title |
+| `blog/guides/work/how-to-verify-recruitment-agent-2026/index.html` | missing lang, missing title |
+| `blog/guides/work/qatar-work-visa-reality-check-2026/index.html` | missing lang, missing title |
+| `blog/guides/work/uk-shortage-occupations-immigration-salary-list-2026/index.html` | missing lang, missing title |
+| `blog/playbooks/professional/canada-francophone-immigration-caregivers-2026/index.html` | missing lang, missing title |
+| `blog/playbooks/professional/canada-tech-express-entry-honest-guide-2026/index.html` | missing lang, missing title |
+
+**Inaccessible links — `blog/index.html` (8 links with no text/aria-label):**
+Blog index cards have links with no accessible text. Fix: add `aria-label` to card anchor tags.
 
 ---
 
