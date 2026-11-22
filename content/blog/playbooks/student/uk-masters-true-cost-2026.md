@@ -978,18 +978,4 @@ As a Nigerian international student, you must:
 
 If you can get **any scholarship (even 25%)** + leverage work income strategically, **UK Master's becomes much more affordable** (₦20M-30M net).
 
----
-
-**Updated:** August 18, 2026 
-**Next update:** January 2027 (new scholarship rounds) 
-**Found errors?** [Report corrections →](/pages/contact.html)
-
-**Related Articles:**
-- [Scholarship Funding Strategy: Maximizing UK Award Chances](/content/blog/guides/uk-scholarship-strategy.html)
-- [UK vs. Canada Masters: Which is Better Value?](/content/blog/guides/uk-vs-canada-comparison.html)
-- [Success Story: Zainab's Path from Lagos to Oxford (Chevening Scholar)](/content/blog/case-studies/success-stories/zainab-nigeria-oxford-chevening.html)
-
----
-
-**Share this article:** [Twitter](#) • [LinkedIn](#) • [WhatsApp](#)
 

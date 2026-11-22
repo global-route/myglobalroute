@@ -1000,18 +1000,4 @@ Express Entry is **Canada's fastest path to PR** for skilled workers. The proces
 
 **Start today:** Create your Express Entry profile even if you don't have all documents yet. See your CRS score. Then decide if you need PNP or can apply solo.
 
----
-
-**Updated:** August 18, 2026 
-**Next update:** October 2026 (draw data refresh) 
-**Found errors?** [Report corrections →](/pages/contact.html)
-
-**Related Articles:**
-- [Canada vs. USA: Which Skilled Immigration Pathway is Better?](/content/blog/guides/canada-vs-usa-comparison.html)
-- [How to Fund Canada: Work-Study Strategy from Nigeria](/content/blog/guides/canada-study-financing.html)
-- [Success Story: Adeyemi's Journey from Lagos to Toronto (Express Entry)](/content/blog/case-studies/success-stories/adeyemi-nigeria-to-canada-express-entry.html)
-
----
-
-**Share this article:** [Twitter](#) • [LinkedIn](#) • [WhatsApp](#)
 

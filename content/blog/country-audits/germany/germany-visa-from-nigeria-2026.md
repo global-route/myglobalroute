@@ -529,17 +529,4 @@ The blocked account (₦8.1M) is steep, but the **zero tuition saves you ₦20-4
 
 **Is it worth it?** If you have the funds or can secure a loan, **absolutely**. The 18-month job search visa and path to PR make Germany a strong long-term investment.
 
----
-
-**Updated:** July 21, 2026 
-**Found errors or have updates?** [Report corrections →](/pages/contact.html)
-
-**Related Articles:**
-- [How to Fund Germany Blocked Account from Ghana](/content/blog/playbooks/student/blocked-account-funding.html)
-- [Germany vs. Italy: Which Student Pathway is Better?](/content/blog/guides/germany-vs-italy-comparison.html)
-- [Success Story: Tunde's Journey from Lagos to Munich](/content/blog/case-studies/success-stories/tunde-nigeria-germany.html)
-
----
-
-**Share this article:** [Twitter](#) • [LinkedIn](#) • [WhatsApp](#)
 
