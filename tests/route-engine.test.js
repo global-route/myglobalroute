@@ -473,7 +473,7 @@ describe('P0.3 evaluateRequirements', () => {
   test('annual salary at minimum is not a blocker', () => {
     const { blockers } = evaluateRequirements(
       basePathway([{ field: 'minimum_annual_salary', kind: 'money', value: 30000, currency: 'GBP' }]),
-      { monthlyIncome: 2500 } // 30000/yr = 30000
+      { monthlyIncome: 3500, incomeCurrency: 'USD' } // USD 42000/yr > GBP 30000 (USD ~38100)
     );
     expect(blockers.length).toBe(0);
   });
@@ -597,5 +597,122 @@ describe('P0.4 normalizeCurrency', () => {
     const result = scorePathway(pathway, { id: 'XX', dataStatus: 'publishable' }, { goal: 'study', budget: '5000' });
     expect(result.eligible).toBe(true);
     expect(result.warnings.some(w => w.match(/currency conversion unavailable/))).toBe(true);
+  });
+});
+
+// ── O4-02 — missing age is a warning, not a silent pass ──────────────────────
+
+describe('O4-02 missing age handling', () => {
+  const req = [{ field: 'minimum_age', kind: 'number', value: 18 }];
+  const base = (reqs) => ({ requirements: reqs });
+
+  test('missing age produces a warning not a blocker', () => {
+    const { blockers, warnings } = evaluateRequirements(base(req), {});
+    expect(blockers.length).toBe(0);
+    expect(warnings.length).toBe(1);
+    expect(warnings[0]).toMatch(/minimum age/i);
+  });
+
+  test('null age produces a warning not a blocker', () => {
+    const { blockers, warnings } = evaluateRequirements(base(req), { age: null });
+    expect(blockers.length).toBe(0);
+    expect(warnings.length).toBe(1);
+  });
+
+  test('empty string age produces a warning not a blocker', () => {
+    const { blockers, warnings } = evaluateRequirements(base(req), { age: '' });
+    expect(blockers.length).toBe(0);
+    expect(warnings.length).toBe(1);
+  });
+
+  test('age below minimum is a blocker when provided', () => {
+    const { blockers } = evaluateRequirements(base(req), { age: 17 });
+    expect(blockers.length).toBe(1);
+    expect(blockers[0]).toMatch(/Minimum age/);
+  });
+
+  test('age at minimum is not a blocker', () => {
+    const { blockers } = evaluateRequirements(base(req), { age: 18 });
+    expect(blockers.length).toBe(0);
+  });
+});
+
+// ── O4-04/O4-05 — salary period and currency normalization ───────────────────
+
+describe('O4-04/O4-05 salary period and currency normalization', () => {
+  const base = (reqs) => ({ requirements: reqs });
+
+  test('missing monthlyIncome produces a warning not a blocker', () => {
+    const { blockers, warnings } = evaluateRequirements(
+      base([{ field: 'minimum_annual_salary', kind: 'money', value: 30000, currency: 'GBP' }]),
+      {}
+    );
+    expect(blockers.length).toBe(0);
+    expect(warnings.length).toBe(1);
+    expect(warnings[0]).toMatch(/salary requirement/i);
+  });
+
+  test('null monthlyIncome produces a warning not a blocker', () => {
+    const { blockers, warnings } = evaluateRequirements(
+      base([{ field: 'minimum_annual_salary', kind: 'money', value: 30000, currency: 'GBP' }]),
+      { monthlyIncome: null }
+    );
+    expect(blockers.length).toBe(0);
+    expect(warnings.length).toBe(1);
+  });
+
+  test('annual salary: USD income above EUR threshold passes', () => {
+    // EUR 38000/yr = USD ~41040. Monthly USD 4000 = USD 48000/yr — pass
+    const { blockers } = evaluateRequirements(
+      base([{ field: 'minimum_annual_salary', kind: 'money', value: 38000, currency: 'EUR' }]),
+      { monthlyIncome: 4000, incomeCurrency: 'USD' }
+    );
+    expect(blockers.length).toBe(0);
+  });
+
+  test('annual salary: USD income below EUR threshold blocks', () => {
+    // EUR 38000/yr = USD ~41040. Monthly USD 2000 = USD 24000/yr — block
+    const { blockers } = evaluateRequirements(
+      base([{ field: 'minimum_annual_salary', kind: 'money', value: 38000, currency: 'EUR' }]),
+      { monthlyIncome: 2000, incomeCurrency: 'USD' }
+    );
+    expect(blockers.length).toBe(1);
+    expect(blockers[0]).toMatch(/Salary requirement/);
+  });
+
+  test('monthly salary: income compared monthly not annually', () => {
+    // GBP 2000/month = USD ~2540. Monthly USD 3000 — pass
+    const { blockers } = evaluateRequirements(
+      base([{ field: 'minimum_monthly_salary', kind: 'money', value: 2000, currency: 'GBP' }]),
+      { monthlyIncome: 3000, incomeCurrency: 'USD' }
+    );
+    expect(blockers.length).toBe(0);
+  });
+
+  test('unknown salary currency produces warning not blocker', () => {
+    const { blockers, warnings } = evaluateRequirements(
+      base([{ field: 'minimum_annual_salary', kind: 'money', value: 30000, currency: 'XYZ' }]),
+      { monthlyIncome: 1000, incomeCurrency: 'USD' }
+    );
+    expect(blockers.length).toBe(0);
+    expect(warnings.some(w => /currency conversion unavailable/i.test(w))).toBe(true);
+  });
+});
+
+// ── O6-02 — FX table unification ─────────────────────────────────────────────
+
+describe('O6-02 FX table unification', () => {
+  test('EUR rate is 1.08', () => {
+    expect(normalizeCurrency(1000, 'EUR').usd).toBe(1080);
+  });
+
+  test('GBP rate is 1.27', () => {
+    expect(normalizeCurrency(1000, 'GBP').usd).toBe(1270);
+  });
+
+  test('all former calculator-only currencies now covered by route engine', () => {
+    for (const ccy of ['USD', 'EUR', 'GBP', 'CAD', 'AUD', 'JPY', 'KRW']) {
+      expect(normalizeCurrency(1000, ccy).unknown).toBe(false);
+    }
   });
 });

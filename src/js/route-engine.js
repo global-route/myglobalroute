@@ -112,9 +112,15 @@
       }
 
       if (field === 'minimum_age' && kind === 'number') {
-        const age = number(profile.age);
         const minAge = number(req.value);
-        if (age > 0 && minAge > 0 && age < minAge) blockers.push(`Minimum age for this pathway is ${minAge}.`);
+        if (minAge > 0) {
+          if (profile.age === undefined || profile.age === null || String(profile.age).trim() === '') {
+            warnings.push(`This pathway has a minimum age of ${minAge} — confirm before applying.`);
+          } else {
+            const age = number(profile.age);
+            if (age < minAge) blockers.push(`Minimum age for this pathway is ${minAge}.`);
+          }
+        }
       }
 
       if (field === 'minimum_experience_years' && kind === 'number') {
@@ -125,13 +131,26 @@
       }
 
       if ((field === 'minimum_annual_salary' || field === 'minimum_monthly_salary') && kind === 'money') {
-        const income = number(profile.monthlyIncome);
         const reqVal = number(req.value);
-        if (income > 0 && reqVal > 0) {
-          const compareIncome = field === 'minimum_annual_salary' ? income * 12 : income;
-          if (compareIncome < reqVal) blockers.push(`Salary requirement: ${req.currency || ''} ${reqVal} (${field.replace('minimum_', '').replace('_', ' ')}).`);
-        } else if (!profile.monthlyIncome && reqVal > 0) {
-          warnings.push(`This pathway has a salary requirement of ${req.currency || ''} ${reqVal}.`);
+        if (reqVal > 0) {
+          if (profile.monthlyIncome === undefined || profile.monthlyIncome === null || String(profile.monthlyIncome).trim() === '') {
+            warnings.push(`This pathway has a salary requirement of ${req.currency || ''} ${reqVal} (${field === 'minimum_annual_salary' ? 'annual' : 'monthly'}) — confirm before applying.`);
+          } else {
+            const income = number(profile.monthlyIncome);
+            if (income > 0) {
+              // Normalize both to USD for cross-currency comparison
+              const incomeAnnualUSD = normalizeCurrency(income * 12, profile.incomeCurrency || 'USD');
+              const reqAnnual = field === 'minimum_annual_salary' ? reqVal : reqVal * 12;
+              const reqUSD = normalizeCurrency(reqAnnual, req.currency || 'USD');
+              if (!incomeAnnualUSD.unknown && !reqUSD.unknown) {
+                if (incomeAnnualUSD.usd < reqUSD.usd) {
+                  blockers.push(`Salary requirement: ${req.currency || ''} ${reqVal} ${field === 'minimum_annual_salary' ? 'per year' : 'per month'} — your income appears below this threshold.`);
+                }
+              } else {
+                warnings.push(`Salary requirement: ${req.currency || ''} ${reqVal} — currency conversion unavailable, verify manually.`);
+              }
+            }
+          }
         }
       }
 

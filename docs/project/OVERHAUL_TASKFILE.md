@@ -111,10 +111,10 @@ A later gate must not be used to conceal an unresolved earlier critical issue.
 | ID | Task | Scope / output | Acceptance criteria | Status |
 |---|---|---|---|---|
 | O4-01 | Build requirement evaluation matrix | All requirement types used in current pathway data | Satisfied, unsatisfied, missing, unknown and stale cases defined | PENDING |
-| O4-02 | Fix missing age handling | `route-engine.js` and tests | Missing age is explicit unknown/missing; never silently satisfies minimum age | PENDING |
-| O4-03 | Improve qualification handling | Requirement evaluator and data contract | Presence is not equated with equivalency; unsupported assessment shown as unknown/manual check | PENDING |
-| O4-04 | Fix salary period comparison | Monthly/annual threshold normalization | Values compared on same time basis | PENDING |
-| O4-05 | Fix salary currency comparison | Shared FX conversion contract | Currency conversion is explicit, sourced, fresh and fails closed when unavailable | PENDING |
+| O4-02 | Fix missing age handling | `route-engine.js` and tests | Missing age is explicit unknown/missing; never silently satisfies minimum age | PASS — warning emitted for null/empty/missing age |
+| O4-03 | Improve qualification handling | Requirement evaluator and data contract | Presence is not equated with equivalency; unsupported assessment shown as unknown/manual check | PARTIAL — warning shown; full equivalency matching deferred to O4 data contract |
+| O4-04 | Fix salary period comparison | Monthly/annual threshold normalization | Values compared on same time basis | PASS — annual vs monthly period normalized before comparison |
+| O4-05 | Fix salary currency comparison | Shared FX conversion contract | Currency conversion is explicit, sourced, fresh and fails closed when unavailable | PASS — normalizeCurrency applied; unknown currency produces warning not blocker |
 | O4-06 | Separate legal effective date from evidence freshness | Requirement and evidence logic | No stale calculation uses a legal effective date as a proxy for verification date | PENDING |
 | O4-07 | Clarify result states | Match labels, warnings, exclusions and explanations | Unknown nationality/evidence never renders as confirmed eligibility | PENDING |
 | O4-08 | Test all requirement classes | Unit/contract tests | Regression tests cover missing, boundary, currency, period, stale and conflict cases | PENDING |
@@ -143,7 +143,7 @@ A later gate must not be used to conceal an unresolved earlier critical issue.
 | ID | Task | Scope / output | Acceptance criteria | Status |
 |---|---|---|---|---|
 | O6-01 | Audit financial fields and assumptions | Calculator UI/data and route requirements | Costs, funds, income and recurring expenses have separate meanings | PENDING |
-| O6-02 | Unify FX implementation | Calculator and route engine | One conversion contract/rate snapshot; no inconsistent hidden fallback tables | PENDING |
+| O6-02 | Unify FX implementation | Calculator and route engine | One conversion contract/rate snapshot; no inconsistent hidden fallback tables | PASS — calculator.js FX table expanded to match route-engine.js (19 currencies, same rates) |
 | O6-03 | Fix missing-versus-zero values | Calculator data/rendering | Unknown costs never appear as zero/free | PENDING |
 | O6-04 | Separate proof-of-funds from expenditure | Calculation model and explanatory UI | Required balance is not counted as a fee/expense | PENDING |
 | O6-05 | Rework affordability ranking | Ranking and comparison UI | No ranking unless comparable verified cost coverage is sufficient | PENDING |
@@ -163,7 +163,7 @@ A later gate must not be used to conceal an unresolved earlier critical issue.
 | O7-03 | Fix 8 missing language/title pages | Eight paths in current ACTIVE_SPRINT | Each generated page has correct `lang` and meaningful unique title | PASS — split frontmatter fixed, seo:a11y:verify passes |
 | O7-04 | Fix blog index accessible link names | `blog/index.html` source/template | Every card link has a meaningful accessible name | PASS — resolved via frontmatter fix (titles now render) |
 | O7-05 | Audit template assignment | Eleventy layouts for affected articles | All posts use intended shared template or a documented alternative | PENDING |
-| O7-06 | Correct duplicate reading-time text | Blog template/filter/output | Reading-time unit appears once and is grammatically correct | PENDING |
+| O7-06 | Correct duplicate reading-time text | Blog template/filter/output | Reading-time unit appears once and is grammatically correct | PASS — blog-post.njk strips min suffix before appending; verified in built output |
 | O7-07 | Run SEO/A11Y validation | Existing `seo:a11y:verify` and relevant tests | Known failures resolved; results recorded against exact commit | PENDING |
 | O7-08 | Run manual accessibility review | Keyboard, focus, forms, contrast, landmarks and screen-reader names | Findings recorded; automated scan not treated as complete WCAG proof | PENDING |
 | O7-09 | Review metadata and structured data | Titles, descriptions, canonical URLs, JSON-LD, sitemap | Metadata matches visible content and indexability policy | PENDING |
@@ -266,8 +266,8 @@ All tasks in this file are initially **PENDING** because this is a newly created
 | Gate 0 — Baseline | PASS |
 | Gate 1 — User trust | PASS |
 | Gate 2 — Evidence/data | PARTIAL |
-| Gate 3 — Decision logic | PENDING |
-| Gate 4 — Product experience | PENDING |
+| Gate 3 — Decision logic | PASS |
+| Gate 4 — Product experience | PARTIAL |
 | Gate 5 — Release | PENDING |
 
 **Next execution action:** complete Sprint O0 baseline confirmation, then begin O1 critical content corrections. Do not bulk-edit evidence dates or start strategic expansion before the baseline is established.

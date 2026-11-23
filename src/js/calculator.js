@@ -8,16 +8,32 @@
 
 const CalculatorModule = (() => {
   const config = {
-    // Fallback rates only. Do not present these as live FX rates.
+    // Shared FX rates — must match route-engine.js FX_RATES_TO_USD.
+    // Source: representative mid-market rates, retrieved 2026-11-05.
+    // Do not present as live rates. Stale after 90 days.
     currencyExchangeRates: {
       USD: 1,
       EUR: 1.08,
       GBP: 1.27,
-      CAD: 0.74,
-      AUD: 0.67,
+      AUD: 0.65,
+      CAD: 0.73,
+      NZD: 0.60,
+      SEK: 0.096,
+      NOK: 0.093,
+      DKK: 0.145,
+      CHF: 1.13,
       JPY: 0.0067,
-      KRW: 0.00073
+      KRW: 0.00073,
+      SGD: 0.74,
+      HUF: 0.0028,
+      PLN: 0.25,
+      CZK: 0.044,
+      MUR: 0.022,
+      CVE: 0.0098,
+      NAD: 0.055
     },
+    fxRetrievedDate: '2026-11-05',
+    fxStaleDays: 90,
     tightBudgetThreshold: 0.8
   };
 

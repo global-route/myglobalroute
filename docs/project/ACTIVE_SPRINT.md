@@ -1,5 +1,5 @@
 # ACTIVE SPRINT TASKFILE — MyPathway2Global
-**Updated:** 2026-11-23 | **Commit:** `pending` | **Tests:** 19/19, 214/214
+**Updated:** 2026-11-23 | **Commit:** `pending-g3` | **Tests:** 19/19, 214/214
 **Posts:** 145 | **Countries:** 35 | **Pathways:** 75 | **Demand records:** 24 | **Evidence records:** 222
 **Data validation:** PASSED | **CI:** Quality Gate ✅ | Browser Smoke ✅ | Lint ✅ | Deploy ✅
 **Overhaul:** Gates 0-1 PASS — see `docs/project/OVERHAUL_TASKFILE.md`
