@@ -42,7 +42,7 @@ Current `main` SHA recorded at verification: `12cca13f8ddfe3c6976e29b3965435fe1b
 - Identify the authoritative hosting project and production hostname from account/project configuration, not historical prose alone.
 - Resolve conflicting references to Cloudflare Pages/`vrenum.app` and the public `myglobalroute.com` consultancy/services site before setting canonical metadata. A public check could not retrieve `vrenum.app`; that alone does not prove it is down or establish hosting ownership.
 - Verify the deployed commit matches current `main`.
-- Run `npm run deploy:verify` against the confirmed origin after it is reachable.
+- Run pm run deploy:verify` against the confirmed origin after it is reachable.
 - Verify country/pathway deep links, assets, JSON data, calculator and recommendation behavior.
 - Restore canonical, Open Graph and sitemap absolute URLs only after origin confirmation.
 - Audit CSP against the actual deployed third-party inventory.
@@ -115,7 +115,7 @@ Cloudflare's GitHub integration reports a successful Workers production build ch
 
 ## Evidence freshness inventory — 2026-10-11
 
-Use `npm run evidence:freshness` to inventory every primary/addendum evidence record by country, route, field, source URL and review status. Statuses are current, overdue, missing review date and invalid review date. The report is part of `npm run verify`; it does not refresh evidence automatically. Refresh dates only after direct official-source review, preserve unknowns, and keep unsupported country-level metrics unfilled. Prioritize structured-requirement dependencies and stale material claims on publishable routes, then work through remaining countries in a tracked queue.
+Use pm run evidence:freshness` to inventory every primary/addendum evidence record by country, route, field, source URL and review status. Statuses are current, overdue, missing review date and invalid review date. The report is part of pm run verify`; it does not refresh evidence automatically. Refresh dates only after direct official-source review, preserve unknowns, and keep unsupported country-level metrics unfilled. Prioritize structured-requirement dependencies and stale material claims on publishable routes, then work through remaining countries in a tracked queue.
 
 
 ## Production verification guard — 2026-10-11
@@ -125,7 +125,7 @@ The production verifier now requires an HTTPS origin and rejects HTTP before net
 
 ## CI freshness-inventory wiring — 2026-10-11
 
-Corrected .github/workflows/quality.yml: the evidence-readiness step now runs both `npm run requirements:readiness` and `npm run evidence:freshness`. The previous Quality Gate was green (17 suites, 108 tests), but log inspection showed the newly added inventory command had not been called by the workflow because CI invokes individual steps instead of `npm run verify`. The new head must pass all three workflows; inspect the Quality Gate log to confirm the inventory actually runs.
+Corrected .github/workflows/quality.yml: the evidence-readiness step now runs both pm run requirements:readiness` and pm run evidence:freshness`. The previous Quality Gate was green (17 suites, 108 tests), but log inspection showed the newly added inventory command had not been called by the workflow because CI invokes individual steps instead of pm run verify`. The new head must pass all three workflows; inspect the Quality Gate log to confirm the inventory actually runs.
 
 
 ## Evidence refresh batch 2 — Sweden and Norway — 2026-10-11
@@ -150,7 +150,7 @@ The previously held Luxembourg student work-rights record was refreshed after re
 
 ## Remaining evidence blockers — 2026-10-11
 
-After refreshing the current Luxembourg student rule page and aligning the duplicate Swedish study-maintenance evidence, two records still require source review: `NO-work-offer-verification-2026-09-07` and `PT-working-routes-2026-09-07`. Direct retrieval of the official UDI confirmation page returned HTTP 403; the AIMA work-route index timed out. Do not change either review deadline or infer that the source is unchanged. Use an accessible official page, an official downloadable notice, or keep both explicitly overdue. Re-run `npm run evidence:freshness` after this commit and use CI output as the authoritative inventory.
+After refreshing the current Luxembourg student rule page and aligning the duplicate Swedish study-maintenance evidence, two records still require source review: `NO-work-offer-verification-2026-09-07` and `PT-working-routes-2026-09-07`. Direct retrieval of the official UDI confirmation page returned HTTP 403; the AIMA work-route index timed out. Do not change either review deadline or infer that the source is unchanged. Use an accessible official page, an official downloadable notice, or keep both explicitly overdue. Re-run pm run evidence:freshness` after this commit and use CI output as the authoritative inventory.
 
 
 ## Handover update — 2026-10-11 (P1-S1 execution)

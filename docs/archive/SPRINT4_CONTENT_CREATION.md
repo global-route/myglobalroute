@@ -478,7 +478,7 @@
 **Events to Create:**
 - `post_view` (when post loads)
 - `search_query` (when search used)
-- `newsletter_signup` (form submit)
+- ewsletter_signup` (form submit)
 - `post_scroll` (scroll depth)
 - `category_filter` (category click)
 

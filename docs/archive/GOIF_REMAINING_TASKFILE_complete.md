@@ -455,7 +455,7 @@ describe('GOIF pathway schema contract', () => {
 - [ ] All existing 19/19 test suites still pass
 - [ ] New GOIF gap card tests pass (3 tests in route-engine.test.js)
 - [ ] New GOIF data contract tests pass (4 tests in data-contract.test.js)
-- [ ] `npx wrangler deploy` succeeds
+- [ ] px wrangler deploy` succeeds
 
 ## Execution order
 

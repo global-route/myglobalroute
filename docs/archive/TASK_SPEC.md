@@ -15,7 +15,7 @@ This is the immediate task because the live deployment is blocked by a Cloudflar
 
 ### P0-S5-1 · Fix Cloudflare Pages build command [OWNER ACTION]
 **What:** CF Dashboard → Pages → `myglobalroute` → Settings → Builds & deployments  
-**Set:** Build command = `npm run build` | Output directory = `dist` | Save → trigger deploy  
+**Set:** Build command = pm run build` | Output directory = `dist` | Save → trigger deploy  
 **Accept:** Build log ends with Eleventy writing 147 files, no wrangler error, deployment marked live
 
 ### P0-S5-2 · Confirm deployed SHA matches main
@@ -81,7 +81,7 @@ All pre-sprint required tasks are complete. See `CHANGELOG.md` 2026-10-18 entrie
 
 ### P1-S1-2 · Reconcile dataset.asOf
 **What:** After P1-S1-1 sign-off, update `dataset.asOf` in `src/data/countries.json` to the sign-off date. Update `retrievedAt` only for sources actually re-checked.  
-**Accept:** `dataset.asOf` ≠ `2026-09-05`. No unsupported aggregate costs/rates/timelines introduced. `npm run data:validate` passes.
+**Accept:** `dataset.asOf` ≠ `2026-09-05`. No unsupported aggregate costs/rates/timelines introduced. pm run data:validate` passes.
 
 ### P1-S1-3 · Close or document the 4 research-required pathways
 **What:** For each of AU-skilled, NZ-skilled, RU-study, RU-work — either find high-confidence primary-source evidence that closes the gap, or write a formal exception record explaining why the pathway stays research_required indefinitely.  
@@ -135,7 +135,7 @@ h1→h2→h3 correct on all rebuilt pages. ARIA audit, colour contrast (WCAG AA)
 
 ### P3-1 · Legacy blog/category link cleanup
 **What:** Audit all internal links in blog posts and category pages. Remove or redirect broken links. Remove references to pages that no longer exist.  
-**Accept:** `npm run build:verify` passes with 0 broken internal links. No 404s in the generated blog section.
+**Accept:** pm run build:verify` passes with 0 broken internal links. No 404s in the generated blog section.
 
 ### P3-2 · Editorial fact-audit — 5 cornerstone posts
 **What:** Each of the 5 cornerstone blog posts must be checked against the current evidence registry. Any claim that contradicts or exceeds the evidence must be corrected or flagged as unverified.  

@@ -73,7 +73,7 @@ git push origin main
 - **Trigger:** When user selects category filter
 
 #### 4. Newsletter Signup
-- **Event name:** `newsletter_signup`
+- **Event name:** ewsletter_signup`
 - **Data:** Email hash (anonymized)
 - **Trigger:** When user subscribes to newsletter
 
@@ -132,7 +132,7 @@ git push origin main
 
 1. Go to "Conversions"
 2. Create conversion events:
-   - `newsletter_signup` (Newsletter subscription)
+   - ewsletter_signup` (Newsletter subscription)
    - `cta_click` (Key action)
    - `external_link_click` (Outbound interest)
 

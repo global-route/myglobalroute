@@ -134,7 +134,7 @@ All pages include complete navigation with links to:
   - blueprint.md (original reference)
 
 ✅ `.env` files and secrets
-✅ `node_modules/` directory
+✅ ode_modules/` directory
 ✅ Build artifacts
 
 ### Protected Information
@@ -158,7 +158,7 @@ All pages include complete navigation with links to:
 ✅ Google Analytics setup
 
 ### Configuration Files Present
-✅ `netlify.toml` - Netlify deployment config
+✅ etlify.toml` - Netlify deployment config
 ✅ `package.json` - Dependencies & scripts
 ✅ `.gitignore` - Proper file exclusions
 ✅ `index.html` - Canonical homepage
@@ -274,7 +274,7 @@ dist/                     # Build output
 ### Next Steps for Live Deployment
 1. Connect GitHub repository to Netlify
 2. Configure build settings:
-   - Build command: `npm run build` (or `netlify deploy`)
+   - Build command: pm run build` (or etlify deploy`)
    - Publish directory: `src/` or `./`
 3. Set environment variables (optional):
    - `GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX`

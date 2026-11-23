@@ -67,7 +67,7 @@ The following platforms set the bar for this field. Every acceptance criterion b
 **Acceptance criteria:**
 - [ ] Zero `style=` attributes on content `<section>` elements in those 6 files
 - [ ] Visual spacing unchanged — `page-content` padding matches the removed inline values
-- [ ] `npm run build` exits 0
+- [ ] pm run build` exits 0
 
 ---
 
@@ -225,10 +225,10 @@ What this tool does                    What this tool does not do
 
 ### ✅ TASK 10 — Run build:verify and fix failures
 **Status:** Open
-**Command:** `npm run build:verify`
+**Command:** pm run build:verify`
 
 **Acceptance criteria:**
-- [ ] `npm run build:verify` exits 0
+- [ ] pm run build:verify` exits 0
 - [ ] All failures reported are fixed before deploy
 
 ---

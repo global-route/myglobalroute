@@ -127,7 +127,7 @@ These files guide the team:
 - `/docs/` - All documentation
 - `README.md` - Quick reference
 - `package.json` - Dependencies
-- `netlify.toml` - Deployment config
+- etlify.toml` - Deployment config
 - `.gitignore` - Git rules
 
 ### 🔒 For Internal Planning Only
@@ -140,7 +140,7 @@ These files contain sensitive business info (DO NOT COMMIT PUBLIC):
 These files support the build process:
 - `/scripts/` - Build automation
 - `/tests/` - Test suites
-- `netlify/functions/` - Backend (optional)
+- etlify/functions/` - Backend (optional)
 
 ---
 
@@ -150,7 +150,7 @@ These files support the build process:
 - [x] `.gitignore`
 - [x] `README.md`
 - [x] `package.json`
-- [x] `netlify.toml`
+- [x] etlify.toml`
 - [x] `/docs/` - All 6 docs
 - [x] `/internal/` - All 4 internal files
 - [x] `/src/index.html`
@@ -326,9 +326,9 @@ Before deploying to production:
 
 - [ ] All files committed to Git
 - [ ] `.env` file created (not committed)
-- [ ] Tests passing (`npm run test`)
-- [ ] Lint clean (`npm run lint`)
-- [ ] Build successful (`npm run build`)
+- [ ] Tests passing (pm run test`)
+- [ ] Lint clean (pm run lint`)
+- [ ] Build successful (pm run build`)
 - [ ] No console errors
 - [ ] Responsive on mobile
 - [ ] Performance acceptable (<2s load)

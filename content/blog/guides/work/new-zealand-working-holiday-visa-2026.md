@@ -1,20 +1,20 @@
 ---
 layout: blog-post.njk
-title: "New Zealand Working Holiday Visa 2026 — Eligibility Correction Notice"
+title: "New Zealand Working Holiday Visa 2026 — Nigerian Nationals Not Eligible"
 date: 2026-10-30
 updated: 2026-11-05
 lastFactChecked: 2026-11-05
-eligibilityReviewStatus: "under-correction"
+eligibilityReviewStatus: "verified-ineligible"
 author: "MyPathway2Global Editorial"
 category: "Guides"
 goal: "work"
 readTime: "10 min"
 featured: false
-excerpt: "Correction notice: An earlier version of this article claimed Nigerian nationals are eligible for the New Zealand Working Holiday Visa with a limited annual quota. This claim is under review against the official Immigration New Zealand participating-country list. Do not rely on this article for an eligibility decision until the review is complete."
+excerpt: "Verified: Nigerian nationals are not on the Immigration New Zealand participating-country list for the Working Holiday Visa scheme. This article has been corrected. Nigerian passport holders cannot apply for this visa."
 keywords: "New Zealand working holiday visa 2026, NZ WHV eligible countries, New Zealand work holiday visa Africa 2026"
 faqs:
   - q: "Are Nigerian nationals eligible for the New Zealand Working Holiday Visa?"
-    a: "This is under active review. The official Immigration New Zealand participating-country list must be checked before relying on any eligibility claim. We will update this article once the review is complete. Check immigration.govt.nz directly."
+    a: "No. Nigerian nationals are not listed on the official Immigration New Zealand participating-country list for the Working Holiday Visa scheme. This was verified at immigration.govt.nz. Nigerian passport holders cannot apply for this visa."
   - q: "What is the annual quota for Nigerian applicants?"
     a: "Quota information is only relevant for eligible passport holders. Verify your passport eligibility at immigration.govt.nz before making any plans."
   - q: "Can I extend the New Zealand Working Holiday Visa?"

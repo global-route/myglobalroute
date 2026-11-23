@@ -123,7 +123,7 @@ These figures may reflect different snapshots or inclusion rules, but the user-f
 
 ### 4.2 Shared navigation/footer rendering artefact
 
-The live crawler-rendered pages showed stray literal `n` characters between some navigation/footer links. The calculator source also contained a suspicious literal sequence around navigation markup (for example, a backtick followed by `n` and whitespace). This appears consistent with an escaped-newline or template-generation defect.
+The live crawler-rendered pages showed stray literal ` characters between some navigation/footer links. The calculator source also contained a suspicious literal sequence around navigation markup (for example, a backtick followed by ` and whitespace). This appears consistent with an escaped-newline or template-generation defect.
 
 **Correction:** inspect the shared header/footer source and all generated pages. Fix the source of the malformed markup, not only the individual visible instances. Add an HTML/template validation check so the defect does not return.
 
@@ -179,7 +179,7 @@ A verification record should define at least:
 - The next review date or expiry rule.
 - The verification state and any known limitations.
 
-Suggested states: `verified`, `needs_review`, `research_required`, `conflicting_sources`, `superseded` and `unverified`. Use labels that users can understand. A source existing is not proof that every claim in an article has been verified.
+Suggested states: `verified`, eeds_review`, `research_required`, `conflicting_sources`, `superseded` and `unverified`. Use labels that users can understand. A source existing is not proof that every claim in an article has been verified.
 
 ## 6. Find MyPathway and pathway-matching engine
 
@@ -430,7 +430,7 @@ Priority labels indicate sequencing recommendations, not proof that work has bee
 3. Remove or downgrade “Official Source Verified” badges wherever the underlying claims have not been fully checked.
 4. Review the 15 stale evidence records using the official-source verification process; do not merely extend review dates.
 5. Fix salary threshold comparison: period, currency, gross/net and missing-input handling.
-6. Fix the shared navigation/footer stray-`n` rendering artefact at its source.
+6. Fix the shared navigation/footer stray-` rendering artefact at its source.
 7. Recheck and close the 8 recorded SEO/accessibility issues with evidence.
 8. Correct over-categorical Saskatchewan PNP/CRS “guarantee” language.
 

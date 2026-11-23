@@ -51,7 +51,7 @@ See `docs/sprints/P0_CRITICAL_FIXES_TASKFILE.md` for full task list.
 
 - `evaluateNationality(pathway, passportCountry)` — allowlist/blocklist/all/unknown scopes; ineligible = hard block
 - `evaluateRequirements(pathway, profile)` — all 9 requirement types; blockers = hard block, unknown = warning
-- `normalizeCurrency(amount, currency)` — 19-currency FX table (retrieved 2026-11-05, 90-day stale threshold)
+- ormalizeCurrency(amount, currency)` — 19-currency FX table (retrieved 2026-11-05, 90-day stale threshold)
 - `renderNationalityBadge()` + `renderWarnings()` on every result card
 - Savings gap fixed: `monthlySavings = income - expenses` (not gross income)
 - 3 working-holiday articles (AU, IE, NZ) corrected with amber banners + `eligibilityReviewStatus: under-correction`
@@ -60,7 +60,7 @@ See `docs/sprints/P0_CRITICAL_FIXES_TASKFILE.md` for full task list.
 
 **Open (owner):**
 - Verify AU/IE/NZ working-holiday articles at official sources; update `eligibilityReviewStatus`
-- Run `npm test -- --testPathPattern=route-engine` to confirm 34 new tests pass
+- Run pm test -- --testPathPattern=route-engine` to confirm 34 new tests pass
 
 ---
 
@@ -383,7 +383,7 @@ A task is not complete because a file exists. Legal/data claims require evidence
 - Full wizard UI (steps 1-4), demand matching, result cards, safety callouts: live
 - Agent matching logic, intake form, form submission to `/api/agent-lead`: live in code, Worker not deployed
 - Notification Worker fans out to Slack + Telegram + WhatsApp + Email in parallel: built, awaiting deploy + secrets
-- agents.json schema v1.1.0 with `notifications` block per agent: ready
+- agents.json schema v1.1.0 with otifications` block per agent: ready
 - validate-agent-registry.js quality gate: ready
 - work-abroad-agent.html added to sitemap: done
 

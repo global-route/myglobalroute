@@ -41,7 +41,7 @@ Dates reflect repository commits; a changelog entry is not release approval.
 - `scripts/verify-build.js` — country count 31 → 35
 
 ### Deploy
-- 315 files built and deployed to `mypathway2global.org.uk` via `npx wrangler deploy`
+- 315 files built and deployed to `mypathway2global.org.uk` via px wrangler deploy`
 - Cloudflare Workers Version ID: `6d2994a7-e4b8-476b-8574-a14c6985028e`
 
 ### CI deploy workflow
@@ -212,7 +212,7 @@ Dates reflect repository commits; a changelog entry is not release approval.
 **Commits:** `df15331` | **Version:** `a296a7bc` | **Tests:** 19/19 suites, 214/214 passing
 
 - `scripts/verify-build.js` — route engine check fixed: was looking for `GlobalRoute.RouteEngine` string inlined in HTML; engine is loaded via `<script src="/js/route-engine.js">` so check now looks for that script tag. Was causing quality gate failure on every build.
-- `npm install` run in `myglobalroute/` — restored 589 packages including `markdown-it` (was missing after wrangler was accidentally installed in parent directory)
+- pm install` run in `myglobalroute/` — restored 589 packages including `markdown-it` (was missing after wrangler was accidentally installed in parent directory)
 - `wrangler` installed locally as devDependency — no longer requires npx download at deploy time
 - Build: 265 files, 0 errors (Eleventy 3.1.8) | Build verify ✅ | SEO/a11y ✅ | Tests ✅
 - Deployed to `mypathway2global.org.uk`
@@ -250,7 +250,7 @@ Dates reflect repository commits; a changelog entry is not release approval.
 **Commit:** `5c00eac` | **Tests:** 19/19 suites, 180/180 passing
 
 - Deleted 6 pre-rebrand draft files in `src/content/blog/` — January 2026 drafts containing fabricated nationality-specific approval rate statistics ("62-68% for African applicants", "54% for Nigeria") with fake embassy sources. Not built by Eleventy (input dir is `content/`, not `src/content/`); dead tracked code.
-- `.github/workflows/production-smoke.yml` — example URL corrected from `netlify.app` to `mypathway2global.org.uk`
+- `.github/workflows/production-smoke.yml` — example URL corrected from etlify.app` to `mypathway2global.org.uk`
 - `docs/reference/README.md` — rewritten to remove duplicate section and references to archived files
 
 ---
@@ -326,7 +326,7 @@ Dates reflect repository commits; a changelog entry is not release approval.
 - CSS: `.requirement-warnings li` (blue) added
 
 ### P0.4 — Currency normalization
-- `normalizeCurrency(amount, currency)` added to `route-engine.js`
+- ormalizeCurrency(amount, currency)` added to `route-engine.js`
 - 19-currency FX table (`FX_RATES_TO_USD`), retrieved 2026-11-05, 90-day stale threshold
 - Funds comparison now normalizes to USD before comparing
 - Unknown currency = warning only; stale rate = warn + block
@@ -337,7 +337,7 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ### Tests
 - 34 new test cases in `tests/route-engine.test.js`: P0.2 evaluateNationality (10), P0.3 evaluateRequirements (13), P0.4 normalizeCurrency (9), P0.4 scorePathway integration (2)
-- Run pending owner: `npm test -- --testPathPattern=route-engine`
+- Run pending owner: pm test -- --testPathPattern=route-engine`
 
 ---
 

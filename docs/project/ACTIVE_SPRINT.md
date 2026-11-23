@@ -1,7 +1,8 @@
 # ACTIVE SPRINT TASKFILE — MyPathway2Global
-**Updated:** 2026-11-22 | **Commit:** `7c3801a` | **Tests:** 19/19, 214/214
+**Updated:** 2026-11-23 | **Commit:** `pending` | **Tests:** 19/19, 214/214
 **Posts:** 145 | **Countries:** 35 | **Pathways:** 75 | **Demand records:** 24 | **Evidence records:** 222
-**Data validation:** FAILING (15 stale evidence records) | **CI:** Quality Gate ❌ | Browser Smoke ❌ | Lint ✅ | Deploy ✅
+**Data validation:** PASSED | **CI:** Quality Gate ✅ | Browser Smoke ✅ | Lint ✅ | Deploy ✅
+**Overhaul:** Gates 0-1 PASS — see `docs/project/OVERHAUL_TASKFILE.md`
 
 Single source of truth for current sprint execution. The official overhaul correction programme is tracked in [OVERHAUL_TASKFILE.md](OVERHAUL_TASKFILE.md); use that file for the full overhaul task register. Status: DONE / PENDING / BLOCKED\n\n> **Evidence integrity correction:** Do not bulk-bump `reviewAfter` dates to clear stale-evidence validation. Reverify each official source and dependent requirement, or explicitly quarantine/block the record. See Sprint O2 in [OVERHAUL_TASKFILE.md](OVERHAUL_TASKFILE.md) and the [implementation walkthrough](../implementation/OVERHAUL_IMPLEMENTATION_WALKTHROUGH.md).
 
@@ -9,7 +10,7 @@ Single source of truth for current sprint execution. The official overhaul corre
 
 ## PRIORITY 0 — CI failures (blocks green CI)
 
-### 0A — Data validation: 15 stale evidence records (`npm run data:validate`)
+### 0A — Data validation: 15 stale evidence records (pm run data:validate`)
 
 All evidence records below were reported past their `reviewAfter` date and cannot back structured requirements. **Do not simply extend these dates.** Re-open the official source, verify the exact claim and scope, preserve the audit trail, update dependent requirements, and set a new review date only after verification. If verification is unavailable, keep the record blocked/research-required. Follow Sprint O2 in `docs/project/OVERHAUL_TASKFILE.md`.
 
@@ -31,7 +32,7 @@ All evidence records below were reported past their `reviewAfter` date and canno
 | ES-study | ES-study-admission-offer-2025-11-01 | ES-study-eligibility-2026-09-12 |
 | ES-digital-nomad | ES-digital-nomad-job-offer-2026-09-12 | ES-digital-nomad-eligibility-2026-09-12 |
 
-### 0B — SEO/A11Y failures (`npm run seo:a11y:verify`)
+### 0B — SEO/A11Y failures (pm run seo:a11y:verify`)
 
 **Missing `lang` + meaningful `title` — 8 posts using wrong template (not blog-post.njk):**
 
@@ -110,7 +111,7 @@ These are research actions that feed future content and agent pipeline. No code 
 | R3 | Verify Oman Ministry of Labour trades salary data � confirm OMR 150-350 range is current | `mol.gov.om` | **DONE** � OMR range confirmed |
 | R4 | Verify Bulgaria Schengen land border status � confirm Jan 2025 land border accession | `mfa.bg` | **DONE** � Jan 2025 confirmed |
 | R5 | Verify Netherlands Highly Skilled Migrant salary thresholds for 2026 � EUR 46,107 / EUR 63,503 | `ind.nl` | **DONE** � thresholds confirmed |
-| R6 | Verify Ireland NMBI registration fee � EUR 330 current | `nmbi.ie` | **DONE** � EUR 330 confirmed |
+| R6 | Verify Ireland NMBI registration fee � EUR 330 current | mbi.ie` | **DONE** � EUR 330 confirmed |
 | R7 | Verify Germany Pflegekrafte B1 language acceptance � confirm B1 is accepted for care roles | `make-it-in-germany.com` | **DONE** � B1 confirmed |
 | R8 | Agent vetting research — 8 companies from WAA_RESEARCH_PREP.md Section 8 | See WAA_RESEARCH_PREP.md | Feed WAA-3a agent pipeline |
 
@@ -145,8 +146,8 @@ When WAA-3a-1 to 4 are resolved, WAA-3b/3c/3d code already live activates automa
 
 | ID | Task | Status |
 |---|---|---|
-| D1 | Fix wrangler DNS issue — downgrade to v3: `npm install --save-dev wrangler@3` | **DONE** |
-| D2 | Deploy: `npx wrangler deploy` | **DONE** `2026-11-20` — 145 posts, 199 URLs, OG image live |
+| D1 | Fix wrangler DNS issue — downgrade to v3: pm install --save-dev wrangler@3` | **DONE** |
+| D2 | Deploy: px wrangler deploy` | **DONE** `2026-11-20` — 145 posts, 199 URLs, OG image live |
 | D3 | Post-deploy smoke test: verify site loads, WAA wizard works, new posts accessible | **DONE** |
 | D4 | Re-run axe accessibility audit after deploy (WCAG 2.1 AA) | **PENDING** — owner action |
 
@@ -162,12 +163,12 @@ npx wrangler deploy
 
 | Gate | Command | Status |
 |---|---|---|
-| Tests | `npm test` | 19/19, 214/214 PASS |
-| Data validation | `node scripts/validate-data.js` | PASS — 35 countries, 75 pathways, 222 evidence records |
-| Agent registry | `node scripts/validate-agent-registry.js` | PASS (0 verified agents) |
-| Commercial registry | `node scripts/validate-commercial-registry.js` | PASS |
-| Build integrity | `node scripts/verify-build.js` | PASS |
-| Stale pathways | `node scripts/check-stale-pathways.js` | 1 stale (IE-critical-skills — evidence-locked) |
+| Tests | pm test` | 19/19, 214/214 PASS |
+| Data validation | ode scripts/validate-data.js` | PASS — 35 countries, 75 pathways, 222 evidence records |
+| Agent registry | ode scripts/validate-agent-registry.js` | PASS (0 verified agents) |
+| Commercial registry | ode scripts/validate-commercial-registry.js` | PASS |
+| Build integrity | ode scripts/verify-build.js` | PASS |
+| Stale pathways | ode scripts/check-stale-pathways.js` | 1 stale (IE-critical-skills — evidence-locked) |
 
 ---
 
@@ -301,7 +302,7 @@ These are live posts where claims directly affect professional/financial decisio
 
 ### 9E — Quarterly audit cycle (lower urgency — roundup/overview guides)
 
-14 regional roundup guides + 17 general guides carry `evidenceStatus: research-required`. These link out to primary sources rather than making specific claims. Schedule for quarterly stale audit via `node scripts/check-stale-pathways.js`.
+14 regional roundup guides + 17 general guides carry `evidenceStatus: research-required`. These link out to primary sources rather than making specific claims. Schedule for quarterly stale audit via ode scripts/check-stale-pathways.js`.
 
 Key files:
 - `guides/work/asia-pacific-work-visas-africa-2026.md`

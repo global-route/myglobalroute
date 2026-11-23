@@ -132,7 +132,7 @@ keywords: "visa, country, topic"
 1. Open `/src/data/countries.json`
 2. Add new country or update existing
 3. Follow the schema structure
-4. Run `npm run data:validate`
+4. Run pm run data:validate`
 5. Commit & deploy
 
 ### Task 3: Create a New Page
@@ -253,8 +253,8 @@ git push              # Deploy
 ## 🎉 You're Ready!
 
 Start with:
-1. `npm install`
-2. `npm run dev`
+1. pm install`
+2. pm run dev`
 3. Edit `/src/index.html`
 4. See changes live
 
@@ -262,7 +262,7 @@ Then:
 - Explore `/docs/` for detailed guides
 - Check `/src/` for code structure
 - Add content in `/content/`
-- Deploy with `npm run deploy`
+- Deploy with pm run deploy`
 
 **Happy building! 🚀**
 

@@ -62,7 +62,7 @@ Serbia is not an EU member state. It has its own work permit system for non-EU f
 
 **Salary:** Serbia's minimum wage is approximately RSD 40,000/month (USD 350). Manufacturing and agricultural roles typically pay RSD 40,000-70,000/month. This is significantly lower than Western European destinations.
 
-**Verify at:** `mup.gov.rs` (Ministry of Interior), `nsz.gov.rs` (National Employment Service)
+**Verify at:** `mup.gov.rs` (Ministry of Interior), sz.gov.rs` (National Employment Service)
 
 ## Is Serbia worth considering?
 

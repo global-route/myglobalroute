@@ -36,7 +36,7 @@ Drive the Production Integrity & Intelligence Core sprint toward closure without
 3. **New Zealand:** model the 24 August 2026 Skilled Migrant Category changes at exact pathway scope; do not collapse the Points-based, Skilled Work Experience and Trades and Technician pathways into one record.
 4. **CI:** re-run Quality Gate, lint, build verification and browser smoke against the latest commits.
 5. **Deployment:** identify the authoritative Netlify site and hostname. Historical names are not accepted as evidence.
-6. **Production smoke:** run `npm run deploy:verify` against the verified origin and retain the result as release evidence.
+6. **Production smoke:** run pm run deploy:verify` against the verified origin and retain the result as release evidence.
 7. **SEO origin:** only after authoritative origin confirmation, restore canonical/Open Graph/sitemap absolute URLs from one configuration source.
 8. **Security posture:** resolve hardening issue #2 by confirming intended repository visibility and establishing an appropriate `main` protection/check policy.
 

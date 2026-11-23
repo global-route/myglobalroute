@@ -10,11 +10,11 @@ country: "Canada"
 goal: "work"
 readTime: "12 min"
 featured: false
-excerpt: "Saskatchewan's Provincial Nominee Program (SINP) adds 600 CRS points to your Express Entry profile - effectively guaranteeing an Invitation to Apply for permanent residence. For African graduates and skilled workers with a Saskatchewan connection, it is one of the most accessible Canadian PR pathways. Here is what the SINP actually requires."
+excerpt: "Saskatchewan's Provincial Nominee Program (SINP) adds 600 CRS points to your Express Entry profile - significantly improving your chances of receiving an Invitation to Apply for permanent residence. For African graduates and skilled workers with a Saskatchewan connection, it is one of the most accessible Canadian PR pathways. Here is what the SINP actually requires."
 keywords: "Saskatchewan PNP Nigeria 2026, SINP Express Entry Africa, Saskatchewan immigrant nominee program Nigeria, Canada provincial nominee program Africa 2026"
 faqs:
   - q: "What does a Saskatchewan provincial nomination do to my Express Entry score?"
-    a: "A provincial nomination from any Canadian province adds 600 Comprehensive Ranking System (CRS) points to your Express Entry profile. Since most Express Entry draws have cut-offs between 470 and 550 points, a provincial nomination effectively guarantees an Invitation to Apply (ITA) for permanent residence in the next draw."
+    a: "A provincial nomination from any Canadian province adds 600 Comprehensive Ranking System (CRS) points to your Express Entry profile. Since most Express Entry draws have cut-offs between 470 and 550 points, a provincial nomination means most applicants with a nomination receive an ITA, though IRCC controls draw timing and eligibility conditions still apply."
   - q: "Do I need to live in Saskatchewan to apply for the SINP?"
     a: "For the International Skilled Worker - Saskatchewan Express Entry stream, you do not need to be in Saskatchewan at the time of application. However, you must intend to live and work in Saskatchewan after receiving permanent residence. For the Occupations In-Demand stream, you must have a job offer from a Saskatchewan employer."
   - q: "What is the connection to the University of Saskatchewan?"
@@ -28,7 +28,7 @@ supersededBy: ""
 
 <div style="background:#f8f9fa;border-left:4px solid #0b409c;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.95rem;">
 <strong>Key figures (2026)</strong><br>
-Provincial nomination: +600 CRS points (effectively guarantees ITA)<br>
+Provincial nomination: +600 CRS points (significantly improves ITA chances)<br>
 SINP Express Entry: no job offer required, Express Entry profile needed<br>
 SINP International Graduate: for Saskatchewan post-secondary graduates<br>
 Primary source: Government of Saskatchewan (saskatchewan.ca)
@@ -40,7 +40,7 @@ Saskatchewan is one of Canada's Prairie provinces with a documented labour short
 
 ## Why Saskatchewan matters for African applicants
 
-**The 600-point advantage:** A provincial nomination from Saskatchewan adds 600 CRS points to your Express Entry profile. Most Express Entry draws have cut-offs between 470 and 550 points. With 600 additional points, you will receive an Invitation to Apply (ITA) in the next draw regardless of your base CRS score.
+**The 600-point advantage:** A provincial nomination from Saskatchewan adds 600 CRS points to your Express Entry profile. Most Express Entry draws have cut-offs between 470 and 550 points. With 600 additional points, you are very likely to receive an Invitation to Apply (ITA), though IRCC controls draw timing and you must still meet all Express Entry eligibility conditions.
 
 **Lower base CRS requirement:** Because the provincial nomination provides the 600-point boost, you do not need a high base CRS score to get Canadian PR through the SINP. Applicants with CRS scores of 300-400 who would never receive an ITA in a general draw can receive one through the SINP.
 

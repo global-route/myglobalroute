@@ -31,7 +31,7 @@ npm run seo:a11y:verify
 npm run verify
 ```
 
-The repository intentionally does **not** bundle the Netlify CLI. The CLI's large deployment dependency tree was causing high/critical `npm audit` findings, while the application itself is a static build that can be deployed by the Netlify Git integration using `netlify.toml`.
+The repository intentionally does **not** bundle the Netlify CLI. The CLI's large deployment dependency tree was causing high/critical pm audit` findings, while the application itself is a static build that can be deployed by the Netlify Git integration using etlify.toml`.
 
 ## Important runtime paths
 
@@ -49,16 +49,16 @@ Application code must reference generated paths, never source-tree paths.
 - Do not add a global SPA rewrite to a multi-page Eleventy site.
 - Cache HTML conservatively; long-cache fingerprinted assets when fingerprinting is guaranteed.
 - Treat CSP as an inventory of actual third-party dependencies, not a copy-paste allowlist.
-- Netlify should use the repository's `netlify.toml` build command and `dist` publish directory.
+- Netlify should use the repository's etlify.toml` build command and `dist` publish directory.
 
 ## Release checklist
 
 ### Pre-release
-- [ ] `npm run data:validate`
-- [ ] `npm run test -- --runInBand`
-- [ ] `npm run build`
-- [ ] `npm run build:verify`
-- [ ] `npm run seo:a11y:verify`
+- [ ] pm run data:validate`
+- [ ] pm run test -- --runInBand`
+- [ ] pm run build`
+- [ ] pm run build:verify`
+- [ ] pm run seo:a11y:verify`
 - [ ] Generated routes exist.
 - [ ] `/data/countries.json` is reachable from the built site.
 - [ ] Calculator works with representative budgets/currencies.

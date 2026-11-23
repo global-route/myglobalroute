@@ -368,7 +368,7 @@ Replace `loadJson('/data/pathways.json')` in the `Promise.all` call with `loadPa
 - [ ] pSEO pages have `ItemList` JSON-LD
 - [ ] Both pSEO pages in sitemap
 - [ ] localStorage cache: second page load does not fire a network request for pathways.json
-- [ ] `npx wrangler deploy` succeeds
+- [ ] px wrangler deploy` succeeds
 
 ## Execution order
 

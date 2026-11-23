@@ -188,8 +188,8 @@ internal/
 
 **Step 2: Set Up Development**
 - Read: `/docs/DEPENDENCIES.md`
-- Run: `npm install`
-- Verify: `npm run test`
+- Run: pm install`
+- Verify: pm run test`
 
 **Step 3: Plan Implementation**
 - Reference: `/docs/BLUEPRINT_IMPLEMENTATION.md`
@@ -297,7 +297,7 @@ internal/
 
 ### Immediate (This Week)
 1. Team reads all `/docs/` files
-2. Dev environment set up (`npm install`)
+2. Dev environment set up (pm install`)
 3. First article assigned (Germany)
 4. countries.json expanded (3 more countries)
 

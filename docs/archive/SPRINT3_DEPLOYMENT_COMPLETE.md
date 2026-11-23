@@ -35,7 +35,7 @@
 
 ### ✅ Phase 2: Build Complete
 
-**Build Command:** `npm run build`  
+**Build Command:** pm run build`  
 **Build Time:** 9.7 seconds  
 **Output Directory:** `/dist`
 

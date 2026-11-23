@@ -248,7 +248,7 @@ You are here ← README_ROADMAP.md
 
 1. **Read:** ROADMAP_QUICK_START.md (5 min)
 2. **Do:** Create 5 blog images (2-3 hours)
-3. **Test:** Run `npm run build && npm run dev` (1 hour)
+3. **Test:** Run pm run build && npm run dev` (1 hour)
 4. **Deploy:** Push to GitHub → Netlify (30 min)
 
 **Total Time:** ~4 hours

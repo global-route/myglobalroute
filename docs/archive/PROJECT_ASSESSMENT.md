@@ -72,7 +72,7 @@ The main remaining risks are (1) unverified production host/deployed content/sec
 1. Confirm authoritative hosting account/project, canonical hostname and custom-domain mapping from provider configuration.
 2. Reconcile Worker name `myglobalroute`, observed Cloudflare build label `globalroute`, and Netlify configuration; do not guess the live provider.
 3. Capture deployed source SHA and compare live registries, assets and routes with `95f960c081367305dea0144034d48a4ab7892426`.
-4. Run `npm run deploy:verify` and smoke-test homepage, country/pathway deep links, JSON, calculator and route matching against the confirmed origin.
+4. Run pm run deploy:verify` and smoke-test homepage, country/pathway deep links, JSON, calculator and route matching against the confirmed origin.
 5. Inspect actual live CSP/security headers against the actual script/analytics/ad/partner inventory.
 6. Obtain owner-level main-branch protection/ruleset and required-check evidence.
 7. Keep all three CI workflows green on the same SHA after changes.

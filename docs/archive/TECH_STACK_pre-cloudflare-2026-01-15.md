@@ -144,7 +144,7 @@
 - Embassy data verified
 - No duplicate entries
 
-**Command:** `npm run data:validate`
+**Command:** pm run data:validate`
 
 ---
 
@@ -184,7 +184,7 @@
 - Analytics & monitoring
 
 **Build Settings:**
-- **Command:** `npm run build`
+- **Command:** pm run build`
 - **Publish:** `/dist` directory
 - **Node Version:** 18.16.0
 
@@ -203,7 +203,7 @@
 - cssnano (minification)
 - postcss-preset-env (modern CSS)
 
-**Command:** `npm run build:css`
+**Command:** pm run build:css`
 
 ### Babel (Optional)
 **Purpose:** JavaScript transpilation (ES6+ to ES5)  
@@ -222,18 +222,18 @@
 - `/tests/search.test.js` - Search functionality
 - `/tests/data-validation.test.js` - Data integrity
 
-**Command:** `npm run test`
+**Command:** pm run test`
 
 ### ESLint
 **Version:** 8.57.0+  
 **Purpose:** Code quality & standards  
 **Config:** `.eslintrc.json` (to create)  
-**Command:** `npm run lint`
+**Command:** pm run lint`
 
 ### Prettier
 **Version:** 3.2.5+  
 **Purpose:** Code formatting  
-**Command:** `npm run format`
+**Command:** pm run format`
 
 ---
 
@@ -270,7 +270,7 @@
 - Suggestions engine
 - ~15KB gzipped
 
-**Usage:** `npm install fuse.js`
+**Usage:** pm install fuse.js`
 
 ---
 
@@ -325,14 +325,14 @@ npm run build
 ```
 
 ### Build Steps
-1. **Install dependencies:** `npm install`
-2. **Validate data:** `node scripts/validate-data.js`
+1. **Install dependencies:** pm install`
+2. **Validate data:** ode scripts/validate-data.js`
 3. **Compile CSS:** PostCSS processes styles
 4. **Transpile JS:** Babel converts to compatible JS
 5. **Minify assets:** Gzip compression
 6. **Generate sitemap:** SEO sitemap creation
 7. **Copy static files:** Assets to dist/
-8. **Deploy to Netlify:** Via `netlify deploy --prod`
+8. **Deploy to Netlify:** Via etlify deploy --prod`
 
 ---
 
@@ -400,7 +400,7 @@ secrets.json
 ```
 
 ### Configuration Files
-- `netlify.toml` - Netlify settings
+- etlify.toml` - Netlify settings
 - `package.json` - Dependencies & scripts
 - `.gitignore` - Git exclusions
 - `.eslintrc.json` - Linting rules (to create)
@@ -456,10 +456,10 @@ secrets.json
 
 Before going live:
 
-- [ ] All tests passing (`npm run test`)
-- [ ] Linting clean (`npm run lint`)
-- [ ] Build succeeds (`npm run build`)
-- [ ] Data validation passing (`npm run data:validate`)
+- [ ] All tests passing (pm run test`)
+- [ ] Linting clean (pm run lint`)
+- [ ] Build succeeds (pm run build`)
+- [ ] Data validation passing (pm run data:validate`)
 - [ ] No console errors
 - [ ] Responsive on mobile (DevTools)
 - [ ] Performance acceptable (<2s load)

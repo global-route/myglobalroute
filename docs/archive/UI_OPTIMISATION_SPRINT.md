@@ -70,7 +70,7 @@
 - ✅ **Task 8** — Added `aria-hidden="true"` to all decorative emoji (logo globe, flag emoji in headings, approach icons)
 - ✅ **Task 11** — Added `og:url` meta tags to all 14 static pages
 
-**Verification:** `npm run build:verify` ✅ | `npm run deploy:wrangler` ✅ | `deploy:verify` ✅ (100 routes)
+**Verification:** pm run build:verify` ✅ | pm run deploy:wrangler` ✅ | `deploy:verify` ✅ (100 routes)
 
 ### Batch B — CSS Design (3 tasks, 1 deploy)
 
@@ -79,7 +79,7 @@
 - ✅ **Task 13** — Added `.prose h2` dividers: 2px top border, margin/padding, first-of-type exception
 - ✅ **Task 14** — Added `.checklist` CSS: green `✓` prefix, applied to all playbook requirement lists
 
-**Verification:** `npm run build:verify` ✅ | `npm run deploy:wrangler` ✅ | `deploy:verify` ✅ (100 routes)
+**Verification:** pm run build:verify` ✅ | pm run deploy:wrangler` ✅ | `deploy:verify` ✅ (100 routes)
 
 ### Batch C — Content (2 tasks, 1 deploy)
 
@@ -87,7 +87,7 @@
 - ✅ **Task 4** — Find My Route: added structured intro section with two-column "What it does / does not do" grid above form
 - ✅ **Task 5** — Country template: added requirements summary inline for publishable pathways (max 3 requirements), research_required shows blocker, "Full details →" link
 
-**Verification:** `npm run build:verify` ✅ | `npm run deploy:wrangler` ✅ | `deploy:verify` ✅ (100 routes, 26 countries, 59 pathways)
+**Verification:** pm run build:verify` ✅ | pm run deploy:wrangler` ✅ | `deploy:verify` ✅ (100 routes, 26 countries, 59 pathways)
 
 ---
 

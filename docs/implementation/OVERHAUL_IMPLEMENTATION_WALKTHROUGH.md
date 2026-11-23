@@ -101,7 +101,7 @@ Minimum evidence attributes should identify:
 
 Keep effective date, publication date, last verified date and next review date separate. Reuse the existing evidence schema if it can represent these concepts; extend it additively only after checking compatibility with existing validators and data.
 
-Suggested states are `verified`, `needs_review`, `research_required`, `conflicting_sources`, `superseded` and `unverified`. Map them to the repository's established vocabulary rather than creating a parallel status system.
+Suggested states are `verified`, eeds_review`, `research_required`, `conflicting_sources`, `superseded` and `unverified`. Map them to the repository's established vocabulary rather than creating a parallel status system.
 
 **Acceptance:** every displayed trust badge is derived from a defined state and has a traceable supporting source; unresolved records cannot render as verified.
 

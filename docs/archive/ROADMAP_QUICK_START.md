@@ -222,7 +222,7 @@ Scaling to 50K visitors by Sep 30 = $2,000+/month
 
 **Right Now:**
 1. Create 5 blog images (use Canva)
-2. Run `npm run build && npm run dev`
+2. Run pm run build && npm run dev`
 3. Push to GitHub
 4. Verify on Netlify
 

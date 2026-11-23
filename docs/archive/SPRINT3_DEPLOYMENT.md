@@ -120,7 +120,7 @@ To https://github.com/global-route/myglobalroute.git
 - Check "Deploy log"
 - Look for error message
 - Likely issues:
-  - Missing dependency → `npm install` locally
+  - Missing dependency → pm install` locally
   - Path issue → verify paths
   - Build config → check netlify.toml
 

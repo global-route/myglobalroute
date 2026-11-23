@@ -11,7 +11,7 @@
 - **Publishable pathways:** 28/52
 - **Research-required pathways:** 24/52
 - **Duplicate IDs:** 0 (fixed)
-- **Command:** `npm run data:validate` ✓
+- **Command:** pm run data:validate` ✓
 
 ### ✅ Unit Tests
 - **Status:** PASSED (30/30)
@@ -24,7 +24,7 @@
 - **Route engine tests:** ✓
 - **Data contract tests:** ✓
 - **NZ SMC points regression:** ✓
-- **Command:** `npm test` ✓
+- **Command:** pm test` ✓
 
 ### ✅ Build & Generated Output
 - **Status:** PASSED
@@ -33,7 +33,7 @@
 - **Build integrity:** VERIFIED
 - **Deep-link validation:** ✓
 - **SEO/source-trail checks:** ✓
-- **Command:** `npm run build && npm run build:verify` ✓
+- **Command:** pm run build && npm run build:verify` ✓
 
 ## P0-S1 Open Gates Status
 

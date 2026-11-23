@@ -255,7 +255,7 @@ npm run lint
 ## 🔄 Dependency Updates
 
 ### Update Strategy
-- **Minor versions:** Auto-update (`npm update`)
+- **Minor versions:** Auto-update (pm update`)
 - **Major versions:** Manual review before update
 - **Lock file:** Commit `package-lock.json` to Git
 
@@ -482,7 +482,7 @@ Bootstrap CSS:     ~25KB+
 
 ### Common Issues
 
-**Issue:** `npm install` fails
+**Issue:** pm install` fails
 ```bash
 # Clear cache
 npm cache clean --force
@@ -533,9 +533,9 @@ Before deploying:
 - [ ] npm audit shows no vulnerabilities
 - [ ] package-lock.json committed to Git
 - [ ] Node version matches requirement
-- [ ] `npm install` succeeds locally
-- [ ] `npm run test` passes
-- [ ] `npm run build` succeeds
+- [ ] pm install` succeeds locally
+- [ ] pm run test` passes
+- [ ] pm run build` succeeds
 - [ ] No missing peer dependencies
 - [ ] licenses compatible
 - [ ] bundle size acceptable

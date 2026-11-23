@@ -61,7 +61,7 @@ Continue in parallel when project-owner/provider evidence is available:
 - Confirm authoritative hosting project and production hostname from provider account/project settings.
 - Reconcile Worker `myglobalroute`, Cloudflare build label `globalroute`, and Netlify configuration without guessing or changing DNS/provider settings by inference.
 - Verify deployed SHA and compare live assets and country/pathway registries with the intended source.
-- Run `npm run deploy:verify` and representative direct-route/calculator/recommendation smoke tests against the confirmed origin.
+- Run pm run deploy:verify` and representative direct-route/calculator/recommendation smoke tests against the confirmed origin.
 - Inspect live CSP/security headers and obtain owner-level branch protection/ruleset and required-check evidence.
 
 Do not claim Phase 0 exit until every gate has evidence.

@@ -22,18 +22,18 @@
 
 | Gate | Result | Detail |
 |------|--------|--------|
-| `npm run data:validate` | PASS | 56 pathways, 193 records, 52 publishable |
-| `npm test` (Jest) | PASS | 31/31 |
-| `npm run build` | PASS | 147 files written |
-| `npm run build:verify` | PASS | |
-| `npm run seo:a11y:verify` | PASS | 168 HTML files |
-| `npm run lint` | PASS | 0 errors, 33 warnings (all runtime globals — non-blocking) |
-| `npm run test:e2e` (Playwright) | PASS | 4/4 — homepage, find-my-route, calculator, countries |
+| pm run data:validate` | PASS | 56 pathways, 193 records, 52 publishable |
+| pm test` (Jest) | PASS | 31/31 |
+| pm run build` | PASS | 147 files written |
+| pm run build:verify` | PASS | |
+| pm run seo:a11y:verify` | PASS | 168 HTML files |
+| pm run lint` | PASS | 0 errors, 33 warnings (all runtime globals — non-blocking) |
+| pm run test:e2e` (Playwright) | PASS | 4/4 — homepage, find-my-route, calculator, countries |
 
 E2E run: 16.3s, 2 workers, Chromium 129.0 (playwright build v1117), local dev server reused.
 
 ## Lint warnings — disposition
-33 warnings, 0 errors. All are `no-undef` on runtime globals (`gtag`, `Fuse`, `adsbygoogle`, `CalculatorModule`, `SearchModule`) loaded via `<script>` tags outside ESLint's module scope. Non-blocking for release; tracked for P1 ESLint config cleanup.
+33 warnings, 0 errors. All are o-undef` on runtime globals (`gtag`, `Fuse`, `adsbygoogle`, `CalculatorModule`, `SearchModule`) loaded via `<script>` tags outside ESLint's module scope. Non-blocking for release; tracked for P1 ESLint config cleanup.
 
 ## Current verification state
 - **P0-S3 Data/Quality Gate:** PASS ✅

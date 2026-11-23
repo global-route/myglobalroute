@@ -39,7 +39,7 @@
 3. Complete Austria Other Key Workers applicant-document and points validation.
 4. Complete Italy employer/nulla-osta, eligible sector/country treatment, compensation/documentary and applicant-side evidence; preserve annual quota scope.
 5. Continue exact-route evidence batches for the remaining research-required pathways, prioritizing legal scope over breadth.
-6. Run `npm run data:validate`, unit/evidence tests, build/generated-output checks, SEO/accessibility and lint against the latest tree; record **Not Tested — CI unavailable** where infrastructure prevents execution.
+6. Run pm run data:validate`, unit/evidence tests, build/generated-output checks, SEO/accessibility and lint against the latest tree; record **Not Tested — CI unavailable** where infrastructure prevents execution.
 7. Establish the authoritative Netlify site/project and deployed hostname; do not use historical `*.netlify.app` documentation as proof.
 8. Run deployed-site verification against that verified origin.
 9. Restore canonical, Open Graph and sitemap absolute URLs only after the authoritative origin is independently verified.

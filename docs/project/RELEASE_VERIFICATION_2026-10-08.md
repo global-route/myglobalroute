@@ -70,7 +70,7 @@ Required evidence:
 
 - [ ] Confirm authoritative hosting project, production hostname and deployment owner.
 - [ ] Verify the deployed commit matches intended `main` head.
-- [ ] Run `npm run deploy:verify` against the confirmed origin.
+- [ ] Run pm run deploy:verify` against the confirmed origin.
 - [ ] Verify representative country/pathway deep links, assets, JSON registries, calculator and route recommendations.
 - [ ] Restore canonical/OG/sitemap absolute URLs only against the verified origin.
 - [ ] Audit CSP and third-party inventory against the deployed environment.
@@ -130,7 +130,7 @@ Current `main`: `f35291921b780b387a36e16f3be0bc52cd000c97`.
 - **Quality Gate PASS:** [run 38105758475](https://github.com/global-route/myglobalroute/actions/runs/38105758475). Job log: migration data validation passed (26 countries, 56 pathways, 193 evidence records); **14/14 test suites and 97/97 tests passed**; dependency audit, build, generated-output verification and SEO/accessibility smoke steps completed.
 - **Lint PASS:** [run 38105758492](https://github.com/global-route/myglobalroute/actions/runs/38105758492).
 - **Browser Smoke PASS:** [run 38105758360](https://github.com/global-route/myglobalroute/actions/runs/38105758360).
-- `npm run verify` now includes `requirements:readiness`. This report measures declared structured requirements; it does not create authoritative eligibility data or imply complete pathway coverage.
+- pm run verify` now includes `requirements:readiness`. This report measures declared structured requirements; it does not create authoritative eligibility data or imply complete pathway coverage.
 - Data validation emitted warnings that the country dataset is 36 days old and multiple evidence records are due for review. These are not CI failures, but they are material freshness risks. Revalidate source claims before using them for current recommendations; do not merely move review dates forward.
 - Four subroutes are flagged because their status is not `research_required`. Review them against canonical pathway promotion rules; do not treat the warning as independent proof of publishability.
 
@@ -169,7 +169,7 @@ The validator now checks that a `promoted` exact subroute maps to a matching pub
 
 Structured requirements remain limited: 2 of 56 canonical pathways have structured requirements (2 UK Skilled Worker fields plus 7 Canada study family-size-specific thresholds); 54 have none. Do not infer absence of legal requirements from absence of structured records, and do not populate thresholds without exact-scope official evidence and conditional-rule modelling.
 
-**Production remains NO-GO.** The public hostname, deployed content SHA equality, live CSP/security headers and owner-level main-branch rules remain unverified. Configuration identity needs owner confirmation because `wrangler.jsonc` names Worker `myglobalroute`, while the observed Cloudflare Workers Builds service was labelled `globalroute`; `netlify.toml` is also present but does not prove Netlify is the active host.
+**Production remains NO-GO.** The public hostname, deployed content SHA equality, live CSP/security headers and owner-level main-branch rules remain unverified. Configuration identity needs owner confirmation because `wrangler.jsonc` names Worker `myglobalroute`, while the observed Cloudflare Workers Builds service was labelled `globalroute`; etlify.toml` is also present but does not prove Netlify is the active host.
 
 
 ## Latest source-tree verification — 2026-10-11 — `6569cfd5dba4e519d34461ec47ba14ed7d10e5ca`

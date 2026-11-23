@@ -84,7 +84,7 @@ pathways: [ES-digital-nomad, ES-study]
 
 **Logic:** If `lastFactChecked` or requirement `effectiveDate` is within 180 days → `badge-verified`. If older → `badge-stale`. If absent → omit badge (do not show unverified state as verified).
 
-**Accept:** Badge renders on all 21 blog posts. Badge renders on pathway result cards in Find MyPathway. Stale badge fires correctly for any requirement with `effectiveDate` > 180 days ago. `npm test` still passes 139/139.
+**Accept:** Badge renders on all 21 blog posts. Badge renders on pathway result cards in Find MyPathway. Stale badge fires correctly for any requirement with `effectiveDate` > 180 days ago. pm test` still passes 139/139.
 
 ---
 
@@ -104,7 +104,7 @@ pathways: [ES-digital-nomad, ES-study]
 
 **Restore on:** `DOMContentLoaded` — silently repopulate inputs before first render.
 
-**Accept:** Reload Find MyPathway mid-filter → all 8 fields restored. Reload Wizard mid-flow → step and answers restored. Works on Chrome Android (simulate offline/reload). `npm test` still passes.
+**Accept:** Reload Find MyPathway mid-filter → all 8 fields restored. Reload Wizard mid-flow → step and answers restored. Works on Chrome Android (simulate offline/reload). pm test` still passes.
 
 ---
 
@@ -166,7 +166,7 @@ pathways: [ES-digital-nomad, ES-study]
 2. Calculate months to bridge: `gap / monthlyIncome` (use stated income input, or omit months estimate if income not provided)
 3. Render near-miss card with pathway name, required amount, gap, months estimate
 
-**Accept:** Zero-match on Find MyPathway shows near-miss card with correct figures. Zero-match on Calculator shows near-miss card. Months estimate omitted gracefully if income field is empty. `npm test` passes.
+**Accept:** Zero-match on Find MyPathway shows near-miss card with correct figures. Zero-match on Calculator shows near-miss card. Months estimate omitted gracefully if income field is empty. pm test` passes.
 
 ---
 
@@ -199,7 +199,7 @@ pathways: [ES-digital-nomad, ES-study]
 
 **Sitemap:** Add all generated landing pages to `public/sitemap.xml` with `lastmod`.
 
-**Accept:** All 3 routes build and return 200. Each page has canonical tag, Article or WebPage JSON-LD, and links back to the relevant country audit. Sitemap updated. `npm test` passes.
+**Accept:** All 3 routes build and return 200. Each page has canonical tag, Article or WebPage JSON-LD, and links back to the relevant country audit. Sitemap updated. pm test` passes.
 
 ---
 
@@ -237,7 +237,7 @@ pathways: [ES-digital-nomad, ES-study]
 
 **Scope:** Static pathway data only. Do not cache blog posts (content changes frequently).
 
-**Accept:** Chrome DevTools → Application → Service Workers shows SW registered. Simulate offline → Find MyPathway loads previously cached pathway cards. Blog pages show browser default offline (not cached — by design). `npm test` passes.
+**Accept:** Chrome DevTools → Application → Service Workers shows SW registered. Simulate offline → Find MyPathway loads previously cached pathway cards. Blog pages show browser default offline (not cached — by design). pm test` passes.
 
 ---
 
@@ -269,7 +269,7 @@ pathways: [ES-digital-nomad, ES-study]
 
 **Privacy:** No account required. No data sent to server. Export is client-side only (`Blob` + `URL.createObjectURL`).
 
-**Accept:** Export button visible only when results are present. JSON file downloads correctly. Print stylesheet hides nav/footer/buttons. No network request on export. `npm test` passes.
+**Accept:** Export button visible only when results are present. JSON file downloads correctly. Print stylesheet hides nav/footer/buttons. No network request on export. pm test` passes.
 
 ---
 
@@ -282,13 +282,13 @@ pathways: [ES-digital-nomad, ES-study]
 - Flags requirements older than 90 days (configurable via `--days=N`)
 - Groups output by country with official source URL per entry
 - Exit 0 = clean, Exit 1 = stale entries found (CI-compatible)
-- Run: `node scripts/check-stale-pathways.js`
+- Run: ode scripts/check-stale-pathways.js`
 - Already surfacing 19 real stale requirements on first run
 
 **What:** Establish a repeatable process to flag pathway entries older than 90 days for re-fact-checking.
 
 **Implementation options (choose one):**
-1. GitHub Actions scheduled workflow (`0 9 * * 1` — every Monday) that runs `node scripts/check-stale-pathways.js` and opens a GitHub Issue listing stale entries
+1. GitHub Actions scheduled workflow (`0 9 * * 1` — every Monday) that runs ode scripts/check-stale-pathways.js` and opens a GitHub Issue listing stale entries
 2. Manual calendar reminder (quarterly) with a checklist referencing `docs/data/country-source-review-manifest.json`
 
 **Script spec (if option 1):** `scripts/check-stale-pathways.js` — reads all requirement `effectiveDate` fields, flags any older than 90 days, outputs a markdown list of pathway IDs + last checked date + official source URL from manifest.
@@ -357,4 +357,4 @@ CP-4-T1 (service worker)    ──► CP-4-U1 (export works offline)
 - [x] Service Worker registered and offline caching verified
 - [x] "Save My Plan" export working client-side with no server request
 - [x] Quarterly audit routine documented and scripted
-- [x] `npm test` passes 137/137 throughout all phases
+- [x] pm test` passes 137/137 throughout all phases

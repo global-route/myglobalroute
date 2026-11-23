@@ -95,7 +95,7 @@ Quality Gate output: 26 countries, 56 pathways, 193 evidence records; 0 dependen
 
 
 ## Execution update — 2026-10-11 (P1-S1 source review)
-- Manifest generated at `docs/data/country-source-review-manifest.json`; synchronized by `npm run data:country-manifest`.
+- Manifest generated at `docs/data/country-source-review-manifest.json`; synchronized by pm run data:country-manifest`.
 - 26/26 country outcomes recorded; 25 relevant official pages/alternatives inspected. Luxembourg official alternatives are logged, though the root still redirects generically; Russia needs mission-jurisdiction confirmation. Human sign-off remains required.
 - Austria and Czechia source anchors updated; only their per-country retrieval dates changed. Dataset `asOf` remains 2026-09-05; no unsupported aggregates populated.
 - Route-quality regression tests added for unknown requirements, missing country references and research-required routes.

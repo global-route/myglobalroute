@@ -3,7 +3,7 @@
 
 > 13 remaining tasks across HIGH / MEDIUM / LOW priority.
 > Each task has exact file targets, the precise change needed, and a best-practice note.
-> Execute in order. Run `npm test` after each phase.
+> Execute in order. Run pm test` after each phase.
 
 ---
 
@@ -18,7 +18,7 @@
 | `sitemap.xml` | Exists but has stale `find-my-route` URL (renamed to `find-mypathway`) |
 | `404.html` | Does not exist |
 | Newsletter form | Fake `onsubmit` handler — no real capture |
-| Calculator empty state | `no-results` div exists but only fires when budget filter returns 0 — no message when all `trueCost` are null |
+| Calculator empty state | o-results` div exists but only fires when budget filter returns 0 — no message when all `trueCost` are null |
 | `about-section` class | Used in `disclaimer.html`, `terms.html`, `privacy.html` — 3 pages vs `.prose` on 15 |
 | `og:image` | Zero pages have it |
 | Organization schema | Missing from `src/index.html` |

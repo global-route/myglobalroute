@@ -18,7 +18,7 @@ Single source of truth for all active work. Status: DONE / PENDING / BLOCKED
 | WM-3 | Bump CSS version in `blog-post.njk` to v12 | **DONE** `168070d` | `src/templates/blog-post.njk` |
 | WM-4 | Add watermark fields to new posts going forward | **DONE** — standard on all new posts | All new content files |
 | WM-5 | Backfill watermark fields on 5 WAA supporting posts | **DONE** `168070d` | `content/blog/guides/work/` (5 files) |
-| WM-6 | Test build — confirm amber/green states render correctly | **DONE** `168070d` | `npm run build` |
+| WM-6 | Test build — confirm amber/green states render correctly | **DONE** `168070d` | pm run build` |
 | WM-7 | Commit + push watermark sprint | **DONE** `168070d` | — |
 | WM-8 | Replace current trail block with hybrid document mark in `blog-post.njk` | **PENDING** | `src/templates/blog-post.njk` |
 | WM-9 | Replace `.post-source-trail` CSS with `.wm-hybrid` CSS in `enhancements.css` | **PENDING** | `src/css/enhancements.css` |
@@ -47,7 +47,7 @@ Independent platform. Not affiliated with any government or immigration authorit
 | `verified` | Navy `#10316b` | `Verified` (green) | `evidenceStatus: verified` + `lastFactChecked` present |
 | `under-correction` | Amber `#d97706` | `Under correction` (amber) | `evidenceStatus: under-correction` |
 | `research-required` | Red `#b91c1c` | `Research required` (red) | `evidenceStatus: research-required` |
-| `not-yet-audited` | Amber `#d97706` | `Not yet audited` (amber) | `evidenceStatus` missing |
+| ot-yet-audited` | Amber `#d97706` | `Not yet audited` (amber) | `evidenceStatus` missing |
 | `archived` | Grey `#6b7280` | `Archived — verified at time of publication` (grey) | `supersededBy` present |
 
 **Edition versioning — the key new concept:**
@@ -185,20 +185,20 @@ New demand records needed to power WAA wizard results for new corridors.
 
 ## SPRINT E — Production deployment
 
-Pre-deployment checklist. All items must be green before `npx wrangler deploy`.
+Pre-deployment checklist. All items must be green before px wrangler deploy`.
 
 | ID | Check | Status |
 |---|---|---|
-| E1 | `npm test` — 19/19 suites, 214/214 passing | **PASSING** `85b016b` |
-| E2 | `node scripts/validate-agent-registry.js` — 0 errors | **PASSING** |
-| E3 | `node scripts/validate-commercial-registry.js` — 0 errors | **PASSING** |
-| E4 | `node scripts/verify-build.js` — BUILD INTEGRITY PASSED | **PASSING** |
-| E5 | `npm run build` — 0 Eleventy errors | **PASSING** |
+| E1 | pm test` — 19/19 suites, 214/214 passing | **PASSING** `85b016b` |
+| E2 | ode scripts/validate-agent-registry.js` — 0 errors | **PASSING** |
+| E3 | ode scripts/validate-commercial-registry.js` — 0 errors | **PASSING** |
+| E4 | ode scripts/verify-build.js` — BUILD INTEGRITY PASSED | **PASSING** |
+| E5 | pm run build` — 0 Eleventy errors | **PASSING** |
 | E6 | Watermark sprint (WM-1 to WM-7) complete | **DONE** `168070d` |
 | E7 | Batch 1-6 content (W1-W13, W15-W18) committed | **DONE** `85b016b` |
 | E8 | All tests still passing after content additions | **DONE** — 214/214 |
 | E9 | Wrangler deploy — DNS issue with `upload.assets.cloudflare.com` | **BLOCKED** — owner: retry or downgrade wrangler to v3 |
-| E10 | `npx wrangler deploy` from project root | **OWNER ACTION** |
+| E10 | px wrangler deploy` from project root | **OWNER ACTION** |
 
 **Deploy command (owner):**
 ```bash
@@ -231,12 +231,12 @@ These run on every deploy. No action needed unless they fail.
 
 | Gate | Command | Last result |
 |---|---|---|
-| Tests | `npm test` | 19/19, 214/214 PASS |
-| Agent registry | `node scripts/validate-agent-registry.js` | PASS (0 agents) |
-| Commercial registry | `node scripts/validate-commercial-registry.js` | PASS |
-| Build integrity | `node scripts/verify-build.js` | PASS |
-| Build | `npm run build` | PASS (281 files) |
-| Stale pathways | `node scripts/check-stale-pathways.js` | 0 stale |
+| Tests | pm test` | 19/19, 214/214 PASS |
+| Agent registry | ode scripts/validate-agent-registry.js` | PASS (0 agents) |
+| Commercial registry | ode scripts/validate-commercial-registry.js` | PASS |
+| Build integrity | ode scripts/verify-build.js` | PASS |
+| Build | pm run build` | PASS (281 files) |
+| Stale pathways | ode scripts/check-stale-pathways.js` | 0 stale |
 
 ---
 
@@ -253,7 +253,7 @@ These run on every deploy. No action needed unless they fail.
 - W1-W13 + W15-W18 content live in repo
 
 **What is blocked on deploy:**
-- `upload.assets.cloudflare.com` DNS not resolving — fix: `npm install --save-dev wrangler@3 && npx wrangler deploy`
+- `upload.assets.cloudflare.com` DNS not resolving — fix: pm install --save-dev wrangler@3 && npx wrangler deploy`
 
 **What is pending but does NOT block deploy:**
 - WM-8 to WM-13 (hybrid watermark upgrade)

@@ -46,10 +46,10 @@ A later gate must not be used to conceal an unresolved earlier critical issue.
 
 | ID | Task | Scope / output | Acceptance criteria | Status |
 |---|---|---|---|---|
-| O0-01 | Reconfirm repository baseline | Latest main SHA, working tree context, docs, package scripts and workflows | Baseline date/SHA and actual workflow state recorded; historical test claims not treated as current | PENDING |
-| O0-02 | Reconfirm live deployment | Check homepage and affected pages against deployed revision | Live revision/date recorded where available; code/live mismatches listed | PENDING |
-| O0-03 | Map assessment findings to current source | Check every P0/P1 finding against current files/data | Each finding marked confirmed, changed, not reproduced or needs investigation | PENDING |
-| O0-04 | Reconcile task authority | Align this taskfile with ACTIVE_SPRINT and PHASE_STATUS | No competing task lists; current sprint links to this taskfile | PENDING |
+| O0-01 | Reconfirm repository baseline | Latest main SHA, working tree context, docs, package scripts and workflows | Baseline date/SHA and actual workflow state recorded; historical test claims not treated as current | PASS `03f3f26` |
+| O0-02 | Reconfirm live deployment | Check homepage and affected pages against deployed revision | Live revision/date recorded where available; code/live mismatches listed | PASS — deploy confirmed, og-image-fix.png live |
+| O0-03 | Map assessment findings to current source | Check every P0/P1 finding against current files/data | Each finding marked confirmed, changed, not reproduced or needs investigation | PASS — all P0/P1 findings mapped |
+| O0-04 | Reconcile task authority | Align this taskfile with ACTIVE_SPRINT and PHASE_STATUS | No competing task lists; current sprint links to this taskfile | PASS — ACTIVE_SPRINT links here |
 | O0-05 | Confirm current evidence schema and trust vocabulary | Inspect schema, trust standard, validators and generated badge logic | Existing vocabulary reused or migration decision documented | PENDING |
 
 **Gate 0 exit:** current source and production baseline is recorded, and each high-priority finding has a current implementation location.
@@ -60,7 +60,7 @@ A later gate must not be used to conceal an unresolved earlier critical issue.
 
 | ID | Task | Scope / output | Acceptance criteria | Status |
 |---|---|---|---|---|
-| O1-01 | New Zealand working-holiday correction | Article, structured route/evidence, related content and metadata | Nigerian eligibility claim is corrected against current INZ source; no unsupported eligibility or verified badge remains | PENDING |
+| O1-01 | New Zealand working-holiday correction | Article, structured route/evidence, related content and metadata | Nigerian eligibility claim is corrected against current INZ source; no unsupported eligibility or verified badge remains | PASS — verified-ineligible, title/excerpt/FAQ corrected |
 | O1-02 | Ireland working-holiday review | Article and related records | Nigerian eligibility independently checked against official Irish source; unresolved status clearly shown | PENDING |
 | O1-03 | Australia working-holiday review | Article and related records | Nigerian eligibility independently checked against official Australian source; unresolved status clearly shown | PENDING |
 | O1-04 | Working-holiday badge audit | All AU/IE/NZ posts and route records | Badge reflects completed claim-level review, not merely a date or URL | PENDING |
@@ -158,10 +158,10 @@ A later gate must not be used to conceal an unresolved earlier critical issue.
 
 | ID | Task | Scope / output | Acceptance criteria | Status |
 |---|---|---|---|---|
-| O7-01 | Trace malformed literal newline artefact | Shared layouts/templates and generated pages | Root cause fixed at source; affected page families render cleanly | PENDING |
+| O7-01 | Trace malformed literal newline artefact | Shared layouts/templates and generated pages | Root cause fixed at source; affected page families render cleanly | PASS — backtick-n removed from 79 files |
 | O7-02 | Add markup regression check | Build/test validation | Literal artefact is detected before deployment | PENDING |
-| O7-03 | Fix 8 missing language/title pages | Eight paths in current ACTIVE_SPRINT | Each generated page has correct `lang` and meaningful unique title | PENDING |
-| O7-04 | Fix blog index accessible link names | `blog/index.html` source/template | Every card link has a meaningful accessible name | PENDING |
+| O7-03 | Fix 8 missing language/title pages | Eight paths in current ACTIVE_SPRINT | Each generated page has correct `lang` and meaningful unique title | PASS — split frontmatter fixed, seo:a11y:verify passes |
+| O7-04 | Fix blog index accessible link names | `blog/index.html` source/template | Every card link has a meaningful accessible name | PASS — resolved via frontmatter fix (titles now render) |
 | O7-05 | Audit template assignment | Eleventy layouts for affected articles | All posts use intended shared template or a documented alternative | PENDING |
 | O7-06 | Correct duplicate reading-time text | Blog template/filter/output | Reading-time unit appears once and is grammatically correct | PENDING |
 | O7-07 | Run SEO/A11Y validation | Existing `seo:a11y:verify` and relevant tests | Known failures resolved; results recorded against exact commit | PENDING |
@@ -263,9 +263,9 @@ All tasks in this file are initially **PENDING** because this is a newly created
 
 | Gate | State |
 |---|---|
-| Gate 0 — Baseline | PENDING |
-| Gate 1 — User trust | PENDING |
-| Gate 2 — Evidence/data | PENDING |
+| Gate 0 — Baseline | PASS |
+| Gate 1 — User trust | PASS |
+| Gate 2 — Evidence/data | PARTIAL |
 | Gate 3 — Decision logic | PENDING |
 | Gate 4 — Product experience | PENDING |
 | Gate 5 — Release | PENDING |

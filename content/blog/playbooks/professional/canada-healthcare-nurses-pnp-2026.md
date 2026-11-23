@@ -36,7 +36,7 @@ Before any Canadian immigration pathway for nurses, there is a prerequisite: reg
 Each province has its own regulatory body:
 - Ontario: College of Nurses of Ontario (CNO) — `cno.org`
 - British Columbia: BC College of Nurses and Midwives (BCCNM) — `bccnm.ca`
-- Alberta: College of Registered Nurses of Alberta (CRNA) — `nurses.ab.ca`
+- Alberta: College of Registered Nurses of Alberta (CRNA) — urses.ab.ca`
 - Manitoba: College of Registered Nurses of Manitoba (CRNM) — `crnm.mb.ca`
 
 The registration process typically takes 3-6 months and requires:

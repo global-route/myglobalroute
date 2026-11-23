@@ -122,11 +122,11 @@ Add a normalized nationality eligibility model to each pathway where nationality
 
 Suggested logical fields (adapt to the existing schema rather than creating duplicate competing structures):
 
-- `nationality_scope`: all eligible passports, allowlist, blocklist or country-agreement model.
+- ationality_scope`: all eligible passports, allowlist, blocklist or country-agreement model.
 - `eligible_passports` / `excluded_passports`: controlled country identifiers where applicable.
-- `nationality_conditions`: quotas, ballots, support letters, consular jurisdiction or additional steps.
-- `nationality_evidence_refs`: claim-level links to authoritative sources.
-- `nationality_reviewed_at`, `source_retrieved_at`, `review_due_at`.
+- ationality_conditions`: quotas, ballots, support letters, consular jurisdiction or additional steps.
+- ationality_evidence_refs`: claim-level links to authoritative sources.
+- ationality_reviewed_at`, `source_retrieved_at`, `review_due_at`.
 - `eligibility_status`: verified eligible, verified ineligible, conditional, unknown or research required.
 
 **Result statuses must be explicit:**

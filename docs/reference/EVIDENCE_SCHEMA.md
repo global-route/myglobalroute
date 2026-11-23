@@ -24,7 +24,7 @@ Every material migration claim must eventually resolve to an evidence object.
 
 1. Primary government/immigration sources are preferred for legal requirements, fees, thresholds, forms and processing rules.
 2. A secondary source can provide context but cannot override a current primary source.
-3. Approval rates are not inferred from unrelated global aggregates. If no credible methodology-disclosed population-specific rate exists, the value remains `null`.
+3. Approval rates are not inferred from unrelated global aggregates. If no credible methodology-disclosed population-specific rate exists, the value remains ull`.
 4. Derived values must identify their inputs and calculation method.
 5. Every source-backed record gets a review date; high-volatility immigration policy should be reviewed more frequently.
 6. Superseded evidence remains auditable but must not drive current recommendations.

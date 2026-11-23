@@ -68,7 +68,7 @@ A page passes when:
 7. Page title and meta description set
 8. No broken or truncated HTML
 9. Content matches the evidence-gated product (no fabricated rates/costs)
-10. `npm run build` produces the page in `dist/` without errors
+10. pm run build` produces the page in `dist/` without errors
 
 ---
 
@@ -133,7 +133,7 @@ Student/Professional/Business playbooks move to a "Guides" dropdown or a seconda
 - Spain Digital Nomad Visa
 - Evidence disclaimer: costs are evidence-gated, not guaranteed
 
-**Accept:** Valid HTML. No truncation. Canonical header + footer. `npm run build` passes.
+**Accept:** Valid HTML. No truncation. Canonical header + footer. pm run build` passes.
 
 ---
 
@@ -436,12 +436,12 @@ Column 4: Trust — Privacy, Disclaimer, Terms, Contact
 
 #### UI-3-S2-1 · Internal link audit
 
-**What:** Run `npm run build` then check all internal links in `dist/`:
+**What:** Run pm run build` then check all internal links in `dist/`:
 - No link points to a page that doesn't exist in `dist/`
 - No link uses an absolute URL with a placeholder origin (localhost, myglobalroute.com, netlify.app)
 - Blog category pages link to real posts
 
-**Accept:** `npm run build:verify` passes. Zero broken internal links.
+**Accept:** pm run build:verify` passes. Zero broken internal links.
 
 ---
 
@@ -466,7 +466,7 @@ Column 4: Trust — Privacy, Disclaimer, Terms, Contact
 
 #### UI-3-S2-3 · Build smoke — all pages render in browser
 
-**What:** Run `npm run build && npx @11ty/eleventy --serve` (or equivalent local server). Open every page in a browser:
+**What:** Run pm run build && npx @11ty/eleventy --serve` (or equivalent local server). Open every page in a browser:
 - No blank pages
 - No console errors
 - No missing CSS (404 on stylesheet)
@@ -496,7 +496,7 @@ UI-0 must complete before UI-1. UI-1 must complete before UI-2. UI-2 and UI-3-S1
 
 ## Parallel gate — P0-S5 DNS
 
-UI work can proceed fully in parallel with the P0-S5 DNS resolution. The UI phases do not require a live domain. They require only `npm run build` and a local server.
+UI work can proceed fully in parallel with the P0-S5 DNS resolution. The UI phases do not require a live domain. They require only pm run build` and a local server.
 
 Once P0-S5 resolves the DNS and the live origin is confirmed, add:
 - Canonical `<link rel="canonical">` tags (blocked until origin confirmed — see TASK_SPEC P0-S5-5)

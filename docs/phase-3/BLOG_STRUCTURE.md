@@ -86,7 +86,7 @@ Global Route/
 - `how-to-fund-germany-blocked-account-ghana.md`
 - `italy-dsu-scholarship-complete-guide.md`
 - `student-visa-budget-under-5000-usd.md`
-- `no-tuition-universities-africans.md`
+- o-tuition-universities-africans.md`
 
 ---
 

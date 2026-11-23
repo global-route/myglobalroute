@@ -45,7 +45,7 @@ Design is ready at `docs/engineering/og-image-design.html`.
 2. Open DevTools (F12) → device toolbar (Cmd+Shift+M) → set 1200×630
 3. Right-click → Capture screenshot → save as `og-default.png`
 4. Move to `public/assets/og-default.png`
-5. `npx wrangler deploy`
+5. px wrangler deploy`
 6. Validate at `cards-dev.twitter.com/validator` and `developers.facebook.com/tools/debug`
 
 Or use Chrome headless:
@@ -215,7 +215,7 @@ Create a 1200×630px image:
 - Subtitle: "Evidence-gated migration intelligence for African talent"
 - Save as: `public/assets/og-default.png`
 
-Then run `npx wrangler deploy` to push the asset.
+Then run px wrangler deploy` to push the asset.
 
 ---
 
@@ -227,7 +227,7 @@ Then run `npx wrangler deploy` to push the asset.
 3. Open `src/pages/blog.html`
 4. Find the newsletter form `<form>` tag
 5. Replace the placeholder `action` attribute with your Mailchimp URL
-6. Run `npm run build && npx wrangler deploy`
+6. Run pm run build && npx wrangler deploy`
 
 ---
 
@@ -262,7 +262,7 @@ For each article, open the `.md` file in `content/blog/guides/work/` and update 
 - If Nigeria IS listed as eligible: set `eligibilityReviewStatus: verified-eligible` and remove the correction banner callout
 - If Nigeria is NOT listed: set `eligibilityReviewStatus: verified-ineligible` and update the banner to a permanent ineligibility notice
 
-Then: `npm run build && npx wrangler deploy`
+Then: pm run build && npx wrangler deploy`
 
 ---
 
@@ -369,4 +369,4 @@ Pages like `/pages/find-mypathway.html` return 307 → `/pages/find-mypathway`. 
 - CZ-study + CZ-work (311 days)
 - CA-federal-skilled-worker / points + experience (139 days)
 
-Run `node scripts/check-stale-pathways.js` for the full list.
+Run ode scripts/check-stale-pathways.js` for the full list.

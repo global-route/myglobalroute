@@ -63,7 +63,7 @@ This plan decomposes the remaining P0 work into delivery sprints. A sprint is no
 
 ### Workstreams
 
-- Run `npm run data:validate`.
+- Run pm run data:validate`.
 - Run evidence registry, pathway boundary and route recommendation tests.
 - Verify canonical registry counts and evidence IDs.
 - Run build and generated-output integrity verification.

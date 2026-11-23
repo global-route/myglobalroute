@@ -97,7 +97,7 @@ EVIDENCE COVERAGE: 32/52 pathways evidenced; 30/52 materially covered; 28 publis
 3. Confirm all regression tests pass
 4. Update pathway status in `src/data/pathway-candidates.json`
 5. If promoting to publishable, add canonical pathway record in `src/data/pathways.json`
-6. Run full verification suite: `npm run data:validate && npm test && npm run build && npm run build:verify`
+6. Run full verification suite: pm run data:validate && npm test && npm run build && npm run build:verify`
 
 **Files involved:**
 - `src/data/pathway-candidates.json` — Update candidate status

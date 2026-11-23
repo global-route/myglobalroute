@@ -33,7 +33,7 @@ Quality Gate output: 26 countries, 56 pathways, 193 evidence records; zero depen
 
 - [x] Extract all 26 country IDs, names and URLs from the live registry.
 - [x] Generate `docs/data/country-source-review-manifest.json`.
-- [x] Add `scripts/generate-country-source-manifest.js`, registry-sync test and `npm run data:country-manifest`.
+- [x] Add `scripts/generate-country-source-manifest.js`, registry-sync test and pm run data:country-manifest`.
 - [x] Add the manifest check to the Quality Gate workflow.
 - [x] Capture baseline data validation, freshness output and full test/build verification in the Quality Gate logs linked above.
 

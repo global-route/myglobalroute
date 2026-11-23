@@ -266,7 +266,7 @@ export function searchPosts(query) {
 ```
 
 **Sub-tasks:**
-- [ ] Install Fuse.js (`npm install fuse.js`)
+- [ ] Install Fuse.js (pm install fuse.js`)
 - [ ] Create search index (JSON with all posts)
 - [ ] Build search UI component
 - [ ] Add search to blog.html

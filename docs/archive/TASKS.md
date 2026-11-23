@@ -19,7 +19,7 @@
 **Blocker:** Posts cannot be viewed without this
 
 **Tasks:**
-- [ ] Install 11ty: `npm install --save-dev @11ty/eleventy`
+- [ ] Install 11ty: pm install --save-dev @11ty/eleventy`
 - [ ] Create `.eleventy.js` configuration file
 - [ ] Configure input/output directories
 - [ ] Test build process

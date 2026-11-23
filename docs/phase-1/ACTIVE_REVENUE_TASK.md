@@ -19,7 +19,7 @@
 - [x] Redirect boundary rejects missing, unknown, unverified, stale or invalid HTTPS destinations.
 - [x] Commercial registry validator checks IDs, status/category allowlists, disclosure, review dates, expiry and HTTPS destinations.
 - [x] Unit and browser coverage added for registry governance, consent choice and recommendation-workflow ad exclusion.
-- [x] Validation included in the repository's aggregate `npm run verify` command.
+- [x] Validation included in the repository's aggregate pm run verify` command.
 
 ## Remaining acceptance work
 
