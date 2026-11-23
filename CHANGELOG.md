@@ -4,6 +4,17 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
+## 2026-11-23 — Overhaul implementation planning documents
+
+- Added `docs/overhaul.md` as the consolidated findings and correction register (committed earlier).
+- Added `docs/implementation/OVERHAUL_IMPLEMENTATION_WALKTHROUGH.md` with the technical sequence, evidence safeguards, implementation method and definition of done.
+- Added `docs/project/OVERHAUL_TASKFILE.md` as the official task-level execution checklist, with workstreams, task IDs, acceptance criteria, gates and owner dependencies.
+- Updated `docs/INDEX.md` to link the assessment, walkthrough and taskfile.
+- Updated `docs/project/ACTIVE_SPRINT.md` to reference the official overhaul taskfile and explicitly prohibit clearing stale evidence by blindly extending review dates.
+- Planning documents only; no application code, data records or production deployment changed.
+
+---
+
 ## 2026-11-14 — Sprint clear: P1-P4 complete, 315 files deployed, CI deploy workflow added
 
 **Commits:** `334a77a` → `1614757` | **Tests:** 19/19, 214/214 | **Build:** 315 files | **Posts:** 125 → 126 | **Countries:** 31 → 35 | **Pathways:** 71 → 75 | **Demand records:** 22 → 24
