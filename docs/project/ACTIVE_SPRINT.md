@@ -3,7 +3,7 @@
 **Posts:** 145 | **Countries:** 35 | **Pathways:** 75 | **Demand records:** 24 | **Evidence records:** 222
 **Data validation:** FAILING (15 stale evidence records) | **CI:** Quality Gate ❌ | Browser Smoke ❌ | Lint ✅ | Deploy ✅
 
-Single source of truth for all outstanding work. Status: DONE / PENDING / BLOCKED
+Single source of truth for current sprint execution. The official overhaul correction programme is tracked in [OVERHAUL_TASKFILE.md](OVERHAUL_TASKFILE.md); use that file for the full overhaul task register. Status: DONE / PENDING / BLOCKED\n\n> **Evidence integrity correction:** Do not bulk-bump `reviewAfter` dates to clear stale-evidence validation. Reverify each official source and dependent requirement, or explicitly quarantine/block the record. See Sprint O2 in [OVERHAUL_TASKFILE.md](OVERHAUL_TASKFILE.md) and the [implementation walkthrough](../implementation/OVERHAUL_IMPLEMENTATION_WALKTHROUGH.md).
 
 ---
 
@@ -11,7 +11,7 @@ Single source of truth for all outstanding work. Status: DONE / PENDING / BLOCKE
 
 ### 0A — Data validation: 15 stale evidence records (`npm run data:validate`)
 
-All evidence records below are past their `reviewAfter` date and cannot back structured requirements. Fix: bump `reviewAfter` to 2027-03-01 in the relevant evidence files.
+All evidence records below were reported past their `reviewAfter` date and cannot back structured requirements. **Do not simply extend these dates.** Re-open the official source, verify the exact claim and scope, preserve the audit trail, update dependent requirements, and set a new review date only after verification. If verification is unavailable, keep the record blocked/research-required. Follow Sprint O2 in `docs/project/OVERHAUL_TASKFILE.md`.
 
 | Route | Requirement ID | Evidence ID |
 |---|---|---|
