@@ -14,10 +14,10 @@
 | Release evidence / deployment state | [Phase Status](project/PHASE_STATUS.md) — commit `520b130`, CI green, production live |
 | UI redesign findings | [UI/UX Audit & Classic Design Roadmap](product/UI_UX_AUDIT_AND_CLASSIC_DESIGN_ROADMAP.md) |
 | Product corrections and future expansion | [Product Improvement & Implementation Blueprint](product/MYPATHWAY2GLOBAL_PRODUCT_IMPROVEMENT_IMPLEMENTATION_BLUEPRINT.md) |
-| Full assessment, weaknesses, benchmark research and implementation walkthrough | [Deep Website & Product Assessment](MYPATHWAY2GLOBAL_DEEP_WEBSITE_PRODUCT_ASSESSMENT_AND_IMPLEMENTATION_WALKTHROUGH.md) |
+| Full assessment and correction register | [Overhaul Assessment](overhaul.md) |\n| Official overhaul execution checklist | [Overhaul Taskfile](project/OVERHAUL_TASKFILE.md) |\n| Technical implementation sequence and verification method | [Overhaul Implementation Walkthrough](implementation/OVERHAUL_IMPLEMENTATION_WALKTHROUGH.md) |\n| Full assessment, weaknesses and benchmark research | [Deep Website & Product Assessment](MYPATHWAY2GLOBAL_DEEP_WEBSITE_PRODUCT_ASSESSMENT_AND_IMPLEMENTATION_WALKTHROUGH.md) |
 | Documentation structure and ownership | [Documentation Map](README.md) |
 
-## Project planning
+## Overhaul correction programme\n\n- [Overhaul Assessment](overhaul.md) — consolidated findings and correction register.\n- [Overhaul Taskfile](project/OVERHAUL_TASKFILE.md) — official task-level execution checklist and acceptance criteria.\n- [Overhaul Implementation Walkthrough](implementation/OVERHAUL_IMPLEMENTATION_WALKTHROUGH.md) — implementation sequence, technical guardrails and verification protocol.\n\n## Project planning
 
 - [Phase Status](project/PHASE_STATUS.md) — phase completion, open gates, Phase 6 roadmap, product north star. **Canonical source of truth.**
 - [Active Sprint](sprints/ACTIVE_SPRINT.md) — current owner actions and prioritised next sprint candidates.
