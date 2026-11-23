@@ -1,5 +1,5 @@
-postVersion: v2026.11
 ---
+postVersion: v2026.11
 layout: blog-post.njk
 title: "Domestic Worker Rights in Qatar, UAE and Saudi Arabia 2026: What the Law Says"
 date: 2026-11-09
@@ -21,7 +21,6 @@ faqs:
     a: "Passport confiscation is illegal in Qatar, UAE and Saudi Arabia. All three countries have laws prohibiting employers from holding workers' passports. In practice it still occurs. If an employer takes your passport, you can report this to the relevant labour ministry. Do not hand over your passport voluntarily."
   - q: "What is the minimum wage for domestic workers in the Gulf?"
     a: "Qatar: QAR 1,000/month (approximately USD 275) applies to all workers including domestic workers. UAE: no universal minimum wage for domestic workers - the employment contract governs. Saudi Arabia: no published minimum wage for domestic workers. Always get the salary in writing in the contract before travelling."
-postVersion: v2026.11
 ---
 
 # Domestic Worker Rights in Qatar, UAE and Saudi Arabia 2026

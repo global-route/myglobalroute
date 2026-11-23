@@ -1,5 +1,5 @@
-postVersion: v2026.11
 ---
+postVersion: v2026.11
 layout: blog-post.njk
 title: "How to Verify a Recruitment Agent is Legitimate 2026: Red Flags and Checks"
 date: 2026-11-09
@@ -21,7 +21,6 @@ faqs:
     a: "Recruitment agencies placing workers abroad must be licensed by the Federal Ministry of Labour and Employment. You can verify a licence by contacting the Ministry directly at info@labour.gov.ng or visiting the Ministry office. The agency should be able to provide their licence number on request."
   - q: "What is NAPTIP and how does it relate to recruitment fraud?"
     a: "NAPTIP is the National Agency for the Prohibition of Trafficking in Persons. Fraudulent recruitment is a common trafficking vector. If you suspect a recruitment offer is fraudulent or involves trafficking, report it to NAPTIP at naptip.gov.ng or call 0800-NAPTIP-1 (0800-627847-1)."
-postVersion: v2026.11
 ---
 
 # How to Verify a Recruitment Agent is Legitimate 2026

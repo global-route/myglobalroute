@@ -1,5 +1,5 @@
-postVersion: v2026.11
 ---
+postVersion: v2026.11
 layout: blog-post.njk
 title: "Canada Tech Visa 2026 — The Honest Version of What the Ads Are Selling"
 description: "Software developers, data analysts, DevOps engineers and cybersecurity professionals can genuinely get Canadian PR through Express Entry. Here is what the ads get right, what they get wrong, and what the process actually looks like."
@@ -23,7 +23,6 @@ faqs:
     a: IRCC targets 6 months to process an application after an Invitation to Apply (ITA). Getting an ITA depends on your CRS score and draw timing — this can take weeks or over a year. Total timeline from creating your profile to landing in Canada as a PR is typically 12-24 months.
   - q: Is my Nigerian degree recognised in Canada?
     a: Foreign degrees must be assessed by a designated organisation — typically WES (World Education Services). Nigerian university degrees are generally recognised but must go through the assessment process. Allow 3-5 months for WES assessment.
-postVersion: v2026.11
 ---
 
 You have seen the ads. "Canada needs tech talent." "Software developers, data analysts, DevOps engineers — Canada has strong demand for your skills." "Get PR in less than 11 months."

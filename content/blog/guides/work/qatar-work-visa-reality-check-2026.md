@@ -1,5 +1,5 @@
-postVersion: v2026.11
 ---
+postVersion: v2026.11
 layout: blog-post.njk
 title: "Qatar Work Visa 2026 — What the NGN 3.2 Million Offer Actually Means"
 date: 2026-11-09
@@ -21,7 +21,6 @@ faqs:
     a: QAR 1,000 per month for non-domestic workers. The NGN 650,000/month salary figure seen in agent offers translates to approximately QAR 1,600/month — plausible for low-skill work but at the lower end of the market.
   - q: Is the Kafala system still in place in Qatar?
     a: Partially reformed. Qatar abolished the exit permit requirement in 2020. Workers can change employers without permission since 2021. Enforcement gaps remain and the system still ties workers to employers in practice.
-postVersion: v2026.11
 ---
 
 In Nigerian Telegram groups and WhatsApp channels, Qatar work visa offers appear regularly. A typical offer looks like this:

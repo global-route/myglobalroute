@@ -1,5 +1,5 @@
-postVersion: v2026.11
 ---
+postVersion: v2026.11
 layout: blog-post.njk
 title: "UK Shortage Occupation List 2026: Immigration Salary List and What Changed"
 date: 2026-11-09
@@ -21,7 +21,6 @@ faqs:
     a: "The ISL includes occupations where the MAC-set going rate is below GBP 38,700. This includes some healthcare roles, some education roles, and some technical roles. The full list is published at gov.uk/government/publications/immigration-salary-list. Check the current version as it is updated periodically."
   - q: "Does being in a shortage occupation speed up my UK visa application?"
     a: "No. The UK Skilled Worker visa does not have a fast-track for shortage occupations. Processing times are the same regardless of whether your occupation is on the Immigration Salary List. The ISL only affects the salary threshold that applies to your application."
-postVersion: v2026.11
 ---
 
 # UK Shortage Occupation List 2026: What Changed

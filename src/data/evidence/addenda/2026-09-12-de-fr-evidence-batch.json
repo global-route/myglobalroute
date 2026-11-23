@@ -17,7 +17,7 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current German Federal Foreign Office study-visa guidance",
       "confidence": "high",
-      "reviewAfter": "2026-11-18"
+      "reviewAfter": "2027-03-01"
     },
     {
       "id": "DE-study-finance-2026-09-12",
@@ -47,14 +47,14 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current German government Opportunity Card guidance",
       "confidence": "high",
-      "reviewAfter": "2026-11-18"
+      "reviewAfter": "2027-03-01"
     },
     {
       "id": "DE-opportunity-card-finance-2026-09-12",
       "countryId": "DE",
       "pathwayId": "DE-opportunity-card",
       "field": "financial-requirement",
-      "claim": "For 2026, Opportunity Card applicants must demonstrate sufficient funds for the job-search period; the official guidance gives a blocked-account minimum of €1,091 net per month or an applicable declaration of commitment, with qualifying part-time employment potentially counting toward the financing test.",
+      "claim": "For 2026, Opportunity Card applicants must demonstrate sufficient funds for the job-search period; the official guidance gives a blocked-account minimum of \u20ac1,091 net per month or an applicable declaration of commitment, with qualifying part-time employment potentially counting toward the financing test.",
       "sourceAuthority": "Make it in Germany / German government",
       "sourceUrl": "https://www.make-it-in-germany.com/en/visa-residence/opportunity-card/job-search",
       "jurisdiction": "Germany",
@@ -62,7 +62,7 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current German government Opportunity Card financing guidance",
       "confidence": "high",
-      "reviewAfter": "2026-11-18"
+      "reviewAfter": "2027-03-01"
     },
     {
       "id": "FR-study-eligibility-2026-09-12",
@@ -77,14 +77,14 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current France-Visas student guidance",
       "confidence": "high",
-      "reviewAfter": "2026-11-18"
+      "reviewAfter": "2027-03-01"
     },
     {
       "id": "FR-study-finance-2026-09-12",
       "countryId": "FR",
       "pathwayId": "FR-study",
       "field": "financial-requirement",
-      "claim": "France-Visas states that student long-stay visa applications submitted from 1 August 2026 require proof of resources corresponding to at least €877.50 per month.",
+      "claim": "France-Visas states that student long-stay visa applications submitted from 1 August 2026 require proof of resources corresponding to at least \u20ac877.50 per month.",
       "sourceAuthority": "France-Visas / Government of France",
       "sourceUrl": "https://www.france-visas.gouv.fr/en/web/france-visas/",
       "jurisdiction": "France",
@@ -92,7 +92,7 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current France-Visas student campaign notice",
       "confidence": "high",
-      "reviewAfter": "2026-11-18"
+      "reviewAfter": "2027-03-01"
     },
     {
       "id": "FR-talent-eligibility-2026-09-12",
@@ -107,14 +107,14 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current France-Visas international-talent guidance",
       "confidence": "high",
-      "reviewAfter": "2026-11-18"
+      "reviewAfter": "2027-03-01"
     },
     {
       "id": "FR-talent-finance-2026-09-12",
       "countryId": "FR",
       "pathwayId": "FR-talent",
       "field": "financial-requirement",
-      "claim": "For the highly qualified employee Talent Passport category, France-Visas specifies a salary threshold tied to the annually fixed gross reference salary; the current page states €59,373 as the reference salary from 21 August 2025 and requires at least 1.5 times that reference salary for the EU Blue Card subcategory.",
+      "claim": "For the highly qualified employee Talent Passport category, France-Visas specifies a salary threshold tied to the annually fixed gross reference salary; the current page states \u20ac59,373 as the reference salary from 21 August 2025 and requires at least 1.5 times that reference salary for the EU Blue Card subcategory.",
       "sourceAuthority": "France-Visas / Government of France",
       "sourceUrl": "https://www.france-visas.gouv.fr/en/web/france-visas/talents-internationaux-et-attractivite-economique",
       "jurisdiction": "France",
@@ -122,7 +122,7 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current France-Visas international-talent salary guidance",
       "confidence": "high",
-      "reviewAfter": "2026-11-18"
+      "reviewAfter": "2027-03-01"
     },
     {
       "id": "ES-study-eligibility-2026-09-12",
@@ -137,7 +137,7 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current Spanish government study-stay guidance",
       "confidence": "high",
-      "reviewAfter": "2026-11-18"
+      "reviewAfter": "2027-03-01"
     },
     {
       "id": "ES-study-finance-2026-09-12",
@@ -167,7 +167,7 @@
       "retrievedAt": "2026-09-12",
       "methodology": "Direct review of current Spanish UGE teleworker guidance and FAQ",
       "confidence": "high",
-      "reviewAfter": "2026-11-18"
+      "reviewAfter": "2027-03-01"
     },
     {
       "id": "ES-digital-nomad-finance-2026-09-12",

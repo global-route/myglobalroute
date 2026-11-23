@@ -1,5 +1,5 @@
-postVersion: v2026.11
 ---
+postVersion: v2026.11
 layout: blog-post.njk
 title: "Australia DAMA Shortage Occupations 2026: Trades and Regional Work Routes"
 date: 2026-11-09
@@ -21,7 +21,6 @@ faqs:
     a: "DAMA agreements vary by region but commonly include: electricians, plumbers, carpenters, welders, mechanics, refrigeration and air conditioning mechanics, bricklayers, plasterers, painters and decorators, and heavy vehicle drivers. The specific list depends on which DAMA region your employer is in."
   - q: "Can I apply for a DAMA visa from Nigeria without a job offer?"
     a: "No. The DAMA route requires employer sponsorship from an accredited DAMA sponsor in a designated regional area. You cannot self-nominate. The employer must be approved by the relevant regional authority and by the Department of Home Affairs."
-postVersion: v2026.11
 ---
 
 # Australia DAMA Shortage Occupations 2026

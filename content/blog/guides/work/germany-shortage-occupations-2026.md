@@ -1,5 +1,5 @@
-postVersion: v2026.11
 ---
+postVersion: v2026.11
 layout: blog-post.njk
 title: "Germany Shortage Occupation List 2026: Which Jobs Are in Demand"
 date: 2026-11-09
@@ -21,7 +21,6 @@ faqs:
     a: "No. The Skilled Worker visa (Fachkraftevisa) is available for any occupation that requires a recognised qualification, not just shortage occupations. However, being in a shortage occupation can speed up processing and may exempt your employer from the labour market test (Vorrangprufung)."
   - q: "Does the Chancenkarte (Opportunity Card) require a shortage occupation?"
     a: "No. The Chancenkarte is available to anyone with a recognised foreign qualification who scores enough points on the points system. You do not need to be in a shortage occupation. However, being in a shortage occupation makes it easier to find a job once you arrive in Germany."
-postVersion: v2026.11
 ---
 
 # Germany Shortage Occupation List 2026
