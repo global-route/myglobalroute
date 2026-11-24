@@ -1,5 +1,5 @@
 # ACTIVE SPRINT TASKFILE — MyPathway2Global
-**Updated:** 2026-11-23 | **Commit:** `54e2722` | **Tests:** 19/19, 228/228
+**Updated:** 2026-11-23 | **Commit:** `40a0435` | **Tests:** 19/19, 228/228
 **Posts:** 145 | **Countries:** 35 | **Pathways:** 75 | **Demand records:** 24 | **Evidence records:** 222
 **Data validation:** PASSED | **CI:** Quality Gate ✅ | Browser Smoke ✅ | Lint ✅ | Deploy ✅
 **Overhaul:** Gates 0–3 PASS, Gate 4 PARTIAL — see `docs/project/OVERHAUL_TASKFILE.md`
@@ -100,11 +100,11 @@ See `docs/project/CONTENT_PIPELINE.md` for full queue. Top items:
 
 | Metric | Current (`54e2722`) |
 |---|---|
-| Blog posts | 145 |
+| Blog posts | 144 |
 | Countries | 35 |
 | Pathways | 75 |
 | Demand records | 24 |
-| Evidence records | 222 |
+| Evidence records | 226 |
 | Sitemap URLs | 199 |
 | Tests | 228/228 PASS |
 | Data validation | PASSED |

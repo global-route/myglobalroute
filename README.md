@@ -2,11 +2,11 @@
 
 **Evidence-gated migration intelligence for African Students, Professionals & Business Owners**
 
-**Current status (2026-11-11):** Production live. All phases 0-9, B, CP, GOIF, Vertical B, CRS/Tax series, P0, P1, WAA-1 to WAA-4, Sprint B (W1-W22) complete. 19/19 test suites passing (214/214 tests). See [active sprint](docs/project/ACTIVE_SPRINT.md), [phase tracker](docs/project/PHASE_STATUS.md).
+**Current status (2026-11-23):** Production live. All phases 0-9, B, CP, GOIF, Vertical B, CRS/Tax series, P0, P1, WAA-1 to WAA-4, Sprint B (W1-W22), Sprint A (N-series), Overhaul Gates 0-3 complete. 19/19 test suites passing (228/228 tests). See [active sprint](docs/project/ACTIVE_SPRINT.md), [phase tracker](docs/project/PHASE_STATUS.md).
 
-**Current data baseline:** 35 countries, 75 pathways, 222+ evidence records, 24 demand records; all publishable pathways have structured requirements[].
+**Current data baseline:** 35 countries, 75 pathways (65 publishable), 226+ evidence records, 24 demand records; all publishable pathways have structured requirements[].
 
-**Test status:** 19/19 suites PASS, 214/214 tests PASS. 145 blog posts. 199 sitemap URLs.
+**Test status:** 19/19 suites PASS, 228/228 tests PASS. 144 blog posts. 199 sitemap URLs.
 
 **Live site:** [https://mypathway2global.org.uk](https://mypathway2global.org.uk)
 
@@ -27,11 +27,11 @@ MyPathway2Global is an evidence-gated mobility platform for African passport hol
 - **WorkAbroadAgent:** 4-step wizard matching skilled/semi-skilled workers to verified agents by corridor and occupation
 - **Country Directory:** 35 countries with official source trails, registry-backed comparison metrics and evidence status
 - **Budget Calculator:** Savings-readiness planning aid — shows countries with verified cost data only
-- **Research Blog:** 145 posts across 7 categories — country audits, playbooks, case studies, guides, policy updates
+- **Research Blog:** 144 posts across 7 categories — country audits, playbooks, case studies, guides, policy updates
 
 ---
 
-## 📝 Blog Content (145 posts — selected highlights)
+## 📝 Blog Content (144 posts — selected highlights)
 
 ### Country Audits (15)
 - [Germany Visa from Nigeria 2026](/blog/country-audits/germany/germany-visa-from-nigeria-2026/) — Zero tuition, €11,208 blocked account, 18-month job search visa
@@ -104,9 +104,9 @@ MyPathway2Global is an evidence-gated mobility platform for African passport hol
 │   ├── pages/                         # Static HTML pages (incl. 404.html, visa-wizard.html)
 │   └── templates/                     # Eleventy templates
 ├── content/
-│   └── blog/                          # 126 blog posts (markdown)
+│   └── blog/                          # 144 blog posts (markdown)
 ├── scripts/                           # Validation, build, deploy, stale-audit scripts
-├── tests/                             # Jest unit tests (19 suites, 214 tests)
+├── tests/                             # Jest unit tests (19 suites, 228 tests)
 ├── docs/
 │   ├── project/                       # Phase status, active sprint, content pipeline
 │   ├── engineering/                   # WAA task files, watermark design

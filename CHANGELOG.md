@@ -4,6 +4,42 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
+## 2026-11-23 — Content sprint C1-C12 + freshness audit
+
+**Commit:** `40a0435` | **Tests:** 19/19, 228/228 | **Posts:** 144 | **CI:** All 4 workflows green
+
+### C1-C4 — Country audits expanded (Poland, Lithuania, Iceland, China)
+
+All four were thin stubs (~56 lines). Expanded to full evidence-gated posts:
+
+- **Poland** — study permit (EUR 1,000-4,000/year, EUR 500-700/month living), Employee Card work permit (no labour market test for registered vacancies), agent fraud warning, common rejection reasons
+- **Lithuania** — study permit, work permit, EU Blue Card (EUR 19,572/year — lowest threshold in the EU), IT/fintech demand, no Nigerian consulate (apply via Accra)
+- **Iceland** — honest cost reality (EUR 1,500-2,000/month — most expensive in Europe), shortage sectors (healthcare, construction, IT), salary data (ISK 350,000-800,000/month), no Nigerian consulate
+- **China** — X1 student visa, CSC scholarship (full application process, CNY 2,500-3,500/month stipend), Z work visa (Category A/B/C), agent fraud warning (business visa work packages)
+
+### C5, C9-C12 — Medium-priority posts verified
+
+- `australia-dama-regional-stream-2026.md` — `evidenceStatus: verified`, `lastFactChecked: 2026-11-23`
+- `daad-scholarships-nigeria-2026.md` — `evidenceStatus: verified`, `lastFactChecked: 2026-11-23`
+- `erasmus-mundus-scholarships-africa-2026.md` — `evidenceStatus: verified`, `lastFactChecked: 2026-11-23`
+- `commonwealth-scholarships-nigeria-2026.md` — `evidenceStatus: verified`, `lastFactChecked: 2026-11-23`
+- `how-to-open-bank-account-rwanda-2026.md` — `evidenceStatus: verified`, `lastFactChecked: 2026-11-23`
+
+### Quarterly freshness audit — 5 posts updated
+
+- `uk-company-setup-from-africa-2026.md` — `evidenceStatus: verified`, `lastFactChecked: 2026-11-23`
+- `mauritius-global-business-licence-2026.md` — `evidenceStatus: verified`, `lastFactChecked: 2026-11-23`
+- `italy-dsu-scholarship-complete-guide.md` — `lastFactChecked: 2026-11-23`
+- `australia-tsmit-increase-2024.md` — `evidenceStatus: verified`, `lastFactChecked: 2026-11-23`
+- `uk-skilled-worker-salary-threshold-increase-2024.md` — `evidenceStatus: verified`, `lastFactChecked: 2026-11-23`
+
+### Docs synced to canonical counts
+
+- README, about.html, PHASE_STATUS, ACTIVE_SPRINT, CONTENT_PIPELINE — all updated to: 35 countries, 75 pathways (65 publishable), 226+ evidence records, 144 posts, 199 sitemap URLs, 228/228 tests
+- `og-image-design.html` stats updated (144 posts, 226+ evidence records)
+
+---
+
 ## 2026-11-23 — Overhaul Gates 0–3 PASS + related content engine
 
 **Commits:** `03f3f26` → `54e2722` | **Tests:** 19/19, 228/228 | **CI:** All 4 workflows green

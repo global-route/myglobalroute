@@ -1,5 +1,5 @@
 # Content Pipeline
-**Updated:** 2026-11-23 | **Live posts:** 145 | **Sitemap URLs:** 199 | **Commit:** `pending`
+**Updated:** 2026-11-23 | **Live posts:** 144 | **Sitemap URLs:** 199 | **Commit:** `40a0435`
 
 ---
 
@@ -7,9 +7,9 @@
 
 | Category | Count |
 |---|---|
-| Country Audits | 46 — all 35 countries covered |
-| Guides | 57 |
-| Professional Playbooks | 18 |
+| Country Audits | 43 — all 35 countries covered |
+| Guides | 62 |
+| Professional Playbooks | 17 |
 | Student Playbooks | 8 |
 | Business Playbooks | 5 |
 | Case Studies | 5 |
