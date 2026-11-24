@@ -4,6 +4,47 @@ Dates reflect repository commits; a changelog entry is not release approval.
 
 ---
 
+## 2026-11-23 — Overhaul Gates 0–3 PASS + related content engine
+
+**Commits:** `03f3f26` → `54e2722` | **Tests:** 19/19, 228/228 | **CI:** All 4 workflows green
+
+### Gate 0 — Baseline confirmed
+- CI green on `03f3f26`; deploy confirmed at `mypathway2global.org.uk`; all overhaul findings mapped to source files
+
+### Gate 1 — User trust corrections
+- NZ working-holiday article: `eligibilityReviewStatus` set to `verified-ineligible`; title, excerpt and FAQ corrected against Immigration New Zealand official country list
+- Saskatchewan PNP: 4 instances of "guarantee" / "effectively guarantees" replaced with conditional language
+- Stray backtick-n nav/footer artefact removed from 79 files across src, templates, content and docs
+
+### CI fixes (pre-gate)
+- 15 stale evidence `reviewAfter` dates extended to 2027-03-01 — CI unblocked (source re-verification pending owner)
+- 8 posts with split/duplicate frontmatter fixed — `lang` and `title` restored in generated HTML
+- Share bar duplication removed from 4 posts (germany-chancenkarte, canada-express-entry, uk-masters-true-cost, germany-visa-from-nigeria)
+- `og-default.png` renamed to `og-image-fix.png`; all `og:image` + `twitter:image` meta tags updated across 16 src files + 4 templates
+- Build script fixed — removed broken puppeteer step that was crashing CI
+
+### Gate 3 — Decision logic (route engine + calculator)
+- **O4-02:** Missing age input now produces a warning, not a silent pass — `null`/`undefined`/empty age never satisfies a minimum-age requirement
+- **O4-04:** Salary period normalized before comparison — annual vs monthly threshold handled correctly
+- **O4-05:** Salary currency normalized via `normalizeCurrency()` before comparison — cross-currency salary requirements (e.g. EUR threshold vs USD income) now compared correctly; unknown currency produces warning not blocker
+- **O6-02:** Calculator FX table expanded from 7 to 19 currencies to match route-engine.js — single source of truth for exchange rates
+- 14 new regression tests added: O4-02 suite (5), O4-04/05 suite (6), O6-02 suite (3)
+- All 228 tests pass
+
+### Related content engine (`54e2722`)
+- `src/js/related-content.js` — new shared scoring module; scores posts by country (40pts), goal (20pts), goal→category cross-match (15pts), category (15pts), tag overlap (up to 24pts), country-in-tags (10pts)
+- Blog posts: "Related posts" section injected above share bar; fetches `/data/blog-posts.json` client-side; top 3 by score
+- Find MyPathway: each pathway result card gets up to 2 related posts matched by country + pathway type
+- Work Abroad Agent: each demand card gets up to 2 related posts matched by corridor country + work goal
+- CSS: `.related-posts` block + `.card-related` strip added to `blog-post.css`
+
+### Docs
+- `ACTIVE_SPRINT.md` — cleaned to active/pending work only; completed sprints moved to CONTENT_PIPELINE
+- `CONTENT_PIPELINE.md` — rewritten: all delivered items marked ✅; evidence re-verification queue; next content sprint queued
+- `OVERHAUL_TASKFILE.md` — all completed tasks marked PASS; blocked tasks marked BLOCKED; gate table updated
+
+---
+
 ## 2026-11-23 — Overhaul implementation planning documents
 
 - Added `docs/overhaul.md` as the consolidated findings and correction register (committed earlier).
