@@ -439,6 +439,32 @@
 
       document.getElementById('sort-select')?.addEventListener('change', sortAndRender);
 
+      // Related content — inject per card after results render
+      if (window.MP2G && window.MP2G.RelatedContent) {
+        fetch('/data/blog-posts.json').then(r => r.json()).then(function(posts) {
+          currentMatches.forEach(function(match) {
+            var cards = document.querySelectorAll('#pathway-cards article');
+            var idx = currentMatches.indexOf(match);
+            var card = cards[idx];
+            if (!card) return;
+            var ctx = {
+              country: match.country.name,
+              goal: match.pathway.type,
+              category: match.pathway.type === 'study' ? 'Student Playbooks' : 'Professional Playbooks',
+              tags: [match.country.name.toLowerCase(), match.pathway.type]
+            };
+            var related = window.MP2G.RelatedContent.getRelated(posts, ctx, 2);
+            if (!related.length) return;
+            var html = '<div class="card-related"><span class="card-related__label">Read more:</span>';
+            related.forEach(function(p) {
+              html += '<a href="/blog/' + p.slug + '/" class="card-related__link">' + p.title + '</a>';
+            });
+            html += '</div>';
+            card.insertAdjacentHTML('beforeend', html);
+          });
+        }).catch(function() {});
+      }
+
       // Show export button when results exist
       document.getElementById('export-bar').hidden = false;
       window._mp2gExportData = { profile: Object.fromEntries(new FormData(form).entries()), matches, alternatives };

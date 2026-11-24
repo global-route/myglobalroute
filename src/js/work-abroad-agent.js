@@ -186,6 +186,31 @@
 
     resultsBody.innerHTML = html;
     wireIntakeForms();
+
+    // Related content — inject after results render
+    if (window.MP2G && window.MP2G.RelatedContent) {
+      fetch('/data/blog-posts.json').then(r => r.json()).then(function(posts) {
+        var cards = resultsBody.querySelectorAll('.wizard-result-card');
+        cards.forEach(function(card) {
+          var countryEl = card.querySelector('.wizard-result-header h3');
+          var countryName = countryEl ? countryEl.textContent.split('\u2014')[0].trim() : '';
+          var ctx = {
+            country: countryName,
+            goal: 'work',
+            category: 'Professional Playbooks',
+            tags: [countryName.toLowerCase(), 'work-visa']
+          };
+          var related = window.MP2G.RelatedContent.getRelated(posts, ctx, 2);
+          if (!related.length) return;
+          var html = '<div class="card-related"><span class="card-related__label">Read more:</span>';
+          related.forEach(function(p) {
+            html += '<a href="/blog/' + p.slug + '/" class="card-related__link">' + p.title + '</a>';
+          });
+          html += '</div>';
+          card.insertAdjacentHTML('beforeend', html);
+        });
+      }).catch(function() {});
+    }
   }
 
   // ── Render helpers ─────────────────────────────────────────────────────────

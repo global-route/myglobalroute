@@ -190,6 +190,9 @@
         {{ content | safe }}
       </div>
 
+      <!-- Related posts -->
+      <aside class="related-posts" id="related-posts" aria-label="Related articles"></aside>
+
       <!-- Article Footer -->
       <footer class="article-end">
         {% if updated %}
@@ -267,6 +270,7 @@
 
   <script src="/js/app.js"></script>
   <script src="/js/search-modal.js"></script>
+  <script src="/js/related-content.js"></script>
   <script>
     // Reading progress bar
     var prog = document.getElementById('reading-progress');
@@ -315,6 +319,35 @@
         body.insertBefore(toc, body.firstChild);
       }
     }
+
+    // Related posts
+    (function () {
+      var container = document.getElementById('related-posts');
+      if (!container) return;
+      var ctx = {
+        country: '{{ country }}',
+        goal: '{{ goal }}',
+        category: '{{ category }}',
+        tags: {{ tags | dump | safe }},
+        excludeUrl: window.location.pathname
+      };
+      fetch('/data/blog-posts.json')
+        .then(function (r) { return r.json(); })
+        .then(function (posts) {
+          var related = MP2G.RelatedContent.getRelated(posts, ctx, 3);
+          if (!related.length) return;
+          var html = '<h2 class="related-posts__heading">Related posts</h2><ul class="related-posts__list">';
+          related.forEach(function (p) {
+            var url = '/blog/' + (p.slug || p.id) + '/';
+            html += '<li><a href="' + url + '">' + p.title + '</a>';
+            if (p.excerpt) html += '<span class="related-posts__excerpt">' + p.excerpt + '</span>';
+            html += '</li>';
+          });
+          html += '</ul>';
+          container.innerHTML = html;
+        })
+        .catch(function () {});
+    }());
   </script>
 </body>
 </html>
