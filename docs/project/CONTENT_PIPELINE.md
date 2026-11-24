@@ -1,5 +1,5 @@
 # Content Pipeline
-**Updated:** 2026-11-23 | **Live posts:** 145 | **Sitemap URLs:** 199 | **Commit:** `54e2722`
+**Updated:** 2026-11-23 | **Live posts:** 145 | **Sitemap URLs:** 199 | **Commit:** `pending`
 
 ---
 
@@ -146,16 +146,16 @@ These 15 evidence records had `reviewAfter` extended to 2027-03-01 for CI only. 
 
 | ID | Post | Category | File |
 |---|---|---|---|
-| C1 | Poland country audit 2026 | Country Audit | `country-audits/poland/poland-visa-from-nigeria-2026.md` |
-| C2 | Lithuania country audit 2026 | Country Audit | `country-audits/lithuania/lithuania-visa-from-nigeria-2026.md` |
-| C3 | Iceland country audit 2026 | Country Audit | `country-audits/iceland/iceland-visa-from-nigeria-2026.md` |
-| C4 | China country audit 2026 | Country Audit | `country-audits/china/china-visa-from-nigeria-2026.md` |
+| C1 | Poland country audit 2026 | Country Audit | `country-audits/poland/poland-visa-from-nigeria-2026.md` | ✅ Done |
+| C2 | Lithuania country audit 2026 | Country Audit | `country-audits/lithuania/lithuania-visa-from-nigeria-2026.md` | ✅ Done |
+| C3 | Iceland country audit 2026 | Country Audit | `country-audits/iceland/iceland-visa-from-nigeria-2026.md` | ✅ Done |
+| C4 | China country audit 2026 | Country Audit | `country-audits/china/china-visa-from-nigeria-2026.md` | ✅ Done |
 
 ### Medium priority — work
 
 | ID | Post | Category | File |
 |---|---|---|---|
-| C5 | Australia DAMA regional stream deep-dive | Professional Playbook | `playbooks/professional/australia-dama-regional-stream-2026.md` |
+| C5 | Australia DAMA regional stream deep-dive | Professional Playbook | `playbooks/professional/australia-dama-regional-stream-2026.md` | ✅ Done — evidenceStatus: verified |
 | C6 | New Zealand working holiday — verified status update | Guide — Work | `guides/work/new-zealand-working-holiday-visa-2026.md` |
 | C7 | Oman country audit 2026 | Country Audit | `country-audits/oman/oman-visa-from-nigeria-2026.md` |
 | C8 | Saudi Arabia work visa — honest guide 2026 | Guide — Work | `guides/work/saudi-arabia-work-visa-honest-guide-2026.md` |
@@ -164,10 +164,10 @@ These 15 evidence records had `reviewAfter` extended to 2027-03-01 for CI only. 
 
 | ID | Post | Category | File |
 |---|---|---|---|
-| C9 | DAAD scholarships for Nigerians 2026 | Student Playbook | `playbooks/student/daad-scholarships-nigeria-2026.md` |
-| C10 | Erasmus Mundus scholarships for Africa 2026 | Student Playbook | `playbooks/student/erasmus-mundus-scholarships-africa-2026.md` |
-| C11 | Commonwealth scholarships Nigeria 2026 | Student Playbook | `playbooks/student/commonwealth-scholarships-nigeria-2026.md` |
-| C12 | How to open a bank account in Rwanda 2026 | Guide — Business | `guides/business/how-to-open-bank-account-rwanda-2026.md` |
+| C9 | DAAD scholarships for Nigerians 2026 | Student Playbook | `playbooks/student/daad-scholarships-nigeria-2026.md` | ✅ Done — evidenceStatus: verified |
+| C10 | Erasmus Mundus scholarships for Africa 2026 | Student Playbook | `playbooks/student/erasmus-mundus-scholarships-africa-2026.md` | ✅ Done — evidenceStatus: verified |
+| C11 | Commonwealth scholarships Nigeria 2026 | Student Playbook | `playbooks/student/commonwealth-scholarships-nigeria-2026.md` | ✅ Done — evidenceStatus: verified |
+| C12 | How to open a bank account in Rwanda 2026 | Guide — Business | `guides/business/how-to-open-bank-account-rwanda-2026.md` | ✅ Done — evidenceStatus: verified |
 
 ---
 
@@ -175,8 +175,8 @@ These 15 evidence records had `reviewAfter` extended to 2027-03-01 for CI only. 
 
 Run `npm run evidence:freshness` and `node scripts/check-stale-pathways.js` before this date. Priority posts for manual re-verification:
 
-- UK Company Setup from Africa 2026 — Companies House fees
-- Mauritius Global Business Licence 2026 — FSC fees
-- Italy DSU Scholarship Complete Guide — scholarship deadlines
-- Australia TSMIT Increase 2024 — confirm current TSMIT figure
-- UK Skilled Worker Salary Threshold 2024 — confirm GBP 38,700 still current
+- ✅ UK Company Setup from Africa 2026 — evidenceStatus: verified, lastFactChecked: 2026-11-23
+- ✅ Mauritius Global Business Licence 2026 — evidenceStatus: verified, lastFactChecked: 2026-11-23
+- ✅ Italy DSU Scholarship Complete Guide — lastFactChecked: 2026-11-23
+- ✅ Australia TSMIT Increase 2024 — evidenceStatus: verified, lastFactChecked: 2026-11-23
+- ✅ UK Skilled Worker Salary Threshold 2024 — evidenceStatus: verified, lastFactChecked: 2026-11-23

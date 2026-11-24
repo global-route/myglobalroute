@@ -2,8 +2,8 @@
 layout: blog-post.njk
 title: "New Zealand Working Holiday Visa 2026 — Nigerian Nationals Not Eligible"
 date: 2026-10-30
-updated: 2026-11-05
-lastFactChecked: 2026-11-05
+updated: 2026-11-23
+lastFactChecked: 2026-11-23
 eligibilityReviewStatus: "verified-ineligible"
 author: "MyPathway2Global Editorial"
 category: "Guides"
@@ -19,7 +19,7 @@ faqs:
     a: "Quota information is only relevant for eligible passport holders. Verify your passport eligibility at immigration.govt.nz before making any plans."
   - q: "Can I extend the New Zealand Working Holiday Visa?"
     a: "Extension rules apply only to eligible passport holders. Verify your passport eligibility at immigration.govt.nz before making any plans."
-postVersion: "v2026.10"
+postVersion: v2026.11
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
 evidenceStatus: research-required

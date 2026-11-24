@@ -2,7 +2,7 @@
 layout: blog-post.njk
 title: "Italy DSU Scholarship: The Hidden Hack for African Students"
 date: 2026-01-18
-updated: 2026-07-21
+updated: 2026-11-23
 author: "MyPathway2Global Editorial"
 category: "Student Playbooks"
 country: "Italy"
@@ -18,10 +18,10 @@ faqs:
     a: "Zero tuition fees, free on-campus accommodation where available, free meal vouchers at university canteens, and a cash grant of EUR 5,400 to EUR 7,000 per academic year depending on your ISEE score and the regional DSU authority."
   - q: "When should I apply for the DSU scholarship?"
     a: "The bando (call for applications) is published in July-August each year for the following academic year. Apply as early as possible - accommodation places are limited and allocated by ISEE score ranking."
-postVersion: "v2026.01"
+postVersion: v2026.11
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-lastFactChecked: 2026-01-18
+lastFactChecked: 2026-11-23
 evidenceStatus: research-required
 supersededBy: ""
 ---

@@ -2,8 +2,8 @@
 layout: blog-post.njk
 title: "Australia DAMA Regional Stream 2026: The Employer-Sponsored Route with Age and English Concessions"
 date: 2026-10-29
-updated: 2026-10-29
-lastFactChecked: 2026-10-29
+updated: 2026-11-23
+lastFactChecked: 2026-11-23
 author: "MyPathway2Global Editorial"
 category: "Professional Playbooks"
 country: "Australia"
@@ -19,7 +19,7 @@ faqs:
     a: "Yes. DAMA pathways are employer-sponsored - you cannot self-sponsor. The employer must be an approved DAMA sponsor operating in a designated regional area and must have an active Labour Agreement with the Department of Home Affairs."
   - q: "Does the DAMA lead to permanent residency?"
     a: "Yes. DAMA workers typically enter on a Temporary Skill Shortage (TSS) visa subclass 482 under a Labour Agreement stream. After meeting regional work requirements - typically 3 years living and working in the designated region - you can apply for permanent residence."
-postVersion: "v2026.10"
+postVersion: v2026.11
 sourceAuthority: "Department of Home Affairs Australia"
 sourceUrl: "https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/site-agreements/designated-area-migration-agreements"
 evidenceStatus: verified

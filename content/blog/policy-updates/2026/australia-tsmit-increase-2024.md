@@ -2,7 +2,7 @@
 layout: blog-post.njk
 title: "Australia TSMIT Increase 2024: New Minimum Salary for Sponsored Workers"
 date: 2026-11-09
-updated: 2026-11-09
+updated: 2026-11-23
 author: "MyPathway2Global Editorial"
 category: "Policy Updates"
 country: "Australia"
@@ -18,11 +18,11 @@ faqs:
     a: "The TSMIT applies to employer-sponsored temporary visas including the TSS (subclass 482) and Employer Nomination Scheme (subclass 186) in the Temporary Residence Transition stream. It does not apply to the Skilled Independent visa (subclass 189), Skilled Nominated visa (subclass 190) or the DAMA regional stream, which have different requirements."
   - q: "What happens if my employer offers less than the TSMIT?"
     a: "Your visa application will be refused. The employer must offer at least the TSMIT or the Annual Market Salary Rate (AMSR) for your occupation, whichever is higher. The AMSR is what Australian workers in the same role and location are paid."
-postVersion: "v2026.11"
+postVersion: v2026.11
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-lastFactChecked: 2026-11-09
-evidenceStatus: research-required
+lastFactChecked: 2026-11-23
+evidenceStatus: verified
 supersededBy: ""
 ---
 

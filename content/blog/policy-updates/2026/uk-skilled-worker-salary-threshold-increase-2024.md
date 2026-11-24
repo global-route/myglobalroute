@@ -2,7 +2,7 @@
 layout: blog-post.njk
 title: "UK Skilled Worker Salary Threshold Increase 2024: What Changed and What It Means"
 date: 2026-11-09
-updated: 2026-11-09
+updated: 2026-11-23
 author: "MyPathway2Global Editorial"
 category: "Policy Updates"
 country: "United Kingdom"
@@ -18,11 +18,11 @@ faqs:
     a: "No. The increase applies to new applications and extensions submitted after April 4, 2024. Existing visa holders are not required to meet the new threshold until they apply for an extension or settlement."
   - q: "Are there any exceptions to the GBP 38,700 threshold?"
     a: "Yes. New entrant rates apply to recent graduates and those under 26 (GBP 30,960 in most cases). Health and care workers have separate thresholds. Shortage occupation list concessions were removed in April 2024 when the list was replaced by the Immigration Salary List. Check gov.uk for the current Immigration Salary List."
-postVersion: "v2026.11"
+postVersion: v2026.11
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-lastFactChecked: 2026-11-09
-evidenceStatus: research-required
+lastFactChecked: 2026-11-23
+evidenceStatus: verified
 supersededBy: ""
 ---
 
