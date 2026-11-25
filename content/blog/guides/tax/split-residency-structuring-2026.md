@@ -21,7 +21,7 @@ faqs:
 postVersion: "v2026.10"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
 
@@ -39,7 +39,6 @@ Legal line: genuine residency = legal planning; paper residency = tax evasion
 Split residency structuring is complex and highly fact-specific. This post provides a framework for understanding the concepts. It is not tax advice and does not constitute a structuring recommendation. Consult a qualified tax adviser in Nigeria and in any country where you plan to establish residency before taking any action.
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Split residency is one of the most discussed - and most misunderstood - strategies in the African professional community. Done correctly, with genuine substance and proper compliance, it is legal tax planning. Done incorrectly, it is tax evasion with serious criminal consequences. This post explains the framework.
 

@@ -33,7 +33,6 @@ Processing time: 2-4 weeks after employer application<br>
 Primary source: Ministry of Labour Oman (mol.gov.om)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Oman is a Gulf state with a significant African workforce, particularly in construction, healthcare and domestic services. The agent market is active with claims about Oman work visas - some accurate, some not. Here is what official sources confirm.
 

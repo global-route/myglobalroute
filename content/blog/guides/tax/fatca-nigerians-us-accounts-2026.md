@@ -21,7 +21,7 @@ faqs:
 postVersion: "v2026.10"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
 
@@ -39,7 +39,6 @@ Primary source: IRS (irs.gov/fatca)
 FATCA and US tax law are complex. This post explains the framework. It is not tax advice. Consult a qualified US tax adviser and a Nigerian tax adviser before making any decisions about US accounts or US business structures.
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 The USA is the most significant exception to the CRS automatic exchange system. While over 100 countries automatically share financial account information with each other, the USA does not participate in CRS. Instead, it uses FATCA - a system that works very differently.
 

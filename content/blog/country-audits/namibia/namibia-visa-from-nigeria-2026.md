@@ -35,7 +35,6 @@ Currency: Namibian Dollar (NAD), pegged to South African Rand<br>
 Primary source: Ministry of Home Affairs (mhaiss.gov.na)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Namibia is one of Africa's most politically stable countries. It borders South Africa, Botswana, Zambia and Angola, and has a well-developed infrastructure by regional standards. For African remote workers who want a Southern African base, Namibia is the most accessible option with a formal digital nomad visa route.
 

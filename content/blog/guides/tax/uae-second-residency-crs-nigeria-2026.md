@@ -21,7 +21,7 @@ faqs:
 postVersion: "v2026.10"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
 
@@ -40,7 +40,6 @@ Primary source: UAE Federal Tax Authority (tax.gov.ae)
 This post explains how UAE residency interacts with CRS reporting. It is not tax advice. Your specific obligations depend on your residency status, income sources, and the tax treaties between Nigeria and the UAE. Consult a qualified tax adviser in both Nigeria and the UAE before making any decisions about residency or banking structure.
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 The UAE is one of the most popular second residency destinations for African professionals. No personal income tax. A strong passport. A well-developed financial centre. And - critically - a CRS reporting structure that, for genuine UAE tax residents, means your UAE bank account is reported to the UAE rather than Nigeria.
 

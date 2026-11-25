@@ -21,11 +21,9 @@ faqs:
 postVersion: "v2026.10"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
-
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Europe offers the most structured and verifiable work visa routes for African professionals. Unlike the Gulf, where employer sponsorship is the only path, several European countries have introduced points-based or skills-based routes that do not require a prior job offer.
 

@@ -21,7 +21,7 @@ faqs:
 postVersion: "v2026.10"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
 
@@ -34,7 +34,6 @@ Best Africa base: Mauritius (infrastructure, connectivity, financial centre)<br>
 Best Europe base: Portugal (cost, climate, English widely spoken)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Eight countries now have formal remote work visa routes that African digital nomads can access. This guide consolidates all of them into one honest comparison - income thresholds, cost of living, internet quality, time zones, and what happens after the visa expires.
 

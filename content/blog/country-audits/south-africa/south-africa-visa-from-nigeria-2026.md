@@ -34,7 +34,6 @@ Path to PR: 5 years continuous residence<br>
 Primary source: Department of Home Affairs (dha.gov.za)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 South Africa is the largest economy in Africa and a major destination for skilled African professionals. It has two primary work visa routes: the Critical Skills Visa (no job offer required) and the General Work Visa (employer-sponsored). Here is what the Department of Home Affairs actually requires.
 

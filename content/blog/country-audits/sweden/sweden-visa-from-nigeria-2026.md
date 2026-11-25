@@ -28,7 +28,6 @@ supersededBy: ""
 Sweden has two publishable pathways for Nigerian applicants: a study residence permit and a standard work permit. Both are issued by the Swedish Migration Agency (Migrationsverket).
 
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 ## Study permit
 
 **Minimum funds:** SEK 10,656/month (2026 figure). The authority notes this may be reduced where free food or housing is provided. Tuition fees are additional - non-EU students pay SEK 80,000 to SEK 140,000 per year at most institutions.

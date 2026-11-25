@@ -21,11 +21,10 @@ faqs:
 postVersion: "v2026.10"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 The Asia-Pacific region offers structured work visa routes with clear requirements and strong paths to permanent residence. Australia and New Zealand have the most accessible routes for African professionals. Japan and South Korea require employer sponsorship and relevant qualifications.
 

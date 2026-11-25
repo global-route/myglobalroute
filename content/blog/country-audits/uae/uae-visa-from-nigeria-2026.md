@@ -33,7 +33,6 @@ Freelance Permit: AED 7,500 - 15,000/year depending on free zone<br>
 Golden Visa: AED 2,000,000 minimum investment (investor category)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 The UAE - and Dubai in particular - is the most active Gulf destination for African professionals. It has four distinct work-related visa routes, each suited to a different profile. Understanding which route applies to you is the first step.
 

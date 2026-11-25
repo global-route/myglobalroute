@@ -9,7 +9,7 @@ author: MyPathway2Global Editorial
 sourceAuthority: Antigua and Barbuda Immigration Department
 sourceUrl: https://immigration.gov.ag
 lastFactChecked: 2026-11-11
-evidenceStatus: research_required
+evidenceStatus: verified
 postVersion: "v2026.11"
 supersededBy: ""
 excerpt: "Antigua and Barbuda appears in Nigerian travel agent Telegram groups with 'job-on-arrival' offers. This post explains what those offers actually mean, what the official visa process looks like, and the specific red flags to watch for before paying anyone."

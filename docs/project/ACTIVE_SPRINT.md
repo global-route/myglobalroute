@@ -96,6 +96,38 @@ See `docs/project/CONTENT_PIPELINE.md` for full queue. Top items:
 
 ---
 
+## MAURITIUS CONTENT CLUSTER — added 2026-11-24
+
+All existing Mauritius content spotted and new comprehensive guide drafted.
+
+### Existing Mauritius posts (5 files)
+
+| File | Category | Status |
+|---|---|---|
+| `country-audits/mauritius/mauritius-visa-from-nigeria-2026.md` | Country Audit | LIVE — `evidenceStatus: verified` |
+| `playbooks/professional/mauritius-premium-visa-2026.md` | Professional Playbook | LIVE — `evidenceStatus: editorial` |
+| `playbooks/business/mauritius-global-business-licence-2026.md` | Business Playbook | LIVE — merge conflict in frontmatter (`evidenceStatus`) needs resolution |
+| `guides/tax/mauritius-gbl-crs-interaction-2026.md` | Guide — Tax | LIVE — `evidenceStatus: editorial` |
+| `guides/work/intra-africa-work-opportunities-2026.md` | Guide — Work | LIVE — covers Mauritius Occupation Permit as part of intra-Africa section |
+
+### New post — DONE 2026-11-24
+
+| ID | Post | File | Status |
+|---|---|---|---|
+| MU-1 | Mauritius All Visas Nomad Guide 2026 | `playbooks/professional/mauritius-all-visas-nomad-guide-2026.md` | **DONE** — registered in `blog-posts.json` |
+
+### Outstanding Mauritius tasks
+
+| ID | Task | Priority |
+|---|---|---|
+| MU-2 | Resolve merge conflict in `mauritius-global-business-licence-2026.md` frontmatter (`evidenceStatus: verified` vs `editorial`) | High |
+| MU-3 | Add YouTube embed to `mauritius-all-visas-nomad-guide-2026.md` — search: `Mauritius visa routes nomad residence permit 2026` | Medium |
+| MU-4 | Add YouTube embed to `mauritius-premium-visa-2026.md` — search: `Mauritius Premium Visa remote work how to apply` | Medium |
+| MU-5 | Add YouTube embed to `mauritius-visa-from-nigeria-2026.md` — search: `Mauritius visa Nigeria how to apply 2024` | Medium |
+| MU-6 | Cross-link new guide from `mauritius-visa-from-nigeria-2026.md` and `mauritius-premium-visa-2026.md` | Low |
+
+---
+
 ## Platform state
 
 | Metric | Current (`54e2722`) |

@@ -21,11 +21,10 @@ faqs:
 postVersion: "v2026.10"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 The African Continental Free Trade Area (AfCFTA) is creating new business and work corridors across the continent. Rwanda, Mauritius, Ghana and Kenya are positioning themselves as regional hubs. South Africa remains the continent's largest economy and a major destination for skilled African workers.
 

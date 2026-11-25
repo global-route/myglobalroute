@@ -21,7 +21,7 @@ faqs:
 postVersion: "v2026.10"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
 
@@ -44,7 +44,6 @@ USD 150,000-200,000 Investor Pass thresholds - not confirmed from Migraciones<br
 Investor Pass as a distinct named program - not found in official documentation
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Paraguay has attracted significant attention from African digital nomads, remote workers and investors. The territorial tax system is real. The SUACE company formation system is real. The fast-track residency routes are widely discussed. Here is what is confirmed from primary sources - and what is not.
 

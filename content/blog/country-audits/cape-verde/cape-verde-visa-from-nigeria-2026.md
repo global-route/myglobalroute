@@ -35,7 +35,6 @@ Currency: Cape Verdean Escudo (CVE), pegged to Euro<br>
 Primary source: Cape Verde Immigration Service (sefcv.gov.cv)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Cape Verde is an archipelago of ten islands in the Atlantic Ocean, 570 kilometres off the coast of Senegal. It is politically stable, Portuguese-speaking, and has been actively positioning itself as a destination for remote workers since 2021. For African remote workers, it offers the lowest cost of living among the three African digital nomad destinations covered on this platform.
 

@@ -34,7 +34,6 @@ Red flag: large sudden deposit just before application<br>
 Primary source: VFS Global + individual embassy portals
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Insufficient financial proof is the single most common reason Schengen visa applications from Nigeria are refused. Not because applicants do not have money - but because they do not present it in the format consulates expect. This guide covers exactly what is required.
 

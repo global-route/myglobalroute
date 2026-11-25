@@ -21,7 +21,7 @@ faqs:
 postVersion: "v2026.10"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
 
@@ -34,7 +34,6 @@ Double taxation treaty: prevents being taxed twice on the same income<br>
 <strong>This post is general information only - consult a qualified tax adviser before relocating</strong>
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Tax is the most important and most ignored aspect of remote work relocation. Most digital nomad guides focus on visa requirements and cost of living. Almost none cover what happens to your tax obligations when you move. This guide covers the key concepts - not as legal advice, but as a framework for understanding what questions to ask a tax adviser.
 

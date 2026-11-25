@@ -22,14 +22,13 @@ faqs:
 postVersion: "v2026.10"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
 
 Portugal's D3 visa sits between the standard work visa and the Digital Nomad (D8) route. It is for professionals who have a qualifying employment contract or service agreement with a Portuguese entity - not a foreign employer, not remote work for a non-Portuguese client, but a direct relationship with a Portuguese company or institution.
 
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 The D3 is faster to process than the standard work visa, carries a direct 5-year PR vector, and is available to tech specialists, researchers, senior managers and executives. For African professionals with a job offer from a Portuguese employer, it is the most direct route to long-term residence.
 
 ## What the D3 is and who it is for

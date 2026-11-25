@@ -34,7 +34,6 @@ Must disclose: all future applications ask about previous refusals<br>
 Primary source: Schengen Visa Code (EU Regulation 810/2009)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 A Schengen visa refusal is not the end. Most refusals are for specific, documented reasons that can be addressed. The key is understanding exactly why you were refused - and fixing that specific issue before reapplying.
 

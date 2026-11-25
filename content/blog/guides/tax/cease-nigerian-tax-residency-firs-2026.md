@@ -21,7 +21,7 @@ faqs:
 postVersion: "v2026.10"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
 
@@ -39,7 +39,6 @@ Primary source: FIRS (firs.gov.ng)
 Ceasing Nigerian tax residency has significant legal and financial implications. This post explains the process. It is not tax advice. Consult a qualified Nigerian tax adviser (chartered accountant registered with ICAN or ANAN) before taking any action.
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 One of the most overlooked steps when relocating abroad is formally notifying FIRS that you are no longer a Nigerian tax resident. Without this step, FIRS may continue to expect annual tax returns and payment of tax on your worldwide income - even if you are living in the UAE, Mauritius, or anywhere else.
 

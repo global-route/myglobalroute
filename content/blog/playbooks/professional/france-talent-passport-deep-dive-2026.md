@@ -22,7 +22,7 @@ postVersion: "v2026.11"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
 lastFactChecked: 2026-11-09
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
 

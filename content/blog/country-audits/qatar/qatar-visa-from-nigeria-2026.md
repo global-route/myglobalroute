@@ -33,7 +33,6 @@ Kafala reform: 2020 - partial job mobility without employer permission<br>
 Primary source: Ministry of Labour Qatar (mol.gov.qa)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Qatar is one of the most active Gulf work destinations for African professionals, particularly in construction, healthcare, hospitality and domestic services. The 2020 Kafala reform changed some of the rules - but not all of them. Here is what official sources confirm.
 

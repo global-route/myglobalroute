@@ -34,7 +34,6 @@ Processing time: 4-8 weeks after employer application<br>
 Primary source: Ministry of Human Resources (mol.gov.sa)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Saudi Arabia is the largest economy in the Gulf and a major employer of African professionals. Vision 2030 - the kingdom's economic diversification programme - has created new sectors and new visa routes. Here is what official sources confirm.
 

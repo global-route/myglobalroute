@@ -22,7 +22,7 @@ faqs:
 postVersion: "v2026.10"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
 
@@ -34,7 +34,6 @@ SINP International Graduate: for Saskatchewan post-secondary graduates<br>
 Primary source: Government of Saskatchewan (saskatchewan.ca)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Saskatchewan is one of Canada's Prairie provinces with a documented labour shortage in healthcare, agriculture, engineering, technology and trades. The Saskatchewan Immigrant Nominee Program (SINP) is one of the most accessible provincial nominee programs for African applicants - particularly those with a connection to the province through study or work.
 

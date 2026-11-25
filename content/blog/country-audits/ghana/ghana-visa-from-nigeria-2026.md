@@ -33,7 +33,6 @@ GIPC investor permit: USD 200,000 (joint venture) / USD 500,000 (wholly foreign)
 Primary source: Ghana Immigration Service (gis.gov.gh)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Ghana is West Africa's most stable democracy and a growing destination for African professionals and investors. Nigerian nationals can enter without a visa. The Right of Abode provides a unique long-term residence option for the diaspora. Here is what official sources confirm.
 

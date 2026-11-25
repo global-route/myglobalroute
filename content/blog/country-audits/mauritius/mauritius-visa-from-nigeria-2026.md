@@ -35,7 +35,6 @@ GBL corporate tax: approximately 3% effective on foreign income<br>
 Primary source: Economic Development Board Mauritius (edbmauritius.org)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Mauritius is the most developed financial centre in Africa and one of the most accessible destinations for African professionals. It has three distinct routes depending on your profile: remote worker, employed professional, or investor/business owner.
 

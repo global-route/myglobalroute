@@ -21,11 +21,10 @@ faqs:
 postVersion: "v2026.10"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 North America offers two very different work visa landscapes. Canada has multiple structured, predictable routes with clear requirements and a direct path to permanent residence. The USA has the H-1B lottery - unpredictable, oversubscribed, and not a reliable migration strategy for most African professionals.
 

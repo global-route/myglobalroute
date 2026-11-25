@@ -34,7 +34,6 @@ Skilled worker permit: employer-sponsored, 1-2 weeks processing<br>
 Primary source: Rwanda Development Board (rdb.rw)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Rwanda is the most business-friendly country in Africa by regulatory metrics. Business registration takes 1-2 days. The government actively courts foreign talent and investment. Here is what official sources confirm.
 

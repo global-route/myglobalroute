@@ -21,7 +21,7 @@ faqs:
 postVersion: "v2026.10"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
 
@@ -40,7 +40,6 @@ Primary source: OECD (oecd.org/tax/automatic-exchange)
 This post explains how CRS works. It is not tax advice. Your specific obligations depend on your residency status, income sources, and the tax treaties between Nigeria and the countries where you hold accounts. Consult a qualified tax adviser in Nigeria and in any country where you hold accounts or are resident before making any decisions.
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 If you have a bank account in the UK, Germany, UAE, Mauritius or any of 100+ other countries, that account is being reported to your home country's tax authority every year - automatically, without you being notified. This is the OECD Common Reporting Standard (CRS). Here is exactly how it works.
 

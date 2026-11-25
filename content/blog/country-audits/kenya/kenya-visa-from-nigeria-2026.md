@@ -33,7 +33,6 @@ Special Pass: 3 months while work permit is processed<br>
 Primary source: Department of Immigration Kenya (immigration.go.ke)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Kenya is East Africa's largest economy and the regional hub for technology, financial services and professional services. Nigerian nationals can enter Kenya without a visa - but working legally requires a work permit. Here is what official sources confirm.
 

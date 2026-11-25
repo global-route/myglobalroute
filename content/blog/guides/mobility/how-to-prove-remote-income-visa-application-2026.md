@@ -21,7 +21,7 @@ faqs:
 postVersion: "v2026.10"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
 
@@ -34,7 +34,6 @@ Fourth: Business registration + tax returns<br>
 Least convincing: Screenshots of payment platforms (Payoneer, Wise, etc.)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Proving remote income for a visa application is one of the most common challenges for African digital nomads and remote workers. Consulates are designed to process employment-based applications - they have standard checklists for payslips and employment letters. Remote workers, freelancers and business owners do not fit neatly into those checklists.
 

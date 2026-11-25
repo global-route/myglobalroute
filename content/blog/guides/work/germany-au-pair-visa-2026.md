@@ -21,7 +21,7 @@ faqs:
 postVersion: "v2026.10"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
 
@@ -35,7 +35,6 @@ Language requirement: basic German (A1/A2)<br>
 Primary source: German Residence Act (Aufenthaltsgesetz) Section 12
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Germany's Au Pair visa is one of the most accessible routes for young Nigerians aged 18-26 to spend time in Germany. It is not a work visa - it is a cultural exchange programme. But it provides 12 months of legal residence in Germany, German language immersion, and a foundation for future visa applications.
 

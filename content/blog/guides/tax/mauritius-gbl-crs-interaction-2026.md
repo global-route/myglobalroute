@@ -21,7 +21,7 @@ faqs:
 postVersion: "v2026.10"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
 
@@ -39,7 +39,6 @@ Primary source: Mauritius Revenue Authority (mra.mu) + OECD CRS
 The interaction between GBL structures and CRS is complex and fact-specific. This post explains the framework. It is not tax advice. Consult a qualified Mauritius tax adviser and a Nigerian tax adviser before establishing any holding structure.
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 The Mauritius Global Business Licence (GBL) is the most widely used holding company structure for investments into Africa. It has a well-documented tax structure. But how it interacts with CRS automatic reporting is less well understood. This post explains the two separate reporting streams.
 

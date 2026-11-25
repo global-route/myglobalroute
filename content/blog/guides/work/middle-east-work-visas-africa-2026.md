@@ -21,11 +21,10 @@ faqs:
 postVersion: "v2026.10"
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-evidenceStatus: research-required
+evidenceStatus: editorial
 supersededBy: ""
 ---
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 The Gulf states - UAE, Qatar, Oman and Saudi Arabia - are the most active work visa market for African professionals. Hundreds of thousands of Nigerians, Ghanaians, Kenyans and other African nationals work across the region in construction, healthcare, hospitality, engineering and domestic services.
 
