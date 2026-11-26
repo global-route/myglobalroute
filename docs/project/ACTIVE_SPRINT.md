@@ -1,5 +1,5 @@
 # ACTIVE SPRINT TASKFILE — MyPathway2Global
-**Updated:** 2026-11-23 | **Commit:** `pending` | **Tests:** 19/19, 228/228
+**Updated:** 2026-11-25 | **Commit:** `c80c588` | **Tests:** 19/19, 228/228
 **Posts:** 145 | **Countries:** 35 | **Pathways:** 75 | **Demand records:** 24 | **Evidence records:** 222
 **Data validation:** PASSED | **CI:** Quality Gate ✅ | Browser Smoke ✅ | Lint ✅ | Deploy ✅
 **Overhaul:** Gates 0–3 PASS, Gate 4 PARTIAL — see `docs/project/OVERHAUL_TASKFILE.md`
@@ -12,7 +12,7 @@ Single source of truth for all outstanding work. Completed sprints are in `docs/
 
 | Gate | Status | Notes |
 |---|---|---|
-| Gate 0 — Baseline | ✅ PASS | CI green `54e2722`, deploy confirmed |
+| Gate 0 — Baseline | ✅ PASS | CI green `c80c588`, deploy confirmed |
 | Gate 1 — User trust | ✅ PASS | NZ verified-ineligible; SK guarantee fixed; backtick-n removed from 79 files |
 | Gate 2 — Evidence/data | ⚠️ PARTIAL | 15 reviewAfter dates extended (CI fix); source re-verification pending owner — see CONTENT_PIPELINE.md |
 | Gate 3 — Decision logic | ✅ PASS | Age missing=warning; salary period+currency normalized; FX unified 19 currencies; 228/228 tests |
@@ -75,24 +75,22 @@ Full task register: `docs/project/OVERHAUL_TASKFILE.md`
 | Agent registry | `npm run agents:validate` | PASS (0 verified agents) |
 | Commercial registry | `npm run commercial:validate` | PASS |
 | Build integrity | `npm run build:verify` | PASS |
-| SEO/A11Y | `npm run seo:a11y:verify` | PASS — 360 files checked |
+| SEO/A11Y | `npm run seo:a11y:verify` | PASS — 361 files checked |
 | Stale pathways | `node scripts/check-stale-pathways.js` | 1 stale (IE-critical-skills — evidence-locked) |
 
 ---
 
 ## PRIORITY 4 — Next content sprint
 
-See `docs/project/CONTENT_PIPELINE.md` for full queue. Top items:
+See `docs/project/CONTENT_PIPELINE.md` for full queue. C1-C12 all done. Next items:
 
 | ID | Post | Category | Priority |
 |---|---|---|---|
-| C1 | Poland country audit 2026 | Country Audit | High |
-| C2 | Lithuania country audit 2026 | Country Audit | High |
-| C3 | Iceland country audit 2026 | Country Audit | High |
-| C4 | China country audit 2026 | Country Audit | High |
-| C5 | Australia DAMA regional stream deep-dive | Professional Playbook | Medium |
-| C9 | DAAD scholarships for Nigerians 2026 | Student Playbook | Medium |
-| C10 | Erasmus Mundus scholarships for Africa 2026 | Student Playbook | Medium |
+| MU-3 | YouTube embed — mauritius-all-visas-nomad-guide-2026 | Enhancement | Medium |
+| MU-6 | Cross-link Mauritius cluster posts | Enhancement | Low |
+| C6 | NZ working holiday update (blocked on owner AU/IE verification) | Guide — Work | Blocked |
+| C7 | Oman country audit — expanded ✅ Done `c80c588` | Country Audit | Done |
+| C8 | Saudi Arabia country audit — expanded ✅ Done `c80c588` | Country Audit | Done |
 
 ---
 
@@ -120,7 +118,7 @@ All existing Mauritius content spotted and new comprehensive guide drafted.
 
 | ID | Task | Priority |
 |---|---|---|
-| MU-2 | Resolve merge conflict in `mauritius-global-business-licence-2026.md` frontmatter (`evidenceStatus: verified` vs `editorial`) | High |
+| MU-2 | ~~Resolve merge conflict in `mauritius-global-business-licence-2026.md`~~ | ✅ Done — `evidenceStatus: verified` confirmed |
 | MU-3 | Add YouTube embed to `mauritius-all-visas-nomad-guide-2026.md` — search: `Mauritius visa routes nomad residence permit 2026` | Medium |
 | MU-4 | Add YouTube embed to `mauritius-premium-visa-2026.md` — search: `Mauritius Premium Visa remote work how to apply` | Medium |
 | MU-5 | Add YouTube embed to `mauritius-visa-from-nigeria-2026.md` — search: `Mauritius visa Nigeria how to apply 2024` | Medium |
@@ -130,7 +128,7 @@ All existing Mauritius content spotted and new comprehensive guide drafted.
 
 ## Platform state
 
-| Metric | Current (`54e2722`) |
+| Metric | Current (`c80c588`) |
 |---|---|
 | Blog posts | 145 |
 | Countries | 35 |

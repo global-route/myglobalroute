@@ -1,20 +1,12 @@
 # WAA Active Task — Agent Notification Infrastructure
-**Updated:** 2026-11-11 | **Status:** Owner-gated — awaiting agent credentials + deploy
-**Latest commit:** `85b016b` | Worker: `workers/agent-lead.js` built, not yet deployed
+**Updated:** 2026-11-25 | **Status:** Owner-gated — awaiting agent credentials + deploy
+**Latest commit:** `c80c588` | Worker: `workers/agent-lead.js` built, not yet deployed
 
 ---
 
-## Current deploy blocker
+## Deploy status
 
-`upload.assets.cloudflare.com` is not resolving via DNS (confirmed via Google 8.8.8.8 and Cloudflare 1.1.1.1). This is a wrangler 4.x issue with the asset upload endpoint.
-
-**Fix — downgrade wrangler to v3:**
-```bash
-npm install --save-dev wrangler@3
-npx wrangler deploy
-```
-
-Wrangler 3 uses a different upload endpoint that resolves correctly. Once deployed, upgrade back if needed.
+Wrangler v3 is installed and deploys are working. Every push to `main` auto-deploys via GitHub Actions. No manual deploy blocker.
 
 ---
 
@@ -50,7 +42,7 @@ For each agent you onboard, collect ALL of the following. Nothing goes live unti
 ### Required (every agent)
 | Field | What it is | Example |
 |---|---|---|
-| ame` | Agency full name | "Yellowlane Global" |
+| `name` | Agency full name | "Yellowlane Global" |
 | `contactEmail` | Email address for lead delivery | agent@yellowlane.com |
 | `corridors` | Origin-destination pairs they serve | `["NG-DE", "GH-DE", "NG-*"]` |
 | `occupationCategories` | Occupation types they handle | `["software_it", "healthcare"]` |
@@ -64,18 +56,18 @@ For each agent you onboard, collect ALL of the following. Nothing goes live unti
 **Slack**
 | Field | What to ask the agent | Where they get it |
 |---|---|---|
-| otifications.slackWebhookUrl` | "Create an incoming webhook in your Slack workspace and share the URL" | Slack → Settings → Integrations → Incoming Webhooks → Add New |
+| `notifications.slackWebhookUrl` | "Create an incoming webhook in your Slack workspace and share the URL" | Slack → Settings → Integrations → Incoming Webhooks → Add New |
 
 **Telegram**
 | Field | What to ask the agent | Where they get it |
 |---|---|---|
-| otifications.telegramBotToken` | "Create a Telegram bot via @BotFather and share the token" | Message @BotFather on Telegram → /newbot |
-| otifications.telegramChatId` | "Share the chat ID of the group or channel where leads should go" | Add @userinfobot to the group → it replies with the chat ID |
+| `notifications.telegramBotToken` | "Create a Telegram bot via @BotFather and share the token" | Message @BotFather on Telegram → /newbot |
+| `notifications.telegramChatId` | "Share the chat ID of the group or channel where leads should go" | Add @userinfobot to the group → it replies with the chat ID |
 
 **WhatsApp**
 | Field | What to ask the agent | Where they get it |
 |---|---|---|
-| otifications.whatsappNumber` | "Share the WhatsApp Business number in E.164 format" | e.g. +2348012345678 |
+| `notifications.whatsappNumber` | "Share the WhatsApp Business number in E.164 format" | e.g. +2348012345678 |
 
 Note: WhatsApp delivery requires the platform to have a WhatsApp Business Cloud API account (see Worker secrets below). If the agent only has a personal WhatsApp, use Telegram or Slack instead — the Cloud API cannot message personal numbers without opt-in.
 
@@ -132,8 +124,8 @@ Add a `main` entrypoint to `wrangler.jsonc` that handles both assets and API rou
 3. Open `src/data/agents.json`
 4. Copy the `_template` object, remove `_template` and `_note` keys
 5. Fill all fields, set `verificationStatus: "verified"`, set `verifiedAt` to today's date
-6. Run ode scripts/validate-agent-registry.js` — must pass
-7. Run pm test` — must pass
+6. Run `node scripts/validate-agent-registry.js` — must pass
+7. Run `npm test` — must pass
 8. Commit, push, deploy
 
 ---
@@ -200,8 +192,8 @@ Third priority: **NG-QA / domestic_worker / unskilled** (highest risk, highest v
 1. Go to resend.com → sign up free
 2. Add domain: mypathway2global.org.uk → follow DNS verification steps
 3. Create API key → copy it
-4. Run px wrangler secret put RESEND_API_KEY` → paste key
-5. Run px wrangler secret put LEADS_FROM_EMAIL` → type `leads@mypathway2global.org.uk`
+4. Run `npx wrangler secret put RESEND_API_KEY` → paste key
+5. Run `npx wrangler secret put LEADS_FROM_EMAIL` → type `leads@mypathway2global.org.uk`
 
 Free tier: 3,000 emails/month, 100/day. Sufficient for early agent volume.
 
