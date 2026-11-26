@@ -8,7 +8,7 @@ category: "Business Playbooks"
 country: "USA"
 keywords: "US LLC from Nigeria, form US company Africa, Stripe Atlas Nigeria"
 featured: true
-image: "/public/blog/images/us-llc-setup.jpg"
+image: "/assets/blog/us-llc-setup.jpg"
 readTime: "13 min"
 excerpt: "Access Stripe, Mercury Bank, and global payments without relocating. Here's the step-by-step blueprint."
 faqs:

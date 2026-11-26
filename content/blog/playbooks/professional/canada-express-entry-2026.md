@@ -8,7 +8,7 @@ category: "Professional Playbooks"
 country: "Canada"
 keywords: "Canada Express Entry, Express Entry from Nigeria, CRS score, ITA, Canadian immigration, work permit"
 featured: true
-image: "/public/blog/images/canada-express-entry-2026.jpg"
+image: "/assets/blog/canada-express-entry-2026.jpg"
 readTime: "16 min"
 excerpt: "Canada Express Entry is an invitation-based system for skilled workers - here's exactly how CRS scores work, what cut-offs look like, and how to maximise your chances of an ITA."
 faqs:

@@ -8,7 +8,7 @@ category: "Policy Updates"
 country: "Canada"
 keywords: "Canada SDS cancelled, student visa Canada 2026, alternatives to SDS"
 featured: true
-image: "/public/blog/images/canada-sds-cancelled.jpg"
+image: "/assets/blog/canada-sds-cancelled.jpg"
 readTime: "8 min"
 excerpt: "The Student Direct Stream is gone. Here's what replaces it and your new options."
 faqs:

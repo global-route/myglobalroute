@@ -127,6 +127,11 @@
 
       <!-- Article Header -->
       <header class="article-header">
+        {% if image %}
+        <div class="article-hero">
+          <img src="{{ image }}" alt="{{ title }}" class="article-hero-img" width="1200" height="630" loading="eager">
+        </div>
+        {% endif %}
         <p class="article-meta">
           <a href="/blog/">{{ category }}</a>
           <span class="meta-sep">/</span>

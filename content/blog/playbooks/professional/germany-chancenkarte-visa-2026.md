@@ -8,7 +8,7 @@ category: "Professional Playbooks"
 country: "Germany"
 keywords: "Germany Chancenkarte, Opportunity Card Germany, German work visa, Germany professional visa, Green Card Germany"
 featured: false
-image: "/public/blog/images/germany-chancenkarte-2026.jpg"
+image: "/assets/blog/germany-chancenkarte-2026.jpg"
 readTime: "12 min"
 excerpt: "Germany's new Opportunity Card (Chancenkarte) launched Jan 2024. No job offer required. Points-based system. Path to PR in 3 years. Here's everything Africans need to know."
 faqs:

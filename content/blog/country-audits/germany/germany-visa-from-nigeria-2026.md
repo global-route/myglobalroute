@@ -8,7 +8,7 @@ category: "Country Audits"
 country: "Germany"
 keywords: "Germany visa from Nigeria, German student visa, blocked account, study in Germany"
 featured: true
-image: "/public/blog/images/germany-visa-2026.jpg"
+image: "/assets/blog/germany-visa-2026.jpg"
 readTime: "14 min"
 excerpt: "Germany's zero-tuition public universities and 18-month job search visa make it one of the strongest pathways for African students - here's what the process actually requires."
 faqs:

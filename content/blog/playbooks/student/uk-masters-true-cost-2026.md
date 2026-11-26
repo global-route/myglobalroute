@@ -8,7 +8,7 @@ category: "Student Playbooks"
 country: "United Kingdom"
 keywords: "UK Masters cost, study in UK from Nigeria, UK tuition fees, living costs London, UK student visa"
 featured: true
-image: "/public/blog/images/uk-masters-cost-2026.jpg"
+image: "/assets/blog/uk-masters-cost-2026.jpg"
 readTime: "15 min"
 excerpt: "Official prices: £20,000-35,000/year. Real costs: £30,000-50,000 total for 1-year Master's. Here's the complete breakdown for Nigerian students."
 faqs:

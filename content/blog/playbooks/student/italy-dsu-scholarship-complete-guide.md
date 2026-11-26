@@ -8,7 +8,7 @@ category: "Student Playbooks"
 country: "Italy"
 keywords: "Italy DSU scholarship, study in Italy free, Italian scholarship for Africans"
 featured: true
-image: "/public/blog/images/italy-dsu-scholarship.jpg"
+image: "/assets/blog/italy-dsu-scholarship.jpg"
 readTime: "16 min"
 excerpt: "Free tuition + free meals + free housing + €5,400/year cash. This changes everything for budget students."
 faqs:

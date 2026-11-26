@@ -626,3 +626,19 @@
 .card-related__link { font-size: 0.85rem; color: var(--color-primary, #0b409c); text-decoration: none; font-weight: 500; }
 .card-related__link:hover { text-decoration: underline; }
 .card-related__link + .card-related__link::before { content: '·'; margin-right: 0.5rem; color: var(--color-neutral-400, #9ca3af); }
+
+/* Article hero image */
+.article-hero {
+  margin: 0 0 1.5rem;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--color-neutral-100);
+}
+.article-hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: center;
+}

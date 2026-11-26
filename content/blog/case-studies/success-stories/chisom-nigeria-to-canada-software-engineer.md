@@ -8,7 +8,7 @@ category: "Case Studies"
 country: "Canada"
 keywords: "Nigeria to Canada visa, software engineer Canada, Express Entry success story"
 featured: true
-image: "/public/blog/images/chisom-canada-success.jpg"
+image: "/assets/blog/chisom-canada-success.jpg"
 readTime: "10 min"
 excerpt: "From Lagos to Toronto in 6 months. Here's exactly how Chisom did it-budget, timeline, and lessons learned."
 faqs:
