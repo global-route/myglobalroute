@@ -20,8 +20,8 @@ faqs:
   - q: "Can I extend the New Zealand Working Holiday Visa?"
     a: "Extension rules apply only to eligible passport holders. Verify your passport eligibility at immigration.govt.nz before making any plans."
 postVersion: v2026.11
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: Immigration New Zealand
+sourceUrl: https://www.immigration.govt.nz/new-zealand-visas/visas/visa/working-holiday-visa
 evidenceStatus: editorial
 supersededBy: ""
 ---

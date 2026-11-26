@@ -19,8 +19,8 @@ faqs:
   - q: "Can I apply to multiple Erasmus Mundus programmes?"
     a: "Yes. You can apply to multiple programmes simultaneously. Each programme has its own application process and deadline. There is no central application - you apply directly to each programme consortium. Most applicants apply to 3-5 programmes to maximise their chances."
 postVersion: v2026.11
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: European Commission EACEA
+sourceUrl: https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters
 evidenceStatus: verified
 supersededBy: ""
 ---

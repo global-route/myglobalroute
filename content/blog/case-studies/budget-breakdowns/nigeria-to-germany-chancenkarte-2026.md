@@ -7,8 +7,8 @@ category: Case Studies
 tags: [germany, chancenkarte, budget, case-study, nigeria, cost-breakdown]
 readTime: "10 min"
 author: MyPathway2Global Editorial
-sourceAuthority: MyPathway2Global Editorial
-sourceUrl: https://mypathway2global.org.uk
+sourceAuthority: Federal Employment Agency Germany
+sourceUrl: https://www.make-it-in-germany.com/en/visa-residence/types/opportunity-card
 lastFactChecked: 2026-11-25
 evidenceStatus: editorial
 postVersion: v2026.11

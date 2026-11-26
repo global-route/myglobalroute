@@ -19,8 +19,8 @@ faqs:
   - q: "How does the Mauritius treaty network benefit African investors?"
     a: "Mauritius has 46 double taxation treaties including with India, China, France, UK, South Africa, and several African countries. These treaties reduce withholding taxes on dividends, interest and royalties paid from investee companies to the Mauritius holding company. For example, the India-Mauritius treaty historically reduced withholding tax on dividends from 10% to 5%."
 postVersion: v2026.11
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: Financial Services Commission Mauritius
+sourceUrl: https://www.fscmauritius.org/being-regulated/setting-up-a-business/global-business
 evidenceStatus: verified
 supersededBy: ""
 ---

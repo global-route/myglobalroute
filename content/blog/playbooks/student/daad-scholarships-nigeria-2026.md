@@ -19,8 +19,8 @@ faqs:
   - q: "Do I need to speak German to apply for a DAAD scholarship?"
     a: "Not necessarily. Many DAAD-funded programmes are taught in English. However, some programmes require German language skills. Check the language requirements of the specific programme you are applying to. DAAD also offers German language courses as part of some scholarship packages."
 postVersion: v2026.11
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: DAAD Germany
+sourceUrl: https://www.daad.de/en/study-and-research-in-germany/scholarships/
 evidenceStatus: verified
 supersededBy: ""
 ---

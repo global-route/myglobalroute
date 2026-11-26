@@ -19,8 +19,8 @@ faqs:
   - q: "Does the GBL structure protect the owner's personal accounts from CRS reporting?"
     a: "No. The GBL structure affects how the company's accounts are reported - not the owner's personal accounts. The owner's personal accounts are reported based on their personal tax residency declaration. To change where personal accounts are reported, the owner must change their personal tax residency - not just set up a GBL company."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: Financial Services Commission Mauritius
+sourceUrl: https://www.fscmauritius.org/
 evidenceStatus: editorial
 supersededBy: ""
 ---

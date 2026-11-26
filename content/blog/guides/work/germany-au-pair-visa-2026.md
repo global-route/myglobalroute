@@ -19,8 +19,8 @@ faqs:
   - q: "How do I find a host family in Germany?"
     a: "Au pair placement agencies (both in Nigeria and Germany) match au pairs with host families. Reputable agencies include AuPairWorld, Cultural Care Au Pair, and Au Pair in America (for Germany placements). The German consulate in Lagos may have a list of recognised agencies. Verify any agency's credentials before paying placement fees."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: Federal Foreign Office Germany
+sourceUrl: https://www.auswaertiges-amt.de/en/visa-service/buerger/au-pair
 evidenceStatus: editorial
 supersededBy: ""
 ---

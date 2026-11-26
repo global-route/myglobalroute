@@ -18,8 +18,8 @@ faqs:
   - q: "Does a previous visa rejection affect future applications?"
     a: "Yes. Most visa applications ask whether you have previously been refused a visa. You must answer honestly. A previous refusal is not automatically disqualifying but it requires explanation and evidence that the circumstances have changed."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: European Commission / UK Visas and Immigration
+sourceUrl: https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy_en
 evidenceStatus: editorial
 supersededBy: ""
 ---

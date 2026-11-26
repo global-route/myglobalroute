@@ -19,8 +19,8 @@ faqs:
   - q: "Why are some figures in this post marked as unverified?"
     a: "This platform only publishes claims that can be traced to a primary government source. The USD 70,000 SUACE capital threshold and the USD 150,000-200,000 Investor Pass thresholds are widely cited by Paraguay immigration practitioners but have not been confirmed from the Direccion General de Migraciones or a published MIC decree. We have labelled them clearly so you know exactly what to verify before acting."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: Ministerio de Industria y Comercio Paraguay
+sourceUrl: https://www.mic.gov.py/mic/w/suace/
 evidenceStatus: editorial
 supersededBy: ""
 ---

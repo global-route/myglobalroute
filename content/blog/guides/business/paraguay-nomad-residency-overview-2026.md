@@ -19,8 +19,8 @@ faqs:
   - q: "How long does it take to get Paraguayan citizenship?"
     a: "The standard route is approximately 5 years: 2 years temporary residency + 3 years permanent residency before citizenship eligibility. The investor fast-track routes skip the 2-year temporary stage, reducing the timeline to approximately 3 years of permanent residency before citizenship eligibility."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: Direccion General de Migraciones Paraguay
+sourceUrl: https://www.migraciones.gov.py/
 evidenceStatus: editorial
 supersededBy: ""
 ---

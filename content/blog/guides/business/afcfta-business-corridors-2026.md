@@ -19,8 +19,8 @@ faqs:
   - q: "Do I need to be physically present to register a company in these countries?"
     a: "Rwanda and Mauritius allow remote company registration through their online portals. Ghana and Kenya require more in-person steps, though registered agents can handle much of the process on your behalf."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: African Continental Free Trade Area Secretariat
+sourceUrl: https://au-afcfta.org/
 evidenceStatus: editorial
 supersededBy: ""
 ---

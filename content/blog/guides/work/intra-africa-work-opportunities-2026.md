@@ -19,8 +19,8 @@ faqs:
   - q: "Which African country is easiest to get a work permit in?"
     a: "Rwanda has the most streamlined business and work permit process - registration takes 1-2 days online. Mauritius has a well-structured Occupation Permit for professionals and investors. Both countries actively court foreign talent as part of their economic development strategies."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: African Continental Free Trade Area Secretariat
+sourceUrl: https://au-afcfta.org/
 evidenceStatus: editorial
 supersededBy: ""
 ---

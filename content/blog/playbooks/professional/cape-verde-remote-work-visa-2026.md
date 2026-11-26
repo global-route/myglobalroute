@@ -20,8 +20,8 @@ faqs:
   - q: "Do I need to speak Portuguese to live in Cape Verde?"
     a: "Portuguese is the official language of Cape Verde. Cape Verdean Creole (Kriolu) is widely spoken. English is spoken in tourist areas and by many professionals. You do not need to speak Portuguese to apply for the visa, but it helps for daily life."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: Cape Verde Immigration Service
+sourceUrl: https://www.smex.cv/en/
 evidenceStatus: editorial
 supersededBy: ""
 ---

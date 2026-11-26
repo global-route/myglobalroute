@@ -19,8 +19,8 @@ faqs:
   - q: "What is a territorial tax system and why does it matter for remote workers?"
     a: "A territorial tax system taxes only income sourced within the country. Foreign-sourced income is not taxed. Mauritius, Cape Verde, Namibia and Paraguay all operate territorial tax systems. This means if you are tax resident in one of these countries and your income comes from foreign clients, you may pay little or no income tax on that income. However, you must still comply with Nigerian tax obligations if you remain a Nigerian tax resident."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: OECD Common Reporting Standard
+sourceUrl: https://www.oecd.org/tax/automatic-exchange/common-reporting-standard/
 evidenceStatus: editorial
 supersededBy: ""
 ---

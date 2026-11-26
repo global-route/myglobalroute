@@ -20,8 +20,8 @@ faqs:
   - q: "What is the connection to the University of Saskatchewan?"
     a: "Graduates of the University of Saskatchewan (USask) in Saskatoon are eligible for the SINP International Graduate stream. This stream has lower requirements than the skilled worker streams and is specifically designed for graduates of Saskatchewan post-secondary institutions who want to stay in the province."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: Saskatchewan Immigrant Nominee Program
+sourceUrl: https://www.saskatchewan.ca/residents/moving-to-saskatchewan/immigrating-to-saskatchewan/saskatchewan-immigrant-nominee-program
 evidenceStatus: editorial
 supersededBy: ""
 ---

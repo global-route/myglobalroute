@@ -7,8 +7,8 @@ category: Case Studies
 tags: [uae, dubai, construction, healthcare, budget, case-study, nigeria, cost-breakdown]
 readTime: "9 min"
 author: MyPathway2Global Editorial
-sourceAuthority: MyPathway2Global Editorial
-sourceUrl: https://mypathway2global.org.uk
+sourceAuthority: UAE Ministry of Human Resources and Emiratisation
+sourceUrl: https://www.mohre.gov.ae/en/services/work-permits.aspx
 lastFactChecked: 2026-11-25
 evidenceStatus: editorial
 postVersion: v2026.11

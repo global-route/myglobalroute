@@ -20,8 +20,8 @@ faqs:
   - q: "Is there a minimum income requirement for the Mauritius Premium Visa?"
     a: "The Economic Development Board does not publish a fixed minimum income threshold. You must demonstrate sufficient financial means to support yourself. Remote workers earning USD 2,000-3,000/month would comfortably meet this requirement."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: Economic Development Board Mauritius
+sourceUrl: https://edbmauritius.org/live-in-mauritius/premium-visa/
 evidenceStatus: editorial
 supersededBy: ""
 ---

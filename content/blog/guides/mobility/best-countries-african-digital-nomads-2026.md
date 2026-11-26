@@ -19,8 +19,8 @@ faqs:
   - q: "Can a digital nomad visa lead to permanent residence?"
     a: "It depends on the country. Portugal's D8 visa can lead to permanent residence after 5 years. Germany's Opportunity Card can lead to permanent residence after 5 years if you find skilled employment. Mauritius's Premium Visa is renewable but does not directly lead to permanent residence. Cape Verde and Namibia have naturalisation routes after extended legal residence."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: MyPathway2Global Research
+sourceUrl: https://mypathway2global.org.uk/pages/find-mypathway.html
 evidenceStatus: editorial
 supersededBy: ""
 ---

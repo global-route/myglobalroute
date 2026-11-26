@@ -19,8 +19,8 @@ faqs:
   - q: "When should I apply for the DSU scholarship?"
     a: "The bando (call for applications) is published in July-August each year for the following academic year. Apply as early as possible - accommodation places are limited and allocated by ISEE score ranking."
 postVersion: v2026.11
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: DSU Toscana Italy
+sourceUrl: https://www.dsu.toscana.it/en/
 lastFactChecked: 2026-11-25
 evidenceStatus: editorial
 supersededBy: ""

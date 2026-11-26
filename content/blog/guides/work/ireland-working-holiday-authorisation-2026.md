@@ -20,8 +20,8 @@ faqs:
   - q: "Can I extend the Ireland Working Holiday Authorisation?"
     a: "Extension rules apply only to eligible passport holders. Verify your passport eligibility at irishimmigration.ie before making any plans."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: Irish Immigration Service
+sourceUrl: https://www.irishimmigration.ie/coming-to-work-in-ireland/what-are-my-work-visa-options/working-holiday-authorisation/
 evidenceStatus: editorial
 supersededBy: ""
 ---

@@ -19,8 +19,8 @@ faqs:
   - q: "Can I bring my family to Japan or South Korea on a work visa?"
     a: "Yes. Japan's Dependent visa allows family members to join a work visa holder. South Korea's F-3 Dependent visa allows spouses and children to join E-7 visa holders. Both require the primary visa holder to have a stable income and accommodation."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: MyPathway2Global Research
+sourceUrl: https://mypathway2global.org.uk/pages/find-mypathway.html
 evidenceStatus: editorial
 supersededBy: ""
 ---

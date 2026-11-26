@@ -19,8 +19,8 @@ faqs:
   - q: "What are the current Canada study permit financial requirements?"
     a: "CAD 23,448 per year for living expenses for family size 1, outside Quebec, from 1 September 2026. Tuition fees are additional. These figures are from IRCC and are reviewed periodically."
 postVersion: "v2026.01"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: Immigration, Refugees and Citizenship Canada
+sourceUrl: https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/sds-end.html
 lastFactChecked: 2026-01-10
 evidenceStatus: editorial
 supersededBy: ""

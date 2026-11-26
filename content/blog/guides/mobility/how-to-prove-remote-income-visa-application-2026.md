@@ -19,8 +19,8 @@ faqs:
   - q: "I am a freelancer with irregular income - how do I handle months with low earnings?"
     a: "Show your average monthly income over 12 months, not just recent months. A 12-month average that meets the threshold is more convincing than 3 months of high income. Include a cover letter explaining the nature of freelance income and showing that your average meets the requirement. Supplement with savings that cover the gap."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: MyPathway2Global Research
+sourceUrl: https://mypathway2global.org.uk/pages/find-mypathway.html
 evidenceStatus: editorial
 supersededBy: ""
 ---

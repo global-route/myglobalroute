@@ -20,8 +20,8 @@ faqs:
   - q: "What work can I do on an Australia Working Holiday Visa?"
     a: "Eligible visa holders can work for any employer in any industry, with no more than 6 months for the same employer without permission. Eligibility must be confirmed first."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: Department of Home Affairs Australia
+sourceUrl: https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462
 evidenceStatus: editorial
 supersededBy: ""
 ---

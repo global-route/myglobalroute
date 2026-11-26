@@ -19,8 +19,8 @@ faqs:
   - q: "How many days can I spend in Nigeria without becoming a Nigerian tax resident?"
     a: "The standard threshold is 183 days per year. If you spend fewer than 183 days in Nigeria in a tax year, you are generally not considered a Nigerian tax resident for that year - provided you have established genuine tax residency elsewhere. However, Nigeria also considers other factors including your domicile, principal place of business, and economic ties. Consult a Nigerian tax adviser for your specific situation."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: OECD Common Reporting Standard
+sourceUrl: https://www.oecd.org/tax/automatic-exchange/common-reporting-standard/
 evidenceStatus: editorial
 supersededBy: ""
 ---

@@ -19,8 +19,8 @@ faqs:
   - q: "Can I keep my Nigerian bank accounts after ceasing Nigerian tax residency?"
     a: "Yes. Ceasing Nigerian tax residency does not require you to close your Nigerian bank accounts. However, you should update your tax residency declaration with your Nigerian bank to reflect your new country of tax residence. This affects how your account is reported under CRS."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: Federal Inland Revenue Service Nigeria
+sourceUrl: https://www.firs.gov.ng/
 evidenceStatus: editorial
 supersededBy: ""
 ---

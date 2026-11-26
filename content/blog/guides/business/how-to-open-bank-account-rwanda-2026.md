@@ -19,8 +19,8 @@ faqs:
   - q: "Can I open a Rwanda business bank account remotely?"
     a: "Most Rwandan banks require in-person attendance to open a business account. However, if you have registered your company through the RDB portal, some banks will allow you to initiate the process online and complete it in person when you arrive in Rwanda. Plan to visit a branch within the first week of arrival."
 postVersion: v2026.11
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: National Bank of Rwanda
+sourceUrl: https://www.bnr.rw/financial-stability/financial-inclusion/
 evidenceStatus: verified
 supersededBy: ""
 ---

@@ -7,8 +7,8 @@ category: Guides
 tags: [study, europe, lithuania, slovakia, latvia, norway, university, 2027]
 readTime: "11 min"
 author: MyPathway2Global Editorial
-sourceAuthority: MyPathway2Global Editorial
-sourceUrl: https://mypathway2global.org.uk
+sourceAuthority: European Commission Study in Europe
+sourceUrl: https://education.ec.europa.eu/study-in-europe
 lastFactChecked: 2026-11-25
 evidenceStatus: editorial
 postVersion: v2026.11

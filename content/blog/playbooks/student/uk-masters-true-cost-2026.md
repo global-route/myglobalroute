@@ -19,8 +19,8 @@ faqs:
   - q: "Can I work during a UK Masters?"
     a: "Yes. Student visa holders can work up to 20 hours per week during term time and full time during official vacation periods. This can offset living costs but should not be relied upon to cover tuition."
 postVersion: "v2026.08"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: UK Visas and Immigration
+sourceUrl: https://www.gov.uk/student-visa
 lastFactChecked: 2026-08-18
 evidenceStatus: editorial
 supersededBy: ""

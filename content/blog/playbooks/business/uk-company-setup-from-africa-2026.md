@@ -19,8 +19,8 @@ faqs:
   - q: "Does a UK company give me a UK visa?"
     a: "No. Owning a UK company does not give you any UK immigration status. You still need a valid UK visa to enter the UK. The Innovator Founder visa is available for founders of innovative UK businesses, but it requires endorsement from an approved body and a minimum investment."
 postVersion: v2026.11
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: Companies House UK
+sourceUrl: https://www.gov.uk/set-up-limited-company
 evidenceStatus: verified
 supersededBy: ""
 ---

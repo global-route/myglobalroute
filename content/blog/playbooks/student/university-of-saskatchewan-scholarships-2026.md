@@ -20,8 +20,8 @@ faqs:
   - q: "Can I stay in Canada after graduating from USask?"
     a: "Yes. USask graduates are eligible for a Post-Graduation Work Permit (PGWP) for up to 3 years. Saskatchewan also has the Saskatchewan Immigrant Nominee Program (SINP) which has streams for international graduates and skilled workers. The SINP is one of the more accessible provincial nominee programs for African graduates."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: University of Saskatchewan
+sourceUrl: https://admissions.usask.ca/money/scholarships.php
 evidenceStatus: editorial
 supersededBy: ""
 ---

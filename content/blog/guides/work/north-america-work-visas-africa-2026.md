@@ -19,8 +19,8 @@ faqs:
   - q: "What are my chances of getting an H-1B visa for the USA?"
     a: "The H-1B is subject to an annual lottery. In recent years, USCIS has received 3-5 times more applications than the 85,000 cap. Selection is random - your qualifications do not improve your lottery odds. If you are not selected, you cannot apply that year. This makes the H-1B highly unpredictable as a migration strategy."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: Immigration, Refugees and Citizenship Canada
+sourceUrl: https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada.html
 evidenceStatus: editorial
 supersededBy: ""
 ---

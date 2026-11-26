@@ -20,8 +20,8 @@ faqs:
   - q: "Does the D3 visa lead to permanent residence?"
     a: "Yes. After 5 years of legal residence in Portugal, you can apply for permanent residence. After 5 years you can also apply for Portuguese citizenship, which gives EU freedom of movement across all 27 EU member states."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: AIMA Portugal
+sourceUrl: https://aima.gov.pt/en/regularize/residence-visas/highly-qualified-activity
 evidenceStatus: editorial
 supersededBy: ""
 ---

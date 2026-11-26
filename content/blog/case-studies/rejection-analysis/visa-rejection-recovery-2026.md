@@ -7,8 +7,8 @@ category: Case Studies
 tags: [visa-rejection, refusal, reapplication, schengen, uk, canada, nigeria]
 readTime: "11 min"
 author: MyPathway2Global Editorial
-sourceAuthority: MyPathway2Global Editorial
-sourceUrl: https://mypathway2global.org.uk
+sourceAuthority: European Commission / UK Visas and Immigration
+sourceUrl: https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy_en
 lastFactChecked: 2026-11-25
 evidenceStatus: editorial
 postVersion: v2026.11

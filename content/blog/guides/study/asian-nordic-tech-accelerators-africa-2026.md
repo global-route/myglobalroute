@@ -19,8 +19,8 @@ faqs:
   - q: "What does zero-equity mean in practice?"
     a: "The accelerator takes no ownership stake in your company in exchange for the program. You receive funding, lab access, mentorship and corporate introductions without diluting your cap table. This is different from traditional accelerators like Y Combinator which take equity."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: European Commission / Japan Student Services Organization
+sourceUrl: https://erasmus-plus.ec.europa.eu/
 evidenceStatus: editorial
 supersededBy: ""
 ---

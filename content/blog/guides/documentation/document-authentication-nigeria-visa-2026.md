@@ -18,8 +18,8 @@ faqs:
   - q: "Do I need to translate my documents for a European visa?"
     a: "Yes for most European countries. Documents in English are generally accepted for UK, Ireland and some Nordic countries. For Schengen countries, documents in other languages typically require a certified translation."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: Nigerian Ministry of Foreign Affairs
+sourceUrl: https://www.mfa.gov.ng/consular-services/
 evidenceStatus: editorial
 supersededBy: ""
 ---

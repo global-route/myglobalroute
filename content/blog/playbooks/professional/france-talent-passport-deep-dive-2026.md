@@ -19,8 +19,8 @@ faqs:
   - q: "How long is the France Talent Passport valid?"
     a: "The initial residence permit is valid for up to 4 years. After 5 years of legal residence in France, you can apply for a 10-year residence permit (carte de resident). The Talent Passport itself is a multi-entry long-stay visa that converts to a residence permit on arrival."
 postVersion: "v2026.11"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: France-Visas
+sourceUrl: https://france-visas.gouv.fr/en/web/france-visas/talent-passport
 lastFactChecked: 2026-11-09
 evidenceStatus: editorial
 supersededBy: ""

@@ -11,6 +11,7 @@ author: MyPathway2Global Editorial
 sourceAuthority: Immigration, Refugees and Citizenship Canada
 sourceUrl: https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers.html
 evidenceStatus: verified
+lastFactChecked: 2026-11-25
 eligibilityReviewStatus: verified-eligible
 faqs:
   - q: Do I need a job offer to apply for Express Entry?

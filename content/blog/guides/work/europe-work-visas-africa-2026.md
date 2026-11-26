@@ -19,8 +19,8 @@ faqs:
   - q: "Can I bring my family on a European work visa?"
     a: "Yes, in most cases. EU member states allow family reunification for work permit holders after a qualifying period. The UK allows dependants on the Skilled Worker visa. Specific rules vary by country and visa type - check the official immigration authority for the country you are applying to."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: European Commission
+sourceUrl: https://ec.europa.eu/immigration/
 evidenceStatus: editorial
 supersededBy: ""
 ---

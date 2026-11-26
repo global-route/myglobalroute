@@ -19,8 +19,8 @@ faqs:
   - q: "Does my US LLC get reported to Nigeria?"
     a: "A US LLC owned by a Nigerian who is not a US person is not automatically reported to FIRS under FATCA. However, if the LLC has a US bank account and you receive distributions from it, those distributions may be subject to US withholding tax. The LLC itself is a pass-through entity for US tax purposes - the tax obligation flows to the owner. Consult a US tax adviser and a Nigerian tax adviser about your specific obligations."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: U.S. Internal Revenue Service
+sourceUrl: https://www.irs.gov/businesses/corporations/foreign-account-tax-compliance-act-fatca
 evidenceStatus: editorial
 supersededBy: ""
 ---

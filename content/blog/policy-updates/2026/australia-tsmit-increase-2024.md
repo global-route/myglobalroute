@@ -19,8 +19,8 @@ faqs:
   - q: "What happens if my employer offers less than the TSMIT?"
     a: "Your visa application will be refused. The employer must offer at least the TSMIT or the Annual Market Salary Rate (AMSR) for your occupation, whichever is higher. The AMSR is what Australian workers in the same role and location are paid."
 postVersion: v2026.11
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: Department of Home Affairs Australia
+sourceUrl: https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/sponsoring-workers/nominating-a-position/salary-requirements
 lastFactChecked: 2026-11-23
 evidenceStatus: verified
 supersededBy: ""

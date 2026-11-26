@@ -20,8 +20,8 @@ faqs:
   - q: "Is the DSU scholarship competitive?"
     a: "Yes. Not all eligible applicants receive the full benefit package - accommodation places are limited and allocated by ISEE score ranking. You must apply early in the academic year. The scholarship is separate from university admission - you must secure admission first, then apply to DSU."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: DSU Toscana Italy
+sourceUrl: https://www.dsu.toscana.it/en/
 evidenceStatus: editorial
 supersededBy: ""
 ---

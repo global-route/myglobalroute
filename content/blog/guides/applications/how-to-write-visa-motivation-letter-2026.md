@@ -18,8 +18,8 @@ faqs:
   - q: "Should I use a template for my visa motivation letter?"
     a: "Use a template as a structure guide only. Your letter must be specific to your circumstances. Generic letters are easy to identify and less persuasive than personalised ones."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: European Commission Visa Policy
+sourceUrl: https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy_en
 evidenceStatus: editorial
 supersededBy: ""
 ---

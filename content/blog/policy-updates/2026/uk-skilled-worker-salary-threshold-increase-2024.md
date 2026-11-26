@@ -19,8 +19,8 @@ faqs:
   - q: "Are there any exceptions to the GBP 38,700 threshold?"
     a: "Yes. New entrant rates apply to recent graduates and those under 26 (GBP 30,960 in most cases). Health and care workers have separate thresholds. Shortage occupation list concessions were removed in April 2024 when the list was replaced by the Immigration Salary List. Check gov.uk for the current Immigration Salary List."
 postVersion: v2026.11
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: UK Visas and Immigration
+sourceUrl: https://www.gov.uk/skilled-worker-visa/your-job
 lastFactChecked: 2026-11-23
 evidenceStatus: verified
 supersededBy: ""

@@ -17,8 +17,8 @@ faqs:
   - q: "Which is easier to get into - Italy DSU or a German university?"
     a: "German university admission is generally more straightforward for international students with strong academic records. Italy DSU requires both university admission and a separate DSU application with ISEE documentation. The DSU benefit is competitive and not guaranteed even if you are admitted to the university."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: DSU Toscana Italy / Federal Foreign Office Germany
+sourceUrl: https://www.dsu.toscana.it/en/
 evidenceStatus: editorial
 supersededBy: ""
 ---

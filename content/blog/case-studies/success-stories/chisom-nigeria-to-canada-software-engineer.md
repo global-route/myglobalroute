@@ -19,8 +19,8 @@ faqs:
   - q: "What is the most important thing to prepare before applying for Express Entry?"
     a: "Start the credential assessment and language test early - both have long processing times. The WES assessment alone takes 7-10 weeks. Delays here push back your entire timeline."
 postVersion: "v2026.01"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: Immigration, Refugees and Citizenship Canada
+sourceUrl: https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html
 lastFactChecked: 2026-01-22
 evidenceStatus: editorial
 supersededBy: ""

@@ -19,8 +19,8 @@ faqs:
   - q: "How do I transfer money from the UK or US to Nigeria for investment?"
     a: "The most reliable routes are international wire transfers through established banks, or fintech platforms like Wise, Remitly or Grey. For large investment amounts (above USD 10,000), you should document the source of funds carefully for both the sending and receiving country's compliance requirements."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: African Union
+sourceUrl: https://au.int/en/diaspora
 evidenceStatus: editorial
 supersededBy: ""
 ---

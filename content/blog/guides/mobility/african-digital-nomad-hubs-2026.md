@@ -19,8 +19,8 @@ faqs:
   - q: "Do I need to pay tax in these countries as a remote worker?"
     a: "Tax obligations depend on your specific situation, the source of your income, and the tax treaties between your home country and the destination. Mauritius has a flat 15% income tax. Cape Verde and Namibia have their own tax regimes. Consult a local tax adviser before relocating."
 postVersion: "v2026.10"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: African Union
+sourceUrl: https://au.int/en/
 evidenceStatus: editorial
 supersededBy: ""
 ---

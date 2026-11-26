@@ -19,8 +19,8 @@ faqs:
   - q: "Can I apply for the UK Innovator Founder visa without a job offer?"
     a: "Yes. The Innovator Founder route is for people establishing their own business in the UK. You do not need a job offer or employer sponsor. You need endorsement from an approved body confirming your business idea meets the innovation, viability and scalability criteria."
 postVersion: "v2026.11"
-sourceAuthority: "MyPathway2Global Editorial"
-sourceUrl: "https://mypathway2global.org.uk"
+sourceAuthority: UK Visas and Immigration
+sourceUrl: https://www.gov.uk/innovator-founder-visa
 lastFactChecked: 2026-11-20
 evidenceStatus: verified
 supersededBy: ""
