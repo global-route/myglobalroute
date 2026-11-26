@@ -429,7 +429,7 @@ Here's exactly what Chisom spent:
 ## Watch: How to Apply for Canada PR from Nigeria - Step by Step
 
 <div class="video-embed">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/I01MsQWCK58" title="Canada PR from Nigeria - Step by Step" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tYOqTs4vZxQ" title="Canada PR from Nigeria - Step by Step" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Real walkthrough of the Express Entry process from Nigeria - documents, timeline and costs*

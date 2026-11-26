@@ -101,7 +101,7 @@ These are documented process barriers - not approval rate statistics:
 ## Watch: UK Student Visa - What You Need to Know
 
 <div class="video-embed">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4Wb_229Bib4" title="UK Student Visa Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OAbcqxax8BA" title="UK Student Visa Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Covers CAS, maintenance funds, IHS surcharge and common mistakes*

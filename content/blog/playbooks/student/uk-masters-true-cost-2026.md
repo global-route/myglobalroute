@@ -918,7 +918,7 @@ As a Nigerian international student, you must:
 ## Watch: UK Student Visa - Don't Apply Until You Watch This
 
 <div class="video-embed">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4Wb_229Bib4" title="UK Student Visa Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SrqqOMhY9dY" title="UK Student Visa Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Covers maintenance funds, IHS surcharge, CAS and the real costs most guides skip*

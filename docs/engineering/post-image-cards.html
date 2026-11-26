@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; padding: 40px; }
+
+  .card {
+    width: 1200px;
+    height: 630px;
+    background: #10316b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 56px 72px 48px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+
+  /* Geometric arc — top right */
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -160px; right: -160px;
+    width: 480px; height: 480px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,201,71,0.15);
+  }
+  .card::after {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,201,71,0.08);
+  }
+
+  /* Category pill */
+  .category {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #ffc947;
+    margin-bottom: 20px;
+  }
+  .category::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #ffc947;
+  }
+
+  /* Wordmark */
+  .wordmark {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+  }
+  .wordmark span { color: #ffc947; }
+
+  /* Main headline */
+  .headline {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  .headline h1 {
+    font-size: 52px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.12;
+    letter-spacing: -1px;
+    max-width: 860px;
+  }
+  .headline h1 em {
+    color: #ffc947;
+    font-style: normal;
+  }
+
+  /* Key stat strip */
+  .stat-strip {
+    display: flex;
+    gap: 40px;
+    align-items: flex-end;
+  }
+  .stat { display: flex; flex-direction: column; gap: 3px; }
+  .stat-val {
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffc947;
+    line-height: 1;
+  }
+  .stat-lbl {
+    font-size: 11px;
+    color: rgba(255,255,255,0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .divider {
+    width: 1px; height: 36px;
+    background: rgba(255,255,255,0.12);
+    align-self: flex-end;
+    margin-bottom: 4px;
+  }
+  .domain {
+    margin-left: auto;
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .domain svg { opacity: 0.5; }
+
+  /* Country badge variant */
+  .country-badge {
+    position: absolute;
+    bottom: 48px;
+    right: 72px;
+    font-size: 72px;
+    line-height: 1;
+    opacity: 0.18;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     INSTRUCTIONS
+     1. Open this file in Firefox
+     2. DevTools → Responsive → 1200 × 630
+     3. Show one card at a time (comment out others)
+     4. Camera icon → save as [filename].jpg
+     5. Place in public/assets/blog/
+     ═══════════════════════════════════════════════════════════ -->
+
+
+<!-- ── CAROUSEL / HOMEPAGE PRIORITY ─────────────────────────── -->
+
+<!-- P1-4: mauritius-all-visas-nomad-guide-2026.jpg -->
+<div class="card">
+  <div>
+    <div class="wordmark">MyPathway<span>2</span>Global</div>
+    <div class="category">Professional Playbook</div>
+  </div>
+  <div class="headline">
+    <h1>Mauritius 2026:<br><em>Every Visa Route</em><br>and the 5-Year Passport Play</h1>
+  </div>
+  <div class="stat-strip">
+    <div class="stat"><div class="stat-val">6</div><div class="stat-lbl">Visa routes</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">156</div><div class="stat-lbl">Countries visa-free</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">5 yrs</div><div class="stat-lbl">To residence</div></div>
+    <div class="domain">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffc947" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      mypathway2global.org.uk
+    </div>
+  </div>
+</div>
+
+<!-- P1-6: ireland-critical-skills-2026.jpg -->
+<div class="card">
+  <div>
+    <div class="wordmark">MyPathway<span>2</span>Global</div>
+    <div class="category">Guide — Work</div>
+  </div>
+  <div class="headline">
+    <h1>Ireland Critical Skills<br>Permit 2026:<br><em>EUR 38,000</em> Threshold</h1>
+  </div>
+  <div class="stat-strip">
+    <div class="stat"><div class="stat-val">EUR 38k</div><div class="stat-lbl">Min salary</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">2 yrs</div><div class="stat-lbl">To Stamp 4</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">0</div><div class="stat-lbl">Labour market test</div></div>
+    <div class="domain">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffc947" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      mypathway2global.org.uk
+    </div>
+  </div>
+</div>
+
+<!-- P1-7: kafala-reform-tracker-2026.jpg -->
+<div class="card">
+  <div>
+    <div class="wordmark">MyPathway<span>2</span>Global</div>
+    <div class="category">Guide — Safety</div>
+  </div>
+  <div class="headline">
+    <h1>Kafala Reform Tracker<br>2026: <em>All 6 GCC States</em><br>What Changed vs What Hasn't</h1>
+  </div>
+  <div class="stat-strip">
+    <div class="stat"><div class="stat-val">6</div><div class="stat-lbl">GCC states</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">2026</div><div class="stat-lbl">Updated</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">ILO</div><div class="stat-lbl">Source verified</div></div>
+    <div class="domain">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffc947" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      mypathway2global.org.uk
+    </div>
+  </div>
+</div>
+
+<!-- P1-8: visa-rejection-patterns-2026.jpg -->
+<div class="card">
+  <div>
+    <div class="wordmark">MyPathway<span>2</span>Global</div>
+    <div class="category">Case Study — Rejection Analysis</div>
+  </div>
+  <div class="headline">
+    <h1>Visa Rejection Patterns<br>for <em>African Applicants</em><br>2026: 5 Documented Causes</h1>
+  </div>
+  <div class="stat-strip">
+    <div class="stat"><div class="stat-val">5</div><div class="stat-lbl">Documented patterns</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">UK/EU/CA</div><div class="stat-lbl">Jurisdictions</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">2026</div><div class="stat-lbl">Updated</div></div>
+    <div class="domain">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffc947" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      mypathway2global.org.uk
+    </div>
+  </div>
+</div>
+
+
+<!-- ── PRIORITY 2 — MISSING FILES ────────────────────────────── -->
+
+<!-- france-talent-passport-2026.jpg -->
+<div class="card">
+  <div>
+    <div class="wordmark">MyPathway<span>2</span>Global</div>
+    <div class="category">Professional Playbook</div>
+  </div>
+  <div class="headline">
+    <h1>France Talent Passport<br>2026: <em>10 Subcategories</em><br>Explained for Africans</h1>
+  </div>
+  <div class="stat-strip">
+    <div class="stat"><div class="stat-val">10</div><div class="stat-lbl">Subcategories</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">EUR 89k</div><div class="stat-lbl">EU Blue Card threshold</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">4 yrs</div><div class="stat-lbl">Validity</div></div>
+    <div class="domain"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffc947" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>mypathway2global.org.uk</div>
+  </div>
+</div>
+
+<!-- uk-innovator-founder-2026.jpg -->
+<div class="card">
+  <div>
+    <div class="wordmark">MyPathway<span>2</span>Global</div>
+    <div class="category">Professional Playbook</div>
+  </div>
+  <div class="headline">
+    <h1>UK Innovator Founder<br>Visa 2026: <em>No GBP 50k</em><br>Requirement Myth Busted</h1>
+  </div>
+  <div class="stat-strip">
+    <div class="stat"><div class="stat-val">3 yrs</div><div class="stat-lbl">Initial visa</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">ILR</div><div class="stat-lbl">After 3 years</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">UKVI</div><div class="stat-lbl">Source verified</div></div>
+    <div class="domain"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffc947" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>mypathway2global.org.uk</div>
+  </div>
+</div>
+
+<!-- australia-tsmit-2026.jpg -->
+<div class="card">
+  <div>
+    <div class="wordmark">MyPathway<span>2</span>Global</div>
+    <div class="category">Policy Update</div>
+  </div>
+  <div class="headline">
+    <h1>Australia TSMIT<br>Increase 2024:<br><em>AUD 73,150</em> New Threshold</h1>
+  </div>
+  <div class="stat-strip">
+    <div class="stat"><div class="stat-val">AUD 73k</div><div class="stat-lbl">New TSMIT</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">+36%</div><div class="stat-lbl">Increase from AUD 53,900</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">DHA</div><div class="stat-lbl">Source verified</div></div>
+    <div class="domain"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffc947" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>mypathway2global.org.uk</div>
+  </div>
+</div>
+
+<!-- qatar-kafala-reform-2026.jpg -->
+<div class="card">
+  <div>
+    <div class="wordmark">MyPathway<span>2</span>Global</div>
+    <div class="category">Policy Update</div>
+  </div>
+  <div class="headline">
+    <h1>Qatar Kafala Reform<br>2024: <em>What Actually</em><br>Changed for Workers</h1>
+  </div>
+  <div class="stat-strip">
+    <div class="stat"><div class="stat-val">2024</div><div class="stat-lbl">Reform year</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">ILO</div><div class="stat-lbl">Source verified</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">Qatar</div><div class="stat-lbl">Ministry of Labour</div></div>
+    <div class="domain"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffc947" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>mypathway2global.org.uk</div>
+  </div>
+</div>
+
+<!-- uk-salary-threshold-2026.jpg -->
+<div class="card">
+  <div>
+    <div class="wordmark">MyPathway<span>2</span>Global</div>
+    <div class="category">Policy Update</div>
+  </div>
+  <div class="headline">
+    <h1>UK Skilled Worker<br>Salary Threshold 2024:<br><em>GBP 38,700</em> Explained</h1>
+  </div>
+  <div class="stat-strip">
+    <div class="stat"><div class="stat-val">GBP 38.7k</div><div class="stat-lbl">New threshold</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">+48%</div><div class="stat-lbl">From GBP 26,200</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">UKVI</div><div class="stat-lbl">Source verified</div></div>
+    <div class="domain"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffc947" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>mypathway2global.org.uk</div>
+  </div>
+</div>
+
+<!-- singapore-visa-from-nigeria-2026.jpg -->
+<div class="card">
+  <div>
+    <div class="wordmark">MyPathway<span>2</span>Global</div>
+    <div class="category">Country Audit</div>
+  </div>
+  <div class="headline">
+    <h1>Singapore Visa from<br>Nigeria 2026: <em>EP and S Pass</em><br>COMPASS Framework</h1>
+  </div>
+  <div class="stat-strip">
+    <div class="stat"><div class="stat-val">SGD 5k</div><div class="stat-lbl">EP min salary/month</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">SGD 3.15k</div><div class="stat-lbl">S Pass min salary</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="stat-val">MOM</div><div class="stat-lbl">Source verified</div></div>
+    <div class="domain"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffc947" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>mypathway2global.org.uk</div>
+  </div>
+</div>
+
+</body>
+</html>

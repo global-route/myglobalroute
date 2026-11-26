@@ -382,7 +382,7 @@ Apply for a **1-year postgraduate certificate** (cheaper than degree):
 ## Watch: Canada Ends SDS - New Study Permit Rules Explained
 
 <div class="video-embed">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/k0ATaQo4b9c" title="Canada SDS Cancelled - New Study Permit Rules" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69vk-TQ52o" title="Canada SDS Cancelled - New Study Permit Rules" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Covers what changed when SDS was cancelled and what the new study permit process requires*

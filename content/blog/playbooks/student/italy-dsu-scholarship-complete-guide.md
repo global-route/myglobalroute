@@ -535,7 +535,7 @@ I use the money for my phone, clothes, and I save. I've been here 2 years now-gr
 ## Watch: What the DSU Scholarship Actually Covers in Italy
 
 <div class="video-embed">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1Pi8ePezFMU" title="Italy DSU Scholarship Real Breakdown" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/euUMzMS14R4" title="Italy DSU Scholarship Real Breakdown" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Real breakdown of DSU benefits - tuition, accommodation, meals and stipend*

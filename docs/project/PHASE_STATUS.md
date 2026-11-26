@@ -219,7 +219,7 @@ All 23 production readiness tasks complete. See `docs/sprints/PRODUCTION_READINE
 - About page rewritten as org with mission/vision/partner model
 - Contact page with 3 routed paths
 - Reserved posts: 6 posts documented in RESERVED_POSTS_TASKFILE.md
-- All 96 blog posts in sitemap.xml (145 URLs total)
+- All 96 blog posts in sitemap.xml (147 URLs total)
 
 ---
 
@@ -402,7 +402,7 @@ Every blog post now shows a dateline watermark with evidence status, source auth
 | WM-8 | Replace current trail block with hybrid document mark in `blog-post.njk` | **Done** |
 | WM-9 | Replace `.post-source-trail` CSS with `.wm-hybrid` CSS | **Done** |
 | WM-10 | Add `postVersion` + `supersededBy` frontmatter fields to new posts | **Done** |
-| WM-11 | Backfill `postVersion` on all 145 posts | **Done** |
+| WM-11 | Backfill `postVersion` on all 147 posts | **Done** |
 | WM-12 | Backfill `sourceAuthority` + `sourceUrl` + `lastFactChecked` + `evidenceStatus` on all posts | **Done** |
 | WM-13 | Build + test + commit hybrid watermark | **Done** |
 

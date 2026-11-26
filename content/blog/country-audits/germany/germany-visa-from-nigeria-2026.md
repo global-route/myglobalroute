@@ -480,7 +480,7 @@ Based on 2025 Lagos embassy data, the **top 5 reasons** Nigerian students get re
 ## Watch: Study in Germany for Free - DAAD Scholarships
 
 <div class="video-embed">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lW5ChW6l_Pc" title="Study in Germany for Free - DAAD Scholarship" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pPzdzRXj7Bs" title="Study in Germany for Free - DAAD Scholarship" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *DAAD scholarship overview - covers zero-tuition public universities and funding options*

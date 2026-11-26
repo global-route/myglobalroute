@@ -167,7 +167,7 @@ Fintiba and Expatrio will return the funds to you, minus their fees. Check the r
 ## Watch: Fintiba Blocked Account for Germany - How It Works
 
 <div class="video-embed">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/D4jd7N2lz2U" title="Fintiba Blocked Account Germany" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wXc8KU0XhhE" title="Fintiba Blocked Account Germany" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Covers the Fintiba setup process, transfer timeline and what the Finanzierungsnachweis looks like*

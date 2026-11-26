@@ -1,6 +1,6 @@
 # ACTIVE SPRINT TASKFILE — MyPathway2Global
 **Updated:** 2026-11-25 | **Commit:** `c80c588` | **Tests:** 19/19, 228/228
-**Posts:** 145 | **Countries:** 35 | **Pathways:** 75 | **Demand records:** 24 | **Evidence records:** 222
+**Posts:** 147 | **Countries:** 35 | **Pathways:** 75 | **Demand records:** 24 | **Evidence records:** 222
 **Data validation:** PASSED | **CI:** Quality Gate ✅ | Browser Smoke ✅ | Lint ✅ | Deploy ✅
 **Overhaul:** Gates 0–3 PASS, Gate 4 PARTIAL — see `docs/project/OVERHAUL_TASKFILE.md`
 
@@ -130,7 +130,7 @@ All existing Mauritius content spotted and new comprehensive guide drafted.
 
 | Metric | Current (`c80c588`) |
 |---|---|
-| Blog posts | 145 |
+| Blog posts | 147 |
 | Countries | 35 |
 | Pathways | 75 |
 | Demand records | 24 |

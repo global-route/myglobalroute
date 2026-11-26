@@ -1,9 +1,9 @@
 # Content Pipeline
-**Updated:** 2026-11-23 | **Live posts:** 145 | **Sitemap URLs:** 199 | **Commit:** `pending`
+**Updated:** 2026-11-25 | **Live posts:** 147 | **Sitemap URLs:** 201 | **Commit:** `pending`
 
 ---
 
-## What's live (145 posts)
+## What's live (147 posts)
 
 | Category | Count |
 |---|---|

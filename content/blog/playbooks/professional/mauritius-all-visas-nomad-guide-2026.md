@@ -1,5 +1,6 @@
 ---
 layout: blog-post.njk
+image: "/assets/blog/mauritius-all-visas-nomad-guide-2026.jpg"
 title: "Mauritius Visa Guide for Nomads 2026: Every Route, Hidden Benefits and the 5-Year Passport Play"
 date: 2026-11-24
 updated: 2026-11-24

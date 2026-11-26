@@ -1,5 +1,6 @@
 ---
 layout: blog-post.njk
+image: "/assets/blog/kafala-reform-tracker-2026.jpg"
 title: "Kafala Reform Tracker 2026 — Qatar, UAE, Saudi Arabia, Kuwait, Oman, Bahrain"
 date: 2026-11-09
 category: Guides

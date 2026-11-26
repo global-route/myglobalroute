@@ -170,5 +170,5 @@ Qualifications must be assessed by the New Zealand Qualifications Authority (NZQ
 </div>
 
 <div style="margin-top:2rem;">
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/3JZ_D3ELwOA" title="New Zealand visa guide for Nigerians" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/eu5eaMWs0jw" title="New Zealand visa guide for Nigerians" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

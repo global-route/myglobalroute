@@ -1,5 +1,6 @@
 ---
 layout: blog-post.njk
+image: "/assets/blog/ireland-critical-skills-2026.jpg"
 title: "Ireland Critical Skills Work Permit for African Software Engineers 2026 — What EUR 38,000 Actually Means"
 description: "Ireland's Critical Skills Employment Permit is one of the fastest routes to EU permanent residence for African software engineers. EUR 38,000 minimum salary, no labour market test, Stamp 4 after 2 years. Here is exactly how it works."
 date: 2026-11-20

@@ -111,7 +111,7 @@ The inspected snapshots displayed materially different totals:
 
 | Surface | Displayed figures observed |
 |---|---|
-| Repository baseline | 35 countries, 75 pathways, 145 posts |
+| Repository baseline | 35 countries, 75 pathways, 147 posts |
 | Homepage | 30 countries, 69 pathways |
 | Find MyPathway | 69 pathways, 63 publishable |
 | Homepage pathway filter | 59 |

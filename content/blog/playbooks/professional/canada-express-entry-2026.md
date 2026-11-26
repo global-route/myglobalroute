@@ -937,7 +937,7 @@ Most people get PR without a job offer, then find a job after landing in Canada.
 ## Watch: Express Entry to Canada PR - Detailed Cost and Process
 
 <div class="video-embed">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tYOqTs4vZxQ" title="Canada Express Entry PR Process and Cost" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Zy7f8aS-Mik" title="Canada Express Entry PR Process and Cost" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *Real breakdown of the full Express Entry process, costs and timeline from someone who went through it*
