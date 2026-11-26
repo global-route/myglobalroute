@@ -9,8 +9,8 @@ readTime: "7 min"
 author: MyPathway2Global Editorial
 sourceAuthority: Ministry of Interior Serbia
 sourceUrl: https://www.mup.gov.rs/wps/portal/en
-lastFactChecked: 2026-11-11
-evidenceStatus: research-required
+lastFactChecked: 2026-11-25
+evidenceStatus: editorial
 postVersion: v2026.11
 supersededBy: ""
 excerpt: "A TikTok ad promising Serbia work placements — manufacturing, farms, construction, free accommodation, no experience — has 69.4 million views and charges upfront fees. Serbia has a real work permit system. This post explains the difference."

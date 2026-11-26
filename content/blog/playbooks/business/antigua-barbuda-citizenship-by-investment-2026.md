@@ -9,8 +9,8 @@ readTime: "11 min"
 author: MyPathway2Global Editorial
 sourceAuthority: Antigua and Barbuda Citizenship by Investment Unit
 sourceUrl: https://cip.gov.ag
-lastFactChecked: 2026-11-11
-evidenceStatus: research-required
+lastFactChecked: 2026-11-25
+evidenceStatus: editorial
 postVersion: v2026.11
 supersededBy: ""
 excerpt: "Antigua's CBI programme offers full citizenship for USD 230,000 (NDF donation, single applicant). The passport provides visa-free or visa-on-arrival access to 150+ countries including Schengen Europe. CRS applies — the passport does not hide income from tax authorities."

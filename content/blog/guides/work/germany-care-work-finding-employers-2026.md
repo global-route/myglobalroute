@@ -9,8 +9,8 @@ readTime: "9 min"
 author: MyPathway2Global Editorial
 sourceAuthority: Federal Employment Agency Germany
 sourceUrl: https://www.make-it-in-germany.com/en/jobs/professions/care-nursing
-lastFactChecked: 2026-11-11
-evidenceStatus: research-required
+lastFactChecked: 2026-11-25
+evidenceStatus: editorial
 postVersion: v2026.11
 supersededBy: ""
 excerpt: "Germany has a documented shortage of care workers. Pflegeheime (care homes) and Pflegedienste (home care services) hire internationally. This guide covers where to find them, what to send, and how the recognition process works alongside your job search."

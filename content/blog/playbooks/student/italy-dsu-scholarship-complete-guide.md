@@ -2,7 +2,7 @@
 layout: blog-post.njk
 title: "Italy DSU Scholarship: The Hidden Hack for African Students"
 date: 2026-01-18
-updated: 2026-11-23
+updated: 2026-11-25
 author: "MyPathway2Global Editorial"
 category: "Student Playbooks"
 country: "Italy"
@@ -21,8 +21,8 @@ faqs:
 postVersion: v2026.11
 sourceAuthority: "MyPathway2Global Editorial"
 sourceUrl: "https://mypathway2global.org.uk"
-lastFactChecked: 2026-11-23
-evidenceStatus: research-required
+lastFactChecked: 2026-11-25
+evidenceStatus: editorial
 supersededBy: ""
 ---
 

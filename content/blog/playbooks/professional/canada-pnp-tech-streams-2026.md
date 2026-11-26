@@ -9,8 +9,8 @@ readTime: "11 min"
 author: MyPathway2Global Editorial
 sourceAuthority: Immigration, Refugees and Citizenship Canada
 sourceUrl: https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html
-lastFactChecked: 2026-11-11
-evidenceStatus: research-required
+lastFactChecked: 2026-11-25
+evidenceStatus: editorial
 postVersion: v2026.11
 supersededBy: ""
 excerpt: "Ontario Tech Draw, BC PNP Tech, and Alberta AAIP have dedicated streams for tech workers. A provincial nomination adds 600 CRS points — effectively guaranteeing an Express Entry ITA. Each stream has different requirements and processing timelines."

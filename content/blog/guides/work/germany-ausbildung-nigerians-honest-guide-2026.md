@@ -9,8 +9,8 @@ readTime: "8 min"
 author: MyPathway2Global Editorial
 sourceAuthority: Federal Institute for Vocational Education and Training (BIBB)
 sourceUrl: https://www.make-it-in-germany.com/en/jobs/training-apprenticeship/ausbildung
-lastFactChecked: 2026-11-11
-evidenceStatus: research-required
+lastFactChecked: 2026-11-25
+evidenceStatus: editorial
 postVersion: v2026.11
 supersededBy: ""
 excerpt: "Germany's Ausbildung is a 2-3 year vocational training programme with a monthly stipend of EUR 600-800. It requires B2 German, an employer willing to sponsor an international applicant, and a willingness to earn a training wage for 2-3 years. Most Nigerian applicants underestimate these barriers."

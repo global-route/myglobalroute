@@ -9,8 +9,8 @@ readTime: "9 min"
 author: MyPathway2Global Editorial
 sourceAuthority: MyPathway2Global Editorial
 sourceUrl: https://mypathway2global.org.uk
-lastFactChecked: 2026-11-11
-evidenceStatus: research-required
+lastFactChecked: 2026-11-25
+evidenceStatus: editorial
 postVersion: v2026.11
 supersededBy: ""
 excerpt: "A realistic cost breakdown for a Nigerian tradesperson or healthcare worker moving to the UAE. Out-of-pocket preparation cost: approximately AED 2,000-4,000 (NGN 220,000-440,000). Most visa and relocation costs are covered by the employer in legitimate placements."

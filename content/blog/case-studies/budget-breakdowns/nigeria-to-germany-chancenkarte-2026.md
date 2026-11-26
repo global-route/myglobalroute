@@ -9,8 +9,8 @@ readTime: "10 min"
 author: MyPathway2Global Editorial
 sourceAuthority: MyPathway2Global Editorial
 sourceUrl: https://mypathway2global.org.uk
-lastFactChecked: 2026-11-11
-evidenceStatus: research-required
+lastFactChecked: 2026-11-25
+evidenceStatus: editorial
 postVersion: v2026.11
 supersededBy: ""
 excerpt: "A realistic cost breakdown for a Nigerian professional moving to Germany on the Chancenkarte. Total out-of-pocket: approximately EUR 2,254 (NGN 3.6M). Blocked account: EUR 11,208 (your own money, returned monthly). Exchange rate used: EUR 1 = NGN 1,600."

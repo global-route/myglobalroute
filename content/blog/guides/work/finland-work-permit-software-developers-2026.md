@@ -9,8 +9,8 @@ readTime: "8 min"
 author: MyPathway2Global Editorial
 sourceAuthority: Finnish Immigration Service (Migri)
 sourceUrl: https://migri.fi/en/residence-permit-for-an-employed-person
-lastFactChecked: 2026-11-11
-evidenceStatus: research-required
+lastFactChecked: 2026-11-25
+evidenceStatus: editorial
 postVersion: v2026.11
 supersededBy: ""
 excerpt: "Finland's residence permit for specialists has a EUR 3,000/month salary threshold. Software developers, cloud architects, and AI engineers qualify. The employer applies, processing takes 2-3 months, and permanent residence is available after 4 years."

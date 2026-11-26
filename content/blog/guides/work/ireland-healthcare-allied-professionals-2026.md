@@ -9,8 +9,8 @@ readTime: "9 min"
 author: MyPathway2Global Editorial
 sourceAuthority: Department of Enterprise Trade and Employment Ireland
 sourceUrl: https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/
-lastFactChecked: 2026-11-11
-evidenceStatus: research-required
+lastFactChecked: 2026-11-25
+evidenceStatus: editorial
 postVersion: v2026.11
 supersededBy: ""
 excerpt: "Physiotherapists, radiographers, occupational therapists, medical scientists, and speech and language therapists are on Ireland's Critical Skills Occupations List. The Critical Skills Employment Permit requires EUR 38,000 minimum salary and no labour market test."

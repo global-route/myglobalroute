@@ -9,8 +9,8 @@ readTime: "8 min"
 author: MyPathway2Global Editorial
 sourceAuthority: UAE Ministry of Human Resources and Emiratisation
 sourceUrl: https://www.mohre.gov.ae/en/services/work-permits.aspx
-lastFactChecked: 2026-11-11
-evidenceStatus: research-required
+lastFactChecked: 2026-11-25
+evidenceStatus: editorial
 postVersion: v2026.11
 supersededBy: ""
 excerpt: "The UAE has a documented shortage of skilled tradespeople in construction and facilities management. Electricians, plumbers, HVAC technicians, and welders are hired through employer-sponsored work permits. Salary range AED 2,500-5,000/month for trades roles."

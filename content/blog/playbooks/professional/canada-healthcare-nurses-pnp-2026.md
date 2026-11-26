@@ -9,8 +9,8 @@ readTime: "11 min"
 author: MyPathway2Global Editorial
 sourceAuthority: Immigration, Refugees and Citizenship Canada
 sourceUrl: https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html
-lastFactChecked: 2026-11-11
-evidenceStatus: research-required
+lastFactChecked: 2026-11-25
+evidenceStatus: editorial
 postVersion: v2026.11
 supersededBy: ""
 excerpt: "Nigerian nurses targeting Canada PR have four main PNP routes: Ontario Immigrant Nominee Program (OINP), BC PNP Health Authority stream, Alberta Advantage Immigration Program (AAIP), and Manitoba Provincial Nominee Program (MPNP). Each has different requirements and processing timelines."

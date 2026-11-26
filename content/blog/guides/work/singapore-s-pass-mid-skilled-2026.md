@@ -9,8 +9,8 @@ readTime: "8 min"
 author: MyPathway2Global Editorial
 sourceAuthority: Ministry of Manpower Singapore
 sourceUrl: https://www.mom.gov.sg/passes-and-permits/s-pass
-lastFactChecked: 2026-11-11
-evidenceStatus: research-required
+lastFactChecked: 2026-11-25
+evidenceStatus: editorial
 postVersion: v2026.11
 supersededBy: ""
 excerpt: "Singapore's S Pass requires a minimum salary of SGD 3,150/month (SGD 3,650 for financial services). The employer applies and must pass COMPASS quota checks. S Pass holders can apply for permanent residence after 2 years."

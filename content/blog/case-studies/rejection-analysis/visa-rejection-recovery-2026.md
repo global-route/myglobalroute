@@ -9,8 +9,8 @@ readTime: "11 min"
 author: MyPathway2Global Editorial
 sourceAuthority: MyPathway2Global Editorial
 sourceUrl: https://mypathway2global.org.uk
-lastFactChecked: 2026-11-11
-evidenceStatus: research-required
+lastFactChecked: 2026-11-25
+evidenceStatus: editorial
 postVersion: v2026.11
 supersededBy: ""
 excerpt: "Three visa refusal patterns for Nigerian applicants — Schengen tourist, UK visitor, and Canada Express Entry — with the specific reasons cited and what changed in successful reapplications. A refusal letter is a document, not a verdict."

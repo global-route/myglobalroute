@@ -9,8 +9,8 @@ readTime: "10 min"
 author: MyPathway2Global Editorial
 sourceAuthority: RAK Economic Zone (RAKEZ)
 sourceUrl: https://rakez.com
-lastFactChecked: 2026-11-11
-evidenceStatus: research-required
+lastFactChecked: 2026-11-25
+evidenceStatus: editorial
 postVersion: v2026.11
 supersededBy: ""
 excerpt: "RAKEZ (Ras Al Khaimah Economic Zone) allows company formation with a private ownership register. Your name is not on a public database — but it is filed with the UAE government and reported to tax authorities under CRS. Setup costs approximately USD 900-2,500 depending on licence type."
