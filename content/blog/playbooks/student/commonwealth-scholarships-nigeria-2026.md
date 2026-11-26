@@ -34,7 +34,6 @@ Nigeria allocation: approximately 20-30 scholarships/year<br>
 Primary source: Commonwealth Scholarship Commission (cscuk.fcdo.gov.uk)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Commonwealth Scholarships are funded by the UK Foreign, Commonwealth and Development Office (FCDO) and administered by the Commonwealth Scholarship Commission (CSC). They are available to students from Commonwealth countries including Nigeria for postgraduate study at UK universities.
 

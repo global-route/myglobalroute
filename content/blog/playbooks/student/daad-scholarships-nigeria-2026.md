@@ -34,7 +34,6 @@ Travel allowance: included<br>
 Primary source: DAAD (daad.de)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 DAAD (Deutscher Akademischer Austauschdienst - German Academic Exchange Service) is Germany's primary international scholarship organisation. It funds thousands of international students annually, with Nigerian students among the most successful applicants. Here is what DAAD actually offers and how to apply.
 

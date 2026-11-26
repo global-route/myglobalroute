@@ -34,7 +34,6 @@ Annual licence fee: USD 1,950 for GBL<br>
 Primary source: Economic Development Board Mauritius (edbmauritius.org)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Mauritius has been Africa's premier financial centre for over 30 years. The Global Business Licence (GBL) is the structure that private equity funds, venture capital firms, family offices and multinational companies use to hold and manage investments across Africa and Asia. Here is what the EDB actually requires and what has changed since the 2019 substance reforms.
 

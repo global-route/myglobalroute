@@ -34,7 +34,6 @@ Typical processing: 1-3 working days after document submission<br>
 Primary source: National Bank of Rwanda (bnr.rw)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Rwanda's banking sector is well-developed by African standards. The National Bank of Rwanda (BNR) regulates a competitive market of commercial banks. For African professionals relocating to Rwanda for work, investment or the digital nomad lifestyle, opening a bank account is a practical necessity. Here is what the process involves.
 

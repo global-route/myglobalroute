@@ -6,7 +6,7 @@
 
 **Current data baseline:** 35 countries, 75 pathways (65 publishable), 226+ evidence records, 24 demand records; all publishable pathways have structured requirements[].
 
-**Test status:** 19/19 suites PASS, 228/228 tests PASS. 144 blog posts. 199 sitemap URLs.
+**Test status:** 19/19 suites PASS, 228/228 tests PASS. 145 blog posts. 199 sitemap URLs.
 
 **Live site:** [https://mypathway2global.org.uk](https://mypathway2global.org.uk)
 
@@ -27,11 +27,11 @@ MyPathway2Global is an evidence-gated mobility platform for African passport hol
 - **WorkAbroadAgent:** 4-step wizard matching skilled/semi-skilled workers to verified agents by corridor and occupation
 - **Country Directory:** 35 countries with official source trails, registry-backed comparison metrics and evidence status
 - **Budget Calculator:** Savings-readiness planning aid — shows countries with verified cost data only
-- **Research Blog:** 144 posts across 7 categories — country audits, playbooks, case studies, guides, policy updates
+- **Research Blog:** 145 posts across 7 categories — country audits, playbooks, case studies, guides, policy updates
 
 ---
 
-## 📝 Blog Content (144 posts — selected highlights)
+## 📝 Blog Content (145 posts — selected highlights)
 
 ### Country Audits (15)
 - [Germany Visa from Nigeria 2026](/blog/country-audits/germany/germany-visa-from-nigeria-2026/) — Zero tuition, €11,208 blocked account, 18-month job search visa
@@ -104,7 +104,7 @@ MyPathway2Global is an evidence-gated mobility platform for African passport hol
 │   ├── pages/                         # Static HTML pages (incl. 404.html, visa-wizard.html)
 │   └── templates/                     # Eleventy templates
 ├── content/
-│   └── blog/                          # 144 blog posts (markdown)
+│   └── blog/                          # 145 blog posts (markdown)
 ├── scripts/                           # Validation, build, deploy, stale-audit scripts
 ├── tests/                             # Jest unit tests (19 suites, 228 tests)
 ├── docs/

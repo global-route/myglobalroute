@@ -34,7 +34,6 @@ Annual confirmation statement: GBP 34/year<br>
 Primary source: Companies House (companieshouse.gov.uk) + HMRC (gov.uk/hmrc)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 A UK Limited Company is one of the most credible business structures for African entrepreneurs serving international clients. UK companies are trusted globally, can receive payments in GBP, EUR and USD, and can be registered in 24 hours for GBP 12. Here is what you actually need to know.
 

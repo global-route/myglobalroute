@@ -244,4 +244,3 @@ Mauritius is the only African country where the nomad visa connects to a clear p
 
 All route descriptions, thresholds and permit durations are sourced from the Economic Development Board Mauritius at `https://www.edbmauritius.org/` and the Passport and Immigration Office Mauritius at `https://passport.govmu.org/`, retrieved November 2026. Citizenship and naturalisation rules are subject to ministerial discretion and may change. Verify current requirements with the EDB and a qualified Mauritius immigration adviser before taking any action.
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->

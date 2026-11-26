@@ -2,7 +2,7 @@
 
 > **Updated:** 2026-11-23 | **Release:** GO — production live
 > **Production:** `https://mypathway2global.org.uk` | **Tests:** 19/19 suites, 228/228 passing
-> **Commit:** `40a0435` | **Blog posts:** 144 | **Sitemap URLs:** 199 | **Stale requirements:** 1 (IE-critical-skills — evidence-locked)
+> **Commit:** `pending` | **Blog posts:** 145 | **Sitemap URLs:** 199 | **Stale requirements:** 1 (IE-critical-skills — evidence-locked)
 > **Data validation:** PASSED — 35 countries, 75 pathways (65 publishable), 226 evidence records, 24 demand records
 > **CI deploy:** GitHub Actions workflow live — every push to main auto-deploys via Cloudflare Workers
 

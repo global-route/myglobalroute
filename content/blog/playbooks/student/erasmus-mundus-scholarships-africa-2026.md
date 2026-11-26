@@ -34,7 +34,6 @@ Application deadline: varies by programme, typically January-February<br>
 Primary source: European Commission (ec.europa.eu/programmes/erasmus-plus)
 </div>
 
-<!-- YOUTUBE_PLACEHOLDER: Replace this comment with a YouTube embed. See docs/sprints/BLOG_POLISH_TASKFILE.md for the embed format and instructions. -->
 
 Erasmus Mundus Joint Master Degrees are among the most valuable scholarships available to African students. Fully funded by the European Commission, they provide tuition, a monthly stipend, travel costs and health insurance - while you study at two or three European universities in different countries.
 
